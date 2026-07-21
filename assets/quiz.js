@@ -31,13 +31,14 @@ function buildQuizPool(terms, count){
   const chosen = shuffle(usable).slice(0, count || usable.length);
   return chosen.map(t=>{
     const distractorPool = usable.filter(o=>o.term!==t.term);
-    const distractors = shuffle(distractorPool).slice(0,3).map(o=>o.term);
-    const options = shuffle([t.term, ...distractors]);
+    const distractors = shuffle(distractorPool).slice(0,3);
+    const options = shuffle([t, ...distractors]); // keep {term, def} objects
     return {
       prompt: t.def,
       options,
-      correctIndex: options.indexOf(t.term),
-      term: t.term
+      correctIndex: options.findIndex(o=>o.term===t.term),
+      term: t.term,
+      def: t.def
     };
   });
 }
@@ -97,7 +98,7 @@ function initQuiz(containerId, terms, accentColor, weekNum){
       </div>
       <div class="quiz-question">${q.prompt}</div>
       <div class="quiz-options" id="quiz-options">
-        ${q.options.map((opt,i)=>`<button class="quiz-option" data-i="${i}"><span class="letter">${letters[i]}</span><span>${opt}</span></button>`).join("")}
+        ${q.options.map((opt,i)=>`<button class="quiz-option" data-i="${i}"><span class="letter">${letters[i]}</span><span>${opt.term}</span></button>`).join("")}
       </div>
       <div class="quiz-feedback" id="quiz-feedback"></div>
       <div class="quiz-actions"><button class="btn-next" id="btn-quiz-next" disabled>Next question</button></div>`;
@@ -117,7 +118,12 @@ function initQuiz(containerId, terms, accentColor, weekNum){
         }
         const fb = document.getElementById("quiz-feedback");
         fb.className = "quiz-feedback show " + (chosen===q.correctIndex ? "correct-fb":"incorrect-fb");
-        fb.textContent = (chosen===q.correctIndex ? "Correct — " : "Not quite — ") + q.term + " is the term for this definition.";
+        if(chosen===q.correctIndex){
+          fb.textContent = `Correct — ${q.term} is defined as: "${q.def}" — which is exactly what the prompt described.`;
+        } else {
+          const pickedTerm = q.options[chosen];
+          fb.textContent = `Not quite. You picked ${pickedTerm.term}, but that term actually means: "${pickedTerm.def}" — which doesn't match the prompt. The correct answer is ${q.term}: "${q.def}".`;
+        }
         document.getElementById("btn-quiz-next").disabled = false;
         updateMonitor();
       });
