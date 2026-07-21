@@ -57,16 +57,56 @@ function ekgSVG(){
 }
 
 /* =========================================================================
-   AI CHAT WIDGET
-   - Local glossary search first (instant, no API key needed)
-   - Falls back to live Claude API call for open-ended questions
-     (requires the user's own API key, stored in this browser only)
+   AI CHAT WIDGET — paid access model
+   - Local glossary search always works free, no payment needed.
+   - Open-ended AI Q&A + Teach Back grading require a one-time unlock
+     (Stripe Checkout), verified server-side by a Netlify Function that
+     also holds the Claude API key — nothing secret ever touches the browser.
+   - Voice input (mic) and voice output (spoken replies) use the browser's
+     built-in Web Speech API — free, no backend involved.
    ========================================================================= */
 
-const AI_KEY_STORAGE = "patho_hub_claude_key";
+const AI_FEATURES_ENABLED = true;
+const ACCESS_STORAGE = "patho_hub_paid_session";
 
-function getApiKey(){ return localStorage.getItem(AI_KEY_STORAGE) || ""; }
-function setApiKey(k){ localStorage.setItem(AI_KEY_STORAGE, k); }
+function getAccessSession(){ return localStorage.getItem(ACCESS_STORAGE) || ""; }
+function setAccessSession(id){ localStorage.setItem(ACCESS_STORAGE, id); }
+function hasAccess(){ return !!getAccessSession(); }
+
+// Pick up a successful Stripe redirect (?unlocked=1&session_id=...)
+(function captureUnlockRedirect(){
+  const params = new URLSearchParams(window.location.search);
+  if(params.get("unlocked") === "1" && params.get("session_id")){
+    setAccessSession(params.get("session_id"));
+    params.delete("unlocked");
+    params.delete("session_id");
+    const newUrl = window.location.pathname + (params.toString() ? "?"+params.toString() : "");
+    window.history.replaceState({}, "", newUrl);
+  }
+})();
+
+async function startUnlockCheckout(){
+  try{
+    const res = await fetch("/api/create-checkout", { method: "POST" });
+    const data = await res.json();
+    if(data.url){ window.location.href = data.url; }
+    else { alert("Couldn't start checkout: " + (data.error || "unknown error")); }
+  }catch(err){
+    alert("Couldn't reach the payment server. (" + err.message + ")");
+  }
+}
+
+async function callAI(messages, maxTokens){
+  const sessionId = getAccessSession();
+  const res = await fetch("/api/ai-proxy", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ sessionId, messages, maxTokens })
+  });
+  const data = await res.json();
+  if(!res.ok){ throw new Error(data.error || ("HTTP " + res.status)); }
+  return data.text;
+}
 
 function buildChatWidget(){
   const toggle = document.createElement("button");
@@ -80,49 +120,85 @@ function buildChatWidget(){
   panel.innerHTML = `
     <div class="ai-chat-head">
       <div class="ai-chat-head-title"><span class="dot"></span>Definitions &amp; Q&amp;A</div>
-      <button class="ai-chat-settings-btn" id="ai-chat-settings-btn" title="API key settings">&#9881;</button>
+      <button class="ai-chat-settings-btn" id="ai-voice-toggle-btn" title="Toggle spoken replies">&#128266;</button>
     </div>
     <div class="ai-chat-body" id="ai-chat-body">
-      <div class="ai-msg system">Ask about any term from your chapters. I'll check the glossary first, then use AI for anything deeper.</div>
+      <div class="ai-msg system">Ask about any term from your chapters. Glossary lookups are free — open-ended questions need the one-time AI unlock below.</div>
+    </div>
+    <div id="ai-unlock-row" style="padding:12px 16px;border-top:1px solid var(--line);${hasAccess() ? "display:none;" : ""}">
+      <button class="btn" id="ai-unlock-btn" style="width:100%;justify-content:center;">Unlock AI chat &amp; voice — one-time fee</button>
     </div>
     <div class="ai-chat-input-row">
+      <button id="ai-mic-btn" title="Speak your question" style="background:var(--paper-alt);color:var(--ink);border-radius:50%;width:38px;height:38px;flex:none;padding:0;">&#127908;</button>
       <input type="text" id="ai-chat-input" placeholder="e.g. what is iatrogenic?" />
       <button id="ai-chat-send">Ask</button>
     </div>`;
   document.body.appendChild(panel);
 
-  const modal = document.createElement("div");
-  modal.className = "ai-settings-modal";
-  modal.id = "ai-settings-modal";
-  modal.innerHTML = `
-    <div class="ai-settings-box">
-      <h3>Claude API key</h3>
-      <p>Local glossary lookups always work with no key. For open-ended questions and Teach Back grading, this site calls the Claude API directly from your browser using your own key.</p>
-      <input type="password" id="ai-key-input" placeholder="sk-ant-..." />
-      <div class="ai-warn">This key is stored only in your browser's local storage and sent directly to Anthropic's API — never to any other server. Don't share this site's URL with your key saved on a public/shared computer.</div>
-      <div class="ai-settings-actions">
-        <button class="btn btn-outline" id="ai-key-cancel">Close</button>
-        <button class="btn" id="ai-key-save">Save key</button>
-      </div>
-    </div>`;
-  document.body.appendChild(modal);
-
   toggle.addEventListener("click", ()=> panel.classList.toggle("open"));
-  document.getElementById("ai-chat-settings-btn").addEventListener("click", ()=>{
-    document.getElementById("ai-key-input").value = getApiKey();
-    modal.classList.add("open");
-  });
-  document.getElementById("ai-key-cancel").addEventListener("click", ()=> modal.classList.remove("open"));
-  document.getElementById("ai-key-save").addEventListener("click", ()=>{
-    setApiKey(document.getElementById("ai-key-input").value.trim());
-    modal.classList.remove("open");
-    addChatMsg("system", "API key saved to this browser.");
-  });
+  document.getElementById("ai-unlock-btn").addEventListener("click", startUnlockCheckout);
 
   const input = document.getElementById("ai-chat-input");
   const send = document.getElementById("ai-chat-send");
   send.addEventListener("click", handleChatSend);
   input.addEventListener("keydown", e=>{ if(e.key==="Enter") handleChatSend(); });
+
+  setupVoice();
+}
+
+/* ---------------- voice: mic input + spoken replies ---------------- */
+let __voiceOutputOn = true;
+
+function setupVoice(){
+  const voiceBtn = document.getElementById("ai-voice-toggle-btn");
+  voiceBtn.addEventListener("click", ()=>{
+    __voiceOutputOn = !__voiceOutputOn;
+    voiceBtn.style.opacity = __voiceOutputOn ? "1" : "0.45";
+    if(!__voiceOutputOn && "speechSynthesis" in window) window.speechSynthesis.cancel();
+  });
+
+  const micBtn = document.getElementById("ai-mic-btn");
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SpeechRecognition){
+    micBtn.style.display = "none";
+    return;
+  }
+  const recognition = new SpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  let listening = false;
+  micBtn.addEventListener("click", ()=>{
+    if(listening) return;
+    listening = true;
+    micBtn.style.background = "var(--coral)";
+    micBtn.style.color = "#fff";
+    recognition.start();
+  });
+  recognition.addEventListener("result", (e)=>{
+    const transcript = e.results[0][0].transcript;
+    document.getElementById("ai-chat-input").value = transcript;
+    handleChatSend();
+  });
+  recognition.addEventListener("end", ()=>{
+    listening = false;
+    micBtn.style.background = "var(--paper-alt)";
+    micBtn.style.color = "var(--ink)";
+  });
+  recognition.addEventListener("error", ()=>{
+    listening = false;
+    micBtn.style.background = "var(--paper-alt)";
+    micBtn.style.color = "var(--ink)";
+  });
+}
+
+function speak(text){
+  if(!__voiceOutputOn || !("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 1.02;
+  window.speechSynthesis.speak(utter);
 }
 
 function addChatMsg(role, text){
@@ -155,54 +231,34 @@ async function handleChatSend(){
   const partial = !exact ? glossary.filter(t=>t.term.toLowerCase().includes(ql) || ql.includes(t.term.toLowerCase())).slice(0,3) : [];
 
   if(exact){
-    addChatMsg("bot", `${exact.term} (Ch. ${exact.chapter}): ${exact.def}`);
+    const text = `${exact.term} (Ch. ${exact.chapter}): ${exact.def}`;
+    addChatMsg("bot", text); speak(text);
     return;
   }
   if(partial.length){
     const text = partial.map(t=>`${t.term} (Ch. ${t.chapter}): ${t.def}`).join("\n\n");
-    addChatMsg("bot", text);
+    addChatMsg("bot", text); speak(partial[0].def);
     return;
   }
 
-  // fall back to live API
-  const key = getApiKey();
-  if(!key){
-    addChatMsg("system", "No glossary match found. Add your Claude API key (gear icon) to ask open-ended questions.");
+  if(!hasAccess()){
+    addChatMsg("system", "No glossary match found. Unlock AI chat above to ask open-ended questions.");
+    document.getElementById("ai-unlock-row").style.display = "block";
     return;
   }
+
   const thinking = addChatMsg("bot", "Thinking…");
   try{
-    const contextTerms = glossary.slice(0, 0); // context kept minimal; glossary already searched above
-    const reply = await callClaude(key, [
+    const reply = await callAI([
       { role: "user", content: `You are a friendly pathophysiology study assistant for a nursing/pre-clinical student. Answer concisely (3-6 sentences max) and at a study-guide level of detail. Question: ${q}` }
     ], 500);
     thinking.textContent = reply;
+    speak(reply);
   }catch(err){
-    thinking.textContent = "Couldn't reach the API — check that your key is correct. (" + err.message + ")";
+    thinking.textContent = "Couldn't get a response. (" + err.message + ")";
   }
 }
 
-async function callClaude(key, messages, maxTokens){
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": key,
-      "anthropic-version": "2023-06-01",
-      "anthropic-dangerous-direct-browser-access": "true"
-    },
-    body: JSON.stringify({
-      model: "claude-sonnet-4-6",
-      max_tokens: maxTokens || 500,
-      messages
-    })
-  });
-  if(!res.ok){
-    const errText = await res.text();
-    throw new Error("API error " + res.status + ": " + errText.slice(0,180));
-  }
-  const data = await res.json();
-  return (data.content || []).map(b=>b.text||"").join("\n").trim() || "(no response)";
+if(AI_FEATURES_ENABLED){
+  document.addEventListener("DOMContentLoaded", buildChatWidget);
 }
-
-document.addEventListener("DOMContentLoaded", buildChatWidget);

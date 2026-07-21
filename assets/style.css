@@ -166,7 +166,36 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 60px;color:var(--ink-sof
 .gterm-def{font-size:0.86rem;color:var(--ink-soft);margin-top:6px;line-height:1.55;}
 .gterm-src{margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:0.64rem;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;}
 
-/* ---------- AI chat widget ---------- */
+/* ---------- chapter roadmap diagram ---------- */
+.chapter-map{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-bottom:22px;border-left:4px solid var(--map-color,var(--accent));}
+.map-title{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--map-color,var(--accent));font-weight:700;margin-bottom:14px;}
+.map-flow{display:flex;flex-direction:column;gap:0;}
+.map-row{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;}
+.map-row.reversed{flex-direction:row-reverse;}
+.map-node{background:var(--paper);border:1.5px solid var(--line);border-radius:8px;padding:10px 12px;min-width:120px;flex:1;}
+.map-node-num{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--map-color,var(--accent));font-weight:700;}
+.map-node-label{font-size:0.8rem;font-weight:600;margin-top:3px;line-height:1.3;}
+.map-arrow{display:flex;align-items:center;justify-content:center;width:26px;flex:none;color:var(--ink-soft);font-size:0.9rem;}
+.map-row.reversed .map-arrow{transform:scaleX(-1);}
+.map-drop{text-align:center;color:var(--ink-soft);font-size:0.9rem;padding:2px 0;}
+@media (max-width:700px){
+  .map-row, .map-row.reversed{flex-direction:column;}
+  .map-arrow{transform:rotate(90deg);width:auto;padding:2px 0;}
+  .map-row.reversed .map-arrow{transform:rotate(90deg) scaleX(-1);}
+}
+
+/* ---------- week icons on cards ---------- */
+.week-left{align-items:center;}
+.week-icon svg{width:100%;height:100%;display:block;}
+.chapter-icon-badge{width:44px;height:44px;border-radius:10px;background:var(--card);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);flex:none;}
+.chapter-hero-top{display:flex;align-items:center;gap:14px;}
+.chapter-card .system-tag-row{display:flex;margin-bottom:6px;align-items:center;gap:8px;}
+
+/* ---------- quiz progress ring ---------- */
+.quiz-head-ring{display:flex;align-items:center;gap:14px;}
+.progress-ring{flex:none;}
+.progress-ring circle{transition:stroke-dashoffset .3s ease;}
+
 #ai-chat-toggle{position:fixed;bottom:22px;right:22px;z-index:200;background:var(--ink);color:var(--paper);border:none;width:54px;height:54px;border-radius:50%;font-size:1.3rem;box-shadow:0 10px 24px -8px rgba(0,0,0,0.4);}
 #ai-chat-toggle:hover{background:var(--teal-deep);}
 #ai-chat-panel{position:fixed;bottom:88px;right:22px;z-index:200;width:360px;max-width:calc(100vw - 32px);height:480px;max-height:calc(100vh - 140px);background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 20px 50px -12px rgba(0,0,0,0.35);display:none;flex-direction:column;overflow:hidden;}

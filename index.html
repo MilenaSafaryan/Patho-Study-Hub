@@ -40,6 +40,7 @@
 
 <div id="hub-footer"></div>
 
+<script src="assets/icons.js"></script>
 <script src="assets/app.js"></script>
 <script>
 document.getElementById("ekg-slot").innerHTML = ekgSVG();
@@ -68,7 +69,10 @@ fetchJSON("data/chapters.json").then(data=>{
     const chapterCards = loaded.map(cnum=>{
       const ch = chapters[cnum];
       return `<a class="chapter-card" style="--wk-color:${wk.color}" href="chapter.html?ch=${cnum}">
-        <div class="chapter-num">Ch. ${cnum}</div>
+        <div class="system-tag-row">
+          <div class="chapter-icon-badge" style="width:30px;height:30px;border-radius:7px;color:${wk.color};">${weekIcon(wk.num, 17, wk.color)}</div>
+          <div class="chapter-num">Ch. ${cnum}</div>
+        </div>
         <div class="chapter-title">${ch.title}</div>
         <div class="chapter-meta">${ch.termCount} key terms</div>
       </a>`;
@@ -79,6 +83,7 @@ fetchJSON("data/chapters.json").then(data=>{
     block.innerHTML = `
       <div class="week-head">
         <div class="week-left">
+          <div class="chapter-icon-badge" style="width:38px;height:38px;color:${wk.color};">${weekIcon(wk.num, 22, wk.color)}</div>
           <span class="week-num">WEEK ${wk.num}</span>
           <span class="week-title">${wk.title}</span>
         </div>
