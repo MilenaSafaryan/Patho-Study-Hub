@@ -7,6 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  .glossary-layout{display:grid;grid-template-columns:230px 1fr;gap:28px;margin-top:28px;align-items:start;}
+  .glossary-nav{position:sticky;top:78px;max-height:calc(100vh - 100px);overflow-y:auto;border-right:1px solid var(--line);padding-right:16px;}
+  .glossary-nav-week{font-family:'IBM Plex Mono',monospace;font-size:0.64rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft);margin:16px 0 4px;}
+  .glossary-nav-week:first-child{margin-top:0;}
+  .glossary-nav a{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;font-size:0.83rem;color:var(--ink-soft);text-decoration:none;}
+  .glossary-nav a:hover{background:var(--paper-alt);color:var(--ink);}
+  .glossary-nav a .dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .glossary-chapter-section{margin-bottom:38px;scroll-margin-top:78px;}
+  .glossary-chapter-head{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--wk-color,var(--teal));padding-bottom:8px;margin-bottom:14px;}
+  .glossary-chapter-head h2{font-size:1.15rem;}
+  .glossary-chapter-head .count{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-soft);}
+  @media (max-width:760px){.glossary-layout{grid-template-columns:1fr;}.glossary-nav{position:static;border-right:none;border-bottom:1px solid var(--line);padding-bottom:14px;max-height:none;}}
+</style>
 </head>
 <body>
 <script>window.__HUB_BASE__ = "";</script>
@@ -16,7 +30,7 @@
   <div class="hero">
     <span class="eyebrow">Reference</span>
     <h1 style="font-size:2rem;">Glossary</h1>
-    <p>Every key term across every chapter you've added, searchable in one place.</p>
+    <p>Every key term, grouped by chapter — jump straight to the one you need, or search across all of them.</p>
   </div>
 
   <div class="glossary-search">
@@ -24,9 +38,13 @@
   </div>
   <div class="quiz-monitor" style="margin-top:14px;width:fit-content;">
     <div><div class="m-label">Showing</div><div class="m-value" id="glossary-count">0</div></div>
+    <div><div class="m-label">Chapters</div><div class="m-value" id="glossary-chapter-count">0</div></div>
   </div>
 
-  <div class="glossary-results" id="glossary-results"></div>
+  <div class="glossary-layout">
+    <div class="glossary-nav" id="glossary-nav"></div>
+    <div id="glossary-content"></div>
+  </div>
 </div>
 
 <div id="hub-footer"></div>
@@ -37,36 +55,81 @@ injectTopbar("glossary");
 injectFooter();
 
 let allTerms = [];
-let chapterColors = {};
+let chaptersData = {};
+let weeksData = {};
 
 Promise.all([
   fetchJSON("data/terms_all.json"),
   fetchJSON("data/chapters.json")
 ]).then(([terms, data])=>{
   allTerms = terms;
-  Object.values(data.chapters).forEach(c=>{ chapterColors[c.num] = c.color; });
-  render(allTerms);
+  chaptersData = data.chapters;
+  weeksData = data.weeks;
+  buildNav();
+  render("");
 });
 
-function render(list){
-  document.getElementById("glossary-count").textContent = list.length;
-  const el = document.getElementById("glossary-results");
-  if(list.length===0){
-    el.innerHTML = `<div class="week-empty">No matches. Try a different term.</div>`;
+function buildNav(){
+  const nav = document.getElementById("glossary-nav");
+  const weekList = Object.values(weeksData).sort((a,b)=>a.num-b.num);
+  let html = "";
+  weekList.forEach(wk=>{
+    const chs = wk.chapters.filter(c => chaptersData[c]);
+    if(!chs.length) return;
+    html += `<div class="glossary-nav-week">Week ${wk.num}</div>`;
+    chs.forEach(cnum=>{
+      const ch = chaptersData[cnum];
+      html += `<a href="#ch-${cnum}"><span class="dot" style="background:${ch.color}"></span>Ch. ${cnum} — ${ch.title}</a>`;
+    });
+  });
+  nav.innerHTML = html;
+}
+
+function render(query){
+  const q = query.trim().toLowerCase();
+  const grouped = {};
+  allTerms.forEach(t=>{
+    if(q && !(t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q))) return;
+    (grouped[t.chapter] = grouped[t.chapter] || []).push(t);
+  });
+
+  const chapterNums = Object.keys(grouped).map(Number).sort((a,b)=>a-b);
+  let totalShown = 0;
+  const content = document.getElementById("glossary-content");
+
+  if(chapterNums.length===0){
+    content.innerHTML = `<div class="week-empty">No matches. Try a different term.</div>`;
+    document.getElementById("glossary-count").textContent = 0;
+    document.getElementById("glossary-chapter-count").textContent = 0;
     return;
   }
-  el.innerHTML = list.slice(0,300).map(t=>`
-    <div class="gterm-card" style="--wk-color:${chapterColors[t.chapter]||'#1F6F5C'}">
-      <div class="gterm-name">${t.term}</div>
-      <div class="gterm-def">${t.def}</div>
-      <div class="gterm-src"><a href="chapter.html?ch=${t.chapter}">Chapter ${t.chapter} &rarr;</a></div>
-    </div>`).join("");
+
+  content.innerHTML = chapterNums.map(cnum=>{
+    const ch = chaptersData[cnum];
+    const terms = grouped[cnum];
+    totalShown += terms.length;
+    return `
+      <section class="glossary-chapter-section" id="ch-${cnum}" style="--wk-color:${ch.color}">
+        <div class="glossary-chapter-head">
+          <h2>Ch. ${cnum} — ${ch.title}</h2>
+          <span class="count">${terms.length} term${terms.length===1?"":"s"}</span>
+        </div>
+        <div class="glossary-results">
+          ${terms.map(t=>`
+            <div class="gterm-card" style="--wk-color:${ch.color}">
+              <div class="gterm-name">${t.term}</div>
+              <div class="gterm-def">${t.def}</div>
+            </div>`).join("")}
+        </div>
+      </section>`;
+  }).join("");
+
+  document.getElementById("glossary-count").textContent = totalShown;
+  document.getElementById("glossary-chapter-count").textContent = chapterNums.length;
 }
 
 document.getElementById("glossary-search-input").addEventListener("input", (e)=>{
-  const q = e.target.value.trim().toLowerCase();
-  if(!q){ render(allTerms); return; }
-  render(allTerms.filter(t => t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q)));
+  render(e.target.value);
 });
 </script>
 </body>

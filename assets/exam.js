@@ -46,6 +46,7 @@ function initExam(containerId, questions, accentColor){
           <button class="btn-restart" id="btn-exam-restart">Run again</button>
         </div>`;
       document.getElementById("btn-exam-restart").addEventListener("click", start);
+      if(typeof celebrate === "function" && pct >= 60) celebrate(accentColor);
       return;
     }
 

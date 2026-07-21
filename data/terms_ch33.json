@@ -1,0 +1,66 @@
+[
+ {
+  "term": "Amenorrhea",
+  "def": "Absence of menstruation \u22653 missed periods; primary (never started by 16) vs. secondary (stopped \u22656 months after being established)."
+ },
+ {
+  "term": "Menorrhagia",
+  "def": "Heavy menstrual bleeding \u2014 increased amount/duration."
+ },
+ {
+  "term": "Metrorrhagia",
+  "def": "Intermenstrual bleeding (between periods)."
+ },
+ {
+  "term": "Dysmenorrhea",
+  "def": "Painful menstruation limiting activity; primary (no pathology) vs. secondary (underlying pelvic disorder)."
+ },
+ {
+  "term": "Uterine prolapse",
+  "def": "Descent of the uterus into the vagina from relaxed uterosacral/cardinal ligaments, graded first\u2013fourth degree."
+ },
+ {
+  "term": "Cystocele",
+  "def": "Bladder protrusion into the anterior vaginal wall from weakened vaginal musculature."
+ },
+ {
+  "term": "Rectocele",
+  "def": "Rectal protrusion into the posterior vaginal wall."
+ },
+ {
+  "term": "Pelvic inflammatory disease (PID)",
+  "def": "Infection of the oviducts/ovaries and adjacent organs \u2014 cervicitis, endometritis, salpingitis, oophoritis."
+ },
+ {
+  "term": "Vulvovaginitis",
+  "def": "Inflammation of the vulva and vagina, most often fromCandida."
+ },
+ {
+  "term": "Uterine leiomyoma (fibroid)",
+  "def": "The most common benign uterine tumor \u2014 estrogen-sensitive smooth muscle growth."
+ },
+ {
+  "term": "Endometrioma",
+  "def": "An ectopic focus of endometrial tissue outside the uterine cavity \u2014 the hallmark of endometriosis."
+ },
+ {
+  "term": "Pregnancy-induced hypertension (PIH)",
+  "def": "Preeclampsia-eclampsia \u2014 rapid BP rise + proteinuria in pregnancy."
+ },
+ {
+  "term": "Placenta previa",
+  "def": "Placenta implanted over the internal cervical os."
+ },
+ {
+  "term": "Abruptio placentae",
+  "def": "Premature separation of the placenta before delivery."
+ },
+ {
+  "term": "Mammary duct ectasia",
+  "def": "Chronic periductal inflammation with dilated, debris-filled subareolar ducts \u2014 can mimic malignancy."
+ },
+ {
+  "term": "Fibrocystic breast changes",
+  "def": "Cyclic, hormone-related palpable breast masses/tenderness \u2014 not a distinct disease, and mostly NOT a cancer risk factor."
+ }
+]

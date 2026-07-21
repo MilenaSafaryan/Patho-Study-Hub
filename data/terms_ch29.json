@@ -1,0 +1,58 @@
+[
+ {
+  "term": "Micturition",
+  "def": "Voiding \u2014 coordinated reflex + voluntary bladder emptying, governed by the pontine micturition center."
+ },
+ {
+  "term": "Detrusor muscle",
+  "def": "The bladder's smooth muscle wall; parasympathetically driven contraction empties the bladder."
+ },
+ {
+  "term": "Urgency urinary incontinence (UUI)",
+  "def": "Involuntary leakage with/after a sudden urge \u2014 from detrusor overactivity."
+ },
+ {
+  "term": "Stress urinary incontinence (SUI)",
+  "def": "Leakage with \u2191 intraabdominal pressure (cough, lift, laugh) without a bladder contraction."
+ },
+ {
+  "term": "Overflow urinary incontinence (OUI)",
+  "def": "Continuous dribbling from an overfull bladder \u2014 outlet obstruction or detrusor underactivity."
+ },
+ {
+  "term": "Enuresis",
+  "def": "Involuntary urination during sleep in a child \u22655 years old."
+ },
+ {
+  "term": "Neurogenic bladder",
+  "def": "LUT dysfunction from disrupted nervous system control of micturition."
+ },
+ {
+  "term": "Detrusor sphincter dyssynergia (DSD)",
+  "def": "Detrusor contraction occurring simultaneously with involuntary sphincter contraction."
+ },
+ {
+  "term": "Vesicoureteral reflux (VUR)",
+  "def": "Retrograde urine flow from bladder into the upper urinary tract, from an incompetent ureterovesical junction."
+ },
+ {
+  "term": "Ureteropelvic junction obstruction (UPJO)",
+  "def": "Blockage where the ureter meets the renal pelvis \u2014 the most common cause of neonatal hydronephrosis."
+ },
+ {
+  "term": "Ureterocele",
+  "def": "Congenital cystic dilation of the distal ureter."
+ },
+ {
+  "term": "Urothelial carcinoma",
+  "def": "~90% of bladder cancers; arises from the transitional epithelium lining the urinary tract."
+ },
+ {
+  "term": "Cystitis",
+  "def": "Bladder inflammation, most commonly bacterial (lower UTI)."
+ },
+ {
+  "term": "Ureteral colic",
+  "def": "Sharp, spasmodic, waxing/waning pain from a stone lodged in the ureter."
+ }
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "term": "pH",
+  "def": "The negative logarithm of hydrogen ion concentration; normal arterial blood pH is 7.35\u20137.45."
+ },
+ {
+  "term": "Bicarbonate buffer system",
+  "def": "The primary extracellular buffer \u2014 HCO3\u207b (base) and H2CO3 (weak acid) in equilibrium; normal ratio 20:1."
+ },
+ {
+  "term": "Volatile acid",
+  "def": "Carbonic acid \u2014 the only acid excretable as a gas (CO2 + H2O) by the lungs."
+ },
+ {
+  "term": "Nonvolatile (metabolic) acid",
+  "def": "Any acid other than carbonic acid (e.g., lactic acid, ketoacids); excreted only by the kidneys."
+ },
+ {
+  "term": "Compensation",
+  "def": "A physiologic response that moves pH toward normal by deliberately creating an imbalance in the OTHER acid system \u2014 doesn't correct the underlying problem."
+ },
+ {
+  "term": "Titratable acidity",
+  "def": "H+ excreted in urine while bound to filtered buffers like phosphate."
+ },
+ {
+  "term": "Ammonium trapping",
+  "def": "Renal tubular cells produce ammonia (NH3), which combines with H+ to form NH4+ \u2014 a way to excrete H+ without acidifying the urine excessively."
+ },
+ {
+  "term": "Acidosis",
+  "def": "A process tending to decrease blood pH (make it more acidic) \u2014 a process, not necessarily a measured low pH."
+ },
+ {
+  "term": "Acidemia",
+  "def": "An actual measured decrease in blood pH."
+ },
+ {
+  "term": "Alkalosis",
+  "def": "A process tending to increase blood pH."
+ },
+ {
+  "term": "Alkalemia",
+  "def": "An actual measured increase in blood pH."
+ },
+ {
+  "term": "Metabolic acidosis",
+  "def": "Relative excess of any acid except carbonic acid \u2014 from increased acid or decreased base (bicarbonate)."
+ },
+ {
+  "term": "Respiratory acidosis",
+  "def": "Excess carbonic acid from impaired CO2 excretion (hypoventilation)."
+ }
+]

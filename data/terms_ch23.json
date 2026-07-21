@@ -1,0 +1,70 @@
+[
+ {
+  "term": "Restrictive lung disease",
+  "def": "Decreased lung expansion from parenchymal, pleural, chest wall, or neuromuscular causes; \u2193 TLC, VC, FRC, RV."
+ },
+ {
+  "term": "Idiopathic pulmonary fibrosis (IPF)",
+  "def": "Chronic interstitial lung disease of the elderly from chronic epithelial injury, aging, and genetic predisposition."
+ },
+ {
+  "term": "Honeycomb lung",
+  "def": "The radiographic end-stage appearance of IPF fibrosis."
+ },
+ {
+  "term": "Sarcoidosis",
+  "def": "A systemic disease of unknown cause producing noncaseating granulomas, most often in lymph nodes/lung."
+ },
+ {
+  "term": "Pneumoconiosis",
+  "def": "Parenchymal lung disease from chronic inhalation of inorganic dust (coal, silica, asbestos)."
+ },
+ {
+  "term": "ARDS",
+  "def": "Acute hypoxemia + noncardiogenic pulmonary edema + reduced lung compliance from alveolar-capillary membrane damage."
+ },
+ {
+  "term": "NRDS",
+  "def": "Neonatal respiratory distress from surfactant deficiency in premature infants."
+ },
+ {
+  "term": "L/S ratio",
+  "def": "Lecithin/sphingomyelin ratio in amniotic fluid; \u22652:1 indicates fetal lung maturity."
+ },
+ {
+  "term": "Spontaneous pneumothorax",
+  "def": "Air in the pleural space without trauma \u2014 primary (no underlying disease) or secondary (existing lung disease)."
+ },
+ {
+  "term": "Tension pneumothorax",
+  "def": "Air accumulates under pressure, unable to escape \u2014 mediastinal shift, medical emergency."
+ },
+ {
+  "term": "Transudate",
+  "def": "Low-protein/LDH pleural effusion from hydrostatic/oncotic pressure imbalance (e.g., heart failure)."
+ },
+ {
+  "term": "Exudate",
+  "def": "High-protein/LDH pleural effusion from increased capillary permeability (e.g., infection, malignancy)."
+ },
+ {
+  "term": "Kyphoscoliosis",
+  "def": "Combined posterior (kyphosis) and lateral (scoliosis) spinal curvature restricting lung expansion."
+ },
+ {
+  "term": "Flail chest",
+  "def": "Free-floating chest wall segment from rib fractures at two sites, moving paradoxically with breathing."
+ },
+ {
+  "term": "Ghon tubercle",
+  "def": "The calcified, fibrotic granuloma marking primary TB infection \u2014 the pathologic hallmark of TB."
+ },
+ {
+  "term": "Miliary tuberculosis",
+  "def": "Disseminated TB from hematogenous spread, producing diffuse small nodular densities."
+ },
+ {
+  "term": "Mantoux (PPD) test",
+  "def": "Intradermal tuberculin skin test; induration size interpreted against risk category to assess TB exposure."
+ }
+]

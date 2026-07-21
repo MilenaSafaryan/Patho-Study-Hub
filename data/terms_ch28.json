@@ -1,0 +1,58 @@
+[
+ {
+  "term": "Acute kidney injury (AKI)",
+  "def": "Sudden reduction in kidney function \u2014 fluid/electrolyte/acid-base disruption, retained nitrogenous waste, \u2191 creatinine, \u2193 GFR."
+ },
+ {
+  "term": "RIFLE classification",
+  "def": "Risk, Injury, Failure, Loss, End-stage \u2014 a five-tier AKI staging system."
+ },
+ {
+  "term": "Prerenal AKI",
+  "def": "Reduced kidney function from impaired renal perfusion \u2014 the cause lies upstream of the kidney."
+ },
+ {
+  "term": "Postrenal AKI",
+  "def": "Reduced kidney function from obstruction of urine outflow distal to the kidney."
+ },
+ {
+  "term": "Intrinsic (intrarenal) AKI",
+  "def": "Kidney injury from damage within the kidney itself \u2014 vascular, glomerular, tubular, or interstitial."
+ },
+ {
+  "term": "Acute tubular necrosis (ATN)",
+  "def": "Tubular cell injury from ischemia or nephrotoxins \u2014 the most common form of intrinsic AKI."
+ },
+ {
+  "term": "Contrast-induced AKI (CI-AKI)",
+  "def": "Nephropathy from radiographic contrast media, historically the most common nephrotoxic AKI cause."
+ },
+ {
+  "term": "Chronic kidney disease (CKD)",
+  "def": "Decreased kidney function or damage present \u22653 months, or GFR <60 mL/min/1.73m\u00b2 for 3 months."
+ },
+ {
+  "term": "End-stage renal/kidney disease (ESRD/ESKD)",
+  "def": "The final outcome of CKD, requiring dialysis or transplant for survival."
+ },
+ {
+  "term": "Uremic syndrome",
+  "def": "Multi-system toxicity from retained metabolic waste products as renal function declines."
+ },
+ {
+  "term": "Secondary hyperparathyroidism",
+  "def": "Compensatory PTH elevation from CKD-related hypocalcemia, driving CKD bone/mineral disease."
+ },
+ {
+  "term": "Cardiorenal anemia syndrome",
+  "def": "The interlinked, escalating combination of worsening CKD, anemia, and heart failure."
+ },
+ {
+  "term": "Protein-energy wasting (PEW)",
+  "def": "Loss of muscle/visceral protein stores in advanced CKD \u2014 distinct from general malnutrition."
+ },
+ {
+  "term": "Acute-on-chronic kidney disease",
+  "def": "AKI developing in a patient with preexisting CKD."
+ }
+]

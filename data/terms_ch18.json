@@ -1,0 +1,78 @@
+[
+ {
+  "term": "CHD / CAD / ischemic heart disease",
+  "def": "Overlapping terms for insufficient oxygenated blood delivery to the myocardium due to atherosclerotic coronary arteries."
+ },
+ {
+  "term": "Foam cells",
+  "def": "Lipid-filled macrophages within the arterial wall \u2014 the hallmark cell of early atherosclerotic plaque."
+ },
+ {
+  "term": "Lipid core",
+  "def": "The pool of accumulated lipid and cellular debris within an atherosclerotic plaque; large cores predispose to rupture."
+ },
+ {
+  "term": "MINOCA",
+  "def": "Myocardial infarction with nonobstructive coronary artery disease \u2014 MI criteria met without significant (<50%) angiographic stenosis."
+ },
+ {
+  "term": "Stable angina",
+  "def": "Predictable, exertion-triggered chest pain from fixed atherosclerotic stenosis; relieved by rest/nitroglycerin."
+ },
+ {
+  "term": "Vasospastic (Prinzmetal/variant) angina",
+  "def": "Unpredictable angina at rest from coronary vasospasm, unrelated to exertion or oxygen demand."
+ },
+ {
+  "term": "Acute coronary syndrome (ACS)",
+  "def": "Umbrella term for unstable angina and MI \u2014 abrupt onset from acute plaque disruption and thrombosis."
+ },
+ {
+  "term": "STEMI / NSTE-ACS",
+  "def": "ST-elevation vs. non-ST-elevation presentations of ACS, distinguished by ECG and confirmed with cardiac biomarkers."
+ },
+ {
+  "term": "Type 1 MI (T1MI)",
+  "def": "MI from atherosclerotic plaque rupture/thrombosis \u2014 the most common MI mechanism."
+ },
+ {
+  "term": "Type 2 MI (T2MI)",
+  "def": "MI from myocardial oxygen supply-demand mismatch without plaque rupture (e.g., shock, severe hypotension)."
+ },
+ {
+  "term": "Valve stenosis",
+  "def": "Failure of a valve to open completely, creating a pressure gradient and extra pressure work for the heart."
+ },
+ {
+  "term": "Valve regurgitation",
+  "def": "Failure of a valve to close completely, allowing backflow and creating extra volume work for the heart."
+ },
+ {
+  "term": "Myocarditis",
+  "def": "Inflammatory disorder of heart muscle with necrosis/degeneration of cardiac cells, most often postviral."
+ },
+ {
+  "term": "Cardiomyopathy",
+  "def": "Noninflammatory heart muscle disease \u2014 dilated, hypertrophic, or restrictive \u2014 genetic or acquired."
+ },
+ {
+  "term": "Cardiac tamponade",
+  "def": "Life-threatening external compression of heart chambers by accumulated pericardial fluid, impairing filling."
+ },
+ {
+  "term": "Beck triad",
+  "def": "Hypotension + distended neck veins + muffled heart sounds \u2014 the classic tamponade triad."
+ },
+ {
+  "term": "Pulsus paradoxus",
+  "def": "An exaggerated (\u226510 mmHg) fall in systolic BP during inspiration \u2014 a tamponade finding."
+ },
+ {
+  "term": "Foramen ovale",
+  "def": "The fetal opening between the right and left atria, allowing right-to-left shunting to bypass the lungs."
+ },
+ {
+  "term": "Ductus arteriosus",
+  "def": "The fetal channel connecting the pulmonary artery to the aorta, bypassing the collapsed fetal lungs."
+ }
+]

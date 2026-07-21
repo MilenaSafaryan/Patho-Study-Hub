@@ -47,16 +47,31 @@ document.getElementById("ekg-slot").innerHTML = ekgSVG();
 injectTopbar("home");
 injectFooter();
 
+function countUp(elId, target, duration){
+  const el = document.getElementById(elId);
+  if(!el) return;
+  const start = performance.now();
+  duration = duration || 900;
+  function tick(now){
+    const p = Math.min(1, (now-start)/duration);
+    const eased = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(eased * target);
+    if(p < 1) requestAnimationFrame(tick);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(tick);
+}
+
 fetchJSON("data/chapters.json").then(data=>{
   const { weeks, chapters } = data;
   const weekList = Object.values(weeks).sort((a,b)=>a.num-b.num);
 
-  document.getElementById("stat-weeks").textContent = weekList.length;
-  document.getElementById("stat-chapters").textContent = Object.keys(chapters).length;
+  countUp("stat-weeks", weekList.length);
+  countUp("stat-chapters", Object.keys(chapters).length);
   document.getElementById("week-count").textContent = weekList.length + " weeks";
 
   fetchJSON("data/terms_all.json").then(terms=>{
-    document.getElementById("stat-terms").textContent = terms.length;
+    countUp("stat-terms", terms.length, 1200);
   });
 
   const container = document.getElementById("weeks-container");
@@ -93,7 +108,12 @@ fetchJSON("data/chapters.json").then(data=>{
         </div>
       </div>
       <div class="week-chapters">
-        ${loaded.length ? `<div class="week-chapters-inner">${chapterCards}</div>` : `<div class="week-empty">Chapters ${wk.chapters.join(", ")} — not added yet. Paste them in and this week lights up.</div>`}
+        ${loaded.length ? `<div class="week-chapters-inner">${chapterCards}</div>` : `<div class="week-empty-card">
+            <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="32" cy="32" r="20"/><path d="M32 22v10l7 5"/>
+            </svg>
+            <div><strong>Chapters ${wk.chapters.join(", ")}</strong> — not added yet. Paste them in and this week lights right up.</div>
+          </div>`}
         ${loaded.length && missingCount ? `<div class="week-empty">+ ${missingCount} more chapter${missingCount>1?'s':''} for this week not yet added (Ch. ${wk.chapters.filter(c=>!chapters[c]).join(", ")})</div>` : ""}
       </div>`;
 

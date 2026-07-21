@@ -1,0 +1,70 @@
+[
+ {
+  "term": "Shock",
+  "def": "Insufficient oxygenated blood delivery to the microcirculation, causing tissue hypoxia and cellular dysfunction."
+ },
+ {
+  "term": "Cardiogenic shock",
+  "def": "Inadequate cardiac output from heart disorders despite sufficient vascular volume."
+ },
+ {
+  "term": "Obstructive shock",
+  "def": "Circulatory blockage disrupting cardiac output (e.g., massive PE, tamponade)."
+ },
+ {
+  "term": "Hypovolemic shock",
+  "def": "Shock from lost blood volume \u2014 hemorrhage or excessive extracellular fluid loss."
+ },
+ {
+  "term": "Distributive shock",
+  "def": "Shock from greatly expanded vascular space via inappropriate vasodilation, without true volume loss."
+ },
+ {
+  "term": "Lactate",
+  "def": "The product of anaerobic pyruvate metabolism; >5\u20136 mmol/L signals significant tissue hypoxia and serves as a shock severity marker."
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Oxygen free radical formation when blood flow is restored to previously ischemic tissue."
+ },
+ {
+  "term": "Reactive oxygen species (ROS)",
+  "def": "Unstable molecules (superoxide, peroxide, hydroxyl radicals) that attack membranes, denature proteins, and damage DNA."
+ },
+ {
+  "term": "SIRS",
+  "def": "Systemic inflammatory response syndrome \u2014 a widespread inflammatory response to infectious or noninfectious insults."
+ },
+ {
+  "term": "Sepsis (2016 definition)",
+  "def": "Life-threatening organ dysfunction caused by a dysregulated host response to infection."
+ },
+ {
+  "term": "Septic shock (2016 definition)",
+  "def": "Sepsis requiring vasopressors to maintain MAP \u226565 mmHg, with lactate >2 mmol/L despite adequate fluid resuscitation."
+ },
+ {
+  "term": "Bacteremia",
+  "def": "Viable bacteria present in the bloodstream."
+ },
+ {
+  "term": "Shock index",
+  "def": "Systolic BP \u00f7 heart rate; normal 0.7\u20130.9, >1.0 signals concern."
+ },
+ {
+  "term": "ARDS",
+  "def": "Acute respiratory distress syndrome \u2014 refractory hypoxemia, \u2193 pulmonary compliance, noncardiogenic pulmonary edema."
+ },
+ {
+  "term": "DIC",
+  "def": "Disseminated intravascular coagulation \u2014 widespread microvascular clotting consuming platelets/clotting factors, causing simultaneous thrombosis and bleeding."
+ },
+ {
+  "term": "Acute tubular necrosis (ATN)",
+  "def": "Ischemic necrosis of renal tubular epithelial cells from prolonged hypoperfusion."
+ },
+ {
+  "term": "MODS",
+  "def": "Multiple organ dysfunction syndrome \u2014 altered function in \u22652 organ systems, requiring intervention to maintain homeostasis."
+ }
+]

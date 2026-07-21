@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Exam Prep — Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Cumulative · timed · configurable</span>
+    <h1 style="font-size:2rem;">Final exam prep</h1>
+    <p>Pulls from every week's practice exam questions in one pool — pick your weeks, set a question count and timer, and run it like the real thing. Get a weak-area breakdown at the end so you know exactly what to review.</p>
+  </div>
+
+  <div id="final-exam-root" style="margin-top:28px;">
+    <div style="text-align:center;padding:40px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:0.85rem;">Loading…</div>
+  </div>
+
+  <div class="placeholder-note">
+    <strong>How this is different from the weekly practice exams:</strong> those stay separate, one week at a time. This pulls from all of them together — the way your actual final will mix material across the whole semester.
+  </div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/app.js"></script>
+<script src="assets/quiz.js"></script>
+<script src="assets/final-exam.js"></script>
+<script>
+injectTopbar("exams");
+injectFooter();
+
+Promise.all([
+  fetchJSON("data/exams.json"),
+  fetchJSON("data/chapters.json")
+]).then(([examData, chData]) => {
+  FinalExam.init(examData, chData);
+}).catch(()=>{
+  document.getElementById("final-exam-root").innerHTML = `<div class="week-empty">Couldn't load exam data.</div>`;
+});
+</script>
+</body>
+</html>

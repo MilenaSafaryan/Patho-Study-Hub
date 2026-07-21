@@ -85,6 +85,7 @@ function initQuiz(containerId, terms, accentColor, weekNum){
           <button class="btn-restart" id="btn-quiz-restart">Run again</button>
         </div>`;
       document.getElementById("btn-quiz-restart").addEventListener("click", ()=>start(pool.length));
+      if(typeof celebrate === "function" && pct >= 60) celebrate(accentColor);
       return;
     }
     const q = pool[index];

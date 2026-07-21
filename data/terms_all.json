@@ -725,6 +725,331 @@
   "chapter": 15
  },
  {
+  "term": "Cardiac output (CO)",
+  "def": "Stroke volume \u00d7 heart rate; the volume of blood the heart ejects per minute.",
+  "chapter": 16
+ },
+ {
+  "term": "Stroke volume (SV)",
+  "def": "The volume of blood ejected per heartbeat; determined by preload and myocardial contractility.",
+  "chapter": 16
+ },
+ {
+  "term": "Preload",
+  "def": "The end-diastolic volume \u2014 how much blood fills the heart before it contracts, determined by venous return.",
+  "chapter": 16
+ },
+ {
+  "term": "Systemic vascular resistance (SVR)",
+  "def": "The resistance to blood ejection into the arterial circulation, synonymous with cardiac afterload; determined mainly by arteriolar radius.",
+  "chapter": 16
+ },
+ {
+  "term": "Systolic blood pressure",
+  "def": "The peak arterial pressure during ventricular contraction; primarily determined by stroke volume.",
+  "chapter": 16
+ },
+ {
+  "term": "Diastolic blood pressure",
+  "def": "The minimum arterial pressure during ventricular relaxation; primarily determined by SVR.",
+  "chapter": 16
+ },
+ {
+  "term": "Pulse pressure",
+  "def": "Systolic pressure minus diastolic pressure.",
+  "chapter": 16
+ },
+ {
+  "term": "Mean arterial pressure (MAP)",
+  "def": "The time-weighted average pressure across the cardiac cycle \u2014 not a simple average, since more time is spent in diastole.",
+  "chapter": 16
+ },
+ {
+  "term": "Baroreceptors",
+  "def": "Pressure-sensitive receptors in the carotid sinuses and aortic arch that provide rapid, moment-to-moment blood pressure regulation.",
+  "chapter": 16
+ },
+ {
+  "term": "Vasomotor center",
+  "def": "The medullary brainstem region that integrates baroreceptor/chemoreceptor input and directs SNS/PSNS output to control blood pressure.",
+  "chapter": 16
+ },
+ {
+  "term": "Renin",
+  "def": "An enzyme released by juxtaglomerular cells in response to decreased renal arterial pressure; cleaves angiotensinogen to angiotensin I.",
+  "chapter": 16
+ },
+ {
+  "term": "Angiotensin-converting enzyme (ACE)",
+  "def": "Produced by vascular endothelium (especially in the lungs); converts angiotensin I to angiotensin II.",
+  "chapter": 16
+ },
+ {
+  "term": "Angiotensin II",
+  "def": "A potent arterial vasoconstrictor that also stimulates aldosterone release \u2014 the central effector of the RAAS.",
+  "chapter": 16
+ },
+ {
+  "term": "Aldosterone",
+  "def": "An adrenal cortex hormone that increases renal sodium (and secondarily water) reabsorption, raising blood volume and pressure.",
+  "chapter": 16
+ },
+ {
+  "term": "Atrial natriuretic peptide (ANP)",
+  "def": "Released by stretched atrial muscle fibers; promotes sodium/water excretion, lowering blood volume and pressure \u2014 opposes the RAAS.",
+  "chapter": 16
+ },
+ {
+  "term": "Endothelin-1 (ET-1)",
+  "def": "A renal medullary peptide involved in renal perfusion, electrolyte movement, and renin release; levels are abnormal in hypertension.",
+  "chapter": 16
+ },
+ {
+  "term": "Primary (essential) hypertension",
+  "def": "Hypertension with no clearly identifiable single cause \u2014 90\u201395% of hypertension cases.",
+  "chapter": 16
+ },
+ {
+  "term": "Secondary hypertension",
+  "def": "Hypertension with an identifiable underlying cause.",
+  "chapter": 16
+ },
+ {
+  "term": "Isolated systolic hypertension (ISH)",
+  "def": "Systolic \u2265140 mmHg with diastolic <90 mmHg \u2014 the dominant hypertension subtype after age 55.",
+  "chapter": 16
+ },
+ {
+  "term": "Isolated diastolic hypertension (IDH)",
+  "def": "Diastolic \u226590 mmHg with systolic <140 mmHg \u2014 more common in younger adults.",
+  "chapter": 16
+ },
+ {
+  "term": "White coat effect",
+  "def": "Situational blood pressure elevation specifically in clinical settings, not reflective of the patient's usual pressure.",
+  "chapter": 16
+ },
+ {
+  "term": "Orthostatic hypotension (OH)",
+  "def": "A drop in systolic BP \u226520 mmHg or diastolic \u226510 mmHg (or excessive HR rise) within 3 minutes of standing.",
+  "chapter": 16
+ },
+ {
+  "term": "Vasovagal response",
+  "def": "A paradoxical \u2191 parasympathetic / \u2193 sympathetic response causing bradycardia and vasodilation instead of the expected compensatory response.",
+  "chapter": 16
+ },
+ {
+  "term": "Microalbuminuria",
+  "def": "Small amounts of protein in urine \u2014 an early indicator of hypertensive glomerular/renal injury.",
+  "chapter": 16
+ },
+ {
+  "term": "CHD / CAD / ischemic heart disease",
+  "def": "Overlapping terms for insufficient oxygenated blood delivery to the myocardium due to atherosclerotic coronary arteries.",
+  "chapter": 18
+ },
+ {
+  "term": "Foam cells",
+  "def": "Lipid-filled macrophages within the arterial wall \u2014 the hallmark cell of early atherosclerotic plaque.",
+  "chapter": 18
+ },
+ {
+  "term": "Lipid core",
+  "def": "The pool of accumulated lipid and cellular debris within an atherosclerotic plaque; large cores predispose to rupture.",
+  "chapter": 18
+ },
+ {
+  "term": "MINOCA",
+  "def": "Myocardial infarction with nonobstructive coronary artery disease \u2014 MI criteria met without significant (<50%) angiographic stenosis.",
+  "chapter": 18
+ },
+ {
+  "term": "Stable angina",
+  "def": "Predictable, exertion-triggered chest pain from fixed atherosclerotic stenosis; relieved by rest/nitroglycerin.",
+  "chapter": 18
+ },
+ {
+  "term": "Vasospastic (Prinzmetal/variant) angina",
+  "def": "Unpredictable angina at rest from coronary vasospasm, unrelated to exertion or oxygen demand.",
+  "chapter": 18
+ },
+ {
+  "term": "Acute coronary syndrome (ACS)",
+  "def": "Umbrella term for unstable angina and MI \u2014 abrupt onset from acute plaque disruption and thrombosis.",
+  "chapter": 18
+ },
+ {
+  "term": "STEMI / NSTE-ACS",
+  "def": "ST-elevation vs. non-ST-elevation presentations of ACS, distinguished by ECG and confirmed with cardiac biomarkers.",
+  "chapter": 18
+ },
+ {
+  "term": "Type 1 MI (T1MI)",
+  "def": "MI from atherosclerotic plaque rupture/thrombosis \u2014 the most common MI mechanism.",
+  "chapter": 18
+ },
+ {
+  "term": "Type 2 MI (T2MI)",
+  "def": "MI from myocardial oxygen supply-demand mismatch without plaque rupture (e.g., shock, severe hypotension).",
+  "chapter": 18
+ },
+ {
+  "term": "Valve stenosis",
+  "def": "Failure of a valve to open completely, creating a pressure gradient and extra pressure work for the heart.",
+  "chapter": 18
+ },
+ {
+  "term": "Valve regurgitation",
+  "def": "Failure of a valve to close completely, allowing backflow and creating extra volume work for the heart.",
+  "chapter": 18
+ },
+ {
+  "term": "Myocarditis",
+  "def": "Inflammatory disorder of heart muscle with necrosis/degeneration of cardiac cells, most often postviral.",
+  "chapter": 18
+ },
+ {
+  "term": "Cardiomyopathy",
+  "def": "Noninflammatory heart muscle disease \u2014 dilated, hypertrophic, or restrictive \u2014 genetic or acquired.",
+  "chapter": 18
+ },
+ {
+  "term": "Cardiac tamponade",
+  "def": "Life-threatening external compression of heart chambers by accumulated pericardial fluid, impairing filling.",
+  "chapter": 18
+ },
+ {
+  "term": "Beck triad",
+  "def": "Hypotension + distended neck veins + muffled heart sounds \u2014 the classic tamponade triad.",
+  "chapter": 18
+ },
+ {
+  "term": "Pulsus paradoxus",
+  "def": "An exaggerated (\u226510 mmHg) fall in systolic BP during inspiration \u2014 a tamponade finding.",
+  "chapter": 18
+ },
+ {
+  "term": "Foramen ovale",
+  "def": "The fetal opening between the right and left atria, allowing right-to-left shunting to bypass the lungs.",
+  "chapter": 18
+ },
+ {
+  "term": "Ductus arteriosus",
+  "def": "The fetal channel connecting the pulmonary artery to the aorta, bypassing the collapsed fetal lungs.",
+  "chapter": 18
+ },
+ {
+  "term": "Heart failure (HF)",
+  "def": "A complex syndrome from structural/functional impairment of ventricular filling or ejection, unable to meet metabolic demand.",
+  "chapter": 19
+ },
+ {
+  "term": "Ejection fraction (EF)",
+  "def": "Stroke volume \u00f7 end-diastolic volume; normal is 55\u201370%.",
+  "chapter": 19
+ },
+ {
+  "term": "HFrEF",
+  "def": "HF with reduced EF (\u226440%) \u2014 systolic dysfunction, impaired contractility.",
+  "chapter": 19
+ },
+ {
+  "term": "HFpEF",
+  "def": "HF with preserved EF (\u226550%) with evidence of elevated LV filling pressures \u2014 diastolic dysfunction.",
+  "chapter": 19
+ },
+ {
+  "term": "HFmrEF",
+  "def": "HF with mildly reduced EF (41\u201349%) plus evidence of elevated filling pressures.",
+  "chapter": 19
+ },
+ {
+  "term": "dP/dt",
+  "def": "A measure of inotropy \u2014 how quickly the ventricle develops a forceful contraction.",
+  "chapter": 19
+ },
+ {
+  "term": "Lusitropy",
+  "def": "The energy-requiring active process of myocardial relaxation (calcium removal from cytoplasm).",
+  "chapter": 19
+ },
+ {
+  "term": "Frank-Starling mechanism",
+  "def": "Greater diastolic muscle fiber stretch (preload) produces greater force of contraction, up to a point.",
+  "chapter": 19
+ },
+ {
+  "term": "Eccentric hypertrophy",
+  "def": "Muscle fiber elongation from excess preload/volume overload.",
+  "chapter": 19
+ },
+ {
+  "term": "Concentric hypertrophy",
+  "def": "Muscle fiber thickening from high afterload/pressure overload.",
+  "chapter": 19
+ },
+ {
+  "term": "Forward failure",
+  "def": "Poor cardiac output causing inadequate perfusion of tissues/organs.",
+  "chapter": 19
+ },
+ {
+  "term": "Backward failure",
+  "def": "Congestion of blood behind the failing pumping chamber.",
+  "chapter": 19
+ },
+ {
+  "term": "Cor pulmonale",
+  "def": "Right ventricular hypertrophy from pulmonary disease-driven increased pulmonary vascular resistance.",
+  "chapter": 19
+ },
+ {
+  "term": "S3 gallop",
+  "def": "A low-frequency early-diastolic sound from rapid ventricular filling under increased volume load.",
+  "chapter": 19
+ },
+ {
+  "term": "GDMT",
+  "def": "Guideline-directed medical therapy \u2014 the four pillars for HFrEF: ARNI, MRA, \u03b2-blockers, SGLT2 inhibitors.",
+  "chapter": 19
+ },
+ {
+  "term": "Dysrhythmia (arrhythmia)",
+  "def": "A cardiac rhythm abnormality of impulse generation or conduction.",
+  "chapter": 19
+ },
+ {
+  "term": "Automaticity",
+  "def": "A dysrhythmia mechanism from abnormal spontaneous depolarization during phase 4 of the action potential.",
+  "chapter": 19
+ },
+ {
+  "term": "Early afterdepolarization (EAD)",
+  "def": "A triggered impulse during phase 3 repolarization from reopened calcium channels.",
+  "chapter": 19
+ },
+ {
+  "term": "Delayed afterdepolarization (DAD)",
+  "def": "A triggered impulse after repolarization is complete, from spontaneous SR calcium release.",
+  "chapter": 19
+ },
+ {
+  "term": "Reentry",
+  "def": "A cardiac impulse that continues to depolarize part of the heart after the main impulse finishes, restimulating recovered tissue \u2014 the mechanism behind most tachydysrhythmias.",
+  "chapter": 19
+ },
+ {
+  "term": "Escape rhythm",
+  "def": "Takeover by a slower, lower pacemaker after SA node failure.",
+  "chapter": 19
+ },
+ {
+  "term": "Atrial fibrillation (AF)",
+  "def": "Disorganized, irregular atrial rhythm with irregular ventricular response \u2014 the most common sustained dysrhythmia.",
+  "chapter": 19
+ },
+ {
   "term": "Homeostasis",
   "def": "Maintaining internal conditions in a stable state around a narrow \"set point,\" via negative feedback loops.",
   "chapter": 2
@@ -843,6 +1168,771 @@
   "term": "Psychoneuroimmunology",
   "def": "The field studying interactions among the nervous, endocrine, and immune systems, especially regarding stress and its effects on health.",
   "chapter": 2
+ },
+ {
+  "term": "Shock",
+  "def": "Insufficient oxygenated blood delivery to the microcirculation, causing tissue hypoxia and cellular dysfunction.",
+  "chapter": 20
+ },
+ {
+  "term": "Cardiogenic shock",
+  "def": "Inadequate cardiac output from heart disorders despite sufficient vascular volume.",
+  "chapter": 20
+ },
+ {
+  "term": "Obstructive shock",
+  "def": "Circulatory blockage disrupting cardiac output (e.g., massive PE, tamponade).",
+  "chapter": 20
+ },
+ {
+  "term": "Hypovolemic shock",
+  "def": "Shock from lost blood volume \u2014 hemorrhage or excessive extracellular fluid loss.",
+  "chapter": 20
+ },
+ {
+  "term": "Distributive shock",
+  "def": "Shock from greatly expanded vascular space via inappropriate vasodilation, without true volume loss.",
+  "chapter": 20
+ },
+ {
+  "term": "Lactate",
+  "def": "The product of anaerobic pyruvate metabolism; >5\u20136 mmol/L signals significant tissue hypoxia and serves as a shock severity marker.",
+  "chapter": 20
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Oxygen free radical formation when blood flow is restored to previously ischemic tissue.",
+  "chapter": 20
+ },
+ {
+  "term": "Reactive oxygen species (ROS)",
+  "def": "Unstable molecules (superoxide, peroxide, hydroxyl radicals) that attack membranes, denature proteins, and damage DNA.",
+  "chapter": 20
+ },
+ {
+  "term": "SIRS",
+  "def": "Systemic inflammatory response syndrome \u2014 a widespread inflammatory response to infectious or noninfectious insults.",
+  "chapter": 20
+ },
+ {
+  "term": "Sepsis (2016 definition)",
+  "def": "Life-threatening organ dysfunction caused by a dysregulated host response to infection.",
+  "chapter": 20
+ },
+ {
+  "term": "Septic shock (2016 definition)",
+  "def": "Sepsis requiring vasopressors to maintain MAP \u226565 mmHg, with lactate >2 mmol/L despite adequate fluid resuscitation.",
+  "chapter": 20
+ },
+ {
+  "term": "Bacteremia",
+  "def": "Viable bacteria present in the bloodstream.",
+  "chapter": 20
+ },
+ {
+  "term": "Shock index",
+  "def": "Systolic BP \u00f7 heart rate; normal 0.7\u20130.9, >1.0 signals concern.",
+  "chapter": 20
+ },
+ {
+  "term": "ARDS",
+  "def": "Acute respiratory distress syndrome \u2014 refractory hypoxemia, \u2193 pulmonary compliance, noncardiogenic pulmonary edema.",
+  "chapter": 20
+ },
+ {
+  "term": "DIC",
+  "def": "Disseminated intravascular coagulation \u2014 widespread microvascular clotting consuming platelets/clotting factors, causing simultaneous thrombosis and bleeding.",
+  "chapter": 20
+ },
+ {
+  "term": "Acute tubular necrosis (ATN)",
+  "def": "Ischemic necrosis of renal tubular epithelial cells from prolonged hypoperfusion.",
+  "chapter": 20
+ },
+ {
+  "term": "MODS",
+  "def": "Multiple organ dysfunction syndrome \u2014 altered function in \u22652 organ systems, requiring intervention to maintain homeostasis.",
+  "chapter": 20
+ },
+ {
+  "term": "Asthma",
+  "def": "Reversible airway obstruction + airway inflammation + increased airway reactivity to stimuli.",
+  "chapter": 22
+ },
+ {
+  "term": "Extrinsic (allergic) asthma",
+  "def": "IgE-mediated asthma, often with atopy/family history; ~1/3 to 1/2 of cases.",
+  "chapter": 22
+ },
+ {
+  "term": "Intrinsic (nonallergic) asthma",
+  "def": "Asthma with no allergy history, adult-onset, less favorable prognosis, poor response to immunotherapy.",
+  "chapter": 22
+ },
+ {
+  "term": "Status asthmaticus",
+  "def": "Severe asthma unresponsive to typical inhaled bronchodilators \u2014 life-threatening.",
+  "chapter": 22
+ },
+ {
+  "term": "Charcot-Leyden crystals",
+  "def": "Crystallized eosinophil membrane enzymes found in asthmatic sputum.",
+  "chapter": 22
+ },
+ {
+  "term": "Curschmann spirals",
+  "def": "Mucous casts of bronchioles found in asthmatic sputum.",
+  "chapter": 22
+ },
+ {
+  "term": "Peak expiratory flow (PEF)",
+  "def": "The maximal expired airflow during forced vital capacity \u2014 the best indicator of airflow reduction in asthma.",
+  "chapter": 22
+ },
+ {
+  "term": "Chronic bronchitis (Type B COPD)",
+  "def": "Productive cough >3 months/year for \u22652 consecutive years, other causes excluded.",
+  "chapter": 22
+ },
+ {
+  "term": "Reid index",
+  "def": "(b\u2212c)/(a\u2212d) \u2014 the ratio measuring bronchial mucous gland thickness; normal <0.4, severe bronchitis ~0.7.",
+  "chapter": 22
+ },
+ {
+  "term": "Blue bloater",
+  "def": "Classic chronic bronchitis presentation \u2014 cyanosis + edema from right-sided heart failure.",
+  "chapter": 22
+ },
+ {
+  "term": "Emphysema (Type A COPD)",
+  "def": "Destructive alveolar wall changes + abnormal enlargement of distal air sacs.",
+  "chapter": 22
+ },
+ {
+  "term": "\u03b11-Antitrypsin",
+  "def": "A protective enzyme inhibiting proteolytic alveolar breakdown; deficiency causes early-onset emphysema.",
+  "chapter": 22
+ },
+ {
+  "term": "Radial traction",
+  "def": "The normal outward pull of surrounding alveolar tissue that holds small airways open; lost in emphysema.",
+  "chapter": 22
+ },
+ {
+  "term": "Pink puffer",
+  "def": "Classic emphysema presentation \u2014 near-normal oxygenation maintained via sustained high respiratory effort.",
+  "chapter": 22
+ },
+ {
+  "term": "Bronchiectasis",
+  "def": "Permanent dilation of bronchi from recurrent infection/inflammation, obstructive and suppurative.",
+  "chapter": 22
+ },
+ {
+  "term": "Digital clubbing",
+  "def": "Fibrous tissue hyperplasia at the nail bed from prolonged hypoxemia; severity parallels disease severity.",
+  "chapter": 22
+ },
+ {
+  "term": "Bronchiolitis",
+  "def": "Widespread bronchiolar inflammation, most often from RSV, primarily affecting infants/young children.",
+  "chapter": 22
+ },
+ {
+  "term": "Cystic fibrosis",
+  "def": "Autosomal recessive exocrine gland disorder causing thick, obstructive mucus \u2014 the most common genetic lung disease in the US.",
+  "chapter": 22
+ },
+ {
+  "term": "Restrictive lung disease",
+  "def": "Decreased lung expansion from parenchymal, pleural, chest wall, or neuromuscular causes; \u2193 TLC, VC, FRC, RV.",
+  "chapter": 23
+ },
+ {
+  "term": "Idiopathic pulmonary fibrosis (IPF)",
+  "def": "Chronic interstitial lung disease of the elderly from chronic epithelial injury, aging, and genetic predisposition.",
+  "chapter": 23
+ },
+ {
+  "term": "Honeycomb lung",
+  "def": "The radiographic end-stage appearance of IPF fibrosis.",
+  "chapter": 23
+ },
+ {
+  "term": "Sarcoidosis",
+  "def": "A systemic disease of unknown cause producing noncaseating granulomas, most often in lymph nodes/lung.",
+  "chapter": 23
+ },
+ {
+  "term": "Pneumoconiosis",
+  "def": "Parenchymal lung disease from chronic inhalation of inorganic dust (coal, silica, asbestos).",
+  "chapter": 23
+ },
+ {
+  "term": "ARDS",
+  "def": "Acute hypoxemia + noncardiogenic pulmonary edema + reduced lung compliance from alveolar-capillary membrane damage.",
+  "chapter": 23
+ },
+ {
+  "term": "NRDS",
+  "def": "Neonatal respiratory distress from surfactant deficiency in premature infants.",
+  "chapter": 23
+ },
+ {
+  "term": "L/S ratio",
+  "def": "Lecithin/sphingomyelin ratio in amniotic fluid; \u22652:1 indicates fetal lung maturity.",
+  "chapter": 23
+ },
+ {
+  "term": "Spontaneous pneumothorax",
+  "def": "Air in the pleural space without trauma \u2014 primary (no underlying disease) or secondary (existing lung disease).",
+  "chapter": 23
+ },
+ {
+  "term": "Tension pneumothorax",
+  "def": "Air accumulates under pressure, unable to escape \u2014 mediastinal shift, medical emergency.",
+  "chapter": 23
+ },
+ {
+  "term": "Transudate",
+  "def": "Low-protein/LDH pleural effusion from hydrostatic/oncotic pressure imbalance (e.g., heart failure).",
+  "chapter": 23
+ },
+ {
+  "term": "Exudate",
+  "def": "High-protein/LDH pleural effusion from increased capillary permeability (e.g., infection, malignancy).",
+  "chapter": 23
+ },
+ {
+  "term": "Kyphoscoliosis",
+  "def": "Combined posterior (kyphosis) and lateral (scoliosis) spinal curvature restricting lung expansion.",
+  "chapter": 23
+ },
+ {
+  "term": "Flail chest",
+  "def": "Free-floating chest wall segment from rib fractures at two sites, moving paradoxically with breathing.",
+  "chapter": 23
+ },
+ {
+  "term": "Ghon tubercle",
+  "def": "The calcified, fibrotic granuloma marking primary TB infection \u2014 the pathologic hallmark of TB.",
+  "chapter": 23
+ },
+ {
+  "term": "Miliary tuberculosis",
+  "def": "Disseminated TB from hematogenous spread, producing diffuse small nodular densities.",
+  "chapter": 23
+ },
+ {
+  "term": "Mantoux (PPD) test",
+  "def": "Intradermal tuberculin skin test; induration size interpreted against risk category to assess TB exposure.",
+  "chapter": 23
+ },
+ {
+  "term": "ECV imbalance (saline imbalance)",
+  "def": "A change in the AMOUNT of extracellular fluid with normal concentration \u2014 too much or too little isotonic fluid.",
+  "chapter": 24
+ },
+ {
+  "term": "Concentration imbalance (water imbalance)",
+  "def": "A change in the osmolality/serum sodium concentration of extracellular fluid, independent of total volume.",
+  "chapter": 24
+ },
+ {
+  "term": "Third spacing",
+  "def": "Sodium-containing fluid sequestered outside the accessible extracellular compartment (e.g., ascites) \u2014 causes ECV deficit signs without external fluid loss.",
+  "chapter": 24
+ },
+ {
+  "term": "Hyponatremia",
+  "def": "Serum sodium below 135 mEq/L \u2014 extracellular fluid too dilute.",
+  "chapter": 24
+ },
+ {
+  "term": "Dilutional hyponatremia",
+  "def": "Hyponatremia from gaining relatively more water than salt (e.g., SIADH, psychogenic polydipsia).",
+  "chapter": 24
+ },
+ {
+  "term": "Depletional hyponatremia",
+  "def": "Hyponatremia from losing relatively more salt than water (e.g., thiazide diuretics).",
+  "chapter": 24
+ },
+ {
+  "term": "SIADH",
+  "def": "Syndrome of inappropriate ADH secretion \u2014 excessive water retention causing dilutional hyponatremia.",
+  "chapter": 24
+ },
+ {
+  "term": "Hypokalemia",
+  "def": "Serum potassium <3.5 mEq/L \u2014 causes hyperpolarization of muscle cells.",
+  "chapter": 24
+ },
+ {
+  "term": "Hyperkalemia",
+  "def": "Serum potassium >5.0 mEq/L \u2014 causes hypopolarization of muscle cells.",
+  "chapter": 24
+ },
+ {
+  "term": "Ionized calcium",
+  "def": "The physiologically active, unbound fraction of serum calcium (~half of total serum calcium).",
+  "chapter": 24
+ },
+ {
+  "term": "Hypocalcemia",
+  "def": "Serum calcium below 9 mg/dL \u2014 increased neuromuscular excitability (Trousseau/Chvostek signs).",
+  "chapter": 24
+ },
+ {
+  "term": "Hypercalcemia",
+  "def": "Serum calcium above 11 mg/dL \u2014 decreased neuromuscular excitability.",
+  "chapter": 24
+ },
+ {
+  "term": "Trousseau sign",
+  "def": "Carpal spasm after ~3 minutes of arterial occlusion to the hand \u2014 a hypocalcemia indicator.",
+  "chapter": 24
+ },
+ {
+  "term": "Chvostek sign",
+  "def": "Facial muscle spasm from tapping the facial nerve near the ear \u2014 a hypocalcemia indicator (can be positive in normal neonates).",
+  "chapter": 24
+ },
+ {
+  "term": "pH",
+  "def": "The negative logarithm of hydrogen ion concentration; normal arterial blood pH is 7.35\u20137.45.",
+  "chapter": 25
+ },
+ {
+  "term": "Bicarbonate buffer system",
+  "def": "The primary extracellular buffer \u2014 HCO3\u207b (base) and H2CO3 (weak acid) in equilibrium; normal ratio 20:1.",
+  "chapter": 25
+ },
+ {
+  "term": "Volatile acid",
+  "def": "Carbonic acid \u2014 the only acid excretable as a gas (CO2 + H2O) by the lungs.",
+  "chapter": 25
+ },
+ {
+  "term": "Nonvolatile (metabolic) acid",
+  "def": "Any acid other than carbonic acid (e.g., lactic acid, ketoacids); excreted only by the kidneys.",
+  "chapter": 25
+ },
+ {
+  "term": "Compensation",
+  "def": "A physiologic response that moves pH toward normal by deliberately creating an imbalance in the OTHER acid system \u2014 doesn't correct the underlying problem.",
+  "chapter": 25
+ },
+ {
+  "term": "Titratable acidity",
+  "def": "H+ excreted in urine while bound to filtered buffers like phosphate.",
+  "chapter": 25
+ },
+ {
+  "term": "Ammonium trapping",
+  "def": "Renal tubular cells produce ammonia (NH3), which combines with H+ to form NH4+ \u2014 a way to excrete H+ without acidifying the urine excessively.",
+  "chapter": 25
+ },
+ {
+  "term": "Acidosis",
+  "def": "A process tending to decrease blood pH (make it more acidic) \u2014 a process, not necessarily a measured low pH.",
+  "chapter": 25
+ },
+ {
+  "term": "Acidemia",
+  "def": "An actual measured decrease in blood pH.",
+  "chapter": 25
+ },
+ {
+  "term": "Alkalosis",
+  "def": "A process tending to increase blood pH.",
+  "chapter": 25
+ },
+ {
+  "term": "Alkalemia",
+  "def": "An actual measured increase in blood pH.",
+  "chapter": 25
+ },
+ {
+  "term": "Metabolic acidosis",
+  "def": "Relative excess of any acid except carbonic acid \u2014 from increased acid or decreased base (bicarbonate).",
+  "chapter": 25
+ },
+ {
+  "term": "Respiratory acidosis",
+  "def": "Excess carbonic acid from impaired CO2 excretion (hypoventilation).",
+  "chapter": 25
+ },
+ {
+  "term": "Nephralgia",
+  "def": "Renal/kidney pain \u2014 the kidney itself has few pain receptors, but the capsule is richly innervated.",
+  "chapter": 27
+ },
+ {
+  "term": "CVA tenderness",
+  "def": "Costovertebral angle tenderness \u2014 the classic exam finding for intrarenal capsular pain (T10-L1 dermatomes).",
+  "chapter": 27
+ },
+ {
+  "term": "Renal agenesis",
+  "def": "Failure of a kidney to embryonically develop; bilateral is incompatible with life.",
+  "chapter": 27
+ },
+ {
+  "term": "ARPKD / ADPKD",
+  "def": "Autosomal recessive (neonatal-onset) vs. autosomal dominant (adult-onset) polycystic kidney disease.",
+  "chapter": 27
+ },
+ {
+  "term": "Renal cell carcinoma (RCC)",
+  "def": "The most common kidney cancer; often asymptomatic until advanced/metastatic.",
+  "chapter": 27
+ },
+ {
+  "term": "Nephroblastoma (Wilms tumor)",
+  "def": "The most common pediatric kidney cancer, from nephrogenic blastemal cells.",
+  "chapter": 27
+ },
+ {
+  "term": "Pyelonephritis",
+  "def": "Infection of the kidney (renal tubules, pelvis, calices) \u2014 an upper urinary tract infection.",
+  "chapter": 27
+ },
+ {
+  "term": "Urosepsis",
+  "def": "Bloodstream infection originating from a urinary tract infection \u2014 causes 25% of all sepsis cases.",
+  "chapter": 27
+ },
+ {
+  "term": "Hydronephrosis",
+  "def": "Kidney/renal pelvis enlargement from obstructed urine outflow.",
+  "chapter": 27
+ },
+ {
+  "term": "Nephrolithiasis",
+  "def": "Kidney stone formation and passage anywhere in the urinary tract.",
+  "chapter": 27
+ },
+ {
+  "term": "Struvite (staghorn) calculi",
+  "def": "Magnesium-ammonium-phosphate stones forming around urea-splitting bacterial infections, sometimes filling the renal pelvis.",
+  "chapter": 27
+ },
+ {
+  "term": "Podocytes",
+  "def": "Specialized glomerular epithelial cells with foot processes forming slit pores \u2014 part of the filtration barrier.",
+  "chapter": 27
+ },
+ {
+  "term": "Nephrotic syndrome",
+  "def": "Heavy proteinuria (3-3.5 g/24h) from glomerular basement membrane damage \u2014 edema, hyperlipidemia.",
+  "chapter": 27
+ },
+ {
+  "term": "Nephritic syndrome",
+  "def": "Glomerular inflammation/leakiness causing gross hematuria and RBC casts.",
+  "chapter": 27
+ },
+ {
+  "term": "Glomerulonephritis",
+  "def": "Immune-mediated glomerular inflammation, primary or secondary to systemic disease.",
+  "chapter": 27
+ },
+ {
+  "term": "Acute kidney injury (AKI)",
+  "def": "Sudden reduction in kidney function \u2014 fluid/electrolyte/acid-base disruption, retained nitrogenous waste, \u2191 creatinine, \u2193 GFR.",
+  "chapter": 28
+ },
+ {
+  "term": "RIFLE classification",
+  "def": "Risk, Injury, Failure, Loss, End-stage \u2014 a five-tier AKI staging system.",
+  "chapter": 28
+ },
+ {
+  "term": "Prerenal AKI",
+  "def": "Reduced kidney function from impaired renal perfusion \u2014 the cause lies upstream of the kidney.",
+  "chapter": 28
+ },
+ {
+  "term": "Postrenal AKI",
+  "def": "Reduced kidney function from obstruction of urine outflow distal to the kidney.",
+  "chapter": 28
+ },
+ {
+  "term": "Intrinsic (intrarenal) AKI",
+  "def": "Kidney injury from damage within the kidney itself \u2014 vascular, glomerular, tubular, or interstitial.",
+  "chapter": 28
+ },
+ {
+  "term": "Acute tubular necrosis (ATN)",
+  "def": "Tubular cell injury from ischemia or nephrotoxins \u2014 the most common form of intrinsic AKI.",
+  "chapter": 28
+ },
+ {
+  "term": "Contrast-induced AKI (CI-AKI)",
+  "def": "Nephropathy from radiographic contrast media, historically the most common nephrotoxic AKI cause.",
+  "chapter": 28
+ },
+ {
+  "term": "Chronic kidney disease (CKD)",
+  "def": "Decreased kidney function or damage present \u22653 months, or GFR <60 mL/min/1.73m\u00b2 for 3 months.",
+  "chapter": 28
+ },
+ {
+  "term": "End-stage renal/kidney disease (ESRD/ESKD)",
+  "def": "The final outcome of CKD, requiring dialysis or transplant for survival.",
+  "chapter": 28
+ },
+ {
+  "term": "Uremic syndrome",
+  "def": "Multi-system toxicity from retained metabolic waste products as renal function declines.",
+  "chapter": 28
+ },
+ {
+  "term": "Secondary hyperparathyroidism",
+  "def": "Compensatory PTH elevation from CKD-related hypocalcemia, driving CKD bone/mineral disease.",
+  "chapter": 28
+ },
+ {
+  "term": "Cardiorenal anemia syndrome",
+  "def": "The interlinked, escalating combination of worsening CKD, anemia, and heart failure.",
+  "chapter": 28
+ },
+ {
+  "term": "Protein-energy wasting (PEW)",
+  "def": "Loss of muscle/visceral protein stores in advanced CKD \u2014 distinct from general malnutrition.",
+  "chapter": 28
+ },
+ {
+  "term": "Acute-on-chronic kidney disease",
+  "def": "AKI developing in a patient with preexisting CKD.",
+  "chapter": 28
+ },
+ {
+  "term": "Micturition",
+  "def": "Voiding \u2014 coordinated reflex + voluntary bladder emptying, governed by the pontine micturition center.",
+  "chapter": 29
+ },
+ {
+  "term": "Detrusor muscle",
+  "def": "The bladder's smooth muscle wall; parasympathetically driven contraction empties the bladder.",
+  "chapter": 29
+ },
+ {
+  "term": "Urgency urinary incontinence (UUI)",
+  "def": "Involuntary leakage with/after a sudden urge \u2014 from detrusor overactivity.",
+  "chapter": 29
+ },
+ {
+  "term": "Stress urinary incontinence (SUI)",
+  "def": "Leakage with \u2191 intraabdominal pressure (cough, lift, laugh) without a bladder contraction.",
+  "chapter": 29
+ },
+ {
+  "term": "Overflow urinary incontinence (OUI)",
+  "def": "Continuous dribbling from an overfull bladder \u2014 outlet obstruction or detrusor underactivity.",
+  "chapter": 29
+ },
+ {
+  "term": "Enuresis",
+  "def": "Involuntary urination during sleep in a child \u22655 years old.",
+  "chapter": 29
+ },
+ {
+  "term": "Neurogenic bladder",
+  "def": "LUT dysfunction from disrupted nervous system control of micturition.",
+  "chapter": 29
+ },
+ {
+  "term": "Detrusor sphincter dyssynergia (DSD)",
+  "def": "Detrusor contraction occurring simultaneously with involuntary sphincter contraction.",
+  "chapter": 29
+ },
+ {
+  "term": "Vesicoureteral reflux (VUR)",
+  "def": "Retrograde urine flow from bladder into the upper urinary tract, from an incompetent ureterovesical junction.",
+  "chapter": 29
+ },
+ {
+  "term": "Ureteropelvic junction obstruction (UPJO)",
+  "def": "Blockage where the ureter meets the renal pelvis \u2014 the most common cause of neonatal hydronephrosis.",
+  "chapter": 29
+ },
+ {
+  "term": "Ureterocele",
+  "def": "Congenital cystic dilation of the distal ureter.",
+  "chapter": 29
+ },
+ {
+  "term": "Urothelial carcinoma",
+  "def": "~90% of bladder cancers; arises from the transitional epithelium lining the urinary tract.",
+  "chapter": 29
+ },
+ {
+  "term": "Cystitis",
+  "def": "Bladder inflammation, most commonly bacterial (lower UTI).",
+  "chapter": 29
+ },
+ {
+  "term": "Ureteral colic",
+  "def": "Sharp, spasmodic, waxing/waning pain from a stone lodged in the ureter.",
+  "chapter": 29
+ },
+ {
+  "term": "Cryptorchidism",
+  "def": "\"Hidden testis\" \u2014 a testis occupying an extrascrotal position (intraabdominal, inguinal canal, or prescrotal).",
+  "chapter": 31
+ },
+ {
+  "term": "Ectopic testis",
+  "def": "A testis misdirected outside the normal path of descent, most commonly into a superficial inguinal pouch \u2014 distinct from simple incomplete descent.",
+  "chapter": 31
+ },
+ {
+  "term": "Orchiopexy",
+  "def": "Surgical procedure to bring an undescended testis into a normal scrotal position \u2014 first-line treatment for cryptorchidism.",
+  "chapter": 31
+ },
+ {
+  "term": "Hypogonadism (ADAM)",
+  "def": "Subnormal testosterone with or without altered sperm production; age-related form is called androgen deficiency in the aging male.",
+  "chapter": 31
+ },
+ {
+  "term": "Hydrocele",
+  "def": "Fluid collection around the testicle/spermatic cord within the tunica or processus vaginalis; communicating or noncommunicating.",
+  "chapter": 31
+ },
+ {
+  "term": "Spermatocele",
+  "def": "A painless, sperm-containing cystic mass at the upper pole of the testis, seen only in sexually mature testes.",
+  "chapter": 31
+ },
+ {
+  "term": "Varicocele",
+  "def": "Abnormal dilation of scrotal venous structures (pampiniform plexus) from dysfunctional spermatic vein valves \u2014 the classic \"bag of worms.\"",
+  "chapter": 31
+ },
+ {
+  "term": "Testicular torsion",
+  "def": "Twisting of the spermatic cord compromising testicular blood supply \u2014 a true surgical emergency.",
+  "chapter": 31
+ },
+ {
+  "term": "Cremasteric reflex",
+  "def": "Elevation of the testicle on stroking the inner thigh; its ABSENCE is highly sensitive for testicular torsion.",
+  "chapter": 31
+ },
+ {
+  "term": "Epididymitis",
+  "def": "Inflammation of the epididymis/testis, usually bacterial (STI or non-STI organisms).",
+  "chapter": 31
+ },
+ {
+  "term": "Leukospermia",
+  "def": "Elevated white blood cells in ejaculate \u2014 a sign seen in asymptomatic prostatitis.",
+  "chapter": 31
+ },
+ {
+  "term": "Benign prostatic hyperplasia (BPH)",
+  "def": "Nonmalignant nodular hyperplasia of the prostate transition zone causing bladder outlet obstruction \u2014 unrelated to prostate cancer risk.",
+  "chapter": 31
+ },
+ {
+  "term": "Transurethral resection of the prostate (TURP)",
+  "def": "The gold-standard surgical procedure for BPH \u2014 resecting prostatic tissue via a resectoscope through the urethra.",
+  "chapter": 31
+ },
+ {
+  "term": "CP/CPPS",
+  "def": "Chronic prostatitis/chronic pelvic pain syndrome \u2014 the most common prostatitis category; noninfectious, cause unclear.",
+  "chapter": 31
+ },
+ {
+  "term": "Ureteral colic",
+  "def": "Sharp, spasmodic, wave-like pain from a stone stretching and triggering spasm in the ureter.",
+  "chapter": 31
+ },
+ {
+  "term": "Amenorrhea",
+  "def": "Absence of menstruation \u22653 missed periods; primary (never started by 16) vs. secondary (stopped \u22656 months after being established).",
+  "chapter": 33
+ },
+ {
+  "term": "Menorrhagia",
+  "def": "Heavy menstrual bleeding \u2014 increased amount/duration.",
+  "chapter": 33
+ },
+ {
+  "term": "Metrorrhagia",
+  "def": "Intermenstrual bleeding (between periods).",
+  "chapter": 33
+ },
+ {
+  "term": "Dysmenorrhea",
+  "def": "Painful menstruation limiting activity; primary (no pathology) vs. secondary (underlying pelvic disorder).",
+  "chapter": 33
+ },
+ {
+  "term": "Uterine prolapse",
+  "def": "Descent of the uterus into the vagina from relaxed uterosacral/cardinal ligaments, graded first\u2013fourth degree.",
+  "chapter": 33
+ },
+ {
+  "term": "Cystocele",
+  "def": "Bladder protrusion into the anterior vaginal wall from weakened vaginal musculature.",
+  "chapter": 33
+ },
+ {
+  "term": "Rectocele",
+  "def": "Rectal protrusion into the posterior vaginal wall.",
+  "chapter": 33
+ },
+ {
+  "term": "Pelvic inflammatory disease (PID)",
+  "def": "Infection of the oviducts/ovaries and adjacent organs \u2014 cervicitis, endometritis, salpingitis, oophoritis.",
+  "chapter": 33
+ },
+ {
+  "term": "Vulvovaginitis",
+  "def": "Inflammation of the vulva and vagina, most often fromCandida.",
+  "chapter": 33
+ },
+ {
+  "term": "Uterine leiomyoma (fibroid)",
+  "def": "The most common benign uterine tumor \u2014 estrogen-sensitive smooth muscle growth.",
+  "chapter": 33
+ },
+ {
+  "term": "Endometrioma",
+  "def": "An ectopic focus of endometrial tissue outside the uterine cavity \u2014 the hallmark of endometriosis.",
+  "chapter": 33
+ },
+ {
+  "term": "Pregnancy-induced hypertension (PIH)",
+  "def": "Preeclampsia-eclampsia \u2014 rapid BP rise + proteinuria in pregnancy.",
+  "chapter": 33
+ },
+ {
+  "term": "Placenta previa",
+  "def": "Placenta implanted over the internal cervical os.",
+  "chapter": 33
+ },
+ {
+  "term": "Abruptio placentae",
+  "def": "Premature separation of the placenta before delivery.",
+  "chapter": 33
+ },
+ {
+  "term": "Mammary duct ectasia",
+  "def": "Chronic periductal inflammation with dilated, debris-filled subareolar ducts \u2014 can mimic malignancy.",
+  "chapter": 33
+ },
+ {
+  "term": "Fibrocystic breast changes",
+  "def": "Cyclic, hormone-related palpable breast masses/tenderness \u2014 not a distinct disease, and mostly NOT a cancer risk factor.",
+  "chapter": 33
  },
  {
   "term": "Dysphagia",

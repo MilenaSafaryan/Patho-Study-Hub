@@ -1,0 +1,58 @@
+[
+ {
+  "term": "ECV imbalance (saline imbalance)",
+  "def": "A change in the AMOUNT of extracellular fluid with normal concentration \u2014 too much or too little isotonic fluid."
+ },
+ {
+  "term": "Concentration imbalance (water imbalance)",
+  "def": "A change in the osmolality/serum sodium concentration of extracellular fluid, independent of total volume."
+ },
+ {
+  "term": "Third spacing",
+  "def": "Sodium-containing fluid sequestered outside the accessible extracellular compartment (e.g., ascites) \u2014 causes ECV deficit signs without external fluid loss."
+ },
+ {
+  "term": "Hyponatremia",
+  "def": "Serum sodium below 135 mEq/L \u2014 extracellular fluid too dilute."
+ },
+ {
+  "term": "Dilutional hyponatremia",
+  "def": "Hyponatremia from gaining relatively more water than salt (e.g., SIADH, psychogenic polydipsia)."
+ },
+ {
+  "term": "Depletional hyponatremia",
+  "def": "Hyponatremia from losing relatively more salt than water (e.g., thiazide diuretics)."
+ },
+ {
+  "term": "SIADH",
+  "def": "Syndrome of inappropriate ADH secretion \u2014 excessive water retention causing dilutional hyponatremia."
+ },
+ {
+  "term": "Hypokalemia",
+  "def": "Serum potassium <3.5 mEq/L \u2014 causes hyperpolarization of muscle cells."
+ },
+ {
+  "term": "Hyperkalemia",
+  "def": "Serum potassium >5.0 mEq/L \u2014 causes hypopolarization of muscle cells."
+ },
+ {
+  "term": "Ionized calcium",
+  "def": "The physiologically active, unbound fraction of serum calcium (~half of total serum calcium)."
+ },
+ {
+  "term": "Hypocalcemia",
+  "def": "Serum calcium below 9 mg/dL \u2014 increased neuromuscular excitability (Trousseau/Chvostek signs)."
+ },
+ {
+  "term": "Hypercalcemia",
+  "def": "Serum calcium above 11 mg/dL \u2014 decreased neuromuscular excitability."
+ },
+ {
+  "term": "Trousseau sign",
+  "def": "Carpal spasm after ~3 minutes of arterial occlusion to the hand \u2014 a hypocalcemia indicator."
+ },
+ {
+  "term": "Chvostek sign",
+  "def": "Facial muscle spasm from tapping the facial nerve near the ear \u2014 a hypocalcemia indicator (can be positive in normal neonates)."
+ }
+]

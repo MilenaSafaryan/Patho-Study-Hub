@@ -1,0 +1,90 @@
+[
+ {
+  "term": "Heart failure (HF)",
+  "def": "A complex syndrome from structural/functional impairment of ventricular filling or ejection, unable to meet metabolic demand."
+ },
+ {
+  "term": "Ejection fraction (EF)",
+  "def": "Stroke volume \u00f7 end-diastolic volume; normal is 55\u201370%."
+ },
+ {
+  "term": "HFrEF",
+  "def": "HF with reduced EF (\u226440%) \u2014 systolic dysfunction, impaired contractility."
+ },
+ {
+  "term": "HFpEF",
+  "def": "HF with preserved EF (\u226550%) with evidence of elevated LV filling pressures \u2014 diastolic dysfunction."
+ },
+ {
+  "term": "HFmrEF",
+  "def": "HF with mildly reduced EF (41\u201349%) plus evidence of elevated filling pressures."
+ },
+ {
+  "term": "dP/dt",
+  "def": "A measure of inotropy \u2014 how quickly the ventricle develops a forceful contraction."
+ },
+ {
+  "term": "Lusitropy",
+  "def": "The energy-requiring active process of myocardial relaxation (calcium removal from cytoplasm)."
+ },
+ {
+  "term": "Frank-Starling mechanism",
+  "def": "Greater diastolic muscle fiber stretch (preload) produces greater force of contraction, up to a point."
+ },
+ {
+  "term": "Eccentric hypertrophy",
+  "def": "Muscle fiber elongation from excess preload/volume overload."
+ },
+ {
+  "term": "Concentric hypertrophy",
+  "def": "Muscle fiber thickening from high afterload/pressure overload."
+ },
+ {
+  "term": "Forward failure",
+  "def": "Poor cardiac output causing inadequate perfusion of tissues/organs."
+ },
+ {
+  "term": "Backward failure",
+  "def": "Congestion of blood behind the failing pumping chamber."
+ },
+ {
+  "term": "Cor pulmonale",
+  "def": "Right ventricular hypertrophy from pulmonary disease-driven increased pulmonary vascular resistance."
+ },
+ {
+  "term": "S3 gallop",
+  "def": "A low-frequency early-diastolic sound from rapid ventricular filling under increased volume load."
+ },
+ {
+  "term": "GDMT",
+  "def": "Guideline-directed medical therapy \u2014 the four pillars for HFrEF: ARNI, MRA, \u03b2-blockers, SGLT2 inhibitors."
+ },
+ {
+  "term": "Dysrhythmia (arrhythmia)",
+  "def": "A cardiac rhythm abnormality of impulse generation or conduction."
+ },
+ {
+  "term": "Automaticity",
+  "def": "A dysrhythmia mechanism from abnormal spontaneous depolarization during phase 4 of the action potential."
+ },
+ {
+  "term": "Early afterdepolarization (EAD)",
+  "def": "A triggered impulse during phase 3 repolarization from reopened calcium channels."
+ },
+ {
+  "term": "Delayed afterdepolarization (DAD)",
+  "def": "A triggered impulse after repolarization is complete, from spontaneous SR calcium release."
+ },
+ {
+  "term": "Reentry",
+  "def": "A cardiac impulse that continues to depolarize part of the heart after the main impulse finishes, restimulating recovered tissue \u2014 the mechanism behind most tachydysrhythmias."
+ },
+ {
+  "term": "Escape rhythm",
+  "def": "Takeover by a slower, lower pacemaker after SA node failure."
+ },
+ {
+  "term": "Atrial fibrillation (AF)",
+  "def": "Disorganized, irregular atrial rhythm with irregular ventricular response \u2014 the most common sustained dysrhythmia."
+ }
+]

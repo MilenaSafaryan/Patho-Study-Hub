@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <style>
   .exam-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;border-left:5px solid var(--wk-color,var(--teal));margin-bottom:14px;transition:transform .12s ease, box-shadow .12s ease;}
-  a.exam-card:hover{transform:translateY(-2px);box-shadow:0 8px 18px -12px rgba(28,37,33,0.35);}
+  a.exam-card:hover{transform:translateY(-2px);box-shadow:0 8px 18px -12px rgba(51,42,32,0.28);}
   .exam-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
   .exam-week{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--wk-color,var(--teal));text-transform:uppercase;letter-spacing:.08em;font-weight:700;}
   .exam-title{font-family:'Spectral',serif;font-size:1.15rem;font-weight:600;margin-top:4px;}
@@ -34,6 +34,17 @@
   </div>
 
   <div id="exam-list"></div>
+
+  <a href="final-exam.html" class="exam-card" style="display:block;text-decoration:none;color:inherit;--wk-color:#332A20;margin-top:8px;">
+    <div class="exam-head">
+      <div>
+        <div class="exam-week">Cumulative · timed</div>
+        <div class="exam-title">Final exam prep — all weeks combined</div>
+      </div>
+      <span class="exam-status" style="color:var(--ink);">Configure &amp; start &rarr;</span>
+    </div>
+    <div style="font-size:0.85rem;color:var(--ink-soft);margin-top:6px;">Pick your weeks, question count, and a timer — mixes everything together with a weak-area breakdown at the end.</div>
+  </a>
 
   <div class="placeholder-note">
     <strong>Adding a practice exam:</strong> paste your practice exam questions (with answer key) for a week, and they'll be added here as their own timed set — kept separate from the auto-generated chapter quizzes and the Teach Back mode. Format follows the same term/question pattern as the chapter quizzes, just grouped by week instead of by chapter.

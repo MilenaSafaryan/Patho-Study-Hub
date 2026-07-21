@@ -1,0 +1,62 @@
+[
+ {
+  "term": "Nephralgia",
+  "def": "Renal/kidney pain \u2014 the kidney itself has few pain receptors, but the capsule is richly innervated."
+ },
+ {
+  "term": "CVA tenderness",
+  "def": "Costovertebral angle tenderness \u2014 the classic exam finding for intrarenal capsular pain (T10-L1 dermatomes)."
+ },
+ {
+  "term": "Renal agenesis",
+  "def": "Failure of a kidney to embryonically develop; bilateral is incompatible with life."
+ },
+ {
+  "term": "ARPKD / ADPKD",
+  "def": "Autosomal recessive (neonatal-onset) vs. autosomal dominant (adult-onset) polycystic kidney disease."
+ },
+ {
+  "term": "Renal cell carcinoma (RCC)",
+  "def": "The most common kidney cancer; often asymptomatic until advanced/metastatic."
+ },
+ {
+  "term": "Nephroblastoma (Wilms tumor)",
+  "def": "The most common pediatric kidney cancer, from nephrogenic blastemal cells."
+ },
+ {
+  "term": "Pyelonephritis",
+  "def": "Infection of the kidney (renal tubules, pelvis, calices) \u2014 an upper urinary tract infection."
+ },
+ {
+  "term": "Urosepsis",
+  "def": "Bloodstream infection originating from a urinary tract infection \u2014 causes 25% of all sepsis cases."
+ },
+ {
+  "term": "Hydronephrosis",
+  "def": "Kidney/renal pelvis enlargement from obstructed urine outflow."
+ },
+ {
+  "term": "Nephrolithiasis",
+  "def": "Kidney stone formation and passage anywhere in the urinary tract."
+ },
+ {
+  "term": "Struvite (staghorn) calculi",
+  "def": "Magnesium-ammonium-phosphate stones forming around urea-splitting bacterial infections, sometimes filling the renal pelvis."
+ },
+ {
+  "term": "Podocytes",
+  "def": "Specialized glomerular epithelial cells with foot processes forming slit pores \u2014 part of the filtration barrier."
+ },
+ {
+  "term": "Nephrotic syndrome",
+  "def": "Heavy proteinuria (3-3.5 g/24h) from glomerular basement membrane damage \u2014 edema, hyperlipidemia."
+ },
+ {
+  "term": "Nephritic syndrome",
+  "def": "Glomerular inflammation/leakiness causing gross hematuria and RBC casts."
+ },
+ {
+  "term": "Glomerulonephritis",
+  "def": "Immune-mediated glomerular inflammation, primary or secondary to systemic disease."
+ }
+]

@@ -1,0 +1,98 @@
+[
+ {
+  "term": "Cardiac output (CO)",
+  "def": "Stroke volume \u00d7 heart rate; the volume of blood the heart ejects per minute."
+ },
+ {
+  "term": "Stroke volume (SV)",
+  "def": "The volume of blood ejected per heartbeat; determined by preload and myocardial contractility."
+ },
+ {
+  "term": "Preload",
+  "def": "The end-diastolic volume \u2014 how much blood fills the heart before it contracts, determined by venous return."
+ },
+ {
+  "term": "Systemic vascular resistance (SVR)",
+  "def": "The resistance to blood ejection into the arterial circulation, synonymous with cardiac afterload; determined mainly by arteriolar radius."
+ },
+ {
+  "term": "Systolic blood pressure",
+  "def": "The peak arterial pressure during ventricular contraction; primarily determined by stroke volume."
+ },
+ {
+  "term": "Diastolic blood pressure",
+  "def": "The minimum arterial pressure during ventricular relaxation; primarily determined by SVR."
+ },
+ {
+  "term": "Pulse pressure",
+  "def": "Systolic pressure minus diastolic pressure."
+ },
+ {
+  "term": "Mean arterial pressure (MAP)",
+  "def": "The time-weighted average pressure across the cardiac cycle \u2014 not a simple average, since more time is spent in diastole."
+ },
+ {
+  "term": "Baroreceptors",
+  "def": "Pressure-sensitive receptors in the carotid sinuses and aortic arch that provide rapid, moment-to-moment blood pressure regulation."
+ },
+ {
+  "term": "Vasomotor center",
+  "def": "The medullary brainstem region that integrates baroreceptor/chemoreceptor input and directs SNS/PSNS output to control blood pressure."
+ },
+ {
+  "term": "Renin",
+  "def": "An enzyme released by juxtaglomerular cells in response to decreased renal arterial pressure; cleaves angiotensinogen to angiotensin I."
+ },
+ {
+  "term": "Angiotensin-converting enzyme (ACE)",
+  "def": "Produced by vascular endothelium (especially in the lungs); converts angiotensin I to angiotensin II."
+ },
+ {
+  "term": "Angiotensin II",
+  "def": "A potent arterial vasoconstrictor that also stimulates aldosterone release \u2014 the central effector of the RAAS."
+ },
+ {
+  "term": "Aldosterone",
+  "def": "An adrenal cortex hormone that increases renal sodium (and secondarily water) reabsorption, raising blood volume and pressure."
+ },
+ {
+  "term": "Atrial natriuretic peptide (ANP)",
+  "def": "Released by stretched atrial muscle fibers; promotes sodium/water excretion, lowering blood volume and pressure \u2014 opposes the RAAS."
+ },
+ {
+  "term": "Endothelin-1 (ET-1)",
+  "def": "A renal medullary peptide involved in renal perfusion, electrolyte movement, and renin release; levels are abnormal in hypertension."
+ },
+ {
+  "term": "Primary (essential) hypertension",
+  "def": "Hypertension with no clearly identifiable single cause \u2014 90\u201395% of hypertension cases."
+ },
+ {
+  "term": "Secondary hypertension",
+  "def": "Hypertension with an identifiable underlying cause."
+ },
+ {
+  "term": "Isolated systolic hypertension (ISH)",
+  "def": "Systolic \u2265140 mmHg with diastolic <90 mmHg \u2014 the dominant hypertension subtype after age 55."
+ },
+ {
+  "term": "Isolated diastolic hypertension (IDH)",
+  "def": "Diastolic \u226590 mmHg with systolic <140 mmHg \u2014 more common in younger adults."
+ },
+ {
+  "term": "White coat effect",
+  "def": "Situational blood pressure elevation specifically in clinical settings, not reflective of the patient's usual pressure."
+ },
+ {
+  "term": "Orthostatic hypotension (OH)",
+  "def": "A drop in systolic BP \u226520 mmHg or diastolic \u226510 mmHg (or excessive HR rise) within 3 minutes of standing."
+ },
+ {
+  "term": "Vasovagal response",
+  "def": "A paradoxical \u2191 parasympathetic / \u2193 sympathetic response causing bradycardia and vasodilation instead of the expected compensatory response."
+ },
+ {
+  "term": "Microalbuminuria",
+  "def": "Small amounts of protein in urine \u2014 an early indicator of hypertensive glomerular/renal injury."
+ }
+]

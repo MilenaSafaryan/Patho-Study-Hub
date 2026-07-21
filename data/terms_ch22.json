@@ -1,0 +1,74 @@
+[
+ {
+  "term": "Asthma",
+  "def": "Reversible airway obstruction + airway inflammation + increased airway reactivity to stimuli."
+ },
+ {
+  "term": "Extrinsic (allergic) asthma",
+  "def": "IgE-mediated asthma, often with atopy/family history; ~1/3 to 1/2 of cases."
+ },
+ {
+  "term": "Intrinsic (nonallergic) asthma",
+  "def": "Asthma with no allergy history, adult-onset, less favorable prognosis, poor response to immunotherapy."
+ },
+ {
+  "term": "Status asthmaticus",
+  "def": "Severe asthma unresponsive to typical inhaled bronchodilators \u2014 life-threatening."
+ },
+ {
+  "term": "Charcot-Leyden crystals",
+  "def": "Crystallized eosinophil membrane enzymes found in asthmatic sputum."
+ },
+ {
+  "term": "Curschmann spirals",
+  "def": "Mucous casts of bronchioles found in asthmatic sputum."
+ },
+ {
+  "term": "Peak expiratory flow (PEF)",
+  "def": "The maximal expired airflow during forced vital capacity \u2014 the best indicator of airflow reduction in asthma."
+ },
+ {
+  "term": "Chronic bronchitis (Type B COPD)",
+  "def": "Productive cough >3 months/year for \u22652 consecutive years, other causes excluded."
+ },
+ {
+  "term": "Reid index",
+  "def": "(b\u2212c)/(a\u2212d) \u2014 the ratio measuring bronchial mucous gland thickness; normal <0.4, severe bronchitis ~0.7."
+ },
+ {
+  "term": "Blue bloater",
+  "def": "Classic chronic bronchitis presentation \u2014 cyanosis + edema from right-sided heart failure."
+ },
+ {
+  "term": "Emphysema (Type A COPD)",
+  "def": "Destructive alveolar wall changes + abnormal enlargement of distal air sacs."
+ },
+ {
+  "term": "\u03b11-Antitrypsin",
+  "def": "A protective enzyme inhibiting proteolytic alveolar breakdown; deficiency causes early-onset emphysema."
+ },
+ {
+  "term": "Radial traction",
+  "def": "The normal outward pull of surrounding alveolar tissue that holds small airways open; lost in emphysema."
+ },
+ {
+  "term": "Pink puffer",
+  "def": "Classic emphysema presentation \u2014 near-normal oxygenation maintained via sustained high respiratory effort."
+ },
+ {
+  "term": "Bronchiectasis",
+  "def": "Permanent dilation of bronchi from recurrent infection/inflammation, obstructive and suppurative."
+ },
+ {
+  "term": "Digital clubbing",
+  "def": "Fibrous tissue hyperplasia at the nail bed from prolonged hypoxemia; severity parallels disease severity."
+ },
+ {
+  "term": "Bronchiolitis",
+  "def": "Widespread bronchiolar inflammation, most often from RSV, primarily affecting infants/young children."
+ },
+ {
+  "term": "Cystic fibrosis",
+  "def": "Autosomal recessive exocrine gland disorder causing thick, obstructive mucus \u2014 the most common genetic lung disease in the US."
+ }
+]

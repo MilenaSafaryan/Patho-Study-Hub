@@ -56,6 +56,28 @@ function ekgSVG(){
   </svg></div>`;
 }
 
+function celebrate(accentColor){
+  const layer = document.createElement("div");
+  layer.id = "confetti-layer";
+  document.body.appendChild(layer);
+  const colors = [accentColor || "#2E7D5B", "#C05A3F", "#C97A2E", "#3D8B5F", "#332A20"];
+  const pieces = 46;
+  for(let i=0;i<pieces;i++){
+    const el = document.createElement("div");
+    el.className = "confetti-piece";
+    const size = 5 + Math.random()*6;
+    el.style.left = Math.random()*100 + "vw";
+    el.style.width = size+"px";
+    el.style.height = (size*0.4 + Math.random()*4)+"px";
+    el.style.background = colors[Math.floor(Math.random()*colors.length)];
+    el.style.setProperty("--spin", (Math.random()>0.5?1:-1)*(180+Math.random()*540)+"deg");
+    el.style.animationDuration = (1.8 + Math.random()*1.6)+"s";
+    el.style.animationDelay = (Math.random()*0.4)+"s";
+    layer.appendChild(el);
+  }
+  setTimeout(()=> layer.remove(), 3600);
+}
+
 /* =========================================================================
    AI CHAT WIDGET — prepaid credits model
    - Local glossary search always works free, no payment needed.
