@@ -25,6 +25,7 @@
       <button data-tab="guide" class="active">Study Guide</button>
       <button data-tab="quiz">Quiz</button>
       <button data-tab="flashcards">Flashcards</button>
+      <button data-tab="tutor">AI Tutor</button>
       <button data-tab="teachback">Teach Back</button>
     </div>
   </div>
@@ -54,6 +55,10 @@
     <div id="flashcard-box"></div>
   </div>
 
+  <div class="chapter-panel" id="panel-tutor">
+    <div id="tutor-box"></div>
+  </div>
+
   <div class="chapter-panel" id="panel-teachback"></div>
 </div>
 
@@ -64,6 +69,7 @@
 <script src="assets/app.js"></script>
 <script src="assets/quiz.js"></script>
 <script src="assets/flashcards.js"></script>
+<script src="assets/tutor.js"></script>
 <script src="assets/teachback.js"></script>
 <script>
 injectTopbar("home");
@@ -108,6 +114,7 @@ if(!chNum){
     fetchJSON(`data/terms_ch${ch.num}.json`).then(terms=>{
       initQuiz("quiz-card", terms, ch.color, ch.week);
       initFlashcards("flashcard-box", terms, ch.color);
+      initTutor("tutor-box", ch.title, ch.outline, terms, ch.color);
       initTeachBack("panel-teachback", ch.title, terms);
     });
   });
