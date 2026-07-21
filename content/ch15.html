@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alterations in Blood Flow — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.95rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.84rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=15" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Alterations in Blood Flow</p>
+<span class="brand-sub">Chapter 15 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Principles of Flow</div>
+<a href="#hemodynamics">Pressure, Resistance &amp; Poiseuille's Law</a>
+<a href="#velocity-flow">Velocity, Laminar &amp; Turbulent Flow</a>
+<a href="#wall-tension">Wall Tension &amp; the Law of Laplace</a>
+<div class="grp-title">Control of Flow</div>
+<a href="#central-control">Central Control Mechanisms</a>
+<a href="#intrinsic-control">Intrinsic Control (Autoregulation)</a>
+<a href="#lymphatic-control">Control of Lymphatic Flow</a>
+<div class="grp-title">Obstructions to Flow</div>
+<a href="#altered-flow-overview">General Mechanisms of Altered Flow</a>
+<a href="#thrombus">Thrombus</a>
+<a href="#embolus">Embolus</a>
+<a href="#vasospasm-inflammation">Vasospasm, Inflammation &amp; Mechanical Compression</a>
+<div class="grp-title">Structural Alterations</div>
+<a href="#structural-overview">Types of Structural Alterations</a>
+<a href="#atherosclerosis">Atherosclerosis</a>
+<a href="#atherosclerosis-risk">Atherosclerosis Risk Factors</a>
+<div class="grp-title">Venous &amp; Lymphatic Flow</div>
+<a href="#venous-alterations">Valvular Incompetence &amp; Varicose Veins</a>
+<a href="#cvi-dvt">Chronic Venous Insufficiency &amp; DVT</a>
+<a href="#lymphedema">Lymphedema</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Alterations in Blood Flow</h1>
+<p>The physics of how blood actually moves through vessels, how the body controls that flow, and what happens when arteries, veins, or lymphatics are obstructed or structurally altered. Built from your Chapter 15 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Hemodynamics</dt><dd>The principles governing blood flow — pressure, resistance, velocity, laminar/turbulent flow, wall tension, compliance.</dd></div>
+<div class="term"><dt>Poiseuille's law</dt><dd>The formula describing how vessel length, radius, and blood viscosity determine resistance to flow.</dd></div>
+<div class="term"><dt>Ohm's law (hemodynamic)</dt><dd>Q = P/R — blood flow equals the pressure difference divided by resistance.</dd></div>
+<div class="term"><dt>Systemic vascular resistance (SVR)</dt><dd>Resistance peripheral to the heart and lungs; primarily determined by arteriolar tone.</dd></div>
+<div class="term"><dt>Velocity</dt><dd>Distance traveled per unit time (cm/sec); varies inversely with total cross-sectional area.</dd></div>
+<div class="term"><dt>Laminar flow</dt><dd>Streamlined blood flow in layers, with central blood moving fastest (parabolic profile).</dd></div>
+<div class="term"><dt>Turbulent flow</dt><dd>Disrupted, crosswise flow — audible as a bruit, palpable as a thrill; promotes thrombus formation.</dd></div>
+<div class="term"><dt>Law of Laplace</dt><dd>Wall tension = distending pressure × vessel radius; explains why large-radius, high-pressure vessels (aneurysms) are prone to rupture.</dd></div>
+<div class="term"><dt>Critical closing pressure</dt><dd>The pressure (~20 mmHg) below which a vessel can no longer be held open and flow ceases.</dd></div>
+<div class="term"><dt>Vasomotor tone</dt><dd>The continuous baseline level of vascular smooth muscle contraction from basal vasomotor center discharge.</dd></div>
+<div class="term"><dt>Autoregulation</dt><dd>An organ/tissue's intrinsic ability to maintain relatively constant blood flow despite changes in arterial pressure.</dd></div>
+<div class="term"><dt>Nitric oxide (NO)</dt><dd>The primary endothelium-derived vasodilating gas; deficiency implicated in hypertension and heart disease.</dd></div>
+<div class="term"><dt>Active (functional) hyperemia</dt><dd>Increased local blood flow in response to increased tissue metabolic demand.</dd></div>
+<div class="term"><dt>Reactive hyperemia</dt><dd>The flushing/increased flow seen after a temporary flow reduction is reversed (e.g., after a tourniquet is removed).</dd></div>
+<div class="term"><dt>Thrombus</dt><dd>A stationary blood clot formed within a vessel or heart chamber.</dd></div>
+<div class="term"><dt>Embolus</dt><dd>Material (often a dislodged thrombus) that travels through the bloodstream and lodges elsewhere, obstructing flow.</dd></div>
+<div class="term"><dt>Vasospasm</dt><dd>Sudden arterial smooth muscle constriction causing flow obstruction.</dd></div>
+<div class="term"><dt>Vasculitis / phlebitis / arteritis</dt><dd>Inflammation of an artery's intima / a vein's lining / an autoimmune arterial inflammatory process, respectively.</dd></div>
+<div class="term"><dt>Compartment syndrome</dt><dd>Increased pressure within a fascial compartment compromising circulation — from swelling, bleeding, or external compression.</dd></div>
+<div class="term"><dt>Arteriosclerosis</dt><dd>General term for arterial thickening/hardening; encompasses Mönckeberg sclerosis, arteriolar sclerosis, and atherosclerosis.</dd></div>
+<div class="term"><dt>Atherosclerosis</dt><dd>Plaque buildup (lipid, smooth muscle, inflammatory debris) in the intima of large/medium arteries — the dominant, most clinically significant arteriosclerotic process.</dd></div>
+<div class="term"><dt>Aneurysm</dt><dd>A localized dilation of an arterial wall — a weakened area at risk of rupture.</dd></div>
+<div class="term"><dt>Arteriovenous fistula (AVF)</dt><dd>An abnormal direct communication between an artery and a vein.</dd></div>
+<div class="term"><dt>Valvular incompetence</dt><dd>Failure of venous valves to close properly, allowing backward blood flow.</dd></div>
+<div class="term"><dt>Varicose veins</dt><dd>Superficial vein valvular incompetence causing dilated, tortuous, visible veins.</dd></div>
+<div class="term"><dt>Chronic venous insufficiency</dt><dd>Valvular incompetence involving the deep veins of the legs.</dd></div>
+<div class="term"><dt>Deep vein thrombosis (DVT)</dt><dd>A thrombus in a deep vein, most often the legs/pelvis — the most frequent source of pulmonary emboli.</dd></div>
+<div class="term"><dt>Lymphedema</dt><dd>Lymphatic fluid accumulation in the interstitium from obstructed/altered lymph flow — primary (congenital) or secondary (acquired/iatrogenic).</dd></div>
+</dl>
+</section>
+<!-- ================= HEMODYNAMICS ================= -->
+<section class="block" id="hemodynamics">
+<details class="topic" open="">
+<summary>Pressure, Resistance &amp; Poiseuille's Law</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The basic principle</h4><p>Blood flows from high pressure (arterial/arteriolar walls) to low pressure (venous system) — the greater the pressure difference, the greater the flow rate. Resistance opposes this flow; flow and resistance are inversely related.</p></div>
+<div class="fact warn"><h4>Poiseuille's law — three determinants of resistance</h4><p>Vessel length, vessel radius, and blood viscosity. Resistance changes directly with length; inversely with the <b>4th power</b> of the radius; and directly with viscosity.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Radius Change Has an Exponential Effect</p>
+<svg viewbox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="60" rx="10" width="260" x="20" y="60"></rect><text font-size="12" text-anchor="middle" x="150" y="85">Double the radius</text><text font-size="10" text-anchor="middle" x="150" y="105">(all else constant)</text></g>
+<line class="mm-line" x1="280" x2="320" y1="90" y2="90"></line>
+<g class="mm-node"><rect height="60" rx="10" width="260" x="320" y="60"></rect><text font-size="12" text-anchor="middle" x="450" y="85">Resistance drops</text><text font-size="10" text-anchor="middle" x="450" y="105">(∝ 1/r⁴)</text></g>
+<line class="mm-line" x1="580" x2="620" y1="90" y2="90"></line>
+<g class="mm-leaf"><rect height="60" rx="10" width="260" x="620" y="60"></rect><text font-size="12" text-anchor="middle" x="750" y="85">Flow increases 16x</text><text font-size="10" text-anchor="middle" x="750" y="105">(the classic worked example)</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Length vs. radius vs. viscosity — which matters most clinically</h4><p>Vessels can't change their own length, but they CAN change diameter substantially — this makes <b>diameter change the single most important determinant of resistance</b> in real physiology (disease processes and drug therapies act mainly here).</p></div>
+<div class="fact warn"><h4>Viscosity — the hematocrit connection</h4><p>↑ RBCs (polycythemia) or ↓ plasma (dehydration) → ↑ hematocrit → ↑ viscosity → ↑ resistance → slower flow. Directly links back to Chapter 13.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Ohm's law application</h4><p>Q (flow) = P (pressure difference) / R (resistance). Arterioles are the major site of resistance in the vascular system.</p></div>
+<div class="fact warn"><h4>SVR — clinical stakes both directions</h4><p><b>↑ SVR</b> (e.g., hypertension) → heart must work harder to eject blood → ↑ myocardial O2/nutrient demand. <b>↓ SVR pathologically</b> → blood distributed over too large an area, flow slows dramatically → organs (kidney, brain) may not get adequate flow — this is exactly what happens in distributive shock.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="velocity-flow">
+<details class="topic" open="">
+<summary>Velocity, Laminar &amp; Turbulent Flow</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Velocity vs. flow — not the same thing</h4><p>Velocity varies <b>inversely</b> with total cross-sectional area. Aorta/vena cava: small total cross-sectional area → fastest velocity. Capillary beds: largest total cross-sectional area (from massive branching) → slowest velocity — which is exactly what allows time for gas/nutrient exchange.</p></div>
+<div class="fact warn"><h4>Laminar flow — the parabolic profile</h4><p>Blood flows in layers; central blood moves fastest (only in contact with other blood), outer layer moves slowest (friction against vessel intima, cells stick here).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Turbulent flow</h4><p>Crosswise flow disrupting the normal forward current. Increases with ↑ velocity and ↑ vessel radius — predictable at the aortic root and major artery branch points. Clinically: audible as a <b>bruit</b>, palpable as a <b>thrill</b>.</p></div>
+<div class="fact warn"><h4>Why turbulence matters pathologically</h4><p>Turbulence slows velocity right around its source, causing blood components to adhere to each other and to the vessel wall — directly <b>promoting thrombus formation</b>. This is the mechanistic link between turbulent flow (from branching, obstruction, or a roughened intimal surface) and clot formation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="wall-tension">
+<details class="topic" open="">
+<summary>Wall Tension &amp; the Law of Laplace</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>The law of Laplace</h4><p>Distending pressure (P) = wall tension (T) ÷ radius (r) — rearranged, T = P × r. Increasing EITHER radius or distending pressure increases wall tension.</p></div>
+<div class="fact"><h4>Why this explains aneurysm rupture risk</h4><p>High wall tension can rupture a vessel. This is a particular danger when high blood pressure AND a large vessel radius coexist — exactly the situation in an <b>arterial aneurysm</b>, where both factors driving tension upward are present simultaneously.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Critical closing pressure</h4><p>As distending pressure falls, wall tension forces exceed it, radius decreases, resistance rises, flow declines — at ~<b>20 mmHg</b>, the vessel can no longer be held open and flow stops entirely.</p></div>
+<div class="fact warn"><h4>Wall tension scales with vessel size</h4><p>Wall tension drops dramatically from ~170,000 dynes/cm in the aorta to just 16 dynes/cm in capillaries, then rises to ~21,000 dynes/cm in the vena cava — smaller-radius vessels need far less wall tension to balance the same distending pressure.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= CONTROL OF FLOW ================= -->
+<section class="block" id="central-control">
+<details class="topic" open="">
+<summary>Central Control Mechanisms</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The vasomotor center</h4><p>Located in the medulla; a basal discharge rate produces continuous baseline vascular smooth muscle contraction (vasomotor tone). Responds to both excitatory and inhibitory afferent stimuli.</p></div>
+<div class="fact warn"><h4>SNS dominates — parasympathetic barely matters here</h4><p>All vessels except small venules/capillaries have adrenergic SNS innervation. Parasympathetic innervation matters for the heart, but NOT for peripheral resistance regulation.</p></div>
+</div>
+<table class="compare">
+<tr><th>Receptor</th><th>Effect when stimulated</th><th>Clinical relevance</th></tr>
+<tr><td>α1 (arterial smooth muscle)</td><td>Vasoconstriction</td><td>Norepinephrine's main peripheral effect; α1 agonists ↑ BP, α1 antagonists ↓ BP</td></tr>
+<tr><td>β2 (skeletal muscle vessels)</td><td>Vasodilation</td><td>Mainly responds to epinephrine (adrenal medulla), not SNS norepinephrine — boosts O2/nutrient delivery to muscle under demand, not baseline tone</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact"><h4>Why arteries respond more to SNS than veins</h4><p>Arteries have the most smooth muscle → most affected by SNS stimulation. Veins have little neural innervation — venoconstriction plays only a minor role except in skin and the splanchnic (gut) circulation.</p></div>
+<div class="fact warn"><h4>Venous &amp; thoracic pumps</h4><p><b>Venous pump:</b> skeletal muscle contraction compresses veins, forcing valves open and propelling blood toward the heart — lost with bed rest/immobilization, reducing right heart preload and increasing cardiac workload. <b>Thoracic pump:</b> inspiration increases negative intrathoracic pressure, boosting venous return.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="intrinsic-control">
+<details class="topic" open="">
+<summary>Intrinsic Control (Autoregulation)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What autoregulation means</h4><p>An organ's own ability to maintain relatively constant blood flow despite changes in arterial pressure — has limits, and the range varies slightly by organ.</p></div>
+<div class="fact warn"><h4>The stretch/myogenic contribution</h4><p>As arterial pressure rises, vessel walls stretch → vascular smooth muscle contracts (stretched muscle contracts) → vasoconstriction; precapillary sphincters close early too, raising resistance. A real contributor, but NOT the primary autoregulatory mechanism.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — The Endothelium's Vasodilating vs. Vasoconstricting Signals</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">VASCULAR ENDOTHELIUM</text></g>
+<line class="mm-line" x1="450" x2="230" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="670" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="120" y="90"></rect><text font-size="11.5" text-anchor="middle" x="230" y="112">DILATING factors</text><text font-size="10" text-anchor="middle" x="230" y="128">NO (main), prostacyclin</text></g>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="560" y="90"></rect><text font-size="11.5" text-anchor="middle" x="670" y="112">CONSTRICTING factors</text><text font-size="10" text-anchor="middle" x="670" y="128">Angiotensin II, endothelin, TxA2</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Nitric oxide — the star player</h4><p>A gas produced by vascular endothelial cells; diffuses to smooth muscle, binds intracellular receptors, alters cytoplasmic Ca2+ → vasodilation. <b>Almost all vasodilation is NO-mediated.</b> NO deficits/decreased responsiveness are a major research focus in hypertension and heart disease.</p></div>
+<div class="fact warn"><h4>Metabolite-driven local control</h4><p>CO2, lactic acid, histamine, prostaglandins directly alter flow to an area. Acetylcholine, bradykinin, histamine, substance P work partly by boosting NO formation.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Hyperemia — two types</h4><p><b>Active/functional:</b> ↑ local flow matching ↑ metabolic demand. <b>Reactive:</b> flow surges after a temporary reduction is reversed (classic tourniquet-removal flushing).</p></div>
+<div class="fact tx"><h4>Exercise effects</h4><p>Physical activity enhances vascular relaxation and NO release, improving vascular remodeling in hypertension — plus favorable changes in prostacyclin, thromboxane, endothelin, and several microRNAs.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="lymphatic-control">
+<details class="topic" open="">
+<summary>Control of Lymphatic Flow</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Lymphatic pumps</h4><p>Lymphatic vessels have their own valves (like veins) preventing backflow. Lymph is propelled by: contraction when stretched (the <b>primary</b> factor — contraction rate increases as lymph volume increases), compression by adjacent skeletal/smooth muscle, arterial pulsation, and intrathoracic pressure changes from breathing.</p></div>
+<div class="fact warn"><h4>What enhances lymphatic flow</h4><p>Increased physical activity, increased blood pressure, increased respiratory rate — all mechanically boost lymph movement, similar to how they boost venous return.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= OBSTRUCTIONS ================= -->
+<section class="block" id="altered-flow-overview">
+<details class="topic" open="">
+<summary>General Mechanisms of Altered Flow</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>System affected</th><th>Result of reduced flow</th></tr>
+<tr><td>Arterial</td><td><b>Ischemia</b> — hypoxia specifically from reduced arterial flow</td></tr>
+<tr><td>Venous</td><td>Impaired waste removal + fluid pressure buildup = venous engorgement/obstruction</td></tr>
+<tr><td>Lymphatic</td><td>Fluid/pressure changes, visible locally or systemically (lymphedema)</td></tr>
+</table>
+<div class="note">Hypoxia can come from many causes (↓ hemoglobin, impaired lung gas exchange) — <b>ischemia specifically means the hypoxia is from reduced arterial flow</b>, a more precise term than hypoxia alone.</div>
+</div>
+</details>
+</section>
+<section class="block" id="thrombus">
+<details class="topic" open="">
+<summary>Thrombus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What distinguishes thrombosis from normal clotting</h4><p>Thrombosis = pathologic clot formation (vs. the homeostatic clotting process from Chapter 14). Composed of aggregated platelets, clotting factors, and fibrin adhering to vessel walls. Can form in heart chambers (abnormal rhythms, post-MI, valve damage/replacement) or peripheral vessels.</p></div>
+<div class="fact warn"><h4>What promotes thrombosis</h4><p>Hypercoagulable states, certain drugs (oral contraceptives), dramatically slowed or turbulent flow, and damaged/roughened intimal walls.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Arterial thrombosis</h4><p>Reduces distal flow → ischemia (acute arterial occlusion, MI, stroke). Manifests as intermittent claudication (pain with activity, relieved by rest), a cool/cyanotic limb, and — as a late sign — a painful arterial ulcer near a toe.</p></div>
+<div class="fact"><h4>Venous thrombosis</h4><p>Impairs venous return → edema. <b>Thrombophlebitis</b> = vein inflammation (phlebitis) + thrombus together — most commonly from IV catheter/needle-related inflammation. Signs: calf/groin tenderness, swelling, increased skin temperature; <b>Homan sign</b> (calf pain with foot dorsiflexion) present in only ~10% of thrombophlebitis cases.</p></div>
+</div>
+<div class="callout"><b>Risk factors common to both arterial and venous thrombosis:</b> hypercoagulable conditions, polycythemia, dehydration, platelet aggregation, pump failure (heart failure, shock, dysrhythmias), aging, trauma/surgery, anesthetic agents, oral contraceptives, tobacco. <b>Arterial-specific:</b> arteriosclerosis/atherosclerosis. <b>Venous-specific:</b> immobilization/sedentary lifestyle.</div>
+<div class="note"><b>Treatment principle:</b> anticoagulants PREVENT thrombus enlargement/new thrombi — they do NOT dissolve existing clots. Existing clots resolve via the body's own fibrinolysis, surgical removal, or IV thrombolytics. Prophylaxis: antiembolic stockings, sequential compression devices, early ambulation.</div>
+</div>
+</details>
+</section>
+<section class="block" id="embolus">
+<details class="topic" open="">
+<summary>Embolus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Most common type</h4><p><b>Thromboembolus</b> — a dislodged thrombus (from vessel intima, heart valve leaflets, or formed within a heart chamber). Left-heart thromboemboli → typically lodge in a cerebral artery → stroke. Most thromboemboli actually originate in deep pelvic/leg veins → travel to the right heart → lodge in pulmonary arteries → <b>pulmonary embolism (PE)</b>.</p></div>
+<div class="fact warn"><h4>PE presentation is nonspecific</h4><p>May be asymptomatic, or present with sudden dyspnea, ↑ respiratory rate, chest pain — can be a cause of sudden death. This nonspecificity is a real diagnostic challenge, especially in pregnancy (dyspnea occurs in up to 70% of normal pregnancies too).</p></div>
+</div>
+<table class="compare">
+<tr><th>Embolus type</th><th>Source / mechanism</th></tr>
+<tr><td>Fat embolus</td><td>Bone trauma/surgery (long bones especially) — inflammatory pressure forces marrow fat into the bloodstream</td></tr>
+<tr><td>Tumor embolus</td><td>Malignant cells breaking off and traveling via blood</td></tr>
+<tr><td>Bacterial embolus</td><td>Infected material breaking free (e.g., endocarditis valve leaflets) — seeds a new infection site</td></tr>
+<tr><td>Air embolus</td><td>Air entering via IV catheter; obstructs small vessels; the volume needed to cause harm is inconsistent/unpredictable</td></tr>
+<tr><td>Amniotic fluid embolus</td><td>Labor/delivery abdominal pressure forces amniotic fluid into circulation; doesn't obstruct flow directly — its proteins/cells act as antigens, triggering an immune response instead</td></tr>
+</table>
+<div class="fact tx"><h4>Treatment</h4><p>Embolectomy (surgical removal) for accessible thromboemboli. For recurrent emboli from the venous system: a surgically implanted vena cava filter (e.g., Greenfield filter) traps emboli, which the body's own plasmin then destroys in place.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="vasospasm-inflammation">
+<details class="topic" open="">
+<summary>Vasospasm, Inflammation &amp; Mechanical Compression</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Vasospasm</h4><p>Sudden arterial smooth muscle constriction; cause is often unknown. Examples: variant (Prinzmetal) angina, cerebral vasospasm after hemorrhagic stroke, migraine (cerebral vasospasm followed by vasodilation). Can be triggered by hormonal sensitivity, food additives, cold exposure, or emotional stress.</p></div>
+<div class="fact warn"><h4>Inflammation — three related terms</h4><p><b>Vasculitis:</b> intimal artery inflammation. <b>Phlebitis:</b> venous lining inflammation. <b>Arteritis (angiitis):</b> specifically autoimmune arterial inflammation, often triggered by viral/bacterial (especially streptococcal) infection or drug reactions (sulfonamides, phenothiazines). All three can serve as a focus for thrombosis.</p></div>
+</div>
+<div class="danger"><b>Compartment syndrome:</b> external compression (trauma, tight cast/dressing) or internal swelling (bleeding, edema within a fascial compartment) compromises circulation. Neurovascular changes are assessable BEFORE ischemia becomes irreversible — this window is the whole reason for frequent neurovascular checks. Untreated: prolonged hypoxia, ischemia, tissue necrosis.</div>
+</div>
+</details>
+</section>
+<!-- ================= STRUCTURAL ALTERATIONS ================= -->
+<section class="block" id="structural-overview">
+<details class="topic" open="">
+<summary>Types of Structural Alterations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Four categories</h4><p><b>Valvular incompetence</b> (venous valve damage — varicose veins if superficial, chronic venous insufficiency if deep). <b>Arteriosclerosis/atherosclerosis</b> (arterial wall thickening/plaque). <b>Aneurysms</b> (localized arterial dilation, rupture risk). <b>AVFs</b> (abnormal artery-vein connection, usually congenital).</p></div>
+<div class="fact warn"><h4>Three types of arteriosclerosis</h4><p><b>Mönckeberg sclerosis:</b> noninflammatory, medial calcification of small/medium arteries — vessel stays patent (intima uninvolved) but stiff. <b>Arteriolar sclerosis:</b> small artery thickening/narrowing with hypertension. <b>Atherosclerosis:</b> the dominant, most clinically significant type — affects intermediate/large arteries.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="atherosclerosis">
+<details class="topic" open="">
+<summary>Atherosclerosis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Scale &amp; significance</h4><p>The leading cause of death in the US/western Europe, rising in developing nations. Most mortality: coronary artery occlusion (CAD) → MI. Remainder: thrombotic/hemorrhagic events, primarily brain (stroke) and extremities.</p></div>
+<div class="fact"><h4>Where it strikes</h4><p>Large/medium arteries: coronary, cerebral, carotid, femoral, and the aorta. Peripheral involvement (usually lower extremities) = <b>peripheral arterial disease (PAD)</b> — affects 10–15% of the population, ~50% asymptomatic (underdiagnosed/undertreated), yet symptomatic PAD carries a WORSE prognosis than CAD or cerebrovascular disease alone.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Atherosclerosis Pathogenesis Cascade</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="12" text-anchor="middle" x="450" y="35">Endothelial injury/damage</text></g>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="84"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="84"></rect><text font-size="11.5" text-anchor="middle" x="450" y="109">↑ Permeability + inflammation</text></g>
+<line class="mm-line" x1="450" x2="450" y1="124" y2="158"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="158"></rect><text font-size="11" text-anchor="middle" x="450" y="183">LDL enters intima; leukocytes</text></g>
+<line class="mm-line" x1="450" x2="450" y1="198" y2="232"></line>
+<g class="mm-leaf"><rect height="26" rx="6" width="460" x="220" y="232"></rect><text font-size="10.5" text-anchor="middle" x="450" y="249">Oxidize lipids + platelets release PDGF → smooth muscle proliferates → plaque</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>The full sequence, worth memorizing</h4><p>(1) Endothelial injury → inflammatory response, ↑ permeability. (2) LDL breaches the intima. (3) Leukocytes drawn in, join endothelial cells oxidizing lipids → further damage. (4) Platelets aggregate/activate → release platelet-derived growth factor. (5) Smooth muscle cells migrate to intima, proliferate. (6) Result: atherosclerotic plaque (smooth muscle + lipoproteins + inflammatory debris).</p></div>
+<div class="fact warn"><h4>Two ways plaque causes trouble</h4><p><b>Slow:</b> plaque gradually enlarges, narrows the arterial orifice, reduces perfusion over time. <b>Acute:</b> plaque can rupture, triggering thrombus formation and sudden, complete loss of perfusion (the mechanism behind most heart attacks).</p></div>
+</div>
+<p style="margin-top:12px;"><b>Arterial (PAD) vs. venous disease — a fast comparison worth locking in:</b></p>
+<table class="compare">
+<tr><th>Feature</th><th>Arterial (PAD)</th><th>Venous (chronic insufficiency)</th></tr>
+<tr><td>Skin</td><td>Cool/cold, pale when elevated, rubor when dependent, hair loss, thin/glossy, thick nails</td><td>Warm, thickened, reddish-brown pigmented, edema (worse end of day)</td></tr>
+<tr><td>Pain</td><td>Sharp/stabbing; worse with activity; relieved by rest/dependency</td><td>Aching/cramping; sometimes better with ambulation; relieved by elevation</td></tr>
+<tr><td>Pulses</td><td>Diminished/absent</td><td>Usually present</td></tr>
+<tr><td>Ulcer location</td><td>Heels, lateral malleolus, between toes, pretibial area</td><td>Medial malleolus</td></tr>
+<tr><td>Ulcer appearance</td><td>Severely painful, pale/gray base, well-defined edges</td><td>Moderately painful, pink-red base, irregular edges</td></tr>
+</table>
+</div>
+</details>
+</section>
+<section class="block" id="atherosclerosis-risk">
+<details class="topic" open="">
+<summary>Atherosclerosis Risk Factors</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Modifiable</h4><p>Smoking, elevated BP, glucose intolerance, elevated cholesterol/LDL, decreased physical activity, obesity, weight fluctuations, ineffective stress management.</p></div>
+<div class="fact warn"><h4>Nonmodifiable</h4><p>Age, sex, ethnicity, heredity.</p></div>
+</div>
+<div class="danger"><b>Smoking mechanism (worth knowing in full):</b> injures endothelium directly, generates superoxide anions, ↓ NO production/bioavailability, ↑ endothelin. Nicotine also raises LDL/triglycerides and lowers HDL, causes vasospasm and ↑ platelet aggregation, and triggers catecholamine release (↑ BP/HR → ↑ myocardial O2 demand). Net effect: 2–4x coronary heart disease risk — and this risk is synergistic (multiplied, not just added) with hypertension, hypercholesterolemia, or diabetes. <b>Good news:</b> quitting cuts risk 50% within the first year, and risk equals a nonsmoker's by 10 years.</div>
+<div class="note">The Framingham Study (started 1948, still ongoing across generations) is the source of most of what's known about atherosclerotic risk factors. LDL receptors on artery muscle cells absorb cholesterol for cellular use — excess unremoved cholesterol becomes a cellular irritant that drives endothelial injury and plaque formation.</div>
+</div>
+</details>
+</section>
+<!-- ================= VENOUS ================= -->
+<section class="block" id="venous-alterations">
+<details class="topic" open="">
+<summary>Valvular Incompetence &amp; Varicose Veins</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism</h4><p>Veins are low-pressure by design — flow depends on skeletal muscle/intraabdominal/intrathoracic pumps, not vessel-wall contraction. Prolonged elevated pressure against these pumps overstretches the vein walls until valve cusps can no longer meet → backflow → further engorgement.</p></div>
+<div class="fact warn"><h4>Who's at risk</h4><p>Prolonged standing occupations, obesity, pregnancy (both raise venous pressure). Affects up to 10% of the North American/European population.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Varicose veins specifically</h4><p>Superficial vein involvement (greater saphenous vein primarily). Superficial, darkened, raised, tortuous — best seen standing (gravity increases visible pressure/distention). Aching/heavy discomfort; venous ulcers possible.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Conservative: leg elevation, avoid prolonged standing, elastic stockings, avoid crossing knees/ankles, exercise, weight reduction. Aggressive: sclerotherapy (chemical injection + compression → vein obliterates, collateral circulation compensates), vein stripping/ligation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="cvi-dvt">
+<details class="topic" open="">
+<summary>Chronic Venous Insufficiency &amp; Deep Vein Thrombosis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Chronic venous insufficiency</h4><p>Deep vein valvular incompetence (superficial femoral, anterior/posterior tibial, peroneal veins). Communicating/perforating veins let elevated superficial pressure eventually damage the deep system too. Risk factors: heart disease, prior extremity trauma/phlebitis, prior DVT.</p></div>
+<div class="fact"><h4>Venous stasis ulcers</h4><p>Superficial veins rupture under activity-driven pressure → RBCs leak, break down → brown skin pigmentation. Ulcers located at the medial malleolus, pink-red base, irregular edges, moderately painful (contrast with the arterial ulcer table above).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>CVI diagnosis &amp; treatment</h4><p>Primarily clinical; ultrasound is best objective method if needed. Treatment centers on <b>compression</b>. Ulcers are prone to secondary infection (<i>S. aureus</i>, <i>P. aeruginosa</i>, β-hemolytic strep) requiring systemic antibiotics.</p></div>
+<div class="fact warn"><h4>Deep vein thrombosis</h4><p>Most often lower extremities (upper extremity DVT less common). May be asymptomatic; if symptomatic: edema, local inflammation signs, dilated superficial veins, pain from nerve pressure/inflammation.</p></div>
+</div>
+<div class="danger"><b>DVT is treated aggressively</b> because lower extremity/pelvic DVT is the most frequent source of pulmonary emboli. Hospitalization for IV anticoagulation is common; outpatient oral anticoagulation is an alternative. Patients with a prior DVT face ongoing hypercoagulation risk and may need long-term prophylactic antiplatelet/anticoagulant therapy, including during any future hospitalization for unrelated reasons.</div>
+</div>
+</details>
+</section>
+<section class="block" id="lymphedema">
+<details class="topic" open="">
+<summary>Lymphedema</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Primary vs. secondary</h4><p><b>Primary:</b> congenital anomaly/dysfunction of the lymphatic system. <b>Secondary:</b> acquired from disease or iatrogenic causes. Worldwide, the leading secondary cause is infection by the filarial worm <i>Wuchereria bancrofti</i> (affects &gt;90 million people globally). In the US, the leading cause is surgical lymph node removal or radiation damage during cancer treatment.</p></div>
+<div class="fact warn"><h4>Cancer-related lymphedema — the numbers</h4><p>Upper extremity: 15–28% of breast cancer survivors, especially after axillary node dissection; can appear days to 6–8 weeks post-treatment. Lower extremity: up to 80% after groin/pelvic lymph node dissection. Also seen with gynecologic cancer (20%), melanoma (16%), GU cancer (10%), head/neck cancer (4%) — can occur even after minimally invasive procedures like sentinel node biopsy.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Pathophysiology &amp; progression</h4><p>Lymph fluid collects in the interstitium → inflammatory response → subcutaneous adipose hypertrophy → fibrotic changes. Starts as soft, pitting edema; untreated, progresses to <b>brawny edema</b> (thick, roughened skin) and permanent limb deformity.</p></div>
+<div class="fact tx"><h4>Diagnosis &amp; treatment</h4><p>Diagnosis of exclusion (rule out cardiac/renal/PVD causes first); lymphoscintigram is the primary functional test. <b>No cure exists.</b> Decongestive lymphatic therapy (skin care + massage + compression + exercise) achieves 40–60% edema reduction for many patients. No FDA-approved medication exists; diuretics are NOT recommended. Surgery (debulking, lymphatic-venous bypass, liposuction) is reserved for very select cases since it can be harmful.</p></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 15 (Alterations in Blood Flow) material. Redraw the atherosclerosis pathogenesis cascade and the arterial-vs-venous disease comparison table from memory, then check yourself against the fact cards.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "The principles governing blood flow \u2014 pressure, resistance, velocity, laminar/turbulent flow, wall tension, compliance.", "answers": ["Hemodynamics"]}, {"def": "The formula describing how vessel length, radius, and blood viscosity determine resistance to flow.", "answers": ["Poiseuille's law"]}, {"def": "Q = P/R \u2014 blood flow equals the pressure difference divided by resistance.", "answers": ["Ohm's law", "hemodynamic", "Ohm's law (hemodynamic)"]}, {"def": "Resistance peripheral to the heart and lungs; primarily determined by arteriolar tone.", "answers": ["Systemic vascular resistance", "SVR", "Systemic vascular resistance (SVR)"]}, {"def": "Distance traveled per unit time (cm/sec); varies inversely with total cross-sectional area.", "answers": ["Velocity"]}, {"def": "Streamlined blood flow in layers, with central blood moving fastest (parabolic profile).", "answers": ["Laminar flow"]}, {"def": "Disrupted, crosswise flow \u2014 audible as a bruit, palpable as a thrill; promotes thrombus formation.", "answers": ["Turbulent flow"]}, {"def": "Wall tension = distending pressure \u00d7 vessel radius; explains why large-radius, high-pressure vessels (aneurysms) are prone to rupture.", "answers": ["Law of Laplace"]}, {"def": "The pressure (~20 mmHg) below which a vessel can no longer be held open and flow ceases.", "answers": ["Critical closing pressure"]}, {"def": "The continuous baseline level of vascular smooth muscle contraction from basal vasomotor center discharge.", "answers": ["Vasomotor tone"]}, {"def": "An organ/tissue's intrinsic ability to maintain relatively constant blood flow despite changes in arterial pressure.", "answers": ["Autoregulation"]}, {"def": "The primary endothelium-derived vasodilating gas; deficiency implicated in hypertension and heart disease.", "answers": ["Nitric oxide", "NO", "Nitric oxide (NO)"]}, {"def": "Increased local blood flow in response to increased tissue metabolic demand.", "answers": ["Active hyperemia", "functional", "Active (functional) hyperemia"]}, {"def": "The flushing/increased flow seen after a temporary flow reduction is reversed (e.g., after a tourniquet is removed).", "answers": ["Reactive hyperemia"]}, {"def": "A stationary blood clot formed within a vessel or heart chamber.", "answers": ["Thrombus"]}, {"def": "Material (often a dislodged thrombus) that travels through the bloodstream and lodges elsewhere, obstructing flow.", "answers": ["Embolus"]}, {"def": "Sudden arterial smooth muscle constriction causing flow obstruction.", "answers": ["Vasospasm"]}, {"def": "Inflammation of an artery's intima / a vein's lining / an autoimmune arterial inflammatory process, respectively.", "answers": ["Vasculitis / phlebitis / arteritis"]}, {"def": "Increased pressure within a fascial compartment compromising circulation \u2014 from swelling, bleeding, or external compression.", "answers": ["Compartment syndrome"]}, {"def": "General term for arterial thickening/hardening; encompasses M\u00f6nckeberg sclerosis, arteriolar sclerosis, and atherosclerosis.", "answers": ["Arteriosclerosis"]}, {"def": "Plaque buildup (lipid, smooth muscle, inflammatory debris) in the intima of large/medium arteries \u2014 the dominant, most clinically significant arteriosclerotic process.", "answers": ["Atherosclerosis"]}, {"def": "A localized dilation of an arterial wall \u2014 a weakened area at risk of rupture.", "answers": ["Aneurysm"]}, {"def": "An abnormal direct communication between an artery and a vein.", "answers": ["Arteriovenous fistula", "AVF", "Arteriovenous fistula (AVF)"]}, {"def": "Failure of venous valves to close properly, allowing backward blood flow.", "answers": ["Valvular incompetence"]}, {"def": "Superficial vein valvular incompetence causing dilated, tortuous, visible veins.", "answers": ["Varicose veins"]}, {"def": "Valvular incompetence involving the deep veins of the legs.", "answers": ["Chronic venous insufficiency"]}, {"def": "A thrombus in a deep vein, most often the legs/pelvis \u2014 the most frequent source of pulmonary emboli.", "answers": ["Deep vein thrombosis", "DVT", "Deep vein thrombosis (DVT)"]}, {"def": "Lymphatic fluid accumulation in the interstitium from obstructed/altered lymph flow \u2014 primary (congenital) or secondary (acquired/iatrogenic).", "answers": ["Lymphedema"]}];
+const QUIZ_TEACHBACK = [{"topic": "Pressure, Resistance & Poiseuille's Law", "points": ["<b>The basic principle:</b> Blood flows from high pressure (arterial/arteriolar walls) to low pressure (venous system) \u2014 the greater the pressure difference, the greater\u2026", "<b>Poiseuille's law \u2014 three determinants of resistance:</b> Vessel length, vessel radius, and blood viscosity. Resistance changes directly with length; inversely with the 4th power of the radius;\u2026", "<b>Length vs. radius vs. viscosity \u2014 which matters most clinically:</b> Vessels can't change their own length, but they CAN change diameter substantially \u2014 this makes diameter change the single most\u2026", "<b>Viscosity \u2014 the hematocrit connection:</b> \u2191 RBCs (polycythemia) or \u2193 plasma (dehydration) \u2192 \u2191 hematocrit \u2192 \u2191 viscosity \u2192 \u2191 resistance \u2192 slower flow. Directly\u2026", "<b>Ohm's law application:</b> Q (flow) = P (pressure difference) / R (resistance). Arterioles are the major site of resistance in the vascular system.", "<b>SVR \u2014 clinical stakes both directions:</b> \u2191 SVR (e.g., hypertension) \u2192 heart must work harder to eject blood \u2192 \u2191 myocardial O2/nutrient demand. \u2193 SVR pathologically\u2026"]}, {"topic": "Velocity, Laminar & Turbulent Flow", "points": ["<b>Velocity vs. flow \u2014 not the same thing:</b> Velocity varies inversely with total cross-sectional area. Aorta/vena cava: small total cross-sectional area \u2192 fastest velocity. Capillary beds: largest total\u2026", "<b>Laminar flow \u2014 the parabolic profile:</b> Blood flows in layers; central blood moves fastest (only in contact with other blood), outer layer moves slowest (friction against\u2026", "<b>Turbulent flow:</b> Crosswise flow disrupting the normal forward current. Increases with \u2191 velocity and \u2191 vessel radius \u2014 predictable at the aortic\u2026", "<b>Why turbulence matters pathologically:</b> Turbulence slows velocity right around its source, causing blood components to adhere to each other and to the vessel wall\u2026"]}, {"topic": "Wall Tension & the Law of Laplace", "points": ["<b>The law of Laplace:</b> Distending pressure (P) = wall tension (T) \u00f7 radius (r) \u2014 rearranged, T = P \u00d7 r. Increasing EITHER radius\u2026", "<b>Why this explains aneurysm rupture risk:</b> High wall tension can rupture a vessel. This is a particular danger when high blood pressure AND a large vessel\u2026", "<b>Critical closing pressure:</b> As distending pressure falls, wall tension forces exceed it, radius decreases, resistance rises, flow declines \u2014 at ~ 20 mmHg\u2026", "<b>Wall tension scales with vessel size:</b> Wall tension drops dramatically from ~170,000 dynes/cm in the aorta to just 16 dynes/cm in capillaries, then rises to ~21,000\u2026"]}, {"topic": "Central Control Mechanisms", "points": ["<b>The vasomotor center:</b> Located in the medulla; a basal discharge rate produces continuous baseline vascular smooth muscle contraction (vasomotor tone). Responds to both\u2026", "<b>SNS dominates \u2014 parasympathetic barely matters here:</b> All vessels except small venules/capillaries have adrenergic SNS innervation. Parasympathetic innervation matters for the heart, but NOT for peripheral resistance\u2026", "<b>Why arteries respond more to SNS than veins:</b> Arteries have the most smooth muscle \u2192 most affected by SNS stimulation. Veins have little neural innervation \u2014 venoconstriction plays\u2026", "<b>Venous & thoracic pumps:</b> Venous pump: skeletal muscle contraction compresses veins, forcing valves open and propelling blood toward the heart \u2014 lost with bed\u2026"]}, {"topic": "Intrinsic Control (Autoregulation)", "points": ["<b>What autoregulation means:</b> An organ's own ability to maintain relatively constant blood flow despite changes in arterial pressure \u2014 has limits, and the\u2026", "<b>The stretch/myogenic contribution:</b> As arterial pressure rises, vessel walls stretch \u2192 vascular smooth muscle contracts (stretched muscle contracts) \u2192 vasoconstriction; precapillary sphincters close\u2026", "<b>Nitric oxide \u2014 the star player:</b> A gas produced by vascular endothelial cells; diffuses to smooth muscle, binds intracellular receptors, alters cytoplasmic Ca2+ \u2192 vasodilation. Almost\u2026", "<b>Metabolite-driven local control:</b> CO2, lactic acid, histamine, prostaglandins directly alter flow to an area. Acetylcholine, bradykinin, histamine, substance P work partly by boosting\u2026", "<b>Hyperemia \u2014 two types:</b> Active/functional: \u2191 local flow matching \u2191 metabolic demand. Reactive: flow surges after a temporary reduction is reversed (classic tourniquet-removal flushing).", "<b>Exercise effects:</b> Physical activity enhances vascular relaxation and NO release, improving vascular remodeling in hypertension \u2014 plus favorable changes in prostacyclin, thromboxane,\u2026"]}, {"topic": "Control of Lymphatic Flow", "points": ["<b>Lymphatic pumps:</b> Lymphatic vessels have their own valves (like veins) preventing backflow. Lymph is propelled by: contraction when stretched (the primary factor\u2026", "<b>What enhances lymphatic flow:</b> Increased physical activity, increased blood pressure, increased respiratory rate \u2014 all mechanically boost lymph movement, similar to how they boost\u2026"]}, {"topic": "Thrombus", "points": ["<b>What distinguishes thrombosis from normal clotting:</b> Thrombosis = pathologic clot formation (vs. the homeostatic clotting process from Chapter 14). Composed of aggregated platelets, clotting factors, and\u2026", "<b>What promotes thrombosis:</b> Hypercoagulable states, certain drugs (oral contraceptives), dramatically slowed or turbulent flow, and damaged/roughened intimal walls.", "<b>Arterial thrombosis:</b> Reduces distal flow \u2192 ischemia (acute arterial occlusion, MI, stroke). Manifests as intermittent claudication (pain with activity, relieved by rest),\u2026", "<b>Venous thrombosis:</b> Impairs venous return \u2192 edema. Thrombophlebitis = vein inflammation (phlebitis) + thrombus together \u2014 most commonly from IV catheter/needle-related inflammation.\u2026", "Risk factors common to both arterial and venous thrombosis: hypercoagulable conditions, polycythemia, dehydration, platelet aggregation, pump failure (heart failure, shock, dysrhythmias), aging,\u2026"]}, {"topic": "Embolus", "points": ["<b>Most common type:</b> Thromboembolus \u2014 a dislodged thrombus (from vessel intima, heart valve leaflets, or formed within a heart chamber). Left-heart thromboemboli \u2192\u2026", "<b>PE presentation is nonspecific:</b> May be asymptomatic, or present with sudden dyspnea, \u2191 respiratory rate, chest pain \u2014 can be a cause of sudden\u2026", "<b>Treatment:</b> Embolectomy (surgical removal) for accessible thromboemboli. For recurrent emboli from the venous system: a surgically implanted vena cava filter (e.g.,\u2026"]}, {"topic": "Vasospasm, Inflammation & Mechanical Compression", "points": ["<b>Vasospasm:</b> Sudden arterial smooth muscle constriction; cause is often unknown. Examples: variant (Prinzmetal) angina, cerebral vasospasm after hemorrhagic stroke, migraine (cerebral\u2026", "<b>Inflammation \u2014 three related terms:</b> Vasculitis: intimal artery inflammation. Phlebitis: venous lining inflammation. Arteritis (angiitis): specifically autoimmune arterial inflammation, often triggered by viral/bacterial (especially streptococcal)\u2026", "Compartment syndrome: external compression (trauma, tight cast/dressing) or internal swelling (bleeding, edema within a fascial compartment) compromises circulation. Neurovascular changes are assessable\u2026"]}, {"topic": "Types of Structural Alterations", "points": ["<b>Four categories:</b> Valvular incompetence (venous valve damage \u2014 varicose veins if superficial, chronic venous insufficiency if deep). Arteriosclerosis/atherosclerosis (arterial wall thickening/plaque). Aneurysms\u2026", "<b>Three types of arteriosclerosis:</b> M\u00f6nckeberg sclerosis: noninflammatory, medial calcification of small/medium arteries \u2014 vessel stays patent (intima uninvolved) but stiff. Arteriolar sclerosis: small artery\u2026"]}, {"topic": "Atherosclerosis", "points": ["<b>Scale & significance:</b> The leading cause of death in the US/western Europe, rising in developing nations. Most mortality: coronary artery occlusion (CAD) \u2192\u2026", "<b>Where it strikes:</b> Large/medium arteries: coronary, cerebral, carotid, femoral, and the aorta. Peripheral involvement (usually lower extremities) = peripheral arterial disease (PAD) \u2014\u2026", "<b>The full sequence, worth memorizing:</b> (1) Endothelial injury \u2192 inflammatory response, \u2191 permeability. (2) LDL breaches the intima. (3) Leukocytes drawn in, join endothelial cells\u2026", "<b>Two ways plaque causes trouble:</b> Slow: plaque gradually enlarges, narrows the arterial orifice, reduces perfusion over time. Acute: plaque can rupture, triggering thrombus formation and\u2026"]}, {"topic": "Atherosclerosis Risk Factors", "points": ["<b>Modifiable:</b> Smoking, elevated BP, glucose intolerance, elevated cholesterol/LDL, decreased physical activity, obesity, weight fluctuations, ineffective stress management.", "<b>Nonmodifiable:</b> Age, sex, ethnicity, heredity.", "Smoking mechanism (worth knowing in full): injures endothelium directly, generates superoxide anions, \u2193 NO production/bioavailability, \u2191 endothelin. Nicotine also raises LDL/triglycerides and\u2026"]}, {"topic": "Valvular Incompetence & Varicose Veins", "points": ["<b>Mechanism:</b> Veins are low-pressure by design \u2014 flow depends on skeletal muscle/intraabdominal/intrathoracic pumps, not vessel-wall contraction. Prolonged elevated pressure against these\u2026", "<b>Who's at risk:</b> Prolonged standing occupations, obesity, pregnancy (both raise venous pressure). Affects up to 10% of the North American/European population.", "<b>Varicose veins specifically:</b> Superficial vein involvement (greater saphenous vein primarily). Superficial, darkened, raised, tortuous \u2014 best seen standing (gravity increases visible pressure/distention). Aching/heavy\u2026", "<b>Treatment:</b> Conservative: leg elevation, avoid prolonged standing, elastic stockings, avoid crossing knees/ankles, exercise, weight reduction. Aggressive: sclerotherapy (chemical injection + compression\u2026"]}, {"topic": "Chronic Venous Insufficiency & Deep Vein Thrombosis", "points": ["<b>Chronic venous insufficiency:</b> Deep vein valvular incompetence (superficial femoral, anterior/posterior tibial, peroneal veins). Communicating/perforating veins let elevated superficial pressure eventually damage the deep\u2026", "<b>Venous stasis ulcers:</b> Superficial veins rupture under activity-driven pressure \u2192 RBCs leak, break down \u2192 brown skin pigmentation. Ulcers located at the medial\u2026", "<b>CVI diagnosis & treatment:</b> Primarily clinical; ultrasound is best objective method if needed. Treatment centers on compression . Ulcers are prone to secondary infection\u2026", "<b>Deep vein thrombosis:</b> Most often lower extremities (upper extremity DVT less common). May be asymptomatic; if symptomatic: edema, local inflammation signs, dilated superficial\u2026", "DVT is treated aggressively because lower extremity/pelvic DVT is the most frequent source of pulmonary emboli. Hospitalization for IV anticoagulation is common;\u2026"]}, {"topic": "Lymphedema", "points": ["<b>Primary vs. secondary:</b> Primary: congenital anomaly/dysfunction of the lymphatic system. Secondary: acquired from disease or iatrogenic causes. Worldwide, the leading secondary cause is\u2026", "<b>Cancer-related lymphedema \u2014 the numbers:</b> Upper extremity: 15\u201328% of breast cancer survivors, especially after axillary node dissection; can appear days to 6\u20138 weeks post-treatment. Lower\u2026", "<b>Pathophysiology & progression:</b> Lymph fluid collects in the interstitium \u2192 inflammatory response \u2192 subcutaneous adipose hypertrophy \u2192 fibrotic changes. Starts as soft, pitting\u2026", "<b>Diagnosis & treatment:</b> Diagnosis of exclusion (rule out cardiac/renal/PVD causes first); lymphoscintigram is the primary functional test. No cure exists. Decongestive lymphatic therapy\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+ {
+  "term": "Autoimmunity",
+  "def": "The immune system recognizing \"self\" as foreign and mounting a tissue-damaging response \u2014 a failure of self-tolerance."
+ },
+ {
+  "term": "Self-tolerance",
+  "def": "The immune system's learned ability to not attack the body's own cells; involves both central and peripheral mechanisms."
+ },
+ {
+  "term": "Central tolerance",
+  "def": "Elimination/suppression of self-reactive T and B cells during development in the thymus and bone marrow."
+ },
+ {
+  "term": "Peripheral tolerance",
+  "def": "Backup mechanisms (clonal deletion, anergy, Treg suppression) controlling self-reactive lymphocytes that escaped central tolerance."
+ },
+ {
+  "term": "Regulatory T cells (Tregs)",
+  "def": "CD4+CD25+FOXP3+ cells that suppress autoreactive T and B cells via inhibitory cytokines (IL-10, TGF-\u03b2) and CTLA-4."
+ },
+ {
+  "term": "Molecular (antigenic) mimicry",
+  "def": "A theory of autoimmunity where pathogen epitopes resemble self-antigens closely enough that the immune response against the pathogen also attacks self tissue."
+ },
+ {
+  "term": "Hidden/sequestered antigen theory",
+  "def": "Self-antigens normally isolated from immune surveillance (cornea, testicles, brain) become exposed after tissue damage and are attacked as foreign."
+ },
+ {
+  "term": "Epitope spread",
+  "def": "Recurrent infection/organ damage causes the immune system to develop multiple new autoantibodies over time."
+ },
+ {
+  "term": "Hypersensitivity",
+  "def": "A normal immune mechanism triggered inappropriately, excessively, or with undesirable effects; four types (I\u2013IV)."
+ },
+ {
+  "term": "IgE",
+  "def": "The principal antibody mediating type I hypersensitivity; binds mast cell/basophil Fc receptors."
+ },
+ {
+  "term": "Mast cell degranulation",
+  "def": "Release of preformed (histamine, heparin, enzymes) and newly-formed (leukotrienes, prostaglandins) mediators triggered by IgE-antigen cross-linking."
+ },
+ {
+  "term": "Anaphylaxis",
+  "def": "A life-threatening, systemic type I hypersensitivity reaction."
+ },
+ {
+  "term": "Primary immunodeficiency",
+  "def": "An immune deficiency not attributable to another cause \u2014 congenital or acquired (e.g., HIV/AIDS)."
+ },
+ {
+  "term": "Secondary immunodeficiency",
+  "def": "Immune impairment resulting from another disorder or treatment (chemotherapy, malnutrition, stress)."
+ },
+ {
+  "term": "SCID",
+  "def": "Severe combined immunodeficiency \u2014 genetic disorders causing absent/dysfunctional T cells (\u00b1 B cells/NK cells), leaving both cellular and humoral immunity impaired."
+ },
+ {
+  "term": "DiGeorge syndrome (22q11.2 deletion)",
+  "def": "A T-cell disorder from a hypoplastic/aplastic thymus due to a chromosome 22q11.2 deletion."
+ },
+ {
+  "term": "Wiskott-Aldrich syndrome",
+  "def": "An X-linked disorder (WASp gene) causing B-cell dysfunction, microthrombocytopenia, and eczema."
+ },
+ {
+  "term": "Selective IgA deficiency",
+  "def": "The most common B-cell PID \u2014 lack of serum IgA; often asymptomatic but linked to autoimmune/allergic conditions."
+ }
+]

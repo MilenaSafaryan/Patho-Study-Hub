@@ -1,0 +1,130 @@
+[
+ {
+  "term": "Pathophysiology",
+  "def": "The study of abnormalities in the physiologic functioning of living beings \u2014 the intersection of pathology (disease study) and physiology (normal function study)."
+ },
+ {
+  "term": "Etiology",
+  "def": "The study of the causes or reasons for a disease or phenomenon."
+ },
+ {
+  "term": "Idiopathic",
+  "def": "A condition whose cause is unknown."
+ },
+ {
+  "term": "Iatrogenic",
+  "def": "A condition resulting from an unintended or unwanted effect of medical treatment."
+ },
+ {
+  "term": "Risk factor",
+  "def": "A factor that increases the probability of disease but where the causal link is less than certain."
+ },
+ {
+  "term": "Causative agent",
+  "def": "A factor closely and definitively linked to a disease's development (e.g., a specific pathogen for an infectious disease)."
+ },
+ {
+  "term": "Pathogenesis",
+  "def": "The development or evolution of a disease, from initial stimulus to the full expression of its manifestations."
+ },
+ {
+  "term": "Sign",
+  "def": "An objective manifestation of disease, observable/measurable by an examiner (e.g., vomiting)."
+ },
+ {
+  "term": "Symptom",
+  "def": "A subjective abnormality reported only by the affected individual (e.g., nausea)."
+ },
+ {
+  "term": "Syndrome",
+  "def": "A constellation of signs and symptoms whose underlying etiology has not yet been determined."
+ },
+ {
+  "term": "Latent/incubation period",
+  "def": "The interval between exposure to an injurious agent and the first appearance of signs/symptoms."
+ },
+ {
+  "term": "Prodrome",
+  "def": "The appearance of the first, often nonspecific, signs/symptoms indicating disease onset (e.g., headache, malaise)."
+ },
+ {
+  "term": "Acute phase (manifest illness)",
+  "def": "The stage at which a disease reaches its full intensity, with signs/symptoms at their greatest severity."
+ },
+ {
+  "term": "Subclinical stage",
+  "def": "A stage during which disease processes are established but the patient still functions normally \u2014 no symptoms yet perceived."
+ },
+ {
+  "term": "Exacerbation",
+  "def": "A relatively sudden increase in the severity of a disease or its signs/symptoms."
+ },
+ {
+  "term": "Remission",
+  "def": "A decline/abatement in the severity of signs and symptoms; if permanent (often >5 years), the person is considered cured."
+ },
+ {
+  "term": "Convalescence",
+  "def": "The stage of recovery after a disease, injury, or surgery."
+ },
+ {
+  "term": "Sequela",
+  "def": "A pathologic condition resulting from a prior disease (e.g., cardiac valve scarring after rheumatic fever)."
+ },
+ {
+  "term": "Complication",
+  "def": "A new, separate disease process arising secondarily because of changes produced by the original problem (e.g., bacterial pneumonia after a viral infection)."
+ },
+ {
+  "term": "Validity (accuracy)",
+  "def": "The degree to which a measurement reflects the true value of what it's meant to measure."
+ },
+ {
+  "term": "Reliability (precision)",
+  "def": "A test's ability to give the same result on repeated measurement \u2014 can be reliable yet still inaccurate."
+ },
+ {
+  "term": "Sensitivity",
+  "def": "The probability a test will be positive in someone who has the condition; low sensitivity = more false negatives."
+ },
+ {
+  "term": "Specificity",
+  "def": "The probability a test will be negative in someone who does NOT have the condition; low specificity = more false positives."
+ },
+ {
+  "term": "Positive predictive value (PPV)",
+  "def": "The probability disease is actually present given a positive test result."
+ },
+ {
+  "term": "Negative predictive value (NPV)",
+  "def": "The probability disease is actually absent given a negative test result."
+ },
+ {
+  "term": "Endemic disease",
+  "def": "A disease native to, and consistently present in, a specific local region."
+ },
+ {
+  "term": "Epidemic",
+  "def": "A disease disseminated to many individuals at the same time within a region/population."
+ },
+ {
+  "term": "Pandemic",
+  "def": "An epidemic that has spread worldwide across multiple countries/continents."
+ },
+ {
+  "term": "Acclimatization",
+  "def": "A normal adaptive physiologic response to an environmental change (e.g., increased RBC count at high altitude)."
+ },
+ {
+  "term": "Primary prevention",
+  "def": "Preventing disease onset entirely, by reducing susceptibility or exposure (e.g., vaccination)."
+ },
+ {
+  "term": "Secondary prevention",
+  "def": "Early detection and management of disease in its preclinical/early clinical stages (e.g., screening)."
+ },
+ {
+  "term": "Tertiary prevention",
+  "def": "Rehabilitative/supportive care in advanced disease or disability, aimed at restoring function."
+ }
+]

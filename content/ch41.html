@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diabetes Mellitus — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 270px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.28rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.86rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  .sidebar a.top{font-weight:600; color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:56px 48px 42px;}
+  .hero h1{font-family:var(--serif); font-size:2.3rem; margin:0 0 10px; font-weight:normal;}
+  .hero p{max-width:640px; color:#E3F3F0; font-size:1.02rem; margin:0;}
+  .hero .toolbar{margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:38px 48px 90px; max-width:980px;}
+  @media (max-width:640px){.hero{padding:36px 20px 28px;} .content{padding:24px 18px 70px;}}
+  section.block{margin-bottom:56px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:18px;}
+  .block-head h2{font-family:var(--serif); font-size:1.6rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.72rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:22px; font-size:.97rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:14px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:14px 18px; font-family:var(--serif); font-size:1.12rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.3rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.9rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px; color:var(--teal-dark);}
+  .gloss-controls{margin-bottom:16px;}
+  .gloss-controls input{width:100%; max-width:420px; padding:10px 14px; border:1px solid var(--line); border-radius:22px; font-size:.92rem; background:#fff;}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.93rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.85rem; color:var(--ink-soft);}
+  .term.hide{display:none;}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:22px 0 28px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1.02rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  .recap{background:#EFF6F5; border:1px dashed var(--teal); border-radius:10px; padding:14px 18px; margin-top:10px;}
+  .recap h4{margin:0 0 6px; font-size:.78rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .recap ul{margin:0; padding-left:18px; font-size:.88rem;}
+  .recap li{margin-bottom:4px;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:30px; color:var(--ink-soft); font-size:.8rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=41" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Diabetes Mellitus</p>
+<span class="brand-sub">Chapter 41 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Glucose Metabolism</div>
+<a href="#glut">Glucose Transporters</a>
+<a href="#hormonal">Hormonal Regulation</a>
+<a href="#fed-fasting">Fed vs. Fasting State</a>
+<a href="#neural-exercise">Neural Regulation &amp; Exercise</a>
+<div class="grp-title">Classification &amp; Diagnosis</div>
+<a href="#classification">Classifying Glucose Intolerance</a>
+<a href="#prediabetes">Prediabetes</a>
+<div class="grp-title">Types of Diabetes</div>
+<a href="#type1">Type 1 Diabetes</a>
+<a href="#type2">Type 2 Diabetes</a>
+<div class="grp-title">Acute Complications</div>
+<a href="#acute-hyperglycemia">Acute Hyperglycemia</a>
+<a href="#dka">Diabetic Ketoacidosis</a>
+<a href="#nhhs">Nonketotic Hyperglycemic Hyperosmolar Syndrome</a>
+<div class="grp-title">Chronic Complications</div>
+<a href="#macrovascular">Macrovascular Complications</a>
+<a href="#microvascular">Microvascular Complications</a>
+<a href="#neuropathy">Neuropathic Complications</a>
+<a href="#pregnancy">Complications in Pregnancy</a>
+<div class="grp-title">Treatment &amp; Education</div>
+<a href="#nutrition">Nutrition, Obesity &amp; Exercise</a>
+<a href="#pharm">Pharmacologic Agents</a>
+<div class="grp-title">Special Populations</div>
+<a href="#pediatric">Pediatric Considerations</a>
+<a href="#geriatric">Geriatric Considerations</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Diabetes Mellitus</h1>
+<p>A study guide to glucose regulation, the classification and pathophysiology of diabetes, its acute and chronic complications, and treatment across the lifespan. Built from your Chapter 41 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<p class="block-intro">Type in the box to filter.</p>
+<div class="gloss-controls">
+<input id="glossSearch" oninput="filterGloss()" placeholder="Search terms (e.g. 'GLUT4', 'ketoacidosis')..." type="text"/>
+</div>
+<dl class="gloss-grid" id="glossGrid">
+<div class="term"><dt>GLUT-1 to GLUT-4</dt><dd>Tissue-specific glucose transporters. GLUT-1/2/3 are insulin-independent; GLUT-4 (muscle/adipose) is insulin-dependent.</dd></div>
+<div class="term"><dt>Islets of Langerhans</dt><dd>Clusters of hormone-producing pancreatic cells: β cells (insulin), α cells (glucagon), δ cells (somatostatin), F cells (pancreatic polypeptide).</dd></div>
+<div class="term"><dt>Proinsulin</dt><dd>The precursor molecule cleaved into insulin and C-peptide within secretory vesicles.</dd></div>
+<div class="term"><dt>Amylin</dt><dd>A peptide hormone cosecreted with insulin by β cells; inhibits gastric emptying, induces satiety, and prevents postprandial glucose spikes.</dd></div>
+<div class="term"><dt>Incretin effect</dt><dd>The enhanced insulin response to oral (vs. IV) glucose, mediated by gut hormones GIP and GLP-1.</dd></div>
+<div class="term"><dt>GIP / GLP-1</dt><dd>Incretin hormones from intestinal cells; stimulate insulin production, promote β-cell proliferation, inhibit apoptosis. GLP-1 also delays gastric emptying and inhibits glucagon.</dd></div>
+<div class="term"><dt>Glycogenesis</dt><dd>Production of glycogen from glucose, mainly in liver and muscle, in the fed state.</dd></div>
+<div class="term"><dt>Glycogenolysis</dt><dd>Breakdown of stored glycogen into glucose, in the fasting state.</dd></div>
+<div class="term"><dt>Gluconeogenesis</dt><dd>Production of new glucose from amino acids and other non-carbohydrate substrates, mainly in the liver.</dd></div>
+<div class="term"><dt>Lipolysis</dt><dd>Breakdown of fat from adipose tissue into free fatty acids, stimulated by declining insulin levels.</dd></div>
+<div class="term"><dt>Counterregulatory hormones</dt><dd>Corticosteroids, growth hormone, and catecholamines — all raise blood glucose and oppose insulin's effects.</dd></div>
+<div class="term"><dt>Impaired fasting glucose (IFG)</dt><dd>Fasting plasma glucose 100–125 mg/dL — a prediabetes category.</dd></div>
+<div class="term"><dt>Impaired glucose tolerance (IGT)</dt><dd>2-hour OGTT plasma glucose 140–199 mg/dL — a prediabetes category.</dd></div>
+<div class="term"><dt>HbA1C</dt><dd>Glycosylated hemoglobin; reflects average blood glucose over ~2-3 months. Diabetes: ≥6.5%. Prediabetes: 5.7-6.4%.</dd></div>
+<div class="term"><dt>Type 1A diabetes</dt><dd>Immune-mediated β-cell destruction; the more common form of type 1 diabetes.</dd></div>
+<div class="term"><dt>Type 1B diabetes</dt><dd>Idiopathic β-cell destruction without autoimmune markers or HLA association; rare.</dd></div>
+<div class="term"><dt>LADA</dt><dd>Latent autoimmune diabetes in adults — an autoimmune type 1 subtype typically diagnosed after age 35, often initially misdiagnosed as type 2.</dd></div>
+<div class="term"><dt>GADA65</dt><dd>Antibody to glutamic acid decarboxylase 65 — an autoantibody marker of autoimmune (type 1A/LADA) diabetes.</dd></div>
+<div class="term"><dt>Insulinopenia</dt><dd>Insufficient insulin production.</dd></div>
+<div class="term"><dt>Polydipsia / Polyuria / Polyphagia</dt><dd>The classic triad of diabetes symptoms: excessive thirst, urination, and hunger.</dd></div>
+<div class="term"><dt>Diabetic ketoacidosis (DKA)</dt><dd>Severe insulin deficiency causing lipolysis, ketoacid production, and metabolic acidosis; primarily a type 1 complication.</dd></div>
+<div class="term"><dt>Kussmaul respirations</dt><dd>Deep, labored, "fruity"-smelling breathing — the respiratory compensation for the metabolic acidosis of DKA.</dd></div>
+<div class="term"><dt>Nonketotic hyperglycemic hyperosmolar syndrome (NHHS)</dt><dd>Severe hyperglycemia with little/no ketosis and striking dehydration; primarily a type 2 complication, especially in older adults.</dd></div>
+<div class="term"><dt>Dawn phenomenon</dt><dd>Early-morning blood glucose rise from increased growth hormone, cortisol, glucagon, and epinephrine release.</dd></div>
+<div class="term"><dt>Macrovascular complications</dt><dd>Diabetes-accelerated damage to large vessels — cardiovascular disease, stroke, peripheral arterial disease.</dd></div>
+<div class="term"><dt>Microvascular complications</dt><dd>Capillary basement membrane thickening leading to retinopathy and nephropathy.</dd></div>
+<div class="term"><dt>Advanced glycation end products</dt><dd>Proteins altered by chronic high glucose exposure, implicated in microvascular complication pathogenesis.</dd></div>
+<div class="term"><dt>Diabetic retinopathy</dt><dd>Progressive retinal capillary damage — background, preproliferative, and proliferative stages; the leading cause of new adult blindness in the US.</dd></div>
+<div class="term"><dt>Diabetic nephropathy</dt><dd>Glomerulosclerosis from capillary basement membrane thickening; the leading cause of end-stage renal disease in the US.</dd></div>
+<div class="term"><dt>Microalbuminuria</dt><dd>Small amounts of protein in the urine — the earliest detectable sign of diabetic nephropathy.</dd></div>
+<div class="term"><dt>Diabetic neuropathy</dt><dd>Nerve damage from hyperglycemia, divided into autonomic and sensory dysfunction; linked to reduced myoinositol and the polyol pathway.</dd></div>
+<div class="term"><dt>Polyol pathway</dt><dd>Degradation of glucose to sorbitol and fructose in nerves under hyperglycemia/insulinopenia, linked to reduced myoinositol and neuropathy.</dd></div>
+<div class="term"><dt>Metformin</dt><dd>A biguanide; first-line oral agent for type 2 diabetes — suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake without causing hypoglycemia.</dd></div>
+<div class="term"><dt>Sulfonylureas</dt><dd>Insulin secretagogues used in type 2 diabetes for over 40 years (e.g., glyburide, glipizide, glimepiride).</dd></div>
+<div class="term"><dt>SGLT2 inhibitors (gliflozins)</dt><dd>A newer diabetes drug class (canagliflozin, dapagliflozin, empagliflozin) that blocks renal glucose reabsorption.</dd></div>
+<div class="term"><dt>Honeymoon period</dt><dd>A temporary return to normoglycemia without exogenous insulin after type 1 diagnosis, when insulin needs drop below residual production; rarely lasts more than a year.</dd></div>
+</dl>
+</section>
+<!-- ================= GLUCOSE METABOLISM ================= -->
+<section class="block" id="metab-intro">
+<div class="block-head"><h2>Regulation of Glucose Metabolism</h2><span class="tag">Foundations</span></div>
+<p class="block-intro">Understanding diabetes starts with understanding how the body moves glucose around normally — via specific transporters, insulin/glucagon balance, and the fed/fasting cycle.</p>
+</section>
+<section class="block" id="glut">
+<details class="topic" open="">
+<summary>Glucose Transporters (GLUT-1 to GLUT-4)</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Glucose Transporters by Tissue</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">GLUCOSE TRANSPORTERS</text></g>
+<line class="mm-line" x1="450" x2="115" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="340" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="565" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="790" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="15" y="96"></rect><text font-size="12" text-anchor="middle" x="115" y="121">GLUT-1</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="240" y="96"></rect><text font-size="12" text-anchor="middle" x="340" y="121">GLUT-2</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="465" y="96"></rect><text font-size="12" text-anchor="middle" x="565" y="121">GLUT-3</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="690" y="96"></rect><text font-size="12" text-anchor="middle" x="790" y="121">GLUT-4</text></g>
+<line class="mm-line" x1="115" x2="115" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="5" y="164"></rect><text font-size="10.5" text-anchor="middle" x="115" y="184">Blood-brain barrier</text><text font-size="10.5" text-anchor="middle" x="115" y="200">(major transporter)</text><text font-size="10.5" text-anchor="middle" x="115" y="220">Insulin-INDEPENDENT</text></g>
+<line class="mm-line" x1="340" x2="340" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="230" y="164"></rect><text font-size="10.5" text-anchor="middle" x="340" y="184">Liver (primary);</text><text font-size="10.5" text-anchor="middle" x="340" y="200">small amounts in β cells</text><text font-size="10.5" text-anchor="middle" x="340" y="220">Insulin-INDEPENDENT</text></g>
+<line class="mm-line" x1="565" x2="565" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="455" y="164"></rect><text font-size="10.5" text-anchor="middle" x="565" y="184">Neurons (dominant);</text><text font-size="10.5" text-anchor="middle" x="565" y="200">also β cells</text><text font-size="10.5" text-anchor="middle" x="565" y="220">Insulin-INDEPENDENT</text></g>
+<line class="mm-line" x1="790" x2="790" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="680" y="164"></rect><text font-size="10.5" text-anchor="middle" x="790" y="184">Muscle &amp; adipose cells</text><text font-size="10.5" text-anchor="middle" x="790" y="204">Insulin-DEPENDENT —</text><text font-size="10.5" text-anchor="middle" x="790" y="220">translocates on insulin binding</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>GLUT-1, 2, 3 — insulin-independent</h4><p>Remain in the plasma membrane whether or not insulin is present. GLUT-1: dominant at the blood-brain barrier. GLUT-2: primary liver transporter (also small amounts in β cells). GLUT-3: dominant transporter for neurons (also in β cells, alongside GLUT-1).</p></div>
+<div class="fact warn"><h4>GLUT-4 — insulin-dependent</h4><p>Found in muscle and adipose cells. Without insulin, sequestered in intracellular vesicles. Insulin binding triggers an intracellular signaling cascade that translocates GLUT-4 vesicles to the plasma membrane, allowing glucose entry. Without insulin binding, GLUT-4 is removed from the membrane again.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hormonal">
+<details class="topic" open="">
+<summary>Hormonal Regulation: Insulin Synthesis &amp; Action</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Islet cell types</h4><p>β cells → insulin (as proinsulin); α cells → glucagon; δ cells → somatostatin; F cells → pancreatic polypeptide.</p></div>
+<div class="fact"><h4>Insulin release trigger</h4><p>Glucose is the primary stimulus. It enters β cells via GLUT-1/GLUT-3, triggers ATP production → closes ATP-sensitive K+ channels → depolarization → opens voltage-sensitive Ca2+ channels → calcium influx triggers exocytosis of stored insulin and amylin.</p></div>
+<div class="fact"><h4>Proinsulin processing</h4><p>Proinsulin is packaged into vesicles with cleaving enzymes that split it into insulin and C-peptide.</p></div>
+<div class="fact"><h4>Insulin signaling</h4><p>Insulin binds its receptor (a protein kinase receptor), triggering an intracellular enzyme cascade that translocates GLUT-4 to the cell surface for glucose uptake.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Insulin's non-glucose effects</h4><p>↑ amino acid uptake and ↓ release by skeletal muscle (protein synthesis, prevents muscle breakdown). Promotes triglyceride storage by preventing fat breakdown and inducing lipid formation. Stimulates IGF-1 (somatomedin) secretion, contributing to growth.</p></div>
+<div class="fact tx"><h4>Amylin</h4><p>Cosecreted with insulin by β cells. Acts on the area postrema in the brain to inhibit gastric emptying, induce satiety, and prevent postprandial glucose spikes. Also suppresses glucagon release via a local (paracrine) pancreatic effect — no brain involvement needed for that part.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="fed-fasting">
+<details class="topic" open="">
+<summary>Fed vs. Fasting State</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th></th><th>Fed (absorptive) state</th><th>Fasting (postabsorptive) state</th></tr>
+<tr><td>Dominant hormone</td><td>Insulin</td><td>Glucagon</td></tr>
+<tr><td>Glucose source</td><td>Ingested food</td><td>Glycogenolysis (liver/muscle) + gluconeogenesis (liver)</td></tr>
+<tr><td>Muscle fuel source</td><td>Glucose</td><td>Free fatty acids (from lipolysis)</td></tr>
+<tr><td>Key process</td><td>Glycogenesis (glycogen storage)</td><td>Glycogenolysis stimulated by falling insulin, rising glucagon</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact"><h4>Two phases of insulin secretion</h4><p><b>First phase:</b> brief spike from initial glucose/GI hormone stimulation. <b>Second phase:</b> sustained insulin synthesis with continued glucose elevation.</p></div>
+<div class="fact"><h4>Incretin effect</h4><p>GIP and GLP-1 (from intestinal cells) stimulate insulin production, promote β-cell proliferation, and inhibit apoptosis — explaining why oral glucose provokes more insulin than IV glucose (parenteral nutrition shows no incretin effect). GLP-1 also delays gastric emptying, inhibits glucagon, and increases satiety.</p></div>
+<div class="fact"><h4>Fasting-state glucose production</h4><p>Glucagon-stimulated glycogenolysis + gluconeogenesis account for up to <b>75%</b> of glucose production during fasting.</p></div>
+<div class="fact tx"><h4>Counterregulatory hormones (fasting state)</h4><p>Corticosteroids stimulate gluconeogenesis, opposing insulin. Growth hormone increases peripheral insulin resistance and blocks insulin's suppression of hepatic glucose output. Catecholamines drive hepatic glycogenolysis and gluconeogenesis.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="neural-exercise">
+<details class="topic" open="">
+<summary>Neural Regulation &amp; Exercise</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>First-phase insulin release (neural)</h4><p>Food in the mouth stimulates the parasympathetic nervous system (vagal pathway), triggering β-cell insulin release before glucose is even absorbed.</p></div>
+<div class="fact"><h4>Glucose-sensitive brain cells</h4><p>Glucose-sensitive receptors exist in the brain, mouth, pancreatic β cells, and hepatic portal vein. Some neurons activate with falling glucose (glucose-inhibited), others with rising glucose (glucose-excited).</p></div>
+<div class="fact"><h4>Glucagon regulation</h4><p>Predominantly sympathetic-driven, in response to hypoglycemia. Hepatoportal vein glucose-sensitive nerve fibers release norepinephrine; combined with adrenal epinephrine, this activates α cells to release glucagon.</p></div>
+<div class="fact"><h4>Exercise physiology</h4><p>At exercise onset: insulin drops, glucagon/catecholamines rise → increased free fatty acid production (resting muscle's primary fuel) and stimulated glycogenolysis. Under catecholamine influence, muscle shifts fuel sources as exercise continues.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= CLASSIFICATION ================= -->
+<section class="block" id="classification">
+<div class="block-head"><h2>Classification of Glucose Intolerance Disorders</h2><span class="tag">The big picture</span></div>
+<p class="block-intro">"Diabetes mellitus" isn't one disease — as many as 30 different disorders fall under this umbrella. The 2011 Expert Committee criteria sort them into prediabetes categories and four clinical classes.</p>
+<div class="fact-grid">
+<div class="fact"><h4>Prediabetes categories</h4><p>Impaired glucose tolerance (IGT) and impaired fasting glucose (IFG) — intermediate stages between normal metabolism and diabetes onset.</p></div>
+<div class="fact"><h4>Four clinical classes</h4><p>Type 1 diabetes mellitus, type 2 diabetes mellitus, other specific types (genetic defects, pancreatic disease, endocrinopathies, drug-induced, infections, other genetic syndromes), and gestational diabetes mellitus.</p></div>
+</div>
+<div class="note"><b>"Other specific types" is a big bucket:</b> genetic β-cell defects (e.g., MODY subtypes), genetic defects in insulin action, exocrine pancreas disease (cystic fibrosis, pancreatitis, hemochromatosis), endocrinopathies (acromegaly, Cushing syndrome, pheochromocytoma), drug/chemical-induced (glucocorticoids, thiazides, pentamidine), infections (congenital rubella, CMV), and genetic syndromes (Down, Klinefelter, Turner, Prader-Willi, and others).</div>
+</section>
+<section class="block" id="prediabetes">
+<details class="topic" open="">
+<summary>Prediabetes: IGT &amp; IFG</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Category</th><th>Diagnostic criteria</th></tr>
+<tr><td>Impaired fasting glucose (IFG)</td><td>Fasting plasma glucose 100–125 mg/dL</td></tr>
+<tr><td>Impaired glucose tolerance (IGT)</td><td>2-hour plasma glucose 140–199 mg/dL on 75-g OGTT</td></tr>
+<tr><td>Prediabetes (either)</td><td>HbA1C 5.7%–6.4%</td></tr>
+</table>
+<p style="margin-top:6px;"><b>Diagnosing diabetes itself (any ONE of these):</b></p>
+<table class="compare">
+<tr><td>Fasting plasma glucose (FPG)</td><td>≥126 mg/dL (fasting = no caloric intake for ≥8 hours)</td></tr>
+<tr><td>Casual plasma glucose</td><td>≥200 mg/dL PLUS classic hyperglycemia symptoms (polyuria, polydipsia, unexplained weight loss)</td></tr>
+<tr><td>2-hour OGTT</td><td>≥200 mg/dL (75-g glucose load, per WHO method)</td></tr>
+<tr><td>HbA1C</td><td>≥6.5% (NGSP-certified, DCCT-standardized method)</td></tr>
+</table>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact"><h4>Pathophysiology</h4><p>Complex relationship between elevated glucose and developing insulin resistance. Glucose release is stimulated by metabolically active tissue mass (fat-free + fat mass); gluconeogenesis-stimulating signals outweigh counterregulatory effects, causing hepatic insulin resistance.</p></div>
+<div class="fact warn"><h4>Downward spiral</h4><p>Persistently high glucose supersaturates fat-free tissue (like muscle), which then downregulates GLUT transporters — accelerating systemic insulin resistance.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= TYPES OF DIABETES ================= -->
+<section class="block" id="types-intro">
+<div class="block-head"><h2>Type 1 vs. Type 2 Diabetes</h2><span class="tag">Core comparison</span></div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Type 1 vs. Type 2 at a Glance</p>
+<svg viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">DIABETES MELLITUS</text></g>
+<line class="mm-line" x1="450" x2="200" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="700" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="90" y="96"></rect><text font-size="12" text-anchor="middle" x="200" y="121">TYPE 1 (~10%)</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="590" y="96"></rect><text font-size="12" text-anchor="middle" x="700" y="121">TYPE 2 (~90-95%)</text></g>
+<line class="mm-line" x1="200" x2="200" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="126" rx="6" width="220" x="90" y="164"></rect><text font-size="10.5" text-anchor="middle" x="200" y="184">β-cell DESTRUCTION</text><text font-size="10.5" text-anchor="middle" x="200" y="200">(autoimmune or idiopathic)</text><text font-size="10.5" text-anchor="middle" x="200" y="220">ABSOLUTE insulin deficiency</text><text font-size="10.5" text-anchor="middle" x="200" y="238">Peaks: age 2, 4-6, 10-14</text><text font-size="10.5" text-anchor="middle" x="200" y="256">More common in White</text><text font-size="10.5" text-anchor="middle" x="200" y="272">populations</text></g>
+<line class="mm-line" x1="700" x2="700" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="126" rx="6" width="220" x="590" y="164"></rect><text font-size="10.5" text-anchor="middle" x="700" y="184">Peripheral INSULIN RESISTANCE</text><text font-size="10.5" text-anchor="middle" x="700" y="200">RELATIVE insulin deficiency</text><text font-size="10.5" text-anchor="middle" x="700" y="220">Strongest risk factor: OBESITY</text><text font-size="10.5" text-anchor="middle" x="700" y="238">(especially visceral fat)</text><text font-size="10.5" text-anchor="middle" x="700" y="256">Disproportionate in non-White,</text><text font-size="10.5" text-anchor="middle" x="700" y="272">elderly populations</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="type1">
+<details class="topic" open="">
+<summary>Type 1 Diabetes Mellitus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~10% of all diabetes; 1.3 million in the US, ~10-20 million globally. Incidence 1 in 300-600 children/adolescents. Peaks at ages 2, 4-6, and 10-14. More common in White populations. Little sex difference under 15, but more males affected overall.</p></div>
+<div class="fact"><h4>Type 1A vs. Type 1B</h4><p><b>Type 1A</b> (more common): immune-mediated. <b>Type 1B</b> (rare): idiopathic — β-cell destruction with no autoimmune markers or HLA association; etiology unknown.</p></div>
+</div>
+<table class="compare">
+<tr><th>Type 1A subtype</th><th>Details</th></tr>
+<tr><td>Polygenic</td><td>Two or more genetic loci; 80-90% of type 1 cases</td></tr>
+<tr><td>Monogenic</td><td>Rare; associated with IPEX syndrome</td></tr>
+<tr><td>LADA (latent autoimmune diabetes in adults)</td><td>T-cell reactivity to islet antigens + GADA65 autoantibodies; 2-12% of all diabetes; diagnosed after age 35; often initially mistaken for type 2</td></tr>
+</table>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact"><h4>Genetic link</h4><p>Strong MHC association on chromosome 6 (HLA genes). DR and DQ loci confer predisposition; other loci may be protective.</p></div>
+<div class="fact"><h4>Trigger</h4><p>Viral infection or toxic exposure may trigger the autoimmune process in genetically susceptible individuals.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Pathogenesis</h4><p>Macrophages and T lymphocytes (CD4 via cytokines, CD8 via direct cytotoxicity) infiltrate and destroy islet β cells. Autoantibodies (GADA65, insulinoma-antigen 2, insulin) often appear early — sometimes up to 13 years before diagnosis. Multiple antibodies present = highly predictive of type 1A.</p></div>
+<div class="fact warn"><h4>When symptoms appear</h4><p>Hyperglycemia signals that autoimmune β-cell destruction has progressed far enough that insulin secretion is now inadequate.</p></div>
+</div>
+<div class="danger"><b>Core mechanism:</b> Absolute insulin deficiency → glucose can't enter muscle/adipose tissue → unopposed hepatic glucose production → glucagon overproduction drives further glycogenolysis/gluconeogenesis → blood glucose rises → exceeds renal tubular reabsorption capacity → glycosuria → osmotic diuresis → hypovolemia. Meanwhile, insulin-dependent tissues are starved of glucose, and the brain triggers eating behavior. Result: the classic triad — <b>polydipsia, polyuria, polyphagia</b>.</div>
+</div>
+</details>
+</section>
+<section class="block" id="type2">
+<details class="topic" open="">
+<summary>Type 2 Diabetes Mellitus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Core defect</h4><p>Resistance to insulin action on peripheral tissues, affecting 90-95% of US diabetics.</p></div>
+<div class="fact"><h4>Prevalence by ethnicity</h4><p>7.4% non-Hispanic White; 12.1% non-Hispanic Black; 11.8% Hispanic/Latino. Native American: 5.5% (Alaska Native) up to 33.5% (American Indians in southern AZ).</p></div>
+<div class="fact"><h4>Age patterns</h4><p>~29.2% of US adults over 65 have diabetes. Under age 20: affects ~283,000 (0.35%) — adolescent Native Americans are the highest-risk group in this age bracket.</p></div>
+<div class="fact warn"><h4>Risk factors</h4><p>Aging and sedentary lifestyle contribute, but <b>obesity is the single most powerful predictor</b> — especially excessive abdominal (visceral) fat, which poses a greater diabetes/cardiovascular risk than lower-body fat.</p></div>
+</div>
+<div class="callout"><b>Subtle onset:</b> Classic symptoms (polydipsia, polyuria, polyphagia, weight loss) may be mild or entirely absent in type 2 diabetes — a key reason it often goes undiagnosed for years.</div>
+</div>
+</details>
+</section>
+<!-- ================= ACUTE COMPLICATIONS ================= -->
+<section class="block" id="acute-intro">
+<div class="block-head"><h2>Acute Complications</h2><span class="tag">Emergencies</span></div>
+<p class="block-intro">Both major acute diabetic emergencies come from the same root cause — insulin shortage — but they diverge sharply depending on whether any endogenous insulin remains.</p>
+<table class="compare">
+<tr><th>Parameter</th><th>Diabetic Ketoacidosis (DKA)</th><th>NHHS</th></tr>
+<tr><td>Glucose</td><td>&gt;300 mg/dL</td><td>&gt;600 mg/dL</td></tr>
+<tr><td>Urine ketones</td><td>Moderate to high</td><td>None</td></tr>
+<tr><td>pH</td><td>6.8–7.3</td><td>Normal</td></tr>
+<tr><td>Na+, K+</td><td>Low, normal, or high</td><td>Low, normal, or high</td></tr>
+<tr><td>Hct, Hb, protein, WBC, Cr, BUN, osmolality</td><td>High</td><td>High</td></tr>
+<tr><td>Typical diabetes type</td><td>Type 1</td><td>Type 2 (esp. older adults)</td></tr>
+</table>
+</section>
+<section class="block" id="acute-hyperglycemia">
+<details class="topic" open="">
+<summary>Acute Hyperglycemia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Common causes</h4><p>Alterations in nutrition, inactivity, inadequate antidiabetic medication use, or combinations of these.</p></div>
+<div class="fact"><h4>Dawn phenomenon</h4><p>Persistent fasting hyperglycemia from early-morning increases in growth hormone, cortisol, glucagon, and epinephrine.</p></div>
+<div class="fact warn"><h4>Infection risk</h4><p>Skin, urinary tract, and vaginal infections are most common. Elderly patients are particularly susceptible to malignant otitis externa, necrotizing fasciitis, and persistent candidal infections. TB reactivation is a concern in extended care facility residents.</p></div>
+<div class="fact"><h4>Other symptoms</h4><p>Nausea, fatigue, decreased sense of well-being, blurred vision — these recede as euglycemia is restored.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="dka">
+<details class="topic" open="">
+<summary>Diabetic Ketoacidosis (DKA)</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — DKA Pathophysiologic Cascade</p>
+<svg viewbox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="12" text-anchor="middle" x="450" y="30">Insulin deficiency +</text><text font-size="12" text-anchor="middle" x="450" y="46">↑ counterregulatory hormones</text></g>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="240" x="330" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">Lipolysis → free fatty acids</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="164"></line>
+<g class="mm-node"><rect height="40" rx="8" width="240" x="330" y="164"></rect><text font-size="12" text-anchor="middle" x="450" y="189">Hepatic conversion to ketoacids</text></g>
+<line class="mm-line" x1="330" x2="150" y1="184" y2="230"></line>
+<line class="mm-line" x1="570" x2="750" y1="184" y2="230"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="240" x="30" y="230"></rect><text font-size="10.5" text-anchor="middle" x="150" y="250">Ketones saturate normal</text><text font-size="10.5" text-anchor="middle" x="150" y="266">pathway → pH falls (6.8-7.3)</text><text font-size="10.5" text-anchor="middle" x="150" y="284">↓ bicarbonate → METABOLIC</text><text font-size="10.5" text-anchor="middle" x="150" y="298">ACIDOSIS</text></g>
+<g class="mm-leaf"><rect height="76" rx="6" width="240" x="630" y="230"></rect><text font-size="10.5" text-anchor="middle" x="750" y="250">Ketonuria → sharply</text><text font-size="10.5" text-anchor="middle" x="750" y="266">increased osmotic fluid loss</text><text font-size="10.5" text-anchor="middle" x="750" y="284">→ HYPOVOLEMIA</text></g>
+<line class="mm-line" x1="150" x2="450" y1="306" y2="340"></line>
+<line class="mm-line" x1="750" x2="450" y1="306" y2="340"></line>
+<g class="mm-node"><rect height="34" rx="10" width="300" x="300" y="340"></rect><text font-size="11.5" text-anchor="middle" x="450" y="362">Kussmaul respirations + hyperkalemia risk</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Trigger</h4><p>Continued insulin deficiency plus elevated catecholamines, cortisol, glucagon, and growth hormone (from hypovolemia, physical stress, or the insulin deficiency itself) drives lipolysis.</p></div>
+<div class="fact"><h4>Ketoacid production</h4><p>Fatty acids from lipolysis are converted to ketoacids in the liver; hepatic gluconeogenesis (responding to tissue glucose deprivation) also boosts ketoacid production.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Potassium dynamics</h4><p>Metabolic acidosis pushes extracellular H+ into cells. Since the Na+/K+ pump (which normally moves potassium intracellularly) requires insulin, absent insulin causes <b>transient hyperkalemia</b> — but excess K+ then spills into urine, eventually causing net potassium LOSS.</p></div>
+<div class="fact"><h4>Other electrolyte/lab changes</h4><p>Sodium, magnesium, phosphorus losses occur as total body water falls (though serum levels may look normal/high due to hemoconcentration). Hypovolemia/dehydration raise Hct, Hb, protein, WBC count, creatinine, serum osmolality. Lactic acidosis can also occur from hypovolemia and reduced hepatic lactate uptake.</p></div>
+</div>
+<div class="danger"><b>Kussmaul respirations:</b> Deep, labored, fruity-smelling breathing — the respiratory compensation for metabolic acidosis, lowering PCO2 (compensatory respiratory alkalosis). DKA may be the very first sign of new-onset type 1 diabetes. Untreated hypovolemic shock can be fatal. Hospitalization need is greatest in patients under 45 (39.7 per 1000 diabetics).</div>
+</div>
+</details>
+</section>
+<section class="block" id="nhhs">
+<details class="topic" open="">
+<summary>Nonketotic Hyperglycemic Hyperosmolar Syndrome (NHHS)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Why no ketoacidosis in type 2</h4><p>Endogenous insulin (still present, just relatively insufficient, in type 2) suppresses the lipolysis that leads to ketone body/ketoacidosis formation.</p></div>
+<div class="fact"><h4>Clinical picture</h4><p>Severe hyperglycemia with no or slight ketosis, plus striking dehydration. Symptoms of polyuria/polydipsia/polyphagia may be present but subtle.</p></div>
+<div class="fact warn"><h4>Who's at risk</h4><p>More common in type 2 diabetes, especially older individuals; more likely in institutionalized patients, particularly those unable to recognize or respond to thirst.</p></div>
+<div class="fact warn"><h4>Mortality</h4><p>Can be life-threatening, especially in the elderly. 70% of all NHHS coma cases occur in people over 64. Mortality rate ~11%.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= CHRONIC COMPLICATIONS ================= -->
+<section class="block" id="chronic-intro">
+<div class="block-head"><h2>Complications of Chronic Hyperglycemia</h2><span class="tag">Vascular &amp; neuropathic</span></div>
+<p class="block-intro">Chronic complications split into two big categories: vascular (further divided into macro- and microvascular) and neuropathic.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Chronic Complications Overview</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">CHRONIC COMPLICATIONS</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="96"></rect><text font-size="12" text-anchor="middle" x="150" y="121">MACROVASCULAR</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="96"></rect><text font-size="12" text-anchor="middle" x="450" y="121">MICROVASCULAR</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="96"></rect><text font-size="12" text-anchor="middle" x="750" y="121">NEUROPATHIC</text></g>
+<line class="mm-line" x1="150" x2="150" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="40" y="164"></rect><text font-size="10.5" text-anchor="middle" x="150" y="184">Large vessels</text><text font-size="10.5" text-anchor="middle" x="150" y="200">CAD, stroke,</text><text font-size="10.5" text-anchor="middle" x="150" y="216">peripheral arterial disease</text></g>
+<line class="mm-line" x1="450" x2="450" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="340" y="164"></rect><text font-size="10.5" text-anchor="middle" x="450" y="184">Capillaries</text><text font-size="10.5" text-anchor="middle" x="450" y="200">Retinopathy,</text><text font-size="10.5" text-anchor="middle" x="450" y="216">nephropathy</text></g>
+<line class="mm-line" x1="750" x2="750" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="640" y="164"></rect><text font-size="10.5" text-anchor="middle" x="750" y="184">Autonomic + sensory</text><text font-size="10.5" text-anchor="middle" x="750" y="200">Pain, sensory loss,</text><text font-size="10.5" text-anchor="middle" x="750" y="216">GI/bladder/sexual dysfx</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="macrovascular">
+<details class="topic" open="">
+<summary>Macrovascular Complications</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Damage to large vessels supplying the brain, heart, and extremities. Diabetes accelerates the otherwise age-dependent process of atherosclerosis.</p></div>
+<div class="fact warn"><h4>Burden</h4><p>Cardiovascular disease and stroke affect 38.1% of diabetics over 35. Heart/blood vessel disease risk is 2-4x higher with diabetes, responsible for more than half of all diabetes deaths. Stroke is more common and has worse outcomes in diabetics — accounting for ~1% of diabetes hospitalizations.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Intensive glycemic control research</h4><p>ACCORD study: only study to suggest increased overall mortality, but significant reduction in nonfatal coronary events. Other studies: improved mortality with HbA1C ~6.5%, and a 14% cardiovascular event reduction per 1% HbA1C drop — but severe hypoglycemia risk rose significantly.</p></div>
+<div class="fact"><h4>Contributing risk factors</h4><p>Dyslipidemia, hypertension, and impaired fibrinolysis are present in uncontrolled diabetes and improve with better glucose control — the fibrinolysis link may relate to compensatory hyperinsulinemia in type 2 diabetes.</p></div>
+</div>
+<div class="callout"><b>Key nuance:</b> Improved glycemic control is thought to help microvascular complications more than macrovascular ones — reducing insulin resistance (caloric restriction, exercise, possibly drugs) plus standard risk-factor control (lipids, BP) matters most for macrovascular risk.</div>
+</div>
+</details>
+</section>
+<section class="block" id="microvascular">
+<details class="topic" open="">
+<summary>Microvascular Complications: Retinopathy &amp; Nephropathy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Shared mechanism</h4><p>Abnormal thickening of the capillary basement membrane, worsening with longer diabetes duration and persistent hyperglycemia. Hyperglycemia disrupts platelet function and basement membrane growth; advanced glycation end products (AGEs) also contribute. Thickening improves with better glycemic control.</p></div>
+<div class="fact"><h4>Other risk factors</h4><p>Hypertension and smoking.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Retinopathy burden</h4><p>&lt;10% affected after &lt;5 years with diabetes; &gt;50% after &gt;20 years. Up to 21% of newly diagnosed type 2 patients already have it (reflecting long undiagnosed disease). The leading cause of new adult blindness in the US.</p></div>
+<div class="fact"><h4>Retinopathy stages</h4><p><b>Background:</b> microaneurysms, small hemorrhages — usually doesn't affect visual acuity. <b>Preproliferative:</b> further capillary damage. <b>Proliferative:</b> capillary neovascularization — new capillaries are prone to hemorrhage; treated with laser photocoagulation.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Nephropathy burden</h4><p>Affects 20-40% of type 1 patients (fewer type 2 patients progress to ESRD). Accounts for 40% of all US end-stage renal disease cases. African American, Hispanic, and Native American diabetics have higher ESRD rates than White patients.</p></div>
+<div class="fact"><h4>Nephropathy mechanism</h4><p>Characteristic lesion: <b>glomerulosclerosis</b> (basement membrane thickening/hardening). Progression: ↑ glomerular flow rate → hyperfiltration → glomerular damage → glomerulosclerosis → capillary blockage/leakage → protein in urine (starting as microalbuminuria, progressing to gross proteinuria) → falling GFR → chronic kidney disease.</p></div>
+</div>
+<div class="danger"><b>Hypertension</b> is an important contributing factor to diabetic nephropathy — ACE inhibitor therapy reduces the rate of chronic kidney disease, ESRD, and mortality.</div>
+</div>
+</details>
+</section>
+<section class="block" id="neuropathy">
+<details class="topic" open="">
+<summary>Neuropathic Complications</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Burden</h4><p>Produces symptoms in 60-70% of diabetics; responsible for 6.8 hospitalizations per 1000 diabetics.</p></div>
+<div class="fact"><h4>Two categories</h4><p><b>Autonomic:</b> GI disturbances, bladder dysfunction, tachycardia, postural hypotension, sexual dysfunction (35-50% of diabetic males have erectile dysfunction). <b>Sensory:</b> carpal tunnel syndrome, paresthesias/sensory loss in feet and lower legs.</p></div>
+</div>
+<div class="danger"><b>Foot complications:</b> Neuropathy drives a major increase in serious foot problems. Lower extremity amputation rate is 15-40x higher in diabetics; over 60% of all nontraumatic US amputations occur in people with diabetes.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact"><h4>Myoinositol &amp; the polyol pathway</h4><p>Diabetic neuropathy is linked to decreased myoinositol (a nerve membrane component) in peripheral nerves. Glucose competes with myoinositol for cellular transport; hyperglycemia/insulinopenia also activate the <b>polyol pathway</b> (glucose → sorbitol/fructose) in nerves, further reducing myoinositol. Focal ischemic nerve lesions may also contribute.</p></div>
+<div class="fact"><h4>Pathologic findings</h4><p>Degeneration or loss of nerve fibers, causing decreased nerve function.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Modifiable risk factors</h4><p>Hyperglycemia, hypertriglyceridemia, obesity, smoking, hypertension.</p></div>
+<div class="fact"><h4>Non-modifiable/demographic risk factors</h4><p>Male sex, White race, older age, height &gt;175.5 cm; elderly, non-Hispanic Black, and Mexican American individuals are disproportionately affected.</p></div>
+</div>
+<div class="fact tx"><h4>Landmark trial: DCCT</h4><p>9-year prospective study of intensive insulin therapy (3+ injections/day or pump) in type 1 patients. Results: 76% reduced incidence of initial retinopathy, 54% reduced progression of existing retinopathy, 39%/54% reduction in microalbuminuria/albuminuria, 60% reduction in symptomatic neuropathy. Trade-off: significantly more severe hypoglycemia in the intensive group. The UK Prospective Diabetes Study extended similar findings (decreased morbidity/mortality) to type 2 diabetes.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="pregnancy">
+<details class="topic" open="">
+<summary>Complications in Pregnancy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Risks with type 1 diabetes</h4><p>Increased risk of perinatal infant mortality and congenital anomalies. Good metabolic control during pregnancy brings perinatal mortality close to the general population rate, but congenital malformation risk remains elevated.</p></div>
+<div class="fact"><h4>Why preconception control matters</h4><p>Affected organs develop early in the first trimester, so excellent glycemic control BEFORE conception is recommended.</p></div>
+<div class="fact warn"><h4>Consequences of untreated maternal hyperglycemia</h4><p>Macrosomia, shoulder dystocia, preeclampsia, fetal death, fractures, and nerve palsies.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= TREATMENT ================= -->
+<section class="block" id="treatment-intro">
+<div class="block-head"><h2>Treatment &amp; Education</h2><span class="tag">Management</span></div>
+<p class="block-intro">ADA goals: preprandial glucose 70-130 mg/dL, postprandial &lt;180 mg/dL. Achieved through diet, exercise, medication, and hygiene practices — always individualized.</p>
+</section>
+<section class="block" id="nutrition">
+<details class="topic" open="">
+<summary>Nutrition, Obesity &amp; Exercise</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>ADA nutrition therapy goals</h4><p>Promote nutrient-dense eating patterns to hit individualized glycemic/BP/lipid goals and weight goals, delay complications; address individual cultural/personal needs; keep eating enjoyable; give practical day-to-day meal planning tools rather than obsessing over single nutrients.</p></div>
+<div class="fact"><h4>Obesity definitions</h4><p>Normal BMI: 18.5-24.9 kg/m². Increased health risk begins at BMI ≥25.2. Obesity = BMI &gt;30. Obesity is the strongest risk factor for type 2 diabetes and a female cardiovascular risk factor.</p></div>
+<div class="fact tx"><h4>Weight management</h4><p>No single strategy works for everyone; recommendations include a nutritionally complete diet, maintenance routine, and exercise program. A modest 2-8 kg weight loss can meaningfully benefit type 2 diabetics.</p></div>
+<div class="fact warn"><h4>Eating disorders</h4><p>Bulimia and anorexia may be more common in females with type 1 diabetes; some patients induce weight loss by reducing insulin doses — clinicians must assess carefully.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Exercise benefits</h4><p>Lowers BP and dyslipidemia, increases work capacity, reduces stress, prevents bone loss, improves reaction time, aids weight loss. Reduces tissue insulin resistance → net blood glucose decline. Can decrease insulin needs (type 1), reduce/eliminate drug needs (type 2), lower heart disease risk, and even prevent type 2 onset in genetically at-risk people.</p></div>
+<div class="fact warn"><h4>Exercise risks</h4><p>Type 1: hypoglycemia and ketoacidosis risk. Type 2: hypoglycemia, cardiac dysfunction, orthopedic injury, complication worsening. Post-exercise hypoglycemia can occur up to 24 hours later (glycogen replacement + continued insulin sensitivity).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Exercise recommendations</h4><p>CDC: moderate intensity ≥30 min, 5+ days/week, OR vigorous intensity 20 min, 3+ days/week (no more than 2 consecutive rest days). Reduce sedentary stretches &gt;90 minutes.</p></div>
+<div class="fact danger"><h4>When to avoid exercise</h4><p>Avoid if ketosis is present (signals acute insulin shortage — exercise can worsen hyperglycemia). Exercise is safe with glucose &gt;250 mg/dL only if ketosis is absent.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="pharm">
+<details class="topic" open="">
+<summary>Pharmacologic Agents</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Category</th><th>Class</th><th>Examples</th></tr>
+<tr><td>Sensitizers</td><td>Biguanides</td><td>Metformin</td></tr>
+<tr><td></td><td>Thiazolidinediones (TZDs)</td><td>Pioglitazone, rosiglitazone</td></tr>
+<tr><td>Secretagogues</td><td>Sulfonylureas</td><td>1st gen: chlorpropamide, tolbutamide; 2nd gen: glyburide, glipizide, glimepiride</td></tr>
+<tr><td></td><td>Meglitinides</td><td>Nateglinide, repaglinide</td></tr>
+<tr><td></td><td>DPP-4 inhibitors</td><td>Linagliptin, saxagliptin, sitagliptin</td></tr>
+<tr><td>Other</td><td>α-Glucosidase inhibitors</td><td>Acarbose, miglitol</td></tr>
+<tr><td></td><td>Gliflozins (SGLT2 inhibitors)</td><td>Canagliflozin, dapagliflozin, empagliflozin</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact tx"><h4>Metformin — the first-line drug</h4><p>Suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake, WITHOUT causing hypoglycemia. First-line for type 2 (if tolerated/not contraindicated). Improves dyslipidemia and promotes weight loss.</p></div>
+<div class="fact warn"><h4>Metformin risks</h4><p>Common: nausea, diarrhea. Serious: acute renal injury and metabolic acidosis (lactic acidosis is rare, mostly linked to acute kidney injury). Use caution with liver disease. Hold 24 hrs before / 48 hrs after IV iodine contrast (depending on creatinine clearance) due to acute renal injury risk.</p></div>
+</div>
+<div class="note">Treatment choice should be patient-centered: consider efficacy, cost, side effects, weight effects, comorbidities, hypoglycemia risk, and patient preference. Current guidelines favor timely titration of oral agents and insulin to reach euglycemia.</div>
+</div>
+</details>
+</section>
+<!-- ================= PEDIATRIC ================= -->
+<section class="block" id="pediatric">
+<details class="topic" open="">
+<summary>Pediatric Considerations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~176,500 diagnosed under age 20. 1 in 400-600 children/adolescents has type 1; 18 new cases per 100,000 yearly. Vast majority have type 1 (only ~5% have genetic β-cell defects instead).</p></div>
+<div class="fact"><h4>Presentation</h4><p>Often presents acutely as DKA when insulin secretion drops below needs.</p></div>
+<div class="fact tx"><h4>Honeymoon period</h4><p>If diagnosed during a period of high insulin demand (e.g., viral illness), insulin needs may later drop below residual production once the illness resolves, allowing temporary normoglycemia without exogenous insulin. Rarely lasts more than 1 year, usually shorter.</p></div>
+<div class="fact"><h4>Goals of therapy</h4><p>Normal growth/development, avoiding acute/chronic complications, addressing psychosocial issues, and self-care education.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Acute complications</h4><p>Hyperglycemia → glycosuria → dehydration risk (especially severe with DKA). Test for ketonuria when glucose &gt;240 mg/dL or during concurrent illness, to catch DKA early.</p></div>
+<div class="fact warn"><h4>Hypoglycemia in young children</h4><p>Can be hard to detect — watch for behavioral changes: lethargy, pallor, sleep disturbances.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Chronic complications</h4><p>Rare during adolescence, but regular screening for neuropathy/nephropathy and lipid checks should still occur. Pregnant adolescents need counseling on maintaining excellent metabolic control.</p></div>
+<div class="fact"><h4>Insulin treatment</h4><p>~1.0 U/kg/day; intensive regimen of 3+ injections/day recommended to prevent chronic complications. Infants/young children may need diluted insulin for accurate small dosing. Needs rise during illness or puberty. Abdomen is the LEAST preferred injection site in children (insufficient subcutaneous fat).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Nutrition</h4><p>Base: 1000 calories/day + 100 calories per year of age until age 11. Ages 11-18: +100 more calories for females, +200 more for males. Growth should be plotted at every visit. After age 2, macronutrient ratios match adult guidelines.</p></div>
+<div class="fact"><h4>Self-management &amp; education</h4><p>Kids typically start injections/monitoring (with supervision) at school age, varying by child. All caregivers (parents, babysitters, teachers) need age-appropriate education on hypoglycemia prevention/recognition/treatment.</p></div>
+</div>
+<div class="danger"><b>Psychosocial factors matter clinically:</b> Peer pressure during adolescence can worsen adherence; weight concerns can lead to insulin omission or eating disorders. Disturbed family functioning is linked to increased DKA hospitalization frequency.</div>
+<div class="note">Genetic β-cell defects are usually diagnosed under age 25, rarely cause ketosis, and are managed like young-adult type 2 diabetes.</div>
+</div>
+</details>
+</section>
+<!-- ================= GERIATRIC ================= -->
+<section class="block" id="geriatric">
+<details class="topic" open="">
+<summary>Geriatric Considerations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>Adults over 60 make up nearly 50% of the US diabetic population. Prevalence ~21% at age 60+, more than double the 40-59 age group.</p></div>
+<div class="fact"><h4>Why risk increases with age</h4><p>↑ adiposity, ↓ lean body mass, ↓ activity (all → insulin resistance), plus diminished insulin secretion with age. Also increased by surgery, illness, and drugs like steroids/diuretics.</p></div>
+<div class="fact warn"><h4>Diagnostic challenges</h4><p>Fluctuating glucose values and inconsistent/absent hyperglycemia symptoms make diagnosis harder. Chronic complications (neuropathy, retinopathy) are often already present at diagnosis, signaling long-standing undiagnosed disease.</p></div>
+<div class="fact"><h4>Goals of therapy</h4><p>Prevent acute complications, manage chronic complications, address psychosocial issues, provide self-care education.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Atypical hyperglycemia presentation</h4><p>May be asymptomatic or show polyuria/fatigue; polydipsia is LESS common due to decreased thirst perception. Can cause increased pain perception and slowed cognition. Infection risk rises above glucose 200 mg/dL — elderly diabetics are 2x more likely to be hospitalized for kidney infections.</p></div>
+<div class="fact warn"><h4>Dehydration &amp; falls</h4><p>Chronic hyperglycemia causes mild-moderate dehydration, worsened by age-related kidney/water-conservation changes — leading to postural hypotension, electrolyte imbalance, and increased fall risk.</p></div>
+</div>
+<div class="danger"><b>NHHS in the elderly:</b> Not prone to ketosis, but at high risk for nonketotic hyperglycemic hyperosmolar coma. Risk factors: impaired thirst recognition, polypharmacy, dementia, concurrent illness. Mortality: 10-50%.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact warn"><h4>Atypical hypoglycemia</h4><p>Can present as lethargy or focal neurologic dysfunction rather than classic symptoms — age-related blunting of counterregulatory response, or inability to report symptoms, may be responsible. Glycemic targets may need to be set higher for safety.</p></div>
+<div class="fact"><h4>Foot care challenges</h4><p>Orthopedic deformity, loss of protective subcutaneous fat, and atherosclerotic change complicate foot care; visual/joint changes can hinder self-inspection — assistance is often needed.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Drug selection</h4><p>Favor shorter-acting oral agents; evaluate renal/hepatic function first. Avoid agents metabolized by impaired organ systems. <b>Metformin is inappropriate</b> with decreased liver/renal function (lactic acidosis risk).</p></div>
+<div class="fact tx"><h4>Insulin in the elderly</h4><p>Safe with caution — thin elderly patients can be very insulin-sensitive and need small doses. Daily/twice-daily long-acting insulin may be preferable. Visual/dexterity/cognitive changes may require magnification devices or prefilled syringes.</p></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 41 (Diabetes Mellitus) material. Redraw the mind maps from memory, then quiz yourself on the DKA vs. NHHS comparison table and the type 1 vs. type 2 comparison.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+function filterGloss(){
+  var q = document.getElementById('glossSearch').value.toLowerCase();
+  document.querySelectorAll('#glossGrid .term').forEach(function(t){
+    var text = t.textContent.toLowerCase();
+    t.classList.toggle('hide', q.length>0 && text.indexOf(q)===-1);
+  });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Tissue-specific glucose transporters. GLUT-1/2/3 are insulin-independent; GLUT-4 (muscle/adipose) is insulin-dependent.", "answers": ["GLUT-1 to GLUT-4"]}, {"def": "Clusters of hormone-producing pancreatic cells: \u03b2 cells (insulin), \u03b1 cells (glucagon), \u03b4 cells (somatostatin), F cells (pancreatic polypeptide).", "answers": ["Islets of Langerhans"]}, {"def": "The precursor molecule cleaved into insulin and C-peptide within secretory vesicles.", "answers": ["Proinsulin"]}, {"def": "A peptide hormone cosecreted with insulin by \u03b2 cells; inhibits gastric emptying, induces satiety, and prevents postprandial glucose spikes.", "answers": ["Amylin"]}, {"def": "The enhanced insulin response to oral (vs. IV) glucose, mediated by gut hormones GIP and GLP-1.", "answers": ["Incretin effect"]}, {"def": "Incretin hormones from intestinal cells; stimulate insulin production, promote \u03b2-cell proliferation, inhibit apoptosis. GLP-1 also delays gastric emptying and inhibits glucagon.", "answers": ["GIP / GLP-1"]}, {"def": "Production of glycogen from glucose, mainly in liver and muscle, in the fed state.", "answers": ["Glycogenesis"]}, {"def": "Breakdown of stored glycogen into glucose, in the fasting state.", "answers": ["Glycogenolysis"]}, {"def": "Production of new glucose from amino acids and other non-carbohydrate substrates, mainly in the liver.", "answers": ["Gluconeogenesis"]}, {"def": "Breakdown of fat from adipose tissue into free fatty acids, stimulated by declining insulin levels.", "answers": ["Lipolysis"]}, {"def": "Corticosteroids, growth hormone, and catecholamines \u2014 all raise blood glucose and oppose insulin's effects.", "answers": ["Counterregulatory hormones"]}, {"def": "Fasting plasma glucose 100\u2013125 mg/dL \u2014 a prediabetes category.", "answers": ["Impaired fasting glucose", "IFG", "Impaired fasting glucose (IFG)"]}, {"def": "2-hour OGTT plasma glucose 140\u2013199 mg/dL \u2014 a prediabetes category.", "answers": ["Impaired glucose tolerance", "IGT", "Impaired glucose tolerance (IGT)"]}, {"def": "Glycosylated hemoglobin; reflects average blood glucose over ~2-3 months. Diabetes: \u22656.5%. Prediabetes: 5.7-6.4%.", "answers": ["HbA1C"]}, {"def": "Immune-mediated \u03b2-cell destruction; the more common form of type 1 diabetes.", "answers": ["Type 1A diabetes"]}, {"def": "Idiopathic \u03b2-cell destruction without autoimmune markers or HLA association; rare.", "answers": ["Type 1B diabetes"]}, {"def": "Latent autoimmune diabetes in adults \u2014 an autoimmune type 1 subtype typically diagnosed after age 35, often initially misdiagnosed as type 2.", "answers": ["LADA"]}, {"def": "Antibody to glutamic acid decarboxylase 65 \u2014 an autoantibody marker of autoimmune (type 1A/LADA) diabetes.", "answers": ["GADA65"]}, {"def": "Insufficient insulin production.", "answers": ["Insulinopenia"]}, {"def": "The classic triad of diabetes symptoms: excessive thirst, urination, and hunger.", "answers": ["Polydipsia / Polyuria / Polyphagia"]}, {"def": "Severe insulin deficiency causing lipolysis, ketoacid production, and metabolic acidosis; primarily a type 1 complication.", "answers": ["Diabetic ketoacidosis", "DKA", "Diabetic ketoacidosis (DKA)"]}, {"def": "Deep, labored, \"fruity\"-smelling breathing \u2014 the respiratory compensation for the metabolic acidosis of DKA.", "answers": ["Kussmaul respirations"]}, {"def": "Severe hyperglycemia with little/no ketosis and striking dehydration; primarily a type 2 complication, especially in older adults.", "answers": ["Nonketotic hyperglycemic hyperosmolar syndrome", "NHHS", "Nonketotic hyperglycemic hyperosmolar syndrome (NHHS)"]}, {"def": "Early-morning blood glucose rise from increased growth hormone, cortisol, glucagon, and epinephrine release.", "answers": ["Dawn phenomenon"]}, {"def": "Diabetes-accelerated damage to large vessels \u2014 cardiovascular disease, stroke, peripheral arterial disease.", "answers": ["Macrovascular complications"]}, {"def": "Capillary basement membrane thickening leading to retinopathy and nephropathy.", "answers": ["Microvascular complications"]}, {"def": "Proteins altered by chronic high glucose exposure, implicated in microvascular complication pathogenesis.", "answers": ["Advanced glycation end products"]}, {"def": "Progressive retinal capillary damage \u2014 background, preproliferative, and proliferative stages; the leading cause of new adult blindness in the US.", "answers": ["Diabetic retinopathy"]}, {"def": "Glomerulosclerosis from capillary basement membrane thickening; the leading cause of end-stage renal disease in the US.", "answers": ["Diabetic nephropathy"]}, {"def": "Small amounts of protein in the urine \u2014 the earliest detectable sign of diabetic nephropathy.", "answers": ["Microalbuminuria"]}, {"def": "Nerve damage from hyperglycemia, divided into autonomic and sensory dysfunction; linked to reduced myoinositol and the polyol pathway.", "answers": ["Diabetic neuropathy"]}, {"def": "Degradation of glucose to sorbitol and fructose in nerves under hyperglycemia/insulinopenia, linked to reduced myoinositol and neuropathy.", "answers": ["Polyol pathway"]}, {"def": "A biguanide; first-line oral agent for type 2 diabetes \u2014 suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake without causing hypoglycemia.", "answers": ["Metformin"]}, {"def": "Insulin secretagogues used in type 2 diabetes for over 40 years (e.g., glyburide, glipizide, glimepiride).", "answers": ["Sulfonylureas"]}, {"def": "A newer diabetes drug class (canagliflozin, dapagliflozin, empagliflozin) that blocks renal glucose reabsorption.", "answers": ["SGLT2 inhibitors", "gliflozins", "SGLT2 inhibitors (gliflozins)"]}, {"def": "A temporary return to normoglycemia without exogenous insulin after type 1 diagnosis, when insulin needs drop below residual production; rarely lasts more than a year.", "answers": ["Honeymoon period"]}];
+const QUIZ_TEACHBACK = [{"topic": "Glucose Transporters (GLUT-1 to GLUT-4)", "points": ["<b>GLUT-1, 2, 3 \u2014 insulin-independent:</b> Remain in the plasma membrane whether or not insulin is present. GLUT-1: dominant at the blood-brain barrier. GLUT-2: primary liver\u2026", "<b>GLUT-4 \u2014 insulin-dependent:</b> Found in muscle and adipose cells. Without insulin, sequestered in intracellular vesicles. Insulin binding triggers an intracellular signaling cascade that\u2026"]}, {"topic": "Hormonal Regulation: Insulin Synthesis & Action", "points": ["<b>Islet cell types:</b> \u03b2 cells \u2192 insulin (as proinsulin); \u03b1 cells \u2192 glucagon; \u03b4 cells \u2192 somatostatin; F cells \u2192 pancreatic polypeptide.", "<b>Insulin release trigger:</b> Glucose is the primary stimulus. It enters \u03b2 cells via GLUT-1/GLUT-3, triggers ATP production \u2192 closes ATP-sensitive K+ channels \u2192\u2026", "<b>Proinsulin processing:</b> Proinsulin is packaged into vesicles with cleaving enzymes that split it into insulin and C-peptide.", "<b>Insulin signaling:</b> Insulin binds its receptor (a protein kinase receptor), triggering an intracellular enzyme cascade that translocates GLUT-4 to the cell surface\u2026", "<b>Insulin's non-glucose effects:</b> \u2191 amino acid uptake and \u2193 release by skeletal muscle (protein synthesis, prevents muscle breakdown). Promotes triglyceride storage by preventing\u2026", "<b>Amylin:</b> Cosecreted with insulin by \u03b2 cells. Acts on the area postrema in the brain to inhibit gastric emptying, induce satiety,\u2026"]}, {"topic": "Fed vs. Fasting State", "points": ["<b>Two phases of insulin secretion:</b> First phase: brief spike from initial glucose/GI hormone stimulation. Second phase: sustained insulin synthesis with continued glucose elevation.", "<b>Incretin effect:</b> GIP and GLP-1 (from intestinal cells) stimulate insulin production, promote \u03b2-cell proliferation, and inhibit apoptosis \u2014 explaining why oral glucose\u2026", "<b>Fasting-state glucose production:</b> Glucagon-stimulated glycogenolysis + gluconeogenesis account for up to 75% of glucose production during fasting.", "<b>Counterregulatory hormones (fasting state):</b> Corticosteroids stimulate gluconeogenesis, opposing insulin. Growth hormone increases peripheral insulin resistance and blocks insulin's suppression of hepatic glucose output. Catecholamines\u2026"]}, {"topic": "Neural Regulation & Exercise", "points": ["<b>First-phase insulin release (neural):</b> Food in the mouth stimulates the parasympathetic nervous system (vagal pathway), triggering \u03b2-cell insulin release before glucose is even absorbed.", "<b>Glucose-sensitive brain cells:</b> Glucose-sensitive receptors exist in the brain, mouth, pancreatic \u03b2 cells, and hepatic portal vein. Some neurons activate with falling glucose\u2026", "<b>Glucagon regulation:</b> Predominantly sympathetic-driven, in response to hypoglycemia. Hepatoportal vein glucose-sensitive nerve fibers release norepinephrine; combined with adrenal epinephrine, this activates \u03b1\u2026", "<b>Exercise physiology:</b> At exercise onset: insulin drops, glucagon/catecholamines rise \u2192 increased free fatty acid production (resting muscle's primary fuel) and stimulated glycogenolysis.\u2026"]}, {"topic": "Prediabetes: IGT & IFG", "points": ["<b>Pathophysiology:</b> Complex relationship between elevated glucose and developing insulin resistance. Glucose release is stimulated by metabolically active tissue mass (fat-free +\u2026", "<b>Downward spiral:</b> Persistently high glucose supersaturates fat-free tissue (like muscle), which then downregulates GLUT transporters \u2014 accelerating systemic insulin resistance."]}, {"topic": "Type 1 Diabetes Mellitus", "points": ["<b>Epidemiology:</b> ~10% of all diabetes; 1.3 million in the US, ~10-20 million globally. Incidence 1 in 300-600 children/adolescents. Peaks at ages\u2026", "<b>Type 1A vs. Type 1B:</b> Type 1A (more common): immune-mediated. Type 1B (rare): idiopathic \u2014 \u03b2-cell destruction with no autoimmune markers or HLA association; etiology\u2026", "<b>Genetic link:</b> Strong MHC association on chromosome 6 (HLA genes). DR and DQ loci confer predisposition; other loci may be protective.", "<b>Trigger:</b> Viral infection or toxic exposure may trigger the autoimmune process in genetically susceptible individuals.", "<b>Pathogenesis:</b> Macrophages and T lymphocytes (CD4 via cytokines, CD8 via direct cytotoxicity) infiltrate and destroy islet \u03b2 cells. Autoantibodies (GADA65, insulinoma-antigen\u2026", "<b>When symptoms appear:</b> Hyperglycemia signals that autoimmune \u03b2-cell destruction has progressed far enough that insulin secretion is now inadequate.", "Core mechanism: Absolute insulin deficiency \u2192 glucose can't enter muscle/adipose tissue \u2192 unopposed hepatic glucose production \u2192 glucagon overproduction drives further glycogenolysis/gluconeogenesis\u2026"]}, {"topic": "Type 2 Diabetes Mellitus", "points": ["<b>Core defect:</b> Resistance to insulin action on peripheral tissues, affecting 90-95% of US diabetics.", "<b>Prevalence by ethnicity:</b> 7.4% non-Hispanic White; 12.1% non-Hispanic Black; 11.8% Hispanic/Latino. Native American: 5.5% (Alaska Native) up to 33.5% (American Indians in southern\u2026", "<b>Age patterns:</b> ~29.2% of US adults over 65 have diabetes. Under age 20: affects ~283,000 (0.35%) \u2014 adolescent Native Americans are the\u2026", "<b>Risk factors:</b> Aging and sedentary lifestyle contribute, but obesity is the single most powerful predictor \u2014 especially excessive abdominal (visceral) fat, which\u2026", "Subtle onset: Classic symptoms (polydipsia, polyuria, polyphagia, weight loss) may be mild or entirely absent in type 2 diabetes \u2014 a key\u2026"]}, {"topic": "Acute Hyperglycemia", "points": ["<b>Common causes:</b> Alterations in nutrition, inactivity, inadequate antidiabetic medication use, or combinations of these.", "<b>Dawn phenomenon:</b> Persistent fasting hyperglycemia from early-morning increases in growth hormone, cortisol, glucagon, and epinephrine.", "<b>Infection risk:</b> Skin, urinary tract, and vaginal infections are most common. Elderly patients are particularly susceptible to malignant otitis externa, necrotizing fasciitis,\u2026", "<b>Other symptoms:</b> Nausea, fatigue, decreased sense of well-being, blurred vision \u2014 these recede as euglycemia is restored."]}, {"topic": "Diabetic Ketoacidosis (DKA)", "points": ["<b>Trigger:</b> Continued insulin deficiency plus elevated catecholamines, cortisol, glucagon, and growth hormone (from hypovolemia, physical stress, or the insulin deficiency itself)\u2026", "<b>Ketoacid production:</b> Fatty acids from lipolysis are converted to ketoacids in the liver; hepatic gluconeogenesis (responding to tissue glucose deprivation) also boosts\u2026", "<b>Potassium dynamics:</b> Metabolic acidosis pushes extracellular H+ into cells. Since the Na+/K+ pump (which normally moves potassium intracellularly) requires insulin, absent insulin\u2026", "<b>Other electrolyte/lab changes:</b> Sodium, magnesium, phosphorus losses occur as total body water falls (though serum levels may look normal/high due to hemoconcentration). Hypovolemia/dehydration\u2026", "Kussmaul respirations: Deep, labored, fruity-smelling breathing \u2014 the respiratory compensation for metabolic acidosis, lowering PCO2 (compensatory respiratory alkalosis). DKA may be the\u2026"]}, {"topic": "Nonketotic Hyperglycemic Hyperosmolar Syndrome (NHHS)", "points": ["<b>Why no ketoacidosis in type 2:</b> Endogenous insulin (still present, just relatively insufficient, in type 2) suppresses the lipolysis that leads to ketone body/ketoacidosis formation.", "<b>Clinical picture:</b> Severe hyperglycemia with no or slight ketosis, plus striking dehydration. Symptoms of polyuria/polydipsia/polyphagia may be present but subtle.", "<b>Who's at risk:</b> More common in type 2 diabetes, especially older individuals; more likely in institutionalized patients, particularly those unable to recognize or\u2026", "<b>Mortality:</b> Can be life-threatening, especially in the elderly. 70% of all NHHS coma cases occur in people over 64. Mortality rate\u2026"]}, {"topic": "Macrovascular Complications", "points": ["<b>Definition:</b> Damage to large vessels supplying the brain, heart, and extremities. Diabetes accelerates the otherwise age-dependent process of atherosclerosis.", "<b>Burden:</b> Cardiovascular disease and stroke affect 38.1% of diabetics over 35. Heart/blood vessel disease risk is 2-4x higher with diabetes, responsible\u2026", "<b>Intensive glycemic control research:</b> ACCORD study: only study to suggest increased overall mortality, but significant reduction in nonfatal coronary events. Other studies: improved mortality\u2026", "<b>Contributing risk factors:</b> Dyslipidemia, hypertension, and impaired fibrinolysis are present in uncontrolled diabetes and improve with better glucose control \u2014 the fibrinolysis link\u2026", "Key nuance: Improved glycemic control is thought to help microvascular complications more than macrovascular ones \u2014 reducing insulin resistance (caloric restriction, exercise,\u2026"]}, {"topic": "Microvascular Complications: Retinopathy & Nephropathy", "points": ["<b>Shared mechanism:</b> Abnormal thickening of the capillary basement membrane, worsening with longer diabetes duration and persistent hyperglycemia. Hyperglycemia disrupts platelet function and\u2026", "<b>Other risk factors:</b> Hypertension and smoking.", "<b>Retinopathy burden:</b> <10% affected after <5 years with diabetes; >50% after >20 years. Up to 21% of newly diagnosed type 2 patients\u2026", "<b>Retinopathy stages:</b> Background: microaneurysms, small hemorrhages \u2014 usually doesn't affect visual acuity. Preproliferative: further capillary damage. Proliferative: capillary neovascularization \u2014 new capillaries\u2026", "<b>Nephropathy burden:</b> Affects 20-40% of type 1 patients (fewer type 2 patients progress to ESRD). Accounts for 40% of all US end-stage\u2026", "<b>Nephropathy mechanism:</b> Characteristic lesion: glomerulosclerosis (basement membrane thickening/hardening). Progression: \u2191 glomerular flow rate \u2192 hyperfiltration \u2192 glomerular damage \u2192 glomerulosclerosis \u2192 capillary\u2026", "Hypertension is an important contributing factor to diabetic nephropathy \u2014 ACE inhibitor therapy reduces the rate of chronic kidney disease, ESRD, and\u2026"]}, {"topic": "Neuropathic Complications", "points": ["<b>Burden:</b> Produces symptoms in 60-70% of diabetics; responsible for 6.8 hospitalizations per 1000 diabetics.", "<b>Two categories:</b> Autonomic: GI disturbances, bladder dysfunction, tachycardia, postural hypotension, sexual dysfunction (35-50% of diabetic males have erectile dysfunction). Sensory: carpal tunnel\u2026", "<b>Myoinositol & the polyol pathway:</b> Diabetic neuropathy is linked to decreased myoinositol (a nerve membrane component) in peripheral nerves. Glucose competes with myoinositol for cellular\u2026", "<b>Pathologic findings:</b> Degeneration or loss of nerve fibers, causing decreased nerve function.", "<b>Modifiable risk factors:</b> Hyperglycemia, hypertriglyceridemia, obesity, smoking, hypertension.", "<b>Non-modifiable/demographic risk factors:</b> Male sex, White race, older age, height >175.5 cm; elderly, non-Hispanic Black, and Mexican American individuals are disproportionately affected.", "<b>Landmark trial: DCCT:</b> 9-year prospective study of intensive insulin therapy (3+ injections/day or pump) in type 1 patients. Results: 76% reduced incidence of\u2026", "Foot complications: Neuropathy drives a major increase in serious foot problems. Lower extremity amputation rate is 15-40x higher in diabetics; over 60%\u2026"]}, {"topic": "Complications in Pregnancy", "points": ["<b>Risks with type 1 diabetes:</b> Increased risk of perinatal infant mortality and congenital anomalies. Good metabolic control during pregnancy brings perinatal mortality close to the\u2026", "<b>Why preconception control matters:</b> Affected organs develop early in the first trimester, so excellent glycemic control BEFORE conception is recommended.", "<b>Consequences of untreated maternal hyperglycemia:</b> Macrosomia, shoulder dystocia, preeclampsia, fetal death, fractures, and nerve palsies."]}, {"topic": "Nutrition, Obesity & Exercise", "points": ["<b>ADA nutrition therapy goals:</b> Promote nutrient-dense eating patterns to hit individualized glycemic/BP/lipid goals and weight goals, delay complications; address individual cultural/personal needs; keep eating\u2026", "<b>Obesity definitions:</b> Normal BMI: 18.5-24.9 kg/m\u00b2. Increased health risk begins at BMI \u226525.2. Obesity = BMI >30. Obesity is the strongest risk\u2026", "<b>Weight management:</b> No single strategy works for everyone; recommendations include a nutritionally complete diet, maintenance routine, and exercise program. A modest 2-8\u2026", "<b>Eating disorders:</b> Bulimia and anorexia may be more common in females with type 1 diabetes; some patients induce weight loss by reducing\u2026", "<b>Exercise benefits:</b> Lowers BP and dyslipidemia, increases work capacity, reduces stress, prevents bone loss, improves reaction time, aids weight loss. Reduces tissue\u2026", "<b>Exercise risks:</b> Type 1: hypoglycemia and ketoacidosis risk. Type 2: hypoglycemia, cardiac dysfunction, orthopedic injury, complication worsening. Post-exercise hypoglycemia can occur up\u2026", "<b>Exercise recommendations:</b> CDC: moderate intensity \u226530 min, 5+ days/week, OR vigorous intensity 20 min, 3+ days/week (no more than 2 consecutive rest\u2026", "<b>When to avoid exercise:</b> Avoid if ketosis is present (signals acute insulin shortage \u2014 exercise can worsen hyperglycemia). Exercise is safe with glucose >250\u2026"]}, {"topic": "Pharmacologic Agents", "points": ["<b>Metformin \u2014 the first-line drug:</b> Suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake, WITHOUT causing hypoglycemia. First-line for type 2 (if tolerated/not contraindicated). Improves dyslipidemia\u2026", "<b>Metformin risks:</b> Common: nausea, diarrhea. Serious: acute renal injury and metabolic acidosis (lactic acidosis is rare, mostly linked to acute kidney injury).\u2026"]}, {"topic": "Pediatric Considerations", "points": ["<b>Epidemiology:</b> ~176,500 diagnosed under age 20. 1 in 400-600 children/adolescents has type 1; 18 new cases per 100,000 yearly. Vast majority\u2026", "<b>Presentation:</b> Often presents acutely as DKA when insulin secretion drops below needs.", "<b>Honeymoon period:</b> If diagnosed during a period of high insulin demand (e.g., viral illness), insulin needs may later drop below residual production\u2026", "<b>Goals of therapy:</b> Normal growth/development, avoiding acute/chronic complications, addressing psychosocial issues, and self-care education.", "<b>Acute complications:</b> Hyperglycemia \u2192 glycosuria \u2192 dehydration risk (especially severe with DKA). Test for ketonuria when glucose >240 mg/dL or during concurrent\u2026", "<b>Hypoglycemia in young children:</b> Can be hard to detect \u2014 watch for behavioral changes: lethargy, pallor, sleep disturbances.", "<b>Chronic complications:</b> Rare during adolescence, but regular screening for neuropathy/nephropathy and lipid checks should still occur. Pregnant adolescents need counseling on maintaining\u2026", "<b>Insulin treatment:</b> ~1.0 U/kg/day; intensive regimen of 3+ injections/day recommended to prevent chronic complications. Infants/young children may need diluted insulin for accurate\u2026"]}, {"topic": "Geriatric Considerations", "points": ["<b>Epidemiology:</b> Adults over 60 make up nearly 50% of the US diabetic population. Prevalence ~21% at age 60+, more than double\u2026", "<b>Why risk increases with age:</b> \u2191 adiposity, \u2193 lean body mass, \u2193 activity (all \u2192 insulin resistance), plus diminished insulin secretion with age. Also increased\u2026", "<b>Diagnostic challenges:</b> Fluctuating glucose values and inconsistent/absent hyperglycemia symptoms make diagnosis harder. Chronic complications (neuropathy, retinopathy) are often already present at diagnosis,\u2026", "<b>Goals of therapy:</b> Prevent acute complications, manage chronic complications, address psychosocial issues, provide self-care education.", "<b>Atypical hyperglycemia presentation:</b> May be asymptomatic or show polyuria/fatigue; polydipsia is LESS common due to decreased thirst perception. Can cause increased pain perception\u2026", "<b>Dehydration & falls:</b> Chronic hyperglycemia causes mild-moderate dehydration, worsened by age-related kidney/water-conservation changes \u2014 leading to postural hypotension, electrolyte imbalance, and increased fall\u2026", "<b>Atypical hypoglycemia:</b> Can present as lethargy or focal neurologic dysfunction rather than classic symptoms \u2014 age-related blunting of counterregulatory response, or inability\u2026", "<b>Foot care challenges:</b> Orthopedic deformity, loss of protective subcutaneous fat, and atherosclerotic change complicate foot care; visual/joint changes can hinder self-inspection \u2014 assistance\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

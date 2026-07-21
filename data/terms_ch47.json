@@ -1,0 +1,146 @@
+[
+ {
+  "term": "Nociception",
+  "def": "The physiologic mechanisms involved in the pain phenomenon; divided into four stages \u2014 transduction, transmission, perception, modulation."
+ },
+ {
+  "term": "Nociceptor",
+  "def": "A free nerve ending that transduces noxious (painful) stimuli into neuronal action potentials."
+ },
+ {
+  "term": "Transduction",
+  "def": "Converting a painful stimulus into a neuronal action potential at the sensory receptor."
+ },
+ {
+  "term": "Transmission",
+  "def": "Movement of action potentials along neurons from the peripheral receptor to the spinal cord and then to the brain."
+ },
+ {
+  "term": "Perception",
+  "def": "What occurs when the brain receives pain signals and interprets them as painful."
+ },
+ {
+  "term": "Modulation",
+  "def": "The complex mechanism by which synaptic transmission of pain signals is altered \u2014 can enhance or suppress the pain signal."
+ },
+ {
+  "term": "Prostaglandins",
+  "def": "Inflammatory chemical mediators formed from arachidonic acid via cyclooxygenase; sensitize nociceptors, lowering the pain threshold."
+ },
+ {
+  "term": "Cyclooxygenase (COX)",
+  "def": "The enzyme that converts arachidonic acid into prostaglandins; blocked by NSAIDs."
+ },
+ {
+  "term": "A\u03b4 fibers",
+  "def": "Myelinated, fast-conducting sensory fibers carrying sharp, stinging, well-localized pain."
+ },
+ {
+  "term": "C fibers",
+  "def": "Unmyelinated, slow-conducting sensory fibers carrying dull, aching, poorly-localized pain; make up the majority of pain fibers."
+ },
+ {
+  "term": "Dorsal root ganglion",
+  "def": "Location of the cell bodies of primary sensory pain neurons, just outside the spinal cord."
+ },
+ {
+  "term": "Tract of Lissauer",
+  "def": "The pathway by which afferent pain fibers spread up and down 2\u20133 spinal segments after entering the dorsal horn."
+ },
+ {
+  "term": "Substantia gelatinosa",
+  "def": "Laminae II and III of the dorsal horn \u2014 a key region of multiple synaptic connections where pain signals can be modulated (enhanced or blocked)."
+ },
+ {
+  "term": "Lamina V",
+  "def": "A spinal cord region receiving convergent input from both somatic and visceral pain fibers \u2014 thought to explain referred pain."
+ },
+ {
+  "term": "Referred pain",
+  "def": "Pain from a visceral organ that is perceived at the body surface, from convergence of visceral and somatic afferents in lamina V."
+ },
+ {
+  "term": "Substance P",
+  "def": "A key neurotransmitter/neuropeptide involved in synaptic pain transmission in the spinal cord."
+ },
+ {
+  "term": "Glutamate",
+  "def": "The excitatory neurotransmitter carrying the nociceptive message from primary afferent fibers to secondary neurons; binds NMDA receptors."
+ },
+ {
+  "term": "NMDA receptor",
+  "def": "A postsynaptic glutamate receptor whose activation is thought to induce \"synaptic memory\" of pain signals."
+ },
+ {
+  "term": "Wind-up",
+  "def": "Sensitization of spinal cord neurons from excessive/repeated C-fiber stimulation, so even mild stimuli become painful \u2014 a possible mechanism in chronic pain development."
+ },
+ {
+  "term": "Spinothalamic tract",
+  "def": "The main ascending pathway carrying pain/temperature signals from the spinal cord to the thalamus; divided into lateral (pain/temperature) and anterior (crude touch) divisions."
+ },
+ {
+  "term": "Lateral spinothalamic tract",
+  "def": "Carries precisely-localized pain/temperature signals to the ventral posterolateral (VPL) thalamic nucleus, then to the primary somatosensory cortex."
+ },
+ {
+  "term": "Anterolateral (paleospinothalamic) system",
+  "def": "Carries poorly-localized pain to intralaminar thalamic nuclei, responsible for the emotional/affective aspects of pain rather than precise location."
+ },
+ {
+  "term": "Somatosensory cortex",
+  "def": "The primary cortical region (postcentral gyrus) that processes the sensory-discriminative qualities of pain \u2014 location, quality, intensity."
+ },
+ {
+  "term": "Gate control theory",
+  "def": "Melzack and Wall's 1965 theory that a \"gate\" mechanism in the spinal dorsal horn can be closed by non-painful sensory input or descending brain signals, reducing pain transmission."
+ },
+ {
+  "term": "Periaqueductal gray (PAG)",
+  "def": "A midbrain region central to descending pain inhibition; activated by the cortex to suppress incoming pain signals at the dorsal horn."
+ },
+ {
+  "term": "Rostroventromedial medulla (RVM)",
+  "def": "Receives signals from the PAG and sends output down the spinal cord to activate endogenous opioid release, suppressing pain transmission."
+ },
+ {
+  "term": "Endogenous opioids",
+  "def": "The body's natural pain-relieving peptides \u2014 \u03b2-endorphins, enkephalins, and dynorphins \u2014 acting at \u03bc, \u03b4, and \u03ba receptors."
+ },
+ {
+  "term": "Nociceptive pain",
+  "def": "Pain from actual/threatened tissue damage activating nociceptors; subdivided into somatic (sharp, localized) and visceral (dull, diffuse) pain."
+ },
+ {
+  "term": "Neuropathic pain",
+  "def": "Pain from a lesion or disease of the somatosensory nervous system itself; described as burning, shooting, or electric-shock-like."
+ },
+ {
+  "term": "Nociplastic pain",
+  "def": "Pain from altered nociceptive processing/sensitization without clear evidence of tissue or nerve damage (e.g., fibromyalgia); the newest IASP pain category (2017)."
+ },
+ {
+  "term": "Acute pain",
+  "def": "Pain from a specific injury/disease with a predictable trajectory, typically resolving within days to a few months as healing occurs."
+ },
+ {
+  "term": "Chronic pain",
+  "def": "Pain persisting beyond the expected healing time, generally defined as lasting 3 months or longer; often involves centralized/maladaptive nervous system changes."
+ },
+ {
+  "term": "Numeric Rating Scale (NRS)",
+  "def": "A 0\u201310 self-report pain intensity scale \u2014 the most common adult pain assessment tool."
+ },
+ {
+  "term": "FLACC scale",
+  "def": "An observational pain scale (Face, Legs, Activity, Cry, Consolability) for infants/young children or patients unable to self-report."
+ },
+ {
+  "term": "PQRST",
+  "def": "A pain assessment mnemonic: Provocation/palliation, Quality, Region/radiation, Severity, Timing."
+ },
+ {
+  "term": "WHO analgesic ladder",
+  "def": "A stepwise pain management framework moving from non-opioids, to weak opioids, to strong opioids as pain severity increases."
+ }
+]

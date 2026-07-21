@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chronic Neurologic Disorders — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 260px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.25rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  .sidebar a.top{font-weight:600; color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:56px 48px 42px;}
+  .hero h1{font-family:var(--serif); font-size:2.3rem; margin:0 0 10px; font-weight:normal;}
+  .hero p{max-width:640px; color:#E3F3F0; font-size:1.02rem; margin:0;}
+  .hero .toolbar{margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:38px 48px 90px; max-width:980px;}
+  @media (max-width:640px){.hero{padding:36px 20px 28px;} .content{padding:24px 18px 70px;}}
+  section.block{margin-bottom:56px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:18px;}
+  .block-head h2{font-family:var(--serif); font-size:1.6rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.72rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:22px; font-size:.97rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:14px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:14px 18px; font-family:var(--serif); font-size:1.12rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.3rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.9rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px; color:var(--teal-dark);}
+  .gloss-controls{margin-bottom:16px;}
+  .gloss-controls input{width:100%; max-width:420px; padding:10px 14px; border:1px solid var(--line); border-radius:22px; font-size:.92rem; background:#fff;}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.93rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.85rem; color:var(--ink-soft);}
+  .term.hide{display:none;}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:22px 0 28px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1.02rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  .recap{background:#EFF6F5; border:1px dashed var(--teal); border-radius:10px; padding:14px 18px; margin-top:10px;}
+  .recap h4{margin:0 0 6px; font-size:.78rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .recap ul{margin:0; padding-left:18px; font-size:.88rem;}
+  .recap li{margin-bottom:4px;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.85rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:30px; color:var(--ink-soft); font-size:.8rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=45" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Chronic Neurologic Disorders</p>
+<span class="brand-sub">Chapter 45 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Brain &amp; Cerebellar Disorders</div>
+<a href="#seizures">Seizures &amp; Epilepsy</a>
+<a href="#dementia-overview">Dementia Overview</a>
+<a href="#alzheimer">Alzheimer Disease</a>
+<a href="#vascular-dementia">Vascular Dementia</a>
+<a href="#parkinson">Parkinson Disease</a>
+<a href="#cerebral-palsy">Cerebral Palsy</a>
+<a href="#hydrocephalus">Hydrocephalus</a>
+<a href="#cerebellar-disorders">Cerebellar Disorders</a>
+<div class="grp-title">Spinal Cord &amp; Peripheral Nerve</div>
+<a href="#multiple-sclerosis">Multiple Sclerosis</a>
+<a href="#spina-bifida">Spina Bifida</a>
+<a href="#als">ALS</a>
+<a href="#sci">Spinal Cord Injury</a>
+<a href="#gbs">Guillain-Barré Syndrome</a>
+<a href="#bell-palsy">Bell Palsy</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Chronic Neurologic Disorders</h1>
+<p>A study guide to chronic conditions of the brain, spinal cord, and peripheral nerves — seizures, dementia, Parkinson disease, demyelinating and motor neuron disease, spinal cord injury, and related disorders. Built from your Chapter 45 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<p class="block-intro">Type in the box to filter.</p>
+<div class="gloss-controls">
+<input id="glossSearch" oninput="filterGloss()" placeholder="Search terms (e.g. 'Lewy body', 'spinal shock')..." type="text"/>
+</div>
+<dl class="gloss-grid" id="glossGrid">
+<div class="term"><dt>Seizure</dt><dd>A transient neurologic event from excessive/abnormal neuronal electrical discharge — a singular event, not a diagnosis.</dd></div>
+<div class="term"><dt>Epilepsy</dt><dd>A chronic, recurrent, enduring predisposition to seizures requiring long-term treatment — distinct from a single seizure.</dd></div>
+<div class="term"><dt>Epileptogenic focus</dt><dd>The area of hyperexcitable, autonomously firing neurons from which a seizure originates.</dd></div>
+<div class="term"><dt>Dementia</dt><dd>A syndrome (not a disease) of progressive cognitive decline — memory, personality, language, judgment — from various underlying pathologies.</dd></div>
+<div class="term"><dt>Delirium</dt><dd>An acute, fluctuating confusional state with disturbed consciousness and attention; can mimic dementia but has abrupt onset, often worse at night.</dd></div>
+<div class="term"><dt>β-amyloid plaques</dt><dd>Extracellular aggregates of neurotoxic Aβ42 peptide fragments (from APP cleavage) — a cardinal pathologic feature of Alzheimer disease.</dd></div>
+<div class="term"><dt>Neurofibrillary tangles (NFTs)</dt><dd>Helical filaments of hyperphosphorylated tau protein inside neurons — the other cardinal AD feature, more closely tied to actual cognitive decline than plaques.</dd></div>
+<div class="term"><dt>APOe4</dt><dd>The strongest known genetic risk factor for sporadic late-onset Alzheimer disease; linked to inefficient clearance of Aβ42.</dd></div>
+<div class="term"><dt>Substantia nigra</dt><dd>The dopamine-producing brain region whose degeneration causes Parkinson disease.</dd></div>
+<div class="term"><dt>Lewy bodies</dt><dd>Intraneuronal inclusions composed of α-synuclein; pathognomonic for sporadic Parkinson disease.</dd></div>
+<div class="term"><dt>Bradykinesia</dt><dd>Slowness of movement — a core Parkinson disease feature.</dd></div>
+<div class="term"><dt>Cogwheel rigidity</dt><dd>Ratchet-like resistance felt when passively moving a Parkinson patient's extremity.</dd></div>
+<div class="term"><dt>Cerebral palsy</dt><dd>Permanent, nonprogressive damage to the developing brain's upper motor neurons, occurring pre/peri/postnatally.</dd></div>
+<div class="term"><dt>Hydrocephalus</dt><dd>Abnormal CSF accumulation in the ventricular system from obstruction or impaired resorption.</dd></div>
+<div class="term"><dt>Normal-pressure hydrocephalus</dt><dd>Increased CSF volume without increased ICP (brain tissue loss offsets it) — classic triad: gait instability, urinary incontinence, dementia.</dd></div>
+<div class="term"><dt>Multiple sclerosis (MS)</dt><dd>A chronic autoimmune demyelinating disease of the CNS causing inflammation and scarring of myelin sheaths.</dd></div>
+<div class="term"><dt>Lhermitte sign</dt><dd>An electric shock-like sensation radiating down the spine into the extremities — a classic MS finding.</dd></div>
+<div class="term"><dt>Oligoclonal bands</dt><dd>Discrete IgG bands in CSF supporting an MS diagnosis.</dd></div>
+<div class="term"><dt>Spina bifida</dt><dd>Defective closure of the neural tube; ranges from occulta (hidden) to cystica (externally protruding sac).</dd></div>
+<div class="term"><dt>Myelomeningocele</dt><dd>The most severe form of spina bifida cystica — meninges, CSF, AND spinal cord protrude through the defect.</dd></div>
+<div class="term"><dt>Amyotrophic lateral sclerosis (ALS)</dt><dd>Progressive degeneration of both upper and lower motor neurons causing muscle wasting, paralysis, and eventually respiratory failure.</dd></div>
+<div class="term"><dt>Spinal shock</dt><dd>Temporary (hours to weeks) complete loss of function below a spinal cord injury level, including flaccid paralysis and absent reflexes.</dd></div>
+<div class="term"><dt>Neurogenic shock</dt><dd>Distributive shock from loss of sympathetic outflow after high (cervical/upper thoracic) SCI — hypotension + bradycardia.</dd></div>
+<div class="term"><dt>Autonomic dysreflexia</dt><dd>A life-threatening reflex hypertensive crisis in SCI at/above T6, triggered by a stimulus (often bladder/bowel) below the injury level.</dd></div>
+<div class="term"><dt>Guillain-Barré syndrome (GBS)</dt><dd>An autoimmune, inflammatory demyelinating disease of the peripheral nervous system causing ascending weakness/paralysis.</dd></div>
+<div class="term"><dt>Albuminocytologic dissociation</dt><dd>High CSF protein with normal WBC count — the classic GBS CSF finding.</dd></div>
+<div class="term"><dt>Ataxia</dt><dd>Muscle incoordination — the hallmark of cerebellar dysfunction.</dd></div>
+<div class="term"><dt>Bell palsy</dt><dd>Idiopathic facial nerve (CN VII) paralysis, now understood to often be viral (HSV/herpes zoster) in origin.</dd></div>
+</dl>
+</section>
+<!-- ================= SEIZURES ================= -->
+<section class="block" id="brain-intro">
+<div class="block-head"><h2>Brain &amp; Cerebellar Disorders</h2><span class="tag">Chronic conditions</span></div>
+<p class="block-intro">Unlike the acute injuries in the previous chapter, these conditions involve long-term neurologic dysfunction requiring ongoing management rather than emergency intervention.</p>
+</section>
+<section class="block" id="seizures">
+<details class="topic" open="">
+<summary>Seizures &amp; Epilepsy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Seizure vs. epilepsy</h4><p>A seizure is a singular transient event; epilepsy is the chronic, recurrent predisposition to seizures. ~10% of the global population will have a seizure; only 1–2% develop epilepsy (~70 million people worldwide).</p></div>
+<div class="fact"><h4>Why epilepsy incidence is rising</h4><p>More people surviving serious head trauma, stroke, intracranial infection, and brain tumors — all of which can leave a seizure-prone focus behind.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Common causes</h4><p>Idiopathic, acute stroke, intracranial lesions, metabolic encephalopathy, drugs/alcohol/toxins, head trauma, metabolic disturbances, CNS infections, hyperpyrexia.</p></div>
+<div class="fact"><h4>Common individual triggers</h4><p>Flashing lights, loud noises, rhythmic music, fever, exhaustion, sleep deprivation, poor nutrition, menstrual hormonal changes, hyperventilation, injury, drugs, and psychosocial stress.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Seizure Pathogenesis</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">ALTERED MEMBRANE POTENTIAL</text></g>
+<line class="mm-line" x1="330" x2="130" y1="30" y2="80"></line>
+<line class="mm-line" x1="570" x2="770" y1="30" y2="80"></line>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="20" y="80"></rect><text font-size="11.5" text-anchor="middle" x="130" y="102">GLUTAMATE (excitatory)</text><text font-size="10.5" text-anchor="middle" x="130" y="118">Na+ in, K+ out</text></g>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="660" y="80"></rect><text font-size="11.5" text-anchor="middle" x="770" y="102">GABA (inhibitory)</text><text font-size="10.5" text-anchor="middle" x="770" y="118">Cl- influx</text></g>
+<line class="mm-line" x1="130" x2="450" y1="126" y2="170"></line>
+<line class="mm-line" x1="770" x2="450" y1="126" y2="170"></line>
+<g class="mm-node"><rect height="40" rx="10" width="300" x="300" y="170"></rect><text font-size="12" text-anchor="middle" x="450" y="195">EPILEPTOGENIC FOCUS forms</text></g>
+<line class="mm-line" x1="450" x2="450" y1="210" y2="238"></line>
+<g class="mm-node"><rect height="16" rx="6" width="300" x="300" y="238"></rect></g>
+<text fill="var(--ink-soft)" font-size="10.5" text-anchor="middle" x="450" y="250">Recruits adjacent/distant neurons → clinical seizure</text>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>ILAE 2017 seizure classification</h4><p>Three onset types: <b>focal</b> (localized to one hemisphere), <b>generalized</b> (whole brain, involves thalamus/RAS → loss of consciousness), and <b>unknown onset</b>. Focal seizures are further split by awareness level (aware vs. impaired) then motor/nonmotor onset.</p></div>
+<div class="fact tx"><h4>Terminology update</h4><p>Old terms now retired: complex partial, simple partial, partial, psychic, dyscognitive, secondarily generalized tonic-clonic — replaced for clearer worldwide communication and to support therapy-based patient clustering.</p></div>
+</div>
+<div class="callout"><b>Nonmotor (absence) seizures:</b> almost always children (rarely before age 4 or after puberty); brief (2–10 sec) staring spells with abrupt onset/termination; person is unaware but may continue routine motor tasks; sometimes first noticed as poor academic performance. Atypical forms add myoclonic jerks and automatisms (lip smacking, repetitive movements).</div>
+</div>
+</details>
+</section>
+<!-- ================= DEMENTIA ================= -->
+<section class="block" id="dementia-overview">
+<details class="topic" open="">
+<summary>Dementia — Overview &amp; Classification</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Dementia is a syndrome, not a disease</h4><p>Progressive decline in memory PLUS other cognitive domains (personality, language, judgment, abstract thinking, complex tasks). Often insidious onset; agnosia (lack of insight into one's own deficits) is common.</p></div>
+<div class="fact warn"><h4>Delirium vs. dementia — don't confuse them</h4><p>Delirium: acute onset, fluctuating, often worse at night, disturbed consciousness/attention, from causes like polypharmacy, metabolic abnormality, nutritional deficiency, infection. Can occur more easily on top of existing dementia.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Neurodegenerative dementias</h4><p>Alzheimer disease, dementia with Lewy bodies, Parkinson disease dementia, multiple system atrophy, chronic traumatic encephalopathy, prion disease (Creutzfeldt-Jakob), ALS.</p></div>
+<div class="fact"><h4>Nonneurodegenerative dementias</h4><p>Vascular dementia, normal-pressure hydrocephalus, metabolic (hypothyroidism, Cushing syndrome), depression, bipolar disorder, neoplasia, toxin exposure, infections (syphilis, HIV), vitamin B12 deficiency — many of these are <b>reversible</b>, which is why full workup matters.</p></div>
+</div>
+<div class="danger"><b>AD accounts for 60–80% of all dementias</b>; vascular dementia is second most common. Prevalence rises sharply with age: 3% (ages 65–74) → 17% (75–84) → 32% (85+).</div>
+<div class="note">Always rule out reversible causes first — full workup includes CBC, chemistry panel, thyroid function, B12, syphilis serology, and a review of anticholinergic medications (a common, overlooked cause of cognitive changes in the elderly).</div>
+</div>
+</details>
+</section>
+<section class="block" id="alzheimer">
+<details class="topic" open="">
+<summary>Alzheimer Disease</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Alzheimer Disease Pathogenesis</p>
+<svg viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">AMYLOID PRECURSOR PROTEIN (APP)</text></g>
+<line class="mm-line" x1="330" x2="150" y1="30" y2="80"></line>
+<line class="mm-line" x1="570" x2="750" y1="30" y2="80"></line>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="40" y="80"></rect><text font-size="11.5" text-anchor="middle" x="150" y="102">β-secretase → γ-secretase</text><text font-size="10.5" text-anchor="middle" x="150" y="118">pathway</text></g>
+<g class="mm-node"><rect height="46" rx="8" width="220" x="640" y="80"></rect><text font-size="11.5" text-anchor="middle" x="750" y="102">α-secretase → γ-secretase</text><text font-size="10.5" text-anchor="middle" x="750" y="118">pathway</text></g>
+<line class="mm-line" x1="150" x2="150" y1="126" y2="160"></line>
+<g class="mm-leaf"><rect height="60" rx="6" width="220" x="40" y="160"></rect><text font-size="11" text-anchor="middle" x="150" y="182">Aβ42 — NEUROTOXIC</text><text font-size="10.5" text-anchor="middle" x="150" y="200">aggregates into plaques</text></g>
+<line class="mm-line" x1="750" x2="750" y1="126" y2="160"></line>
+<g class="mm-leaf"><rect height="60" rx="6" width="220" x="640" y="160"></rect><text font-size="11" text-anchor="middle" x="750" y="182">Neuroprotective peptide</text><text font-size="10.5" text-anchor="middle" x="750" y="200">not neurotoxic</text></g>
+<line class="mm-line" x1="150" x2="450" y1="220" y2="260"></line>
+<g class="mm-node"><rect height="40" rx="10" width="300" x="300" y="260"></rect><text font-size="12" text-anchor="middle" x="450" y="285">β-AMYLOID PLAQUES (extracellular)</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>The two cardinal traits</h4><p><b>β-amyloid plaques:</b> extracellular, present years before cognitive decline; correlate with disease severity. <b>Neurofibrillary tangles (NFTs):</b> intracellular, from hyperphosphorylated tau; NOT AD-specific but more closely tied to actual neuronal death/cognitive decline than plaques are.</p></div>
+<div class="fact warn"><h4>Brain changes</h4><p>Diffuse neuronal damage and atrophy — advanced AD brains can weigh up to 20% less than normal. Temporoparietal and anterior frontal regions chiefly affected (enlarged sulci/ventricles, atrophic gyri).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Neurotransmitter changes</h4><p>↓ Acetylcholine synthesis (β-amyloid may be responsible) is the key deficit; glutamate, dopamine, and serotonin imbalances also contribute.</p></div>
+<div class="fact warn"><h4>Genetics</h4><p><b>Early-onset (rare):</b> presenilin-1/2 and APP mutations — all increase Aβ42. <b>Late-onset (common):</b> <b>APOe4</b> is the strongest known risk factor — one allele = 2–3x risk.</p></div>
+</div>
+<div class="note"><b>Other risk factors:</b> family history, head trauma, diabetes, lower education, inactive lifestyle.</div>
+<p style="margin-top:10px;"><b>Clinical progression:</b> early (short-term memory loss) → middle (declining judgment/communication, needs ADL help) → late (swallowing difficulty, incontinence, loss of ambulation).</p>
+<div class="fact-grid" style="margin-top:6px;">
+<div class="fact tx"><h4>Disease-modifying treatments (new)</h4><p>Lecanemab, donanemab — monoclonal antibodies clearing amyloid plaques. First drug class to target AD pathophysiology directly.</p></div>
+<div class="fact tx"><h4>Symptomatic treatment</h4><p><b>Acetylcholinesterase inhibitors</b> (donepezil) for mild-moderate AD — boost available acetylcholine.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="vascular-dementia">
+<details class="topic" open="">
+<summary>Vascular Dementia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>A single cerebrovascular insult, multiple lacunar infarcts, or microvascular pathology. 2nd most common dementia type.</p></div>
+<div class="fact"><h4>Overlap with AD</h4><p>Growing evidence the two often coexist in elderly patients, though usually treated as separate entities.</p></div>
+</div>
+<div class="callout"><b>Risk factors mirror stroke risk factors:</b> hypertension and diabetes.</div>
+</div>
+</details>
+</section>
+<!-- ================= PARKINSON ================= -->
+<section class="block" id="parkinson">
+<details class="topic" open="">
+<summary>Parkinson Disease (PD)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Scale</h4><p>2nd most common neurodegenerative disorder; &gt;1 million affected in the US, ~90,000 new cases/year (50% increase since 2014). Age &gt;65 is the single greatest risk factor.</p></div>
+<div class="fact"><h4>Core features</h4><p>Bradykinesia, rigidity, tremor, postural instability — a movement disorder from basal ganglia dysfunction.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Dopamine-Glutamate Balance in the Basal Ganglia</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="12.5" text-anchor="middle" x="450" y="35">NORMAL: DOPAMINE balances GLUTAMATE</text></g>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="84"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="84"></rect><text font-size="12" text-anchor="middle" x="450" y="109">Substantia nigra dopaminergic neurons DIE</text></g>
+<line class="mm-line" x1="450" x2="450" y1="124" y2="158"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="158"></rect><text font-size="12" text-anchor="middle" x="450" y="183">UNOPPOSED glutamatergic stimulation</text></g>
+<line class="mm-line" x1="450" x2="450" y1="198" y2="230"></line>
+<g class="mm-leaf"><rect height="20" rx="6" width="300" x="300" y="230"></rect></g>
+<text fill="var(--ink-soft)" font-size="10.5" text-anchor="middle" x="450" y="244">Thalamus overexcited → motor dysfunction</text>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>The 70-80% rule</h4><p>70–80% of the substantia nigra is already damaged before motor symptoms appear. Non-motor changes (sleep, mood, GI) can precede motor symptoms.</p></div>
+<div class="fact"><h4>Pathognomonic finding</h4><p>α-synuclein and Lewy bodies — present in sporadic PD.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Demographics &amp; risk factors</h4><p>Male:female ratio ~3:2; age &gt;65 is the single greatest risk factor. TBI and pesticide exposure are associated risks.</p></div>
+</div>
+<p style="margin-top:10px;"><b>Clinical manifestations, in typical order of recognition:</b></p>
+<table class="compare">
+<tr><th>Feature</th><th>Detail</th></tr>
+<tr><td>Early/overlooked signs</td><td>Loss of flexibility, aching, fatigue — often attributed to normal aging</td></tr>
+<tr><td>Tremor (often first noticed)</td><td>Resting, unilateral initially; "pill-rolling"; becomes bilateral over time</td></tr>
+<tr><td>Rigidity</td><td>Cogwheel rigidity on passive movement</td></tr>
+<tr><td>Bradykinesia effects</td><td>Micrographia, hypophonic speech, delayed swallowing, difficulty initiating movement</td></tr>
+<tr><td>Gait/postural</td><td>Shuffling gait, absent arm swing, impaired postural reflexes → falls</td></tr>
+<tr><td>Autonomic</td><td>Orthostatic hypotension</td></tr>
+<tr><td>Non-motor</td><td>Depression, daytime sleepiness, restless legs, dementia</td></tr>
+</table>
+<div class="callout"><b>Paradoxical kinesia:</b> despite profound bradykinesia, many PD patients can move quickly in an emergency (e.g., fire) — an interesting and clinically notable phenomenon.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact tx"><h4>Levodopa/carbidopa — the mainstay</h4><p>Dopamine itself can't cross the BBB; levodopa (its precursor) can. Carbidopa blocks peripheral conversion of levodopa to dopamine, reducing side effects (peripheral dopamine → adrenaline/noradrenaline → BP changes) and preserving more levodopa to cross into the CNS.</p></div>
+<div class="fact warn"><h4>Long-term levodopa complications</h4><p>"On-off" phenomena (sudden symptom return) and dyskinesias (abnormal movements) with prolonged use.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Other drug classes</h4><p>Dopamine agonists (pramipexole, ropinirole); MAO-B inhibitors slowing dopamine metabolism (selegiline, rasagiline, safinamide); amantadine (helps akinesia/dyskinesia); anticholinergics (help tremor, rigidity, drooling).</p></div>
+<div class="fact tx"><h4>Surgical option</h4><p><b>Deep brain stimulation:</b> thalamic electrical stimulator interrupts tremor-causing impulses, can reduce medication needs. Embryonic stem cell transplantation remains controversial with inconsistent results.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= CEREBRAL PALSY ================= -->
+<section class="block" id="cerebral-palsy">
+<details class="topic" open="">
+<summary>Cerebral Palsy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Permanent, <b>nonprogressive</b> damage to the developing brain's upper motor neurons — occurs prenatally, perinatally, or in early infancy. Occurs in ~2 per 1000 live births.</p></div>
+<div class="fact warn"><h4>"Nonprogressive" doesn't mean "unchanging"</h4><p>Though the brain damage itself doesn't progress, affected individuals face evolving challenges into adulthood: chronic pain, scoliosis, respiratory dysfunction, and functional decline.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Etiologic factors</h4><p>Maternal prenatal infection, birth trauma, reduced oxygen supply, kernicterus, prematurity. Often multifactorial with no single identifiable cause.</p></div>
+<div class="fact"><h4>Associated complications</h4><p>Seizures, intellectual disability, visual/hearing impairment, respiratory problems, orthopedic disabilities.</p></div>
+</div>
+<table class="compare">
+<tr><th>Type</th><th>Mechanism</th><th>Manifestations</th></tr>
+<tr><td>Spastic (most common)</td><td>Upper motor neuron damage</td><td>Hypertonia, exaggerated DTRs, contractures; "scissors" gait</td></tr>
+<tr><td>Dyskinetic/athetoid</td><td>Basal ganglia injury</td><td>Slow, jerky, involuntary movements; worse with stress</td></tr>
+<tr><td>Ataxic (rare)</td><td>Cerebral maldevelopment</td><td>Gait/equilibrium problems</td></tr>
+</table>
+<div class="note">Most children have a <b>mixed</b> presentation rather than a single pure type.</div>
+<div class="fact tx" style="margin-top:8px;"><h4>Treatment</h4><p>No cure — goal is maximizing function: muscle relaxants for spasticity, Botox, orthopedic surgery/braces, comprehensive rehab.</p></div>
+</div>
+</details>
+</section>
+<!-- ================= HYDROCEPHALUS ================= -->
+<section class="block" id="hydrocephalus">
+<details class="topic" open="">
+<summary>Hydrocephalus</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Three Types of Hydrocephalus</p>
+<svg viewbox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">HYDROCEPHALUS</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="40" y="96"></rect><text font-size="11.5" text-anchor="middle" x="150" y="118">NORMAL-PRESSURE</text><text font-size="10.5" text-anchor="middle" x="150" y="136">(adults 60+)</text></g>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="340" y="96"></rect><text font-size="11.5" text-anchor="middle" x="450" y="118">OBSTRUCTIVE</text><text font-size="10.5" text-anchor="middle" x="450" y="136">(noncommunicating; children)</text></g>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="640" y="96"></rect><text font-size="11.5" text-anchor="middle" x="750" y="118">NONOBSTRUCTIVE</text><text font-size="10.5" text-anchor="middle" x="750" y="136">(communicating)</text></g>
+<line class="mm-line" x1="150" x2="150" y1="148" y2="176"></line>
+<g class="mm-leaf"><rect height="90" rx="6" width="220" x="40" y="176"></rect><text font-size="10.5" text-anchor="middle" x="150" y="196">↑ CSF volume,</text><text font-size="10.5" text-anchor="middle" x="150" y="212">NO change in ICP</text><text font-size="10.5" text-anchor="middle" x="150" y="230">Triad: gait instability,</text><text font-size="10.5" text-anchor="middle" x="150" y="246">incontinence, dementia</text></g>
+<line class="mm-line" x1="450" x2="450" y1="148" y2="176"></line>
+<g class="mm-leaf"><rect height="90" rx="6" width="220" x="340" y="176"></rect><text font-size="10.5" text-anchor="middle" x="450" y="196">Aqueduct of Sylvius or</text><text font-size="10.5" text-anchor="middle" x="450" y="212">4th ventricle blockage</text><text font-size="10.5" text-anchor="middle" x="450" y="230">Congenital or tumor-related</text></g>
+<line class="mm-line" x1="750" x2="750" y1="148" y2="176"></line>
+<g class="mm-leaf"><rect height="90" rx="6" width="220" x="640" y="176"></rect><text font-size="10.5" text-anchor="middle" x="750" y="196">Impaired CSF absorption</text><text font-size="10.5" text-anchor="middle" x="750" y="212">(arachnoid villi), no</text><text font-size="10.5" text-anchor="middle" x="750" y="230">flow obstruction</text><text font-size="10.5" text-anchor="middle" x="750" y="246">Meningitis, SAH, tumors</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Congenital causes</h4><p>Neural tube defects, aqueduct stenosis, prenatal infection.</p></div>
+<div class="fact"><h4>Acquired causes</h4><p>Infection, neoplasm, vascular causes; in premature infants, intraventricular hemorrhage can cause it.</p></div>
+</div>
+<div class="danger"><b>In neonates:</b> unfused skull bones mean rising pressure causes the whole head to swell — developmental delays may follow.</div>
+<div class="fact tx" style="margin-top:8px;"><h4>Treatment</h4><p><b>Ventriculoperitoneal (VP) shunt</b> is the most effective treatment. <b>Endoscopic third ventriculostomy</b> is an alternative for obstructive hydrocephalus.</p></div>
+</div>
+</details>
+</section>
+<!-- ================= CEREBELLAR DISORDERS ================= -->
+<section class="block" id="cerebellar-disorders">
+<details class="topic" open="">
+<summary>Cerebellar Disorders</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The cerebellum's three jobs</h4><p>(1) Coordinates muscle groups (with the cerebral cortex) for skilled movement, (2) works below consciousness to keep movement smooth/steady, (3) maintains balance.</p></div>
+<div class="fact"><h4>How it works</h4><p>Compares the cerebrum's intended movement (motor commands via corticospinal tract) against actual movement (muscle receptor feedback), then sends correcting impulses back to both cerebrum and muscle.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Causes</h4><p>Abscess, hemorrhage, tumors, trauma, viral infection, chronic alcoholism.</p></div>
+<div class="fact warn"><h4>Clinical manifestations</h4><p>Ataxia (incoordination), hypotonia, intention tremors, gait/balance disturbance — classic staggering/lurching gait with foot raised too high, brought down with a "clap."</p></div>
+</div>
+<div class="note"><b>Key distinguishing point:</b> loss of cerebellar function does NOT cause paralysis — this is purely a coordination problem, not a motor strength problem.</div>
+</div>
+</details>
+</section>
+<!-- ================= SPINAL CORD & PERIPHERAL NERVE ================= -->
+<section class="block" id="spinal-intro">
+<div class="block-head"><h2>Spinal Cord &amp; Peripheral Nerve Disorders</h2><span class="tag">Below the brain</span></div>
+</section>
+<section class="block" id="multiple-sclerosis">
+<details class="topic" open="">
+<summary>Multiple Sclerosis (MS)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>&gt;2.3 million affected worldwide; onset age 20–40; 2–3x more common in females. Higher rates at northern latitudes.</p></div>
+<div class="fact"><h4>Genetic risk</h4><p>Monozygotic twins: 30–50% concordance — a real but incomplete genetic component.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Immune mechanism</h4><p>Autoimmune demyelination, likely triggered by viral infection or environmental exposure in a genetically susceptible person. Both antibody- and T-cell mediated injury occur.</p></div>
+<div class="fact"><h4>Commonly affected structures</h4><p>Optic nerves, corticospinal/cerebellar/posterior column systems — no predictable lesion pattern.</p></div>
+</div>
+<p style="margin-top:10px;"><b>Symptoms by system:</b></p>
+<table class="compare">
+<tr><th>System</th><th>Symptoms</th></tr>
+<tr><td>Cranial nerve</td><td>Optic neuritis (blurred vision), diplopia, facial weakness/numbness</td></tr>
+<tr><td>Motor</td><td>Weakness, paralysis, spasticity, abnormal gait</td></tr>
+<tr><td>Sensory</td><td>Paresthesias, <b>Lhermitte sign</b> (electric shock down the spine)</td></tr>
+<tr><td>Cerebellar</td><td>Dysarthria, tremor, ataxia, vertigo</td></tr>
+<tr><td>Bowel/bladder</td><td>Urgency, incontinence, retention</td></tr>
+<tr><td>Cognitive</td><td>Short-term memory loss, poor concentration, mood changes</td></tr>
+<tr><td>Fatigue</td><td>Overwhelming, not relieved by rest</td></tr>
+</table>
+<div class="note">Symptoms are worsened by heat, infection, trauma, stress.</div>
+<p style="margin-top:12px;"><b>Four clinical course patterns:</b></p>
+<table class="compare">
+<tr><th>Course</th><th>% of patients</th><th>Pattern</th></tr>
+<tr><td>Relapsing-remitting</td><td>~85%</td><td>Clear relapses with acute decline, then partial/complete recovery</td></tr>
+<tr><td>Primary-progressive</td><td>~10%</td><td>Slow, continuous decline from the start; no relapses/remissions</td></tr>
+<tr><td>Secondary-progressive</td><td>Common eventual conversion from RR</td><td>Starts relapsing-remitting, then steady decline</td></tr>
+<tr><td>Progressive-relapsing</td><td>~5% (rare)</td><td>Progressive from the outset, with exacerbations</td></tr>
+</table>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Diagnostic criteria</h4><p>"Dissemination in time and space" — 2+ episodes at different times AND 2+ signs in different CNS areas. MRI plaques and CSF oligoclonal bands support diagnosis.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p><b>Acute attacks:</b> corticosteroids hasten recovery. <b>Disease-modifying therapy:</b> reduces long-term autoimmune activity. Plus symptom management (antispasmodics, etc.).</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="spina-bifida">
+<details class="topic" open="">
+<summary>Spina Bifida</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Spina Bifida Spectrum, Least to Most Severe</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">DEFECTIVE NEURAL TUBE CLOSURE</text></g>
+<line class="mm-line" x1="450" x2="150" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="750" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="90"></rect><text font-size="12" text-anchor="middle" x="150" y="115">OCCULTA (hidden)</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">MENINGOCELE</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="90"></rect><text font-size="12" text-anchor="middle" x="750" y="115">MYELOMENINGOCELE</text></g>
+<line class="mm-line" x1="150" x2="150" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="40" y="158"></rect><text font-size="10.5" text-anchor="middle" x="150" y="178">Laminae fail to fuse</text><text font-size="10.5" text-anchor="middle" x="150" y="194">10-20% of population</text><text font-size="10.5" text-anchor="middle" x="150" y="210">Usually NO neuro problems</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="340" y="158"></rect><text font-size="10.5" text-anchor="middle" x="450" y="178">CSF-filled sac protrudes</text><text font-size="10.5" text-anchor="middle" x="450" y="194">Spinal cord NOT involved</text></g>
+<line class="mm-line" x1="750" x2="750" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="640" y="158"></rect><text font-size="10.5" text-anchor="middle" x="750" y="178">Meninges + CSF + cord</text><text font-size="10.5" text-anchor="middle" x="750" y="194">itself protrude</text><text font-size="10.5" text-anchor="middle" x="750" y="210">Most severe — permanent damage</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Etiology</h4><p>Occurs ~4 weeks gestation. Risk factors: folate deficiency, anticonvulsant drugs, maternal obesity/diabetes.</p></div>
+<div class="fact tx"><h4>Prevention</h4><p>Folic acid supplementation before conception and during pregnancy significantly decreases risk.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Spina bifida occulta</h4><p>Most common in the lumbosacral region. Signs: hair tuft, midline dimple, port-wine angioma. Often no problems at all.</p></div>
+<div class="fact warn"><h4>Myelomeningocele specifics</h4><p>Sac may leak CSF → infection risk. Delivered via C-section. Permanent damage: motor/sensory loss below the defect, bowel/bladder dysfunction, hydrocephalus. Cord <b>tethering</b> can worsen symptoms with growth.</p></div>
+</div>
+<div class="danger"><b>Time-sensitive treatment:</b> myelomeningocele is covered with a sterile dressing immediately at birth; surgical repair generally required within 72 hours.</div>
+</div>
+</details>
+</section>
+<section class="block" id="als">
+<details class="topic" open="">
+<summary>Amyotrophic Lateral Sclerosis (ALS)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Progressive degeneration of BOTH upper and lower motor neurons — muscle wasting, progressive paralysis, death usually within a few years. Also called Lou Gehrig disease.</p></div>
+<div class="fact"><h4>Epidemiology</h4><p>Onset typically age 40–75, more common in males. 5–10% familial, rest sporadic.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Pathology</h4><p>Misfolded protein aggregates in motor neurons/glia. Neuroinflammation is prominent (shared with AD, PD, MS).</p></div>
+<div class="fact warn"><h4>Clinical course</h4><p>Muscle twitching/cramping first, often in hands. Progresses to speech, swallowing, breathing muscles. <b>Hyperreflexia in a weak, atrophied extremity is highly suggestive of ALS.</b> Most die of respiratory failure within 3–5 years.</p></div>
+</div>
+<div class="callout"><b>What's spared:</b> sensory function, cognition, and bowel/bladder sphincter control are usually preserved.</div>
+<div class="fact tx" style="margin-top:8px;"><h4>Treatment (no cure)</h4><p><b>Riluzole</b> — extends life 2–3 months. <b>Edaravone</b> — slows functional decline. Multidisciplinary care is essential.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="sci">
+<details class="topic" open="">
+<summary>Spinal Cord Injury (SCI)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>Primarily affects the young, though incidence is rising in older adults too. Males 3–4x more likely; more common weekends/summer. Leading causes: land transportation, violence (gunshot wounds), falls, recreational accidents. Alcohol/risk-taking behavior often involved.</p></div>
+<div class="fact"><h4>Mechanisms of injury</h4><p><b>Flexion</b> (tears posterior ligaments) — most unstable, often severe deficits. <b>Hyperextension</b> — most common, tears anterior ligaments. <b>Compression</b> — crushes vertebrae, drives bone fragments into the canal.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Primary vs. secondary SCI injury</h4><p><b>Primary:</b> direct axonal disruption, neuronal death, disrupted blood flow → ischemia. <b>Secondary:</b> cytotoxic edema, granulocyte invasion, ionic imbalance, excitotoxic neurotransmitter release, free radicals, macrophage/lymphocyte infiltration → progressive neurodegeneration beyond the original injury site.</p></div>
+<div class="fact warn"><h4>Systemic effects worsen the injury</h4><p>Lost autoregulation → profound systemic BP drop → worsens cord ischemia. Concurrent trauma often adds hypoxia, hypotension, temperature dysregulation, and glucose derangement.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Spinal Shock vs. Neurogenic Shock vs. Autonomic Dysreflexia</p>
+<svg viewbox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">SPINAL CORD INJURY COMPLICATIONS</text></g>
+<line class="mm-line" x1="450" x2="150" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="750" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="90"></rect><text font-size="12" text-anchor="middle" x="150" y="115">SPINAL SHOCK</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">NEUROGENIC SHOCK</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="90"></rect><text font-size="12" text-anchor="middle" x="750" y="115">AUTONOMIC DYSREFLEXIA</text></g>
+<line class="mm-line" x1="150" x2="150" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="106" rx="6" width="220" x="40" y="158"></rect><text font-size="10.5" text-anchor="middle" x="150" y="178">Hours-weeks, all levels</text><text font-size="10.5" text-anchor="middle" x="150" y="194">Flaccid paralysis,</text><text font-size="10.5" text-anchor="middle" x="150" y="210">absent reflexes,</text><text font-size="10.5" text-anchor="middle" x="150" y="226">sensory loss below level</text><text font-size="10.5" text-anchor="middle" x="150" y="244">Ends when reflexes return</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="106" rx="6" width="220" x="340" y="158"></rect><text font-size="10.5" text-anchor="middle" x="450" y="178">Cervical/upper thoracic SCI</text><text font-size="10.5" text-anchor="middle" x="450" y="194">↓ sympathetic outflow</text><text font-size="10.5" text-anchor="middle" x="450" y="210">Hypotension (vasodilation)</text><text font-size="10.5" text-anchor="middle" x="450" y="226">+ Bradycardia</text><text font-size="10.5" text-anchor="middle" x="450" y="244">(unopposed parasympathetic)</text></g>
+<line class="mm-line" x1="750" x2="750" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="106" rx="6" width="220" x="640" y="158"></rect><text font-size="10.5" text-anchor="middle" x="750" y="178">Chronic, injury at/above T6</text><text font-size="10.5" text-anchor="middle" x="750" y="194">Stimulus below injury</text><text font-size="10.5" text-anchor="middle" x="750" y="210">(full bladder/bowel) →</text><text font-size="10.5" text-anchor="middle" x="750" y="226">HYPERTENSION + bradycardia</text><text font-size="10.5" text-anchor="middle" x="750" y="244">+ flushing above, vasoconstriction below</text></g>
+</svg>
+</div>
+<div class="danger"><b>Autonomic dysreflexia mechanism:</b> pain/stimulus below the injury triggers sympathetic vasoconstriction and severe hypertension; the resulting baroreceptor response tries to compensate (bradycardia, vasodilation above the injury → flushing), but descending inhibitory signals can't get past the cord lesion to calm the sympathetic response below it. BP can become dangerously high. Most common trigger: full bladder or constipation.</div>
+<p style="margin-top:12px;"><b>Functional expectations by injury level (selected):</b></p>
+<table class="compare">
+<tr><th>Level</th><th>Functional expectation</th></tr>
+<tr><td>C4</td><td>Total dependence for transfers/ADLs; adaptive devices (mouth stick) for phone/computer</td></tr>
+<tr><td>C5</td><td>Self-feeding with devices; short-distance wheelchair mobility (electric preferred); needs assistance with ADLs</td></tr>
+<tr><td>C6</td><td>Independent grooming/feeding; weak hand grasp; can roll over, drive with adaptations</td></tr>
+<tr><td>C7</td><td>Independent wheelchair transfer; most ADLs independent; excellent bed mobility</td></tr>
+<tr><td>T1</td><td>Bed/wheelchair independent; self-catheterization</td></tr>
+<tr><td>T10</td><td>May stand with braces for exercise; still wheelchair-dependent for mobility</td></tr>
+<tr><td>L2–L5</td><td>Can ambulate indoors with braces/canes</td></tr>
+</table>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact tx"><h4>Acute management</h4><p>Spinal stabilization; surgical decompression within 24 hours if cord compression present. <b>High-dose methylprednisolone is NOT currently recommended.</b></p></div>
+<div class="fact tx"><h4>Autonomic dysreflexia treatment</h4><p>Remove/alleviate the painful stimulus first; adrenergic blockers for the hypertensive crisis if needed.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="gbs">
+<details class="topic" open="">
+<summary>Guillain-Barré Syndrome (GBS)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What it is</h4><p>An autoimmune, inflammatory demyelinating disease of the peripheral nervous system.</p></div>
+<div class="fact"><h4>Epidemiology</h4><p>One of the most common causes of nontraumatic paralysis in the Western world.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Triggers</h4><p>Often follows an infection 1–4 weeks prior. <b><i>Campylobacter jejuni</i></b> enteritis is the most strongly associated trigger.</p></div>
+<div class="fact"><h4>Mechanism</h4><p>Molecular mimicry — the antecedent infection triggers cross-reactive antibodies that mistakenly target peripheral nerve myelin.</p></div>
+</div>
+<div class="danger"><b>Classic presentation:</b> progressive, <b>ascending</b> weakness/paralysis — legs → arms → face; respiratory muscles can be affected. Peak disability ~3–4 weeks.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Diagnosis</h4><p>Classic CSF finding: <b>albuminocytologic dissociation</b> — high protein with a NORMAL WBC count.</p></div>
+<div class="fact tx"><h4>Treatment &amp; prognosis</h4><p>Most recover spontaneously; ~10% left with lasting disability. <b>Plasmapheresis</b> or <b>IVIG</b> for severe cases. <b>Steroids are contraindicated.</b></p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="bell-palsy">
+<details class="topic" open="">
+<summary>Bell Palsy (Facial Nerve Palsy)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Bell palsy = idiopathic facial nerve paralysis specifically; almost half of all facial palsy cases are idiopathic.</p></div>
+<div class="fact"><h4>Other causes to rule out</h4><p>Herpes zoster, otitis media, Lyme disease, GBS, tumor, stroke.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Updated understanding of cause</h4><p>Now understood to often be caused by <b>HSV or herpes zoster</b> reactivation.</p></div>
+<div class="fact"><h4>Risk factors</h4><p>Peaks age 15–45. Diabetes, hypothyroidism, pregnancy.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Clinical presentation</h4><p>Rapid onset (24–48 hrs); unilateral facial droop, diminished blink, hyperacusis, decreased taste. Facial <b>sensation is generally intact</b> (motor nerve problem).</p></div>
+<div class="fact"><h4>Workup</h4><p>Must rule out otitis media, Lyme disease, tumor, stroke.</p></div>
+</div>
+<div class="danger"><b>Eye protection is a priority:</b> inability to fully close the eye risks corneal damage — lubricating drops and nighttime patching are essential.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact tx"><h4>Treatment</h4><p><b>Corticosteroids</b> improve recovery odds. <b>Antivirals</b> only if herpetic vesicles are present.</p></div>
+<div class="fact"><h4>Prognosis</h4><p>Most recover spontaneously (~3 weeks); about 30% have residual disability.</p></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 45 (Chronic Neurologic Disorders) material. Redraw the mind maps from memory — especially the SCI shock/dysreflexia comparison and the spina bifida spectrum — then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+function filterGloss(){
+  var q = document.getElementById('glossSearch').value.toLowerCase();
+  document.querySelectorAll('#glossGrid .term').forEach(function(t){
+    var text = t.textContent.toLowerCase();
+    t.classList.toggle('hide', q.length>0 && text.indexOf(q)===-1);
+  });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "A transient neurologic event from excessive/abnormal neuronal electrical discharge \u2014 a singular event, not a diagnosis.", "answers": ["Seizure"]}, {"def": "A chronic, recurrent, enduring predisposition to seizures requiring long-term treatment \u2014 distinct from a single seizure.", "answers": ["Epilepsy"]}, {"def": "The area of hyperexcitable, autonomously firing neurons from which a seizure originates.", "answers": ["Epileptogenic focus"]}, {"def": "A syndrome (not a disease) of progressive cognitive decline \u2014 memory, personality, language, judgment \u2014 from various underlying pathologies.", "answers": ["Dementia"]}, {"def": "An acute, fluctuating confusional state with disturbed consciousness and attention; can mimic dementia but has abrupt onset, often worse at night.", "answers": ["Delirium"]}, {"def": "Extracellular aggregates of neurotoxic A\u03b242 peptide fragments (from APP cleavage) \u2014 a cardinal pathologic feature of Alzheimer disease.", "answers": ["\u03b2-amyloid plaques"]}, {"def": "Helical filaments of hyperphosphorylated tau protein inside neurons \u2014 the other cardinal AD feature, more closely tied to actual cognitive decline than plaques.", "answers": ["Neurofibrillary tangles", "NFTs", "Neurofibrillary tangles (NFTs)"]}, {"def": "The strongest known genetic risk factor for sporadic late-onset Alzheimer disease; linked to inefficient clearance of A\u03b242.", "answers": ["APOe4"]}, {"def": "The dopamine-producing brain region whose degeneration causes Parkinson disease.", "answers": ["Substantia nigra"]}, {"def": "Intraneuronal inclusions composed of \u03b1-synuclein; pathognomonic for sporadic Parkinson disease.", "answers": ["Lewy bodies"]}, {"def": "Slowness of movement \u2014 a core Parkinson disease feature.", "answers": ["Bradykinesia"]}, {"def": "Ratchet-like resistance felt when passively moving a Parkinson patient's extremity.", "answers": ["Cogwheel rigidity"]}, {"def": "Permanent, nonprogressive damage to the developing brain's upper motor neurons, occurring pre/peri/postnatally.", "answers": ["Cerebral palsy"]}, {"def": "Abnormal CSF accumulation in the ventricular system from obstruction or impaired resorption.", "answers": ["Hydrocephalus"]}, {"def": "Increased CSF volume without increased ICP (brain tissue loss offsets it) \u2014 classic triad: gait instability, urinary incontinence, dementia.", "answers": ["Normal-pressure hydrocephalus"]}, {"def": "A chronic autoimmune demyelinating disease of the CNS causing inflammation and scarring of myelin sheaths.", "answers": ["Multiple sclerosis", "MS", "Multiple sclerosis (MS)"]}, {"def": "An electric shock-like sensation radiating down the spine into the extremities \u2014 a classic MS finding.", "answers": ["Lhermitte sign"]}, {"def": "Discrete IgG bands in CSF supporting an MS diagnosis.", "answers": ["Oligoclonal bands"]}, {"def": "Defective closure of the neural tube; ranges from occulta (hidden) to cystica (externally protruding sac).", "answers": ["Spina bifida"]}, {"def": "The most severe form of spina bifida cystica \u2014 meninges, CSF, AND spinal cord protrude through the defect.", "answers": ["Myelomeningocele"]}, {"def": "Progressive degeneration of both upper and lower motor neurons causing muscle wasting, paralysis, and eventually respiratory failure.", "answers": ["Amyotrophic lateral sclerosis", "ALS", "Amyotrophic lateral sclerosis (ALS)"]}, {"def": "Temporary (hours to weeks) complete loss of function below a spinal cord injury level, including flaccid paralysis and absent reflexes.", "answers": ["Spinal shock"]}, {"def": "Distributive shock from loss of sympathetic outflow after high (cervical/upper thoracic) SCI \u2014 hypotension + bradycardia.", "answers": ["Neurogenic shock"]}, {"def": "A life-threatening reflex hypertensive crisis in SCI at/above T6, triggered by a stimulus (often bladder/bowel) below the injury level.", "answers": ["Autonomic dysreflexia"]}, {"def": "An autoimmune, inflammatory demyelinating disease of the peripheral nervous system causing ascending weakness/paralysis.", "answers": ["Guillain-Barr\u00e9 syndrome", "GBS", "Guillain-Barr\u00e9 syndrome (GBS)"]}, {"def": "High CSF protein with normal WBC count \u2014 the classic GBS CSF finding.", "answers": ["Albuminocytologic dissociation"]}, {"def": "Muscle incoordination \u2014 the hallmark of cerebellar dysfunction.", "answers": ["Ataxia"]}, {"def": "Idiopathic facial nerve (CN VII) paralysis, now understood to often be viral (HSV/herpes zoster) in origin.", "answers": ["Bell palsy"]}];
+const QUIZ_TEACHBACK = [{"topic": "Seizures & Epilepsy", "points": ["<b>Seizure vs. epilepsy:</b> A seizure is a singular transient event; epilepsy is the chronic, recurrent predisposition to seizures. ~10% of the global population\u2026", "<b>Why epilepsy incidence is rising:</b> More people surviving serious head trauma, stroke, intracranial infection, and brain tumors \u2014 all of which can leave a seizure-prone\u2026", "<b>Common causes:</b> Idiopathic, acute stroke, intracranial lesions, metabolic encephalopathy, drugs/alcohol/toxins, head trauma, metabolic disturbances, CNS infections, hyperpyrexia.", "<b>Common individual triggers:</b> Flashing lights, loud noises, rhythmic music, fever, exhaustion, sleep deprivation, poor nutrition, menstrual hormonal changes, hyperventilation, injury, drugs, and psychosocial\u2026", "<b>ILAE 2017 seizure classification:</b> Three onset types: focal (localized to one hemisphere), generalized (whole brain, involves thalamus/RAS \u2192 loss of consciousness), and unknown onset\u2026", "<b>Terminology update:</b> Old terms now retired: complex partial, simple partial, partial, psychic, dyscognitive, secondarily generalized tonic-clonic \u2014 replaced for clearer worldwide communication\u2026", "Nonmotor (absence) seizures: almost always children (rarely before age 4 or after puberty); brief (2\u201310 sec) staring spells with abrupt onset/termination; person\u2026"]}, {"topic": "Dementia \u2014 Overview & Classification", "points": ["<b>Dementia is a syndrome, not a disease:</b> Progressive decline in memory PLUS other cognitive domains (personality, language, judgment, abstract thinking, complex tasks). Often insidious onset; agnosia (lack\u2026", "<b>Delirium vs. dementia \u2014 don't confuse them:</b> Delirium: acute onset, fluctuating, often worse at night, disturbed consciousness/attention, from causes like polypharmacy, metabolic abnormality, nutritional deficiency, infection. Can\u2026", "<b>Neurodegenerative dementias:</b> Alzheimer disease, dementia with Lewy bodies, Parkinson disease dementia, multiple system atrophy, chronic traumatic encephalopathy, prion disease (Creutzfeldt-Jakob), ALS.", "<b>Nonneurodegenerative dementias:</b> Vascular dementia, normal-pressure hydrocephalus, metabolic (hypothyroidism, Cushing syndrome), depression, bipolar disorder, neoplasia, toxin exposure, infections (syphilis, HIV), vitamin B12 deficiency\u2026", "AD accounts for 60\u201380% of all dementias ; vascular dementia is second most common. Prevalence rises sharply with age: 3% (ages 65\u201374)\u2026"]}, {"topic": "Alzheimer Disease", "points": ["<b>The two cardinal traits:</b> \u03b2-amyloid plaques: extracellular, present years before cognitive decline; correlate with disease severity. Neurofibrillary tangles (NFTs): intracellular, from hyperphosphorylated tau; NOT\u2026", "<b>Brain changes:</b> Diffuse neuronal damage and atrophy \u2014 advanced AD brains can weigh up to 20% less than normal. Temporoparietal and anterior\u2026", "<b>Neurotransmitter changes:</b> \u2193 Acetylcholine synthesis (\u03b2-amyloid may be responsible) is the key deficit; glutamate, dopamine, and serotonin imbalances also contribute.", "<b>Genetics:</b> Early-onset (rare): presenilin-1/2 and APP mutations \u2014 all increase A\u03b242. Late-onset (common): APOe4 is the strongest known risk factor \u2014\u2026", "<b>Disease-modifying treatments (new):</b> Lecanemab, donanemab \u2014 monoclonal antibodies clearing amyloid plaques. First drug class to target AD pathophysiology directly.", "<b>Symptomatic treatment:</b> Acetylcholinesterase inhibitors (donepezil) for mild-moderate AD \u2014 boost available acetylcholine."]}, {"topic": "Vascular Dementia", "points": ["<b>Cause:</b> A single cerebrovascular insult, multiple lacunar infarcts, or microvascular pathology. 2nd most common dementia type.", "<b>Overlap with AD:</b> Growing evidence the two often coexist in elderly patients, though usually treated as separate entities.", "Risk factors mirror stroke risk factors: hypertension and diabetes."]}, {"topic": "Parkinson Disease (PD)", "points": ["<b>Scale:</b> 2nd most common neurodegenerative disorder; >1 million affected in the US, ~90,000 new cases/year (50% increase since 2014). Age >65\u2026", "<b>Core features:</b> Bradykinesia, rigidity, tremor, postural instability \u2014 a movement disorder from basal ganglia dysfunction.", "<b>The 70-80% rule:</b> 70\u201380% of the substantia nigra is already damaged before motor symptoms appear. Non-motor changes (sleep, mood, GI) can precede motor\u2026", "<b>Pathognomonic finding:</b> \u03b1-synuclein and Lewy bodies \u2014 present in sporadic PD.", "<b>Demographics & risk factors:</b> Male:female ratio ~3:2; age >65 is the single greatest risk factor. TBI and pesticide exposure are associated risks.", "<b>Levodopa/carbidopa \u2014 the mainstay:</b> Dopamine itself can't cross the BBB; levodopa (its precursor) can. Carbidopa blocks peripheral conversion of levodopa to dopamine, reducing side\u2026", "<b>Long-term levodopa complications:</b> \"On-off\" phenomena (sudden symptom return) and dyskinesias (abnormal movements) with prolonged use.", "<b>Other drug classes:</b> Dopamine agonists (pramipexole, ropinirole); MAO-B inhibitors slowing dopamine metabolism (selegiline, rasagiline, safinamide); amantadine (helps akinesia/dyskinesia); anticholinergics (help tremor, rigidity, drooling)."]}, {"topic": "Cerebral Palsy", "points": ["<b>Definition:</b> Permanent, nonprogressive damage to the developing brain's upper motor neurons \u2014 occurs prenatally, perinatally, or in early infancy. Occurs in\u2026", "<b>\"Nonprogressive\" doesn't mean \"unchanging\":</b> Though the brain damage itself doesn't progress, affected individuals face evolving challenges into adulthood: chronic pain, scoliosis, respiratory dysfunction, and\u2026", "<b>Etiologic factors:</b> Maternal prenatal infection, birth trauma, reduced oxygen supply, kernicterus, prematurity. Often multifactorial with no single identifiable cause.", "<b>Associated complications:</b> Seizures, intellectual disability, visual/hearing impairment, respiratory problems, orthopedic disabilities.", "<b>Treatment:</b> No cure \u2014 goal is maximizing function: muscle relaxants for spasticity, Botox, orthopedic surgery/braces, comprehensive rehab."]}, {"topic": "Hydrocephalus", "points": ["<b>Congenital causes:</b> Neural tube defects, aqueduct stenosis, prenatal infection.", "<b>Acquired causes:</b> Infection, neoplasm, vascular causes; in premature infants, intraventricular hemorrhage can cause it.", "<b>Treatment:</b> Ventriculoperitoneal (VP) shunt is the most effective treatment. Endoscopic third ventriculostomy is an alternative for obstructive hydrocephalus.", "In neonates: unfused skull bones mean rising pressure causes the whole head to swell \u2014 developmental delays may follow."]}, {"topic": "Cerebellar Disorders", "points": ["<b>The cerebellum's three jobs:</b> (1) Coordinates muscle groups (with the cerebral cortex) for skilled movement, (2) works below consciousness to keep movement smooth/steady, (3)\u2026", "<b>How it works:</b> Compares the cerebrum's intended movement (motor commands via corticospinal tract) against actual movement (muscle receptor feedback), then sends correcting impulses\u2026", "<b>Causes:</b> Abscess, hemorrhage, tumors, trauma, viral infection, chronic alcoholism.", "<b>Clinical manifestations:</b> Ataxia (incoordination), hypotonia, intention tremors, gait/balance disturbance \u2014 classic staggering/lurching gait with foot raised too high, brought down with a\u2026"]}, {"topic": "Multiple Sclerosis (MS)", "points": ["<b>Epidemiology:</b> >2.3 million affected worldwide; onset age 20\u201340; 2\u20133x more common in females. Higher rates at northern latitudes.", "<b>Genetic risk:</b> Monozygotic twins: 30\u201350% concordance \u2014 a real but incomplete genetic component.", "<b>Immune mechanism:</b> Autoimmune demyelination, likely triggered by viral infection or environmental exposure in a genetically susceptible person. Both antibody- and T-cell mediated\u2026", "<b>Commonly affected structures:</b> Optic nerves, corticospinal/cerebellar/posterior column systems \u2014 no predictable lesion pattern.", "<b>Diagnostic criteria:</b> \"Dissemination in time and space\" \u2014 2+ episodes at different times AND 2+ signs in different CNS areas. MRI plaques\u2026", "<b>Treatment:</b> Acute attacks: corticosteroids hasten recovery. Disease-modifying therapy: reduces long-term autoimmune activity. Plus symptom management (antispasmodics, etc.)."]}, {"topic": "Spina Bifida", "points": ["<b>Etiology:</b> Occurs ~4 weeks gestation. Risk factors: folate deficiency, anticonvulsant drugs, maternal obesity/diabetes.", "<b>Prevention:</b> Folic acid supplementation before conception and during pregnancy significantly decreases risk.", "<b>Spina bifida occulta:</b> Most common in the lumbosacral region. Signs: hair tuft, midline dimple, port-wine angioma. Often no problems at all.", "<b>Myelomeningocele specifics:</b> Sac may leak CSF \u2192 infection risk. Delivered via C-section. Permanent damage: motor/sensory loss below the defect, bowel/bladder dysfunction, hydrocephalus.\u2026", "Time-sensitive treatment: myelomeningocele is covered with a sterile dressing immediately at birth; surgical repair generally required within 72 hours."]}, {"topic": "Amyotrophic Lateral Sclerosis (ALS)", "points": ["<b>Definition:</b> Progressive degeneration of BOTH upper and lower motor neurons \u2014 muscle wasting, progressive paralysis, death usually within a few years.\u2026", "<b>Epidemiology:</b> Onset typically age 40\u201375, more common in males. 5\u201310% familial, rest sporadic.", "<b>Pathology:</b> Misfolded protein aggregates in motor neurons/glia. Neuroinflammation is prominent (shared with AD, PD, MS).", "<b>Clinical course:</b> Muscle twitching/cramping first, often in hands. Progresses to speech, swallowing, breathing muscles. Hyperreflexia in a weak, atrophied extremity is highly\u2026", "<b>Treatment (no cure):</b> Riluzole \u2014 extends life 2\u20133 months. Edaravone \u2014 slows functional decline. Multidisciplinary care is essential.", "What's spared: sensory function, cognition, and bowel/bladder sphincter control are usually preserved."]}, {"topic": "Spinal Cord Injury (SCI)", "points": ["<b>Epidemiology:</b> Primarily affects the young, though incidence is rising in older adults too. Males 3\u20134x more likely; more common weekends/summer. Leading\u2026", "<b>Mechanisms of injury:</b> Flexion (tears posterior ligaments) \u2014 most unstable, often severe deficits. Hyperextension \u2014 most common, tears anterior ligaments. Compression \u2014 crushes\u2026", "<b>Primary vs. secondary SCI injury:</b> Primary: direct axonal disruption, neuronal death, disrupted blood flow \u2192 ischemia. Secondary: cytotoxic edema, granulocyte invasion, ionic imbalance, excitotoxic neurotransmitter\u2026", "<b>Systemic effects worsen the injury:</b> Lost autoregulation \u2192 profound systemic BP drop \u2192 worsens cord ischemia. Concurrent trauma often adds hypoxia, hypotension, temperature dysregulation, and\u2026", "<b>Acute management:</b> Spinal stabilization; surgical decompression within 24 hours if cord compression present. High-dose methylprednisolone is NOT currently recommended.", "<b>Autonomic dysreflexia treatment:</b> Remove/alleviate the painful stimulus first; adrenergic blockers for the hypertensive crisis if needed.", "Autonomic dysreflexia mechanism: pain/stimulus below the injury triggers sympathetic vasoconstriction and severe hypertension; the resulting baroreceptor response tries to compensate (bradycardia, vasodilation\u2026"]}, {"topic": "Guillain-Barr\u00e9 Syndrome (GBS)", "points": ["<b>What it is:</b> An autoimmune, inflammatory demyelinating disease of the peripheral nervous system.", "<b>Epidemiology:</b> One of the most common causes of nontraumatic paralysis in the Western world.", "<b>Triggers:</b> Often follows an infection 1\u20134 weeks prior. Campylobacter jejuni enteritis is the most strongly associated trigger.", "<b>Mechanism:</b> Molecular mimicry \u2014 the antecedent infection triggers cross-reactive antibodies that mistakenly target peripheral nerve myelin.", "<b>Diagnosis:</b> Classic CSF finding: albuminocytologic dissociation \u2014 high protein with a NORMAL WBC count.", "<b>Treatment & prognosis:</b> Most recover spontaneously; ~10% left with lasting disability. Plasmapheresis or IVIG for severe cases. Steroids are contraindicated.", "Classic presentation: progressive, ascending weakness/paralysis \u2014 legs \u2192 arms \u2192 face; respiratory muscles can be affected. Peak disability ~3\u20134 weeks."]}, {"topic": "Bell Palsy (Facial Nerve Palsy)", "points": ["<b>Definition:</b> Bell palsy = idiopathic facial nerve paralysis specifically; almost half of all facial palsy cases are idiopathic.", "<b>Other causes to rule out:</b> Herpes zoster, otitis media, Lyme disease, GBS, tumor, stroke.", "<b>Updated understanding of cause:</b> Now understood to often be caused by HSV or herpes zoster reactivation.", "<b>Risk factors:</b> Peaks age 15\u201345. Diabetes, hypothyroidism, pregnancy.", "<b>Clinical presentation:</b> Rapid onset (24\u201348 hrs); unilateral facial droop, diminished blink, hyperacusis, decreased taste. Facial sensation is generally intact (motor nerve problem).", "<b>Workup:</b> Must rule out otitis media, Lyme disease, tumor, stroke.", "<b>Treatment:</b> Corticosteroids improve recovery odds. Antivirals only if herpetic vesicles are present.", "<b>Prognosis:</b> Most recover spontaneously (~3 weeks); about 30% have residual disability."]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

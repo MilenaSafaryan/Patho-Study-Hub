@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cellular Injury, Adaptation &amp; Aging — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.95rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=4" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Cellular Injury, Adaptation &amp; Aging</p>
+<span class="brand-sub">Chapter 4 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Overview</div>
+<a href="#three-responses">Three Cellular Responses to Injury</a>
+<div class="grp-title">Reversible Injury</div>
+<a href="#hydropic-swelling">Hydropic Swelling</a>
+<a href="#accumulations">Intracellular Accumulations</a>
+<div class="grp-title">Cellular Adaptation</div>
+<a href="#atrophy">Atrophy</a>
+<a href="#hypertrophy">Hypertrophy</a>
+<a href="#hyperplasia">Hyperplasia</a>
+<a href="#metaplasia-dysplasia">Metaplasia &amp; Dysplasia</a>
+<div class="grp-title">Irreversible Injury</div>
+<a href="#necrosis-overview">Necrosis — Overview</a>
+<a href="#necrosis-types">Types of Necrosis</a>
+<a href="#gangrene">Gangrene</a>
+<a href="#apoptosis">Apoptosis</a>
+<div class="grp-title">Etiology of Injury</div>
+<a href="#ischemia-hypoxia">Ischemia &amp; Hypoxic Injury</a>
+<a href="#reperfusion">Reperfusion Injury</a>
+<a href="#nutritional-injury">Nutritional Injury</a>
+<div class="grp-title">Aging &amp; Death</div>
+<a href="#aging-vs-disease">Aging vs. Disease</a>
+<a href="#hallmarks-of-aging">Hallmarks of Aging</a>
+<a href="#physiologic-aging">Physiologic Changes of Aging</a>
+<a href="#somatic-death">Somatic Death</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Cellular Injury, Adaptation &amp; Aging</h1>
+<p>The cellular-level foundation underneath every systemic disease covered later in the course — how cells respond to stress, adapt, die, and age. Built from your Chapter 4 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Reversible cell injury</dt><dd>Injury mild/short-lived enough that the cell returns to normal once the stress is removed.</dd></div>
+<div class="term"><dt>Hydropic swelling (oncosis)</dt><dd>Cellular swelling from water accumulation due to Na+-K+ pump failure — the first manifestation of most reversible injury.</dd></div>
+<div class="term"><dt>Atrophy</dt><dd>Decreased cell size/function in response to disuse, denervation, ischemia, starvation, lost trophic signals, or persistent injury.</dd></div>
+<div class="term"><dt>Hypertrophy</dt><dd>Increased cell mass/functional capacity from a net increase in cellular protein content, without cell division.</dd></div>
+<div class="term"><dt>Hyperplasia</dt><dd>Increased cell number via mitotic division, in cells capable of dividing.</dd></div>
+<div class="term"><dt>Metaplasia</dt><dd>Replacement of one differentiated cell type with another, better able to tolerate ongoing injury; fully reversible.</dd></div>
+<div class="term"><dt>Dysplasia</dt><dd>Disorganized cellular appearance (abnormal size/shape/arrangement) — an adaptive effort gone wrong; considered preneoplastic.</dd></div>
+<div class="term"><dt>Carcinoma in situ</dt><dd>Severe dysplasia involving the entire thickness of the epithelium.</dd></div>
+<div class="term"><dt>Necrosis</dt><dd>Pathologic, messy cell death from external injury — cell rupture, content spillage, and inflammation.</dd></div>
+<div class="term"><dt>Apoptosis</dt><dd>Programmed, "tidy" cell death from intracellular signaling — no rupture, no inflammation; can be normal or pathologic.</dd></div>
+<div class="term"><dt>Coagulative necrosis</dt><dd>The most common necrosis type; denatured proteins, tissue architecture preserved for weeks; typically from ischemia.</dd></div>
+<div class="term"><dt>Liquefactive necrosis</dt><dd>Rapid dissolution of dead tissue into liquid debris; classic in the brain or with bacterial abscess formation.</dd></div>
+<div class="term"><dt>Fat necrosis</dt><dd>Death of adipose tissue, classically from pancreatitis/trauma; forms calcium soaps (saponification), appears chalky white.</dd></div>
+<div class="term"><dt>Caseous necrosis</dt><dd>Cheese-like, walled-off necrosis characteristic of tuberculosis-damaged lung tissue.</dd></div>
+<div class="term"><dt>Gangrene</dt><dd>Necrosis of a large tissue area, usually from major blood supply interruption; dry, wet, or gas subtypes.</dd></div>
+<div class="term"><dt>Ischemia</dt><dd>Interrupted blood flow to a tissue — injures cells faster than hypoxia alone because it also blocks nutrient delivery and waste removal.</dd></div>
+<div class="term"><dt>Reperfusion injury</dt><dd>Cellular damage occurring after blood flow is restored to previously ischemic tissue — often causes more damage than the ischemia itself.</dd></div>
+<div class="term"><dt>Free radicals (reactive oxygen species)</dt><dd>Molecules with an unpaired electron (superoxide, peroxide, hydroxyl radicals) that damage membranes, proteins, and DNA.</dd></div>
+<div class="term"><dt>Telomere</dt><dd>Protective end-cap of a chromosome that shortens with each cell division, eventually triggering dormancy or death.</dd></div>
+<div class="term"><dt>Telomerase</dt><dd>The enzyme that rebuilds telomeres — active in germ cells (near-immortality) and, notably, many cancer cells.</dd></div>
+<div class="term"><dt>Hayflick limit</dt><dd>The finite number of divisions a cell line can undergo before becoming dormant or dying, tied to telomere shortening.</dd></div>
+<div class="term"><dt>Sirtuins</dt><dd>A protein family linking caloric restriction to longevity — help regulate DNA repair and prevent apoptosis.</dd></div>
+<div class="term"><dt>Dysbiosis</dt><dd>Derangement of the normal microbiome, implicated as a contributor to aging and disease.</dd></div>
+<div class="term"><dt>Somatic death</dt><dd>Death of the entire organism — absence of respiration and heartbeat, with no inflammatory/immune response (unlike localized cell death).</dd></div>
+<div class="term"><dt>Rigor mortis</dt><dd>Post-death muscle stiffening from perpetual actin-myosin cross-bridging as ATP depletes and calcium accumulates; appears within ~6 hours.</dd></div>
+<div class="term"><dt>Lipofuscin</dt><dd>An age-related "wear and tear" pigment that accumulates in atrophied cells' residual lysosomal vesicles, giving a yellow-brown appearance.</dd></div>
+</dl>
+</section>
+<!-- ================= OVERVIEW ================= -->
+<section class="block" id="three-responses">
+<details class="topic" open="">
+<summary>Three Cellular Responses to Injury</summary>
+<div class="topic-body">
+<p>Disease and injury are ultimately cellular and genomic phenomena — even complex multisystem disorders like cancer trace back to alterations in cell function.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — How a Cell Responds to a Challenge</p>
+<svg viewbox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">CELLULAR CHALLENGE</text></g>
+<line class="mm-line" x1="450" x2="150" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="750" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="90"></rect><text font-size="12" text-anchor="middle" x="150" y="115">Mild / short-lived</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">Persistent, sublethal</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="90"></rect><text font-size="12" text-anchor="middle" x="750" y="115">Too severe / prolonged</text></g>
+<line class="mm-line" x1="150" x2="150" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="220" x="40" y="158"></rect><text font-size="11" text-anchor="middle" x="150" y="180">REVERSIBLE INJURY</text><text font-size="10" text-anchor="middle" x="150" y="196">full return to normal</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="220" x="340" y="158"></rect><text font-size="11" text-anchor="middle" x="450" y="180">ADAPTATION</text><text font-size="10" text-anchor="middle" x="450" y="196">structure/function changes</text></g>
+<line class="mm-line" x1="750" x2="750" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="220" x="640" y="158"></rect><text font-size="11" text-anchor="middle" x="750" y="180">CELL DEATH</text><text font-size="10" text-anchor="middle" x="750" y="196">necrosis or apoptosis</text></g>
+</svg>
+</div>
+<div class="callout"><b>Necrosis vs. apoptosis — the key distinction to hold onto throughout this whole chapter:</b> necrosis is caused by external injury and is a pathologic process with significant tissue damage. Apoptosis is triggered by intracellular signaling and may be a completely normal physiologic process (or pathologic, depending on context).</div>
+</div>
+</details>
+</section>
+<!-- ================= HYDROPIC SWELLING ================= -->
+<section class="block" id="hydropic-swelling">
+<details class="topic" open="">
+<summary>Hydropic Swelling</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The mechanism</h4><p>Na+-K+ pump failure (which requires ATP) → sodium accumulates intracellularly → creates an osmotic gradient → water rushes in. Any injury causing insufficient ATP production leads to this.</p></div>
+<div class="fact warn"><h4>What it looks like</h4><p>Large, pale cytoplasm; dilated endoplasmic reticulum; swollen mitochondria. Severe cases: ER ruptures, forming large water-filled vacuoles.</p></div>
+</div>
+<div class="note">Generalized cellular swelling across an organ shows up clinically as organ enlargement — the "-megaly" suffix (hepatomegaly, splenomegaly) is literally describing this process at the organ level.</div>
+</div>
+</details>
+</section>
+<!-- ================= ACCUMULATIONS ================= -->
+<section class="block" id="accumulations">
+<details class="topic" open="">
+<summary>Intracellular Accumulations</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">Three categories: (1) excess normal substances (fat), (2) abnormal substances from faulty metabolism, (3) pigments/particles the cell can't degrade.</p>
+<div class="fact-grid">
+<div class="fact"><h4>Lipids — fatty liver</h4><p>Common site: liver. Alcohol causes fatty liver via direct toxicity plus preferential metabolism of alcohol over lipid. Fat-filled cells compress organelles to one side, tissue looks yellowish/greasy. Genetic lipid-metabolism disorders (Tay-Sachs, Gaucher) cause neurologic lipid accumulation.</p></div>
+<div class="fact warn"><h4>Carbohydrates — glycogen &amp; mucopolysaccharidoses</h4><p>Diabetes mellitus is the common cause of excess glycogen storage — impaired glucose uptake → high serum/urine glucose → renal tubule cells reabsorb and store it as glycogen. Mucopolysaccharidoses: genetic enzyme defects prevent glycosaminoglycan degradation, causing intellectual disability and connective tissue disorders.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Proteins — two mechanisms</h4><p>(1) Renal tubule cells recapture leaked plasma proteins via endocytosis when glomeruli become abnormally permeable. (2) Cellular stress denatures/aggregates proteins — chaperone (heat shock) proteins try to refold them; failures get tagged by <b>ubiquitin</b> and digested in the proteasome.</p></div>
+<div class="fact warn"><h4>Pigments &amp; particles</h4><p><b>Endogenous:</b> melanin (normal in tanned skin), hemosiderin and bilirubin (from hemoglobin breakdown — excess suggests RBC breakdown, iron overload, or hepatobiliary disease). <b>Exogenous:</b> mineral dusts (coal, silica, iron, lead, silver) inhaled into lung tissue → chronic inflammation → alveolar/capillary destruction → scarring/stiffening over years.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Calcium deposits</h4><p>From altered calcium intake/excretion/metabolism — e.g., impaired renal phosphate excretion → calcium phosphate deposits in eye/heart/vessels. Heart valve calcification can obstruct flow or impair closure; vessel calcification narrows lumens.</p></div>
+<div class="fact tx"><h4>Clinical marker: TB tubercles</h4><p>Dead/dying tissue often calcifies and shows as dense areas on x-ray — calcified TB lung damage is specifically called a <b>tubercle</b>.</p></div>
+</div>
+<div class="danger"><b>Reversibility rule for this whole section:</b> with the exception of inorganic particles (mineral dusts, etc.), intracellular accumulations are generally reversible if the causative factor is removed.</div>
+</div>
+</details>
+</section>
+<!-- ================= ADAPTATION ================= -->
+<section class="block" id="atrophy">
+<details class="topic" open="">
+<summary>Atrophy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Six general causes</h4><p>Disuse, denervation, ischemia, nutrient starvation, interruption of endocrine/trophic signals, and persistent cell injury.</p></div>
+<div class="fact warn"><h4>The logic behind it</h4><p>Atrophy is the cell's effort to minimize energy/nutrient consumption by reducing the number of intracellular organelles and structures.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Worked examples by cause</h4><p><b>Disuse:</b> bed rest/casting → skeletal muscle shrinkage (reverses with activity). <b>Denervation:</b> loss of nerve stimulation → similar muscle shrinkage. <b>Ischemia:</b> chronic sublethal ischemia (common in heart, brain, kidney, lower leg) → atrophy (vs. complete interruption → cell death). <b>Lost trophic signals:</b> adrenal cortex/thyroid/gonads atrophy without their pituitary trophic hormones.</p></div>
+<div class="fact tx"><h4>Two protein-degradation pathways</h4><p><b>Ubiquitin-proteasome system:</b> tags and digests targeted proteins. <b>Autophagy:</b> lysosomes fuse with cellular structures for hydrolytic degradation — this also happens normally, clearing damaged/senescent organelles. <b>Lipofuscin</b> (age-related pigment) accumulates in atrophied cells' residual vesicles as material resistant to full degradation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hypertrophy">
+<details class="topic" open="">
+<summary>Hypertrophy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism</h4><p>Net increase in cellular protein content → increased cell mass AND functional capacity — no cell division involved.</p></div>
+<div class="fact warn"><h4>Why it matters most for non-dividing cells</h4><p>Especially important for cells unable to undergo mitosis (like differentiated cardiac/skeletal muscle cells) — hypertrophy is their only option to meet increased demand, since they can't achieve hyperplasia.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Physiologic examples</h4><p>Exercise-induced skeletal muscle growth (primarily hypertrophy, though muscle satellite/stem cells can also divide). Trophic-hormone-driven hypertrophy in breast/uterine tissue.</p></div>
+<div class="fact warn"><h4>Pathophysiologic examples</h4><p>Liver enlargement from toxin exposure; cardiac muscle hypertrophy from chronic hypertension (increased workload).</p></div>
+</div>
+<div class="note">Hypertrophy subsides when the demand is removed, but the cell may not fully return to baseline — persistent connective tissue changes can remain.</div>
+</div>
+</details>
+</section>
+<section class="block" id="hyperplasia">
+<details class="topic" open="">
+<summary>Hyperplasia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism &amp; triggers</h4><p>Increased cell number via mitosis — only possible in cells capable of dividing. Triggered by increased physiologic demand, hormonal stimulation, or persistent injury.</p></div>
+<div class="fact warn"><h4>Demand-induced examples</h4><p>↑ RBC production at high altitude; liver enlargement for drug detoxification.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Hormone-induced examples</h4><p>Estrogen → increased endometrial/uterine stromal cell number. Dysregulated hormones/growth factors → pathologic hyperplasia (thyroid or prostate enlargement).</p></div>
+<div class="fact"><h4>Chronic irritation examples</h4><p>Calluses/corns (chronic skin friction); bladder epithelial hyperplasia from chronic cystitis inflammation.</p></div>
+</div>
+<div class="note">Organ enlargement is often a combination of BOTH hypertrophy and hyperplasia together, not purely one or the other.</div>
+</div>
+</details>
+</section>
+<section class="block" id="metaplasia-dysplasia">
+<details class="topic" open="">
+<summary>Metaplasia &amp; Dysplasia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Metaplasia</h4><p>Replacement of one differentiated cell type with another better suited to tolerate ongoing injury. Classic example: cigarette smoke irritation converts bronchial ciliated columnar epithelium → stratified squamous epithelium. Fully reversible; cells remain well-differentiated, but cancerous transformation CAN arise from metaplastic areas (lung, cervix, stomach, bladder).</p></div>
+<div class="fact warn"><h4>Dysplasia</h4><p>Disorganized cell appearance (size/shape/arrangement abnormalities) — an adaptive effort "gone astray." Most common in hyperplastic squamous epithelium, but also seen in intestinal mucosa. Significant potential to become cancerous — regarded as <b>preneoplastic</b>.</p></div>
+</div>
+<div class="danger"><b>Carcinoma in situ</b> = severe dysplasia involving the FULL thickness of the epithelium. Mild dysplasia may still be reversible if the cause is removed — but this reversibility window narrows as severity increases.</div>
+<div class="note">Quick memory anchor from the chapter's key points: hypertrophy/hyperplasia ← increased demand. Atrophy ← decreased demand or chronic ischemia. Metaplasia/dysplasia ← persistent injury.</div>
+</div>
+</details>
+</section>
+<!-- ================= NECROSIS ================= -->
+<section class="block" id="necrosis-overview">
+<details class="topic" open="">
+<summary>Necrosis — Overview</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Morphologic changes</h4><p>Shrunken (pyknotic) nucleus → degrades (karyolysis); cell volume swells; ribosomes disperse; plasma and organelle membranes disrupt. <b>Loss of plasma membrane permeability barrier is the critical event in cell death.</b></p></div>
+<div class="fact"><h4>Systemic signs of tissue death</h4><p>General inflammatory response: malaise, fever, ↑ heart rate, ↑ WBC count, ↓ appetite.</p></div>
+</div>
+<div class="callout"><b>Using released proteins to localize damage — classic exam-relevant fact:</b> elevated serum <b>amylase</b> → pancreatic damage. Elevated <b>creatine kinase-MB</b> or <b>cardiac troponin</b> → myocardial damage. Pain location can also help localize tissue destruction.</div>
+</div>
+</details>
+</section>
+<section class="block" id="necrosis-types">
+<details class="topic" open="">
+<summary>The Four Types of Necrosis</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Type</th><th>Mechanism / typical cause</th><th>Appearance</th></tr>
+<tr><td><b>Coagulative</b> (most common)</td><td>Ischemic injury → loss of membrane electrochemical control → Ca2+ influx → mitochondrial dysfunction → membrane/nuclear degradation</td><td>Solid, denatured proteins; tissue architecture preserved for weeks</td></tr>
+<tr><td><b>Liquefactive</b></td><td>Rapid dissolution — classic in the brain (rich in degradative enzymes, little connective tissue support) or from bacterial infection/WBC enzyme activity</td><td>Liquefied area — abscess or cyst formation</td></tr>
+<tr><td><b>Fat</b></td><td>Trauma or pancreatitis → activated digestive enzymes attack fat cell membranes → triglyceride release → lipase hydrolysis → free fatty acids + glycerol → saponification (calcium soaps)</td><td>Chalky white tissue</td></tr>
+<tr><td><b>Caseous</b></td><td>Characteristic of tuberculosis lung damage; walled off by inflammatory WBCs</td><td>White, soft, fragile — resembles clumpy cheese; can persist indefinitely</td></tr>
+</table>
+<div class="note">Coagulative necrosis follows a predictable 4-step sequence regardless of the underlying cause: (1) ischemic injury → (2) loss of electrochemical gradient control → (3) calcium influx + mitochondrial dysfunction → (4) membrane/nuclear degradation.</div>
+</div>
+</details>
+</section>
+<section class="block" id="gangrene">
+<details class="topic" open="">
+<summary>Gangrene</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Type</th><th>Necrosis basis</th><th>Key features</th></tr>
+<tr><td>Dry gangrene</td><td>Coagulative necrosis</td><td>Blackened, dry, wrinkled tissue with a clear demarcation line; extremities only</td></tr>
+<tr><td>Wet gangrene</td><td>Liquefactive necrosis</td><td>Cold, black, foul-smelling (bacterial invasion); typically internal organs; <b>life-threatening</b> — rapid spread + toxin release into bloodstream</td></tr>
+<tr><td>Gas gangrene</td><td><i>Clostridium</i> (anaerobic) infection of necrotic tissue</td><td>Gas bubble formation; toxins/enzymes drive rapid spread; can be fatal without rapid aggressive treatment</td></tr>
+</table>
+</div>
+</details>
+</section>
+<section class="block" id="apoptosis">
+<details class="topic" open="">
+<summary>Apoptosis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Tidy vs. messy — the core contrast</h4><p>Necrosis: messy, inflammatory, collateral damage. Apoptosis: tidy, no inflammation — apoptotic cells are quickly ingested by neighbors with minimal tissue disruption.</p></div>
+<div class="fact warn"><h4>Apoptosis is common, not rare</h4><p>More than half of fetal nerve cells undergo apoptosis during development. &gt;95% of thymus-generated T lymphocytes are induced to undergo apoptosis. These are entirely normal, necessary physiologic processes.</p></div>
+</div>
+<div class="danger"><b>Apoptosis in disease — a genuinely surprising fact:</b> tissue death after a myocardial infarction is estimated to be only about <b>20% necrotic and 80% apoptotic</b>. Cancer cell death from radiation/chemotherapy is believed to be primarily apoptotic as well.</div>
+<div class="note">Apoptotic cell counts are hard to measure directly in tissue because neighboring cells rapidly ingest apoptotic cells — so even though the process is common, you rarely "see" much evidence of it on a snapshot.</div>
+</div>
+</details>
+</section>
+<!-- ================= ETIOLOGY ================= -->
+<section class="block" id="ischemia-hypoxia">
+<details class="topic" open="">
+<summary>Ischemia &amp; Hypoxic Injury</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Why ischemia is worse than hypoxia alone</h4><p>Ischemia doesn't just cut oxygen — it also lets metabolic wastes accumulate and cuts off nutrients needed for glycolysis. This is why ischemia is the most common cause of cell injury in clinical medicine and injures cells faster than hypoxia by itself.</p></div>
+<div class="fact"><h4>The cascade</h4><p>↓ O2 to mitochondria → ATP production stalls → Na+-K+ and Ca2+ pumps fail → Na+ accumulates → hydropic swelling; excess Ca2+ collects in mitochondria, worsening dysfunction. Anaerobic glycolysis provides a little ATP but produces pyruvate → lactate → cellular acidification (detectable as lactic acidosis on labs).</p></div>
+</div>
+<div class="note">Ischemic injury is reversible up to a point — cell death occurs once plasma, mitochondrial, and lysosomal membranes are critically damaged. Death from ischemia typically takes minutes to hours to fully develop.</div>
+</div>
+</details>
+</section>
+<section class="block" id="reperfusion">
+<details class="topic" open="">
+<summary>Reperfusion Injury</summary>
+<div class="topic-body">
+<div class="danger"><b>The counterintuitive core fact:</b> most cellular damage from an ischemic event actually occurs AFTER blood flow is restored — not during the ischemia itself.</div>
+<div class="fact-grid">
+<div class="fact"><h4>Three components of ischemia-reperfusion injury</h4><p>(1) Calcium overload, (2) reactive oxygen species (free radical) formation, (3) subsequent inflammation.</p></div>
+<div class="fact warn"><h4>Why calcium floods in on reperfusion</h4><p>Restored blood is high in calcium; cells have depleted ATP and can't control ion flux — calcium accumulates in cytoplasm, triggering apoptosis or activating lipid-degrading enzymes (lipid peroxidation).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Why reperfusion generates free radicals</h4><p>Ischemia lets ATP precursors (ADP, pyruvate) build up. When oxygen returns, a disorganized burst of high-energy electrons partially reduces oxygen, forming reactive oxygen species (superoxide, peroxide, hydroxyl radicals) — these damage membranes, denature proteins, and disrupt chromosomes.</p></div>
+<div class="fact warn"><h4>The inflammatory tail</h4><p>Ischemia-reperfusion is often followed by a generalized inflammatory state that can cause ongoing cellular/organ damage for days to weeks — recruited WBCs release enzymes that further damage the area.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="nutritional-injury">
+<details class="topic" open="">
+<summary>Nutritional Injury</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Common causes of malnutrition</h4><p>Poverty, chronic alcoholism, acute/chronic illness, self-imposed dietary restriction, malabsorption syndromes.</p></div>
+<div class="fact warn"><h4>Cell-type-specific vulnerability</h4><p>Iron deficiency → primarily affects RBCs. Vitamin D deficiency → primarily affects bone. All cells need glucose + amino/fatty acid building blocks universally.</p></div>
+</div>
+<p style="margin-top:10px;"><b>High-yield vitamin deficiency pairs:</b></p>
+<table class="compare">
+<tr><th>Vitamin</th><th>Deficiency syndrome</th></tr>
+<tr><td>A</td><td>Night blindness, xerophthalmia; vulnerability to infection (esp. measles)</td></tr>
+<tr><td>D</td><td>Rickets (children), osteomalacia (adults)</td></tr>
+<tr><td>E</td><td>Spinocerebellar degeneration, hemolytic anemia</td></tr>
+<tr><td>K</td><td>Bleeding diathesis (cofactor for clotting factors II, VII, IX, X)</td></tr>
+<tr><td>B1 (thiamine)</td><td>Beriberi, Wernicke syndrome, Korsakoff syndrome</td></tr>
+<tr><td>Niacin</td><td>Pellagra — "3 D's": dementia, dermatitis, diarrhea</td></tr>
+<tr><td>B12</td><td>Megaloblastic pernicious anemia + posterolateral spinal cord degeneration</td></tr>
+<tr><td>C</td><td>Scurvy</td></tr>
+<tr><td>Folate</td><td>Megaloblastic anemia, neural tube defects</td></tr>
+</table>
+<p style="margin-top:10px;"><b>Trace element deficiencies:</b></p>
+<table class="compare">
+<tr><th>Element</th><th>Deficiency features</th></tr>
+<tr><td>Zinc</td><td>Acrodermatitis enteropathica (rash around eyes/mouth/nose/anus), growth retardation, impaired wound healing/immunity</td></tr>
+<tr><td>Iron</td><td>Hypochromic microcytic anemia</td></tr>
+<tr><td>Iodine</td><td>Goiter, hypothyroidism</td></tr>
+<tr><td>Copper</td><td>Muscle weakness, neurologic defects, abnormal collagen cross-linking</td></tr>
+<tr><td>Selenium</td><td>Myopathy, cardiomyopathy (Keshan disease)</td></tr>
+</table>
+<div class="callout"><b>Excess nutrients — the diabetes paradox:</b> in diabetes, cells needing insulin for glucose uptake are deficient, so glucose stays in the bloodstream — but neurons (which DON'T need insulin for glucose uptake) end up exposed to abnormally high intracellular glucose regardless. BMI &gt;25 kg/m² already imparts a health risk from excess caloric intake.</div>
+</div>
+</details>
+</section>
+<!-- ================= AGING ================= -->
+<section class="block" id="aging-vs-disease">
+<details class="topic" open="">
+<summary>Aging vs. Disease</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>They're theoretically distinct</h4><p>Maximum human lifespan (oldest documented: 122 years, 164 days) appears limited by the aging process itself, not by disease. The elderly are more vulnerable to disease, but aging and disease are generally viewed as separate phenomena — "pathologic aging" distinguishes abnormal from normal aging.</p></div>
+<div class="fact warn"><h4>...but the line is genuinely blurry</h4><p>Normal aging includes some bone loss — but too much becomes osteoporosis (a disease). Some arterial stiffening is normal aging — but at what point does it become pathologic? This ambiguity persists because we can't yet cleanly separate universal cellular aging processes from reversible disease effects.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hallmarks-of-aging">
+<details class="topic" open="">
+<summary>Hallmarks of Aging</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">Cellular aging = cumulative decline in proliferative/reparative capacity + accumulated cellular/molecular damage from environmental exposure. Twelve current hallmarks provide the organizing framework:</p>
+<div class="fact-grid">
+<div class="fact"><h4>The full list of 12</h4><ul>
+<li>Genomic instability</li>
+<li>Telomere attrition</li>
+<li>Epigenetic alterations</li>
+<li>Loss of proteostasis</li>
+<li>Disabled autophagy</li>
+<li>Deregulated nutrient sensing</li>
+<li>Mitochondrial dysfunction</li>
+<li>Cellular senescence</li>
+<li>Stem cell exhaustion</li>
+<li>Altered intercellular communication</li>
+<li>Chronic inflammation</li>
+<li>Dysbiosis</li>
+</ul></div>
+<div class="fact warn"><h4>DNA damage &amp; repair</h4><p>DNA damage accumulates from UV radiation, normal metabolic oxidative stress, and replication errors. Aging repair systems fall behind → inhibited cell replication or triggered apoptosis. Support: premature aging syndromes are linked to defective DNA repair mechanisms.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Telomeres &amp; the Hayflick experiments</h4><p>Hayflick showed fibroblasts in culture divide only a finite number of times — cells from older donors divided fewer times than cells from younger donors. Telomeres (chromosome end-caps) shorten with each division until a critical point triggers dormancy/death. <b>Telomerase</b> rebuilds telomeres — active in germ cells (near-immortal) and stem cells (lower level); notably, many cancer cell types also produce telomerase, while most differentiated somatic cells don't.</p></div>
+<div class="fact"><h4>Free radical theory &amp; sirtuins</h4><p>Larger animals (slower metabolic rate) tend to live longer — supporting the idea that metabolic rate drives oxygen radical production, and cumulative radical damage (especially to membranes) drives aging. Antioxidant defenses weaken over time, letting damage accumulate. <b>Sirtuins</b> link caloric restriction to extended lifespan — they help regulate DNA repair and prevent apoptosis in nutrient-deprived states.</p></div>
+</div>
+<div class="callout"><b>Dysbiosis and aging — a genuinely striking finding:</b> fecal microbiota transplant (FMT) from OLD mice to YOUNG mice up-regulated inflammatory cytokines in the young mice. FMT from YOUNG mice to OLD mice improved cognition and hippocampal structure in the old mice. The microbiome itself appears to be a modifiable target for anti-aging strategies.</div>
+</div>
+</details>
+</section>
+<section class="block" id="physiologic-aging">
+<details class="topic" open="">
+<summary>Physiologic Changes of Aging by System</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">The general pattern across every system: decreased functional reserve and reduced ability to adapt to demands — often tied to stem cell exhaustion and inability to replace senescent cells.</p>
+<table class="compare">
+<tr><th>System</th><th>Key changes</th></tr>
+<tr><td>Cardiovascular</td><td>↓ Vessel elasticity (calcification); ↓ heart muscle fiber number with ↑ individual fiber size; ↓ filling capacity/stroke volume; ↓ baroreceptor sensitivity; vein valve degeneration</td></tr>
+<tr><td>Respiratory</td><td>↓ Chest wall compliance (costal cartilage calcification); ↓ alveolar ventilation; ↓ respiratory muscle strength; air trapping from ↓ lung elasticity</td></tr>
+<tr><td>Renal/urinary</td><td>↓ GFR (nephron loss — ⅓ to ½ reduction by age 70); ↓ urine-concentrating ability; ↓ H+ regulation ability</td></tr>
+<tr><td>Gastrointestinal</td><td>↓ Muscular contraction/esophageal emptying/bowel motility; ↓ HCl, enzyme, intrinsic factor production; ↓ hepatic enzyme/metabolic capacity; thinning gastric mucosa</td></tr>
+<tr><td>Neurologic/sensory</td><td>Neuron degeneration/atrophy (25–45% loss); ↓ neurotransmitters; ↓ nerve conduction velocity; taste bud loss; hearing changes</td></tr>
+<tr><td>Musculoskeletal</td><td>↓ Muscle mass; ↑ bone demineralization; ↑ joint degeneration/erosion/calcification</td></tr>
+<tr><td>Immune</td><td>↓ Inflammatory response; ↓ T-cell function (thymic involution)</td></tr>
+<tr><td>Integumentary</td><td>↓ Subcutaneous fat and elastin; sweat gland atrophy; epidermal arteriole atrophy → impaired temperature regulation</td></tr>
+</table>
+</div>
+</details>
+</section>
+<section class="block" id="somatic-death">
+<details class="topic" open="">
+<summary>Somatic Death</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Death of the entire organism — no inflammatory/immune response occurs (unlike localized cell death). General features: absence of respiration and heartbeat — though this alone is insufficient, since resuscitation can sometimes restore both.</p></div>
+<div class="fact warn"><h4>The postmortem timeline</h4><p>Minutes after cardiopulmonary arrest: body temperature falls, skin pales, fluids pool in dependent areas. Within <b>~6 hours</b>: calcium accumulation + ATP depletion → perpetual actin-myosin cross-bridging → <b>rigor mortis</b> (widespread muscle stiffening). Rigor mortis then gives way to flaccidity as tissue deteriorates. <b>24–48 hours:</b> putrefaction becomes apparent (postmortem autolysis — widespread lytic enzyme release).</p></div>
+</div>
+<div class="danger"><b>Brain death criteria</b> (needed because mechanical ventilation can maintain heartbeat/breathing despite a nonfunctional brain): unresponsiveness, flaccidity, absent brainstem reflexes (swallowing, gagging, pupil/eye movements), absent respiratory effort off the ventilator, absent electrical brain activity, and absent cerebral blood flow. Criteria can vary somewhat by region, but this core set is consistent.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 4 (Cellular Injury, Adaptation, and Aging) material. Redraw the three-responses and ischemia-reperfusion mind maps from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Injury mild/short-lived enough that the cell returns to normal once the stress is removed.", "answers": ["Reversible cell injury"]}, {"def": "Cellular swelling from water accumulation due to Na+-K+ pump failure \u2014 the first manifestation of most reversible injury.", "answers": ["Hydropic swelling", "oncosis", "Hydropic swelling (oncosis)"]}, {"def": "Decreased cell size/function in response to disuse, denervation, ischemia, starvation, lost trophic signals, or persistent injury.", "answers": ["Atrophy"]}, {"def": "Increased cell mass/functional capacity from a net increase in cellular protein content, without cell division.", "answers": ["Hypertrophy"]}, {"def": "Increased cell number via mitotic division, in cells capable of dividing.", "answers": ["Hyperplasia"]}, {"def": "Replacement of one differentiated cell type with another, better able to tolerate ongoing injury; fully reversible.", "answers": ["Metaplasia"]}, {"def": "Disorganized cellular appearance (abnormal size/shape/arrangement) \u2014 an adaptive effort gone wrong; considered preneoplastic.", "answers": ["Dysplasia"]}, {"def": "Severe dysplasia involving the entire thickness of the epithelium.", "answers": ["Carcinoma in situ"]}, {"def": "Pathologic, messy cell death from external injury \u2014 cell rupture, content spillage, and inflammation.", "answers": ["Necrosis"]}, {"def": "Programmed, \"tidy\" cell death from intracellular signaling \u2014 no rupture, no inflammation; can be normal or pathologic.", "answers": ["Apoptosis"]}, {"def": "The most common necrosis type; denatured proteins, tissue architecture preserved for weeks; typically from ischemia.", "answers": ["Coagulative necrosis"]}, {"def": "Rapid dissolution of dead tissue into liquid debris; classic in the brain or with bacterial abscess formation.", "answers": ["Liquefactive necrosis"]}, {"def": "Death of adipose tissue, classically from pancreatitis/trauma; forms calcium soaps (saponification), appears chalky white.", "answers": ["Fat necrosis"]}, {"def": "Cheese-like, walled-off necrosis characteristic of tuberculosis-damaged lung tissue.", "answers": ["Caseous necrosis"]}, {"def": "Necrosis of a large tissue area, usually from major blood supply interruption; dry, wet, or gas subtypes.", "answers": ["Gangrene"]}, {"def": "Interrupted blood flow to a tissue \u2014 injures cells faster than hypoxia alone because it also blocks nutrient delivery and waste removal.", "answers": ["Ischemia"]}, {"def": "Cellular damage occurring after blood flow is restored to previously ischemic tissue \u2014 often causes more damage than the ischemia itself.", "answers": ["Reperfusion injury"]}, {"def": "Molecules with an unpaired electron (superoxide, peroxide, hydroxyl radicals) that damage membranes, proteins, and DNA.", "answers": ["Free radicals", "reactive oxygen species", "Free radicals (reactive oxygen species)"]}, {"def": "Protective end-cap of a chromosome that shortens with each cell division, eventually triggering dormancy or death.", "answers": ["Telomere"]}, {"def": "The enzyme that rebuilds telomeres \u2014 active in germ cells (near-immortality) and, notably, many cancer cells.", "answers": ["Telomerase"]}, {"def": "The finite number of divisions a cell line can undergo before becoming dormant or dying, tied to telomere shortening.", "answers": ["Hayflick limit"]}, {"def": "A protein family linking caloric restriction to longevity \u2014 help regulate DNA repair and prevent apoptosis.", "answers": ["Sirtuins"]}, {"def": "Derangement of the normal microbiome, implicated as a contributor to aging and disease.", "answers": ["Dysbiosis"]}, {"def": "Death of the entire organism \u2014 absence of respiration and heartbeat, with no inflammatory/immune response (unlike localized cell death).", "answers": ["Somatic death"]}, {"def": "Post-death muscle stiffening from perpetual actin-myosin cross-bridging as ATP depletes and calcium accumulates; appears within ~6 hours.", "answers": ["Rigor mortis"]}, {"def": "An age-related \"wear and tear\" pigment that accumulates in atrophied cells' residual lysosomal vesicles, giving a yellow-brown appearance.", "answers": ["Lipofuscin"]}];
+const QUIZ_TEACHBACK = [{"topic": "Hydropic Swelling", "points": ["<b>The mechanism:</b> Na+-K+ pump failure (which requires ATP) \u2192 sodium accumulates intracellularly \u2192 creates an osmotic gradient \u2192 water rushes in. Any\u2026", "<b>What it looks like:</b> Large, pale cytoplasm; dilated endoplasmic reticulum; swollen mitochondria. Severe cases: ER ruptures, forming large water-filled vacuoles."]}, {"topic": "Intracellular Accumulations", "points": ["<b>Lipids \u2014 fatty liver:</b> Common site: liver. Alcohol causes fatty liver via direct toxicity plus preferential metabolism of alcohol over lipid. Fat-filled cells compress\u2026", "<b>Carbohydrates \u2014 glycogen & mucopolysaccharidoses:</b> Diabetes mellitus is the common cause of excess glycogen storage \u2014 impaired glucose uptake \u2192 high serum/urine glucose \u2192 renal\u2026", "<b>Proteins \u2014 two mechanisms:</b> (1) Renal tubule cells recapture leaked plasma proteins via endocytosis when glomeruli become abnormally permeable. (2) Cellular stress denatures/aggregates proteins\u2026", "<b>Pigments & particles:</b> Endogenous: melanin (normal in tanned skin), hemosiderin and bilirubin (from hemoglobin breakdown \u2014 excess suggests RBC breakdown, iron overload, or\u2026", "<b>Calcium deposits:</b> From altered calcium intake/excretion/metabolism \u2014 e.g., impaired renal phosphate excretion \u2192 calcium phosphate deposits in eye/heart/vessels. Heart valve calcification can\u2026", "<b>Clinical marker: TB tubercles:</b> Dead/dying tissue often calcifies and shows as dense areas on x-ray \u2014 calcified TB lung damage is specifically called a\u2026", "Reversibility rule for this whole section: with the exception of inorganic particles (mineral dusts, etc.), intracellular accumulations are generally reversible if the\u2026"]}, {"topic": "Atrophy", "points": ["<b>Six general causes:</b> Disuse, denervation, ischemia, nutrient starvation, interruption of endocrine/trophic signals, and persistent cell injury.", "<b>The logic behind it:</b> Atrophy is the cell's effort to minimize energy/nutrient consumption by reducing the number of intracellular organelles and structures.", "<b>Worked examples by cause:</b> Disuse: bed rest/casting \u2192 skeletal muscle shrinkage (reverses with activity). Denervation: loss of nerve stimulation \u2192 similar muscle shrinkage. Ischemia:\u2026", "<b>Two protein-degradation pathways:</b> Ubiquitin-proteasome system: tags and digests targeted proteins. Autophagy: lysosomes fuse with cellular structures for hydrolytic degradation \u2014 this also happens\u2026"]}, {"topic": "Hypertrophy", "points": ["<b>Mechanism:</b> Net increase in cellular protein content \u2192 increased cell mass AND functional capacity \u2014 no cell division involved.", "<b>Why it matters most for non-dividing cells:</b> Especially important for cells unable to undergo mitosis (like differentiated cardiac/skeletal muscle cells) \u2014 hypertrophy is their only option to\u2026", "<b>Physiologic examples:</b> Exercise-induced skeletal muscle growth (primarily hypertrophy, though muscle satellite/stem cells can also divide). Trophic-hormone-driven hypertrophy in breast/uterine tissue.", "<b>Pathophysiologic examples:</b> Liver enlargement from toxin exposure; cardiac muscle hypertrophy from chronic hypertension (increased workload)."]}, {"topic": "Hyperplasia", "points": ["<b>Mechanism & triggers:</b> Increased cell number via mitosis \u2014 only possible in cells capable of dividing. Triggered by increased physiologic demand, hormonal stimulation,\u2026", "<b>Demand-induced examples:</b> \u2191 RBC production at high altitude; liver enlargement for drug detoxification.", "<b>Hormone-induced examples:</b> Estrogen \u2192 increased endometrial/uterine stromal cell number. Dysregulated hormones/growth factors \u2192 pathologic hyperplasia (thyroid or prostate enlargement).", "<b>Chronic irritation examples:</b> Calluses/corns (chronic skin friction); bladder epithelial hyperplasia from chronic cystitis inflammation."]}, {"topic": "Metaplasia & Dysplasia", "points": ["<b>Metaplasia:</b> Replacement of one differentiated cell type with another better suited to tolerate ongoing injury. Classic example: cigarette smoke irritation converts\u2026", "<b>Dysplasia:</b> Disorganized cell appearance (size/shape/arrangement abnormalities) \u2014 an adaptive effort \"gone astray.\" Most common in hyperplastic squamous epithelium, but also seen\u2026", "Carcinoma in situ = severe dysplasia involving the FULL thickness of the epithelium. Mild dysplasia may still be reversible if the cause\u2026"]}, {"topic": "Necrosis \u2014 Overview", "points": ["<b>Morphologic changes:</b> Shrunken (pyknotic) nucleus \u2192 degrades (karyolysis); cell volume swells; ribosomes disperse; plasma and organelle membranes disrupt. Loss of plasma membrane\u2026", "<b>Systemic signs of tissue death:</b> General inflammatory response: malaise, fever, \u2191 heart rate, \u2191 WBC count, \u2193 appetite.", "Using released proteins to localize damage \u2014 classic exam-relevant fact: elevated serum amylase \u2192 pancreatic damage. Elevated creatine kinase-MB or cardiac troponin\u2026"]}, {"topic": "Apoptosis", "points": ["<b>Tidy vs. messy \u2014 the core contrast:</b> Necrosis: messy, inflammatory, collateral damage. Apoptosis: tidy, no inflammation \u2014 apoptotic cells are quickly ingested by neighbors with minimal tissue\u2026", "<b>Apoptosis is common, not rare:</b> More than half of fetal nerve cells undergo apoptosis during development. >95% of thymus-generated T lymphocytes are induced to undergo\u2026", "Apoptosis in disease \u2014 a genuinely surprising fact: tissue death after a myocardial infarction is estimated to be only about 20% necrotic\u2026"]}, {"topic": "Ischemia & Hypoxic Injury", "points": ["<b>Why ischemia is worse than hypoxia alone:</b> Ischemia doesn't just cut oxygen \u2014 it also lets metabolic wastes accumulate and cuts off nutrients needed for glycolysis. This\u2026", "<b>The cascade:</b> \u2193 O2 to mitochondria \u2192 ATP production stalls \u2192 Na+-K+ and Ca2+ pumps fail \u2192 Na+ accumulates \u2192 hydropic swelling;\u2026"]}, {"topic": "Reperfusion Injury", "points": ["<b>Three components of ischemia-reperfusion injury:</b> (1) Calcium overload, (2) reactive oxygen species (free radical) formation, (3) subsequent inflammation.", "<b>Why calcium floods in on reperfusion:</b> Restored blood is high in calcium; cells have depleted ATP and can't control ion flux \u2014 calcium accumulates in cytoplasm,\u2026", "<b>Why reperfusion generates free radicals:</b> Ischemia lets ATP precursors (ADP, pyruvate) build up. When oxygen returns, a disorganized burst of high-energy electrons partially reduces oxygen,\u2026", "<b>The inflammatory tail:</b> Ischemia-reperfusion is often followed by a generalized inflammatory state that can cause ongoing cellular/organ damage for days to weeks \u2014\u2026", "The counterintuitive core fact: most cellular damage from an ischemic event actually occurs AFTER blood flow is restored \u2014 not during the\u2026"]}, {"topic": "Nutritional Injury", "points": ["<b>Common causes of malnutrition:</b> Poverty, chronic alcoholism, acute/chronic illness, self-imposed dietary restriction, malabsorption syndromes.", "<b>Cell-type-specific vulnerability:</b> Iron deficiency \u2192 primarily affects RBCs. Vitamin D deficiency \u2192 primarily affects bone. All cells need glucose + amino/fatty acid\u2026", "Excess nutrients \u2014 the diabetes paradox: in diabetes, cells needing insulin for glucose uptake are deficient, so glucose stays in the bloodstream\u2026"]}, {"topic": "Aging vs. Disease", "points": ["<b>They're theoretically distinct:</b> Maximum human lifespan (oldest documented: 122 years, 164 days) appears limited by the aging process itself, not by disease. The\u2026", "<b>...but the line is genuinely blurry:</b> Normal aging includes some bone loss \u2014 but too much becomes osteoporosis (a disease). Some arterial stiffening is normal aging\u2026"]}, {"topic": "Hallmarks of Aging", "points": ["<b>DNA damage & repair:</b> DNA damage accumulates from UV radiation, normal metabolic oxidative stress, and replication errors. Aging repair systems fall behind \u2192 inhibited\u2026", "<b>Telomeres & the Hayflick experiments:</b> Hayflick showed fibroblasts in culture divide only a finite number of times \u2014 cells from older donors divided fewer times\u2026", "<b>Free radical theory & sirtuins:</b> Larger animals (slower metabolic rate) tend to live longer \u2014 supporting the idea that metabolic rate drives oxygen radical production,\u2026", "Dysbiosis and aging \u2014 a genuinely striking finding: fecal microbiota transplant (FMT) from OLD mice to YOUNG mice up-regulated inflammatory cytokines in\u2026"]}, {"topic": "Somatic Death", "points": ["<b>Definition:</b> Death of the entire organism \u2014 no inflammatory/immune response occurs (unlike localized cell death). General features: absence of respiration and\u2026", "<b>The postmortem timeline:</b> Minutes after cardiopulmonary arrest: body temperature falls, skin pales, fluids pool in dependent areas. Within ~6 hours : calcium accumulation\u2026", "Brain death criteria (needed because mechanical ventilation can maintain heartbeat/breathing despite a nonfunctional brain): unresponsiveness, flaccidity, absent brainstem reflexes (swallowing, gagging, pupil/eye\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

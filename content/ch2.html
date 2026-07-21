@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Homeostasis, Allostasis &amp; Stress — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.95rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=2" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Homeostasis, Allostasis &amp; Stress</p>
+<span class="brand-sub">Chapter 2 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Foundations</div>
+<a href="#homeostasis">Homeostasis</a>
+<a href="#allostasis">Allostasis</a>
+<div class="grp-title">Stress as a Concept</div>
+<a href="#stress-definitions">Defining Stress</a>
+<a href="#selye-gas">Selye &amp; the General Adaptation Syndrome</a>
+<a href="#alarm-stage">The Alarm Stage — HPA Axis &amp; SAM System</a>
+<a href="#resistance-stage">Resistance &amp; Exhaustion Stages</a>
+<div class="grp-title">Neurohormonal Mediators</div>
+<a href="#catecholamines">Catecholamines</a>
+<a href="#glucocorticoids">Cortisol &amp; Aldosterone</a>
+<a href="#endorphins">Endorphins, Enkephalins &amp; Immune Cytokines</a>
+<a href="#sex-hormones">Sex Hormones</a>
+<a href="#gh-prolactin-oxytocin">Growth Hormone, Prolactin &amp; Oxytocin</a>
+<div class="grp-title">Adaptation &amp; Illness</div>
+<a href="#adaptation-resilience">Adaptation, Coping &amp; Resilience</a>
+<a href="#habituation">Perception, Distress &amp; Habituation</a>
+<a href="#allostatic-overload">Allostatic Overload &amp; Illness</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Homeostasis, Allostasis &amp; Stress</h1>
+<p>How the body maintains internal stability, how it adapts to demands, and what happens when adaptation becomes overload. Built from your Chapter 2 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Homeostasis</dt><dd>Maintaining internal conditions in a stable state around a narrow "set point," via negative feedback loops.</dd></div>
+<div class="term"><dt>Milieu intérieur</dt><dd>Claude Bernard's term for the stable internal environment necessary for survival, independent of the external environment.</dd></div>
+<div class="term"><dt>Allostasis</dt><dd>The dynamic process of achieving stability through change — varying physiologic parameters to match resources to environmental demands.</dd></div>
+<div class="term"><dt>Stressor</dt><dd>Anything that throws the body out of allostatic balance (Sapolsky's definition).</dd></div>
+<div class="term"><dt>Stress response</dt><dd>The body's effort to restore allostatic balance after a stressor (Sapolsky's definition).</dd></div>
+<div class="term"><dt>General adaptation syndrome (GAS)</dt><dd>Selye's model of the body's nonspecific response to any stressor, in three stages: alarm, resistance, exhaustion.</dd></div>
+<div class="term"><dt>Alarm stage</dt><dd>The fight-or-flight stage of GAS — hypothalamus activates the SNS and HPA axis in response to a stressor.</dd></div>
+<div class="term"><dt>Resistance (adaptation) stage</dt><dd>The GAS stage where the body mobilizes glucose, fatty acids, and amino acids to manage an ongoing stressor.</dd></div>
+<div class="term"><dt>Exhaustion stage</dt><dd>The GAS stage where prolonged stress causes glucocorticoid dysregulation, loss of resistance, and "diseases of adaptation."</dd></div>
+<div class="term"><dt>HPA axis</dt><dd>Hypothalamic-pituitary-adrenal axis — CRH → ACTH → cortisol; the slower hormonal arm of the stress response.</dd></div>
+<div class="term"><dt>Sympathetic-adrenal-medullary (SAM) system</dt><dd>The fast-acting arm of the stress response — SNS activation triggering adrenal medulla release of catecholamines.</dd></div>
+<div class="term"><dt>CRH (corticotropin-releasing hormone)</dt><dd>Released by the hypothalamic paraventricular nucleus (PVN); activates both the SNS and the anterior pituitary (ACTH release).</dd></div>
+<div class="term"><dt>ACTH</dt><dd>Adrenocorticotropic hormone, released by the anterior pituitary in response to CRH; stimulates the adrenal cortex to release cortisol.</dd></div>
+<div class="term"><dt>Cortisol</dt><dd>The primary glucocorticoid; mobilizes glucose/protein/fat stores, suppresses inflammation and immune function, slower onset but longer duration than catecholamines.</dd></div>
+<div class="term"><dt>Aldosterone</dt><dd>The primary mineralocorticoid; promotes sodium reabsorption/potassium excretion in the kidney, expanding fluid volume and raising blood pressure.</dd></div>
+<div class="term"><dt>Allostatic load</dt><dd>The cumulative physiologic "wear and tear" cost of repeated or chronic allostatic responses.</dd></div>
+<div class="term"><dt>Allostatic overload</dt><dd>When adaptation mechanisms are overwhelmed or inadequate, producing pathophysiologic states across multiple body systems.</dd></div>
+<div class="term"><dt>Resilience</dt><dd>The capacity to adapt successfully to stress/adversity, preventing disease and mitigating allostatic load.</dd></div>
+<div class="term"><dt>Maladaptation</dt><dd>Ineffective, inadequate, or inappropriate change in response to altered circumstances.</dd></div>
+<div class="term"><dt>Coping</dt><dd>A behavioral adaptive response to a stressor; can be functional (health-promoting) or dysfunctional (maladaptive, e.g., overeating, substance use).</dd></div>
+<div class="term"><dt>Distress</dt><dd>The experience of perceiving an inability to cope with a stressor — further escalates catecholamine and glucocorticoid release.</dd></div>
+<div class="term"><dt>Habituation</dt><dd>Adapting to a repeated stressor by training the hypothalamus to react less forcefully to it (e.g., no longer noticing airport noise).</dd></div>
+<div class="term"><dt>Tend-and-befriend response</dt><dd>An alternative to fight-or-flight, thought to be more common in females, mediated by oxytocin and endogenous opioids — produces a calming, affiliative response to stress.</dd></div>
+<div class="term"><dt>Psychoneuroimmunology</dt><dd>The field studying interactions among the nervous, endocrine, and immune systems, especially regarding stress and its effects on health.</dd></div>
+</dl>
+</section>
+<!-- ================= HOMEOSTASIS ================= -->
+<section class="block" id="homeostasis">
+<details class="topic" open="">
+<summary>Homeostasis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Word origin &amp; core idea</h4><p>From Greek <i>homeo</i> ("similar") + <i>stasis</i> ("standing still") — maintaining internal conditions stable around a narrow ideal set point.</p></div>
+<div class="fact"><h4>Claude Bernard (19th century)</h4><p>Described the <i>milieu intérieur</i> — the idea that vital physiologic mechanisms exist to maintain a uniform, constant internal environment necessary for survival, independent of the external environment. Disease occurs when the body fails to respond appropriately to threats to this stability.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Walter Cannon (1932, <i>The Wisdom of the Body</i>)</h4><p>Coined "homeostasis" formally — each biochemical/physiologic variable (temperature, O2, sodium, calcium, glucose) is held within a narrow set-point range via <b>negative feedback loops</b> that sense and correct deviations.</p></div>
+<div class="fact"><h4>Examples of homeostatic systems</h4><p>Baroreceptor response to BP changes; ADH release in response to serum osmolality changes; hypothalamic thermoregulation; central chemoreceptor response to PaCO2; parathyroid response to serum calcium.</p></div>
+</div>
+<div class="note">Homeostasis is a necessary starting concept, but has been criticized as too simple to capture the full complexity of how organisms actually maintain stability — which is exactly the gap allostasis was developed to fill.</div>
+</div>
+</details>
+</section>
+<!-- ================= ALLOSTASIS ================= -->
+<section class="block" id="allostasis">
+<details class="topic" open="">
+<summary>Allostasis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Word origin &amp; core idea</h4><p>From Greek <i>allo</i> ("variable"/"different") + <i>stasis</i>. Sterling and Eyer (1988) — the ability to successfully adapt to challenges by <b>varying</b> internal parameters to match environmental demands, rather than holding a single fixed set point.</p></div>
+<div class="fact warn"><h4>Why fixed set points aren't enough</h4><p>Different circumstances require different set points — respiratory rate must rise during exercise or pneumonia. Allostasis is brain-orchestrated: parameters are continuously reevaluated and readjusted to match resources to situational needs.</p></div>
+</div>
+<div class="danger"><b>The shock example — a key illustration of trade-offs:</b> in shock, blood flow to the brain and heart is preserved by <i>reducing</i> perfusion to the kidneys, skin, and GI tract. A change that's detrimental to one system (kidneys not making urine) supports survival of the organism as a whole. This is the essence of allostasis — stability achieved <i>through</i> change, not by holding everything constant.</div>
+<div class="callout">Allostasis is now understood to apply broadly — not just to physical stimuli, but to social interactions, discrimination/racism, low socioeconomic status, childhood trauma, mass violence exposure, social media pressure, pandemics, environmental pollutants, climate uncertainty, and everyday work/life demands.</div>
+</div>
+</details>
+</section>
+<!-- ================= STRESS DEFINITIONS ================= -->
+<section class="block" id="stress-definitions">
+<details class="topic" open="">
+<summary>Defining Stress</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Why "stress" is genuinely ambiguous</h4><p>Used to mean a causal factor ("they're experiencing stress"), a state of tension ("I feel stressed"), AND a bodily response — all at once, across health, psychology, and sociology literature.</p></div>
+<div class="fact warn"><h4>Sapolsky's clarifying distinction</h4><p><b>Stressor:</b> anything that throws the body out of allostatic balance. <b>Stress response:</b> the body's effort to restore that balance. This pairing is precise and commonly tested.</p></div>
+</div>
+<div class="note">The stress response is meant to be helpful, at least short-term — it becomes damaging specifically when repeatedly activated or when it fails to switch off.</div>
+</div>
+</details>
+</section>
+<!-- ================= SELYE & GAS ================= -->
+<section class="block" id="selye-gas">
+<details class="topic" open="">
+<summary>Selye &amp; the General Adaptation Syndrome</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The serendipitous discovery (1930s)</h4><p>Selye injected rats with varied hormonal/tissue extracts expecting different responses per substance — instead found the <b>same three changes</b> every time: adrenal cortex enlargement, lymphatic organ shrinkage (thymus, spleen, lymph nodes), and bleeding peptic ulcers.</p></div>
+<div class="fact warn"><h4>The generalization</h4><p>The same triad appeared with completely different noxious stimuli (temperature extremes, surgery, forced exercise) — leading Selye to conclude this was a <b>nonspecific</b> response to any demand. He coined "stressors" for the causative agents and "general adaptation syndrome (GAS)" for the response pattern.</p></div>
+</div>
+<div class="callout"><b>Modern critique of Selye's model:</b> too simplistic — the body does NOT produce identical responses to all stressor types; hormone release patterns differ by stressor type/severity/duration. Also, Selye initially focused only on physical/biological stimuli; by the 1970s, researchers (including Selye) recognized that <i>perception</i> of a stimulus matters, and responses can be behavioral as well as physiologic.</div>
+<table class="compare">
+<tr><th>Alarm</th><th>Resistance</th><th>Exhaustion</th></tr>
+<tr><td>↑ Glucocorticoid secretion</td><td>Glucocorticoid secretion normalizes</td><td>↑ Glucocorticoid secretion → significant dysregulation</td></tr>
+<tr><td>↑ SNS activity</td><td>SNS activity normalizes</td><td>Diseases of adaptation</td></tr>
+<tr><td>↑ Epinephrine (some norepinephrine) from adrenal medulla</td><td>Catecholamine secretion normalizes</td><td>Loss of resistance to stressor; possible death</td></tr>
+<tr><td>Fight-or-flight manifestations</td><td>Resolution of fight-or-flight manifestations</td><td></td></tr>
+<tr><td>Reduced resistance to stressors</td><td>Increased resistance (adaptation)</td><td></td></tr>
+</table>
+</div>
+</details>
+</section>
+<!-- ================= ALARM STAGE ================= -->
+<section class="block" id="alarm-stage">
+<details class="topic" open="">
+<summary>The Alarm Stage — HPA Axis &amp; SAM System</summary>
+<div class="topic-body">
+<p>This is the fight-or-flight response (from Cannon's original work) — two parallel cascades from the same starting point, one fast, one slower.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Two Arms of the Alarm Stage</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">HYPOTHALAMUS (PVN) → CRH</text></g>
+<line class="mm-line" x1="380" x2="200" y1="56" y2="96"></line>
+<line class="mm-line" x1="520" x2="700" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="280" x="60" y="96"></rect><text font-size="12" text-anchor="middle" x="200" y="121">SAM system: activates SNS</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="280" x="560" y="96"></rect><text font-size="12" text-anchor="middle" x="700" y="121">HPA axis: anterior pituitary → ACTH</text></g>
+<line class="mm-line" x1="200" x2="200" y1="136" y2="170"></line>
+<g class="mm-leaf"><rect height="50" rx="6" width="280" x="60" y="170"></rect><text font-size="11" text-anchor="middle" x="200" y="192">Adrenal MEDULLA releases</text><text font-size="11" text-anchor="middle" x="200" y="208">epinephrine + norepinephrine</text></g>
+<line class="mm-line" x1="700" x2="700" y1="136" y2="170"></line>
+<g class="mm-leaf"><rect height="50" rx="6" width="280" x="560" y="170"></rect><text font-size="11" text-anchor="middle" x="700" y="192">Adrenal CORTEX releases</text><text font-size="11" text-anchor="middle" x="700" y="208">cortisol (glucocorticoid)</text></g>
+<line class="mm-line" x1="200" x2="450" y1="220" y2="255"></line>
+<line class="mm-line" x1="700" x2="450" y1="220" y2="255"></line>
+<text fill="var(--ink-soft)" font-size="11.5" text-anchor="middle" x="450" y="272">Fast (seconds) + slower/sustained (minutes) → coordinated stress response</text>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Trigger</h4><p>The hypothalamus continuously monitors internal/external environment; when it senses a stressor threatening homeostasis (physical or emotional, positive or negative — arguing, an infection, running for a bus, even winning the lottery), it activates GAS.</p></div>
+<div class="fact warn"><h4>Why there are two parallel pathways</h4><p>PVN-released CRH does double duty: it directly activates the SNS (fast catecholamine release) AND stimulates the anterior pituitary to release ACTH (slower cortisol release via the adrenal cortex) — the HPA axis and SAM system run in parallel, not in sequence.</p></div>
+</div>
+<div class="note">Once the pituitary is activated, the alarm stage progresses into the resistance stage.</div>
+</div>
+</details>
+</section>
+<!-- ================= RESISTANCE STAGE ================= -->
+<section class="block" id="resistance-stage">
+<details class="topic" open="">
+<summary>Resistance &amp; Exhaustion Stages</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Resistance (adaptation) stage</h4><p>SNS + adrenal medulla + adrenal cortex work at full force, mobilizing glucose, free fatty acids, and amino acids — elevated via cortisol and catecholamines. These resources fuel the brain and heart, and amino acids double as building blocks for later repair.</p></div>
+<div class="fact warn"><h4>Outcome of resistance</h4><p>If the stressor resolves, the organism returns to a steady state — though the new baseline may sit at a different set point than before (consistent with allostasis, not classic fixed-point homeostasis).</p></div>
+</div>
+<div class="danger"><b>Why the alarm stage can't persist:</b> if it did, the body would suffer wear and tear, permanent damage, and even death — this is the direct rationale for why the resistance stage must take over, and ultimately why prolonged stress without resolution leads to the exhaustion stage's dysregulation and "diseases of adaptation."</div>
+</div>
+</details>
+</section>
+<!-- ================= CATECHOLAMINES ================= -->
+<section class="block" id="catecholamines">
+<details class="topic" open="">
+<summary>Catecholamines — Norepinephrine &amp; Epinephrine</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Release pathway</h4><p>Cerebral cortex/limbic system (hippocampus, amygdala) appraise a stimulus as stressful → relay to hypothalamus → norepinephrine released directly by sympathetic neurons AND from the locus ceruleus (brainstem); epinephrine (+ some norepinephrine) released from the adrenal medulla into the bloodstream.</p></div>
+<div class="fact warn"><h4>Stimulus-dependent balance</h4><p>Cold exposure → SNS/norepinephrine response dominates. Emotional distress or acute hypoglycemia → greater adrenal medulla/epinephrine response. Note: the stress response can occur even without consciousness (comatose/sedated patients).</p></div>
+</div>
+<table class="compare">
+<tr><th>Tissue/organ</th><th>Catecholamine effect</th></tr>
+<tr><td>Heart</td><td>↑ Rate, ↑ conduction speed, ↑ contractility</td></tr>
+<tr><td>Respiratory tract</td><td>Bronchial smooth muscle relaxes → airway dilation</td></tr>
+<tr><td>Vascular smooth muscle (skin, mesenteric, kidney)</td><td>Constricts → reduces perfusion (diverts blood elsewhere)</td></tr>
+<tr><td>Vascular smooth muscle (skeletal muscle, lungs, heart)</td><td>Dilates → increases perfusion (to where it's needed)</td></tr>
+<tr><td>Peripheral vasculature</td><td>Constricts → increases blood pressure</td></tr>
+<tr><td>GI tract</td><td>↓ Peristalsis, sphincters contract, ↓ gastric acid secretion</td></tr>
+<tr><td>Eyes</td><td>Pupil/iris dilation; ciliary muscle relaxes for far vision</td></tr>
+<tr><td>Liver</td><td>Glycogenolysis + gluconeogenesis → ↑ glucose/energy</td></tr>
+<tr><td>CNS</td><td>Arousal, attention, vigilance</td></tr>
+</table>
+<div class="note">Norepinephrine specifically: primary vasoconstrictor of vascular smooth muscle, reduces gastric secretion, inhibits insulin secretion, dilates pupils. Epinephrine specifically: enhances myocardial contractility, ↑ heart rate/venous return/cardiac output, bronchodilation, ↑ glycogenolysis, inhibits insulin secretion. Both also influence proinflammatory cytokine production (IL-6, TNF-α).</div>
+</div>
+</details>
+</section>
+<!-- ================= GLUCOCORTICOIDS ================= -->
+<section class="block" id="glucocorticoids">
+<details class="topic" open="">
+<summary>Cortisol &amp; Aldosterone</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cortisol — the basics</h4><p>Lipid-soluble, so it crosses cell membranes to bind cytosolic/nuclear receptors — present in nearly every tissue. Released by the adrenal cortex in response to ACTH (itself triggered by CRH). Onset is <b>slower</b> than catecholamines, but duration is <b>longer</b>.</p></div>
+<div class="fact warn"><h4>Negative feedback</h4><p>Cortisol binds receptors on the hypothalamus and anterior pituitary to suppress further CRH/ACTH release — a classic negative feedback loop keeping cortisol within range.</p></div>
+</div>
+<table class="compare">
+<tr><th>Domain</th><th>Cortisol effects</th></tr>
+<tr><td>Metabolism</td><td>Catabolism of muscle, fat, lymphoid tissue, skin, bone; liver gluconeogenesis; opposes insulin's glucose transport into cells; ↑ appetite</td></tr>
+<tr><td>Fluid balance</td><td>Sodium and water retention</td></tr>
+<tr><td>Inflammation/infection</td><td>Suppressed inflammatory response; ↑ neutrophil release; ↓ new antibody release; ↓ T-lymphocyte production/function; ↓ eosinophils, basophils, monocytes</td></tr>
+<tr><td>Supports catecholamines</td><td>↑ epinephrine synthesis; enhanced vasoconstriction</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact"><h4>Cortisol's protein/glucose logic</h4><p>Anabolic in the liver (↑ protein synthesis) but catabolic in muscle/lymphoid/adipose/skin/bone — releasing amino acids for the liver to use. Stimulates gluconeogenesis (6–10x increase in amino-acid-to-glucose/ketoacid conversion) and preserves glucose for neurons by limiting uptake elsewhere.</p></div>
+<div class="fact warn"><h4>Chronic elevation is the problem</h4><p>Prolonged high cortisol → glucocorticoid receptor desensitization/down-regulation on immune cells → progressively fewer anti-inflammatory effects over time, and can eventually flip to <b>proinflammatory</b> effects.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Catecholamine-cortisol synergy/antagonism</h4><p>Catecholamines help release ACTH (supporting the HPA axis); cortisol supports adrenal medulla epinephrine synthesis (via the PNMT enzyme) and blood pressure/cardiac output maintenance. But in skeletal muscle, catecholamines actually <b>oppose</b> cortisol's catabolic effect.</p></div>
+<div class="fact tx"><h4>Aldosterone</h4><p>The primary mineralocorticoid. SNS activation → renin-angiotensin system → aldosterone release (fluid volume depletion also triggers this directly). Acts on kidney distal tubules/collecting ducts: reabsorbs sodium, excretes potassium — water follows sodium osmotically, so ECF volume and BP both rise. Angiotensin II itself is also a potent vasoconstrictor, reinforcing catecholamine-driven BP elevation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= ENDORPHINS ================= -->
+<section class="block" id="endorphins">
+<details class="topic" open="">
+<summary>Endorphins, Enkephalins &amp; Immune Cytokines</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Endogenous opioids</h4><p>Endorphins, enkephalins, dynorphins, endomorphins — small peptides produced in the CNS and elsewhere, released in response to stress, exercise, chocolate, laughter, massage, acupuncture. "Endorphin" = endogenous + morphine; raises pain threshold, produces sedation/euphoria, and can attenuate SNS activation by CRH during acute stress.</p></div>
+<div class="fact warn"><h4>Immune system connections both ways</h4><p>Immune cells (B/T lymphocytes, granulocytes, macrophages, monocytes) produce endogenous opioids in response to stressors/CRH/cytokines/catecholamines, and carry opioid receptors that modulate immune activity. Conversely, activated immune cells release <b>proinflammatory</b> cytokines that can enhance pain — a bidirectional loop.</p></div>
+</div>
+<div class="note"><b>IL-1</b> (from macrophages) can itself affect hypothalamic CRH production, and leukocytes can produce ACTH — the nervous, endocrine, and immune systems are genuinely intertwined, not three separate boxes.</div>
+<div class="callout">Stress-related microbiome disruption has been linked to MS, diabetes, psoriasis, IBS, depression, ADHD, and rheumatoid arthritis — an expanding area connecting stress physiology to a wide range of seemingly unrelated conditions.</div>
+</div>
+</details>
+</section>
+<!-- ================= SEX HORMONES ================= -->
+<section class="block" id="sex-hormones">
+<details class="topic" open="">
+<summary>Sex Hormones — Estrogen, Testosterone &amp; DHEA</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cortisol's reproductive suppression</h4><p>Excess stress/cortisol suppresses GnRH, LH, estradiol, and progesterone release — inhibiting female reproduction and affecting premenstrual symptoms. Estradiol, in turn, down-regulates brain glucocorticoid receptor binding.</p></div>
+<div class="fact warn"><h4>Androgens oppose glucocorticoid effects</h4><p>Testosterone and DHEA oppose cortisol's catabolic effects on bone, and its impact on lymphoid tissue/inflammatory cytokines/leukocytes. DHEA counteracts glucocorticoid-associated depressive symptoms; testosterone has antidepressant/antianxiety, mood-elevating effects.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Testosterone drops with stress</h4><p>Illness, surgery, strenuous exercise, and academic stress all significantly reduce circulating testosterone. Combined with vasopressin, testosterone enhances BP/HR reactivity and amplifies fight-or-flight.</p></div>
+<div class="fact tx"><h4>Tend-and-befriend</h4><p>Oxytocin (modulated by estrogen) and endogenous opioids are thought to produce a calming effect during stress — giving rise to the idea that females may show a "tend-and-befriend" response rather than classic fight-or-flight in some situations.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= GH/PROLACTIN/OXYTOCIN ================= -->
+<section class="block" id="gh-prolactin-oxytocin">
+<details class="topic" open="">
+<summary>Growth Hormone, Prolactin &amp; Oxytocin</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Growth hormone</h4><p>Anabolic (↑ protein synthesis, bone/muscle growth), ↑ lipolysis, ↓ carbohydrate use peripherally. Normally cyclic/nocturnal, highest in adolescence. Rises acutely with intense stress; but <b>chronic</b> stress activation eventually <i>decreases</i> GH secretion — the mechanism behind stunted growth in children under prolonged chronic stress.</p></div>
+<div class="fact warn"><h4>Prolactin</h4><p>Released with physical/psychological stress, exercise, inflammation, sexual activity, pregnancy, and suckling (even in males). Suppresses ovulation; roles in lactation, metabolism, bone homeostasis, and immune regulation (lymphocytes have prolactin receptors); may be neuroprotective for hippocampal neurons under stress. Requires more intense stimuli to rise than catecholamines/cortisol do.</p></div>
+</div>
+<div class="fact tx"><h4>Oxytocin — the "tend-and-befriend hormone"</h4><p>Produced during childbirth, lactation, and sexual activity (both sexes); promotes bonding/social attachment. Moderates the stress response — reduces HPA/sympathetic activation and perceived anxiety. Stronger effects/higher concentrations in females (estrogen interaction). Early adverse life events → lower lifetime oxytocin, potentially contributing to obesity risk since oxytocin normally decreases food intake.</p></div>
+<div class="note">Real study cited: preteen girls who heard their mother's <i>voice</i> on the phone after a lab stressor had higher urinary oxytocin and lower salivary cortisol than those who only texted — hearing the voice specifically buffered the stress response.</div>
+</div>
+</details>
+</section>
+<!-- ================= ADAPTATION/RESILIENCE ================= -->
+<section class="block" id="adaptation-resilience">
+<details class="topic" open="">
+<summary>Adaptation, Coping &amp; Resilience</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Adaptation</h4><p>The biopsychosocial process of adjusting physiology, morphology, and behavior to new/altered internal or external circumstances.</p></div>
+<div class="fact warn"><h4>Resilience</h4><p>The capacity to adapt to adversity, achieving a successful outcome — "coping and flourishing either 'in spite of' or 'because of' adversity." Prevents disease and mitigates allostatic load; involves the ability to resist, recover, or redirect after trauma.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>What influences resilience</h4><p>Genetics, epigenetic changes from early trauma, social support/coping mechanisms, positive outlook/sense of control, sense of purpose, grit, prior learning, lifestyle (exercise, diet, sleep), and religious/spiritual practice. Also influenced by cortisol itself and neural proteins like BDNF (brain-derived neurotrophic factor, important for brain plasticity).</p></div>
+<div class="fact warn"><h4>Maladaptation &amp; dysfunctional coping</h4><p><b>Maladaptation:</b> ineffective/inappropriate change. <b>Coping</b> is functional if it resolves the situation or feelings; dysfunctional if it doesn't. Dysfunctional examples: excessive eating, alcohol use, smoking, substance abuse — these directly contribute to atherosclerosis, hypertension, type 2 diabetes, and metabolic syndrome.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= HABITUATION ================= -->
+<section class="block" id="habituation">
+<details class="topic" open="">
+<summary>Perception, Distress &amp; Habituation</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Perception shapes response</h4><p>The same stimulus (e.g., a loud "bang") can be interpreted very differently depending on context (car backfiring vs. gunshot) — the interpretation, not just the stimulus itself, drives the adaptive response.</p></div>
+<div class="fact warn"><h4>Distress specifically</h4><p>The experience of perceiving an inability to cope — this perception itself further activates catecholamine and glucocorticoid release, escalating allostatic load and worsening preexisting conditions (e.g., an asthma patient without an inhaler becomes even more short of breath from the distress itself).</p></div>
+</div>
+<div class="fact tx"><h4>Habituation — training the hypothalamus to react less</h4><p>Repeated, ignored exposure to a stressor (e.g., airport noise) reduces the hypothalamic response over time, preventing inappropriate GAS triggering. Desensitization techniques (biofeedback, guided imagery, mindfulness, yoga, meditation) shift dominant brain waves from beta to alpha/theta (more relaxed states) — documented to enhance immune function and reduce inflammation with 20–30 min/day practice.</p></div>
+<div class="note">Conditions shown to benefit from desensitization approaches: migraine, chronic back pain, hypertension, IBS/IBD.</div>
+</div>
+</details>
+</section>
+<!-- ================= ALLOSTATIC OVERLOAD ================= -->
+<section class="block" id="allostatic-overload">
+<details class="topic" open="">
+<summary>Allostatic Overload &amp; Illness</summary>
+<div class="topic-body">
+<p>When adaptation mechanisms are inadequate or total load is excessive, homeostasis can't be regained — the result spans psychiatric, endocrine, and inflammatory disease categories.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Four Ways Allostatic Load Accumulates</p>
+<svg viewbox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">ALLOSTATIC LOAD ACCUMULATES</text></g>
+<line class="mm-line" x1="450" x2="120" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="340" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="560" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="780" y1="50" y2="90"></line>
+<g class="mm-leaf"><rect height="70" rx="6" width="200" x="20" y="90"></rect><text font-size="10" text-anchor="middle" x="120" y="115">Repeated exposure to</text><text font-size="10" text-anchor="middle" x="120" y="131">multiple stressors</text></g>
+<g class="mm-leaf"><rect height="70" rx="6" width="200" x="240" y="90"></rect><text font-size="10" text-anchor="middle" x="340" y="115">Inability to habituate</text><text font-size="10" text-anchor="middle" x="340" y="131">or adapt</text></g>
+<g class="mm-leaf"><rect height="70" rx="6" width="200" x="460" y="90"></rect><text font-size="9.5" text-anchor="middle" x="560" y="110">Response continues after</text><text font-size="9.5" text-anchor="middle" x="560" y="126">stressor removed</text></g>
+<g class="mm-leaf"><rect height="70" rx="6" width="200" x="680" y="90"></rect><text font-size="9.5" text-anchor="middle" x="780" y="110">Inadequate response →</text><text font-size="9.5" text-anchor="middle" x="780" y="126">other mediators compensate</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Common stress-linked disorders</h4><p>Hair loss, burnout, mouth sores, insomnia, asthma, heart palpitations, tics, tension headaches, muscle-contraction backaches, digestive disorders, irritable bladder, menstrual irregularity, erectile dysfunction.</p></div>
+<div class="fact warn"><h4>Physical indicators of high stress</h4><p>↑ BP, ↑ muscle tension, ↑ pulse/respiration, sweaty palms, cold extremities, fatigue, tension headache, GI upset, appetite/weight change, ↑ catecholamines, hyperglycemia, restlessness, insomnia.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Behavioral/emotional indicators</h4><p>Nonspecific anxiety, depression, increased substance use, eating/sleeping/activity changes, mental exhaustion, low self-esteem, irritability, low motivation, poor concentration/judgment, absenteeism, accident-proneness.</p></div>
+<div class="fact tx"><h4>Cardiovascular link</h4><p>Cortisol receptors are dense in abdominal fat — excess cortisol drives abdominal fat accumulation, and released free fatty acids raise cardiovascular risk. Catecholamines/cortisol together promote atherosclerosis, hypertension, dysrhythmias, sudden cardiac death, and stress-induced cardiomyopathy; catecholamines also increase platelet activity (clotting) and serum lipids.</p></div>
+</div>
+<div class="danger"><b>The inflammation bridge to cardiovascular disease:</b> stress → proinflammatory cytokines (IL-1, IL-6, TNF-α) → triggers CRP production → CRP is itself an established cardiovascular disease marker. This gives a direct mechanistic link between psychological stress and heart disease, not just a correlational one.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Cognitive/CNS effects (psychoneuroimmunology)</h4><p>Stress mediators normally support learning, memory, and autonomic regulation. But chronic over/under-activity can cause <b>hippocampal atrophy</b> (impaired memory) alongside <b>amygdala hypertrophy</b>/remodeling (increased fear, anxiety, mood disorders).</p></div>
+<div class="fact warn"><h4>Inflammation and cognitive decline</h4><p>Elevated IL-1 and IL-6 (inflammation markers tied to stress) have been linked to memory loss, cognitive decline, and the development of Alzheimer disease — connecting allostatic overload directly to neurodegenerative risk.</p></div>
+</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 2 (Homeostasis, Allostasis, and Stress) material. Redraw the HPA axis/SAM system mind map and the allostatic load mind map from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Maintaining internal conditions in a stable state around a narrow \"set point,\" via negative feedback loops.", "answers": ["Homeostasis"]}, {"def": "Claude Bernard's term for the stable internal environment necessary for survival, independent of the external environment.", "answers": ["Milieu int\u00e9rieur"]}, {"def": "The dynamic process of achieving stability through change \u2014 varying physiologic parameters to match resources to environmental demands.", "answers": ["Allostasis"]}, {"def": "Anything that throws the body out of allostatic balance (Sapolsky's definition).", "answers": ["Stressor"]}, {"def": "The body's effort to restore allostatic balance after a stressor (Sapolsky's definition).", "answers": ["Stress response"]}, {"def": "Selye's model of the body's nonspecific response to any stressor, in three stages: alarm, resistance, exhaustion.", "answers": ["General adaptation syndrome", "GAS", "General adaptation syndrome (GAS)"]}, {"def": "The fight-or-flight stage of GAS \u2014 hypothalamus activates the SNS and HPA axis in response to a stressor.", "answers": ["Alarm stage"]}, {"def": "The GAS stage where the body mobilizes glucose, fatty acids, and amino acids to manage an ongoing stressor.", "answers": ["Resistance stage", "adaptation", "Resistance (adaptation) stage"]}, {"def": "The GAS stage where prolonged stress causes glucocorticoid dysregulation, loss of resistance, and \"diseases of adaptation.\"", "answers": ["Exhaustion stage"]}, {"def": "Hypothalamic-pituitary-adrenal axis \u2014 CRH \u2192 ACTH \u2192 cortisol; the slower hormonal arm of the stress response.", "answers": ["HPA axis"]}, {"def": "The fast-acting arm of the stress response \u2014 SNS activation triggering adrenal medulla release of catecholamines.", "answers": ["Sympathetic-adrenal-medullary system", "SAM", "Sympathetic-adrenal-medullary (SAM) system"]}, {"def": "Released by the hypothalamic paraventricular nucleus (PVN); activates both the SNS and the anterior pituitary (ACTH release).", "answers": ["CRH", "corticotropin-releasing hormone", "CRH (corticotropin-releasing hormone)"]}, {"def": "Adrenocorticotropic hormone, released by the anterior pituitary in response to CRH; stimulates the adrenal cortex to release cortisol.", "answers": ["ACTH"]}, {"def": "The primary glucocorticoid; mobilizes glucose/protein/fat stores, suppresses inflammation and immune function, slower onset but longer duration than catecholamines.", "answers": ["Cortisol"]}, {"def": "The primary mineralocorticoid; promotes sodium reabsorption/potassium excretion in the kidney, expanding fluid volume and raising blood pressure.", "answers": ["Aldosterone"]}, {"def": "The cumulative physiologic \"wear and tear\" cost of repeated or chronic allostatic responses.", "answers": ["Allostatic load"]}, {"def": "When adaptation mechanisms are overwhelmed or inadequate, producing pathophysiologic states across multiple body systems.", "answers": ["Allostatic overload"]}, {"def": "The capacity to adapt successfully to stress/adversity, preventing disease and mitigating allostatic load.", "answers": ["Resilience"]}, {"def": "Ineffective, inadequate, or inappropriate change in response to altered circumstances.", "answers": ["Maladaptation"]}, {"def": "A behavioral adaptive response to a stressor; can be functional (health-promoting) or dysfunctional (maladaptive, e.g., overeating, substance use).", "answers": ["Coping"]}, {"def": "The experience of perceiving an inability to cope with a stressor \u2014 further escalates catecholamine and glucocorticoid release.", "answers": ["Distress"]}, {"def": "Adapting to a repeated stressor by training the hypothalamus to react less forcefully to it (e.g., no longer noticing airport noise).", "answers": ["Habituation"]}, {"def": "An alternative to fight-or-flight, thought to be more common in females, mediated by oxytocin and endogenous opioids \u2014 produces a calming, affiliative response to stress.", "answers": ["Tend-and-befriend response"]}, {"def": "The field studying interactions among the nervous, endocrine, and immune systems, especially regarding stress and its effects on health.", "answers": ["Psychoneuroimmunology"]}];
+const QUIZ_TEACHBACK = [{"topic": "Homeostasis", "points": ["<b>Word origin & core idea:</b> From Greek homeo (\"similar\") + stasis (\"standing still\") \u2014 maintaining internal conditions stable around a narrow ideal set point.", "<b>Claude Bernard (19th century):</b> Described the milieu int\u00e9rieur \u2014 the idea that vital physiologic mechanisms exist to maintain a uniform, constant internal environment necessary\u2026", "<b>Walter Cannon (1932, The Wisdom of the Body ):</b> Coined \"homeostasis\" formally \u2014 each biochemical/physiologic variable (temperature, O2, sodium, calcium, glucose) is held within a narrow set-point range via\u2026", "<b>Examples of homeostatic systems:</b> Baroreceptor response to BP changes; ADH release in response to serum osmolality changes; hypothalamic thermoregulation; central chemoreceptor response to PaCO2;\u2026"]}, {"topic": "Allostasis", "points": ["<b>Word origin & core idea:</b> From Greek allo (\"variable\"/\"different\") + stasis . Sterling and Eyer (1988) \u2014 the ability to successfully adapt to challenges by\u2026", "<b>Why fixed set points aren't enough:</b> Different circumstances require different set points \u2014 respiratory rate must rise during exercise or pneumonia. Allostasis is brain-orchestrated: parameters are\u2026", "The shock example \u2014 a key illustration of trade-offs: in shock, blood flow to the brain and heart is preserved by reducing\u2026", "Allostasis is now understood to apply broadly \u2014 not just to physical stimuli, but to social interactions, discrimination/racism, low socioeconomic status, childhood\u2026"]}, {"topic": "Defining Stress", "points": ["<b>Why \"stress\" is genuinely ambiguous:</b> Used to mean a causal factor (\"they're experiencing stress\"), a state of tension (\"I feel stressed\"), AND a bodily response\u2026", "<b>Sapolsky's clarifying distinction:</b> Stressor: anything that throws the body out of allostatic balance. Stress response: the body's effort to restore that balance. This\u2026"]}, {"topic": "Selye & the General Adaptation Syndrome", "points": ["<b>The serendipitous discovery (1930s):</b> Selye injected rats with varied hormonal/tissue extracts expecting different responses per substance \u2014 instead found the same three changes every\u2026", "<b>The generalization:</b> The same triad appeared with completely different noxious stimuli (temperature extremes, surgery, forced exercise) \u2014 leading Selye to conclude this\u2026", "Modern critique of Selye's model: too simplistic \u2014 the body does NOT produce identical responses to all stressor types; hormone release patterns\u2026"]}, {"topic": "The Alarm Stage \u2014 HPA Axis & SAM System", "points": ["<b>Trigger:</b> The hypothalamus continuously monitors internal/external environment; when it senses a stressor threatening homeostasis (physical or emotional, positive or negative \u2014\u2026", "<b>Why there are two parallel pathways:</b> PVN-released CRH does double duty: it directly activates the SNS (fast catecholamine release) AND stimulates the anterior pituitary to release\u2026"]}, {"topic": "Resistance & Exhaustion Stages", "points": ["<b>Resistance (adaptation) stage:</b> SNS + adrenal medulla + adrenal cortex work at full force, mobilizing glucose, free fatty acids, and amino acids \u2014\u2026", "<b>Outcome of resistance:</b> If the stressor resolves, the organism returns to a steady state \u2014 though the new baseline may sit at a\u2026", "Why the alarm stage can't persist: if it did, the body would suffer wear and tear, permanent damage, and even death \u2014\u2026"]}, {"topic": "Catecholamines \u2014 Norepinephrine & Epinephrine", "points": ["<b>Release pathway:</b> Cerebral cortex/limbic system (hippocampus, amygdala) appraise a stimulus as stressful \u2192 relay to hypothalamus \u2192 norepinephrine released directly by sympathetic\u2026", "<b>Stimulus-dependent balance:</b> Cold exposure \u2192 SNS/norepinephrine response dominates. Emotional distress or acute hypoglycemia \u2192 greater adrenal medulla/epinephrine response. Note: the stress response\u2026"]}, {"topic": "Cortisol & Aldosterone", "points": ["<b>Cortisol \u2014 the basics:</b> Lipid-soluble, so it crosses cell membranes to bind cytosolic/nuclear receptors \u2014 present in nearly every tissue. Released by the adrenal\u2026", "<b>Negative feedback:</b> Cortisol binds receptors on the hypothalamus and anterior pituitary to suppress further CRH/ACTH release \u2014 a classic negative feedback loop\u2026", "<b>Cortisol's protein/glucose logic:</b> Anabolic in the liver (\u2191 protein synthesis) but catabolic in muscle/lymphoid/adipose/skin/bone \u2014 releasing amino acids for the liver to use.\u2026", "<b>Chronic elevation is the problem:</b> Prolonged high cortisol \u2192 glucocorticoid receptor desensitization/down-regulation on immune cells \u2192 progressively fewer anti-inflammatory effects over time, and can eventually\u2026", "<b>Catecholamine-cortisol synergy/antagonism:</b> Catecholamines help release ACTH (supporting the HPA axis); cortisol supports adrenal medulla epinephrine synthesis (via the PNMT enzyme) and blood\u2026", "<b>Aldosterone:</b> The primary mineralocorticoid. SNS activation \u2192 renin-angiotensin system \u2192 aldosterone release (fluid volume depletion also triggers this directly). Acts on\u2026"]}, {"topic": "Endorphins, Enkephalins & Immune Cytokines", "points": ["<b>Endogenous opioids:</b> Endorphins, enkephalins, dynorphins, endomorphins \u2014 small peptides produced in the CNS and elsewhere, released in response to stress, exercise, chocolate,\u2026", "<b>Immune system connections both ways:</b> Immune cells (B/T lymphocytes, granulocytes, macrophages, monocytes) produce endogenous opioids in response to stressors/CRH/cytokines/catecholamines, and carry opioid receptors that modulate\u2026", "Stress-related microbiome disruption has been linked to MS, diabetes, psoriasis, IBS, depression, ADHD, and rheumatoid arthritis \u2014 an expanding area connecting stress\u2026"]}, {"topic": "Sex Hormones \u2014 Estrogen, Testosterone & DHEA", "points": ["<b>Cortisol's reproductive suppression:</b> Excess stress/cortisol suppresses GnRH, LH, estradiol, and progesterone release \u2014 inhibiting female reproduction and affecting premenstrual symptoms. Estradiol, in turn,\u2026", "<b>Androgens oppose glucocorticoid effects:</b> Testosterone and DHEA oppose cortisol's catabolic effects on bone, and its impact on lymphoid tissue/inflammatory cytokines/leukocytes. DHEA counteracts glucocorticoid-associated depressive\u2026", "<b>Testosterone drops with stress:</b> Illness, surgery, strenuous exercise, and academic stress all significantly reduce circulating testosterone. Combined with vasopressin, testosterone enhances BP/HR reactivity and\u2026", "<b>Tend-and-befriend:</b> Oxytocin (modulated by estrogen) and endogenous opioids are thought to produce a calming effect during stress \u2014 giving rise to\u2026"]}, {"topic": "Growth Hormone, Prolactin & Oxytocin", "points": ["<b>Growth hormone:</b> Anabolic (\u2191 protein synthesis, bone/muscle growth), \u2191 lipolysis, \u2193 carbohydrate use peripherally. Normally cyclic/nocturnal, highest in adolescence. Rises acutely with\u2026", "<b>Prolactin:</b> Released with physical/psychological stress, exercise, inflammation, sexual activity, pregnancy, and suckling (even in males). Suppresses ovulation; roles in lactation, metabolism,\u2026", "<b>Oxytocin \u2014 the \"tend-and-befriend hormone\":</b> Produced during childbirth, lactation, and sexual activity (both sexes); promotes bonding/social attachment. Moderates the stress response \u2014 reduces HPA/sympathetic activation\u2026"]}, {"topic": "Adaptation, Coping & Resilience", "points": ["<b>Adaptation:</b> The biopsychosocial process of adjusting physiology, morphology, and behavior to new/altered internal or external circumstances.", "<b>Resilience:</b> The capacity to adapt to adversity, achieving a successful outcome \u2014 \"coping and flourishing either 'in spite of' or 'because\u2026", "<b>What influences resilience:</b> Genetics, epigenetic changes from early trauma, social support/coping mechanisms, positive outlook/sense of control, sense of purpose, grit, prior learning, lifestyle\u2026", "<b>Maladaptation & dysfunctional coping:</b> Maladaptation: ineffective/inappropriate change. Coping is functional if it resolves the situation or feelings; dysfunctional if it doesn't. Dysfunctional examples: excessive\u2026"]}, {"topic": "Perception, Distress & Habituation", "points": ["<b>Perception shapes response:</b> The same stimulus (e.g., a loud \"bang\") can be interpreted very differently depending on context (car backfiring vs. gunshot) \u2014\u2026", "<b>Distress specifically:</b> The experience of perceiving an inability to cope \u2014 this perception itself further activates catecholamine and glucocorticoid release, escalating allostatic\u2026", "<b>Habituation \u2014 training the hypothalamus to react less:</b> Repeated, ignored exposure to a stressor (e.g., airport noise) reduces the hypothalamic response over time, preventing inappropriate GAS triggering. Desensitization\u2026"]}, {"topic": "Allostatic Overload & Illness", "points": ["<b>Common stress-linked disorders:</b> Hair loss, burnout, mouth sores, insomnia, asthma, heart palpitations, tics, tension headaches, muscle-contraction backaches, digestive disorders, irritable bladder, menstrual irregularity,\u2026", "<b>Physical indicators of high stress:</b> \u2191 BP, \u2191 muscle tension, \u2191 pulse/respiration, sweaty palms, cold extremities, fatigue, tension headache, GI upset, appetite/weight change, \u2191 catecholamines,\u2026", "<b>Behavioral/emotional indicators:</b> Nonspecific anxiety, depression, increased substance use, eating/sleeping/activity changes, mental exhaustion, low self-esteem, irritability, low motivation, poor concentration/judgment, absenteeism, accident-proneness.", "<b>Cardiovascular link:</b> Cortisol receptors are dense in abdominal fat \u2014 excess cortisol drives abdominal fat accumulation, and released free fatty acids raise\u2026", "<b>Cognitive/CNS effects (psychoneuroimmunology):</b> Stress mediators normally support learning, memory, and autonomic regulation. But chronic over/under-activity can cause hippocampal atrophy (impaired memory) alongside amygdala\u2026", "<b>Inflammation and cognitive decline:</b> Elevated IL-1 and IL-6 (inflammation markers tied to stress) have been linked to memory loss, cognitive decline, and the development\u2026", "The inflammation bridge to cardiovascular disease: stress \u2192 proinflammatory cytokines (IL-1, IL-6, TNF-\u03b1) \u2192 triggers CRP production \u2192 CRP is itself an\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

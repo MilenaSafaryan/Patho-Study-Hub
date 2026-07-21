@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glossary — Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Reference</span>
+    <h1 style="font-size:2rem;">Glossary</h1>
+    <p>Every key term across every chapter you've added, searchable in one place. This same index powers the definitions chat.</p>
+  </div>
+
+  <div class="glossary-search">
+    <input type="text" id="glossary-search-input" placeholder="Search terms or definitions… e.g. “edema”" />
+  </div>
+  <div class="quiz-monitor" style="margin-top:14px;width:fit-content;">
+    <div><div class="m-label">Showing</div><div class="m-value" id="glossary-count">0</div></div>
+  </div>
+
+  <div class="glossary-results" id="glossary-results"></div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/app.js"></script>
+<script>
+injectTopbar("glossary");
+injectFooter();
+
+let allTerms = [];
+let chapterColors = {};
+
+Promise.all([
+  fetchJSON("data/terms_all.json"),
+  fetchJSON("data/chapters.json")
+]).then(([terms, data])=>{
+  allTerms = terms;
+  Object.values(data.chapters).forEach(c=>{ chapterColors[c.num] = c.color; });
+  render(allTerms);
+});
+
+function render(list){
+  document.getElementById("glossary-count").textContent = list.length;
+  const el = document.getElementById("glossary-results");
+  if(list.length===0){
+    el.innerHTML = `<div class="week-empty">No matches. Try a different term.</div>`;
+    return;
+  }
+  el.innerHTML = list.slice(0,300).map(t=>`
+    <div class="gterm-card" style="--wk-color:${chapterColors[t.chapter]||'#1F6F5C'}">
+      <div class="gterm-name">${t.term}</div>
+      <div class="gterm-def">${t.def}</div>
+      <div class="gterm-src"><a href="chapter.html?ch=${t.chapter}">Chapter ${t.chapter} &rarr;</a></div>
+    </div>`).join("");
+}
+
+document.getElementById("glossary-search-input").addEventListener("input", (e)=>{
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ render(allTerms); return; }
+  render(allTerms.filter(t => t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q)));
+});
+</script>
+</body>
+</html>

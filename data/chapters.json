@@ -1,0 +1,349 @@
+{
+ "weeks": {
+  "1": {
+   "num": 1,
+   "title": "Foundations of Pathophysiology",
+   "color": "#8A5FB0",
+   "chapters": [
+    1,
+    2,
+    4,
+    7
+   ]
+  },
+  "2": {
+   "num": 2,
+   "title": "Immune & Hematologic Function",
+   "color": "#A6455E",
+   "chapters": [
+    10,
+    11,
+    13,
+    14,
+    15
+   ]
+  },
+  "3": {
+   "num": 3,
+   "title": "Blood Pressure & Cardiac Function",
+   "color": "#B94A3D",
+   "chapters": [
+    16,
+    18,
+    19,
+    20
+   ]
+  },
+  "4": {
+   "num": 4,
+   "title": "Pulmonary Disorders & Homeostasis",
+   "color": "#1F6F5C",
+   "chapters": [
+    22,
+    23,
+    24,
+    25
+   ]
+  },
+  "5": {
+   "num": 5,
+   "title": "Midterm Review",
+   "color": "#C97A2E",
+   "chapters": [
+    27,
+    28,
+    29,
+    31,
+    33
+   ]
+  },
+  "6": {
+   "num": 6,
+   "title": "GI, Hepatobiliary & Endocrine Systems",
+   "color": "#3F6FA6",
+   "chapters": [
+    36,
+    37,
+    38,
+    40,
+    41
+   ]
+  },
+  "7": {
+   "num": 7,
+   "title": "Neuro, Pain & Musculoskeletal",
+   "color": "#2B8A8A",
+   "chapters": [
+    44,
+    45,
+    47,
+    51,
+    52
+   ]
+  }
+ },
+ "chapters": {
+  "1": {
+   "num": 1,
+   "title": "Concepts of Pathophysiology",
+   "week": 1,
+   "color": "#8A5FB0",
+   "termCount": 32,
+   "outline": [
+    "Key Terms & Definitions",
+    "Concepts of Normality in Health & Disease",
+    "Epidemiology"
+   ],
+   "file": "content/ch1.html"
+  },
+  "2": {
+   "num": 2,
+   "title": "Homeostasis, Allostasis & Stress",
+   "week": 1,
+   "color": "#8A5FB0",
+   "termCount": 24,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch2.html"
+  },
+  "4": {
+   "num": 4,
+   "title": "Cellular Injury, Adaptation & Aging",
+   "week": 1,
+   "color": "#8A5FB0",
+   "termCount": 26,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch4.html"
+  },
+  "7": {
+   "num": 7,
+   "title": "Cancer & Neoplasia",
+   "week": 1,
+   "color": "#8A5FB0",
+   "termCount": 27,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch7.html"
+  },
+  "10": {
+   "num": 10,
+   "title": "Immune Disorders",
+   "week": 2,
+   "color": "#A6455E",
+   "termCount": 18,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch10.html"
+  },
+  "11": {
+   "num": 11,
+   "title": "Hematologic Malignancies",
+   "week": 2,
+   "color": "#A6455E",
+   "termCount": 18,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch11.html"
+  },
+  "13": {
+   "num": 13,
+   "title": "Red Blood Cell Disorders",
+   "week": 2,
+   "color": "#A6455E",
+   "termCount": 21,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch13.html"
+  },
+  "14": {
+   "num": 14,
+   "title": "Disorders of Hemostasis",
+   "week": 2,
+   "color": "#A6455E",
+   "termCount": 28,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch14.html"
+  },
+  "15": {
+   "num": 15,
+   "title": "Alterations in Blood Flow",
+   "week": 2,
+   "color": "#A6455E",
+   "termCount": 28,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch15.html"
+  },
+  "36": {
+   "num": 36,
+   "title": "GI Disorders",
+   "week": 6,
+   "color": "#3F6FA6",
+   "termCount": 44,
+   "outline": [
+    "Key Terms & Definitions",
+    "Manifestations of GI Tract Disorders",
+    "Disorders of the Mouth & Esophagus",
+    "Alterations in the Integrity of the GI Wall",
+    "Alterations in Motility & Malabsorption",
+    "Mucosal Malabsorption Disorders",
+    "Neoplasms of the GI Tract"
+   ],
+   "file": "content/ch36.html"
+  },
+  "37": {
+   "num": 37,
+   "title": "Pancreaticobiliary System",
+   "week": 6,
+   "color": "#3F6FA6",
+   "termCount": 37,
+   "outline": [
+    "Key Terms & Definitions",
+    "Anatomy & Physiology of the Pancreaticobiliary System",
+    "Disorders of the Gallbladder & Biliary Tree",
+    "Disorders of the Pancreas",
+    "Chronic Pancreatitis",
+    "Pancreatic Cancer"
+   ],
+   "file": "content/ch37.html"
+  },
+  "38": {
+   "num": 38,
+   "title": "The Liver",
+   "week": 6,
+   "color": "#3F6FA6",
+   "termCount": 49,
+   "outline": [
+    "Key Terms & Definitions",
+    "Structure & Function of the Liver",
+    "Jaundice & Bilirubin Metabolism",
+    "Portal Hypertension",
+    "Acute Viral Hepatitis",
+    "Hepatitis B (In Depth)",
+    "Hepatitis C (In Depth)",
+    "Hepatitis D & E (In Depth)",
+    "Cirrhosis",
+    "Alcoholic Liver Disease",
+    "Toxic & Metal Storage Liver Disorders",
+    "Fulminant Hepatic Failure",
+    "Hepatocellular Carcinoma (HCC)",
+    "Liver Disease in Infants & Children"
+   ],
+   "file": "content/ch38.html"
+  },
+  "40": {
+   "num": 40,
+   "title": "The Endocrine System",
+   "week": 6,
+   "color": "#3F6FA6",
+   "termCount": 36,
+   "outline": [
+    "Key Terms & Definitions",
+    "Basic Concepts of Endocrine Disorders",
+    "Growth Hormone Disorders",
+    "Thyroid Hormone Disorders",
+    "Adrenocortical Hormone Disorders",
+    "Adrenal Medulla Disorder: Pheochromocytoma",
+    "Parathyroid Gland Disorders",
+    "Antidiuretic Hormone (ADH) Disorders"
+   ],
+   "file": "content/ch40.html"
+  },
+  "41": {
+   "num": 41,
+   "title": "Diabetes",
+   "week": 6,
+   "color": "#3F6FA6",
+   "termCount": 36,
+   "outline": [
+    "Key Terms & Definitions",
+    "Regulation of Glucose Metabolism",
+    "Classification of Glucose Intolerance Disorders",
+    "Type 1 vs. Type 2 Diabetes",
+    "Acute Complications",
+    "Complications of Chronic Hyperglycemia",
+    "Treatment & Education"
+   ],
+   "file": "content/ch41.html"
+  },
+  "44": {
+   "num": 44,
+   "title": "Acute Brain Injury",
+   "week": 7,
+   "color": "#2B8A8A",
+   "termCount": 41,
+   "outline": [
+    "Key Terms & Definitions",
+    "Mechanisms of Brain Injury",
+    "Manifestations of Brain Injury",
+    "Traumatic Brain Injury (TBI)",
+    "Cerebrovascular Disease & Stroke",
+    "Cerebral Aneurysm",
+    "Central Nervous System Infections"
+   ],
+   "file": "content/ch44.html"
+  },
+  "45": {
+   "num": 45,
+   "title": "Chronic Neurologic Disorders",
+   "week": 7,
+   "color": "#2B8A8A",
+   "termCount": 28,
+   "outline": [
+    "Key Terms & Definitions",
+    "Brain & Cerebellar Disorders",
+    "Spinal Cord & Peripheral Nerve Disorders"
+   ],
+   "file": "content/ch45.html"
+  },
+  "47": {
+   "num": 47,
+   "title": "Pain Physiology",
+   "week": 7,
+   "color": "#2B8A8A",
+   "termCount": 36,
+   "outline": [
+    "Key Terms & Definitions",
+    "Perception",
+    "Modulation",
+    "Classifying Pain",
+    "Pain Assessment",
+    "Pain Management"
+   ],
+   "file": "content/ch47.html"
+  },
+  "51": {
+   "num": 51,
+   "title": "Arthritis",
+   "week": 7,
+   "color": "#2B8A8A",
+   "termCount": 27,
+   "outline": [
+    "Key Terms & Definitions",
+    "Rheumatoid Arthritis"
+   ],
+   "file": "content/ch51.html"
+  },
+  "52": {
+   "num": 52,
+   "title": "Integument Alterations",
+   "week": 7,
+   "color": "#2B8A8A",
+   "termCount": 20,
+   "outline": [
+    "Key Terms & Definitions"
+   ],
+   "file": "content/ch52.html"
+  }
+ }
+}

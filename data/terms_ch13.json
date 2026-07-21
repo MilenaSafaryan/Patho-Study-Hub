@@ -1,0 +1,86 @@
+[
+ {
+  "term": "Erythrocyte (RBC)",
+  "def": "The most numerous blood cell; biconcave, non-nucleated disk that transports O2 via hemoglobin; lifespan 80\u2013120 days."
+ },
+ {
+  "term": "Hemoglobin",
+  "def": "The oxygen-carrying protein comprising ~90% of RBC dry weight \u2014 2 \u03b1-chains + 2 \u03b2-chains, each with an iron-containing heme group."
+ },
+ {
+  "term": "Reversible deformability",
+  "def": "The RBC's ability to change shape (torpedo-like) to squeeze through capillaries narrower than its own resting diameter."
+ },
+ {
+  "term": "Hematopoiesis",
+  "def": "The developmental process from pluripotential stem cells to mature blood cells; occurs in bone marrow in adults."
+ },
+ {
+  "term": "Reticulocyte",
+  "def": "An immature RBC that has lost its nucleus but still contains organelle remnants; matures into an erythrocyte in 24\u201348 hours; normal count ~1% of total RBCs."
+ },
+ {
+  "term": "Erythropoietin",
+  "def": "The kidney hormone that stimulates RBC production in response to tissue hypoxia."
+ },
+ {
+  "term": "Transferrin",
+  "def": "The plasma protein that transports dietary iron to transferrin receptors on the RBC membrane."
+ },
+ {
+  "term": "Ferritin",
+  "def": "The intracellular iron storage protein."
+ },
+ {
+  "term": "Hemoglobin F (fetal)",
+  "def": "Two \u03b1 + two \u03b3 chains; more efficient O2 carrier at low O2 tension; replaced by hemoglobin A within ~120 days after birth."
+ },
+ {
+  "term": "Hemoglobin A (adult)",
+  "def": "Two \u03b1 + two \u03b2 chains; ~97% of adult hemoglobin."
+ },
+ {
+  "term": "Oxyhemoglobin",
+  "def": "Hemoglobin reversibly bound to oxygen."
+ },
+ {
+  "term": "P50",
+  "def": "The PO2 at which hemoglobin is 50% saturated \u2014 the standard reference point for assessing hemoglobin's oxygen-releasing ability."
+ },
+ {
+  "term": "Bohr effect",
+  "def": "The shift in the oxyhemoglobin dissociation curve caused by changes in PCO2/H+ that enhances O2 uptake in the lungs and release in the tissues."
+ },
+ {
+  "term": "Haldane effect",
+  "def": "Unloading of O2 in tissues facilitates the loading of CO2 onto hemoglobin."
+ },
+ {
+  "term": "Chloride shift",
+  "def": "Chloride diffuses into the RBC to balance the charge as bicarbonate diffuses out, maintaining electrical neutrality during CO2 transport."
+ },
+ {
+  "term": "Carbaminohemoglobin",
+  "def": "Hemoglobin directly bound to CO2 \u2014 an important acid-base buffer."
+ },
+ {
+  "term": "Anemia",
+  "def": "A deficit of red cells causing reduced oxygen-carrying capacity and tissue hypoxia."
+ },
+ {
+  "term": "Polycythemia",
+  "def": "An excess of red cells causing increased blood viscosity and volume."
+ },
+ {
+  "term": "Pancytopenia",
+  "def": "Simultaneous deficiency of red cells, white cells, and platelets \u2014 hallmark of aplastic anemia."
+ },
+ {
+  "term": "Aplastic anemia",
+  "def": "A stem cell disorder with reduced hematopoietic marrow tissue and fatty marrow replacement, causing pancytopenia."
+ },
+ {
+  "term": "Polycythemia vera",
+  "def": "A myeloproliferative neoplasm from stem cell transformation, causing overproduction of RBCs, WBCs, and platelets together."
+ }
+]

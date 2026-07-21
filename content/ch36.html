@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GI Disorders — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A;
+    --ink-soft:#3E5C66;
+    --bg:#F3F6F5;
+    --panel:#FFFFFF;
+    --teal:#0C7C74;
+    --teal-dark:#0A5F59;
+    --teal-light:#DCEEEA;
+    --amber:#B9822C;
+    --amber-light:#F6ECD9;
+    --red:#A2413F;
+    --red-light:#F5E1DF;
+    --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+  }
+  a{color:var(--teal-dark);}
+
+  /* ---------- Layout shell ---------- */
+  .shell{
+    display:grid;
+    grid-template-columns: 270px 1fr;
+    min-height:100vh;
+  }
+  @media (max-width: 900px){
+    .shell{grid-template-columns: 1fr;}
+    .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}
+  }
+
+  .sidebar{
+    position:sticky; top:0; height:100vh; overflow-y:auto;
+    background:var(--ink);
+    color:#E9F1EF;
+    padding:22px 18px 40px;
+    border-right:1px solid var(--line);
+  }
+  .brand{
+    font-family:var(--serif);
+    font-size:1.28rem;
+    letter-spacing:.3px;
+    margin:0 0 2px;
+    color:#fff;
+  }
+  .brand-sub{
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:1.6px;
+    color:#8FB9B4;
+    margin-bottom:22px;
+    display:block;
+  }
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{
+    font-size:.68rem;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+    color:#7FA9A3;
+    margin:20px 0 6px;
+  }
+  .sidebar a{
+    display:block;
+    color:#D3E5E2;
+    text-decoration:none;
+    font-size:.86rem;
+    padding:5px 8px;
+    border-radius:6px;
+    margin:1px 0;
+  }
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  .sidebar a.top{font-weight:600; color:#fff;}
+
+  main{padding:0;}
+  .hero{
+    background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91);
+    color:#fff;
+    padding:56px 48px 42px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-size:2.3rem;
+    margin:0 0 10px;
+    font-weight:normal;
+  }
+  .hero p{
+    max-width:640px;
+    color:#E3F3F0;
+    font-size:1.02rem;
+    margin:0;
+  }
+  .hero .toolbar{
+    margin-top:22px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .hero button{
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:.82rem;
+    cursor:pointer;
+  }
+  .hero button:hover{background:rgba(255,255,255,.26);}
+
+  .content{padding:38px 48px 90px; max-width:980px;}
+  @media (max-width:640px){
+    .hero{padding:36px 20px 28px;}
+    .content{padding:24px 18px 70px;}
+  }
+
+  section.block{margin-bottom:56px; scroll-margin-top:16px;}
+  .block-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom:2px solid var(--teal);
+    padding-bottom:8px; margin-bottom:18px;
+  }
+  .block-head h2{
+    font-family:var(--serif);
+    font-size:1.6rem;
+    margin:0;
+    color:var(--ink);
+    font-weight:normal;
+  }
+  .block-head .tag{
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:1.2px;
+    color:var(--teal-dark);
+    background:var(--teal-light);
+    padding:3px 9px;
+    border-radius:12px;
+  }
+  .block-intro{color:var(--ink-soft); margin-bottom:22px; font-size:.97rem;}
+
+  /* ---------- Topic cards ---------- */
+  details.topic{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  details.topic > summary{
+    list-style:none;
+    cursor:pointer;
+    padding:14px 18px;
+    font-family:var(--serif);
+    font-size:1.12rem;
+    color:var(--ink);
+    display:flex; justify-content:space-between; align-items:center;
+    background:linear-gradient(to right, var(--teal-light), transparent 70%);
+  }
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{
+    content:"+";
+    font-family:var(--sans);
+    font-size:1.3rem;
+    color:var(--teal-dark);
+    transform:rotate(0deg);
+    transition:transform .15s ease;
+  }
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+
+  .fact-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:12px;
+    margin:10px 0 14px;
+  }
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{
+    background:#FBFCFB;
+    border:1px solid var(--line);
+    border-left:4px solid var(--teal);
+    border-radius:6px;
+    padding:10px 12px;
+  }
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{
+    margin:0 0 4px;
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--teal-dark);
+  }
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.9rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+
+  .callout{
+    background:var(--amber-light);
+    border:1px solid #ECD9B4;
+    border-radius:8px;
+    padding:10px 14px;
+    font-size:.87rem;
+    margin-top:10px;
+  }
+  .callout b{color:var(--amber);}
+  .danger{
+    background:var(--red-light);
+    border:1px solid #E3C4C1;
+    border-radius:8px;
+    padding:10px 14px;
+    font-size:.87rem;
+    margin-top:10px;
+  }
+  .danger b{color:var(--red);}
+
+  /* ---------- Glossary ---------- */
+  .gloss-controls{margin-bottom:16px;}
+  .gloss-controls input{
+    width:100%;
+    max-width:420px;
+    padding:10px 14px;
+    border:1px solid var(--line);
+    border-radius:22px;
+    font-size:.92rem;
+    background:#fff;
+  }
+  .gloss-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
+    gap:12px;
+  }
+  .term{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:12px 14px;
+  }
+  .term dt{
+    font-weight:700;
+    font-size:.93rem;
+    color:var(--teal-dark);
+    margin-bottom:3px;
+  }
+  .term dd{margin:0; font-size:.85rem; color:var(--ink-soft);}
+  .term.hide{display:none;}
+
+  /* ---------- Mindmap wrapper ---------- */
+  .mindmap{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 14px 10px;
+    margin:22px 0 28px;
+  }
+  .mindmap .mm-title{
+    font-family:var(--serif);
+    font-size:1.02rem;
+    color:var(--ink);
+    margin:0 0 8px 6px;
+  }
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal); }
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  .mm-sub text{fill:var(--ink-soft); font-family:var(--sans);}
+
+  /* key points recap */
+  .recap{
+    background:#EFF6F5;
+    border:1px dashed var(--teal);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:10px;
+  }
+  .recap h4{margin:0 0 6px; font-size:.78rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .recap ul{margin:0; padding-left:18px; font-size:.88rem;}
+  .recap li{margin-bottom:4px;}
+
+  table.compare{
+    width:100%; border-collapse:collapse; margin:12px 0; font-size:.88rem;
+  }
+  table.compare th, table.compare td{
+    border:1px solid var(--line); padding:8px 10px; text-align:left;
+  }
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+
+  footer{
+    text-align:center; padding:30px; color:var(--ink-soft); font-size:.8rem;
+  }
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=36" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar">
+<p class="brand">GI Disorders</p>
+<span class="brand-sub">Chapter Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Manifestations of GI Disorders</div>
+<a href="#dysphagia">Dysphagia</a>
+<a href="#esoph-pain">Esophageal Pain</a>
+<a href="#abd-pain">Abdominal Pain</a>
+<a href="#vomiting">Vomiting</a>
+<a href="#gas">Intestinal Gas</a>
+<a href="#constipation">Constipation</a>
+<a href="#diarrhea">Diarrhea</a>
+<div class="grp-title">Mouth &amp; Esophagus</div>
+<a href="#stomatitis">Stomatitis</a>
+<a href="#gerd">GERD</a>
+<a href="#hiatal">Hiatal Hernia</a>
+<a href="#mallory">Mallory-Weiss Syndrome</a>
+<a href="#varices">Esophageal Varices</a>
+<div class="grp-title">GI Wall Integrity</div>
+<a href="#gastritis">Gastritis</a>
+<a href="#gastroenteritis">Gastroenteritis</a>
+<a href="#pud">Peptic Ulcer Disease</a>
+<div class="grp-title">Motility Disorders</div>
+<a href="#ibs">Irritable Bowel Syndrome</a>
+<a href="#obstruction">Intestinal Obstruction</a>
+<a href="#volvulus">Volvulus</a>
+<a href="#intussusception">Intussusception</a>
+<a href="#megacolon">Megacolon</a>
+<a href="#hirschsprung">Hirschsprung Disease</a>
+<div class="grp-title">Malabsorption</div>
+<a href="#celiac">Celiac Disease</a>
+<a href="#tropical">Tropical Sprue</a>
+<a href="#dumping">Dumping Syndrome</a>
+<a href="#shortbowel">Short Bowel Syndrome</a>
+<div class="grp-title">Neoplasms</div>
+<a href="#esoph-ca">Esophageal Cancer</a>
+<a href="#gastric-ca">Gastric Carcinoma</a>
+<a href="#small-neo">Small Intestinal Neoplasms</a>
+<a href="#polyps">Colon Polyps</a>
+<a href="#colon-ca">Colon Cancer</a>
+</nav>
+</aside>
+<!-- ============ MAIN ============ -->
+<main>
+<div class="hero">
+<h1>Gastrointestinal Disorders</h1>
+<p>A complete study guide to the manifestations, causes, and treatment of GI tract disorders — built for understanding, not memorizing. Every card below expands for the full detail; collapse them once you know the material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<p class="block-intro">Learn these first — nearly everything else in the chapter is built from this vocabulary. Type in the box to filter.</p>
+<div class="gloss-controls">
+<input id="glossSearch" oninput="filterGloss()" placeholder="Search terms (e.g. 'peristalsis', 'ulcer')..." type="text"/>
+</div>
+<dl class="gloss-grid" id="glossGrid">
+<div class="term"><dt>Dysphagia</dt><dd>Subjective difficulty swallowing; can involve trouble initiating a swallow or a "sticking" sensation.</dd></div>
+<div class="term"><dt>Odynophagia</dt><dd>Pain during swallowing; may accompany dysphagia.</dd></div>
+<div class="term"><dt>Peristalsis</dt><dd>The coordinated, wave-like muscle contractions that move contents through the GI tract.</dd></div>
+<div class="term"><dt>Aperistalsis</dt><dd>Complete absence of peristaltic activity in the esophagus.</dd></div>
+<div class="term"><dt>Achalasia</dt><dd>A disorder of esophageal smooth muscle function that impairs peristalsis and LES relaxation.</dd></div>
+<div class="term"><dt>Lower Esophageal Sphincter (LES)</dt><dd>The muscular ring between the esophagus and stomach that normally prevents reflux.</dd></div>
+<div class="term"><dt>Pyrosis</dt><dd>Medical term for heartburn — a substernal burning sensation from acid reflux.</dd></div>
+<div class="term"><dt>Diffuse Esophageal Spasm (DES)</dt><dd>High-amplitude, uncoordinated esophageal contractions that alternate with normal peristalsis, causing chest pain that can mimic angina.</dd></div>
+<div class="term"><dt>Visceral Pain</dt><dd>Diffuse, poorly localized pain from stretching/inflammation of an internal organ.</dd></div>
+<div class="term"><dt>Somatic Pain</dt><dd>Sharp, well-localized pain from injury to the abdominal wall or peritoneum.</dd></div>
+<div class="term"><dt>Referred Pain</dt><dd>Pain felt at a site distant from its source, but within the same dermatome/nerve segment.</dd></div>
+<div class="term"><dt>Aerophagia</dt><dd>Subconscious swallowing of air — a normal source of intestinal gas.</dd></div>
+<div class="term"><dt>Eructation</dt><dd>Belching; expulsion of swallowed air from the stomach.</dd></div>
+<div class="term"><dt>Constipation</dt><dd>Small, infrequent (fewer than 3/week), or difficult bowel movements.</dd></div>
+<div class="term"><dt>Fecal Impaction</dt><dd>A firm, immovable mass of stool obstructing the lower GI tract, common after chronic constipation.</dd></div>
+<div class="term"><dt>Diarrhea</dt><dd>Increased frequency and fluidity of bowel movements; &gt;200 g stool/24 hr is the objective definition.</dd></div>
+<div class="term"><dt>Osmotic Diarrhea</dt><dd>Diarrhea from poorly-absorbed solutes pulling water into the bowel lumen.</dd></div>
+<div class="term"><dt>Secretory Diarrhea</dt><dd>Diarrhea from toxins that actively stimulate intestinal fluid secretion (e.g., cholera toxin).</dd></div>
+<div class="term"><dt>Exudative Diarrhea</dt><dd>Diarrhea from mucus, blood, and protein leaking from inflamed bowel (e.g., IBD).</dd></div>
+<div class="term"><dt>Stomatitis</dt><dd>Ulcerative inflammation of the oral mucosa (lips, cheeks, palate).</dd></div>
+<div class="term"><dt>GERD</dt><dd>Gastroesophageal reflux disease — backflow of gastric contents into the esophagus through the LES.</dd></div>
+<div class="term"><dt>Barrett Esophagus</dt><dd>Replacement of normal esophageal squamous epithelium with columnar tissue from chronic acid exposure; precancerous.</dd></div>
+<div class="term"><dt>Hiatal Hernia</dt><dd>Protrusion of part of the stomach through the diaphragm into the thorax.</dd></div>
+<div class="term"><dt>Mallory-Weiss Syndrome</dt><dd>A mucosal tear at the gastroesophageal junction from forceful vomiting, causing bleeding.</dd></div>
+<div class="term"><dt>Esophageal Varices</dt><dd>Dilated esophageal veins from portal hypertension, usually due to cirrhosis; risk of severe hemorrhage.</dd></div>
+<div class="term"><dt>Gastritis</dt><dd>Inflammation of the stomach lining; acute (toxins) or chronic (often <i>H. pylori</i>).</dd></div>
+<div class="term"><dt>Helicobacter pylori</dt><dd>A bacterium that colonizes the gastric mucosa and is the major cause of chronic gastritis and peptic ulcer disease.</dd></div>
+<div class="term"><dt>Gastroenteritis</dt><dd>Inflammation of the stomach and small intestine, often infectious ("stomach flu").</dd></div>
+<div class="term"><dt>Peptic Ulcer Disease (PUD)</dt><dd>Mucosal injury of the esophagus, stomach, or duodenum from acid/pepsin exceeding mucosal defenses.</dd></div>
+<div class="term"><dt>Irritable Bowel Syndrome (IBS)</dt><dd>A functional motility disorder with alternating diarrhea/constipation and cramping, without identifiable structural pathology.</dd></div>
+<div class="term"><dt>Ileus</dt><dd>A functional (non-mechanical) obstruction from loss of bowel propulsive activity.</dd></div>
+<div class="term"><dt>Strangulation</dt><dd>Impaired blood supply to a bowel segment, risking ischemia, gangrene, and perforation.</dd></div>
+<div class="term"><dt>Volvulus</dt><dd>Twisting of the bowel on itself, causing obstruction and vascular compression.</dd></div>
+<div class="term"><dt>Intussusception</dt><dd>Telescoping of one bowel segment into an adjacent (usually distal) segment.</dd></div>
+<div class="term"><dt>Megacolon</dt><dd>Massive dilation of the colon, congenital or acquired.</dd></div>
+<div class="term"><dt>Hirschsprung Disease</dt><dd>Congenital absence of autonomic ganglia in a colon segment, preventing normal relaxation and causing megacolon.</dd></div>
+<div class="term"><dt>Malabsorption</dt><dd>Failure of the GI tract to properly absorb or digest one or more dietary nutrients.</dd></div>
+<div class="term"><dt>Celiac Disease</dt><dd>Immune-mediated intolerance of gluten causing villus atrophy and malabsorption.</dd></div>
+<div class="term"><dt>Steatorrhea</dt><dd>Excess fat in the stool, a sign of fat malabsorption.</dd></div>
+<div class="term"><dt>Dumping Syndrome</dt><dd>Rapid emptying of stomach contents into the small intestine after gastric surgery, causing osmotic fluid shift and rebound hypoglycemia.</dd></div>
+<div class="term"><dt>Short Bowel Syndrome</dt><dd>Severe malabsorption/diarrhea following surgical removal of large portions of small intestine.</dd></div>
+<div class="term"><dt>Adenomatous Polyp</dt><dd>A benign colon growth that is the major precursor lesion for colon cancer.</dd></div>
+<div class="term"><dt>Sessile vs. Pedunculated Polyp</dt><dd>Sessile = broad, flat base; pedunculated = attached by a narrow stalk.</dd></div>
+<div class="term"><dt>Dukes Classification</dt><dd>A staging system for colorectal cancer based on depth of invasion and nodal/metastatic spread.</dd></div>
+</dl>
+</section>
+<!-- ================= MANIFESTATIONS ================= -->
+<section class="block" id="manifestations-intro">
+<div class="block-head"><h2>Manifestations of GI Tract Disorders</h2><span class="tag">Symptoms</span></div>
+<p class="block-intro">GI symptoms depend on <b>where</b> the problem is located. This section covers the core symptom vocabulary — dysphagia, pain, vomiting, gas, and bowel-pattern changes — that every later disorder in this guide will reference.</p>
+</section>
+<section class="block" id="dysphagia">
+<details class="topic" open="">
+<summary>Dysphagia — difficulty swallowing</summary>
+<div class="topic-body">
+<p>Dysphagia falls into <b>three categories</b> based on where the swallowing process breaks down.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Three Categories of Dysphagia</p>
+<svg viewbox="0 0 900 430" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="180" x="360" y="10"></rect><text font-size="15" text-anchor="middle" x="450" y="38">DYSPHAGIA</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="100"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="100"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="100"></line>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="40" y="100"></rect><text font-size="12.5" text-anchor="middle" x="150" y="122">1. Bolus DELIVERY</text><text font-size="12.5" text-anchor="middle" x="150" y="140">into esophagus</text></g>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="340" y="100"></rect><text font-size="12.5" text-anchor="middle" x="450" y="122">2. Bolus TRANSPORT</text><text font-size="12.5" text-anchor="middle" x="450" y="140">down esophagus</text></g>
+<g class="mm-node"><rect height="52" rx="8" width="220" x="640" y="100"></rect><text font-size="12.5" text-anchor="middle" x="750" y="122">3. Bolus ENTRY</text><text font-size="12.5" text-anchor="middle" x="750" y="140">into stomach (LES)</text></g>
+<line class="mm-line" x1="150" x2="150" y1="152" y2="182"></line>
+<g class="mm-leaf"><rect height="60" rx="6" width="240" x="30" y="182"></rect><text font-size="11.5" text-anchor="middle" x="150" y="200">Cause: neuromuscular</text><text font-size="11.5" text-anchor="middle" x="150" y="216">incoordination</text><text font-size="11.5" text-anchor="middle" x="150" y="232">Worse with LIQUIDS</text></g>
+<line class="mm-line" x1="150" x2="150" y1="242" y2="270"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="240" x="30" y="270"></rect><text font-size="11.5" text-anchor="middle" x="150" y="292">Cough / nasal reflux,</text><text font-size="11.5" text-anchor="middle" x="150" y="307">aspiration risk</text></g>
+<line class="mm-line" x1="450" x2="450" y1="152" y2="182"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="240" x="330" y="182"></rect><text font-size="11.5" text-anchor="middle" x="450" y="200">Cause: altered peristalsis</text><text font-size="11.5" text-anchor="middle" x="450" y="216">(diverticula, achalasia,</text><text font-size="11.5" text-anchor="middle" x="450" y="231">strictures, tumors)</text><text font-size="11.5" text-anchor="middle" x="450" y="249">Food feels "stuck" at sternum</text></g>
+<line class="mm-line" x1="450" x2="450" y1="258" y2="286"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="240" x="330" y="286"></rect><text font-size="11.5" text-anchor="middle" x="450" y="308">Solids first, then liquids</text><text font-size="11.5" text-anchor="middle" x="450" y="322">as it worsens</text></g>
+<line class="mm-line" x1="750" x2="750" y1="152" y2="182"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="240" x="630" y="182"></rect><text font-size="11.5" text-anchor="middle" x="750" y="200">Cause: LES dysfunction</text><text font-size="11.5" text-anchor="middle" x="750" y="216">or obstructing lesion</text><text font-size="11.5" text-anchor="middle" x="750" y="231">(tumor, chronic reflux)</text><text font-size="11.5" text-anchor="middle" x="750" y="249">Substernal tightness/pain</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Subjective difficulty swallowing — trouble initiating a swallow, or the sensation that food "sticks" in the esophagus. <b>Odynophagia</b> (painful swallowing) may accompany it.</p></div>
+<div class="fact warn"><h4>Red flag</h4><p>Type 1 dysphagia (delivery problem) carries a major <b>aspiration risk</b> — food/fluid can be coughed back out the nose or mouth during attempted swallowing.</p></div>
+</div>
+<div class="recap">
+<h4>Remember it this way</h4>
+<ul>
+<li><b>Category 1 (delivery):</b> the "starting the swallow" step fails → worse with liquids, aspiration risk.</li>
+<li><b>Category 2 (transport):</b> the esophagus body doesn't push properly → "stuck behind the sternum," solids before liquids.</li>
+<li><b>Category 3 (entry):</b> the exit door (LES) is blocked or dysfunctional → substernal tightness during swallowing.</li>
+</ul>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="esoph-pain">
+<details class="topic" open="">
+<summary>Esophageal Pain</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Heartburn (pyrosis)</h4><p>Reflux of acidic gastric contents irritates esophageal sensory nerves and can trigger esophageal muscle spasm — substernal burning that may radiate to the neck/throat.</p></div>
+<div class="fact warn"><h4>Non-heartburn chest pain</h4><p>From esophageal distention or powerful contractions (e.g., diffuse esophageal spasm). Can be <b>indistinguishable from angina</b>, including radiation to neck/shoulder/arm/jaw.</p></div>
+<div class="fact"><h4>Infectious esophagitis</h4><p>HSV, CMV, or <i>Candida</i> — common in immunocompromised patients (AIDS, chemo). Produces dull, aching pain worse with swallowing.</p></div>
+<div class="fact tx"><h4>Key point</h4><p>Because esophageal pain can mimic cardiac pain so closely, cardiac causes must always be ruled out first in the workup of chest pain.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="abd-pain">
+<details class="topic" open="">
+<summary>Abdominal Pain</summary>
+<div class="topic-body">
+<p>Abdominal pain has <b>three patterns</b> — knowing which one you're dealing with narrows down the cause fast.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Three Types of Abdominal Pain</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="210" x="345" y="10"></rect><text font-size="15" text-anchor="middle" x="450" y="38">ABDOMINAL PAIN</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="96"></rect><text font-size="13" text-anchor="middle" x="150" y="121">VISCERAL</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="96"></rect><text font-size="13" text-anchor="middle" x="450" y="121">SOMATIC</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="96"></rect><text font-size="13" text-anchor="middle" x="750" y="121">REFERRED</text></g>
+<line class="mm-line" x1="150" x2="150" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="86" rx="6" width="240" x="30" y="164"></rect><text font-size="11.5" text-anchor="middle" x="150" y="184">Organ stretch/distention</text><text font-size="11.5" text-anchor="middle" x="150" y="200">or inflammation</text><text font-size="11.5" text-anchor="middle" x="150" y="220">Diffuse, poorly localized,</text><text font-size="11.5" text-anchor="middle" x="150" y="236">gnawing / burning / cramping</text></g>
+<line class="mm-line" x1="450" x2="450" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="86" rx="6" width="240" x="330" y="164"></rect><text font-size="11.5" text-anchor="middle" x="450" y="184">Injury to abdominal wall,</text><text font-size="11.5" text-anchor="middle" x="450" y="200">peritoneum, mesentery root,</text><text font-size="11.5" text-anchor="middle" x="450" y="216">or diaphragm</text><text font-size="11.5" text-anchor="middle" x="450" y="236">Sharp, intense, well localized</text></g>
+<line class="mm-line" x1="750" x2="750" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="86" rx="6" width="240" x="630" y="164"></rect><text font-size="11.5" text-anchor="middle" x="750" y="184">Felt away from the source,</text><text font-size="11.5" text-anchor="middle" x="750" y="200">same dermatome/nerve segment</text><text font-size="11.5" text-anchor="middle" x="750" y="220">Sharp, well localized —</text><text font-size="11.5" text-anchor="middle" x="750" y="236">in skin or deeper tissue</text></g>
+</svg>
+</div>
+<div class="callout"><b>Onset matters:</b> Sudden/instantaneous pain suggests perforation or organ rupture. Gradual pain over time suggests chronic states like diverticulitis or ulcerative colitis. Pain is rarely the only symptom — it's usually paired with vomiting or a bowel-pattern change.</div>
+</div>
+</details>
+</section>
+<section class="block" id="vomiting">
+<details class="topic" open="">
+<summary>Vomiting</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Forceful expulsion of gastric contents via coordinated abdominal contractions plus reverse esophageal peristalsis. Almost always paired with nausea.</p></div>
+<div class="fact"><h4>Not just GI</h4><p>Also caused by metabolic, endocrine, vestibular (inner ear), and cardiac disease, infection, electrolyte imbalance, drugs, surgery, and early pregnancy.</p></div>
+</div>
+<table class="compare">
+<tr><th>What's in the vomitus</th><th>What it suggests</th></tr>
+<tr><td>Recently eaten food, no bile</td><td>Gastric-level problem</td></tr>
+<tr><td>Bile present</td><td>Contents reached duodenum/small intestine</td></tr>
+<tr><td>Feculent (fecal-smelling)</td><td>Lower intestinal or colon obstruction — serious pathology</td></tr>
+</table>
+</div>
+</details>
+</section>
+<section class="block" id="gas">
+<details class="topic" open="">
+<summary>Intestinal Gas</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Normal sources</h4><p>Swallowed air (aerophagia), normal digestion, acid neutralization by bicarbonate, and diffusion from blood.</p></div>
+<div class="fact"><h4>Excess belching</h4><p>Usually just swallowed air, but persistent excess can signal a motility disorder or gastric outlet obstruction.</p></div>
+<div class="fact"><h4>Lactose intolerance</h4><p>Missing lactase → undigested lactose is fermented by bacteria → gas. A classic example of a digestive-enzyme cause of gas.</p></div>
+<div class="fact"><h4>Flatulence</h4><p>Usually from bacterial action on gas-producing foods (beans, certain vegetables); can also be from IBD or enteric infection.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="constipation">
+<details class="topic" open="">
+<summary>Constipation</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Fewer than 3 stools/week, or small/difficult/hard bowel movements.</p></div>
+<div class="fact"><h4>Contributing factors</h4><ul><li>Low-fiber, high-processed diet (fiber/cellulose bulks the stool)</li><li>Sedentary lifestyle</li><li>Pathologic causes (obstruction, diverticulitis)</li><li>IBS (constipation-predominant)</li><li>"Functional" constipation — no identifiable cause, often psychological</li></ul></div>
+<div class="fact warn"><h4>In elderly patients</h4><p>Poor diet + inactivity + slowed peristalsis with age → chronic constipation → risk of <b>fecal impaction</b> (a firm, immovable stool mass obstructing the lower GI tract).</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="diarrhea">
+<details class="topic" open="">
+<summary>Diarrhea</summary>
+<div class="topic-body">
+<p>Increased frequency and fluidity of bowel movements (&gt;200 g/24 hr). <b>Acute</b> vs. <b>chronic</b> (&gt;4 weeks). There are four classic pathophysiologic mechanisms.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Four Mechanisms of Diarrhea</p>
+<svg viewbox="0 0 900 470" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="180" x="360" y="10"></rect><text font-size="15" text-anchor="middle" x="450" y="38">DIARRHEA</text></g>
+<line class="mm-line" x1="450" x2="120" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="330" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="570" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="780" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="20" y="96"></rect><text font-size="12.5" text-anchor="middle" x="120" y="121">OSMOTIC</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="230" y="96"></rect><text font-size="12.5" text-anchor="middle" x="330" y="121">SECRETORY</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="470" y="96"></rect><text font-size="12.5" text-anchor="middle" x="570" y="121">EXUDATIVE</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="680" y="96"></rect><text font-size="12.5" text-anchor="middle" x="780" y="121">MOTILITY</text></g>
+<line class="mm-line" x1="120" x2="120" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="220" x="10" y="164"></rect><text font-size="11" text-anchor="middle" x="120" y="184">Poorly-absorbed solutes</text><text font-size="11" text-anchor="middle" x="120" y="199">(carbs, MgSO4) pull water</text><text font-size="11" text-anchor="middle" x="120" y="214">into lumen</text><text font-size="11" text-anchor="middle" x="120" y="234">e.g. many laxatives,</text><text font-size="11" text-anchor="middle" x="120" y="249">lactose intolerance</text></g>
+<line class="mm-line" x1="330" x2="330" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="112" rx="6" width="220" x="220" y="164"></rect><text font-size="11" text-anchor="middle" x="330" y="184">Bacterial toxin stimulates</text><text font-size="11" text-anchor="middle" x="330" y="199">Cl- secretion + blocks</text><text font-size="11" text-anchor="middle" x="330" y="214">resorption; can be 1L+/day</text><text font-size="11" text-anchor="middle" x="330" y="234">e.g. C. diff, V. cholerae,</text><text font-size="11" text-anchor="middle" x="330" y="249">S. aureus toxin</text></g>
+<line class="mm-line" x1="570" x2="570" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="112" rx="6" width="220" x="460" y="164"></rect><text font-size="11" text-anchor="middle" x="570" y="184">Mucus, blood, protein leak</text><text font-size="11" text-anchor="middle" x="570" y="199">from inflamed bowel →</text><text font-size="11" text-anchor="middle" x="570" y="214">osmotic load + poor absorption</text><text font-size="11" text-anchor="middle" x="570" y="234">e.g. Crohn disease,</text><text font-size="11" text-anchor="middle" x="570" y="249">ulcerative colitis</text></g>
+<line class="mm-line" x1="780" x2="780" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="112" rx="6" width="220" x="670" y="164"></rect><text font-size="11" text-anchor="middle" x="780" y="184">Reduced contact time</text><text font-size="11" text-anchor="middle" x="780" y="199">between chyme and mucosa;</text><text font-size="11" text-anchor="middle" x="780" y="214">unabsorbed bile/fatty acids</text><text font-size="11" text-anchor="middle" x="780" y="234">e.g. dumping syndrome,</text><text font-size="11" text-anchor="middle" x="780" y="249">IBS</text></g>
+</svg>
+</div>
+<div class="recap">
+<h4>Causes to know</h4>
+<ul>
+<li><b>Acute:</b> IBD flare, acute infection, emotional stress, leakage around impacted feces</li>
+<li><b>Chronic (&gt;4 weeks):</b> chronic infection (often immune-compromised), altered motility/integrity, malabsorption, endocrine disorders</li>
+<li><b>Episodic:</b> food allergy, GI irritants like caffeine</li>
+</ul>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= MOUTH & ESOPHAGUS ================= -->
+<section class="block" id="mouth-esoph-intro">
+<div class="block-head"><h2>Disorders of the Mouth &amp; Esophagus</h2><span class="tag">Entry portals</span></div>
+<p class="block-intro">The mouth and esophagus are the entry points for nutrients. Problems here aren't usually emergencies, but they can seriously affect long-term nutrition and quality of life.</p>
+</section>
+<section class="block" id="stomatitis">
+<details class="topic" open="">
+<summary>Stomatitis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Ulcerative inflammation of the oral mucosa (buccal mucosa, lips, palate).</p></div>
+<div class="fact"><h4>Causes</h4><p>Mechanical trauma; irritants (alcohol, tobacco, chemicals); pathogens (bacteria, viruses); chemo drugs; radiation; autoimmune disease (reactive arthritis, Behçet syndrome); vitamin deficiency; sometimes idiopathic.</p></div>
+<div class="fact"><h4>Cold sores (HSV-1)</h4><p>Most common type — acute herpetic gingivostomatitis. Prodromal tingling/itching, fever, pharyngitis, then vesicles on an erythematous base that rupture into painful ulcers. HSV stays latent in dorsal ganglia and can reactivate with stress.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Antivirals (acyclovir, valacyclovir, famciclovir) for HSV; steroids/immunomodulators for autoimmune causes; topical anesthetics/mucosal barriers (Orabase, lidocaine) for comfort and nutrition. Severe idiopathic cases may need anti-TNF agents.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="gerd">
+<details class="topic" open="">
+<summary>Gastroesophageal Reflux Disease (GERD)</summary>
+<div class="topic-body">
+<p>GERD = backflow of gastric contents into the esophagus through the LES. Multifactorial — think of it as a <b>tug-of-war</b> between things that weaken the LES / raise abdominal pressure, and the esophagus's ability to clear and tolerate that reflux.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — GERD: Causes → Complications</p>
+<svg viewbox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="200" x="350" y="180"></rect><text font-size="15" text-anchor="middle" x="450" y="208">GERD</text></g>
+<line class="mm-line" x1="350" x2="90" y1="203" y2="80"></line>
+<line class="mm-line" x1="350" x2="90" y1="203" y2="330"></line>
+<g class="mm-node"><rect height="52" rx="8" width="230" x="10" y="55"></rect><text font-size="12" text-anchor="middle" x="125" y="76">LES weakened by:</text><text font-size="11" text-anchor="middle" x="125" y="94">fatty food, caffeine, alcohol,</text></g>
+<g class="mm-leaf"><rect height="60" rx="6" width="230" x="10" y="112"></rect><text font-size="11" text-anchor="middle" x="125" y="130">smoking, sleep position,</text><text font-size="11" text-anchor="middle" x="125" y="146">obesity, drugs (progesterone,</text><text font-size="11" text-anchor="middle" x="125" y="162">narcotics, CCBs, theophylline)</text></g>
+<g class="mm-node"><rect height="52" rx="8" width="230" x="10" y="305"></rect><text font-size="12" text-anchor="middle" x="125" y="326">↑ Intra-abdominal</text><text font-size="12" text-anchor="middle" x="125" y="344">pressure: pregnancy,</text></g>
+<g class="mm-leaf"><rect height="46" rx="6" width="230" x="10" y="362"></rect><text font-size="11" text-anchor="middle" x="125" y="382">hiatal hernia,</text><text font-size="11" text-anchor="middle" x="125" y="398">obesity</text></g>
+<line class="mm-line" x1="550" x2="810" y1="203" y2="80"></line>
+<line class="mm-line" x1="550" x2="810" y1="203" y2="200"></line>
+<line class="mm-line" x1="550" x2="810" y1="203" y2="330"></line>
+<g class="mm-node"><rect height="40" rx="8" width="230" x="660" y="55"></rect><text font-size="12.5" text-anchor="middle" x="775" y="80">Reflux esophagitis</text></g>
+<g class="mm-leaf"><rect height="60" rx="6" width="230" x="660" y="105"></rect><text font-size="11" text-anchor="middle" x="775" y="123">Heartburn, regurgitation,</text><text font-size="11" text-anchor="middle" x="775" y="139">chest pain, dysphagia</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="230" x="660" y="180"></rect><text font-size="12.5" text-anchor="middle" x="775" y="205">Pulmonary symptoms</text></g>
+<g class="mm-leaf"><rect height="60" rx="6" width="230" x="660" y="230"></rect><text font-size="11" text-anchor="middle" x="775" y="248">Cough, laryngitis, asthma,</text><text font-size="11" text-anchor="middle" x="775" y="264">aspiration pneumonia</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="230" x="660" y="305"></rect><text font-size="12.5" text-anchor="middle" x="775" y="330">Barrett esophagus</text></g>
+<g class="mm-leaf"><rect height="46" rx="6" width="230" x="660" y="355"></rect><text font-size="11" text-anchor="middle" x="775" y="378">↑30x esophageal cancer risk</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>H. pylori &amp; GERD</h4><p>Controversial relationship — actually an <b>inverse</b> association. Eradicating <i>H. pylori</i> for PUD can unmask/worsen reflux.</p></div>
+<div class="fact tx"><h4>Treatment ladder</h4><p>Diet/behavior changes → antacids/H2-blockers for occasional symptoms → <b>PPIs</b> (mainstay for chronic GERD, typically 8-week course) → surgery (laparoscopic Nissen fundoplication) for intractable cases.</p></div>
+<div class="fact warn"><h4>Long-term PPI risks</h4><p>Malabsorption of B12, iron, magnesium, calcium; increased hip fracture risk (osteoporosis); increased risk of microscopic colitis and <i>C. diff</i> colitis. Causality still debated.</p></div>
+<div class="fact warn"><h4>Barrett esophagus</h4><p>Columnar tissue replaces normal squamous epithelium from chronic acid exposure. ~30x increased esophageal cancer risk (0.1–0.4%/year). Requires regular endoscopic screening; dysplasia may be treated with radiofrequency ablation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hiatal">
+<details class="topic" open="">
+<summary>Hiatal Hernia</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Type</th><th>What happens</th></tr>
+<tr><td><b>Sliding</b> (most common)</td><td>Stomach slips upward; gastroesophageal junction sits above the diaphragm</td></tr>
+<tr><td><b>Paraesophageal</b></td><td>Part of the greater curvature rolls through the diaphragmatic defect (junction stays in place)</td></tr>
+<tr><td><b>Mixed</b></td><td>Features of both</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact"><h4>Risk factors</h4><p>Anything raising intra-abdominal pressure: ascites, pregnancy, obesity, chronic straining/coughing. Linked to a Western diet and Western toileting posture.</p></div>
+<div class="fact"><h4>Who's affected</h4><p>~60% of people over 60 (mostly asymptomatic); more common in females.</p></div>
+<div class="fact warn"><h4>Complications</h4><p>Predisposes to GERD (heartburn, chest pain, dysphagia); <b>Cameron ulcers</b> (mucosal ulcers where the stomach slides through the diaphragm — can cause chronic GI blood loss); rare life-threatening incarceration.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Same medical therapy as GERD. Surgery (Nissen fundoplication) for acute incarceration or intractable reflux.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="mallory">
+<details class="topic" open="">
+<summary>Mallory-Weiss Syndrome</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Longitudinal mucosal/submucosal tear at the cardia or lower esophagus from forceful/prolonged vomiting, where the upper esophageal sphincter fails to relax.</p></div>
+<div class="fact"><h4>Typical patient</h4><p>~75% male, history of excessive alcohol or salicylate use. Other contributors: coughing, straining, trauma, esophagitis, gastritis, colonoscopy prep (polyethylene glycol). Hiatal hernia predisposes.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>Hematemesis (vomiting blood), blood per rectum after forceful vomiting, epigastric/back pain. Can range mild to massive; profuse bleeding near the cardia can → life-threatening shock.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Diagnosed via endoscopy during active bleeding. Most need at least one transfusion, but bleeding often stops on its own. Active bleeding: endoscopic coagulation, epinephrine injection, or interventional radiology; surgery in select cases.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="varices">
+<details class="topic" open="">
+<summary>Esophageal Varices</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Complication of <b>portal hypertension</b> — in the West, usually cirrhosis from alcoholism or viral hepatitis. In tropical regions, <i>Schistosoma</i> infection and hepatitis B are major causes.</p></div>
+<div class="fact warn"><h4>Risk</h4><p>Affects &gt;50% of cirrhotic patients; ~30% of those with varices experience a hemorrhage within 2 years of diagnosis. Detailed management is covered in the liver chapter.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= WALL INTEGRITY ================= -->
+<section class="block" id="wall-intro">
+<div class="block-head"><h2>Alterations in the Integrity of the GI Wall</h2><span class="tag">Inflammation &amp; ulceration</span></div>
+<p class="block-intro">Roughly 30 feet of GI tract can be damaged by infection, inflammation, or wall weakness. When the wall's integrity is compromised, digestion and absorption suffer along with it.</p>
+</section>
+<section class="block" id="gastritis">
+<details class="topic" open="">
+<summary>Gastritis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Acute gastritis</h4><p>Triggered by toxins (alcohol, aspirin, irritants) or viral/bacterial/autoimmune illness. In the West, NSAID overuse and alcohol/tobacco are the leading causes.</p></div>
+<div class="fact"><h4>Chronic gastritis</h4><p>Driven mainly by <i>H. pylori</i>, discovered in 1983. Likely person-to-person (possibly fecal-oral) transmission. Causes persistent, superficial inflammation in nearly everyone infected.</p></div>
+<div class="fact warn"><h4>Consequences of H. pylori</h4><p>PUD, atrophic gastritis, gastric adenocarcinoma, MALT lymphoma. Possible (unconfirmed) links to colon, pancreatic, and hepatobiliary cancer.</p></div>
+<div class="fact tx"><h4>Manifestations &amp; treatment</h4><p>May be asymptomatic; acute cases show anorexia, nausea, vomiting, postprandial discomfort, occasionally hematemesis. Resolves once the trigger is removed and the epithelium renews.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="gastroenteritis">
+<details class="topic" open="">
+<summary>Gastroenteritis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Inflammation of the stomach and small intestine. Chronic form usually stems from a primary disorder like Crohn disease. Acute form ("stomach flu") is typically infectious.</p></div>
+<div class="fact"><h4>Causes</h4><p>Direct infection (e.g., Norwalk/norovirus), preformed bacterial toxins (<i>S. aureus</i>, <i>B. cereus</i>), toxin-producing bacteria (<i>C. perfringens</i>), or disrupted normal flora (e.g., during travel).</p></div>
+<div class="fact warn"><h4>Who's at risk</h4><p>Usually self-limited in adults, but fluid loss from diarrhea/vomiting can be life-threatening in children and the elderly, especially in resource-poor settings.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Supportive — fluid and electrolyte replacement, especially oral rehydration solutions (Oralyte, Pedialyte).</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="pud">
+<details class="topic" open="">
+<summary>Peptic Ulcer Disease (PUD)</summary>
+<div class="topic-body">
+<p>PUD happens when injury factors (acid, pepsin, NSAIDs, <i>H. pylori</i>) overwhelm the mucosa's protective mechanisms.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — PUD Pathogenesis</p>
+<svg viewbox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">Injury vs. Defense Imbalance</text></g>
+<line class="mm-line" x1="330" x2="130" y1="30" y2="100"></line>
+<line class="mm-line" x1="570" x2="770" y1="30" y2="100"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="20" y="100"></rect><text font-size="12.5" text-anchor="middle" x="130" y="125">INJURY FACTORS ↑</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="660" y="100"></rect><text font-size="12.5" text-anchor="middle" x="770" y="125">DEFENSE FACTORS ↓</text></g>
+<line class="mm-line" x1="130" x2="130" y1="140" y2="168"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="240" x="10" y="168"></rect><text font-size="11" text-anchor="middle" x="130" y="188">HCl + pepsin, H. pylori,</text><text font-size="11" text-anchor="middle" x="130" y="204">NSAIDs/aspirin, alcohol,</text><text font-size="11" text-anchor="middle" x="130" y="220">bile acid reflux, smoking,</text><text font-size="11" text-anchor="middle" x="130" y="240">stress (glucocorticoids)</text></g>
+<line class="mm-line" x1="770" x2="770" y1="140" y2="168"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="240" x="650" y="168"></rect><text font-size="11" text-anchor="middle" x="770" y="188">Epithelial barrier,</text><text font-size="11" text-anchor="middle" x="770" y="204">alkaline mucus layer,</text><text font-size="11" text-anchor="middle" x="770" y="220">epithelial renewal</text></g>
+<line class="mm-line" x1="450" x2="450" y1="264" y2="264"></line>
+<line class="mm-line" x1="130" x2="450" y1="264" y2="300"></line>
+<line class="mm-line" x1="770" x2="450" y1="244" y2="300"></line>
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="300"></rect><text font-size="13" text-anchor="middle" x="450" y="322">MUCOSAL BREAKDOWN</text><text font-size="10.5" text-anchor="middle" x="450" y="338">→ gastric or duodenal ulcer</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Gastric vs. Duodenal ulcer</h4><p><b>Gastric:</b> epithelial barrier breakdown is primary; only ~37% have <i>H. pylori</i> — all GUs need endoscopy + biopsy to rule out malignancy.<br/><b>Duodenal:</b> excess acid secretion (↑vagal tone) is primary; up to 95% have <i>H. pylori</i>; testing usually not needed since probability is so high.</p></div>
+<div class="fact"><h4>Pain pattern</h4><p><b>GU:</b> pain on an empty stomach, sometimes soon after eating.<br/><b>DU:</b> pain 2–3 hours after a meal, relieved by more food.</p></div>
+<div class="fact"><h4>H. pylori mechanics</h4><p>Thrives in acid; slows healing and raises recurrence. Genes like CagA and dupA damage cells and block epithelial repair.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>PPIs to block acid secretion; sucralfate as a protective coating; eradicate <i>H. pylori</i> when present. Smoking worsens healing and raises recurrence — cessation matters.</p></div>
+</div>
+<div class="danger"><b>Watch for:</b> A significant number of ulcers are asymptomatic — GI bleeding or perforation can be the first sign, with no prior warning.</div>
+</div>
+</details>
+</section>
+<!-- ================= MOTILITY ================= -->
+<section class="block" id="motility-intro">
+<div class="block-head"><h2>Alterations in Motility &amp; Malabsorption</h2><span class="tag">Movement problems</span></div>
+<p class="block-intro">Too-fast transit means not enough time to absorb nutrients. Too-slow or blocked transit causes distention, obstruction, and potentially ischemia. Same GI tract, opposite failure modes.</p>
+</section>
+<section class="block" id="ibs">
+<details class="topic" open="">
+<summary>Irritable Bowel Syndrome (IBS)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Alternating diarrhea and constipation with abdominal cramping — <b>with no identifiable structural pathology</b>. This is the key distinction from IBD. Affects up to 20% of the US population.</p></div>
+<div class="fact"><h4>Pathogenesis</h4><p>Primarily a motility disorder — colonic slow-wave activity is markedly increased, and sensory response to distention is heightened. Genetic vs. environmental (infection, stress, diet) triggers still unclear.</p></div>
+<div class="fact tx"><h4>Treatment — diarrhea type</h4><p>Dietary modification (avoid lactose, legumes, gas-forming foods) → antispasmodics (loperamide, eluxadoline) → bile-acid sequestrant if needed. Alosetron helps but has restricted use due to side effects; eluxadoline carries pancreatitis risk.</p></div>
+<div class="fact tx"><h4>Treatment — constipation type</h4><p>Osmotic laxative (polyethylene glycol) first-line; lubiprostone, linaclotide, plecanatide, tenapanor for refractory cases. High-fiber diet helps normalize myoelectric activity.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="obstruction">
+<details class="topic" open="">
+<summary>Intestinal Obstruction</summary>
+<div class="topic-body">
+<p>Blockage can be <b>mechanical</b> (a physical blocker) or <b>functional</b> (loss of propulsion, called ileus) — the distinction drives everything about workup and treatment.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Mechanical vs. Functional Obstruction</p>
+<svg viewbox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">INTESTINAL OBSTRUCTION</text></g>
+<line class="mm-line" x1="450" x2="200" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="700" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="90" y="96"></rect><text font-size="12.5" text-anchor="middle" x="200" y="121">MECHANICAL</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="590" y="96"></rect><text font-size="12.5" text-anchor="middle" x="700" y="121">FUNCTIONAL (ileus)</text></g>
+<line class="mm-line" x1="200" x2="200" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="240" x="80" y="164"></rect><text font-size="11" text-anchor="middle" x="200" y="184">Adhesions, hernia, tumor,</text><text font-size="11" text-anchor="middle" x="200" y="200">inflammation/stricture (CD),</text><text font-size="11" text-anchor="middle" x="200" y="216">impacted feces, volvulus,</text><text font-size="11" text-anchor="middle" x="200" y="232">intussusception</text><text font-size="11" text-anchor="middle" x="200" y="252">90% occur in small bowel</text></g>
+<line class="mm-line" x1="700" x2="700" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="240" x="580" y="164"></rect><text font-size="11" text-anchor="middle" x="700" y="184">After abdominal surgery,</text><text font-size="11" text-anchor="middle" x="700" y="200">hypokalemia, peritonitis,</text><text font-size="11" text-anchor="middle" x="700" y="216">trauma, spinal fracture,</text><text font-size="11" text-anchor="middle" x="700" y="232">narcotics</text><text font-size="11" text-anchor="middle" x="700" y="252">Ogilvie syndrome = recurrent</text></g>
+<line class="mm-line" x1="450" x2="450" y1="268" y2="300"></line>
+<line class="mm-line" x1="200" x2="450" y1="260" y2="300"></line>
+<line class="mm-line" x1="700" x2="450" y1="260" y2="300"></line>
+<g class="mm-node"><rect height="60" rx="10" width="300" x="300" y="300"></rect><text font-size="12" text-anchor="middle" x="450" y="322">Fluid/gas trap → distention →</text><text font-size="12" text-anchor="middle" x="450" y="340">edema → ischemia/strangulation →</text><text font-size="11" text-anchor="middle" x="450" y="356">sepsis, gangrene, perforation, shock</text></g>
+</svg>
+</div>
+<table class="compare">
+<tr><th>Location</th><th>Typical picture</th></tr>
+<tr><td>Upper jejunum</td><td>Vomiting, dehydration, electrolyte depletion</td></tr>
+<tr><td>Distal ileum</td><td>Early constipation, later massive fluid accumulation</td></tr>
+<tr><td>Colon</td><td>Massive gas distention; fluid/electrolyte loss less severe; tumor is the most common cause</td></tr>
+</table>
+<div class="danger"><b>Untreated small-bowel obstruction</b> carries a high risk of death from shock and vascular collapse — this is a surgical emergency in progression.</div>
+<div class="fact tx" style="margin-top:10px;"><h4>Treatment</h4><p>Surgery to correct/remove the mechanical cause; supportive care with bowel decompression (endoscopy/tubes) and fluid/electrolyte replacement.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="volvulus">
+<details class="topic" open="">
+<summary>Volvulus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>The bowel twists on itself, obstructing the lumen and compressing blood vessels. Most common sites: <b>cecum</b> and <b>sigmoid colon</b>.</p></div>
+<div class="fact"><h4>Cause &amp; risk</h4><p>Rotation anomaly, ingested foreign body, or adhesion (cause not always identifiable). More common in elderly patients with other medical conditions.</p></div>
+<div class="fact warn"><h4>Danger</h4><p>Twisting cuts blood flow → gangrene, necrosis, perforation. If both ends of a segment are twisted, a closed-loop obstruction results.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Endoscopic manipulation is usually tried first for colonic volvulus; surgery is reserved for failure of that approach.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="intussusception">
+<details class="topic" open="">
+<summary>Intussusception</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Telescoping of a bowel segment into the adjacent (usually distal) segment.</p></div>
+<div class="fact"><h4>Who's affected</h4><p>Most common in infants, 3x more often in males. Cause in infants usually unknown, though linked to viral infections and (historically) some rotavirus vaccines. In older children: Meckel diverticulum. In adults: usually a tumor.</p></div>
+<div class="fact warn"><h4>Progression</h4><p>Peristalsis pulls in more bowel → edema, venous engorgement, hemorrhage → obstruction → gangrene, shock, perforation if surgery is delayed.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="megacolon">
+<details class="topic" open="">
+<summary>Megacolon</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Most common Western cause</h4><p>Prolonged constipation/obstipation — including in young children navigating toilet training, and elderly patients relying long-term on enemas/laxatives.</p></div>
+<div class="fact warn"><h4>Important consideration</h4><p>A small number of children with encopresis have experienced sexual abuse — this should be considered, even though most affected children are psychologically normal.</p></div>
+<div class="fact"><h4>Other causes</h4><p>Hirschsprung disease (congenital); Chagas disease (<i>Trypanosoma cruzi</i> — common in Central/South America); <i>C. difficile</i> colitis (acute megacolon = surgical emergency); Ogilvie syndrome (rare).</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hirschsprung">
+<details class="topic" open="">
+<summary>Hirschsprung Disease</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Congenital absence/reduction of autonomic nerve ganglia in the smooth muscle of the large intestine — usually the rectosigmoid area (90% of cases).</p></div>
+<div class="fact"><h4>Mechanism</h4><p>The aganglionic segment contracts but can't relax to propel contents forward → stool stasis → proximal colon dilation (megacolon).</p></div>
+<div class="fact"><h4>Epidemiology</h4><p>~1 in 5,000 live births; can be familial; ~3.8:1 male predominance; often coexists with Down syndrome.</p></div>
+<div class="fact warn"><h4>Danger in infants</h4><p>Fecal stagnation can cause enterocolitis with bacterial overgrowth, profuse diarrhea, hypovolemic shock, and perforation. Colonic lavage stabilizes the infant until surgery (the definitive treatment).</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= MALABSORPTION ================= -->
+<section class="block" id="malabs-intro">
+<div class="block-head"><h2>Mucosal Malabsorption Disorders</h2><span class="tag">Nutrient failure</span></div>
+<p class="block-intro">Malabsorption = failure to absorb or digest dietary nutrients — typically shows up as diarrhea. Here it's grouped by cause: mucosal disease of the small intestine, or surgical loss of stomach/bowel.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Malabsorption Disorders Overview</p>
+<svg viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="140"></rect><text font-size="14" text-anchor="middle" x="450" y="168">MALABSORPTION</text></g>
+<line class="mm-line" x1="330" x2="140" y1="160" y2="40"></line>
+<g class="mm-leaf"><rect height="56" rx="6" width="240" x="20" y="14"></rect><text font-size="12" text-anchor="middle" x="140" y="35">CELIAC DISEASE</text><text font-size="10.5" text-anchor="middle" x="140" y="53">gluten intolerance, villus atrophy</text></g>
+<line class="mm-line" x1="330" x2="140" y1="150" y2="110"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="240" x="20" y="88"></rect><text font-size="12" text-anchor="middle" x="140" y="108">TROPICAL SPRUE</text><text font-size="10.5" text-anchor="middle" x="140" y="124">bacterial overgrowth, tropics</text></g>
+<line class="mm-line" x1="330" x2="140" y1="176" y2="230"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="240" x="20" y="205"></rect><text font-size="12" text-anchor="middle" x="140" y="225">DUMPING SYNDROME</text><text font-size="10.5" text-anchor="middle" x="140" y="241">post-gastrectomy</text></g>
+<line class="mm-line" x1="330" x2="140" y1="186" y2="300"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="240" x="20" y="278"></rect><text font-size="12" text-anchor="middle" x="140" y="298">SHORT BOWEL SYNDROME</text><text font-size="10.5" text-anchor="middle" x="140" y="314">post small-bowel resection</text></g>
+<line class="mm-line" x1="570" x2="760" y1="160" y2="60"></line>
+<g class="mm-leaf"><rect height="56" rx="6" width="240" x="640" y="34"></rect><text font-size="12" text-anchor="middle" x="760" y="55">Fat / protein / carb loss</text><text font-size="10.5" text-anchor="middle" x="760" y="73">weight loss, steatorrhea</text></g>
+<line class="mm-line" x1="570" x2="760" y1="180" y2="180"></line>
+<g class="mm-leaf"><rect height="52" rx="6" width="240" x="640" y="154"></rect><text font-size="12" text-anchor="middle" x="760" y="176">Vitamin / mineral loss</text><text font-size="10.5" text-anchor="middle" x="760" y="192">B12, folate, fat-soluble vits</text></g>
+<line class="mm-line" x1="570" x2="760" y1="186" y2="290"></line>
+<g class="mm-leaf"><rect height="52" rx="6" width="240" x="640" y="264"></rect><text font-size="12" text-anchor="middle" x="760" y="286">Diarrhea</text><text font-size="10.5" text-anchor="middle" x="760" y="302">main clinical hallmark</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="celiac">
+<details class="topic" open="">
+<summary>Celiac Disease</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Immune reaction to <b>gliadin</b> (a gluten protein in wheat) in genetically predisposed people → <b>villus atrophy</b> and loss of surface enzyme activity.</p></div>
+<div class="fact"><h4>Epidemiology</h4><p>2x more common in females; prevalence ~1 in 300, mostly northwestern European ancestry. Onset can be in infancy or, more commonly, the 4th–5th decade.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>Abdominal pain, weight loss, flatulence, diarrhea; fat-soluble vitamin deficiency, osteoporosis; the skin condition <b>dermatitis herpetiformis</b>; increased risk of GI lymphoma.</p></div>
+<div class="fact tx"><h4>Diagnosis &amp; treatment</h4><p>Blood tests (tTG-IgA, EMA-IgA, DGP-IgA) plus biopsy confirmation. Treatment = strict gluten-free diet + supplement iron/folate/B12/fat-soluble vitamins. Refractory cases may need steroids; rule out lymphoma if non-responsive.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="tropical">
+<details class="topic" open="">
+<summary>Tropical Sprue</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Malabsorptive syndrome of unclear cause, likely from bacterial overgrowth producing fermentation products that damage small-intestine mucosa.</p></div>
+<div class="fact"><h4>Manifestations</h4><p>Severe diarrhea with blood-tinged stools, abdominal distention, <b>steatorrhea</b>. Can cause B12/folate deficiency.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Caribbean-origin cases respond well to broad-spectrum antibiotics (linked to enterotoxin-producing coliforms); other regions (e.g., India) respond less predictably. Add antidiarrheals and folic acid replacement.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="dumping">
+<details class="topic" open="">
+<summary>Dumping Syndrome</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Impaired gastric emptying after gastrectomy → large volume of hyperosmolar chyme "dumped" rapidly into the small intestine. Notably occurs with Roux-en-Y gastric bypass.</p></div>
+<div class="fact"><h4>Mechanism</h4><p>Hyperosmolar contents draw water into the lumen → diarrhea + abdominal pain. Rapid glucose absorption → insulin spike → <b>rebound hypoglycemia</b> 1–3 hours after eating.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p><b>Early</b> (15–30 min): nausea, vomiting, abdominal pain, diarrhea, palpitations, flushing. <b>Late</b> (hours later): rebound hypoglycemia symptoms.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Small, frequent meals (6–8x/day) instead of 3 large ones; restrict carbohydrates; medications to reduce motility or octreotide; rare cases need surgical rerouting.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="shortbowel">
+<details class="topic" open="">
+<summary>Short Bowel Syndrome</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Severe diarrhea/malabsorption after surgical removal of large portions of small intestine. Severity depends on how much and which part was removed.</p></div>
+<div class="fact warn"><h4>High-risk resection</h4><p>Removing the <b>distal ileum + ileocecal valve</b> is worst — loses the valve's role in controlling transit time, causing too-rapid transit, plus loses the site of vitamin B12/bile acid absorption (B12 needs IM replacement).</p></div>
+<div class="fact"><h4>Manifestations</h4><p>Protein/calorie malnutrition, vitamin deficiencies, weight loss, failure to thrive.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>The bowel can adapt — remaining villi enlarge if oral nutrients are gradually reintroduced. Total parenteral nutrition (IV) may be needed temporarily or indefinitely. Intestinal transplant is an option in select cases.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= NEOPLASMS ================= -->
+<section class="block" id="neoplasm-intro">
+<div class="block-head"><h2>Neoplasms of the GI Tract</h2><span class="tag">Tumors &amp; cancer</span></div>
+<p class="block-intro">GI cancers can develop anywhere along the tract, each with distinct risk factors, symptom patterns, and prognosis. A useful pattern: right-sided colon tumors bleed silently; left-sided tumors obstruct early.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — GI Neoplasms Overview</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="210" x="345" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">GI NEOPLASMS</text></g>
+<line class="mm-line" x1="450" x2="110" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="340" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="580" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="790" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="10" y="96"></rect><text font-size="11.5" text-anchor="middle" x="110" y="121">ESOPHAGEAL CA</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="240" y="96"></rect><text font-size="11.5" text-anchor="middle" x="340" y="121">GASTRIC CA</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="480" y="96"></rect><text font-size="11.5" text-anchor="middle" x="580" y="121">SMALL BOWEL</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="200" x="690" y="96"></rect><text font-size="11.5" text-anchor="middle" x="790" y="121">COLON POLYPS/CA</text></g>
+<line class="mm-line" x1="110" x2="110" y1="136" y2="160"></line>
+<g class="mm-leaf"><rect height="66" rx="6" width="200" x="10" y="160"></rect><text font-size="10.5" text-anchor="middle" x="110" y="180">Squamous cell (worldwide)</text><text font-size="10.5" text-anchor="middle" x="110" y="196">or adenocarcinoma (US, ↑,</text><text font-size="10.5" text-anchor="middle" x="110" y="212">linked to Barrett)</text></g>
+<line class="mm-line" x1="340" x2="340" y1="136" y2="160"></line>
+<g class="mm-leaf"><rect height="66" rx="6" width="200" x="240" y="160"></rect><text font-size="10.5" text-anchor="middle" x="340" y="180">H. pylori-driven,</text><text font-size="10.5" text-anchor="middle" x="340" y="196">high in Japan; often</text><text font-size="10.5" text-anchor="middle" x="340" y="212">silent until advanced</text></g>
+<line class="mm-line" x1="580" x2="580" y1="136" y2="160"></line>
+<g class="mm-leaf"><rect height="66" rx="6" width="200" x="480" y="160"></rect><text font-size="10.5" text-anchor="middle" x="580" y="180">Rare (&lt;5% of GI tumors);</text><text font-size="10.5" text-anchor="middle" x="580" y="196">adenocarcinoma, carcinoid,</text><text font-size="10.5" text-anchor="middle" x="580" y="212">lymphoma, sarcoma</text></g>
+<line class="mm-line" x1="790" x2="790" y1="136" y2="160"></line>
+<g class="mm-leaf"><rect height="66" rx="6" width="200" x="690" y="160"></rect><text font-size="10.5" text-anchor="middle" x="790" y="180">Adenomatous polyps →</text><text font-size="10.5" text-anchor="middle" x="790" y="196">dysplasia → carcinoma;</text><text font-size="10.5" text-anchor="middle" x="790" y="212">2nd deadliest cancer</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="esoph-ca">
+<details class="topic" open="">
+<summary>Esophageal Cancer</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>1–2% of all cancers (~17,000 US cases/yr); 3x more common in males, typically age 60+. Overall 5-year survival only ~18%.</p></div>
+<div class="fact"><h4>Risk factors</h4><p>Smoking, alcohol, and diets low in fruit/vegetables cause ~90% of squamous cell cases. Chronic severe reflux (especially with achalasia) is a major risk for adenocarcinoma. <i>H. pylori</i> may actually be protective here.</p></div>
+<div class="fact"><h4>Trend</h4><p>Adenocarcinoma of the gastroesophageal junction is now more common in the US than squamous cell cancer, reflecting rising Barrett esophagus rates.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>Insidious spread via esophageal lymphatics; can form esophagobronchial/esophagopleural fistulas (→ pneumonia/abscess). Luminal obstruction causes dysphagia, odynophagia, weight loss.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Stenting, ablation for luminal patency; surgical resection ± chemo/radiation for selected patients (up to 30% curative-intent survival), but metastasis at diagnosis (liver, lungs) is common and prognosis is generally poor.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="gastric-ca">
+<details class="topic" open="">
+<summary>Gastric Carcinoma</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~25,000 US cases/yr, males &gt;30 at higher risk (2:1 ratio). Japan's prevalence is ~10x the US. Overall 5-yr survival ~28%, better if caught early (before muscle-layer invasion).</p></div>
+<div class="fact"><h4>Cause</h4><p><i>H. pylori</i> doubles risk via multifocal atrophic gastritis. Epstein-Barr virus is another contributor. Aspirin appears protective; alcohol is not a major risk factor here (unlike esophageal cancer).</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>Early disease is usually silent. Advanced disease: anorexia, weight loss, GI bleeding; spreads rapidly via lymphatics, bloodstream, and direct extension.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Surgical resection with margins is the only truly effective treatment. Neoadjuvant chemo can help resectable cases; immunotherapy is an active research area.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="small-neo">
+<details class="topic" open="">
+<summary>Small Intestinal Neoplasms</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Overview</h4><p>Uncommon — under 5% of GI tumors. Usually adenocarcinoma, in people over 50; also carcinoid tumors, lymphoma, sarcoma.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>Partial/complete small bowel obstruction; if near the ampulla of Vater, can obstruct the common bile duct → jaundice. Bleeding, ulceration, and occasionally intussusception can occur.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Surgical removal of the tumor and affected bowel; chemotherapy for lymphoma/carcinoid.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="polyps">
+<details class="topic" open="">
+<summary>Colon Polyps</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Any protrusion into the GI lumen. <b>Sessile</b> = broad flat base. <b>Pedunculated</b> = attached by a narrow stalk.</p></div>
+<div class="fact warn"><h4>Cancer risk</h4><p><b>Adenomatous</b> polyps are the major precursor of colon cancer via dysplasia — some already contain carcinoma in situ. <b>Hyperplastic</b> polyps are benign and carry no cancer risk.</p></div>
+<div class="fact tx"><h4>Management</h4><p>Usually asymptomatic (occasionally occult/gross bleeding or obstruction-related pain). Removed via biopsy during sigmoidoscopy/colonoscopy.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="colon-ca">
+<details class="topic" open="">
+<summary>Colon Cancer</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~145,000 US cases/yr, equal male/female distribution. #2 cause of cancer death (after lung).</p></div>
+<div class="fact"><h4>Risk factors</h4><p>Advancing age (risk doubles per decade after 40, up to 80); high-fat/low-fiber diet; UC/CD; family history (&gt;15% risk with a first-degree relative vs. 5% general population); hereditary syndromes (familial adenomatous polyposis / Gardner syndrome, hereditary nonpolyposis colorectal cancer).</p></div>
+<div class="fact tx"><h4>Screening</h4><p>Colonoscopy every 10 years starting at age 45 for average risk; more aggressive screening for those with family history or IBD.</p></div>
+</div>
+<table class="compare">
+<tr><th>Location</th><th>Growth pattern</th><th>Typical signs</th></tr>
+<tr><td><b>Right colon</b></td><td>Grows along the bowel, not around it — no early obstruction</td><td>Black, tarry stools (occult bleeding)</td></tr>
+<tr><td><b>Left colon</b></td><td>Tends to encircle the lumen — early obstruction</td><td>Cramping, fullness, "ribbon"/pencil-thin stools, relief after passing stool/gas</td></tr>
+<tr><td><b>Rectum</b></td><td>—</td><td>Change in bowel habit, morning urgency, alternating constipation/diarrhea, rectal fullness/ache later</td></tr>
+</table>
+<div class="fact" style="margin-top:10px;"><h4>Dukes Classification (simplified)</h4>
+<table class="compare">
+<tr><th>Stage</th><th>Extent</th><th>5-yr survival</th></tr>
+<tr><td>A</td><td>Limited to mucosa/submucosa</td><td>90%</td></tr>
+<tr><td>B1</td><td>Into (not through) muscularis propria</td><td>80%</td></tr>
+<tr><td>B2</td><td>Through the muscularis</td><td>70%</td></tr>
+<tr><td>C1/C2</td><td>B1/B2 + lymph node metastases</td><td>50%</td></tr>
+<tr><td>D</td><td>Distant metastases</td><td>&lt;30%</td></tr>
+</table>
+</div>
+<div class="callout"><b>Treatment:</b> Surgical resection of the tumor plus adjacent tissue/lymph nodes is the most effective treatment; a colostomy may be needed depending on extent and location.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 36 (Gastrointestinal Disorders) material. Expand a section, quiz yourself on the "Remember" boxes, and revisit the mind maps to check you can redraw them from memory.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+function filterGloss(){
+  var q = document.getElementById('glossSearch').value.toLowerCase();
+  document.querySelectorAll('#glossGrid .term').forEach(function(t){
+    var text = t.textContent.toLowerCase();
+    t.classList.toggle('hide', q.length>0 && text.indexOf(q)===-1);
+  });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Subjective difficulty swallowing; can involve trouble initiating a swallow or a \"sticking\" sensation.", "answers": ["Dysphagia"]}, {"def": "Pain during swallowing; may accompany dysphagia.", "answers": ["Odynophagia"]}, {"def": "The coordinated, wave-like muscle contractions that move contents through the GI tract.", "answers": ["Peristalsis"]}, {"def": "Complete absence of peristaltic activity in the esophagus.", "answers": ["Aperistalsis"]}, {"def": "A disorder of esophageal smooth muscle function that impairs peristalsis and LES relaxation.", "answers": ["Achalasia"]}, {"def": "The muscular ring between the esophagus and stomach that normally prevents reflux.", "answers": ["Lower Esophageal Sphincter", "LES", "Lower Esophageal Sphincter (LES)"]}, {"def": "Medical term for heartburn \u2014 a substernal burning sensation from acid reflux.", "answers": ["Pyrosis"]}, {"def": "High-amplitude, uncoordinated esophageal contractions that alternate with normal peristalsis, causing chest pain that can mimic angina.", "answers": ["Diffuse Esophageal Spasm", "DES", "Diffuse Esophageal Spasm (DES)"]}, {"def": "Diffuse, poorly localized pain from stretching/inflammation of an internal organ.", "answers": ["Visceral Pain"]}, {"def": "Sharp, well-localized pain from injury to the abdominal wall or peritoneum.", "answers": ["Somatic Pain"]}, {"def": "Pain felt at a site distant from its source, but within the same dermatome/nerve segment.", "answers": ["Referred Pain"]}, {"def": "Subconscious swallowing of air \u2014 a normal source of intestinal gas.", "answers": ["Aerophagia"]}, {"def": "Belching; expulsion of swallowed air from the stomach.", "answers": ["Eructation"]}, {"def": "Small, infrequent (fewer than 3/week), or difficult bowel movements.", "answers": ["Constipation"]}, {"def": "A firm, immovable mass of stool obstructing the lower GI tract, common after chronic constipation.", "answers": ["Fecal Impaction"]}, {"def": "Increased frequency and fluidity of bowel movements; >200 g stool/24 hr is the objective definition.", "answers": ["Diarrhea"]}, {"def": "Diarrhea from poorly-absorbed solutes pulling water into the bowel lumen.", "answers": ["Osmotic Diarrhea"]}, {"def": "Diarrhea from toxins that actively stimulate intestinal fluid secretion (e.g., cholera toxin).", "answers": ["Secretory Diarrhea"]}, {"def": "Diarrhea from mucus, blood, and protein leaking from inflamed bowel (e.g., IBD).", "answers": ["Exudative Diarrhea"]}, {"def": "Ulcerative inflammation of the oral mucosa (lips, cheeks, palate).", "answers": ["Stomatitis"]}, {"def": "Gastroesophageal reflux disease \u2014 backflow of gastric contents into the esophagus through the LES.", "answers": ["GERD"]}, {"def": "Replacement of normal esophageal squamous epithelium with columnar tissue from chronic acid exposure; precancerous.", "answers": ["Barrett Esophagus"]}, {"def": "Protrusion of part of the stomach through the diaphragm into the thorax.", "answers": ["Hiatal Hernia"]}, {"def": "A mucosal tear at the gastroesophageal junction from forceful vomiting, causing bleeding.", "answers": ["Mallory-Weiss Syndrome"]}, {"def": "Dilated esophageal veins from portal hypertension, usually due to cirrhosis; risk of severe hemorrhage.", "answers": ["Esophageal Varices"]}, {"def": "Inflammation of the stomach lining; acute (toxins) or chronic (often H. pylori ).", "answers": ["Gastritis"]}, {"def": "A bacterium that colonizes the gastric mucosa and is the major cause of chronic gastritis and peptic ulcer disease.", "answers": ["Helicobacter pylori"]}, {"def": "Inflammation of the stomach and small intestine, often infectious (\"stomach flu\").", "answers": ["Gastroenteritis"]}, {"def": "Mucosal injury of the esophagus, stomach, or duodenum from acid/pepsin exceeding mucosal defenses.", "answers": ["Peptic Ulcer Disease", "PUD", "Peptic Ulcer Disease (PUD)"]}, {"def": "A functional motility disorder with alternating diarrhea/constipation and cramping, without identifiable structural pathology.", "answers": ["Irritable Bowel Syndrome", "IBS", "Irritable Bowel Syndrome (IBS)"]}, {"def": "A functional (non-mechanical) obstruction from loss of bowel propulsive activity.", "answers": ["Ileus"]}, {"def": "Impaired blood supply to a bowel segment, risking ischemia, gangrene, and perforation.", "answers": ["Strangulation"]}, {"def": "Twisting of the bowel on itself, causing obstruction and vascular compression.", "answers": ["Volvulus"]}, {"def": "Telescoping of one bowel segment into an adjacent (usually distal) segment.", "answers": ["Intussusception"]}, {"def": "Massive dilation of the colon, congenital or acquired.", "answers": ["Megacolon"]}, {"def": "Congenital absence of autonomic ganglia in a colon segment, preventing normal relaxation and causing megacolon.", "answers": ["Hirschsprung Disease"]}, {"def": "Failure of the GI tract to properly absorb or digest one or more dietary nutrients.", "answers": ["Malabsorption"]}, {"def": "Immune-mediated intolerance of gluten causing villus atrophy and malabsorption.", "answers": ["Celiac Disease"]}, {"def": "Excess fat in the stool, a sign of fat malabsorption.", "answers": ["Steatorrhea"]}, {"def": "Rapid emptying of stomach contents into the small intestine after gastric surgery, causing osmotic fluid shift and rebound hypoglycemia.", "answers": ["Dumping Syndrome"]}, {"def": "Severe malabsorption/diarrhea following surgical removal of large portions of small intestine.", "answers": ["Short Bowel Syndrome"]}, {"def": "A benign colon growth that is the major precursor lesion for colon cancer.", "answers": ["Adenomatous Polyp"]}, {"def": "Sessile = broad, flat base; pedunculated = attached by a narrow stalk.", "answers": ["Sessile vs. Pedunculated Polyp"]}, {"def": "A staging system for colorectal cancer based on depth of invasion and nodal/metastatic spread.", "answers": ["Dukes Classification"]}];
+const QUIZ_TEACHBACK = [{"topic": "Dysphagia \u2014 difficulty swallowing", "points": ["<b>Definition:</b> Subjective difficulty swallowing \u2014 trouble initiating a swallow, or the sensation that food \"sticks\" in the esophagus. Odynophagia (painful swallowing)\u2026", "<b>Red flag:</b> Type 1 dysphagia (delivery problem) carries a major aspiration risk \u2014 food/fluid can be coughed back out the nose or\u2026"]}, {"topic": "Esophageal Pain", "points": ["<b>Heartburn (pyrosis):</b> Reflux of acidic gastric contents irritates esophageal sensory nerves and can trigger esophageal muscle spasm \u2014 substernal burning that may\u2026", "<b>Non-heartburn chest pain:</b> From esophageal distention or powerful contractions (e.g., diffuse esophageal spasm). Can be indistinguishable from angina , including radiation to neck/shoulder/arm/jaw.", "<b>Infectious esophagitis:</b> HSV, CMV, or Candida \u2014 common in immunocompromised patients (AIDS, chemo). Produces dull, aching pain worse with swallowing.", "<b>Key point:</b> Because esophageal pain can mimic cardiac pain so closely, cardiac causes must always be ruled out first in the workup\u2026"]}, {"topic": "Vomiting", "points": ["<b>Definition:</b> Forceful expulsion of gastric contents via coordinated abdominal contractions plus reverse esophageal peristalsis. Almost always paired with nausea.", "<b>Not just GI:</b> Also caused by metabolic, endocrine, vestibular (inner ear), and cardiac disease, infection, electrolyte imbalance, drugs, surgery, and early pregnancy."]}, {"topic": "Intestinal Gas", "points": ["<b>Normal sources:</b> Swallowed air (aerophagia), normal digestion, acid neutralization by bicarbonate, and diffusion from blood.", "<b>Excess belching:</b> Usually just swallowed air, but persistent excess can signal a motility disorder or gastric outlet obstruction.", "<b>Lactose intolerance:</b> Missing lactase \u2192 undigested lactose is fermented by bacteria \u2192 gas. A classic example of a digestive-enzyme cause of gas.", "<b>Flatulence:</b> Usually from bacterial action on gas-producing foods (beans, certain vegetables); can also be from IBD or enteric infection."]}, {"topic": "Constipation", "points": ["<b>Definition:</b> Fewer than 3 stools/week, or small/difficult/hard bowel movements.", "<b>In elderly patients:</b> Poor diet + inactivity + slowed peristalsis with age \u2192 chronic constipation \u2192 risk of fecal impaction (a firm, immovable\u2026"]}, {"topic": "Stomatitis", "points": ["<b>Definition:</b> Ulcerative inflammation of the oral mucosa (buccal mucosa, lips, palate).", "<b>Causes:</b> Mechanical trauma; irritants (alcohol, tobacco, chemicals); pathogens (bacteria, viruses); chemo drugs; radiation; autoimmune disease (reactive arthritis, Beh\u00e7et syndrome); vitamin deficiency;\u2026", "<b>Cold sores (HSV-1):</b> Most common type \u2014 acute herpetic gingivostomatitis. Prodromal tingling/itching, fever, pharyngitis, then vesicles on an erythematous base that rupture into\u2026", "<b>Treatment:</b> Antivirals (acyclovir, valacyclovir, famciclovir) for HSV; steroids/immunomodulators for autoimmune causes; topical anesthetics/mucosal barriers (Orabase, lidocaine) for comfort and nutrition. Severe\u2026"]}, {"topic": "Gastroesophageal Reflux Disease (GERD)", "points": ["<b>H. pylori & GERD:</b> Controversial relationship \u2014 actually an inverse association. Eradicating H. pylori for PUD can unmask/worsen reflux.", "<b>Treatment ladder:</b> Diet/behavior changes \u2192 antacids/H2-blockers for occasional symptoms \u2192 PPIs (mainstay for chronic GERD, typically 8-week course) \u2192 surgery (laparoscopic Nissen\u2026", "<b>Long-term PPI risks:</b> Malabsorption of B12, iron, magnesium, calcium; increased hip fracture risk (osteoporosis); increased risk of microscopic colitis and C. diff colitis.\u2026", "<b>Barrett esophagus:</b> Columnar tissue replaces normal squamous epithelium from chronic acid exposure. ~30x increased esophageal cancer risk (0.1\u20130.4%/year). Requires regular endoscopic screening;\u2026"]}, {"topic": "Hiatal Hernia", "points": ["<b>Risk factors:</b> Anything raising intra-abdominal pressure: ascites, pregnancy, obesity, chronic straining/coughing. Linked to a Western diet and Western toileting posture.", "<b>Who's affected:</b> ~60% of people over 60 (mostly asymptomatic); more common in females.", "<b>Complications:</b> Predisposes to GERD (heartburn, chest pain, dysphagia); Cameron ulcers (mucosal ulcers where the stomach slides through the diaphragm \u2014 can\u2026", "<b>Treatment:</b> Same medical therapy as GERD. Surgery (Nissen fundoplication) for acute incarceration or intractable reflux."]}, {"topic": "Mallory-Weiss Syndrome", "points": ["<b>Definition:</b> Longitudinal mucosal/submucosal tear at the cardia or lower esophagus from forceful/prolonged vomiting, where the upper esophageal sphincter fails to relax.", "<b>Typical patient:</b> ~75% male, history of excessive alcohol or salicylate use. Other contributors: coughing, straining, trauma, esophagitis, gastritis, colonoscopy prep (polyethylene glycol).\u2026", "<b>Manifestations:</b> Hematemesis (vomiting blood), blood per rectum after forceful vomiting, epigastric/back pain. Can range mild to massive; profuse bleeding near the\u2026", "<b>Treatment:</b> Diagnosed via endoscopy during active bleeding. Most need at least one transfusion, but bleeding often stops on its own. Active\u2026"]}, {"topic": "Esophageal Varices", "points": ["<b>Cause:</b> Complication of portal hypertension \u2014 in the West, usually cirrhosis from alcoholism or viral hepatitis. In tropical regions, Schistosoma infection\u2026", "<b>Risk:</b> Affects >50% of cirrhotic patients; ~30% of those with varices experience a hemorrhage within 2 years of diagnosis. Detailed management\u2026"]}, {"topic": "Gastritis", "points": ["<b>Acute gastritis:</b> Triggered by toxins (alcohol, aspirin, irritants) or viral/bacterial/autoimmune illness. In the West, NSAID overuse and alcohol/tobacco are the leading causes.", "<b>Chronic gastritis:</b> Driven mainly by H. pylori , discovered in 1983. Likely person-to-person (possibly fecal-oral) transmission. Causes persistent, superficial inflammation in nearly\u2026", "<b>Consequences of H. pylori:</b> PUD, atrophic gastritis, gastric adenocarcinoma, MALT lymphoma. Possible (unconfirmed) links to colon, pancreatic, and hepatobiliary cancer.", "<b>Manifestations & treatment:</b> May be asymptomatic; acute cases show anorexia, nausea, vomiting, postprandial discomfort, occasionally hematemesis. Resolves once the trigger is removed and\u2026"]}, {"topic": "Gastroenteritis", "points": ["<b>Definition:</b> Inflammation of the stomach and small intestine. Chronic form usually stems from a primary disorder like Crohn disease. Acute form\u2026", "<b>Causes:</b> Direct infection (e.g., Norwalk/norovirus), preformed bacterial toxins ( S. aureus , B. cereus ), toxin-producing bacteria ( C. perfringens ),\u2026", "<b>Who's at risk:</b> Usually self-limited in adults, but fluid loss from diarrhea/vomiting can be life-threatening in children and the elderly, especially in resource-poor\u2026", "<b>Treatment:</b> Supportive \u2014 fluid and electrolyte replacement, especially oral rehydration solutions (Oralyte, Pedialyte)."]}, {"topic": "Peptic Ulcer Disease (PUD)", "points": ["<b>Gastric vs. Duodenal ulcer:</b> Gastric: epithelial barrier breakdown is primary; only ~37% have H. pylori \u2014 all GUs need endoscopy + biopsy to rule\u2026", "<b>Pain pattern:</b> GU: pain on an empty stomach, sometimes soon after eating. DU: pain 2\u20133 hours after a meal, relieved by more\u2026", "<b>H. pylori mechanics:</b> Thrives in acid; slows healing and raises recurrence. Genes like CagA and dupA damage cells and block epithelial repair.", "<b>Treatment:</b> PPIs to block acid secretion; sucralfate as a protective coating; eradicate H. pylori when present. Smoking worsens healing and raises\u2026", "Watch for: A significant number of ulcers are asymptomatic \u2014 GI bleeding or perforation can be the first sign, with no prior\u2026"]}, {"topic": "Irritable Bowel Syndrome (IBS)", "points": ["<b>Definition:</b> Alternating diarrhea and constipation with abdominal cramping \u2014 with no identifiable structural pathology . This is the key distinction from\u2026", "<b>Pathogenesis:</b> Primarily a motility disorder \u2014 colonic slow-wave activity is markedly increased, and sensory response to distention is heightened. Genetic vs.\u2026", "<b>Treatment \u2014 diarrhea type:</b> Dietary modification (avoid lactose, legumes, gas-forming foods) \u2192 antispasmodics (loperamide, eluxadoline) \u2192 bile-acid sequestrant if needed. Alosetron helps but has\u2026", "<b>Treatment \u2014 constipation type:</b> Osmotic laxative (polyethylene glycol) first-line; lubiprostone, linaclotide, plecanatide, tenapanor for refractory cases. High-fiber diet helps normalize myoelectric activity."]}, {"topic": "Intestinal Obstruction", "points": ["<b>Treatment:</b> Surgery to correct/remove the mechanical cause; supportive care with bowel decompression (endoscopy/tubes) and fluid/electrolyte replacement.", "Untreated small-bowel obstruction carries a high risk of death from shock and vascular collapse \u2014 this is a surgical emergency in progression."]}, {"topic": "Volvulus", "points": ["<b>Definition:</b> The bowel twists on itself, obstructing the lumen and compressing blood vessels. Most common sites: cecum and sigmoid colon .", "<b>Cause & risk:</b> Rotation anomaly, ingested foreign body, or adhesion (cause not always identifiable). More common in elderly patients with other medical conditions.", "<b>Danger:</b> Twisting cuts blood flow \u2192 gangrene, necrosis, perforation. If both ends of a segment are twisted, a closed-loop obstruction results.", "<b>Treatment:</b> Endoscopic manipulation is usually tried first for colonic volvulus; surgery is reserved for failure of that approach."]}, {"topic": "Intussusception", "points": ["<b>Definition:</b> Telescoping of a bowel segment into the adjacent (usually distal) segment.", "<b>Who's affected:</b> Most common in infants, 3x more often in males. Cause in infants usually unknown, though linked to viral infections and\u2026", "<b>Progression:</b> Peristalsis pulls in more bowel \u2192 edema, venous engorgement, hemorrhage \u2192 obstruction \u2192 gangrene, shock, perforation if surgery is delayed."]}, {"topic": "Megacolon", "points": ["<b>Most common Western cause:</b> Prolonged constipation/obstipation \u2014 including in young children navigating toilet training, and elderly patients relying long-term on enemas/laxatives.", "<b>Important consideration:</b> A small number of children with encopresis have experienced sexual abuse \u2014 this should be considered, even though most affected\u2026", "<b>Other causes:</b> Hirschsprung disease (congenital); Chagas disease ( Trypanosoma cruzi \u2014 common in Central/South America); C. difficile colitis (acute megacolon = surgical\u2026"]}, {"topic": "Hirschsprung Disease", "points": ["<b>Definition:</b> Congenital absence/reduction of autonomic nerve ganglia in the smooth muscle of the large intestine \u2014 usually the rectosigmoid area (90%\u2026", "<b>Mechanism:</b> The aganglionic segment contracts but can't relax to propel contents forward \u2192 stool stasis \u2192 proximal colon dilation (megacolon).", "<b>Epidemiology:</b> ~1 in 5,000 live births; can be familial; ~3.8:1 male predominance; often coexists with Down syndrome.", "<b>Danger in infants:</b> Fecal stagnation can cause enterocolitis with bacterial overgrowth, profuse diarrhea, hypovolemic shock, and perforation. Colonic lavage stabilizes the infant until\u2026"]}, {"topic": "Celiac Disease", "points": ["<b>Cause:</b> Immune reaction to gliadin (a gluten protein in wheat) in genetically predisposed people \u2192 villus atrophy and loss of surface\u2026", "<b>Epidemiology:</b> 2x more common in females; prevalence ~1 in 300, mostly northwestern European ancestry. Onset can be in infancy or, more\u2026", "<b>Manifestations:</b> Abdominal pain, weight loss, flatulence, diarrhea; fat-soluble vitamin deficiency, osteoporosis; the skin condition dermatitis herpetiformis ; increased risk of GI\u2026", "<b>Diagnosis & treatment:</b> Blood tests (tTG-IgA, EMA-IgA, DGP-IgA) plus biopsy confirmation. Treatment = strict gluten-free diet + supplement iron/folate/B12/fat-soluble vitamins. Refractory cases may\u2026"]}, {"topic": "Tropical Sprue", "points": ["<b>Cause:</b> Malabsorptive syndrome of unclear cause, likely from bacterial overgrowth producing fermentation products that damage small-intestine mucosa.", "<b>Manifestations:</b> Severe diarrhea with blood-tinged stools, abdominal distention, steatorrhea . Can cause B12/folate deficiency.", "<b>Treatment:</b> Caribbean-origin cases respond well to broad-spectrum antibiotics (linked to enterotoxin-producing coliforms); other regions (e.g., India) respond less predictably. Add antidiarrheals\u2026"]}, {"topic": "Dumping Syndrome", "points": ["<b>Cause:</b> Impaired gastric emptying after gastrectomy \u2192 large volume of hyperosmolar chyme \"dumped\" rapidly into the small intestine. Notably occurs with\u2026", "<b>Mechanism:</b> Hyperosmolar contents draw water into the lumen \u2192 diarrhea + abdominal pain. Rapid glucose absorption \u2192 insulin spike \u2192 rebound\u2026", "<b>Manifestations:</b> Early (15\u201330 min): nausea, vomiting, abdominal pain, diarrhea, palpitations, flushing. Late (hours later): rebound hypoglycemia symptoms.", "<b>Treatment:</b> Small, frequent meals (6\u20138x/day) instead of 3 large ones; restrict carbohydrates; medications to reduce motility or octreotide; rare cases need\u2026"]}, {"topic": "Short Bowel Syndrome", "points": ["<b>Cause:</b> Severe diarrhea/malabsorption after surgical removal of large portions of small intestine. Severity depends on how much and which part was\u2026", "<b>High-risk resection:</b> Removing the distal ileum + ileocecal valve is worst \u2014 loses the valve's role in controlling transit time, causing too-rapid\u2026", "<b>Manifestations:</b> Protein/calorie malnutrition, vitamin deficiencies, weight loss, failure to thrive.", "<b>Treatment:</b> The bowel can adapt \u2014 remaining villi enlarge if oral nutrients are gradually reintroduced. Total parenteral nutrition (IV) may be\u2026"]}, {"topic": "Esophageal Cancer", "points": ["<b>Epidemiology:</b> 1\u20132% of all cancers (~17,000 US cases/yr); 3x more common in males, typically age 60+. Overall 5-year survival only ~18%.", "<b>Risk factors:</b> Smoking, alcohol, and diets low in fruit/vegetables cause ~90% of squamous cell cases. Chronic severe reflux (especially with achalasia) is\u2026", "<b>Trend:</b> Adenocarcinoma of the gastroesophageal junction is now more common in the US than squamous cell cancer, reflecting rising Barrett esophagus\u2026", "<b>Manifestations:</b> Insidious spread via esophageal lymphatics; can form esophagobronchial/esophagopleural fistulas (\u2192 pneumonia/abscess). Luminal obstruction causes dysphagia, odynophagia, weight loss.", "<b>Treatment:</b> Stenting, ablation for luminal patency; surgical resection \u00b1 chemo/radiation for selected patients (up to 30% curative-intent survival), but metastasis at\u2026"]}, {"topic": "Gastric Carcinoma", "points": ["<b>Epidemiology:</b> ~25,000 US cases/yr, males >30 at higher risk (2:1 ratio). Japan's prevalence is ~10x the US. Overall 5-yr survival ~28%,\u2026", "<b>Cause:</b> H. pylori doubles risk via multifocal atrophic gastritis. Epstein-Barr virus is another contributor. Aspirin appears protective; alcohol is not a\u2026", "<b>Manifestations:</b> Early disease is usually silent. Advanced disease: anorexia, weight loss, GI bleeding; spreads rapidly via lymphatics, bloodstream, and direct extension.", "<b>Treatment:</b> Surgical resection with margins is the only truly effective treatment. Neoadjuvant chemo can help resectable cases; immunotherapy is an active\u2026"]}, {"topic": "Small Intestinal Neoplasms", "points": ["<b>Overview:</b> Uncommon \u2014 under 5% of GI tumors. Usually adenocarcinoma, in people over 50; also carcinoid tumors, lymphoma, sarcoma.", "<b>Manifestations:</b> Partial/complete small bowel obstruction; if near the ampulla of Vater, can obstruct the common bile duct \u2192 jaundice. Bleeding, ulceration,\u2026", "<b>Treatment:</b> Surgical removal of the tumor and affected bowel; chemotherapy for lymphoma/carcinoid."]}, {"topic": "Colon Polyps", "points": ["<b>Definition:</b> Any protrusion into the GI lumen. Sessile = broad flat base. Pedunculated = attached by a narrow stalk.", "<b>Cancer risk:</b> Adenomatous polyps are the major precursor of colon cancer via dysplasia \u2014 some already contain carcinoma in situ. Hyperplastic polyps\u2026", "<b>Management:</b> Usually asymptomatic (occasionally occult/gross bleeding or obstruction-related pain). Removed via biopsy during sigmoidoscopy/colonoscopy."]}, {"topic": "Colon Cancer", "points": ["<b>Epidemiology:</b> ~145,000 US cases/yr, equal male/female distribution. #2 cause of cancer death (after lung).", "<b>Risk factors:</b> Advancing age (risk doubles per decade after 40, up to 80); high-fat/low-fiber diet; UC/CD; family history (>15% risk with a\u2026", "<b>Screening:</b> Colonoscopy every 10 years starting at age 45 for average risk; more aggressive screening for those with family history or\u2026", "Treatment: Surgical resection of the tumor plus adjacent tissue/lymph nodes is the most effective treatment; a colostomy may be needed depending on\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

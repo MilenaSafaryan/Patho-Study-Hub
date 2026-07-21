@@ -1,0 +1,110 @@
+[
+ {
+  "term": "Neoplasia",
+  "def": "\"New growth\" \u2014 abnormal cellular growth; used loosely as a synonym for tumor."
+ },
+ {
+  "term": "Cancer",
+  "def": "The term reserved specifically for malignant neoplasms."
+ },
+ {
+  "term": "Anaplasia",
+  "def": "Lack of differentiated features in a cancer cell \u2014 greater anaplasia correlates with more aggressive malignancy."
+ },
+ {
+  "term": "Carcinoma",
+  "def": "Malignant tumor of epithelial origin \u2014 accounts for ~90% of human cancers."
+ },
+ {
+  "term": "Sarcoma",
+  "def": "Malignant tumor of mesenchymal origin (nerve, bone, muscle, tendon, fat)."
+ },
+ {
+  "term": "Proto-oncogene",
+  "def": "A normal cellular gene coding for proteins involved in growth/differentiation/apoptosis/signaling; becomes an oncogene when mutated to gain function."
+ },
+ {
+  "term": "Oncogene",
+  "def": "The mutant, overactive/overexpressed form of a proto-oncogene."
+ },
+ {
+  "term": "Tumor suppressor gene",
+  "def": "A gene that normally inhibits cell proliferation; loss of function is the most common mutation type in cancer development."
+ },
+ {
+  "term": "Driver mutation",
+  "def": "A DNA abnormality that actively contributes to malignant proliferation."
+ },
+ {
+  "term": "Passenger mutation",
+  "def": "A random, coexisting DNA change that plays no role in tumorigenesis."
+ },
+ {
+  "term": "Carcinogen",
+  "def": "An agent/substance capable of inducing cancer."
+ },
+ {
+  "term": "Co-carcinogen",
+  "def": "A substance that causes cancer only in combination with other chemicals/compounds."
+ },
+ {
+  "term": "Initiation",
+  "def": "The first step of carcinogenesis \u2014 mutations that activate proto-oncogenes/inactivate tumor suppressor genes."
+ },
+ {
+  "term": "Promotion",
+  "def": "The stage where a mutant cell proliferates, often driven by inflammation, hormones, or nutritional factors."
+ },
+ {
+  "term": "Progression",
+  "def": "The stage where proliferating cells develop full malignant behavior via accumulating genetic instability."
+ },
+ {
+  "term": "Telomerase",
+  "def": "An enzyme that rebuilds chromosome telomeres, allowing indefinite division \u2014 reactivated by most cancer cells to escape normal replicative limits."
+ },
+ {
+  "term": "Warburg effect",
+  "def": "Cancer cells' preference for glycolysis (even with oxygen present) over oxidative phosphorylation, despite glycolysis producing far less ATP per glucose."
+ },
+ {
+  "term": "E-cadherin",
+  "def": "A key epithelial cell-to-cell adhesion molecule; its loss enables carcinoma cells to detach and invade."
+ },
+ {
+  "term": "Epithelial-to-mesenchymal transition (EMT)",
+  "def": "A developmental program hijacked by cancer cells to gain invasive, apoptosis-resistant, stem-cell-like properties."
+ },
+ {
+  "term": "Cancer stem cells (CSCs)",
+  "def": "A small, self-renewing, undifferentiated tumor cell subpopulation implicated in tumor growth, metastasis, and treatment resistance."
+ },
+ {
+  "term": "Angiogenesis",
+  "def": "New blood vessel formation; tumors can't exceed ~2 mm without it."
+ },
+ {
+  "term": "VEGF",
+  "def": "Vascular endothelial growth factor \u2014 the key signal tumor cells produce (often in response to hypoxia) to trigger angiogenesis."
+ },
+ {
+  "term": "PD-L1 / PD-1",
+  "def": "An immune checkpoint pair \u2014 cancer cells express PD-L1 to bind T-cell PD-1 receptors, suppressing cytotoxic T-cell activation and evading immune destruction."
+ },
+ {
+  "term": "Cachexia",
+  "def": "Cancer-related weight loss, muscle wasting, and generalized weakness \u2014 affects 60\u201380% of cancer patients."
+ },
+ {
+  "term": "Paraneoplastic syndrome",
+  "def": "A symptom complex at a site distant from the tumor, not explained by direct tumor effects \u2014 often from ectopic hormone/cytokine secretion."
+ },
+ {
+  "term": "Leukopenia",
+  "def": "Decreased circulating white blood cells \u2014 major cause of infection-related morbidity/mortality in cancer patients."
+ },
+ {
+  "term": "Thrombocytopenia",
+  "def": "Decreased circulating platelets; <20,000/mm\u00b3 is associated with spontaneous hemorrhage risk."
+ }
+]

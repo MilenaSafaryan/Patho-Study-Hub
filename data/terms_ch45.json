@@ -1,0 +1,114 @@
+[
+ {
+  "term": "Seizure",
+  "def": "A transient neurologic event from excessive/abnormal neuronal electrical discharge \u2014 a singular event, not a diagnosis."
+ },
+ {
+  "term": "Epilepsy",
+  "def": "A chronic, recurrent, enduring predisposition to seizures requiring long-term treatment \u2014 distinct from a single seizure."
+ },
+ {
+  "term": "Epileptogenic focus",
+  "def": "The area of hyperexcitable, autonomously firing neurons from which a seizure originates."
+ },
+ {
+  "term": "Dementia",
+  "def": "A syndrome (not a disease) of progressive cognitive decline \u2014 memory, personality, language, judgment \u2014 from various underlying pathologies."
+ },
+ {
+  "term": "Delirium",
+  "def": "An acute, fluctuating confusional state with disturbed consciousness and attention; can mimic dementia but has abrupt onset, often worse at night."
+ },
+ {
+  "term": "\u03b2-amyloid plaques",
+  "def": "Extracellular aggregates of neurotoxic A\u03b242 peptide fragments (from APP cleavage) \u2014 a cardinal pathologic feature of Alzheimer disease."
+ },
+ {
+  "term": "Neurofibrillary tangles (NFTs)",
+  "def": "Helical filaments of hyperphosphorylated tau protein inside neurons \u2014 the other cardinal AD feature, more closely tied to actual cognitive decline than plaques."
+ },
+ {
+  "term": "APOe4",
+  "def": "The strongest known genetic risk factor for sporadic late-onset Alzheimer disease; linked to inefficient clearance of A\u03b242."
+ },
+ {
+  "term": "Substantia nigra",
+  "def": "The dopamine-producing brain region whose degeneration causes Parkinson disease."
+ },
+ {
+  "term": "Lewy bodies",
+  "def": "Intraneuronal inclusions composed of \u03b1-synuclein; pathognomonic for sporadic Parkinson disease."
+ },
+ {
+  "term": "Bradykinesia",
+  "def": "Slowness of movement \u2014 a core Parkinson disease feature."
+ },
+ {
+  "term": "Cogwheel rigidity",
+  "def": "Ratchet-like resistance felt when passively moving a Parkinson patient's extremity."
+ },
+ {
+  "term": "Cerebral palsy",
+  "def": "Permanent, nonprogressive damage to the developing brain's upper motor neurons, occurring pre/peri/postnatally."
+ },
+ {
+  "term": "Hydrocephalus",
+  "def": "Abnormal CSF accumulation in the ventricular system from obstruction or impaired resorption."
+ },
+ {
+  "term": "Normal-pressure hydrocephalus",
+  "def": "Increased CSF volume without increased ICP (brain tissue loss offsets it) \u2014 classic triad: gait instability, urinary incontinence, dementia."
+ },
+ {
+  "term": "Multiple sclerosis (MS)",
+  "def": "A chronic autoimmune demyelinating disease of the CNS causing inflammation and scarring of myelin sheaths."
+ },
+ {
+  "term": "Lhermitte sign",
+  "def": "An electric shock-like sensation radiating down the spine into the extremities \u2014 a classic MS finding."
+ },
+ {
+  "term": "Oligoclonal bands",
+  "def": "Discrete IgG bands in CSF supporting an MS diagnosis."
+ },
+ {
+  "term": "Spina bifida",
+  "def": "Defective closure of the neural tube; ranges from occulta (hidden) to cystica (externally protruding sac)."
+ },
+ {
+  "term": "Myelomeningocele",
+  "def": "The most severe form of spina bifida cystica \u2014 meninges, CSF, AND spinal cord protrude through the defect."
+ },
+ {
+  "term": "Amyotrophic lateral sclerosis (ALS)",
+  "def": "Progressive degeneration of both upper and lower motor neurons causing muscle wasting, paralysis, and eventually respiratory failure."
+ },
+ {
+  "term": "Spinal shock",
+  "def": "Temporary (hours to weeks) complete loss of function below a spinal cord injury level, including flaccid paralysis and absent reflexes."
+ },
+ {
+  "term": "Neurogenic shock",
+  "def": "Distributive shock from loss of sympathetic outflow after high (cervical/upper thoracic) SCI \u2014 hypotension + bradycardia."
+ },
+ {
+  "term": "Autonomic dysreflexia",
+  "def": "A life-threatening reflex hypertensive crisis in SCI at/above T6, triggered by a stimulus (often bladder/bowel) below the injury level."
+ },
+ {
+  "term": "Guillain-Barr\u00e9 syndrome (GBS)",
+  "def": "An autoimmune, inflammatory demyelinating disease of the peripheral nervous system causing ascending weakness/paralysis."
+ },
+ {
+  "term": "Albuminocytologic dissociation",
+  "def": "High CSF protein with normal WBC count \u2014 the classic GBS CSF finding."
+ },
+ {
+  "term": "Ataxia",
+  "def": "Muscle incoordination \u2014 the hallmark of cerebellar dysfunction."
+ },
+ {
+  "term": "Bell palsy",
+  "def": "Idiopathic facial nerve (CN VII) paralysis, now understood to often be viral (HSV/herpes zoster) in origin."
+ }
+]

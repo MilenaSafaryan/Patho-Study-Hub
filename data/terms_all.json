@@ -1,0 +1,2882 @@
+[
+ {
+  "term": "Pathophysiology",
+  "def": "The study of abnormalities in the physiologic functioning of living beings \u2014 the intersection of pathology (disease study) and physiology (normal function study).",
+  "chapter": 1
+ },
+ {
+  "term": "Etiology",
+  "def": "The study of the causes or reasons for a disease or phenomenon.",
+  "chapter": 1
+ },
+ {
+  "term": "Idiopathic",
+  "def": "A condition whose cause is unknown.",
+  "chapter": 1
+ },
+ {
+  "term": "Iatrogenic",
+  "def": "A condition resulting from an unintended or unwanted effect of medical treatment.",
+  "chapter": 1
+ },
+ {
+  "term": "Risk factor",
+  "def": "A factor that increases the probability of disease but where the causal link is less than certain.",
+  "chapter": 1
+ },
+ {
+  "term": "Causative agent",
+  "def": "A factor closely and definitively linked to a disease's development (e.g., a specific pathogen for an infectious disease).",
+  "chapter": 1
+ },
+ {
+  "term": "Pathogenesis",
+  "def": "The development or evolution of a disease, from initial stimulus to the full expression of its manifestations.",
+  "chapter": 1
+ },
+ {
+  "term": "Sign",
+  "def": "An objective manifestation of disease, observable/measurable by an examiner (e.g., vomiting).",
+  "chapter": 1
+ },
+ {
+  "term": "Symptom",
+  "def": "A subjective abnormality reported only by the affected individual (e.g., nausea).",
+  "chapter": 1
+ },
+ {
+  "term": "Syndrome",
+  "def": "A constellation of signs and symptoms whose underlying etiology has not yet been determined.",
+  "chapter": 1
+ },
+ {
+  "term": "Latent/incubation period",
+  "def": "The interval between exposure to an injurious agent and the first appearance of signs/symptoms.",
+  "chapter": 1
+ },
+ {
+  "term": "Prodrome",
+  "def": "The appearance of the first, often nonspecific, signs/symptoms indicating disease onset (e.g., headache, malaise).",
+  "chapter": 1
+ },
+ {
+  "term": "Acute phase (manifest illness)",
+  "def": "The stage at which a disease reaches its full intensity, with signs/symptoms at their greatest severity.",
+  "chapter": 1
+ },
+ {
+  "term": "Subclinical stage",
+  "def": "A stage during which disease processes are established but the patient still functions normally \u2014 no symptoms yet perceived.",
+  "chapter": 1
+ },
+ {
+  "term": "Exacerbation",
+  "def": "A relatively sudden increase in the severity of a disease or its signs/symptoms.",
+  "chapter": 1
+ },
+ {
+  "term": "Remission",
+  "def": "A decline/abatement in the severity of signs and symptoms; if permanent (often >5 years), the person is considered cured.",
+  "chapter": 1
+ },
+ {
+  "term": "Convalescence",
+  "def": "The stage of recovery after a disease, injury, or surgery.",
+  "chapter": 1
+ },
+ {
+  "term": "Sequela",
+  "def": "A pathologic condition resulting from a prior disease (e.g., cardiac valve scarring after rheumatic fever).",
+  "chapter": 1
+ },
+ {
+  "term": "Complication",
+  "def": "A new, separate disease process arising secondarily because of changes produced by the original problem (e.g., bacterial pneumonia after a viral infection).",
+  "chapter": 1
+ },
+ {
+  "term": "Validity (accuracy)",
+  "def": "The degree to which a measurement reflects the true value of what it's meant to measure.",
+  "chapter": 1
+ },
+ {
+  "term": "Reliability (precision)",
+  "def": "A test's ability to give the same result on repeated measurement \u2014 can be reliable yet still inaccurate.",
+  "chapter": 1
+ },
+ {
+  "term": "Sensitivity",
+  "def": "The probability a test will be positive in someone who has the condition; low sensitivity = more false negatives.",
+  "chapter": 1
+ },
+ {
+  "term": "Specificity",
+  "def": "The probability a test will be negative in someone who does NOT have the condition; low specificity = more false positives.",
+  "chapter": 1
+ },
+ {
+  "term": "Positive predictive value (PPV)",
+  "def": "The probability disease is actually present given a positive test result.",
+  "chapter": 1
+ },
+ {
+  "term": "Negative predictive value (NPV)",
+  "def": "The probability disease is actually absent given a negative test result.",
+  "chapter": 1
+ },
+ {
+  "term": "Endemic disease",
+  "def": "A disease native to, and consistently present in, a specific local region.",
+  "chapter": 1
+ },
+ {
+  "term": "Epidemic",
+  "def": "A disease disseminated to many individuals at the same time within a region/population.",
+  "chapter": 1
+ },
+ {
+  "term": "Pandemic",
+  "def": "An epidemic that has spread worldwide across multiple countries/continents.",
+  "chapter": 1
+ },
+ {
+  "term": "Acclimatization",
+  "def": "A normal adaptive physiologic response to an environmental change (e.g., increased RBC count at high altitude).",
+  "chapter": 1
+ },
+ {
+  "term": "Primary prevention",
+  "def": "Preventing disease onset entirely, by reducing susceptibility or exposure (e.g., vaccination).",
+  "chapter": 1
+ },
+ {
+  "term": "Secondary prevention",
+  "def": "Early detection and management of disease in its preclinical/early clinical stages (e.g., screening).",
+  "chapter": 1
+ },
+ {
+  "term": "Tertiary prevention",
+  "def": "Rehabilitative/supportive care in advanced disease or disability, aimed at restoring function.",
+  "chapter": 1
+ },
+ {
+  "term": "Autoimmunity",
+  "def": "The immune system recognizing \"self\" as foreign and mounting a tissue-damaging response \u2014 a failure of self-tolerance.",
+  "chapter": 10
+ },
+ {
+  "term": "Self-tolerance",
+  "def": "The immune system's learned ability to not attack the body's own cells; involves both central and peripheral mechanisms.",
+  "chapter": 10
+ },
+ {
+  "term": "Central tolerance",
+  "def": "Elimination/suppression of self-reactive T and B cells during development in the thymus and bone marrow.",
+  "chapter": 10
+ },
+ {
+  "term": "Peripheral tolerance",
+  "def": "Backup mechanisms (clonal deletion, anergy, Treg suppression) controlling self-reactive lymphocytes that escaped central tolerance.",
+  "chapter": 10
+ },
+ {
+  "term": "Regulatory T cells (Tregs)",
+  "def": "CD4+CD25+FOXP3+ cells that suppress autoreactive T and B cells via inhibitory cytokines (IL-10, TGF-\u03b2) and CTLA-4.",
+  "chapter": 10
+ },
+ {
+  "term": "Molecular (antigenic) mimicry",
+  "def": "A theory of autoimmunity where pathogen epitopes resemble self-antigens closely enough that the immune response against the pathogen also attacks self tissue.",
+  "chapter": 10
+ },
+ {
+  "term": "Hidden/sequestered antigen theory",
+  "def": "Self-antigens normally isolated from immune surveillance (cornea, testicles, brain) become exposed after tissue damage and are attacked as foreign.",
+  "chapter": 10
+ },
+ {
+  "term": "Epitope spread",
+  "def": "Recurrent infection/organ damage causes the immune system to develop multiple new autoantibodies over time.",
+  "chapter": 10
+ },
+ {
+  "term": "Hypersensitivity",
+  "def": "A normal immune mechanism triggered inappropriately, excessively, or with undesirable effects; four types (I\u2013IV).",
+  "chapter": 10
+ },
+ {
+  "term": "IgE",
+  "def": "The principal antibody mediating type I hypersensitivity; binds mast cell/basophil Fc receptors.",
+  "chapter": 10
+ },
+ {
+  "term": "Mast cell degranulation",
+  "def": "Release of preformed (histamine, heparin, enzymes) and newly-formed (leukotrienes, prostaglandins) mediators triggered by IgE-antigen cross-linking.",
+  "chapter": 10
+ },
+ {
+  "term": "Anaphylaxis",
+  "def": "A life-threatening, systemic type I hypersensitivity reaction.",
+  "chapter": 10
+ },
+ {
+  "term": "Primary immunodeficiency",
+  "def": "An immune deficiency not attributable to another cause \u2014 congenital or acquired (e.g., HIV/AIDS).",
+  "chapter": 10
+ },
+ {
+  "term": "Secondary immunodeficiency",
+  "def": "Immune impairment resulting from another disorder or treatment (chemotherapy, malnutrition, stress).",
+  "chapter": 10
+ },
+ {
+  "term": "SCID",
+  "def": "Severe combined immunodeficiency \u2014 genetic disorders causing absent/dysfunctional T cells (\u00b1 B cells/NK cells), leaving both cellular and humoral immunity impaired.",
+  "chapter": 10
+ },
+ {
+  "term": "DiGeorge syndrome (22q11.2 deletion)",
+  "def": "A T-cell disorder from a hypoplastic/aplastic thymus due to a chromosome 22q11.2 deletion.",
+  "chapter": 10
+ },
+ {
+  "term": "Wiskott-Aldrich syndrome",
+  "def": "An X-linked disorder (WASp gene) causing B-cell dysfunction, microthrombocytopenia, and eczema.",
+  "chapter": 10
+ },
+ {
+  "term": "Selective IgA deficiency",
+  "def": "The most common B-cell PID \u2014 lack of serum IgA; often asymptomatic but linked to autoimmune/allergic conditions.",
+  "chapter": 10
+ },
+ {
+  "term": "Leukemia",
+  "def": "A \"circulating tumor\" disseminated from the start, primarily involving blood and bone marrow.",
+  "chapter": 11
+ },
+ {
+  "term": "Lymphoma",
+  "def": "A malignancy that localizes in lymph tissue, though often disseminated by diagnosis.",
+  "chapter": 11
+ },
+ {
+  "term": "Multiple myeloma",
+  "def": "Malignant transformation of B-lymphocyte plasma cells, with a predilection for forming bone tumors.",
+  "chapter": 11
+ },
+ {
+  "term": "Lymphadenopathy",
+  "def": "Enlarged, nontender lymph nodes \u2014 a common finding in lymphoma and some leukemias.",
+  "chapter": 11
+ },
+ {
+  "term": "Myeloproliferative disease",
+  "def": "Overproduction of one or more functional, normal-appearing blood cell types from a multipotent stem cell (e.g., CML, PV, ET).",
+  "chapter": 11
+ },
+ {
+  "term": "Myelodysplastic syndrome (MDS)",
+  "def": "Neoplastic cells that are morphologically/functionally abnormal (unlike myeloproliferative disease) \u2014 poor prognosis.",
+  "chapter": 11
+ },
+ {
+  "term": "Philadelphia chromosome (Ph+)",
+  "def": "The balanced 9;22 translocation forming the BCR/ABL fusion gene \u2014 characteristic of CML.",
+  "chapter": 11
+ },
+ {
+  "term": "BCR/ABL",
+  "def": "The fusion gene/oncoprotein from the Philadelphia chromosome; a functional enzyme driving proliferation and blocking apoptosis.",
+  "chapter": 11
+ },
+ {
+  "term": "Tyrosine kinase inhibitor (TKI)",
+  "def": "Drug class binding the BCR/ABL domain, dramatically improving CML survival.",
+  "chapter": 11
+ },
+ {
+  "term": "Blast",
+  "def": "An immature precursor cell; blast percentage in marrow/blood defines leukemia phase/type (e.g., \u226520% blasts = AML).",
+  "chapter": 11
+ },
+ {
+  "term": "Acute promyelocytic leukemia (APL)",
+  "def": "An AML subtype with t(15;17)/PML-RAR\u03b1 fusion; most curable AML subtype, especially with ATRA.",
+  "chapter": 11
+ },
+ {
+  "term": "ATRA (all-trans-retinoic acid)",
+  "def": "A drug that releases PML-RAR\u03b1's inhibitory block on myeloid differentiation \u2014 used specifically in APL.",
+  "chapter": 11
+ },
+ {
+  "term": "CLL/SLL",
+  "def": "Chronic lymphocytic leukemia / small lymphocytic lymphoma \u2014 the same disease process, distinguished only by location (blood/marrow vs. nodes/spleen).",
+  "chapter": 11
+ },
+ {
+  "term": "Richter transformation",
+  "def": "Malignant transformation of CLL/SLL into a more aggressive B-cell lymphoma \u2014 poor prognosis.",
+  "chapter": 11
+ },
+ {
+  "term": "Lymphoblast",
+  "def": "An immature lymphoid precursor cell characteristic of ALL.",
+  "chapter": 11
+ },
+ {
+  "term": "Bence Jones protein",
+  "def": "Light-chain antibody fragments found in urine in multiple myeloma; can cause kidney damage.",
+  "chapter": 11
+ },
+ {
+  "term": "Reed-Sternberg cell",
+  "def": "The malignant B-cell-derived diagnostic cell of Hodgkin lymphoma \u2014 often a minority of the actual tumor cellularity.",
+  "chapter": 11
+ },
+ {
+  "term": "Ann Arbor / Lugano staging",
+  "def": "The staging system for Hodgkin lymphoma based on node location/number and presence of systemic (\"B\") symptoms.",
+  "chapter": 11
+ },
+ {
+  "term": "Erythrocyte (RBC)",
+  "def": "The most numerous blood cell; biconcave, non-nucleated disk that transports O2 via hemoglobin; lifespan 80\u2013120 days.",
+  "chapter": 13
+ },
+ {
+  "term": "Hemoglobin",
+  "def": "The oxygen-carrying protein comprising ~90% of RBC dry weight \u2014 2 \u03b1-chains + 2 \u03b2-chains, each with an iron-containing heme group.",
+  "chapter": 13
+ },
+ {
+  "term": "Reversible deformability",
+  "def": "The RBC's ability to change shape (torpedo-like) to squeeze through capillaries narrower than its own resting diameter.",
+  "chapter": 13
+ },
+ {
+  "term": "Hematopoiesis",
+  "def": "The developmental process from pluripotential stem cells to mature blood cells; occurs in bone marrow in adults.",
+  "chapter": 13
+ },
+ {
+  "term": "Reticulocyte",
+  "def": "An immature RBC that has lost its nucleus but still contains organelle remnants; matures into an erythrocyte in 24\u201348 hours; normal count ~1% of total RBCs.",
+  "chapter": 13
+ },
+ {
+  "term": "Erythropoietin",
+  "def": "The kidney hormone that stimulates RBC production in response to tissue hypoxia.",
+  "chapter": 13
+ },
+ {
+  "term": "Transferrin",
+  "def": "The plasma protein that transports dietary iron to transferrin receptors on the RBC membrane.",
+  "chapter": 13
+ },
+ {
+  "term": "Ferritin",
+  "def": "The intracellular iron storage protein.",
+  "chapter": 13
+ },
+ {
+  "term": "Hemoglobin F (fetal)",
+  "def": "Two \u03b1 + two \u03b3 chains; more efficient O2 carrier at low O2 tension; replaced by hemoglobin A within ~120 days after birth.",
+  "chapter": 13
+ },
+ {
+  "term": "Hemoglobin A (adult)",
+  "def": "Two \u03b1 + two \u03b2 chains; ~97% of adult hemoglobin.",
+  "chapter": 13
+ },
+ {
+  "term": "Oxyhemoglobin",
+  "def": "Hemoglobin reversibly bound to oxygen.",
+  "chapter": 13
+ },
+ {
+  "term": "P50",
+  "def": "The PO2 at which hemoglobin is 50% saturated \u2014 the standard reference point for assessing hemoglobin's oxygen-releasing ability.",
+  "chapter": 13
+ },
+ {
+  "term": "Bohr effect",
+  "def": "The shift in the oxyhemoglobin dissociation curve caused by changes in PCO2/H+ that enhances O2 uptake in the lungs and release in the tissues.",
+  "chapter": 13
+ },
+ {
+  "term": "Haldane effect",
+  "def": "Unloading of O2 in tissues facilitates the loading of CO2 onto hemoglobin.",
+  "chapter": 13
+ },
+ {
+  "term": "Chloride shift",
+  "def": "Chloride diffuses into the RBC to balance the charge as bicarbonate diffuses out, maintaining electrical neutrality during CO2 transport.",
+  "chapter": 13
+ },
+ {
+  "term": "Carbaminohemoglobin",
+  "def": "Hemoglobin directly bound to CO2 \u2014 an important acid-base buffer.",
+  "chapter": 13
+ },
+ {
+  "term": "Anemia",
+  "def": "A deficit of red cells causing reduced oxygen-carrying capacity and tissue hypoxia.",
+  "chapter": 13
+ },
+ {
+  "term": "Polycythemia",
+  "def": "An excess of red cells causing increased blood viscosity and volume.",
+  "chapter": 13
+ },
+ {
+  "term": "Pancytopenia",
+  "def": "Simultaneous deficiency of red cells, white cells, and platelets \u2014 hallmark of aplastic anemia.",
+  "chapter": 13
+ },
+ {
+  "term": "Aplastic anemia",
+  "def": "A stem cell disorder with reduced hematopoietic marrow tissue and fatty marrow replacement, causing pancytopenia.",
+  "chapter": 13
+ },
+ {
+  "term": "Polycythemia vera",
+  "def": "A myeloproliferative neoplasm from stem cell transformation, causing overproduction of RBCs, WBCs, and platelets together.",
+  "chapter": 13
+ },
+ {
+  "term": "Hemostasis",
+  "def": "Arrest of bleeding / prevention of blood loss after vessel injury.",
+  "chapter": 14
+ },
+ {
+  "term": "Primary hemostasis",
+  "def": "The initial response to vessel injury \u2014 vasoconstriction plus platelet plug formation.",
+  "chapter": 14
+ },
+ {
+  "term": "Secondary hemostasis",
+  "def": "Formation of a fibrin clot (coagulation) to reinforce the platelet plug.",
+  "chapter": 14
+ },
+ {
+  "term": "Clot retraction",
+  "def": "The final stage \u2014 platelet plug, fibrin strands, and trapped RBCs compress into a firm clot (~1 hour).",
+  "chapter": 14
+ },
+ {
+  "term": "Degranulation",
+  "def": "Platelet release of \u03b1 granules (thrombospondin, fibrinogen, vWF, factors V/VIII) and dense bodies (ADP, ATP, serotonin) after activation.",
+  "chapter": 14
+ },
+ {
+  "term": "Thromboxane A2 (TxA2)",
+  "def": "A potent platelet aggregation agonist formed from arachidonic acid; blocked by aspirin/COX inhibitors.",
+  "chapter": 14
+ },
+ {
+  "term": "GpIIb/IIIa receptor",
+  "def": "Platelet surface receptor that binds fibrinogen to link platelets together during aggregation.",
+  "chapter": 14
+ },
+ {
+  "term": "Thrombin",
+  "def": "The active enzyme (from prothrombin) that converts fibrinogen to fibrin and activates factors V, VIII, and XIII.",
+  "chapter": 14
+ },
+ {
+  "term": "Fibrin",
+  "def": "The insoluble protein threads (from fibrinogen) that form the structural scaffold of a clot.",
+  "chapter": 14
+ },
+ {
+  "term": "Intrinsic pathway",
+  "def": "Coagulation activated by blood contact with damaged endothelium/negatively charged surfaces; assessed by aPTT.",
+  "chapter": 14
+ },
+ {
+  "term": "Extrinsic pathway",
+  "def": "Coagulation activated by tissue factor release after vascular/tissue trauma; assessed by PT/INR.",
+  "chapter": 14
+ },
+ {
+  "term": "Common pathway",
+  "def": "Where intrinsic and extrinsic pathways converge \u2014 factor Xa converts prothrombin to thrombin.",
+  "chapter": 14
+ },
+ {
+  "term": "Antithrombin III (ATIII)",
+  "def": "A natural anticoagulant that binds and inactivates free thrombin; its activity is enhanced by heparin.",
+  "chapter": 14
+ },
+ {
+  "term": "Protein C / Protein S",
+  "def": "Vitamin K-dependent anticoagulant proteins; protein C inactivates factors V/VIII, protein S assists it and triggers fibrinolysis.",
+  "chapter": 14
+ },
+ {
+  "term": "Fibrinolysis",
+  "def": "Clot dissolution via plasmin, which digests fibrin/fibrinogen and produces fibrin split (degradation) products.",
+  "chapter": 14
+ },
+ {
+  "term": "Petechiae",
+  "def": "Flat, pinpoint, nonblanching red/purple spots from capillary hemorrhage \u2014 classic in vascular/platelet disorders.",
+  "chapter": 14
+ },
+ {
+  "term": "Purpura",
+  "def": "Petechiae occurring in groups or patches.",
+  "chapter": 14
+ },
+ {
+  "term": "Ecchymosis",
+  "def": "A bruise \u2014 blood escaping into tissue; if raised, called a hematoma.",
+  "chapter": 14
+ },
+ {
+  "term": "Hemarthrosis",
+  "def": "Bleeding into a joint, with swelling and pain \u2014 the hallmark of hemophilia.",
+  "chapter": 14
+ },
+ {
+  "term": "Telangiectasia",
+  "def": "A dilated, tortuous small vessel that blanches with pressure and bleeds easily with minor trauma.",
+  "chapter": 14
+ },
+ {
+  "term": "PT / INR",
+  "def": "Prothrombin time / international normalized ratio \u2014 assesses the extrinsic pathway.",
+  "chapter": 14
+ },
+ {
+  "term": "aPTT",
+  "def": "Activated partial thromboplastin time \u2014 assesses the intrinsic pathway.",
+  "chapter": 14
+ },
+ {
+  "term": "Thrombocytopenia",
+  "def": "Low platelet count, a common cause of generalized bleeding.",
+  "chapter": 14
+ },
+ {
+  "term": "Immune thrombocytopenia (ITP)",
+  "def": "An acquired, immune-mediated cause of thrombocytopenia; classified as newly diagnosed, persistent, or chronic.",
+  "chapter": 14
+ },
+ {
+  "term": "Hemophilia A",
+  "def": "X-linked recessive factor VIII deficiency \u2014 the classic form, ~85% of hemophilia cases.",
+  "chapter": 14
+ },
+ {
+  "term": "Hemophilia B (Christmas disease)",
+  "def": "X-linked recessive factor IX deficiency \u2014 less common than hemophilia A.",
+  "chapter": 14
+ },
+ {
+  "term": "von Willebrand disease",
+  "def": "A disorder of von Willebrand factor (vWF), causing both platelet dysfunction and reduced factor VIII stability.",
+  "chapter": 14
+ },
+ {
+  "term": "Disseminated intravascular coagulation (DIC)",
+  "def": "An acquired syndrome of simultaneous widespread clotting AND bleeding, from consumption of clotting factors/platelets.",
+  "chapter": 14
+ },
+ {
+  "term": "Hemodynamics",
+  "def": "The principles governing blood flow \u2014 pressure, resistance, velocity, laminar/turbulent flow, wall tension, compliance.",
+  "chapter": 15
+ },
+ {
+  "term": "Poiseuille's law",
+  "def": "The formula describing how vessel length, radius, and blood viscosity determine resistance to flow.",
+  "chapter": 15
+ },
+ {
+  "term": "Ohm's law (hemodynamic)",
+  "def": "Q = P/R \u2014 blood flow equals the pressure difference divided by resistance.",
+  "chapter": 15
+ },
+ {
+  "term": "Systemic vascular resistance (SVR)",
+  "def": "Resistance peripheral to the heart and lungs; primarily determined by arteriolar tone.",
+  "chapter": 15
+ },
+ {
+  "term": "Velocity",
+  "def": "Distance traveled per unit time (cm/sec); varies inversely with total cross-sectional area.",
+  "chapter": 15
+ },
+ {
+  "term": "Laminar flow",
+  "def": "Streamlined blood flow in layers, with central blood moving fastest (parabolic profile).",
+  "chapter": 15
+ },
+ {
+  "term": "Turbulent flow",
+  "def": "Disrupted, crosswise flow \u2014 audible as a bruit, palpable as a thrill; promotes thrombus formation.",
+  "chapter": 15
+ },
+ {
+  "term": "Law of Laplace",
+  "def": "Wall tension = distending pressure \u00d7 vessel radius; explains why large-radius, high-pressure vessels (aneurysms) are prone to rupture.",
+  "chapter": 15
+ },
+ {
+  "term": "Critical closing pressure",
+  "def": "The pressure (~20 mmHg) below which a vessel can no longer be held open and flow ceases.",
+  "chapter": 15
+ },
+ {
+  "term": "Vasomotor tone",
+  "def": "The continuous baseline level of vascular smooth muscle contraction from basal vasomotor center discharge.",
+  "chapter": 15
+ },
+ {
+  "term": "Autoregulation",
+  "def": "An organ/tissue's intrinsic ability to maintain relatively constant blood flow despite changes in arterial pressure.",
+  "chapter": 15
+ },
+ {
+  "term": "Nitric oxide (NO)",
+  "def": "The primary endothelium-derived vasodilating gas; deficiency implicated in hypertension and heart disease.",
+  "chapter": 15
+ },
+ {
+  "term": "Active (functional) hyperemia",
+  "def": "Increased local blood flow in response to increased tissue metabolic demand.",
+  "chapter": 15
+ },
+ {
+  "term": "Reactive hyperemia",
+  "def": "The flushing/increased flow seen after a temporary flow reduction is reversed (e.g., after a tourniquet is removed).",
+  "chapter": 15
+ },
+ {
+  "term": "Thrombus",
+  "def": "A stationary blood clot formed within a vessel or heart chamber.",
+  "chapter": 15
+ },
+ {
+  "term": "Embolus",
+  "def": "Material (often a dislodged thrombus) that travels through the bloodstream and lodges elsewhere, obstructing flow.",
+  "chapter": 15
+ },
+ {
+  "term": "Vasospasm",
+  "def": "Sudden arterial smooth muscle constriction causing flow obstruction.",
+  "chapter": 15
+ },
+ {
+  "term": "Vasculitis / phlebitis / arteritis",
+  "def": "Inflammation of an artery's intima / a vein's lining / an autoimmune arterial inflammatory process, respectively.",
+  "chapter": 15
+ },
+ {
+  "term": "Compartment syndrome",
+  "def": "Increased pressure within a fascial compartment compromising circulation \u2014 from swelling, bleeding, or external compression.",
+  "chapter": 15
+ },
+ {
+  "term": "Arteriosclerosis",
+  "def": "General term for arterial thickening/hardening; encompasses M\u00f6nckeberg sclerosis, arteriolar sclerosis, and atherosclerosis.",
+  "chapter": 15
+ },
+ {
+  "term": "Atherosclerosis",
+  "def": "Plaque buildup (lipid, smooth muscle, inflammatory debris) in the intima of large/medium arteries \u2014 the dominant, most clinically significant arteriosclerotic process.",
+  "chapter": 15
+ },
+ {
+  "term": "Aneurysm",
+  "def": "A localized dilation of an arterial wall \u2014 a weakened area at risk of rupture.",
+  "chapter": 15
+ },
+ {
+  "term": "Arteriovenous fistula (AVF)",
+  "def": "An abnormal direct communication between an artery and a vein.",
+  "chapter": 15
+ },
+ {
+  "term": "Valvular incompetence",
+  "def": "Failure of venous valves to close properly, allowing backward blood flow.",
+  "chapter": 15
+ },
+ {
+  "term": "Varicose veins",
+  "def": "Superficial vein valvular incompetence causing dilated, tortuous, visible veins.",
+  "chapter": 15
+ },
+ {
+  "term": "Chronic venous insufficiency",
+  "def": "Valvular incompetence involving the deep veins of the legs.",
+  "chapter": 15
+ },
+ {
+  "term": "Deep vein thrombosis (DVT)",
+  "def": "A thrombus in a deep vein, most often the legs/pelvis \u2014 the most frequent source of pulmonary emboli.",
+  "chapter": 15
+ },
+ {
+  "term": "Lymphedema",
+  "def": "Lymphatic fluid accumulation in the interstitium from obstructed/altered lymph flow \u2014 primary (congenital) or secondary (acquired/iatrogenic).",
+  "chapter": 15
+ },
+ {
+  "term": "Homeostasis",
+  "def": "Maintaining internal conditions in a stable state around a narrow \"set point,\" via negative feedback loops.",
+  "chapter": 2
+ },
+ {
+  "term": "Milieu int\u00e9rieur",
+  "def": "Claude Bernard's term for the stable internal environment necessary for survival, independent of the external environment.",
+  "chapter": 2
+ },
+ {
+  "term": "Allostasis",
+  "def": "The dynamic process of achieving stability through change \u2014 varying physiologic parameters to match resources to environmental demands.",
+  "chapter": 2
+ },
+ {
+  "term": "Stressor",
+  "def": "Anything that throws the body out of allostatic balance (Sapolsky's definition).",
+  "chapter": 2
+ },
+ {
+  "term": "Stress response",
+  "def": "The body's effort to restore allostatic balance after a stressor (Sapolsky's definition).",
+  "chapter": 2
+ },
+ {
+  "term": "General adaptation syndrome (GAS)",
+  "def": "Selye's model of the body's nonspecific response to any stressor, in three stages: alarm, resistance, exhaustion.",
+  "chapter": 2
+ },
+ {
+  "term": "Alarm stage",
+  "def": "The fight-or-flight stage of GAS \u2014 hypothalamus activates the SNS and HPA axis in response to a stressor.",
+  "chapter": 2
+ },
+ {
+  "term": "Resistance (adaptation) stage",
+  "def": "The GAS stage where the body mobilizes glucose, fatty acids, and amino acids to manage an ongoing stressor.",
+  "chapter": 2
+ },
+ {
+  "term": "Exhaustion stage",
+  "def": "The GAS stage where prolonged stress causes glucocorticoid dysregulation, loss of resistance, and \"diseases of adaptation.\"",
+  "chapter": 2
+ },
+ {
+  "term": "HPA axis",
+  "def": "Hypothalamic-pituitary-adrenal axis \u2014 CRH \u2192 ACTH \u2192 cortisol; the slower hormonal arm of the stress response.",
+  "chapter": 2
+ },
+ {
+  "term": "Sympathetic-adrenal-medullary (SAM) system",
+  "def": "The fast-acting arm of the stress response \u2014 SNS activation triggering adrenal medulla release of catecholamines.",
+  "chapter": 2
+ },
+ {
+  "term": "CRH (corticotropin-releasing hormone)",
+  "def": "Released by the hypothalamic paraventricular nucleus (PVN); activates both the SNS and the anterior pituitary (ACTH release).",
+  "chapter": 2
+ },
+ {
+  "term": "ACTH",
+  "def": "Adrenocorticotropic hormone, released by the anterior pituitary in response to CRH; stimulates the adrenal cortex to release cortisol.",
+  "chapter": 2
+ },
+ {
+  "term": "Cortisol",
+  "def": "The primary glucocorticoid; mobilizes glucose/protein/fat stores, suppresses inflammation and immune function, slower onset but longer duration than catecholamines.",
+  "chapter": 2
+ },
+ {
+  "term": "Aldosterone",
+  "def": "The primary mineralocorticoid; promotes sodium reabsorption/potassium excretion in the kidney, expanding fluid volume and raising blood pressure.",
+  "chapter": 2
+ },
+ {
+  "term": "Allostatic load",
+  "def": "The cumulative physiologic \"wear and tear\" cost of repeated or chronic allostatic responses.",
+  "chapter": 2
+ },
+ {
+  "term": "Allostatic overload",
+  "def": "When adaptation mechanisms are overwhelmed or inadequate, producing pathophysiologic states across multiple body systems.",
+  "chapter": 2
+ },
+ {
+  "term": "Resilience",
+  "def": "The capacity to adapt successfully to stress/adversity, preventing disease and mitigating allostatic load.",
+  "chapter": 2
+ },
+ {
+  "term": "Maladaptation",
+  "def": "Ineffective, inadequate, or inappropriate change in response to altered circumstances.",
+  "chapter": 2
+ },
+ {
+  "term": "Coping",
+  "def": "A behavioral adaptive response to a stressor; can be functional (health-promoting) or dysfunctional (maladaptive, e.g., overeating, substance use).",
+  "chapter": 2
+ },
+ {
+  "term": "Distress",
+  "def": "The experience of perceiving an inability to cope with a stressor \u2014 further escalates catecholamine and glucocorticoid release.",
+  "chapter": 2
+ },
+ {
+  "term": "Habituation",
+  "def": "Adapting to a repeated stressor by training the hypothalamus to react less forcefully to it (e.g., no longer noticing airport noise).",
+  "chapter": 2
+ },
+ {
+  "term": "Tend-and-befriend response",
+  "def": "An alternative to fight-or-flight, thought to be more common in females, mediated by oxytocin and endogenous opioids \u2014 produces a calming, affiliative response to stress.",
+  "chapter": 2
+ },
+ {
+  "term": "Psychoneuroimmunology",
+  "def": "The field studying interactions among the nervous, endocrine, and immune systems, especially regarding stress and its effects on health.",
+  "chapter": 2
+ },
+ {
+  "term": "Dysphagia",
+  "def": "Subjective difficulty swallowing; can involve trouble initiating a swallow or a \"sticking\" sensation.",
+  "chapter": 36
+ },
+ {
+  "term": "Odynophagia",
+  "def": "Pain during swallowing; may accompany dysphagia.",
+  "chapter": 36
+ },
+ {
+  "term": "Peristalsis",
+  "def": "The coordinated, wave-like muscle contractions that move contents through the GI tract.",
+  "chapter": 36
+ },
+ {
+  "term": "Aperistalsis",
+  "def": "Complete absence of peristaltic activity in the esophagus.",
+  "chapter": 36
+ },
+ {
+  "term": "Achalasia",
+  "def": "A disorder of esophageal smooth muscle function that impairs peristalsis and LES relaxation.",
+  "chapter": 36
+ },
+ {
+  "term": "Lower Esophageal Sphincter (LES)",
+  "def": "The muscular ring between the esophagus and stomach that normally prevents reflux.",
+  "chapter": 36
+ },
+ {
+  "term": "Pyrosis",
+  "def": "Medical term for heartburn \u2014 a substernal burning sensation from acid reflux.",
+  "chapter": 36
+ },
+ {
+  "term": "Diffuse Esophageal Spasm (DES)",
+  "def": "High-amplitude, uncoordinated esophageal contractions that alternate with normal peristalsis, causing chest pain that can mimic angina.",
+  "chapter": 36
+ },
+ {
+  "term": "Visceral Pain",
+  "def": "Diffuse, poorly localized pain from stretching/inflammation of an internal organ.",
+  "chapter": 36
+ },
+ {
+  "term": "Somatic Pain",
+  "def": "Sharp, well-localized pain from injury to the abdominal wall or peritoneum.",
+  "chapter": 36
+ },
+ {
+  "term": "Referred Pain",
+  "def": "Pain felt at a site distant from its source, but within the same dermatome/nerve segment.",
+  "chapter": 36
+ },
+ {
+  "term": "Aerophagia",
+  "def": "Subconscious swallowing of air \u2014 a normal source of intestinal gas.",
+  "chapter": 36
+ },
+ {
+  "term": "Eructation",
+  "def": "Belching; expulsion of swallowed air from the stomach.",
+  "chapter": 36
+ },
+ {
+  "term": "Constipation",
+  "def": "Small, infrequent (fewer than 3/week), or difficult bowel movements.",
+  "chapter": 36
+ },
+ {
+  "term": "Fecal Impaction",
+  "def": "A firm, immovable mass of stool obstructing the lower GI tract, common after chronic constipation.",
+  "chapter": 36
+ },
+ {
+  "term": "Diarrhea",
+  "def": "Increased frequency and fluidity of bowel movements; >200 g stool/24 hr is the objective definition.",
+  "chapter": 36
+ },
+ {
+  "term": "Osmotic Diarrhea",
+  "def": "Diarrhea from poorly-absorbed solutes pulling water into the bowel lumen.",
+  "chapter": 36
+ },
+ {
+  "term": "Secretory Diarrhea",
+  "def": "Diarrhea from toxins that actively stimulate intestinal fluid secretion (e.g., cholera toxin).",
+  "chapter": 36
+ },
+ {
+  "term": "Exudative Diarrhea",
+  "def": "Diarrhea from mucus, blood, and protein leaking from inflamed bowel (e.g., IBD).",
+  "chapter": 36
+ },
+ {
+  "term": "Stomatitis",
+  "def": "Ulcerative inflammation of the oral mucosa (lips, cheeks, palate).",
+  "chapter": 36
+ },
+ {
+  "term": "GERD",
+  "def": "Gastroesophageal reflux disease \u2014 backflow of gastric contents into the esophagus through the LES.",
+  "chapter": 36
+ },
+ {
+  "term": "Barrett Esophagus",
+  "def": "Replacement of normal esophageal squamous epithelium with columnar tissue from chronic acid exposure; precancerous.",
+  "chapter": 36
+ },
+ {
+  "term": "Hiatal Hernia",
+  "def": "Protrusion of part of the stomach through the diaphragm into the thorax.",
+  "chapter": 36
+ },
+ {
+  "term": "Mallory-Weiss Syndrome",
+  "def": "A mucosal tear at the gastroesophageal junction from forceful vomiting, causing bleeding.",
+  "chapter": 36
+ },
+ {
+  "term": "Esophageal Varices",
+  "def": "Dilated esophageal veins from portal hypertension, usually due to cirrhosis; risk of severe hemorrhage.",
+  "chapter": 36
+ },
+ {
+  "term": "Gastritis",
+  "def": "Inflammation of the stomach lining; acute (toxins) or chronic (oftenH. pylori).",
+  "chapter": 36
+ },
+ {
+  "term": "Helicobacter pylori",
+  "def": "A bacterium that colonizes the gastric mucosa and is the major cause of chronic gastritis and peptic ulcer disease.",
+  "chapter": 36
+ },
+ {
+  "term": "Gastroenteritis",
+  "def": "Inflammation of the stomach and small intestine, often infectious (\"stomach flu\").",
+  "chapter": 36
+ },
+ {
+  "term": "Peptic Ulcer Disease (PUD)",
+  "def": "Mucosal injury of the esophagus, stomach, or duodenum from acid/pepsin exceeding mucosal defenses.",
+  "chapter": 36
+ },
+ {
+  "term": "Irritable Bowel Syndrome (IBS)",
+  "def": "A functional motility disorder with alternating diarrhea/constipation and cramping, without identifiable structural pathology.",
+  "chapter": 36
+ },
+ {
+  "term": "Ileus",
+  "def": "A functional (non-mechanical) obstruction from loss of bowel propulsive activity.",
+  "chapter": 36
+ },
+ {
+  "term": "Strangulation",
+  "def": "Impaired blood supply to a bowel segment, risking ischemia, gangrene, and perforation.",
+  "chapter": 36
+ },
+ {
+  "term": "Volvulus",
+  "def": "Twisting of the bowel on itself, causing obstruction and vascular compression.",
+  "chapter": 36
+ },
+ {
+  "term": "Intussusception",
+  "def": "Telescoping of one bowel segment into an adjacent (usually distal) segment.",
+  "chapter": 36
+ },
+ {
+  "term": "Megacolon",
+  "def": "Massive dilation of the colon, congenital or acquired.",
+  "chapter": 36
+ },
+ {
+  "term": "Hirschsprung Disease",
+  "def": "Congenital absence of autonomic ganglia in a colon segment, preventing normal relaxation and causing megacolon.",
+  "chapter": 36
+ },
+ {
+  "term": "Malabsorption",
+  "def": "Failure of the GI tract to properly absorb or digest one or more dietary nutrients.",
+  "chapter": 36
+ },
+ {
+  "term": "Celiac Disease",
+  "def": "Immune-mediated intolerance of gluten causing villus atrophy and malabsorption.",
+  "chapter": 36
+ },
+ {
+  "term": "Steatorrhea",
+  "def": "Excess fat in the stool, a sign of fat malabsorption.",
+  "chapter": 36
+ },
+ {
+  "term": "Dumping Syndrome",
+  "def": "Rapid emptying of stomach contents into the small intestine after gastric surgery, causing osmotic fluid shift and rebound hypoglycemia.",
+  "chapter": 36
+ },
+ {
+  "term": "Short Bowel Syndrome",
+  "def": "Severe malabsorption/diarrhea following surgical removal of large portions of small intestine.",
+  "chapter": 36
+ },
+ {
+  "term": "Adenomatous Polyp",
+  "def": "A benign colon growth that is the major precursor lesion for colon cancer.",
+  "chapter": 36
+ },
+ {
+  "term": "Sessile vs. Pedunculated Polyp",
+  "def": "Sessile = broad, flat base; pedunculated = attached by a narrow stalk.",
+  "chapter": 36
+ },
+ {
+  "term": "Dukes Classification",
+  "def": "A staging system for colorectal cancer based on depth of invasion and nodal/metastatic spread.",
+  "chapter": 36
+ },
+ {
+  "term": "Gallbladder",
+  "def": "A distensible sac (~30\u201350 mL capacity) that concentrates and stores bile, connecting via the cystic duct to the common hepatic duct.",
+  "chapter": 37
+ },
+ {
+  "term": "Common bile duct",
+  "def": "Formed by the union of the cystic and common hepatic ducts; ~3 inches long, runs behind the duodenum, ends at the ampulla of Vater.",
+  "chapter": 37
+ },
+ {
+  "term": "Ampulla of Vater",
+  "def": "The complex structure where the common bile duct and main pancreatic duct terminate together into the duodenum.",
+  "chapter": 37
+ },
+ {
+  "term": "Bile",
+  "def": "A fluid made of water, electrolytes, bile acids, pigment, cholesterol, and phospholipids; aids fat digestion and excretes waste (bilirubin, toxins, cholesterol).",
+  "chapter": 37
+ },
+ {
+  "term": "Bile salts (bile acids)",
+  "def": "Primary (cholic, chenodeoxycholic) and secondary (deoxycholic, ursodeoxycholic, lithocholic) acids that solubilize lipids in bile.",
+  "chapter": 37
+ },
+ {
+  "term": "Micelle",
+  "def": "A cluster formed by hydrophilic/hydrophobic bile salt molecules that surrounds and solubilizes lipids like cholesterol.",
+  "chapter": 37
+ },
+ {
+  "term": "Lecithin",
+  "def": "A phospholipid secreted in bile that incorporates into micelles to greatly enhance cholesterol solubility.",
+  "chapter": 37
+ },
+ {
+  "term": "Enterohepatic circulation",
+  "def": "The recycling of bile acids: absorbed in the terminal ileum, carried by portal circulation back to the liver, and re-secreted into bile (2\u20133 times/day on average).",
+  "chapter": 37
+ },
+ {
+  "term": "Sphincter of Oddi",
+  "def": "The muscular sphincter at the ampulla of Vater that controls bile (and pancreatic juice) flow into the duodenum; contracted during fasting to promote gallbladder filling.",
+  "chapter": 37
+ },
+ {
+  "term": "Exocrine pancreas",
+  "def": "The portion of the pancreas that secretes digestive juice (enzymes and proenzymes) into the intestinal tract via the pancreatic duct \u2014 over 1 L/day.",
+  "chapter": 37
+ },
+ {
+  "term": "Endocrine pancreas",
+  "def": "The portion of the pancreas (islets) that secretes insulin, glucagon, and somatostatin into the bloodstream.",
+  "chapter": 37
+ },
+ {
+  "term": "Acinar cells",
+  "def": "Pancreatic exocrine cells arranged in glandular acini that produce digestive juice, draining into the main pancreatic duct.",
+  "chapter": 37
+ },
+ {
+  "term": "Proenzyme (zymogen)",
+  "def": "An inactive enzyme precursor, e.g. trypsinogen, that is only activated after reaching the duodenum \u2014 a key safeguard against autodigestion.",
+  "chapter": 37
+ },
+ {
+  "term": "Cholecystokinin (CCK)",
+  "def": "A small-intestinal hormone that stimulates pancreatic enzyme release and gallbladder contraction.",
+  "chapter": 37
+ },
+ {
+  "term": "Secretin",
+  "def": "A small-intestinal hormone that regulates pancreatic juice (bicarbonate) secretion.",
+  "chapter": 37
+ },
+ {
+  "term": "Acute pancreatitis",
+  "def": "An inflammatory process of the pancreas ranging from mild to life-threatening, caused by premature activation of digestive enzymes and autodigestion of the gland.",
+  "chapter": 37
+ },
+ {
+  "term": "Autodigestion",
+  "def": "The self-destructive process in which prematurely activated pancreatic enzymes digest the pancreas's own tissue.",
+  "chapter": 37
+ },
+ {
+  "term": "Lipase & amylase",
+  "def": "Pancreatic digestive enzymes; serum levels rise in acute pancreatitis. Lipase is more specific and stays elevated longer.",
+  "chapter": 37
+ },
+ {
+  "term": "Sentinel loop",
+  "def": "A distended loop of small bowel near the pancreas seen on plain abdominal x-ray in pancreatitis, from local ileus.",
+  "chapter": 37
+ },
+ {
+  "term": "Ranson criteria",
+  "def": "A widely used scoring system to predict the clinical course/severity of acute pancreatitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Acute necrotizing pancreatitis",
+  "def": "Severe pancreatitis with widespread pancreatic tissue death; high risk of progressing to infected necrosis, with high morbidity/mortality.",
+  "chapter": 37
+ },
+ {
+  "term": "Pancreatic pseudocyst",
+  "def": "A fluid collection in/near the pancreas, often communicating with the pancreatic duct; lacks an epithelial lining (unlike a true cyst) \u2014 the most common localized complication of acute pancreatitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Pancreatic ascites",
+  "def": "Usually painless, often massive fluid accumulation from a persistent leak in the main pancreatic duct.",
+  "chapter": 37
+ },
+ {
+  "term": "Necrosectomy",
+  "def": "Surgical or endoscopic debridement of dead (necrotic) pancreatic tissue.",
+  "chapter": 37
+ },
+ {
+  "term": "Cholelithiasis",
+  "def": "The presence of gallstones within the gallbladder; most are cholesterol stones, a minority are pigment stones.",
+  "chapter": 37
+ },
+ {
+  "term": "Biliary colic",
+  "def": "Temporary, self-limited RUQ pain from a stone transiently obstructing the cystic duct, often triggered by a fatty meal; resolves once the stone dislodges or passes.",
+  "chapter": 37
+ },
+ {
+  "term": "Cholecystitis",
+  "def": "Inflammation of the gallbladder, usually from a gallstone persistently obstructing the cystic duct (acute calculous cholecystitis); unlike biliary colic, pain is constant and accompanied by systemic signs of inflammation.",
+  "chapter": 37
+ },
+ {
+  "term": "Murphy sign",
+  "def": "Inspiratory arrest when the examiner palpates the right subcostal area during a deep breath \u2014 a classic bedside sign of acute cholecystitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Choledocholithiasis",
+  "def": "A gallstone lodged in the common bile duct, causing obstructive jaundice and putting the patient at risk for cholangitis or pancreatitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Cholangitis",
+  "def": "Bacterial infection of the bile ducts, usually from bile stasis behind an obstructing stone; a potentially life-threatening emergency requiring urgent drainage.",
+  "chapter": 37
+ },
+ {
+  "term": "Charcot triad",
+  "def": "Fever/chills, RUQ pain, and jaundice \u2014 the classic presentation of acute cholangitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Reynolds pentad",
+  "def": "Charcot triad plus hypotension and altered mental status \u2014 signals severe, decompensating cholangitis.",
+  "chapter": 37
+ },
+ {
+  "term": "Courvoisier sign",
+  "def": "A palpable, nontender, distended gallbladder in a jaundiced patient \u2014 suggests malignant biliary obstruction (e.g., pancreatic head cancer) rather than gallstones.",
+  "chapter": 37
+ },
+ {
+  "term": "Chronic pancreatitis",
+  "def": "Irreversible, progressive fibrosis and destruction of pancreatic tissue from repeated inflammatory injury, leading to loss of both exocrine and endocrine function.",
+  "chapter": 37
+ },
+ {
+  "term": "Pancreatic exocrine insufficiency (PEI)",
+  "def": "Inadequate digestive enzyme output from a damaged pancreas, causing malabsorption, steatorrhea, and fat-soluble vitamin deficiency.",
+  "chapter": 37
+ },
+ {
+  "term": "PERT",
+  "def": "Pancreatic enzyme replacement therapy \u2014 oral enzyme supplements taken with meals to treat exocrine insufficiency.",
+  "chapter": 37
+ },
+ {
+  "term": "CA 19-9",
+  "def": "A tumor marker sometimes elevated in pancreatic cancer, used to support diagnosis and monitor treatment response (not used alone for screening).",
+  "chapter": 37
+ },
+ {
+  "term": "Glisson capsule",
+  "def": "The connective tissue capsule covering the liver, itself covered by visceral peritoneum.",
+  "chapter": 38
+ },
+ {
+  "term": "Portal triad",
+  "def": "The bundle of portal vein, hepatic artery, and bile duct branches that travel together through the liver.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatic sinusoids",
+  "def": "Capillary-like spaces where hepatic artery and portal vein blood mix, lined by endothelial cells and Kupffer cells.",
+  "chapter": 38
+ },
+ {
+  "term": "Kupffer cells",
+  "def": "Phagocytic macrophages lining the hepatic sinusoids.",
+  "chapter": 38
+ },
+ {
+  "term": "Portal hypertension",
+  "def": "Elevated portal venous pressure from obstruction to blood flow through the liver; a central event in many liver diseases.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatocellular failure",
+  "def": "Loss of the liver's biochemical/synthetic functions, producing jaundice, bleeding, ascites, encephalopathy, and more.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatic encephalopathy",
+  "def": "Brain dysfunction from abnormal protein/ammonia metabolism due to liver failure.",
+  "chapter": 38
+ },
+ {
+  "term": "Fetor hepaticus",
+  "def": "A characteristic breath odor from decreased hepatic detoxification.",
+  "chapter": 38
+ },
+ {
+  "term": "Caput medusae",
+  "def": "Dilated periumbilical veins seen with portal hypertension and collateral blood flow.",
+  "chapter": 38
+ },
+ {
+  "term": "Jaundice (icterus)",
+  "def": "Yellow discoloration from elevated bilirubin, due to biliary obstruction or decreased bilirubin synthesis/excretion.",
+  "chapter": 38
+ },
+ {
+  "term": "Anti-HAV IgM / IgG",
+  "def": "IgM = acute hepatitis A infection; IgG = past infection or vaccination, implying immunity.",
+  "chapter": 38
+ },
+ {
+  "term": "HBsAg",
+  "def": "Hepatitis B surface antigen; implies active infection, detectable 2\u20136 weeks post-infection.",
+  "chapter": 38
+ },
+ {
+  "term": "HBsAb (IgG)",
+  "def": "Hepatitis B surface antibody; implies resolution of infection and immunity.",
+  "chapter": 38
+ },
+ {
+  "term": "HBeAg",
+  "def": "Hepatitis Be antigen; implies ongoing infection with high infectivity.",
+  "chapter": 38
+ },
+ {
+  "term": "Anti-HCV",
+  "def": "Antibody to hepatitis C antigens; does NOT indicate immunity, and may be falsely positive/negative.",
+  "chapter": 38
+ },
+ {
+  "term": "Cirrhosis",
+  "def": "The irreversible end stage of chronic liver injury: diffuse fibrosis surrounding regenerative nodules, with permanently altered blood flow and function.",
+  "chapter": 38
+ },
+ {
+  "term": "Primary biliary cholangitis (PBC)",
+  "def": "Autoimmune small-duct biliary cirrhosis, associated with antimitochondrial antibodies.",
+  "chapter": 38
+ },
+ {
+  "term": "Primary sclerosing cholangitis (PSC)",
+  "def": "Autoimmune large-duct biliary disease with recurrent cholangitis and biliary scarring, strongly linked to ulcerative colitis.",
+  "chapter": 38
+ },
+ {
+  "term": "Steatohepatitis",
+  "def": "Fatty liver with significant inflammation; alcoholic or nonalcoholic (NASH).",
+  "chapter": 38
+ },
+ {
+  "term": "Mallory bodies",
+  "def": "Intracellular inclusions seen in hepatocytes in alcoholic hepatitis.",
+  "chapter": 38
+ },
+ {
+  "term": "Hereditary hemochromatosis (HH)",
+  "def": "Autosomal recessive HFE gene mutation causing excessive iron absorption and deposition in organs.",
+  "chapter": 38
+ },
+ {
+  "term": "Wilson disease",
+  "def": "Autosomal recessive ATP7B gene mutation causing excessive copper accumulation in the liver and other organs.",
+  "chapter": 38
+ },
+ {
+  "term": "Kayser-Fleischer rings",
+  "def": "Brownish corneal rings seen on slit-lamp exam, characteristic (but not required) for Wilson disease diagnosis.",
+  "chapter": 38
+ },
+ {
+  "term": "NAPQI",
+  "def": "N-acetyl-p-benzoquinone imine \u2014 the toxic metabolite of acetaminophen that causes hepatic necrosis when glutathione is overwhelmed.",
+  "chapter": 38
+ },
+ {
+  "term": "Kernicterus",
+  "def": "Brain injury (basal ganglia/thalamus staining) from unconjugated bilirubin crossing the immature neonatal blood-brain barrier.",
+  "chapter": 38
+ },
+ {
+  "term": "Physiologic jaundice of the newborn",
+  "def": "A harmless, self-limited (\u22642 weeks) neonatal jaundice from immature bilirubin conjugation/transport.",
+  "chapter": 38
+ },
+ {
+  "term": "Reye syndrome",
+  "def": "A pediatric syndrome of fatty liver infiltration and encephalopathy after a viral illness, linked to aspirin use.",
+  "chapter": 38
+ },
+ {
+  "term": "\u03b11-Antitrypsin deficiency",
+  "def": "Autosomal recessive enzyme-inhibitor deficiency (PiZZ variant) causing liver disease and emphysema.",
+  "chapter": 38
+ },
+ {
+  "term": "Gilbert syndrome",
+  "def": "A very common, benign autosomal dominant condition causing mild unconjugated hyperbilirubinemia.",
+  "chapter": 38
+ },
+ {
+  "term": "Crigler-Najjar syndrome",
+  "def": "Rare autosomal recessive disorder of absent/reduced bilirubin conjugation; type I is fatal without transplant, type II is milder.",
+  "chapter": 38
+ },
+ {
+  "term": "Progressive familial intrahepatic cholestasis (PFIC)",
+  "def": "Rare autosomal recessive disorder of bile salt excretion causing severe jaundice, pruritus, and malabsorption.",
+  "chapter": 38
+ },
+ {
+  "term": "Alagille syndrome",
+  "def": "Autosomal dominant condition with a paucity of intrahepatic bile ducts plus bony/cardiac malformations.",
+  "chapter": 38
+ },
+ {
+  "term": "Biliary atresia",
+  "def": "Extrahepatic ductopenia \u2014 a congenital or acquired obliteration of the extrahepatic bile ducts; a common serious birth defect.",
+  "chapter": 38
+ },
+ {
+  "term": "Kasai procedure",
+  "def": "A hepatoportoenteric connection surgery for biliary atresia; usually a bridge to eventual liver transplant, not curative.",
+  "chapter": 38
+ },
+ {
+  "term": "Ischemic hepatitis",
+  "def": "Liver injury from hypotension/reduced perfusion, common in older patients with cardiovascular disease.",
+  "chapter": 38
+ },
+ {
+  "term": "Unconjugated (indirect) bilirubin",
+  "def": "Fat-soluble bilirubin bound to albumin, not yet processed by the liver; can cross the blood-brain barrier, cannot be excreted in urine.",
+  "chapter": 38
+ },
+ {
+  "term": "Conjugated (direct) bilirubin",
+  "def": "Water-soluble bilirubin after hepatocyte processing (glucuronidation); excretable in bile and urine.",
+  "chapter": 38
+ },
+ {
+  "term": "Prehepatic jaundice",
+  "def": "Jaundice from excess bilirubin production (usually hemolysis) overwhelming a normal liver's conjugation capacity; unconjugated hyperbilirubinemia.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatic (hepatocellular) jaundice",
+  "def": "Jaundice from damaged hepatocytes unable to properly conjugate and excrete bilirubin; typically a mixed (both unconjugated and conjugated) picture.",
+  "chapter": 38
+ },
+ {
+  "term": "Posthepatic (obstructive) jaundice",
+  "def": "Jaundice from blocked bile flow after the liver has already conjugated bilirubin; conjugated hyperbilirubinemia, with dark urine and pale/clay-colored stools.",
+  "chapter": 38
+ },
+ {
+  "term": "Urobilinogen",
+  "def": "A colorless bilirubin breakdown product formed by colonic bacteria; most becomes stercobilin (colors stool), some is reabsorbed and excreted in urine.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatic venous pressure gradient (HVPG)",
+  "def": "The clinical measurement used to diagnose portal hypertension; normal is 1\u20135 mmHg, clinically significant portal hypertension is \u226510 mmHg.",
+  "chapter": 38
+ },
+ {
+  "term": "Fulminant hepatic failure",
+  "def": "Acute liver failure with rapid-onset hepatic encephalopathy and severe coagulopathy within days to weeks, in a person with no prior chronic liver disease.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatic encephalopathy",
+  "def": "Reversible neurologic dysfunction from the liver's failure to clear neurotoxins (especially ammonia) from portal blood.",
+  "chapter": 38
+ },
+ {
+  "term": "HBeAg / Anti-HBe",
+  "def": "Markers of hepatitis B viral replication activity; HBeAg-positive indicates high infectivity, seroconversion to anti-HBe suggests lower viral activity.",
+  "chapter": 38
+ },
+ {
+  "term": "Sustained virologic response (SVR)",
+  "def": "Undetectable hepatitis C viral RNA 12 weeks after finishing treatment \u2014 the standard definition of a hepatitis C cure.",
+  "chapter": 38
+ },
+ {
+  "term": "Direct-acting antivirals (DAAs)",
+  "def": "Modern oral hepatitis C medications that directly target viral proteins; cure over 90\u201395% of patients in as little as 8\u201312 weeks.",
+  "chapter": 38
+ },
+ {
+  "term": "Hepatocellular carcinoma (HCC)",
+  "def": "The most common primary liver cancer, arising almost exclusively in the setting of chronic hepatitis B/C infection or cirrhosis of any cause.",
+  "chapter": 38
+ },
+ {
+  "term": "Alpha-fetoprotein (AFP)",
+  "def": "A tumor marker sometimes elevated in HCC, used alongside ultrasound for surveillance in high-risk patients \u2014 imperfect sensitivity/specificity on its own.",
+  "chapter": 38
+ },
+ {
+  "term": "Reversible cell injury",
+  "def": "Injury mild/short-lived enough that the cell returns to normal once the stress is removed.",
+  "chapter": 4
+ },
+ {
+  "term": "Hydropic swelling (oncosis)",
+  "def": "Cellular swelling from water accumulation due to Na+-K+ pump failure \u2014 the first manifestation of most reversible injury.",
+  "chapter": 4
+ },
+ {
+  "term": "Atrophy",
+  "def": "Decreased cell size/function in response to disuse, denervation, ischemia, starvation, lost trophic signals, or persistent injury.",
+  "chapter": 4
+ },
+ {
+  "term": "Hypertrophy",
+  "def": "Increased cell mass/functional capacity from a net increase in cellular protein content, without cell division.",
+  "chapter": 4
+ },
+ {
+  "term": "Hyperplasia",
+  "def": "Increased cell number via mitotic division, in cells capable of dividing.",
+  "chapter": 4
+ },
+ {
+  "term": "Metaplasia",
+  "def": "Replacement of one differentiated cell type with another, better able to tolerate ongoing injury; fully reversible.",
+  "chapter": 4
+ },
+ {
+  "term": "Dysplasia",
+  "def": "Disorganized cellular appearance (abnormal size/shape/arrangement) \u2014 an adaptive effort gone wrong; considered preneoplastic.",
+  "chapter": 4
+ },
+ {
+  "term": "Carcinoma in situ",
+  "def": "Severe dysplasia involving the entire thickness of the epithelium.",
+  "chapter": 4
+ },
+ {
+  "term": "Necrosis",
+  "def": "Pathologic, messy cell death from external injury \u2014 cell rupture, content spillage, and inflammation.",
+  "chapter": 4
+ },
+ {
+  "term": "Apoptosis",
+  "def": "Programmed, \"tidy\" cell death from intracellular signaling \u2014 no rupture, no inflammation; can be normal or pathologic.",
+  "chapter": 4
+ },
+ {
+  "term": "Coagulative necrosis",
+  "def": "The most common necrosis type; denatured proteins, tissue architecture preserved for weeks; typically from ischemia.",
+  "chapter": 4
+ },
+ {
+  "term": "Liquefactive necrosis",
+  "def": "Rapid dissolution of dead tissue into liquid debris; classic in the brain or with bacterial abscess formation.",
+  "chapter": 4
+ },
+ {
+  "term": "Fat necrosis",
+  "def": "Death of adipose tissue, classically from pancreatitis/trauma; forms calcium soaps (saponification), appears chalky white.",
+  "chapter": 4
+ },
+ {
+  "term": "Caseous necrosis",
+  "def": "Cheese-like, walled-off necrosis characteristic of tuberculosis-damaged lung tissue.",
+  "chapter": 4
+ },
+ {
+  "term": "Gangrene",
+  "def": "Necrosis of a large tissue area, usually from major blood supply interruption; dry, wet, or gas subtypes.",
+  "chapter": 4
+ },
+ {
+  "term": "Ischemia",
+  "def": "Interrupted blood flow to a tissue \u2014 injures cells faster than hypoxia alone because it also blocks nutrient delivery and waste removal.",
+  "chapter": 4
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Cellular damage occurring after blood flow is restored to previously ischemic tissue \u2014 often causes more damage than the ischemia itself.",
+  "chapter": 4
+ },
+ {
+  "term": "Free radicals (reactive oxygen species)",
+  "def": "Molecules with an unpaired electron (superoxide, peroxide, hydroxyl radicals) that damage membranes, proteins, and DNA.",
+  "chapter": 4
+ },
+ {
+  "term": "Telomere",
+  "def": "Protective end-cap of a chromosome that shortens with each cell division, eventually triggering dormancy or death.",
+  "chapter": 4
+ },
+ {
+  "term": "Telomerase",
+  "def": "The enzyme that rebuilds telomeres \u2014 active in germ cells (near-immortality) and, notably, many cancer cells.",
+  "chapter": 4
+ },
+ {
+  "term": "Hayflick limit",
+  "def": "The finite number of divisions a cell line can undergo before becoming dormant or dying, tied to telomere shortening.",
+  "chapter": 4
+ },
+ {
+  "term": "Sirtuins",
+  "def": "A protein family linking caloric restriction to longevity \u2014 help regulate DNA repair and prevent apoptosis.",
+  "chapter": 4
+ },
+ {
+  "term": "Dysbiosis",
+  "def": "Derangement of the normal microbiome, implicated as a contributor to aging and disease.",
+  "chapter": 4
+ },
+ {
+  "term": "Somatic death",
+  "def": "Death of the entire organism \u2014 absence of respiration and heartbeat, with no inflammatory/immune response (unlike localized cell death).",
+  "chapter": 4
+ },
+ {
+  "term": "Rigor mortis",
+  "def": "Post-death muscle stiffening from perpetual actin-myosin cross-bridging as ATP depletes and calcium accumulates; appears within ~6 hours.",
+  "chapter": 4
+ },
+ {
+  "term": "Lipofuscin",
+  "def": "An age-related \"wear and tear\" pigment that accumulates in atrophied cells' residual lysosomal vesicles, giving a yellow-brown appearance.",
+  "chapter": 4
+ },
+ {
+  "term": "Hyperfunction / Hypofunction",
+  "def": "Excessively high or depressed hormone levels (or conditions mimicking them) \u2014 the two basic categories of endocrine disease.",
+  "chapter": 40
+ },
+ {
+  "term": "Primary endocrine disorder",
+  "def": "Intrinsic malfunction of the hormone-producing target gland itself.",
+  "chapter": 40
+ },
+ {
+  "term": "Secondary endocrine disorder",
+  "def": "Malfunction of the hypothalamus/pituitary cells that control the target gland.",
+  "chapter": 40
+ },
+ {
+  "term": "Tertiary endocrine disorder",
+  "def": "Malfunction originating in the hypothalamus (upstream of the pituitary).",
+  "chapter": 40
+ },
+ {
+  "term": "Ectopic hormone production",
+  "def": "Hormone secretion from an abnormal tissue site, usually a malignant tumor (e.g., lung tumors secreting ADH).",
+  "chapter": 40
+ },
+ {
+  "term": "Target tissue resistance",
+  "def": "Normal or elevated hormone levels without normal hormonal action, due to receptor or postreceptor defects.",
+  "chapter": 40
+ },
+ {
+  "term": "Growth hormone (GH)",
+  "def": "Anterior pituitary hormone that increases lean body mass, reduces fat, and raises blood glucose; many effects mediated by IGF-1.",
+  "chapter": 40
+ },
+ {
+  "term": "IGF-1 (somatomedin)",
+  "def": "Insulin-like growth factor-1, released from the liver in response to GH; mediates most GH effects and is a stable marker of GH secretion.",
+  "chapter": 40
+ },
+ {
+  "term": "Craniopharyngioma",
+  "def": "A slow-growing tumor at the junction of the anterior/posterior pituitary, believed present at birth; a common cause of GH deficiency.",
+  "chapter": 40
+ },
+ {
+  "term": "Pituitary giantism",
+  "def": "GH excess occurring before epiphyseal closure, causing markedly accelerated linear growth in children.",
+  "chapter": 40
+ },
+ {
+  "term": "Acromegaly",
+  "def": "GH excess in adults (after epiphyseal closure) causing bony/soft tissue overgrowth without increased height.",
+  "chapter": 40
+ },
+ {
+  "term": "TRH / TSH",
+  "def": "Thyroid-releasing hormone (hypothalamus) stimulates TSH (pituitary), which stimulates T3/T4 release from the thyroid.",
+  "chapter": 40
+ },
+ {
+  "term": "Hashimoto (lymphocytic) thyroiditis",
+  "def": "Autoimmune thyroiditis; the most common cause of acquired hypothyroidism.",
+  "chapter": 40
+ },
+ {
+  "term": "Cretinism",
+  "def": "Significant mental/physical developmental defects from untreated congenital hypothyroidism.",
+  "chapter": 40
+ },
+ {
+  "term": "Myxedema",
+  "def": "Generalized nonpitting edema from glycosaminoglycan accumulation, seen in severe/prolonged hypothyroidism.",
+  "chapter": 40
+ },
+ {
+  "term": "Myxedema coma",
+  "def": "A life-threatening medical emergency from severe untreated hypothyroidism, with altered mental state and thermoregulation problems.",
+  "chapter": 40
+ },
+ {
+  "term": "Graves disease",
+  "def": "Autoimmune hyperthyroidism from autoantibodies that stimulate TSH receptors, causing diffuse toxic goiter and often exophthalmos.",
+  "chapter": 40
+ },
+ {
+  "term": "Exophthalmos",
+  "def": "Protrusion of the eyes from retroorbital tissue swelling in Graves disease, caused by autoimmune injury (not by thyroid hormone levels directly).",
+  "chapter": 40
+ },
+ {
+  "term": "Thyroid storm",
+  "def": "Life-threatening acute release of excessive thyroid hormone, with fever, severe tachycardia, and possible heart failure.",
+  "chapter": 40
+ },
+ {
+  "term": "Cortisol",
+  "def": "The primary glucocorticoid; provides negative feedback on CRH/ACTH release.",
+  "chapter": 40
+ },
+ {
+  "term": "Addison disease",
+  "def": "Primary adrenocortical insufficiency from destruction of the adrenal cortex.",
+  "chapter": 40
+ },
+ {
+  "term": "Addisonian crisis",
+  "def": "Acute, life-threatening adrenal insufficiency with vascular collapse.",
+  "chapter": 40
+ },
+ {
+  "term": "Congenital adrenal hyperplasia (CAH)",
+  "def": "An enzymatic defect in cortisol synthesis causing adrenal hyperplasia, cortisol deficiency, and androgen excess.",
+  "chapter": 40
+ },
+ {
+  "term": "Cushing syndrome",
+  "def": "The clinical features of hypercortisolism, regardless of cause.",
+  "chapter": 40
+ },
+ {
+  "term": "Cushing disease",
+  "def": "Hypercortisolism specifically caused by a pituitary ACTH-secreting adenoma.",
+  "chapter": 40
+ },
+ {
+  "term": "Pheochromocytoma",
+  "def": "A usually-benign chromaffin tissue tumor (usually in the adrenal medulla) causing excess catecholamine secretion and hypertension.",
+  "chapter": 40
+ },
+ {
+  "term": "Parathyroid hormone (PTH)",
+  "def": "Increases serum calcium via effects on bone, kidney, and (with vitamin D) intestine; secretion is regulated directly by serum calcium, not the pituitary.",
+  "chapter": 40
+ },
+ {
+  "term": "CaSR",
+  "def": "Calcium-sensing receptor \u2014 a G protein-coupled receptor that lets parathyroid cells detect serum calcium and regulate PTH gene expression.",
+  "chapter": 40
+ },
+ {
+  "term": "Calcitonin",
+  "def": "Produced by thyroid parafollicular (C) cells; tends to decrease blood calcium by promoting bone formation and inhibiting resorption.",
+  "chapter": 40
+ },
+ {
+  "term": "Chvostek sign",
+  "def": "Facial muscle contraction from tapping the facial nerve anterior to the ear \u2014 indicates neuromuscular hyperexcitability from hypocalcemia.",
+  "chapter": 40
+ },
+ {
+  "term": "Trousseau sign",
+  "def": "Carpal spasm from BP-cuff-induced ischemia \u2014 indicates neuromuscular hyperexcitability from hypocalcemia.",
+  "chapter": 40
+ },
+ {
+  "term": "ADH (vasopressin)",
+  "def": "Posterior pituitary hormone that increases renal collecting duct/distal tubule water permeability and reabsorption.",
+  "chapter": 40
+ },
+ {
+  "term": "Diabetes insipidus (DI)",
+  "def": "Insufficient ADH activity, causing excessive dilute urine loss and hypernatremia.",
+  "chapter": 40
+ },
+ {
+  "term": "Central DI",
+  "def": "DI from failure to produce/release ADH from the hypothalamus/posterior pituitary.",
+  "chapter": 40
+ },
+ {
+  "term": "Nephrogenic DI",
+  "def": "DI from renal unresponsiveness to ADH (kidney disease, receptor defects, electrolyte problems, drugs like lithium).",
+  "chapter": 40
+ },
+ {
+  "term": "SIADH",
+  "def": "Syndrome of inappropriate ADH secretion \u2014 excess ADH causes water retention and dilutional hyponatremia.",
+  "chapter": 40
+ },
+ {
+  "term": "GLUT-1 to GLUT-4",
+  "def": "Tissue-specific glucose transporters. GLUT-1/2/3 are insulin-independent; GLUT-4 (muscle/adipose) is insulin-dependent.",
+  "chapter": 41
+ },
+ {
+  "term": "Islets of Langerhans",
+  "def": "Clusters of hormone-producing pancreatic cells: \u03b2 cells (insulin), \u03b1 cells (glucagon), \u03b4 cells (somatostatin), F cells (pancreatic polypeptide).",
+  "chapter": 41
+ },
+ {
+  "term": "Proinsulin",
+  "def": "The precursor molecule cleaved into insulin and C-peptide within secretory vesicles.",
+  "chapter": 41
+ },
+ {
+  "term": "Amylin",
+  "def": "A peptide hormone cosecreted with insulin by \u03b2 cells; inhibits gastric emptying, induces satiety, and prevents postprandial glucose spikes.",
+  "chapter": 41
+ },
+ {
+  "term": "Incretin effect",
+  "def": "The enhanced insulin response to oral (vs. IV) glucose, mediated by gut hormones GIP and GLP-1.",
+  "chapter": 41
+ },
+ {
+  "term": "GIP / GLP-1",
+  "def": "Incretin hormones from intestinal cells; stimulate insulin production, promote \u03b2-cell proliferation, inhibit apoptosis. GLP-1 also delays gastric emptying and inhibits glucagon.",
+  "chapter": 41
+ },
+ {
+  "term": "Glycogenesis",
+  "def": "Production of glycogen from glucose, mainly in liver and muscle, in the fed state.",
+  "chapter": 41
+ },
+ {
+  "term": "Glycogenolysis",
+  "def": "Breakdown of stored glycogen into glucose, in the fasting state.",
+  "chapter": 41
+ },
+ {
+  "term": "Gluconeogenesis",
+  "def": "Production of new glucose from amino acids and other non-carbohydrate substrates, mainly in the liver.",
+  "chapter": 41
+ },
+ {
+  "term": "Lipolysis",
+  "def": "Breakdown of fat from adipose tissue into free fatty acids, stimulated by declining insulin levels.",
+  "chapter": 41
+ },
+ {
+  "term": "Counterregulatory hormones",
+  "def": "Corticosteroids, growth hormone, and catecholamines \u2014 all raise blood glucose and oppose insulin's effects.",
+  "chapter": 41
+ },
+ {
+  "term": "Impaired fasting glucose (IFG)",
+  "def": "Fasting plasma glucose 100\u2013125 mg/dL \u2014 a prediabetes category.",
+  "chapter": 41
+ },
+ {
+  "term": "Impaired glucose tolerance (IGT)",
+  "def": "2-hour OGTT plasma glucose 140\u2013199 mg/dL \u2014 a prediabetes category.",
+  "chapter": 41
+ },
+ {
+  "term": "HbA1C",
+  "def": "Glycosylated hemoglobin; reflects average blood glucose over ~2-3 months. Diabetes: \u22656.5%. Prediabetes: 5.7-6.4%.",
+  "chapter": 41
+ },
+ {
+  "term": "Type 1A diabetes",
+  "def": "Immune-mediated \u03b2-cell destruction; the more common form of type 1 diabetes.",
+  "chapter": 41
+ },
+ {
+  "term": "Type 1B diabetes",
+  "def": "Idiopathic \u03b2-cell destruction without autoimmune markers or HLA association; rare.",
+  "chapter": 41
+ },
+ {
+  "term": "LADA",
+  "def": "Latent autoimmune diabetes in adults \u2014 an autoimmune type 1 subtype typically diagnosed after age 35, often initially misdiagnosed as type 2.",
+  "chapter": 41
+ },
+ {
+  "term": "GADA65",
+  "def": "Antibody to glutamic acid decarboxylase 65 \u2014 an autoantibody marker of autoimmune (type 1A/LADA) diabetes.",
+  "chapter": 41
+ },
+ {
+  "term": "Insulinopenia",
+  "def": "Insufficient insulin production.",
+  "chapter": 41
+ },
+ {
+  "term": "Polydipsia / Polyuria / Polyphagia",
+  "def": "The classic triad of diabetes symptoms: excessive thirst, urination, and hunger.",
+  "chapter": 41
+ },
+ {
+  "term": "Diabetic ketoacidosis (DKA)",
+  "def": "Severe insulin deficiency causing lipolysis, ketoacid production, and metabolic acidosis; primarily a type 1 complication.",
+  "chapter": 41
+ },
+ {
+  "term": "Kussmaul respirations",
+  "def": "Deep, labored, \"fruity\"-smelling breathing \u2014 the respiratory compensation for the metabolic acidosis of DKA.",
+  "chapter": 41
+ },
+ {
+  "term": "Nonketotic hyperglycemic hyperosmolar syndrome (NHHS)",
+  "def": "Severe hyperglycemia with little/no ketosis and striking dehydration; primarily a type 2 complication, especially in older adults.",
+  "chapter": 41
+ },
+ {
+  "term": "Dawn phenomenon",
+  "def": "Early-morning blood glucose rise from increased growth hormone, cortisol, glucagon, and epinephrine release.",
+  "chapter": 41
+ },
+ {
+  "term": "Macrovascular complications",
+  "def": "Diabetes-accelerated damage to large vessels \u2014 cardiovascular disease, stroke, peripheral arterial disease.",
+  "chapter": 41
+ },
+ {
+  "term": "Microvascular complications",
+  "def": "Capillary basement membrane thickening leading to retinopathy and nephropathy.",
+  "chapter": 41
+ },
+ {
+  "term": "Advanced glycation end products",
+  "def": "Proteins altered by chronic high glucose exposure, implicated in microvascular complication pathogenesis.",
+  "chapter": 41
+ },
+ {
+  "term": "Diabetic retinopathy",
+  "def": "Progressive retinal capillary damage \u2014 background, preproliferative, and proliferative stages; the leading cause of new adult blindness in the US.",
+  "chapter": 41
+ },
+ {
+  "term": "Diabetic nephropathy",
+  "def": "Glomerulosclerosis from capillary basement membrane thickening; the leading cause of end-stage renal disease in the US.",
+  "chapter": 41
+ },
+ {
+  "term": "Microalbuminuria",
+  "def": "Small amounts of protein in the urine \u2014 the earliest detectable sign of diabetic nephropathy.",
+  "chapter": 41
+ },
+ {
+  "term": "Diabetic neuropathy",
+  "def": "Nerve damage from hyperglycemia, divided into autonomic and sensory dysfunction; linked to reduced myoinositol and the polyol pathway.",
+  "chapter": 41
+ },
+ {
+  "term": "Polyol pathway",
+  "def": "Degradation of glucose to sorbitol and fructose in nerves under hyperglycemia/insulinopenia, linked to reduced myoinositol and neuropathy.",
+  "chapter": 41
+ },
+ {
+  "term": "Metformin",
+  "def": "A biguanide; first-line oral agent for type 2 diabetes \u2014 suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake without causing hypoglycemia.",
+  "chapter": 41
+ },
+ {
+  "term": "Sulfonylureas",
+  "def": "Insulin secretagogues used in type 2 diabetes for over 40 years (e.g., glyburide, glipizide, glimepiride).",
+  "chapter": 41
+ },
+ {
+  "term": "SGLT2 inhibitors (gliflozins)",
+  "def": "A newer diabetes drug class (canagliflozin, dapagliflozin, empagliflozin) that blocks renal glucose reabsorption.",
+  "chapter": 41
+ },
+ {
+  "term": "Honeymoon period",
+  "def": "A temporary return to normoglycemia without exogenous insulin after type 1 diagnosis, when insulin needs drop below residual production; rarely lasts more than a year.",
+  "chapter": 41
+ },
+ {
+  "term": "Primary injury",
+  "def": "Brain damage occurring immediately at the moment of injury \u2014 largely irreversible once it has happened.",
+  "chapter": 44
+ },
+ {
+  "term": "Secondary injury",
+  "def": "Further neurologic damage developing after the primary injury, progressing over days to years; often the target of clinical intervention.",
+  "chapter": 44
+ },
+ {
+  "term": "Ischemia",
+  "def": "Oxygenated blood delivery below the level needed to meet tissue metabolic demand.",
+  "chapter": 44
+ },
+ {
+  "term": "Hypoxia",
+  "def": "Cellular oxygen deficiency, from either decreased blood flow (ischemia) or decreased blood oxygenation (hypoxemia).",
+  "chapter": 44
+ },
+ {
+  "term": "Necrosis",
+  "def": "Uncontrolled cell death with membrane rupture and release of intracellular contents; follows severe ischemic injury (profound ATP loss).",
+  "chapter": 44
+ },
+ {
+  "term": "Apoptosis",
+  "def": "Programmed, energy-requiring cell death in which cells shrink and die without releasing contents; associated with moderate injury (partially maintained ATP).",
+  "chapter": 44
+ },
+ {
+  "term": "Excitotoxin",
+  "def": "A substance (like excess glutamate) that overstimulates neurons to the point of causing cell injury.",
+  "chapter": 44
+ },
+ {
+  "term": "NMDA / AMPA receptors",
+  "def": "Glutamate-activated ion channels; AMPA activation causes Na+ entry/depolarization, which removes the Mg2+ block on NMDA channels, allowing damaging Ca2+ influx.",
+  "chapter": 44
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Secondary damage from oxygen free radical formation and inflammatory cell invasion when blood flow is restored after ischemia.",
+  "chapter": 44
+ },
+ {
+  "term": "Level of consciousness (LOC)",
+  "def": "A sensitive indicator of brain function, ranging from full alertness to coma.",
+  "chapter": 44
+ },
+ {
+  "term": "Glasgow Coma Scale (GCS)",
+  "def": "A standardized 3\u201315 point tool scoring eye opening, verbal response, and motor response to assess LOC with high interrater reliability.",
+  "chapter": 44
+ },
+ {
+  "term": "Decorticate posturing",
+  "def": "Abnormal flexion of the arms/wrists with leg extension (GCS motor score 3) \u2014 indicates a lesion above the brainstem.",
+  "chapter": 44
+ },
+ {
+  "term": "Decerebrate posturing",
+  "def": "Arm and leg extension with wrist/leg internal rotation (GCS motor score 2) \u2014 indicates a lower, more severe brainstem lesion.",
+  "chapter": 44
+ },
+ {
+  "term": "Oculovestibular reflex",
+  "def": "Brainstem reflex adjusting eye position in response to head movement; tested via doll's eyes or cold calorics in unconscious patients.",
+  "chapter": 44
+ },
+ {
+  "term": "Traumatic brain injury (TBI)",
+  "def": "Brain tissue injury resulting from trauma; not synonymous with head injury (cranial injury doesn't always mean brain injury).",
+  "chapter": 44
+ },
+ {
+  "term": "Coup / contrecoup injury",
+  "def": "Focal injury at the impact site (coup) or, with polar injury, additional damage at the opposite pole from brain movement within the skull (contrecoup).",
+  "chapter": 44
+ },
+ {
+  "term": "Diffuse axonal injury",
+  "def": "Widespread stretching/shearing of axonal white matter from brain rotation/shifting; often causes coma from time of injury.",
+  "chapter": 44
+ },
+ {
+  "term": "Concussion (mild TBI)",
+  "def": "Brief LOC alteration (<30 min) with no CT evidence of brain damage.",
+  "chapter": 44
+ },
+ {
+  "term": "Second impact syndrome",
+  "def": "Malignant cerebral edema in an athlete who returns to play before fully recovering from a prior concussion.",
+  "chapter": 44
+ },
+ {
+  "term": "Epidural hematoma",
+  "def": "Arterial bleeding (often middle meningeal artery) between the skull and dura; classic \"lucid interval\" then rapid deterioration.",
+  "chapter": 44
+ },
+ {
+  "term": "Subdural hematoma",
+  "def": "Venous bleeding from torn bridging veins between the dura and arachnoid membrane; slower-forming than epidural.",
+  "chapter": 44
+ },
+ {
+  "term": "Subarachnoid hemorrhage",
+  "def": "Bleeding into the CSF-filled space between arachnoid and pia mater; from trauma (bridging veins) or, more often, aneurysm/AVM rupture (arterial).",
+  "chapter": 44
+ },
+ {
+  "term": "Battle sign / Raccoon eyes",
+  "def": "Bruising behind the ear / bilateral periorbital hematomas \u2014 signs of basilar skull fracture.",
+  "chapter": 44
+ },
+ {
+  "term": "Stroke (brain attack)",
+  "def": "A cerebrovascular event causing localized CNS infarction; previously \"cerebrovascular accident.\"",
+  "chapter": 44
+ },
+ {
+  "term": "Transient ischemic attack (TIA)",
+  "def": "Stroke-like symptoms without evidence of infarction on imaging \u2014 the definition is now imaging-based, not time-based.",
+  "chapter": 44
+ },
+ {
+  "term": "Penumbra",
+  "def": "Ischemic but still-viable brain tissue surrounding an infarct core; the target of early reperfusion therapy.",
+  "chapter": 44
+ },
+ {
+  "term": "Thrombotic stroke",
+  "def": "Ischemic stroke from local atherosclerosis/clot formation in cerebral vasculature.",
+  "chapter": 44
+ },
+ {
+  "term": "Embolic stroke",
+  "def": "Ischemic stroke from a clot (often cardiac-origin, e.g. atrial fibrillation) traveling to and lodging in a cerebral artery.",
+  "chapter": 44
+ },
+ {
+  "term": "Lacunar infarct",
+  "def": "Small infarct from occlusion of penetrating arterioles, strongly associated with chronic hypertension and diabetes.",
+  "chapter": 44
+ },
+ {
+  "term": "tPA (alteplase)",
+  "def": "The thrombolytic approved for acute ischemic stroke, given within 3 (up to 4.5 in select patients) hours of symptom onset.",
+  "chapter": 44
+ },
+ {
+  "term": "Mechanical thrombectomy",
+  "def": "Endovascular clot retrieval for large-vessel occlusion strokes, effective up to 24 hours from onset in select patients.",
+  "chapter": 44
+ },
+ {
+  "term": "Cerebral aneurysm",
+  "def": "A dilated, ballooned, structurally weakened segment of a cerebral artery \u2014 the most common cause of nontraumatic subarachnoid hemorrhage.",
+  "chapter": 44
+ },
+ {
+  "term": "Saccular (berry) aneurysm",
+  "def": "The most common aneurysm shape \u2014 round, typically at arterial bifurcations in the circle of Willis.",
+  "chapter": 44
+ },
+ {
+  "term": "Hunt and Hess scale",
+  "def": "A grading scale (I\u2013V) for aneurysmal subarachnoid hemorrhage severity, correlating with mortality (15% at grade I up to 95% at grade V).",
+  "chapter": 44
+ },
+ {
+  "term": "Cerebral vasospasm",
+  "def": "Pathologic narrowing of vessels near a ruptured aneurysm, typically day 4\u201314 post-rupture, causing ischemia/infarction.",
+  "chapter": 44
+ },
+ {
+  "term": "Arteriovenous malformation (AVM)",
+  "def": "A congenital fistulous connection between artery and vein without a capillary bed, causing progressively enlarging, hemorrhage-prone vessels.",
+  "chapter": 44
+ },
+ {
+  "term": "Vascular steal syndrome",
+  "def": "Progressive neurologic dysfunction from blood being shunted into an AVM and away from normal brain tissue.",
+  "chapter": 44
+ },
+ {
+  "term": "Meningitis",
+  "def": "Inflammation of the meninges, most commonly bacterial, invading the subarachnoid space.",
+  "chapter": 44
+ },
+ {
+  "term": "Kernig / Brudzinski sign",
+  "def": "Classic (but not sensitive) bedside signs of meningeal irritation in bacterial meningitis.",
+  "chapter": 44
+ },
+ {
+  "term": "Encephalitis",
+  "def": "Inflammation of the brain parenchyma itself, usually viral (most commonly HSV-1).",
+  "chapter": 44
+ },
+ {
+  "term": "Brain abscess",
+  "def": "A localized, capsule-forming collection of pus within brain parenchyma, from penetrating injury, contiguous spread, or hematogenous spread.",
+  "chapter": 44
+ },
+ {
+  "term": "Seizure",
+  "def": "A transient neurologic event from excessive/abnormal neuronal electrical discharge \u2014 a singular event, not a diagnosis.",
+  "chapter": 45
+ },
+ {
+  "term": "Epilepsy",
+  "def": "A chronic, recurrent, enduring predisposition to seizures requiring long-term treatment \u2014 distinct from a single seizure.",
+  "chapter": 45
+ },
+ {
+  "term": "Epileptogenic focus",
+  "def": "The area of hyperexcitable, autonomously firing neurons from which a seizure originates.",
+  "chapter": 45
+ },
+ {
+  "term": "Dementia",
+  "def": "A syndrome (not a disease) of progressive cognitive decline \u2014 memory, personality, language, judgment \u2014 from various underlying pathologies.",
+  "chapter": 45
+ },
+ {
+  "term": "Delirium",
+  "def": "An acute, fluctuating confusional state with disturbed consciousness and attention; can mimic dementia but has abrupt onset, often worse at night.",
+  "chapter": 45
+ },
+ {
+  "term": "\u03b2-amyloid plaques",
+  "def": "Extracellular aggregates of neurotoxic A\u03b242 peptide fragments (from APP cleavage) \u2014 a cardinal pathologic feature of Alzheimer disease.",
+  "chapter": 45
+ },
+ {
+  "term": "Neurofibrillary tangles (NFTs)",
+  "def": "Helical filaments of hyperphosphorylated tau protein inside neurons \u2014 the other cardinal AD feature, more closely tied to actual cognitive decline than plaques.",
+  "chapter": 45
+ },
+ {
+  "term": "APOe4",
+  "def": "The strongest known genetic risk factor for sporadic late-onset Alzheimer disease; linked to inefficient clearance of A\u03b242.",
+  "chapter": 45
+ },
+ {
+  "term": "Substantia nigra",
+  "def": "The dopamine-producing brain region whose degeneration causes Parkinson disease.",
+  "chapter": 45
+ },
+ {
+  "term": "Lewy bodies",
+  "def": "Intraneuronal inclusions composed of \u03b1-synuclein; pathognomonic for sporadic Parkinson disease.",
+  "chapter": 45
+ },
+ {
+  "term": "Bradykinesia",
+  "def": "Slowness of movement \u2014 a core Parkinson disease feature.",
+  "chapter": 45
+ },
+ {
+  "term": "Cogwheel rigidity",
+  "def": "Ratchet-like resistance felt when passively moving a Parkinson patient's extremity.",
+  "chapter": 45
+ },
+ {
+  "term": "Cerebral palsy",
+  "def": "Permanent, nonprogressive damage to the developing brain's upper motor neurons, occurring pre/peri/postnatally.",
+  "chapter": 45
+ },
+ {
+  "term": "Hydrocephalus",
+  "def": "Abnormal CSF accumulation in the ventricular system from obstruction or impaired resorption.",
+  "chapter": 45
+ },
+ {
+  "term": "Normal-pressure hydrocephalus",
+  "def": "Increased CSF volume without increased ICP (brain tissue loss offsets it) \u2014 classic triad: gait instability, urinary incontinence, dementia.",
+  "chapter": 45
+ },
+ {
+  "term": "Multiple sclerosis (MS)",
+  "def": "A chronic autoimmune demyelinating disease of the CNS causing inflammation and scarring of myelin sheaths.",
+  "chapter": 45
+ },
+ {
+  "term": "Lhermitte sign",
+  "def": "An electric shock-like sensation radiating down the spine into the extremities \u2014 a classic MS finding.",
+  "chapter": 45
+ },
+ {
+  "term": "Oligoclonal bands",
+  "def": "Discrete IgG bands in CSF supporting an MS diagnosis.",
+  "chapter": 45
+ },
+ {
+  "term": "Spina bifida",
+  "def": "Defective closure of the neural tube; ranges from occulta (hidden) to cystica (externally protruding sac).",
+  "chapter": 45
+ },
+ {
+  "term": "Myelomeningocele",
+  "def": "The most severe form of spina bifida cystica \u2014 meninges, CSF, AND spinal cord protrude through the defect.",
+  "chapter": 45
+ },
+ {
+  "term": "Amyotrophic lateral sclerosis (ALS)",
+  "def": "Progressive degeneration of both upper and lower motor neurons causing muscle wasting, paralysis, and eventually respiratory failure.",
+  "chapter": 45
+ },
+ {
+  "term": "Spinal shock",
+  "def": "Temporary (hours to weeks) complete loss of function below a spinal cord injury level, including flaccid paralysis and absent reflexes.",
+  "chapter": 45
+ },
+ {
+  "term": "Neurogenic shock",
+  "def": "Distributive shock from loss of sympathetic outflow after high (cervical/upper thoracic) SCI \u2014 hypotension + bradycardia.",
+  "chapter": 45
+ },
+ {
+  "term": "Autonomic dysreflexia",
+  "def": "A life-threatening reflex hypertensive crisis in SCI at/above T6, triggered by a stimulus (often bladder/bowel) below the injury level.",
+  "chapter": 45
+ },
+ {
+  "term": "Guillain-Barr\u00e9 syndrome (GBS)",
+  "def": "An autoimmune, inflammatory demyelinating disease of the peripheral nervous system causing ascending weakness/paralysis.",
+  "chapter": 45
+ },
+ {
+  "term": "Albuminocytologic dissociation",
+  "def": "High CSF protein with normal WBC count \u2014 the classic GBS CSF finding.",
+  "chapter": 45
+ },
+ {
+  "term": "Ataxia",
+  "def": "Muscle incoordination \u2014 the hallmark of cerebellar dysfunction.",
+  "chapter": 45
+ },
+ {
+  "term": "Bell palsy",
+  "def": "Idiopathic facial nerve (CN VII) paralysis, now understood to often be viral (HSV/herpes zoster) in origin.",
+  "chapter": 45
+ },
+ {
+  "term": "Nociception",
+  "def": "The physiologic mechanisms involved in the pain phenomenon; divided into four stages \u2014 transduction, transmission, perception, modulation.",
+  "chapter": 47
+ },
+ {
+  "term": "Nociceptor",
+  "def": "A free nerve ending that transduces noxious (painful) stimuli into neuronal action potentials.",
+  "chapter": 47
+ },
+ {
+  "term": "Transduction",
+  "def": "Converting a painful stimulus into a neuronal action potential at the sensory receptor.",
+  "chapter": 47
+ },
+ {
+  "term": "Transmission",
+  "def": "Movement of action potentials along neurons from the peripheral receptor to the spinal cord and then to the brain.",
+  "chapter": 47
+ },
+ {
+  "term": "Perception",
+  "def": "What occurs when the brain receives pain signals and interprets them as painful.",
+  "chapter": 47
+ },
+ {
+  "term": "Modulation",
+  "def": "The complex mechanism by which synaptic transmission of pain signals is altered \u2014 can enhance or suppress the pain signal.",
+  "chapter": 47
+ },
+ {
+  "term": "Prostaglandins",
+  "def": "Inflammatory chemical mediators formed from arachidonic acid via cyclooxygenase; sensitize nociceptors, lowering the pain threshold.",
+  "chapter": 47
+ },
+ {
+  "term": "Cyclooxygenase (COX)",
+  "def": "The enzyme that converts arachidonic acid into prostaglandins; blocked by NSAIDs.",
+  "chapter": 47
+ },
+ {
+  "term": "A\u03b4 fibers",
+  "def": "Myelinated, fast-conducting sensory fibers carrying sharp, stinging, well-localized pain.",
+  "chapter": 47
+ },
+ {
+  "term": "C fibers",
+  "def": "Unmyelinated, slow-conducting sensory fibers carrying dull, aching, poorly-localized pain; make up the majority of pain fibers.",
+  "chapter": 47
+ },
+ {
+  "term": "Dorsal root ganglion",
+  "def": "Location of the cell bodies of primary sensory pain neurons, just outside the spinal cord.",
+  "chapter": 47
+ },
+ {
+  "term": "Tract of Lissauer",
+  "def": "The pathway by which afferent pain fibers spread up and down 2\u20133 spinal segments after entering the dorsal horn.",
+  "chapter": 47
+ },
+ {
+  "term": "Substantia gelatinosa",
+  "def": "Laminae II and III of the dorsal horn \u2014 a key region of multiple synaptic connections where pain signals can be modulated (enhanced or blocked).",
+  "chapter": 47
+ },
+ {
+  "term": "Lamina V",
+  "def": "A spinal cord region receiving convergent input from both somatic and visceral pain fibers \u2014 thought to explain referred pain.",
+  "chapter": 47
+ },
+ {
+  "term": "Referred pain",
+  "def": "Pain from a visceral organ that is perceived at the body surface, from convergence of visceral and somatic afferents in lamina V.",
+  "chapter": 47
+ },
+ {
+  "term": "Substance P",
+  "def": "A key neurotransmitter/neuropeptide involved in synaptic pain transmission in the spinal cord.",
+  "chapter": 47
+ },
+ {
+  "term": "Glutamate",
+  "def": "The excitatory neurotransmitter carrying the nociceptive message from primary afferent fibers to secondary neurons; binds NMDA receptors.",
+  "chapter": 47
+ },
+ {
+  "term": "NMDA receptor",
+  "def": "A postsynaptic glutamate receptor whose activation is thought to induce \"synaptic memory\" of pain signals.",
+  "chapter": 47
+ },
+ {
+  "term": "Wind-up",
+  "def": "Sensitization of spinal cord neurons from excessive/repeated C-fiber stimulation, so even mild stimuli become painful \u2014 a possible mechanism in chronic pain development.",
+  "chapter": 47
+ },
+ {
+  "term": "Spinothalamic tract",
+  "def": "The main ascending pathway carrying pain/temperature signals from the spinal cord to the thalamus; divided into lateral (pain/temperature) and anterior (crude touch) divisions.",
+  "chapter": 47
+ },
+ {
+  "term": "Lateral spinothalamic tract",
+  "def": "Carries precisely-localized pain/temperature signals to the ventral posterolateral (VPL) thalamic nucleus, then to the primary somatosensory cortex.",
+  "chapter": 47
+ },
+ {
+  "term": "Anterolateral (paleospinothalamic) system",
+  "def": "Carries poorly-localized pain to intralaminar thalamic nuclei, responsible for the emotional/affective aspects of pain rather than precise location.",
+  "chapter": 47
+ },
+ {
+  "term": "Somatosensory cortex",
+  "def": "The primary cortical region (postcentral gyrus) that processes the sensory-discriminative qualities of pain \u2014 location, quality, intensity.",
+  "chapter": 47
+ },
+ {
+  "term": "Gate control theory",
+  "def": "Melzack and Wall's 1965 theory that a \"gate\" mechanism in the spinal dorsal horn can be closed by non-painful sensory input or descending brain signals, reducing pain transmission.",
+  "chapter": 47
+ },
+ {
+  "term": "Periaqueductal gray (PAG)",
+  "def": "A midbrain region central to descending pain inhibition; activated by the cortex to suppress incoming pain signals at the dorsal horn.",
+  "chapter": 47
+ },
+ {
+  "term": "Rostroventromedial medulla (RVM)",
+  "def": "Receives signals from the PAG and sends output down the spinal cord to activate endogenous opioid release, suppressing pain transmission.",
+  "chapter": 47
+ },
+ {
+  "term": "Endogenous opioids",
+  "def": "The body's natural pain-relieving peptides \u2014 \u03b2-endorphins, enkephalins, and dynorphins \u2014 acting at \u03bc, \u03b4, and \u03ba receptors.",
+  "chapter": 47
+ },
+ {
+  "term": "Nociceptive pain",
+  "def": "Pain from actual/threatened tissue damage activating nociceptors; subdivided into somatic (sharp, localized) and visceral (dull, diffuse) pain.",
+  "chapter": 47
+ },
+ {
+  "term": "Neuropathic pain",
+  "def": "Pain from a lesion or disease of the somatosensory nervous system itself; described as burning, shooting, or electric-shock-like.",
+  "chapter": 47
+ },
+ {
+  "term": "Nociplastic pain",
+  "def": "Pain from altered nociceptive processing/sensitization without clear evidence of tissue or nerve damage (e.g., fibromyalgia); the newest IASP pain category (2017).",
+  "chapter": 47
+ },
+ {
+  "term": "Acute pain",
+  "def": "Pain from a specific injury/disease with a predictable trajectory, typically resolving within days to a few months as healing occurs.",
+  "chapter": 47
+ },
+ {
+  "term": "Chronic pain",
+  "def": "Pain persisting beyond the expected healing time, generally defined as lasting 3 months or longer; often involves centralized/maladaptive nervous system changes.",
+  "chapter": 47
+ },
+ {
+  "term": "Numeric Rating Scale (NRS)",
+  "def": "A 0\u201310 self-report pain intensity scale \u2014 the most common adult pain assessment tool.",
+  "chapter": 47
+ },
+ {
+  "term": "FLACC scale",
+  "def": "An observational pain scale (Face, Legs, Activity, Cry, Consolability) for infants/young children or patients unable to self-report.",
+  "chapter": 47
+ },
+ {
+  "term": "PQRST",
+  "def": "A pain assessment mnemonic: Provocation/palliation, Quality, Region/radiation, Severity, Timing.",
+  "chapter": 47
+ },
+ {
+  "term": "WHO analgesic ladder",
+  "def": "A stepwise pain management framework moving from non-opioids, to weak opioids, to strong opioids as pain severity increases.",
+  "chapter": 47
+ },
+ {
+  "term": "Osteoarthritis (OA)",
+  "def": "A progressive, noninflammatory disease of diarthrodial (freely movable) joints, especially weight-bearing ones \u2014 the most common form of arthritis worldwide.",
+  "chapter": 51
+ },
+ {
+  "term": "Diarthrodial joint",
+  "def": "A freely movable joint (e.g., knee, hip) \u2014 the type of joint OA specifically targets.",
+  "chapter": 51
+ },
+ {
+  "term": "Articular cartilage",
+  "def": "The smooth tissue covering joint surfaces; its progressive loss is the defining feature of OA. Contains no nociceptors, so cartilage itself cannot directly cause pain.",
+  "chapter": 51
+ },
+ {
+  "term": "Chondrocytes",
+  "def": "Cartilage cells that release proteolytic and collagenolytic enzymes after joint injury, starting the matrix breakdown process in OA.",
+  "chapter": 51
+ },
+ {
+  "term": "Osteophytes",
+  "def": "Bone spurs that form at joint margins from new bone formation \u2014 a hallmark radiologic and structural finding in OA.",
+  "chapter": 51
+ },
+ {
+  "term": "Subchondral bone sclerosis",
+  "def": "Thickening/hardening of the bone just beneath the cartilage, occurring as cartilage loss progresses in OA.",
+  "chapter": 51
+ },
+ {
+  "term": "Heberden nodes",
+  "def": "Bone spurs at the distal interphalangeal (DIP) joints \u2014 the most common hand deformity in OA.",
+  "chapter": 51
+ },
+ {
+  "term": "Bouchard nodes",
+  "def": "Bone spurs at the proximal interphalangeal (PIP) joints \u2014 analogous to Heberden nodes but one joint level up.",
+  "chapter": 51
+ },
+ {
+  "term": "Genu varus",
+  "def": "Outward bowing of the knees (\"bow-legged\") \u2014 can result from cartilage loss in the medial knee compartment.",
+  "chapter": 51
+ },
+ {
+  "term": "Genu valgus",
+  "def": "Inward angling of the knees (\"knock-kneed\") \u2014 can result from cartilage loss in the lateral knee compartment.",
+  "chapter": 51
+ },
+ {
+  "term": "Crepitus",
+  "def": "A grating/crackling sensation or sound with joint movement \u2014 a classic OA physical exam finding.",
+  "chapter": 51
+ },
+ {
+  "term": "Erosive OA",
+  "def": "An aggressive hand-OA subset with central subchondral bone erosion, more joint swelling, and severe mobility loss; tends to affect younger patients (females 40\u201360).",
+  "chapter": 51
+ },
+ {
+  "term": "Loose bodies",
+  "def": "Fragments of cartilage that break off into the joint space in advanced OA.",
+  "chapter": 51
+ },
+ {
+  "term": "Rheumatoid arthritis (RA)",
+  "def": "A systemic autoimmune inflammatory disease causing symmetric polyarthritis, distinct from OA's localized, mechanical process.",
+  "chapter": 51
+ },
+ {
+  "term": "Rheumatoid factor (RF)",
+  "def": "An autoantibody against the Fc region of the body's own IgG; positive in 60\u201380% of RA patients but doesn't track with disease severity.",
+  "chapter": 51
+ },
+ {
+  "term": "Anti-CCP antibody",
+  "def": "An antibody targeting citrullinated peptides; supports an RA diagnosis.",
+  "chapter": 51
+ },
+ {
+  "term": "Shared epitope",
+  "def": "A common 5-amino-acid sequence in certain HLA-DRB1 alleles, associated with higher RA susceptibility.",
+  "chapter": 51
+ },
+ {
+  "term": "Pannus",
+  "def": "Hypertrophied, vascularized synovial tissue in RA that invades and destroys cartilage, ligaments, and tendons.",
+  "chapter": 51
+ },
+ {
+  "term": "Swan neck deformity",
+  "def": "PIP hyperextension with MCP/DIP flexion \u2014 a classic RA hand deformity.",
+  "chapter": 51
+ },
+ {
+  "term": "Boutonni\u00e8re deformity",
+  "def": "PIP flexion with DIP hyperextension, from extensor tendon rupture/laxity \u2014 the mirror pattern of swan neck.",
+  "chapter": 51
+ },
+ {
+  "term": "Enteropathic arthritis",
+  "def": "Joint disease associated with inflammatory bowel disease (ulcerative colitis or Crohn disease).",
+  "chapter": 51
+ },
+ {
+  "term": "Neuropathic osteoarthropathy (Charcot joint)",
+  "def": "Joint destruction from loss of proprioception/pain sensation, most often from diabetes, tabes dorsalis, or syringomyelia.",
+  "chapter": 51
+ },
+ {
+  "term": "Hemophilic arthropathy",
+  "def": "Progressive joint destruction from recurrent hemarthrosis in hemophilia patients.",
+  "chapter": 51
+ },
+ {
+  "term": "Gout",
+  "def": "A disorder of uric acid metabolism causing monosodium urate crystal deposition in joints and tissue.",
+  "chapter": 51
+ },
+ {
+  "term": "Hyperuricemia",
+  "def": "Elevated serum uric acid \u2014 the biochemical precursor to gout, from either overproduction or underexcretion.",
+  "chapter": 51
+ },
+ {
+  "term": "Tophi",
+  "def": "Crystalline urate deposits in bone and connective tissue \u2014 the hallmark of chronic tophaceous gout.",
+  "chapter": 51
+ },
+ {
+  "term": "Intercritical gout",
+  "def": "The symptom-free interval between acute gout attacks, during which urate deposition continues silently.",
+  "chapter": 51
+ },
+ {
+  "term": "Elastosis (solar elastosis)",
+  "def": "Cross-linked, thickened collagen bundles from chronic sun exposure, producing a weather-beaten/tanned appearance.",
+  "chapter": 52
+ },
+ {
+  "term": "Senile purpura",
+  "def": "Age-related hemorrhages from increased dermal vascular fragility.",
+  "chapter": 52
+ },
+ {
+  "term": "Primary lesion",
+  "def": "A skin lesion in its original, unmodified appearance.",
+  "chapter": 52
+ },
+ {
+  "term": "Secondary lesion",
+  "def": "A skin lesion whose appearance has been modified over time or by external factors (e.g., scratching).",
+  "chapter": 52
+ },
+ {
+  "term": "Verrucae (warts)",
+  "def": "Benign papillomas caused by human papillomavirus, invading only human skin/mucous membranes.",
+  "chapter": 52
+ },
+ {
+  "term": "Herpes simplex virus (HSV)",
+  "def": "HSV-1 (usually above the waist) and HSV-2 (usually genital); persists latently in the trigeminal or other ganglia after initial infection.",
+  "chapter": 52
+ },
+ {
+  "term": "Herpes zoster (shingles)",
+  "def": "Reactivation of latent varicella zoster virus in a dorsal sensory ganglion, causing a dermatomal vesicular eruption.",
+  "chapter": 52
+ },
+ {
+  "term": "Postherpetic neuralgia",
+  "def": "Persistent pain (months to years) after a shingles rash resolves \u2014 the most important complication in patients over 50.",
+  "chapter": 52
+ },
+ {
+  "term": "Tinea",
+  "def": "Dermatophyte fungal infection, named by body location (capitis, corporis, pedis, cruris, etc.).",
+  "chapter": 52
+ },
+ {
+  "term": "Onychomycosis",
+  "def": "Dermatophyte infection of the nails, causing white/yellow discoloration and thickening.",
+  "chapter": 52
+ },
+ {
+  "term": "Hirsutism (hypertrichosis)",
+  "def": "Intensified, male-pattern hair growth in females \u2014 upper lip, chin, chest, linea alba.",
+  "chapter": 52
+ },
+ {
+  "term": "Mongolian spot",
+  "def": "A benign area of selective pigmentation, usually buttocks/sacral area, common in Asian American and African American infants.",
+  "chapter": 52
+ },
+ {
+  "term": "Strawberry hemangioma",
+  "def": "A bright-red, raised vascular birthmark that typically resolves by age 5\u20137 without scarring.",
+  "chapter": 52
+ },
+ {
+  "term": "Port-wine stain hemangioma",
+  "def": "A flat, reddish-purple vascular birthmark, usually face/neck, that does NOT resolve with age.",
+  "chapter": 52
+ },
+ {
+  "term": "Milia",
+  "def": "Small white bumps in newborns from plugged sebaceous/eccrine glands.",
+  "chapter": 52
+ },
+ {
+  "term": "Cradle cap",
+  "def": "A harmless, self-limited scaly scalp condition in infants.",
+  "chapter": 52
+ },
+ {
+  "term": "Rubella (German measles)",
+  "def": "A mild childhood viral illness with major risk only if transmitted transplacentally to a fetus early in gestation (teratogenic).",
+  "chapter": 52
+ },
+ {
+  "term": "Roseola infantum",
+  "def": "A viral illness in children under ~4 (usually ~1 year) with high fever followed by a rash \u2014 NO lymphadenopathy, unlike rubella.",
+  "chapter": 52
+ },
+ {
+  "term": "Rubeola (measles)",
+  "def": "A more severe communicable viral illness with Koplik spots and a facial-onset rash; risk of otitis media, pneumonia, encephalitis.",
+  "chapter": 52
+ },
+ {
+  "term": "Koplik spots",
+  "def": "Small red spots with a bluish-white center on the buccal mucosa \u2014 pathognomonic for measles.",
+  "chapter": 52
+ },
+ {
+  "term": "Neoplasia",
+  "def": "\"New growth\" \u2014 abnormal cellular growth; used loosely as a synonym for tumor.",
+  "chapter": 7
+ },
+ {
+  "term": "Cancer",
+  "def": "The term reserved specifically for malignant neoplasms.",
+  "chapter": 7
+ },
+ {
+  "term": "Anaplasia",
+  "def": "Lack of differentiated features in a cancer cell \u2014 greater anaplasia correlates with more aggressive malignancy.",
+  "chapter": 7
+ },
+ {
+  "term": "Carcinoma",
+  "def": "Malignant tumor of epithelial origin \u2014 accounts for ~90% of human cancers.",
+  "chapter": 7
+ },
+ {
+  "term": "Sarcoma",
+  "def": "Malignant tumor of mesenchymal origin (nerve, bone, muscle, tendon, fat).",
+  "chapter": 7
+ },
+ {
+  "term": "Proto-oncogene",
+  "def": "A normal cellular gene coding for proteins involved in growth/differentiation/apoptosis/signaling; becomes an oncogene when mutated to gain function.",
+  "chapter": 7
+ },
+ {
+  "term": "Oncogene",
+  "def": "The mutant, overactive/overexpressed form of a proto-oncogene.",
+  "chapter": 7
+ },
+ {
+  "term": "Tumor suppressor gene",
+  "def": "A gene that normally inhibits cell proliferation; loss of function is the most common mutation type in cancer development.",
+  "chapter": 7
+ },
+ {
+  "term": "Driver mutation",
+  "def": "A DNA abnormality that actively contributes to malignant proliferation.",
+  "chapter": 7
+ },
+ {
+  "term": "Passenger mutation",
+  "def": "A random, coexisting DNA change that plays no role in tumorigenesis.",
+  "chapter": 7
+ },
+ {
+  "term": "Carcinogen",
+  "def": "An agent/substance capable of inducing cancer.",
+  "chapter": 7
+ },
+ {
+  "term": "Co-carcinogen",
+  "def": "A substance that causes cancer only in combination with other chemicals/compounds.",
+  "chapter": 7
+ },
+ {
+  "term": "Initiation",
+  "def": "The first step of carcinogenesis \u2014 mutations that activate proto-oncogenes/inactivate tumor suppressor genes.",
+  "chapter": 7
+ },
+ {
+  "term": "Promotion",
+  "def": "The stage where a mutant cell proliferates, often driven by inflammation, hormones, or nutritional factors.",
+  "chapter": 7
+ },
+ {
+  "term": "Progression",
+  "def": "The stage where proliferating cells develop full malignant behavior via accumulating genetic instability.",
+  "chapter": 7
+ },
+ {
+  "term": "Telomerase",
+  "def": "An enzyme that rebuilds chromosome telomeres, allowing indefinite division \u2014 reactivated by most cancer cells to escape normal replicative limits.",
+  "chapter": 7
+ },
+ {
+  "term": "Warburg effect",
+  "def": "Cancer cells' preference for glycolysis (even with oxygen present) over oxidative phosphorylation, despite glycolysis producing far less ATP per glucose.",
+  "chapter": 7
+ },
+ {
+  "term": "E-cadherin",
+  "def": "A key epithelial cell-to-cell adhesion molecule; its loss enables carcinoma cells to detach and invade.",
+  "chapter": 7
+ },
+ {
+  "term": "Epithelial-to-mesenchymal transition (EMT)",
+  "def": "A developmental program hijacked by cancer cells to gain invasive, apoptosis-resistant, stem-cell-like properties.",
+  "chapter": 7
+ },
+ {
+  "term": "Cancer stem cells (CSCs)",
+  "def": "A small, self-renewing, undifferentiated tumor cell subpopulation implicated in tumor growth, metastasis, and treatment resistance.",
+  "chapter": 7
+ },
+ {
+  "term": "Angiogenesis",
+  "def": "New blood vessel formation; tumors can't exceed ~2 mm without it.",
+  "chapter": 7
+ },
+ {
+  "term": "VEGF",
+  "def": "Vascular endothelial growth factor \u2014 the key signal tumor cells produce (often in response to hypoxia) to trigger angiogenesis.",
+  "chapter": 7
+ },
+ {
+  "term": "PD-L1 / PD-1",
+  "def": "An immune checkpoint pair \u2014 cancer cells express PD-L1 to bind T-cell PD-1 receptors, suppressing cytotoxic T-cell activation and evading immune destruction.",
+  "chapter": 7
+ },
+ {
+  "term": "Cachexia",
+  "def": "Cancer-related weight loss, muscle wasting, and generalized weakness \u2014 affects 60\u201380% of cancer patients.",
+  "chapter": 7
+ },
+ {
+  "term": "Paraneoplastic syndrome",
+  "def": "A symptom complex at a site distant from the tumor, not explained by direct tumor effects \u2014 often from ectopic hormone/cytokine secretion.",
+  "chapter": 7
+ },
+ {
+  "term": "Leukopenia",
+  "def": "Decreased circulating white blood cells \u2014 major cause of infection-related morbidity/mortality in cancer patients.",
+  "chapter": 7
+ },
+ {
+  "term": "Thrombocytopenia",
+  "def": "Decreased circulating platelets; <20,000/mm\u00b3 is associated with spontaneous hemorrhage risk.",
+  "chapter": 7
+ }
+]

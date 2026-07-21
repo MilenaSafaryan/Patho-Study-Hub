@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disorders of the Immune Response — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.9rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.84rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=10" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Disorders of the Immune Response</p>
+<span class="brand-sub">Chapter 10 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Overview</div>
+<a href="#overview">Excessive vs. Deficient Responses</a>
+<div class="grp-title">Autoimmunity</div>
+<a href="#self-tolerance">Self-Tolerance</a>
+<a href="#autoimmunity-theories">Theories of Autoimmunity</a>
+<div class="grp-title">Hypersensitivity</div>
+<a href="#hypersensitivity-overview">The Four Types — Overview</a>
+<a href="#type-1-etiology">Type I — Etiology &amp; Pathogenesis</a>
+<a href="#type-1-mediators">Histamine &amp; Other Mediators</a>
+<a href="#type-1-clinical">Type I — Clinical Manifestations &amp; Treatment</a>
+<div class="grp-title">Deficient Immune Responses</div>
+<a href="#primary-secondary-id">Primary vs. Secondary Immunodeficiency</a>
+<a href="#scid">Severe Combined Immunodeficiency (SCID)</a>
+<a href="#wiskott-aldrich">Wiskott-Aldrich Syndrome</a>
+<a href="#digeorge">DiGeorge Syndrome (22q11.2 Deletion)</a>
+<a href="#cmcd">Chronic Mucocutaneous Candidiasis</a>
+<a href="#iga-deficiency">Selective IgA Deficiency</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Disorders of the Immune Response</h1>
+<p>When the immune system overreacts (autoimmunity, hypersensitivity) or underreacts (immunodeficiency) — the mechanisms behind each and the disorders that result. Built from your Chapter 10 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Autoimmunity</dt><dd>The immune system recognizing "self" as foreign and mounting a tissue-damaging response — a failure of self-tolerance.</dd></div>
+<div class="term"><dt>Self-tolerance</dt><dd>The immune system's learned ability to not attack the body's own cells; involves both central and peripheral mechanisms.</dd></div>
+<div class="term"><dt>Central tolerance</dt><dd>Elimination/suppression of self-reactive T and B cells during development in the thymus and bone marrow.</dd></div>
+<div class="term"><dt>Peripheral tolerance</dt><dd>Backup mechanisms (clonal deletion, anergy, Treg suppression) controlling self-reactive lymphocytes that escaped central tolerance.</dd></div>
+<div class="term"><dt>Regulatory T cells (Tregs)</dt><dd>CD4+CD25+FOXP3+ cells that suppress autoreactive T and B cells via inhibitory cytokines (IL-10, TGF-β) and CTLA-4.</dd></div>
+<div class="term"><dt>Molecular (antigenic) mimicry</dt><dd>A theory of autoimmunity where pathogen epitopes resemble self-antigens closely enough that the immune response against the pathogen also attacks self tissue.</dd></div>
+<div class="term"><dt>Hidden/sequestered antigen theory</dt><dd>Self-antigens normally isolated from immune surveillance (cornea, testicles, brain) become exposed after tissue damage and are attacked as foreign.</dd></div>
+<div class="term"><dt>Epitope spread</dt><dd>Recurrent infection/organ damage causes the immune system to develop multiple new autoantibodies over time.</dd></div>
+<div class="term"><dt>Hypersensitivity</dt><dd>A normal immune mechanism triggered inappropriately, excessively, or with undesirable effects; four types (I–IV).</dd></div>
+<div class="term"><dt>IgE</dt><dd>The principal antibody mediating type I hypersensitivity; binds mast cell/basophil Fc receptors.</dd></div>
+<div class="term"><dt>Mast cell degranulation</dt><dd>Release of preformed (histamine, heparin, enzymes) and newly-formed (leukotrienes, prostaglandins) mediators triggered by IgE-antigen cross-linking.</dd></div>
+<div class="term"><dt>Anaphylaxis</dt><dd>A life-threatening, systemic type I hypersensitivity reaction.</dd></div>
+<div class="term"><dt>Primary immunodeficiency</dt><dd>An immune deficiency not attributable to another cause — congenital or acquired (e.g., HIV/AIDS).</dd></div>
+<div class="term"><dt>Secondary immunodeficiency</dt><dd>Immune impairment resulting from another disorder or treatment (chemotherapy, malnutrition, stress).</dd></div>
+<div class="term"><dt>SCID</dt><dd>Severe combined immunodeficiency — genetic disorders causing absent/dysfunctional T cells (± B cells/NK cells), leaving both cellular and humoral immunity impaired.</dd></div>
+<div class="term"><dt>DiGeorge syndrome (22q11.2 deletion)</dt><dd>A T-cell disorder from a hypoplastic/aplastic thymus due to a chromosome 22q11.2 deletion.</dd></div>
+<div class="term"><dt>Wiskott-Aldrich syndrome</dt><dd>An X-linked disorder (WASp gene) causing B-cell dysfunction, microthrombocytopenia, and eczema.</dd></div>
+<div class="term"><dt>Selective IgA deficiency</dt><dd>The most common B-cell PID — lack of serum IgA; often asymptomatic but linked to autoimmune/allergic conditions.</dd></div>
+</dl>
+</section>
+<!-- ================= OVERVIEW ================= -->
+<section class="block" id="overview">
+<details class="topic" open="">
+<summary>Excessive vs. Deficient Immune Responses</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Two Broad Categories of Immune Disorder</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">IMMUNE DYSFUNCTION</text></g>
+<line class="mm-line" x1="450" x2="230" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="670" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="120" y="90"></rect><text font-size="12" text-anchor="middle" x="230" y="115">EXCESSIVE responses</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="560" y="90"></rect><text font-size="12" text-anchor="middle" x="670" y="115">DEFICIENT responses</text></g>
+<line class="mm-line" x1="230" x2="230" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="36" rx="6" width="220" x="120" y="158"></rect><text font-size="10.5" text-anchor="middle" x="230" y="180">Autoimmunity, hypersensitivity</text></g>
+<line class="mm-line" x1="670" x2="670" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="36" rx="6" width="220" x="560" y="158"></rect><text font-size="10.5" text-anchor="middle" x="670" y="180">SCID, DiGeorge, IgA deficiency</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Autoimmunity vs. hypersensitivity — a key distinction</h4><p><b>Autoimmunity</b> describes the CAUSE (immune attack on self). <b>Hypersensitivity</b> describes the MECHANISM of injury (how the damage happens) — which may or may not involve autoimmunity. Most autoimmune reactions occur via type II or III hypersensitivity mechanisms, so many autoimmune diseases are simultaneously classified as hypersensitivity reactions.</p></div>
+<div class="fact"><h4>Worked examples of the overlap</h4><p>Myasthenia gravis = autoimmune disease AND type II hypersensitivity. Immune complex glomerulonephritis = autoimmune disease AND type III hypersensitivity. But hypersensitivity to a foreign antigen (bee venom) is NOT autoimmune — the self/foreign distinction is what separates the two labels.</p></div>
+</div>
+<div class="note">Autoimmune disorders range from organ-specific (MS → CNS; type 1 diabetes → pancreatic β-islet cells) to organ-nonspecific (SLE, Sjögren syndrome — multiple organs involved).</div>
+</div>
+</details>
+</section>
+<!-- ================= AUTOIMMUNITY ================= -->
+<section class="block" id="self-tolerance">
+<details class="topic" open="">
+<summary>Self-Tolerance</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Central tolerance</h4><p>Occurs in the thymus (T cells) and bone marrow (B cells) — the thymus is principally responsible for eliminating/suppressing aggressive self-reactive T lymphocytes during development.</p></div>
+<div class="fact warn"><h4>Peripheral tolerance — the backup system</h4><p>A small number of self-reactive T cells always escape thymic control. Peripheral tolerance catches them via clonal deletion, anergy (T-cell intrinsic), and extrinsic control by <b>Tregs</b> (primarily CD4+CD25+FOXP3+).</p></div>
+</div>
+<div class="callout"><b>How Tregs actually work:</b> CD4+ T cells binding self-antigen on specialized APCs get triggered to express FOXP3, converting them into inhibitory Tregs. These Tregs secrete IL-10 and TGF-β, and express <b>CTLA-4</b>, which binds/blocks the B7 coreceptor on other immune cells — making those cells harder to activate. This is the same CTLA-4 checkpoint molecule cancer cells exploit (see Chapter 7).</div>
+<div class="note">Autoimmune disease develops when self-tolerance is lost — resulting in dysregulation of pro/anti-inflammatory mediators, cytokines, CD4+/CD8+ T cells, B cells, and dendritic cell regulatory enzymes.</div>
+</div>
+</details>
+</section>
+<section class="block" id="autoimmunity-theories">
+<details class="topic" open="">
+<summary>Theories of Autoimmunity</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">No single theory fully explains autoimmunity — several proposed mechanisms, each with supporting (and limiting) evidence.</p>
+<div class="fact-grid">
+<div class="fact warn"><h4>Molecular (antigenic) mimicry</h4><p>Pathogen epitopes resemble self-antigens closely enough to be attacked by cross-reactive lymphocytes. <b>Classic example:</b> streptococcal M protein cross-reacts with human lysoganglioside → rheumatic heart disease. <b>Another example:</b> EBV peptide cross-reacts with a self-protein (Sm) in SLE patients.</p></div>
+<div class="fact"><h4>Hidden/sequestered antigen theory</h4><p>Self-antigens in immune-privileged sites (cornea, testicles, brain — areas not drained by lymphatics) were never "seen" during tolerance development. Tissue damage exposes them later, triggering attack. <b>Challenged by:</b> cardiac surgery/transplant patients universally develop anti-heart autoantibodies but do NOT develop myocarditis — showing tissue damage + microbe exposure isn't sufficient on its own.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Adjuvant/bystander effect</h4><p>An infection activates immune cell receptors → proinflammatory cytokine release → activates PREEXISTING autoreactive T/B cells that had escaped thymic deletion. Unclear if this is nonspecific or Toll-like-receptor-specific.</p></div>
+<div class="fact warn"><h4>Epitope spread</h4><p>Recurrent infection/organ damage → immune system develops MULTIPLE autoantibodies over time (spreading beyond the original target).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Thymus gland defect theories</h4><p>Impaired T-cell maturation/differentiation (decreased hormone secretion, or failure to expose developing T cells to ALL self products) → unrecognized self products get attacked later. Complicated by newer evidence that not all T cells actually mature in the thymus.</p></div>
+<div class="fact warn"><h4>Treg dysfunction theory</h4><p>Decreased Treg numbers/activity fail to repress autoreactive lymphocytes. Some Tregs lose FOXP3 and convert into effector T cells. A <b>FOXP3 mutation</b> itself can directly impair CD4+ T-cell development/function → autoimmune inflammation. <b>TH22 cells</b> (a newer subset) also drive chronic inflammation/autoimmunity via IL-13, IL-22, TNF production.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= HYPERSENSITIVITY ================= -->
+<section class="block" id="hypersensitivity-overview">
+<details class="topic" open="">
+<summary>The Four Types of Hypersensitivity — Overview</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Type</th><th>Mediated by</th><th>Complement?</th><th>Peak timing</th><th>Examples</th></tr>
+<tr><td><b>I</b> — Atopic/anaphylactic</td><td>IgE</td><td>No</td><td>15–30 min</td><td>Bee sting reaction, allergic rhinitis</td></tr>
+<tr><td><b>II</b> — Cytotoxic</td><td>IgM/IgG</td><td>Yes</td><td>15–30 min or over time</td><td>ABO transfusion reaction, hemolytic disease of newborn, myasthenia gravis, Graves disease</td></tr>
+<tr><td><b>III</b> — Immune complex</td><td>IgG + complement</td><td>Yes</td><td>≥6 hours</td><td>Immune-complex glomerulonephritis, SLE, vasculitis</td></tr>
+<tr><td><b>IV</b> — Delayed (T-cell)</td><td>CD4+ TH1/TH2, CD8+ cells</td><td>No</td><td>24–48 hours or more</td><td>Allergic contact dermatitis, Stevens-Johnson syndrome, TEN</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact warn"><h4>Serum vs. cell transferability</h4><p>Types I, II, and III can all be transferred via serum (antibody-mediated). Type IV can ONLY be transferred via cells (T cells) — not serum. This single fact is a fast way to identify Type IV on an exam.</p></div>
+<div class="fact"><h4>Type II has two subtypes</h4><p><b>IIa:</b> antibody injures/kills the target cell (classic cytotoxic). <b>IIb:</b> antibody STIMULATES the cell instead of injuring it (e.g., Graves disease — TSH receptor antibodies stimulate rather than destroy thyroid cells).</p></div>
+</div>
+<div class="callout"><b>Type IV's four subtypes (a-d):</b> IVa = CD4+ TH1 cells activating macrophages. IVb = CD4+ TH2 cells with eosinophil involvement (eosinophilic asthma). IVc = cytotoxic CD8+ T cells using perforin-granzyme B (Stevens-Johnson syndrome). IVd = T-lymphocyte-driven neutrophilic inflammation.</div>
+</div>
+</details>
+</section>
+<section class="block" id="type-1-etiology">
+<details class="topic" open="">
+<summary>Type I Hypersensitivity — Etiology &amp; Pathogenesis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetic component</h4><p>Strong hereditary link to IgE responsiveness — both the ability to respond to a specific allergen AND general IgE-production capacity. Positive family history remains a strong predictor despite unclear specific causal genes.</p></div>
+<div class="fact warn"><h4>Timing — why it's called "immediate"</h4><p>Signs/symptoms typically appear 15–30 minutes after allergen exposure. Requires prior sensitization — repeated exposures are usually needed before significant IgE builds up.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Type I Hypersensitivity Cascade</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="180" x="10" y="90"></rect><text font-size="11.5" text-anchor="middle" x="100" y="112">Allergen exposure</text><text font-size="10" text-anchor="middle" x="100" y="128">(repeated)</text></g>
+<line class="mm-line" x1="190" x2="230" y1="115" y2="115"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="230" y="90"></rect><text font-size="11" text-anchor="middle" x="330" y="112">Plasma B cells produce</text><text font-size="11" text-anchor="middle" x="330" y="128">allergen-specific IgE</text></g>
+<line class="mm-line" x1="430" x2="470" y1="115" y2="115"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="470" y="90"></rect><text font-size="11" text-anchor="middle" x="570" y="112">IgE binds Fc receptors</text><text font-size="10" text-anchor="middle" x="570" y="128">on mast cells/basophils</text></g>
+<line class="mm-line" x1="670" x2="710" y1="115" y2="115"></line>
+<g class="mm-node"><rect height="50" rx="10" width="180" x="710" y="90"></rect><text font-size="11" text-anchor="middle" x="800" y="112">Re-exposure: antigen</text><text font-size="10" text-anchor="middle" x="800" y="128">cross-links 2 IgE</text></g>
+<line class="mm-line" x1="800" x2="450" y1="140" y2="180"></line>
+<g class="mm-node"><rect height="40" rx="10" width="300" x="300" y="180"></rect><text font-size="12" text-anchor="middle" x="450" y="205">↑ Intracellular Ca2+ → mast cell degranulation</text></g>
+<line class="mm-line" x1="450" x2="450" y1="220" y2="242"></line>
+<text fill="var(--ink-soft)" font-size="11" text-anchor="middle" x="450" y="256">Mediator release → inflammatory response</text>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Mast cells — the principal effector</h4><p>Found throughout loose connective tissue; each covered with up to <b>500,000 IgE receptors</b>, filled with granules of vasoactive/proinflammatory mediators (especially histamine).</p></div>
+<div class="fact warn"><h4>Environmental amplifiers</h4><p>Tobacco smoke and pollution can increase mucosal permeability, enhancing allergen entry — which in turn increases IgE levels and IgE responsiveness over time.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="type-1-mediators">
+<details class="topic" open="">
+<summary>Histamine &amp; Other Mediators</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Preformed vs. newly formed mediators</h4><p><b>Preformed</b> (stored in granules): histamine, heparin, proteolytic enzymes, cytokines, chemotactic factors. <b>Newly formed</b> (made during degranulation): superoxide, prostaglandins, thromboxanes, leukotrienes, bradykinin, interleukins.</p></div>
+<div class="fact warn"><h4>H1 vs. H2 receptors — largely opposing effects</h4><p><b>H1 (most active on mast cells):</b> ↑ vascular permeability, vasodilation (flushing), urticaria, bronchoconstriction, ↑ mucus/pruritus, ↑ gut permeability. <b>H2:</b> smooth muscle RELAXATION in lower airways, ↑ gastric acid secretion, and at high concentration actually INHIBITS inflammatory cells (↓ degranulation, ↓ neutrophil chemotaxis).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>H3 &amp; H4 receptors</h4><p><b>H3:</b> brain, spinal cord, sensory neurons (postganglionic cholinergic nerves in lung bronchi). <b>H4:</b> immune cells (dendritic cells, eosinophils, T cells, monocytes, macrophages, NK cells) and hematopoietic tissue — strongly involved in chemotaxis/inflammation.</p></div>
+<div class="fact tx"><h4>Other key mediators</h4><p>Kininogenase/tryptase activate the kinin pathway; C3 activates complement via the alternative pathway; heparin decreases clotting; leukotrienes cause smooth muscle contraction + ↑ vascular permeability. IL-9 from mucosal mast cells is elevated in food-mediated hypersensitivity specifically.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="type-1-clinical">
+<details class="topic" open="">
+<summary>Type I — Clinical Manifestations, Treatment &amp; Prevention</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Spectrum of severity</h4><p>Mild: urticaria, seasonal rhinitis, eczema, mild bronchoconstriction. More severe: throat tightening, localized edema, wheezing, tachycardia. Most severe: <b>anaphylaxis</b> — classically from bee stings, seafood, or peanuts.</p></div>
+<div class="fact warn"><h4>Common triggers to recognize</h4><p>Medications (penicillin, NSAIDs, contrast media), biologics (antisera, insulin, vaccines), latex, pollen/mold/dander/dust mites, insect venom (Hymenoptera), foods (peanuts, tree nuts, shellfish, eggs, milk), and irritants (smoke, diesel exhaust, perfumes).</p></div>
+</div>
+<table class="compare">
+<tr><th>Drug class</th><th>Mechanism/use</th></tr>
+<tr><td>Antihistamines (e.g., diphenhydramine)</td><td>Block H1 → ↓ vascular permeability/bronchoconstriction</td></tr>
+<tr><td>β-adrenergic sympathomimetics</td><td>↓ bronchoconstriction/bronchospasm</td></tr>
+<tr><td><b>Epinephrine</b></td><td>α, β1, β2 agonist — first-line for acute anaphylaxis (EpiPen)</td></tr>
+<tr><td>Corticosteroids</td><td>↓ inflammatory response</td></tr>
+<tr><td>Anticholinergics</td><td>Block parasympathetic tone → indirect bronchodilation</td></tr>
+<tr><td>Omalizumab (anti-IgE)</td><td>Binds free IgE, prevents mast cell/basophil binding, down-regulates IgE receptors — for moderate-severe persistent asthma, age 12+</td></tr>
+<tr><td>Dupilumab, reslizumab/mepolizumab</td><td>Block IL-4/IL-13 or IL-5 respectively — newer biologics for asthma</td></tr>
+</table>
+<div class="note"><b>Prevention strategies</b> (families with allergy history): during pregnancy — avoid maternal allergens, limit excess of one food type in 3rd trimester, avoid whole eggs near delivery/breastfeeding, limit cow's milk. In infancy — avoid pollution exposure, breastfeed ≥6 months, delay solids until 6 months, minimize dust/mold, keep pets out of the home.</div>
+</div>
+</details>
+</section>
+<!-- ================= DEFICIENT RESPONSES ================= -->
+<section class="block" id="primary-secondary-id">
+<details class="topic" open="">
+<summary>Primary vs. Secondary Immunodeficiency</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Primary</h4><p>Not attributable to another cause — congenital or acquired (HIV/AIDS is a primary ACQUIRED immunodeficiency). Congenital PIDs occur in ~1 in 58,000 infants, often sex-linked.</p></div>
+<div class="fact warn"><h4>Secondary</h4><p>A consequence of another disorder or treatment — malnutrition, hyperlipidemia, cancer chemotherapy, or biopsychosocial stress (e.g., postsurgical immune suppression).</p></div>
+</div>
+<div class="note">First clinical clue for most immunodeficiency disorders: signs/symptoms of infection. A growing body of genetic evidence suggests many people carry inborn immunity errors of variable clinical significance — changing how immunodeficiency is understood as a spectrum rather than all-or-nothing.</div>
+</div>
+</details>
+</section>
+<section class="block" id="scid">
+<details class="topic" open="">
+<summary>Severe Combined Immunodeficiency (SCID)</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">Nearly all SCID types share absent/dysfunctional T cells (impairing both cellular AND humoral immunity, since B cells need T-cell help) — but B-cell and NK-cell involvement varies by genetic defect.</p>
+<table class="compare">
+<tr><th>SCID type</th><th>Genetic defect</th><th>Phenotype</th></tr>
+<tr><td>X-linked (most common)</td><td>IL2RG gene (common γ chain — shared by IL-2,4,7,9,15,21 receptors)</td><td>T–B+ NK– (B cells present but nonfunctional)</td></tr>
+<tr><td>JAK3 deficiency</td><td>JAK3 gene</td><td>T–B+ NK– (same phenotype, different gene)</td></tr>
+<tr><td>IL-7Rα deficiency</td><td>IL-7Rα gene</td><td>T–B+ NK+ (low T cells, but NK preserved)</td></tr>
+<tr><td>RAG1/RAG2 mutation (Omenn syndrome)</td><td>RAG1 or RAG2 (antigen receptor gene assembly)</td><td>T–B– NK+ (NK unaffected — doesn't use Ig-like receptors); + eczema-like rash, hepatosplenomegaly, alopecia</td></tr>
+<tr><td>ADA deficiency</td><td>Adenosine deaminase gene (chr 20)</td><td>T–B– NK– (toxic dAdo/dATP accumulation kills all lymphocyte lines); complete lymphocyte absence</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact warn"><h4>Clinical presentation</h4><p>Ill within 3 months of age: failure to thrive, persistent oral thrush, persistent diarrhea, severe Candida diaper dermatitis, recurrent severe infections, lymphadenopathy, hepatosplenomegaly. High mortality untreated, usually before age 1.</p></div>
+<div class="fact"><h4>Susceptible pathogens</h4><p><i>Candida albicans</i>, <i>Pneumocystis jiroveci</i>, CMV, herpesvirus, and common childhood diseases (varicella, measles) — opportunistic and severe because they can't mount an effective response even when B cells are technically present.</p></div>
+</div>
+<div class="danger"><b>Management:</b> protective isolation, strict handwashing, avoid other children pre-discharge, CMV-negative breastfeeding only. <b>Curative therapy: hematopoietic stem cell transplant</b> (cord blood or bone marrow, ideally HLA-haploidentical sibling). Also: chemotherapy conditioning, long-term immunoglobulin replacement (q2-3 weeks), enzyme replacement, gene therapy. Newborn screening now exists in 23 states + DC + Navajo Nation given the urgency of early detection.</div>
+</div>
+</details>
+</section>
+<section class="block" id="wiskott-aldrich">
+<details class="topic" open="">
+<summary>Wiskott-Aldrich Syndrome</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetics</h4><p>X-linked (males only) — WASp gene mutation, Xp11.23. WASp is involved in cytoplasmic signaling, immune cell function, and actin cytoskeleton regulation in hematopoietic cells.</p></div>
+<div class="fact warn"><h4>Lab pattern</h4><p>↓ Mature peripheral B cells; ↓ IgM, ↑ IgE and IgA, normal-to-low IgG (from increased antibody catabolism); low/absent isohemagglutinins; low platelets (splenic destruction from abnormal platelet size/shape).</p></div>
+</div>
+<div class="callout"><b>Classic triad:</b> microthrombocytopenia + eczema + increased infection/malignancy susceptibility. Particular vulnerability to polysaccharide-encapsulated bacteria (<i>S. pneumoniae</i>, <i>H. influenzae</i>) — pneumonia, meningitis, otitis media, sepsis. Can develop bleeding (bloody diarrhea, cerebral hemorrhage) and systemic autoimmunity. Untreated average age at death: 3.5 years.</div>
+<div class="note">Treatment: antibody replacement + antibiotics; splenectomy, bone marrow/stem cell transplant, gene therapy as definitive options.</div>
+</div>
+</details>
+</section>
+<section class="block" id="digeorge">
+<details class="topic" open="">
+<summary>DiGeorge Syndrome (22q11.2 Deletion)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetics &amp; mechanism</h4><p>Autosomal dominant, chromosome 22q11.2 deletion (usually maternally inherited) — most common microdeletion syndrome (~1/4000 live births, equal sex distribution). Causes a hypoplastic/aplastic thymus → variable T-cell deficiency; B cells usually normal unless T-cell loss is severe enough to also impair B-cell function (SCID-like presentation).</p></div>
+<div class="fact warn"><h4>The classic triad</h4><p>Immunodeficiency (75%) + congenital cardiac anomalies (75%) + hypoparathyroidism (50%).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Other features</h4><p>Hypothyroidism, esophageal atresia/reflux, urogenital anomalies, growth restriction, developmental delay, psychiatric/behavioral issues, microcephaly, dysmorphic facial features (mandibular hypoplasia, short forehead, low-set ears).</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Thymic or bone marrow transplant for reestablishing T-cell populations in severe cases; targeted management of cardiac defects, hypocalcemia/seizures, and psychiatric issues.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="cmcd">
+<details class="topic" open="">
+<summary>Chronic Mucocutaneous Candidiasis Disease (CMCD)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetics</h4><p>Autosomal dominant gain-of-function STAT1 mutation → impaired/absent IL-17 (or IL-17F) → selective cell-mediated immunity deficiency specifically against <i>C. albicans</i> and <i>S. aureus</i>.</p></div>
+<div class="fact warn"><h4>Clinical picture</h4><p>B-cell and T-cell function are otherwise NORMAL except for this specific inability to respond to candidal infection — causing persistent/recurrent skin, nail, and mucous membrane infections.</p></div>
+</div>
+<div class="note">Treatment: antifungal/antibiotic therapy to reduce infection severity/scarring; gene therapy under investigation.</div>
+</div>
+</details>
+</section>
+<section class="block" id="iga-deficiency">
+<details class="topic" open="">
+<summary>Selective IgA Deficiency</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The most common B-cell PID</h4><p>Incidence varies by ancestry: 1/600 (White populations) vs. 1/2600 (Asian populations). Mechanism: plasma cell apoptosis or failure of IgA-bearing lymphocytes to mature into plasma cells. B-cell count is normal, but B cells don't respond properly to IL-4/6/7/10. IgM, IgG, and T-cell numbers are all normal.</p></div>
+<div class="fact warn"><h4>Clinical picture</h4><p>Often completely asymptomatic. When symptomatic: respiratory/GI/GU infections. High rate of associated allergic, vascular, endocrine, and autoimmune disease (IBD, celiac, SLE, chronic active hepatitis) — and a tendency to develop anti-IgA antibodies.</p></div>
+</div>
+<div class="danger"><b>Critical transfusion consideration:</b> because these patients can develop anti-IgA antibodies, <b>exogenous IgA replacement is contraindicated</b>, and when blood products are needed, washed/packed RBCs with volume expanders must be used instead of standard products — to avoid exposing the patient to IgA and triggering a reaction.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 10 (Disorders of the Immune Response) material. Redraw the type I hypersensitivity cascade mind map from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "The immune system recognizing \"self\" as foreign and mounting a tissue-damaging response \u2014 a failure of self-tolerance.", "answers": ["Autoimmunity"]}, {"def": "The immune system's learned ability to not attack the body's own cells; involves both central and peripheral mechanisms.", "answers": ["Self-tolerance"]}, {"def": "Elimination/suppression of self-reactive T and B cells during development in the thymus and bone marrow.", "answers": ["Central tolerance"]}, {"def": "Backup mechanisms (clonal deletion, anergy, Treg suppression) controlling self-reactive lymphocytes that escaped central tolerance.", "answers": ["Peripheral tolerance"]}, {"def": "CD4+CD25+FOXP3+ cells that suppress autoreactive T and B cells via inhibitory cytokines (IL-10, TGF-\u03b2) and CTLA-4.", "answers": ["Regulatory T cells", "Tregs", "Regulatory T cells (Tregs)"]}, {"def": "A theory of autoimmunity where pathogen epitopes resemble self-antigens closely enough that the immune response against the pathogen also attacks self tissue.", "answers": ["Molecular mimicry", "antigenic", "Molecular (antigenic) mimicry"]}, {"def": "Self-antigens normally isolated from immune surveillance (cornea, testicles, brain) become exposed after tissue damage and are attacked as foreign.", "answers": ["Hidden/sequestered antigen theory"]}, {"def": "Recurrent infection/organ damage causes the immune system to develop multiple new autoantibodies over time.", "answers": ["Epitope spread"]}, {"def": "A normal immune mechanism triggered inappropriately, excessively, or with undesirable effects; four types (I\u2013IV).", "answers": ["Hypersensitivity"]}, {"def": "The principal antibody mediating type I hypersensitivity; binds mast cell/basophil Fc receptors.", "answers": ["IgE"]}, {"def": "Release of preformed (histamine, heparin, enzymes) and newly-formed (leukotrienes, prostaglandins) mediators triggered by IgE-antigen cross-linking.", "answers": ["Mast cell degranulation"]}, {"def": "A life-threatening, systemic type I hypersensitivity reaction.", "answers": ["Anaphylaxis"]}, {"def": "An immune deficiency not attributable to another cause \u2014 congenital or acquired (e.g., HIV/AIDS).", "answers": ["Primary immunodeficiency"]}, {"def": "Immune impairment resulting from another disorder or treatment (chemotherapy, malnutrition, stress).", "answers": ["Secondary immunodeficiency"]}, {"def": "Severe combined immunodeficiency \u2014 genetic disorders causing absent/dysfunctional T cells (\u00b1 B cells/NK cells), leaving both cellular and humoral immunity impaired.", "answers": ["SCID"]}, {"def": "A T-cell disorder from a hypoplastic/aplastic thymus due to a chromosome 22q11.2 deletion.", "answers": ["DiGeorge syndrome", "22q11.2 deletion", "DiGeorge syndrome (22q11.2 deletion)"]}, {"def": "An X-linked disorder (WASp gene) causing B-cell dysfunction, microthrombocytopenia, and eczema.", "answers": ["Wiskott-Aldrich syndrome"]}, {"def": "The most common B-cell PID \u2014 lack of serum IgA; often asymptomatic but linked to autoimmune/allergic conditions.", "answers": ["Selective IgA deficiency"]}];
+const QUIZ_TEACHBACK = [{"topic": "Excessive vs. Deficient Immune Responses", "points": ["<b>Autoimmunity vs. hypersensitivity \u2014 a key distinction:</b> Autoimmunity describes the CAUSE (immune attack on self). Hypersensitivity describes the MECHANISM of injury (how the damage happens) \u2014 which\u2026", "<b>Worked examples of the overlap:</b> Myasthenia gravis = autoimmune disease AND type II hypersensitivity. Immune complex glomerulonephritis = autoimmune disease AND type III hypersensitivity. But\u2026"]}, {"topic": "Self-Tolerance", "points": ["<b>Central tolerance:</b> Occurs in the thymus (T cells) and bone marrow (B cells) \u2014 the thymus is principally responsible for eliminating/suppressing aggressive\u2026", "<b>Peripheral tolerance \u2014 the backup system:</b> A small number of self-reactive T cells always escape thymic control. Peripheral tolerance catches them via clonal deletion, anergy (T-cell\u2026", "How Tregs actually work: CD4+ T cells binding self-antigen on specialized APCs get triggered to express FOXP3, converting them into inhibitory Tregs.\u2026"]}, {"topic": "Theories of Autoimmunity", "points": ["<b>Molecular (antigenic) mimicry:</b> Pathogen epitopes resemble self-antigens closely enough to be attacked by cross-reactive lymphocytes. Classic example: streptococcal M protein cross-reacts with human\u2026", "<b>Hidden/sequestered antigen theory:</b> Self-antigens in immune-privileged sites (cornea, testicles, brain \u2014 areas not drained by lymphatics) were never \"seen\" during tolerance development. Tissue\u2026", "<b>Adjuvant/bystander effect:</b> An infection activates immune cell receptors \u2192 proinflammatory cytokine release \u2192 activates PREEXISTING autoreactive T/B cells that had escaped thymic\u2026", "<b>Epitope spread:</b> Recurrent infection/organ damage \u2192 immune system develops MULTIPLE autoantibodies over time (spreading beyond the original target).", "<b>Thymus gland defect theories:</b> Impaired T-cell maturation/differentiation (decreased hormone secretion, or failure to expose developing T cells to ALL self products) \u2192 unrecognized self\u2026", "<b>Treg dysfunction theory:</b> Decreased Treg numbers/activity fail to repress autoreactive lymphocytes. Some Tregs lose FOXP3 and convert into effector T cells. A FOXP3\u2026"]}, {"topic": "The Four Types of Hypersensitivity \u2014 Overview", "points": ["<b>Serum vs. cell transferability:</b> Types I, II, and III can all be transferred via serum (antibody-mediated). Type IV can ONLY be transferred via cells\u2026", "<b>Type II has two subtypes:</b> IIa: antibody injures/kills the target cell (classic cytotoxic). IIb: antibody STIMULATES the cell instead of injuring it (e.g., Graves disease\u2026", "Type IV's four subtypes (a-d): IVa = CD4+ TH1 cells activating macrophages. IVb = CD4+ TH2 cells with eosinophil involvement (eosinophilic asthma).\u2026"]}, {"topic": "Type I Hypersensitivity \u2014 Etiology & Pathogenesis", "points": ["<b>Genetic component:</b> Strong hereditary link to IgE responsiveness \u2014 both the ability to respond to a specific allergen AND general IgE-production capacity.\u2026", "<b>Timing \u2014 why it's called \"immediate\":</b> Signs/symptoms typically appear 15\u201330 minutes after allergen exposure. Requires prior sensitization \u2014 repeated exposures are usually needed before significant IgE\u2026", "<b>Mast cells \u2014 the principal effector:</b> Found throughout loose connective tissue; each covered with up to 500,000 IgE receptors , filled with granules of vasoactive/proinflammatory mediators\u2026", "<b>Environmental amplifiers:</b> Tobacco smoke and pollution can increase mucosal permeability, enhancing allergen entry \u2014 which in turn increases IgE levels and IgE\u2026"]}, {"topic": "Histamine & Other Mediators", "points": ["<b>Preformed vs. newly formed mediators:</b> Preformed (stored in granules): histamine, heparin, proteolytic enzymes, cytokines, chemotactic factors. Newly formed (made during degranulation): superoxide, prostaglandins, thromboxanes, leukotrienes,\u2026", "<b>H1 vs. H2 receptors \u2014 largely opposing effects:</b> H1 (most active on mast cells): \u2191 vascular permeability, vasodilation (flushing), urticaria, bronchoconstriction, \u2191 mucus/pruritus, \u2191 gut permeability. H2: smooth\u2026", "<b>H3 & H4 receptors:</b> H3: brain, spinal cord, sensory neurons (postganglionic cholinergic nerves in lung bronchi). H4: immune cells (dendritic cells, eosinophils, T cells,\u2026", "<b>Other key mediators:</b> Kininogenase/tryptase activate the kinin pathway; C3 activates complement via the alternative pathway; heparin decreases clotting; leukotrienes cause smooth muscle contraction\u2026"]}, {"topic": "Type I \u2014 Clinical Manifestations, Treatment & Prevention", "points": ["<b>Spectrum of severity:</b> Mild: urticaria, seasonal rhinitis, eczema, mild bronchoconstriction. More severe: throat tightening, localized edema, wheezing, tachycardia. Most severe: anaphylaxis \u2014 classically\u2026", "<b>Common triggers to recognize:</b> Medications (penicillin, NSAIDs, contrast media), biologics (antisera, insulin, vaccines), latex, pollen/mold/dander/dust mites, insect venom (Hymenoptera), foods (peanuts, tree nuts, shellfish,\u2026"]}, {"topic": "Primary vs. Secondary Immunodeficiency", "points": ["<b>Primary:</b> Not attributable to another cause \u2014 congenital or acquired (HIV/AIDS is a primary ACQUIRED immunodeficiency). Congenital PIDs occur in ~1\u2026", "<b>Secondary:</b> A consequence of another disorder or treatment \u2014 malnutrition, hyperlipidemia, cancer chemotherapy, or biopsychosocial stress (e.g., postsurgical immune suppression)."]}, {"topic": "Severe Combined Immunodeficiency (SCID)", "points": ["<b>Clinical presentation:</b> Ill within 3 months of age: failure to thrive, persistent oral thrush, persistent diarrhea, severe Candida diaper dermatitis, recurrent severe\u2026", "<b>Susceptible pathogens:</b> Candida albicans , Pneumocystis jiroveci , CMV, herpesvirus, and common childhood diseases (varicella, measles) \u2014 opportunistic and severe because they\u2026", "Management: protective isolation, strict handwashing, avoid other children pre-discharge, CMV-negative breastfeeding only. Curative therapy: hematopoietic stem cell transplant (cord blood or bone\u2026"]}, {"topic": "Wiskott-Aldrich Syndrome", "points": ["<b>Genetics:</b> X-linked (males only) \u2014 WASp gene mutation, Xp11.23. WASp is involved in cytoplasmic signaling, immune cell function, and actin cytoskeleton\u2026", "<b>Lab pattern:</b> \u2193 Mature peripheral B cells; \u2193 IgM, \u2191 IgE and IgA, normal-to-low IgG (from increased antibody catabolism); low/absent isohemagglutinins; low\u2026", "Classic triad: microthrombocytopenia + eczema + increased infection/malignancy susceptibility. Particular vulnerability to polysaccharide-encapsulated bacteria ( S. pneumoniae , H. influenzae ) \u2014\u2026"]}, {"topic": "DiGeorge Syndrome (22q11.2 Deletion)", "points": ["<b>Genetics & mechanism:</b> Autosomal dominant, chromosome 22q11.2 deletion (usually maternally inherited) \u2014 most common microdeletion syndrome (~1/4000 live births, equal sex distribution). Causes\u2026", "<b>The classic triad:</b> Immunodeficiency (75%) + congenital cardiac anomalies (75%) + hypoparathyroidism (50%).", "<b>Other features:</b> Hypothyroidism, esophageal atresia/reflux, urogenital anomalies, growth restriction, developmental delay, psychiatric/behavioral issues, microcephaly, dysmorphic facial features (mandibular hypoplasia, short forehead, low-set\u2026", "<b>Treatment:</b> Thymic or bone marrow transplant for reestablishing T-cell populations in severe cases; targeted management of cardiac defects, hypocalcemia/seizures, and psychiatric\u2026"]}, {"topic": "Chronic Mucocutaneous Candidiasis Disease (CMCD)", "points": ["<b>Genetics:</b> Autosomal dominant gain-of-function STAT1 mutation \u2192 impaired/absent IL-17 (or IL-17F) \u2192 selective cell-mediated immunity deficiency specifically against C. albicans and\u2026", "<b>Clinical picture:</b> B-cell and T-cell function are otherwise NORMAL except for this specific inability to respond to candidal infection \u2014 causing persistent/recurrent\u2026"]}, {"topic": "Selective IgA Deficiency", "points": ["<b>The most common B-cell PID:</b> Incidence varies by ancestry: 1/600 (White populations) vs. 1/2600 (Asian populations). Mechanism: plasma cell apoptosis or failure of IgA-bearing lymphocytes\u2026", "<b>Clinical picture:</b> Often completely asymptomatic. When symptomatic: respiratory/GI/GU infections. High rate of associated allergic, vascular, endocrine, and autoimmune disease (IBD, celiac, SLE,\u2026", "Critical transfusion consideration: because these patients can develop anti-IgA antibodies, exogenous IgA replacement is contraindicated , and when blood products are needed,\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

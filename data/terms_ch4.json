@@ -1,0 +1,106 @@
+[
+ {
+  "term": "Reversible cell injury",
+  "def": "Injury mild/short-lived enough that the cell returns to normal once the stress is removed."
+ },
+ {
+  "term": "Hydropic swelling (oncosis)",
+  "def": "Cellular swelling from water accumulation due to Na+-K+ pump failure \u2014 the first manifestation of most reversible injury."
+ },
+ {
+  "term": "Atrophy",
+  "def": "Decreased cell size/function in response to disuse, denervation, ischemia, starvation, lost trophic signals, or persistent injury."
+ },
+ {
+  "term": "Hypertrophy",
+  "def": "Increased cell mass/functional capacity from a net increase in cellular protein content, without cell division."
+ },
+ {
+  "term": "Hyperplasia",
+  "def": "Increased cell number via mitotic division, in cells capable of dividing."
+ },
+ {
+  "term": "Metaplasia",
+  "def": "Replacement of one differentiated cell type with another, better able to tolerate ongoing injury; fully reversible."
+ },
+ {
+  "term": "Dysplasia",
+  "def": "Disorganized cellular appearance (abnormal size/shape/arrangement) \u2014 an adaptive effort gone wrong; considered preneoplastic."
+ },
+ {
+  "term": "Carcinoma in situ",
+  "def": "Severe dysplasia involving the entire thickness of the epithelium."
+ },
+ {
+  "term": "Necrosis",
+  "def": "Pathologic, messy cell death from external injury \u2014 cell rupture, content spillage, and inflammation."
+ },
+ {
+  "term": "Apoptosis",
+  "def": "Programmed, \"tidy\" cell death from intracellular signaling \u2014 no rupture, no inflammation; can be normal or pathologic."
+ },
+ {
+  "term": "Coagulative necrosis",
+  "def": "The most common necrosis type; denatured proteins, tissue architecture preserved for weeks; typically from ischemia."
+ },
+ {
+  "term": "Liquefactive necrosis",
+  "def": "Rapid dissolution of dead tissue into liquid debris; classic in the brain or with bacterial abscess formation."
+ },
+ {
+  "term": "Fat necrosis",
+  "def": "Death of adipose tissue, classically from pancreatitis/trauma; forms calcium soaps (saponification), appears chalky white."
+ },
+ {
+  "term": "Caseous necrosis",
+  "def": "Cheese-like, walled-off necrosis characteristic of tuberculosis-damaged lung tissue."
+ },
+ {
+  "term": "Gangrene",
+  "def": "Necrosis of a large tissue area, usually from major blood supply interruption; dry, wet, or gas subtypes."
+ },
+ {
+  "term": "Ischemia",
+  "def": "Interrupted blood flow to a tissue \u2014 injures cells faster than hypoxia alone because it also blocks nutrient delivery and waste removal."
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Cellular damage occurring after blood flow is restored to previously ischemic tissue \u2014 often causes more damage than the ischemia itself."
+ },
+ {
+  "term": "Free radicals (reactive oxygen species)",
+  "def": "Molecules with an unpaired electron (superoxide, peroxide, hydroxyl radicals) that damage membranes, proteins, and DNA."
+ },
+ {
+  "term": "Telomere",
+  "def": "Protective end-cap of a chromosome that shortens with each cell division, eventually triggering dormancy or death."
+ },
+ {
+  "term": "Telomerase",
+  "def": "The enzyme that rebuilds telomeres \u2014 active in germ cells (near-immortality) and, notably, many cancer cells."
+ },
+ {
+  "term": "Hayflick limit",
+  "def": "The finite number of divisions a cell line can undergo before becoming dormant or dying, tied to telomere shortening."
+ },
+ {
+  "term": "Sirtuins",
+  "def": "A protein family linking caloric restriction to longevity \u2014 help regulate DNA repair and prevent apoptosis."
+ },
+ {
+  "term": "Dysbiosis",
+  "def": "Derangement of the normal microbiome, implicated as a contributor to aging and disease."
+ },
+ {
+  "term": "Somatic death",
+  "def": "Death of the entire organism \u2014 absence of respiration and heartbeat, with no inflammatory/immune response (unlike localized cell death)."
+ },
+ {
+  "term": "Rigor mortis",
+  "def": "Post-death muscle stiffening from perpetual actin-myosin cross-bridging as ATP depletes and calcium accumulates; appears within ~6 hours."
+ },
+ {
+  "term": "Lipofuscin",
+  "def": "An age-related \"wear and tear\" pigment that accumulates in atrophied cells' residual lysosomal vesicles, giving a yellow-brown appearance."
+ }
+]

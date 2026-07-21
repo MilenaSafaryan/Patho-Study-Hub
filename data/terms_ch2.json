@@ -1,0 +1,98 @@
+[
+ {
+  "term": "Homeostasis",
+  "def": "Maintaining internal conditions in a stable state around a narrow \"set point,\" via negative feedback loops."
+ },
+ {
+  "term": "Milieu int\u00e9rieur",
+  "def": "Claude Bernard's term for the stable internal environment necessary for survival, independent of the external environment."
+ },
+ {
+  "term": "Allostasis",
+  "def": "The dynamic process of achieving stability through change \u2014 varying physiologic parameters to match resources to environmental demands."
+ },
+ {
+  "term": "Stressor",
+  "def": "Anything that throws the body out of allostatic balance (Sapolsky's definition)."
+ },
+ {
+  "term": "Stress response",
+  "def": "The body's effort to restore allostatic balance after a stressor (Sapolsky's definition)."
+ },
+ {
+  "term": "General adaptation syndrome (GAS)",
+  "def": "Selye's model of the body's nonspecific response to any stressor, in three stages: alarm, resistance, exhaustion."
+ },
+ {
+  "term": "Alarm stage",
+  "def": "The fight-or-flight stage of GAS \u2014 hypothalamus activates the SNS and HPA axis in response to a stressor."
+ },
+ {
+  "term": "Resistance (adaptation) stage",
+  "def": "The GAS stage where the body mobilizes glucose, fatty acids, and amino acids to manage an ongoing stressor."
+ },
+ {
+  "term": "Exhaustion stage",
+  "def": "The GAS stage where prolonged stress causes glucocorticoid dysregulation, loss of resistance, and \"diseases of adaptation.\""
+ },
+ {
+  "term": "HPA axis",
+  "def": "Hypothalamic-pituitary-adrenal axis \u2014 CRH \u2192 ACTH \u2192 cortisol; the slower hormonal arm of the stress response."
+ },
+ {
+  "term": "Sympathetic-adrenal-medullary (SAM) system",
+  "def": "The fast-acting arm of the stress response \u2014 SNS activation triggering adrenal medulla release of catecholamines."
+ },
+ {
+  "term": "CRH (corticotropin-releasing hormone)",
+  "def": "Released by the hypothalamic paraventricular nucleus (PVN); activates both the SNS and the anterior pituitary (ACTH release)."
+ },
+ {
+  "term": "ACTH",
+  "def": "Adrenocorticotropic hormone, released by the anterior pituitary in response to CRH; stimulates the adrenal cortex to release cortisol."
+ },
+ {
+  "term": "Cortisol",
+  "def": "The primary glucocorticoid; mobilizes glucose/protein/fat stores, suppresses inflammation and immune function, slower onset but longer duration than catecholamines."
+ },
+ {
+  "term": "Aldosterone",
+  "def": "The primary mineralocorticoid; promotes sodium reabsorption/potassium excretion in the kidney, expanding fluid volume and raising blood pressure."
+ },
+ {
+  "term": "Allostatic load",
+  "def": "The cumulative physiologic \"wear and tear\" cost of repeated or chronic allostatic responses."
+ },
+ {
+  "term": "Allostatic overload",
+  "def": "When adaptation mechanisms are overwhelmed or inadequate, producing pathophysiologic states across multiple body systems."
+ },
+ {
+  "term": "Resilience",
+  "def": "The capacity to adapt successfully to stress/adversity, preventing disease and mitigating allostatic load."
+ },
+ {
+  "term": "Maladaptation",
+  "def": "Ineffective, inadequate, or inappropriate change in response to altered circumstances."
+ },
+ {
+  "term": "Coping",
+  "def": "A behavioral adaptive response to a stressor; can be functional (health-promoting) or dysfunctional (maladaptive, e.g., overeating, substance use)."
+ },
+ {
+  "term": "Distress",
+  "def": "The experience of perceiving an inability to cope with a stressor \u2014 further escalates catecholamine and glucocorticoid release."
+ },
+ {
+  "term": "Habituation",
+  "def": "Adapting to a repeated stressor by training the hypothalamus to react less forcefully to it (e.g., no longer noticing airport noise)."
+ },
+ {
+  "term": "Tend-and-befriend response",
+  "def": "An alternative to fight-or-flight, thought to be more common in females, mediated by oxytocin and endogenous opioids \u2014 produces a calming, affiliative response to stress."
+ },
+ {
+  "term": "Psychoneuroimmunology",
+  "def": "The field studying interactions among the nervous, endocrine, and immune systems, especially regarding stress and its effects on health."
+ }
+]

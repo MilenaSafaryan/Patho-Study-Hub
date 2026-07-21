@@ -1,0 +1,114 @@
+[
+ {
+  "term": "Hemodynamics",
+  "def": "The principles governing blood flow \u2014 pressure, resistance, velocity, laminar/turbulent flow, wall tension, compliance."
+ },
+ {
+  "term": "Poiseuille's law",
+  "def": "The formula describing how vessel length, radius, and blood viscosity determine resistance to flow."
+ },
+ {
+  "term": "Ohm's law (hemodynamic)",
+  "def": "Q = P/R \u2014 blood flow equals the pressure difference divided by resistance."
+ },
+ {
+  "term": "Systemic vascular resistance (SVR)",
+  "def": "Resistance peripheral to the heart and lungs; primarily determined by arteriolar tone."
+ },
+ {
+  "term": "Velocity",
+  "def": "Distance traveled per unit time (cm/sec); varies inversely with total cross-sectional area."
+ },
+ {
+  "term": "Laminar flow",
+  "def": "Streamlined blood flow in layers, with central blood moving fastest (parabolic profile)."
+ },
+ {
+  "term": "Turbulent flow",
+  "def": "Disrupted, crosswise flow \u2014 audible as a bruit, palpable as a thrill; promotes thrombus formation."
+ },
+ {
+  "term": "Law of Laplace",
+  "def": "Wall tension = distending pressure \u00d7 vessel radius; explains why large-radius, high-pressure vessels (aneurysms) are prone to rupture."
+ },
+ {
+  "term": "Critical closing pressure",
+  "def": "The pressure (~20 mmHg) below which a vessel can no longer be held open and flow ceases."
+ },
+ {
+  "term": "Vasomotor tone",
+  "def": "The continuous baseline level of vascular smooth muscle contraction from basal vasomotor center discharge."
+ },
+ {
+  "term": "Autoregulation",
+  "def": "An organ/tissue's intrinsic ability to maintain relatively constant blood flow despite changes in arterial pressure."
+ },
+ {
+  "term": "Nitric oxide (NO)",
+  "def": "The primary endothelium-derived vasodilating gas; deficiency implicated in hypertension and heart disease."
+ },
+ {
+  "term": "Active (functional) hyperemia",
+  "def": "Increased local blood flow in response to increased tissue metabolic demand."
+ },
+ {
+  "term": "Reactive hyperemia",
+  "def": "The flushing/increased flow seen after a temporary flow reduction is reversed (e.g., after a tourniquet is removed)."
+ },
+ {
+  "term": "Thrombus",
+  "def": "A stationary blood clot formed within a vessel or heart chamber."
+ },
+ {
+  "term": "Embolus",
+  "def": "Material (often a dislodged thrombus) that travels through the bloodstream and lodges elsewhere, obstructing flow."
+ },
+ {
+  "term": "Vasospasm",
+  "def": "Sudden arterial smooth muscle constriction causing flow obstruction."
+ },
+ {
+  "term": "Vasculitis / phlebitis / arteritis",
+  "def": "Inflammation of an artery's intima / a vein's lining / an autoimmune arterial inflammatory process, respectively."
+ },
+ {
+  "term": "Compartment syndrome",
+  "def": "Increased pressure within a fascial compartment compromising circulation \u2014 from swelling, bleeding, or external compression."
+ },
+ {
+  "term": "Arteriosclerosis",
+  "def": "General term for arterial thickening/hardening; encompasses M\u00f6nckeberg sclerosis, arteriolar sclerosis, and atherosclerosis."
+ },
+ {
+  "term": "Atherosclerosis",
+  "def": "Plaque buildup (lipid, smooth muscle, inflammatory debris) in the intima of large/medium arteries \u2014 the dominant, most clinically significant arteriosclerotic process."
+ },
+ {
+  "term": "Aneurysm",
+  "def": "A localized dilation of an arterial wall \u2014 a weakened area at risk of rupture."
+ },
+ {
+  "term": "Arteriovenous fistula (AVF)",
+  "def": "An abnormal direct communication between an artery and a vein."
+ },
+ {
+  "term": "Valvular incompetence",
+  "def": "Failure of venous valves to close properly, allowing backward blood flow."
+ },
+ {
+  "term": "Varicose veins",
+  "def": "Superficial vein valvular incompetence causing dilated, tortuous, visible veins."
+ },
+ {
+  "term": "Chronic venous insufficiency",
+  "def": "Valvular incompetence involving the deep veins of the legs."
+ },
+ {
+  "term": "Deep vein thrombosis (DVT)",
+  "def": "A thrombus in a deep vein, most often the legs/pelvis \u2014 the most frequent source of pulmonary emboli."
+ },
+ {
+  "term": "Lymphedema",
+  "def": "Lymphatic fluid accumulation in the interstitium from obstructed/altered lymph flow \u2014 primary (congenital) or secondary (acquired/iatrogenic)."
+ }
+]

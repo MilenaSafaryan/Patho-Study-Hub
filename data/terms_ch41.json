@@ -1,0 +1,146 @@
+[
+ {
+  "term": "GLUT-1 to GLUT-4",
+  "def": "Tissue-specific glucose transporters. GLUT-1/2/3 are insulin-independent; GLUT-4 (muscle/adipose) is insulin-dependent."
+ },
+ {
+  "term": "Islets of Langerhans",
+  "def": "Clusters of hormone-producing pancreatic cells: \u03b2 cells (insulin), \u03b1 cells (glucagon), \u03b4 cells (somatostatin), F cells (pancreatic polypeptide)."
+ },
+ {
+  "term": "Proinsulin",
+  "def": "The precursor molecule cleaved into insulin and C-peptide within secretory vesicles."
+ },
+ {
+  "term": "Amylin",
+  "def": "A peptide hormone cosecreted with insulin by \u03b2 cells; inhibits gastric emptying, induces satiety, and prevents postprandial glucose spikes."
+ },
+ {
+  "term": "Incretin effect",
+  "def": "The enhanced insulin response to oral (vs. IV) glucose, mediated by gut hormones GIP and GLP-1."
+ },
+ {
+  "term": "GIP / GLP-1",
+  "def": "Incretin hormones from intestinal cells; stimulate insulin production, promote \u03b2-cell proliferation, inhibit apoptosis. GLP-1 also delays gastric emptying and inhibits glucagon."
+ },
+ {
+  "term": "Glycogenesis",
+  "def": "Production of glycogen from glucose, mainly in liver and muscle, in the fed state."
+ },
+ {
+  "term": "Glycogenolysis",
+  "def": "Breakdown of stored glycogen into glucose, in the fasting state."
+ },
+ {
+  "term": "Gluconeogenesis",
+  "def": "Production of new glucose from amino acids and other non-carbohydrate substrates, mainly in the liver."
+ },
+ {
+  "term": "Lipolysis",
+  "def": "Breakdown of fat from adipose tissue into free fatty acids, stimulated by declining insulin levels."
+ },
+ {
+  "term": "Counterregulatory hormones",
+  "def": "Corticosteroids, growth hormone, and catecholamines \u2014 all raise blood glucose and oppose insulin's effects."
+ },
+ {
+  "term": "Impaired fasting glucose (IFG)",
+  "def": "Fasting plasma glucose 100\u2013125 mg/dL \u2014 a prediabetes category."
+ },
+ {
+  "term": "Impaired glucose tolerance (IGT)",
+  "def": "2-hour OGTT plasma glucose 140\u2013199 mg/dL \u2014 a prediabetes category."
+ },
+ {
+  "term": "HbA1C",
+  "def": "Glycosylated hemoglobin; reflects average blood glucose over ~2-3 months. Diabetes: \u22656.5%. Prediabetes: 5.7-6.4%."
+ },
+ {
+  "term": "Type 1A diabetes",
+  "def": "Immune-mediated \u03b2-cell destruction; the more common form of type 1 diabetes."
+ },
+ {
+  "term": "Type 1B diabetes",
+  "def": "Idiopathic \u03b2-cell destruction without autoimmune markers or HLA association; rare."
+ },
+ {
+  "term": "LADA",
+  "def": "Latent autoimmune diabetes in adults \u2014 an autoimmune type 1 subtype typically diagnosed after age 35, often initially misdiagnosed as type 2."
+ },
+ {
+  "term": "GADA65",
+  "def": "Antibody to glutamic acid decarboxylase 65 \u2014 an autoantibody marker of autoimmune (type 1A/LADA) diabetes."
+ },
+ {
+  "term": "Insulinopenia",
+  "def": "Insufficient insulin production."
+ },
+ {
+  "term": "Polydipsia / Polyuria / Polyphagia",
+  "def": "The classic triad of diabetes symptoms: excessive thirst, urination, and hunger."
+ },
+ {
+  "term": "Diabetic ketoacidosis (DKA)",
+  "def": "Severe insulin deficiency causing lipolysis, ketoacid production, and metabolic acidosis; primarily a type 1 complication."
+ },
+ {
+  "term": "Kussmaul respirations",
+  "def": "Deep, labored, \"fruity\"-smelling breathing \u2014 the respiratory compensation for the metabolic acidosis of DKA."
+ },
+ {
+  "term": "Nonketotic hyperglycemic hyperosmolar syndrome (NHHS)",
+  "def": "Severe hyperglycemia with little/no ketosis and striking dehydration; primarily a type 2 complication, especially in older adults."
+ },
+ {
+  "term": "Dawn phenomenon",
+  "def": "Early-morning blood glucose rise from increased growth hormone, cortisol, glucagon, and epinephrine release."
+ },
+ {
+  "term": "Macrovascular complications",
+  "def": "Diabetes-accelerated damage to large vessels \u2014 cardiovascular disease, stroke, peripheral arterial disease."
+ },
+ {
+  "term": "Microvascular complications",
+  "def": "Capillary basement membrane thickening leading to retinopathy and nephropathy."
+ },
+ {
+  "term": "Advanced glycation end products",
+  "def": "Proteins altered by chronic high glucose exposure, implicated in microvascular complication pathogenesis."
+ },
+ {
+  "term": "Diabetic retinopathy",
+  "def": "Progressive retinal capillary damage \u2014 background, preproliferative, and proliferative stages; the leading cause of new adult blindness in the US."
+ },
+ {
+  "term": "Diabetic nephropathy",
+  "def": "Glomerulosclerosis from capillary basement membrane thickening; the leading cause of end-stage renal disease in the US."
+ },
+ {
+  "term": "Microalbuminuria",
+  "def": "Small amounts of protein in the urine \u2014 the earliest detectable sign of diabetic nephropathy."
+ },
+ {
+  "term": "Diabetic neuropathy",
+  "def": "Nerve damage from hyperglycemia, divided into autonomic and sensory dysfunction; linked to reduced myoinositol and the polyol pathway."
+ },
+ {
+  "term": "Polyol pathway",
+  "def": "Degradation of glucose to sorbitol and fructose in nerves under hyperglycemia/insulinopenia, linked to reduced myoinositol and neuropathy."
+ },
+ {
+  "term": "Metformin",
+  "def": "A biguanide; first-line oral agent for type 2 diabetes \u2014 suppresses hepatic gluconeogenesis and enhances peripheral glucose uptake without causing hypoglycemia."
+ },
+ {
+  "term": "Sulfonylureas",
+  "def": "Insulin secretagogues used in type 2 diabetes for over 40 years (e.g., glyburide, glipizide, glimepiride)."
+ },
+ {
+  "term": "SGLT2 inhibitors (gliflozins)",
+  "def": "A newer diabetes drug class (canagliflozin, dapagliflozin, empagliflozin) that blocks renal glucose reabsorption."
+ },
+ {
+  "term": "Honeymoon period",
+  "def": "A temporary return to normoglycemia without exogenous insulin after type 1 diagnosis, when insulin needs drop below residual production; rarely lasts more than a year."
+ }
+]

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disorders of Hemostasis — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.2rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:2.05rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.84rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=14" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Disorders of Hemostasis</p>
+<span class="brand-sub">Chapter 14 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">The Process of Hemostasis</div>
+<a href="#stages">Stages of Hemostasis</a>
+<a href="#platelets">Platelets</a>
+<a href="#clotting-factors">Blood Coagulation Factors</a>
+<a href="#coagulation-cascade">The Coagulation Cascade</a>
+<a href="#fibrinolysis">Fibrinolysis</a>
+<div class="grp-title">Evaluation</div>
+<a href="#clinical-assessment">Clinical Assessment &amp; Skin Findings</a>
+<a href="#lab-tests">Laboratory Tests</a>
+<div class="grp-title">Vascular &amp; Platelet Disorders</div>
+<a href="#vascular-purpura">Vascular Purpura</a>
+<a href="#hht">Hereditary Hemorrhagic Telangiectasia</a>
+<a href="#thrombocytopenia">Thrombocytopenia &amp; ITP</a>
+<div class="grp-title">Coagulation Disorders</div>
+<a href="#hemophilia">Hemophilia A &amp; B</a>
+<a href="#vwd">von Willebrand Disease</a>
+<a href="#vitamin-k-newborn">Vitamin K Deficiency Bleeding (Newborn)</a>
+<a href="#vitamin-k-acquired">Acquired Vitamin K Deficiency</a>
+<a href="#dic">Disseminated Intravascular Coagulation (DIC)</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Disorders of Hemostasis</h1>
+<p>How the body stops bleeding — vessel spasm, platelet plug, and the fibrin clot — plus what goes wrong in vascular, platelet, and coagulation factor disorders. Built from your Chapter 14 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Hemostasis</dt><dd>Arrest of bleeding / prevention of blood loss after vessel injury.</dd></div>
+<div class="term"><dt>Primary hemostasis</dt><dd>The initial response to vessel injury — vasoconstriction plus platelet plug formation.</dd></div>
+<div class="term"><dt>Secondary hemostasis</dt><dd>Formation of a fibrin clot (coagulation) to reinforce the platelet plug.</dd></div>
+<div class="term"><dt>Clot retraction</dt><dd>The final stage — platelet plug, fibrin strands, and trapped RBCs compress into a firm clot (~1 hour).</dd></div>
+<div class="term"><dt>Degranulation</dt><dd>Platelet release of α granules (thrombospondin, fibrinogen, vWF, factors V/VIII) and dense bodies (ADP, ATP, serotonin) after activation.</dd></div>
+<div class="term"><dt>Thromboxane A2 (TxA2)</dt><dd>A potent platelet aggregation agonist formed from arachidonic acid; blocked by aspirin/COX inhibitors.</dd></div>
+<div class="term"><dt>GpIIb/IIIa receptor</dt><dd>Platelet surface receptor that binds fibrinogen to link platelets together during aggregation.</dd></div>
+<div class="term"><dt>Thrombin</dt><dd>The active enzyme (from prothrombin) that converts fibrinogen to fibrin and activates factors V, VIII, and XIII.</dd></div>
+<div class="term"><dt>Fibrin</dt><dd>The insoluble protein threads (from fibrinogen) that form the structural scaffold of a clot.</dd></div>
+<div class="term"><dt>Intrinsic pathway</dt><dd>Coagulation activated by blood contact with damaged endothelium/negatively charged surfaces; assessed by aPTT.</dd></div>
+<div class="term"><dt>Extrinsic pathway</dt><dd>Coagulation activated by tissue factor release after vascular/tissue trauma; assessed by PT/INR.</dd></div>
+<div class="term"><dt>Common pathway</dt><dd>Where intrinsic and extrinsic pathways converge — factor Xa converts prothrombin to thrombin.</dd></div>
+<div class="term"><dt>Antithrombin III (ATIII)</dt><dd>A natural anticoagulant that binds and inactivates free thrombin; its activity is enhanced by heparin.</dd></div>
+<div class="term"><dt>Protein C / Protein S</dt><dd>Vitamin K-dependent anticoagulant proteins; protein C inactivates factors V/VIII, protein S assists it and triggers fibrinolysis.</dd></div>
+<div class="term"><dt>Fibrinolysis</dt><dd>Clot dissolution via plasmin, which digests fibrin/fibrinogen and produces fibrin split (degradation) products.</dd></div>
+<div class="term"><dt>Petechiae</dt><dd>Flat, pinpoint, nonblanching red/purple spots from capillary hemorrhage — classic in vascular/platelet disorders.</dd></div>
+<div class="term"><dt>Purpura</dt><dd>Petechiae occurring in groups or patches.</dd></div>
+<div class="term"><dt>Ecchymosis</dt><dd>A bruise — blood escaping into tissue; if raised, called a hematoma.</dd></div>
+<div class="term"><dt>Hemarthrosis</dt><dd>Bleeding into a joint, with swelling and pain — the hallmark of hemophilia.</dd></div>
+<div class="term"><dt>Telangiectasia</dt><dd>A dilated, tortuous small vessel that blanches with pressure and bleeds easily with minor trauma.</dd></div>
+<div class="term"><dt>PT / INR</dt><dd>Prothrombin time / international normalized ratio — assesses the extrinsic pathway.</dd></div>
+<div class="term"><dt>aPTT</dt><dd>Activated partial thromboplastin time — assesses the intrinsic pathway.</dd></div>
+<div class="term"><dt>Thrombocytopenia</dt><dd>Low platelet count, a common cause of generalized bleeding.</dd></div>
+<div class="term"><dt>Immune thrombocytopenia (ITP)</dt><dd>An acquired, immune-mediated cause of thrombocytopenia; classified as newly diagnosed, persistent, or chronic.</dd></div>
+<div class="term"><dt>Hemophilia A</dt><dd>X-linked recessive factor VIII deficiency — the classic form, ~85% of hemophilia cases.</dd></div>
+<div class="term"><dt>Hemophilia B (Christmas disease)</dt><dd>X-linked recessive factor IX deficiency — less common than hemophilia A.</dd></div>
+<div class="term"><dt>von Willebrand disease</dt><dd>A disorder of von Willebrand factor (vWF), causing both platelet dysfunction and reduced factor VIII stability.</dd></div>
+<div class="term"><dt>Disseminated intravascular coagulation (DIC)</dt><dd>An acquired syndrome of simultaneous widespread clotting AND bleeding, from consumption of clotting factors/platelets.</dd></div>
+</dl>
+</section>
+<!-- ================= STAGES ================= -->
+<section class="block" id="stages">
+<details class="topic" open="">
+<summary>Stages of Hemostasis</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Four Stages, in Order</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="200" x="10" y="80"></rect><text font-size="11.5" text-anchor="middle" x="110" y="102">VASOCONSTRICTION</text><text font-size="10" text-anchor="middle" x="110" y="118">local myogenic spasm</text></g>
+<line class="mm-line" x1="210" x2="240" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="240" y="80"></rect><text font-size="11.5" text-anchor="middle" x="340" y="102">PLATELET PLUG</text><text font-size="10" text-anchor="middle" x="340" y="118">3–7 minutes</text></g>
+<line class="mm-line" x1="440" x2="470" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="470" y="80"></rect><text font-size="11.5" text-anchor="middle" x="570" y="102">FIBRIN CLOT</text><text font-size="10" text-anchor="middle" x="570" y="118">3–10 minutes</text></g>
+<line class="mm-line" x1="670" x2="700" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="700" y="80"></rect><text font-size="11.5" text-anchor="middle" x="800" y="102">CLOT RETRACTION</text><text font-size="10" text-anchor="middle" x="800" y="118">~1 hour</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Vasoconstriction</h4><p>Immediate response to trauma; primarily local myogenic spasm (not just nervous reflex) — the more trauma, the greater the spasm; can last minutes to hours.</p></div>
+<div class="fact warn"><h4>Platelet plug (2nd part of primary hemostasis)</h4><p>Platelets adhere to exposed endothelial collagen AND aggregate together at the injury site — usually complete in 3–7 minutes.</p></div>
+</div>
+<div class="note"><b>Secondary hemostasis</b> = fibrin clot formation, activated via intrinsic or extrinsic pathways, converting fibrinogen to fibrin (3–10 min). <b>Clot retraction</b> compresses the platelet plug + fibrin strands + trapped RBCs into a firm clot (~1 hour) — the final stabilizing step.</div>
+</div>
+</details>
+</section>
+<!-- ================= PLATELETS ================= -->
+<section class="block" id="platelets">
+<details class="topic" open="">
+<summary>Platelets</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Basics</h4><p>Normal count: 150,000–400,000/mm³. Smallest formed blood element; produced in marrow from megakaryocytes (from the pluripotent stem cell). ~25% sequestered in liver/spleen at any time. Lifespan 7–12 days; removed at end-of-life by tissue macrophages.</p></div>
+<div class="fact warn"><h4>Resting vs. activated</h4><p>Resting platelets are smooth; activation triggers membrane projections that enable adhesion/aggregation. Stress response, epinephrine, and exercise can stimulate platelet production.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Platelet Activation Cascade</p>
+<svg viewbox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="190" x="10" y="80"></rect><text font-size="11" text-anchor="middle" x="105" y="102">Adhesion to exposed</text><text font-size="10" text-anchor="middle" x="105" y="118">subendothelial collagen</text></g>
+<line class="mm-line" x1="200" x2="230" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="190" x="230" y="80"></rect><text font-size="11" text-anchor="middle" x="325" y="102">Activation →</text><text font-size="11" text-anchor="middle" x="325" y="118">degranulation</text></g>
+<line class="mm-line" x1="420" x2="450" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="220" x="450" y="80"></rect><text font-size="10.5" text-anchor="middle" x="560" y="102">ADP + collagen → arachidonic</text><text font-size="10.5" text-anchor="middle" x="560" y="118">acid → TxA2</text></g>
+<line class="mm-line" x1="670" x2="700" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="190" x="700" y="80"></rect><text font-size="10.5" text-anchor="middle" x="795" y="102">↑ GpIIb/IIIa receptors</text><text font-size="10.5" text-anchor="middle" x="795" y="118">→ aggregation</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Where drugs intervene</h4><p><b>Aspirin/COX inhibitors:</b> block arachidonic acid → TxA2 conversion. <b>GpIIb/IIIa blockers</b> (e.g., eptifibatide): block the final aggregation receptor directly. Two different points in the same cascade.</p></div>
+<div class="fact warn"><h4>Platelets aren't just for primary hemostasis</h4><p>They also catalyze interactions between activated coagulation factors (accelerating prothrombin→thrombin conversion) and play a direct role in clot retraction — involved in all three of the first stages, not just plug formation.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= CLOTTING FACTORS ================= -->
+<section class="block" id="clotting-factors">
+<details class="topic" open="">
+<summary>Blood Coagulation Factors</summary>
+<div class="topic-body">
+<div class="callout"><b>Numbering ≠ order of action:</b> factors are numbered by order of discovery, NOT the order they participate in clotting. The "a" suffix (e.g., Xa) marks the active form.</div>
+<table class="compare">
+<tr><th>Factor</th><th>Key role</th></tr>
+<tr><td>I — Fibrinogen</td><td>Converted to fibrin by thrombin; scaffold for the clot</td></tr>
+<tr><td>II — Prothrombin</td><td>Inactive precursor of thrombin; vitamin K dependent</td></tr>
+<tr><td>III — Tissue thromboplastin</td><td>Interacts with factor VII to start the extrinsic pathway</td></tr>
+<tr><td>IV — Calcium</td><td>Cofactor for most coagulation enzyme reactions</td></tr>
+<tr><td>V — Proaccelerin</td><td>Cofactor for activated factor X</td></tr>
+<tr><td>VI</td><td>Discovered to be an artifact — not a real factor</td></tr>
+<tr><td>VII — Proconvertin</td><td>Activates IX and X; vitamin K dependent</td></tr>
+<tr><td>VIII — Antihemophilic factor</td><td>Activates X with factor IX; combines with vWF for platelet adhesion; deficiency = hemophilia A</td></tr>
+<tr><td>IX — Christmas factor</td><td>Activates X; vitamin K dependent; deficiency = hemophilia B</td></tr>
+<tr><td>X — Stuart-Prower factor</td><td>Converts prothrombin → thrombin; vitamin K dependent</td></tr>
+<tr><td>XI — Plasma thromboplastin antecedent</td><td>Activates IX; deficiency → mild post-surgical bleeding only</td></tr>
+<tr><td>XII — Hageman factor</td><td>Activates XI — starts the intrinsic pathway</td></tr>
+<tr><td>XIII — Fibrin-stabilizing factor</td><td>Cross-links fibrin threads for a strong clot</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact warn"><h4>Vitamin K-dependent factors — memorize this exact list</h4><p>Factors <b>II, VII, IX, X</b> — plus protein C and protein S. All made in the liver.</p></div>
+<div class="fact"><h4>Natural anticoagulants</h4><p><b>Antithrombin III (ATIII):</b> binds/inactivates free thrombin — heparin works by enhancing ATIII activity. <b>Protein C:</b> inactivates factors V and VIII. <b>Protein S:</b> assists protein C and triggers tissue plasminogen activator release (starting fibrinolysis).</p></div>
+</div>
+<div class="note">The liver synthesizes essentially all coagulation factors except part of factor VIII (also made by other cells like megakaryocytes and endothelial cells) — this is why severe liver disease causes a bleeding tendency.</div>
+</div>
+</details>
+</section>
+<!-- ================= COAGULATION CASCADE ================= -->
+<section class="block" id="coagulation-cascade">
+<details class="topic" open="">
+<summary>The Coagulation Cascade</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Intrinsic, Extrinsic &amp; Common Pathways</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="280" x="20" y="10"></rect><text font-size="11.5" text-anchor="middle" x="160" y="32">INTRINSIC PATHWAY</text><text font-size="10" text-anchor="middle" x="160" y="48">contact w/ damaged endothelium</text></g>
+<g class="mm-node"><rect height="50" rx="10" width="280" x="600" y="10"></rect><text font-size="11.5" text-anchor="middle" x="740" y="32">EXTRINSIC PATHWAY</text><text font-size="10" text-anchor="middle" x="740" y="48">tissue trauma → tissue factor</text></g>
+<line class="mm-line" x1="160" x2="160" y1="60" y2="94"></line>
+<g class="mm-leaf"><rect height="40" rx="6" width="280" x="20" y="94"></rect><text font-size="10.5" text-anchor="middle" x="160" y="118">XII→XIIa → XI→XIa → IX→IXa</text></g>
+<line class="mm-line" x1="740" x2="740" y1="60" y2="94"></line>
+<g class="mm-leaf"><rect height="40" rx="6" width="280" x="600" y="94"></rect><text font-size="10.5" text-anchor="middle" x="740" y="118">Tissue factor + VII → VIIa</text></g>
+<line class="mm-line" x1="160" x2="450" y1="134" y2="180"></line>
+<line class="mm-line" x1="740" x2="450" y1="134" y2="180"></line>
+<g class="mm-node"><rect height="50" rx="10" width="300" x="300" y="180"></rect><text font-size="12" text-anchor="middle" x="450" y="202">X → Xa (COMMON PATHWAY)</text><text font-size="10" text-anchor="middle" x="450" y="218">+ V, Ca2+, phospholipid</text></g>
+<line class="mm-line" x1="450" x2="450" y1="230" y2="264"></line>
+<g class="mm-leaf"><rect height="30" rx="6" width="300" x="300" y="264"></rect><text font-size="11" text-anchor="middle" x="450" y="284">Prothrombin (II) → THROMBIN</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Intrinsic pathway detail</h4><p>Contact phase involves 4 factors: XII, high-molecular-weight kininogen (HMWK), prekallikrein, and XI. XIIa activates XI→XIa and prekallikrein→kallikrein (KAL). KAL liberates bradykinin from HMWK (causes initial vasodilation, then vasoconstriction via angiotensin II). XIa's major job: activate IX→IXa (with calcium). IXa then activates X→Xa (with VIII, calcium, phospholipid) — usually on activated platelet membranes.</p></div>
+<div class="fact warn"><h4>Extrinsic pathway detail</h4><p>Triggered by vascular wall trauma (crush injury). Tissue factor (III) from injured tissue activates VII→VIIa. VIIa activates X→Xa (starting the common pathway) AND also activates IX in the intrinsic system — the two pathways aren't fully independent.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Common pathway — the final steps</h4><p>Xa (+ V, calcium, phospholipid) converts prothrombin → thrombin, facilitated by activated platelets. Thrombin then: cleaves fibrinogen → fibrin, activates XIII (fibrin stabilization), AND perpetuates the cascade by continuing to activate factors V and VIII.</p></div>
+<div class="fact"><h4>PT/aPTT — mapping labs to pathways</h4><p><b>PT/INR</b> = extrinsic pathway. <b>aPTT</b> = intrinsic pathway. This single mapping is the fastest way to interpret which pathway is affected on a coag panel.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="fibrinolysis">
+<details class="topic" open="">
+<summary>Fibrinolysis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism</h4><p>Happens simultaneously with clot formation, not after. Factor XII, HMWK, KAL, and thrombin trigger plasminogen activator release → cleaves plasminogen (already incorporated into the clot) → active plasmin. Plasmin digests fibrinogen/fibrin and inactivates factors V and VIII.</p></div>
+<div class="fact warn"><h4>Fibrin split (degradation) products</h4><p>The byproducts of clot dissolution — clinically measurable, and clinically important in DIC (see below), where they act as circulating anticoagulants.</p></div>
+</div>
+<div class="note">Clearance and balance: Kupffer cells (liver) and macrophages (spleen, marrow) clear activated clotting factors and degradation products from circulation. Antiplasmins inhibit plasmin to prevent inappropriate fibrinolysis — the whole system is a continuous balance between clot production and clot dissolution, not a one-way process.</div>
+</div>
+</details>
+</section>
+<!-- ================= CLINICAL ASSESSMENT ================= -->
+<section class="block" id="clinical-assessment">
+<details class="topic" open="">
+<summary>Clinical Assessment &amp; Skin Findings</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>History clue → likely cause</h4><ul>
+<li>Family history of bleeding in BOTH males and females → von Willebrand disease</li>
+<li>Family history of bleeding in males only → Hemophilia A or B</li>
+<li>Newly acquired bruising → drugs (aspirin/NSAIDs/anticoagulants), thrombocytopenia</li>
+<li>Excessive surgical bleeding → factor deficiency, vWD, thrombocytopenia</li>
+<li>Bleeding AFTER initial hemostasis achieved → factor XIII deficiency</li>
+</ul></div>
+<div class="fact warn"><h4>Timing tells you which system is affected</h4><p>Bleeding <b>immediately</b> after trauma, involving skin/mucous membranes, brief duration → vascular or platelet defect. <b>Delayed</b> bleeding, or bleeding into muscles/joints → coagulation factor defect.</p></div>
+</div>
+<table class="compare">
+<tr><th>Finding</th><th>Description</th></tr>
+<tr><td>Petechiae</td><td>Flat, pinpoint, nonblanching; vascular/platelet disorders; found on dependent areas or under tight clothing</td></tr>
+<tr><td>Purpura</td><td>Petechiae in groups/patches; often pruritic; may involve fever/malaise/joint or visceral effusion</td></tr>
+<tr><td>Ecchymosis</td><td>Bruise from blood escaping into tissue; raised version = hematoma; color progresses red→blue→green→yellow→brown</td></tr>
+<tr><td>Hemarthrosis</td><td>Bleeding into a joint — swelling + pain; classic coagulation disorder finding</td></tr>
+<tr><td>Telangiectasia</td><td>Dilated tortuous vessels, red-violet, blanch with pressure, bleed with minor trauma; spider form linked to liver disease</td></tr>
+</table>
+<div class="danger"><b>Most life-threatening bleeding locations:</b> the oropharynx (airway compromise) and intracerebral hemorrhage — the latter is a leading cause of death in severe coagulation disorders.</div>
+<div class="note">Not all petechiae mean a bleeding disorder — petechiae in a newborn can simply be from delivery trauma, and petechiae outside dependent/constricted areas may reflect infection rather than a hemostatic problem.</div>
+</div>
+</details>
+</section>
+<section class="block" id="lab-tests">
+<details class="topic" open="">
+<summary>Laboratory Tests</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Basic screening panel</h4><p>CBC + platelet count + peripheral smear, bleeding time, PT/INR, aPTT, thrombin time.</p></div>
+<div class="fact warn"><h4>What each test tells you</h4><p><b>CBC:</b> anemia present? <b>Platelet count:</b> quantity. <b>Peripheral smear:</b> gross platelet morphology. <b>Bleeding time:</b> vascular status + platelet function. <b>PT/INR:</b> extrinsic pathway. <b>aPTT:</b> intrinsic pathway.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= VASCULAR DISORDERS ================= -->
+<section class="block" id="vascular-purpura">
+<details class="topic" open="">
+<summary>Vascular Purpura</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Allergic (Henoch-Schönlein) purpura</h4><p>Most often children &lt;8 (average age 6). Autoimmune process → vasculitis of small vessels → perivascular infiltration/effusion. Palpable lesions, proximal extremities (legs/buttocks), ± fever/pruritus/arthralgia/paresthesia. Self-limited, good prognosis; bleeding from lesions themselves is uncommon.</p></div>
+<div class="fact warn"><h4>Drug-induced purpura</h4><p>Many culprits: atropine, chloral hydrate/sedatives, sulfa drugs, procaine penicillin, warfarin. Generalized lesions; subside quickly once the drug is stopped.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Connective tissue disorders</h4><p><b>Ehlers-Danlos syndrome / osteogenesis imperfecta</b> (inherited): decreased/poor-quality collagen and elastin → large ecchymoses/hematomas, rare but possible intracranial bleeding/stroke. <b>Scurvy</b> (vitamin C deficiency): defective collagen synthesis → purpura around hair follicles and medial thighs/buttocks.</p></div>
+<div class="fact"><h4>Senile &amp; corticosteroid purpura</h4><p><b>Senile:</b> loss of subcutaneous fat/connective tissue changes → more skin mobility → shearing rupture of small vessels. <b>Corticosteroid:</b> protein catabolism in supportive tissue → weaker microvasculature. Both occur on the dorsum of hands/forearms, aggravated by trauma.</p></div>
+</div>
+<div class="callout"><b>Diagnosis is one of exclusion</b> — vascular purpura is only diagnosed after platelet and coagulation disorders are ruled out. Key test: the <b>tourniquet (Rumpel-Leede) test</b> — inflate a BP cuff between systolic/diastolic for 5 minutes; positive = &gt;20 petechiae per square inch, suggesting capillary fragility, with a normal/increased bleeding time and normal platelet/coagulation study results.</div>
+<div class="note">Treatment: remove/avoid the causative agent when identified, symptom relief (e.g., for pruritus); manage more extensive bleeding if present.</div>
+</div>
+</details>
+</section>
+<section class="block" id="hht">
+<details class="topic" open="">
+<summary>Hereditary Hemorrhagic Telangiectasia (Osler-Weber-Rendu Disease)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetics &amp; course</h4><p>Autosomal dominant. Visible in children, more prominent after puberty, peaks in the 4th–5th decades — severity and bleeding frequency increase as lesions become more prominent with age.</p></div>
+<div class="fact warn"><h4>Mechanism</h4><p>Vessel wall = single endothelial layer only → deficient support/contractile properties → spontaneous or minor-trauma bleeding. Can affect any mucosal surface. <b>Most serious complication:</b> arteriovenous malformations in lung, liver, or brain.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Presentation</h4><p>Bright red/purple lesions (pinpoint to 3mm) on nasal mucosa, lips, palate, tongue, face, trunk, palms, soles. <b>Hallmark symptom: recurrent epistaxis</b>, increasing with age. Lesions are flat, blanch with pressure. Frequent bleeding can cause anemia.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Supportive: nasal humidification, topical hemostatics/cauterization, nasal tamponade, iron replacement, laser for cutaneous lesions, embolization, estrogen ± progesterone for epistaxis, tranexamic acid for severe hemorrhage; transfusion/surgery in select cases.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="thrombocytopenia">
+<details class="topic" open="">
+<summary>Thrombocytopenia &amp; ITP</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Causes — organized by mechanism</h4><p><b>↓ Production:</b> folate/B12 deficiency, radiation, chemo, drugs (alcohol, thiazides, phenytoin), aplastic anemia, marrow cancer involvement. <b>↓ Survival:</b> drugs (thiazides, digoxin, heparin, furosemide, some antibiotics), mechanical heart valves, viral/bacterial infection, circulating immune complexes.</p></div>
+<div class="fact"><h4>Causes — other mechanisms</h4><p><b>↑ Splenic destruction:</b> DIC, splenic sequestration/pooling. <b>Splenomegaly, hypothermia.</b> <b>Dilution:</b> massive transfusion with blood stored &gt;24 hours.</p></div>
+</div>
+<div class="note"><b>Immune thrombocytopenia (ITP)</b>, formerly "idiopathic thrombocytopenic purpura" — an acquired, immune-mediated disorder, classified by duration: newly diagnosed, persistent (3–12 months), or chronic (≥12 months). Occurs at any age, both sexes.</div>
+</div>
+</details>
+</section>
+<!-- ================= COAGULATION DISORDERS ================= -->
+<section class="block" id="hemophilia">
+<details class="topic" open="">
+<summary>Hemophilia A &amp; B</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Genetics</h4><p><b>Hemophilia A</b> (factor VIII deficiency): ~85% of clinical hemophilia; X-linked recessive, asymptomatic carrier female → affected son; ~20% have no family history (spontaneous mutation). <b>Hemophilia B / Christmas disease</b> (factor IX deficiency): less common, same inheritance pattern.</p></div>
+<div class="fact"><h4>Severity classification (know these percentages)</h4><p>Severe: &lt;1% normal factor activity. Moderate: 1–5%. Mild: 5–40%.</p></div>
+</div>
+<div class="danger"><b>Hemarthrosis is THE hallmark of hemophilia</b> — knees, ankles, elbows most affected; repeated episodes → joint deformity. Once bleeding is clinically evident, hemophilia A and B are indistinguishable without factor assay.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Diagnostic lab pattern</h4><p>Normal or slightly prolonged bleeding time, <b>normal PT/INR, prolonged aPTT</b> (intrinsic pathway factors) — factor assay confirms VIII vs. IX deficiency. Prenatal diagnosis possible via chorionic villus biopsy/amniocentesis.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Avoid aspirin/aspirin-like drugs. Joint bleeds: immobilization + ice. Hemophilia A: factor VIII concentrate/cryoprecipitate (recombinant options avoid viral transmission); desmopressin/antifibrinolytics for mild bleeds. Hemophilia B: fresh/fresh frozen plasma, cryoprecipitate, or II/VII/IX/X concentrates.</p></div>
+</div>
+<div class="callout"><b>Factor VIII target levels by bleed severity:</b> 40–60% for joint/most muscle bleeds; 80–100% for iliopsoas, throat/neck, CNS, or GI bleeding — the target scales with how dangerous the bleeding location is. Also: up to 20% of severe hemophilia A patients develop a factor VIII inhibitor antibody, requiring plasmapheresis/immunosuppression to manage.</div>
+</div>
+</details>
+</section>
+<section class="block" id="vwd">
+<details class="topic" open="">
+<summary>von Willebrand Disease</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Genetics &amp; mechanism</h4><p>Usually autosomal dominant (rarely recessive), affects both sexes. vWF normally circulates complexed with factor VIII, stabilizing it AND enabling platelet adhesion to damaged endothelium. In vWD: ↓/absent vWF → factor VIII levels drop too, and platelet adhesion fails — a combined platelet + coagulation defect.</p></div>
+<div class="fact warn"><h4>Presentation</h4><p>Epistaxis, mucosal bleeding, ecchymoses, GI bleeding, menorrhagia. <b>Hemarthrosis is RARE</b> (unlike hemophilia) — a useful distinguishing point. Bleeding severity increases with age; can worsen surgical bleeding.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Diagnostic lab pattern</h4><p>Prolonged bleeding time, prolonged aPTT, <b>normal platelet count</b>, normal PT/INR — specialized testing confirms low vWF and reduced factor VIII activity.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Mild: desmopressin (releases vWF/factor VIII from endothelium). Menorrhagia: hormonal suppression. Severe bleeding: cryoprecipitate (contains both VIII and vWF) or recombinant replacement. Avoid aspirin/aspirin-containing drugs.</p></div>
+</div>
+<div class="note">Bleeding manifestations may actually DECREASE during pregnancy, since vWF and factor VIII levels rise physiologically at that time.</div>
+</div>
+</details>
+</section>
+<section class="block" id="vitamin-k-newborn">
+<details class="topic" open="">
+<summary>Vitamin K Deficiency Bleeding in Infancy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Timing &amp; risk group</h4><p>Typically 48–72 hours after birth through 6 months of age. More common in breastfed babies (breast milk vitamin K content is very low) than formula-fed. Rare in Western countries due to routine newborn vitamin K administration.</p></div>
+<div class="fact"><h4>Mechanism</h4><p>Factors II, VII, IX, X are ~50% of normal in cord blood and decline rapidly, hitting lowest levels at 48–72 hours — a small subset of infants decline enough to bleed severely. Levels then rise over weeks as dietary vitamin K is absorbed. Hepatic immaturity also contributes (can't yet make adequate levels).</p></div>
+</div>
+<div class="danger"><b>Presentation:</b> melena, umbilical bleeding, hematuria appearing day 2–3 of life. Life-threatening: intracranial hemorrhage, hypovolemic shock.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Diagnosis</h4><p>Based on clinical timing + prolonged PT/INR + decreased vitamin K–dependent factor levels.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Prophylactic vitamin K at birth prevents most cases. If bleeding: administer vitamin K; fresh plasma for severe hemorrhage; fresh whole blood corrects severe anemia/shock. <b>Premature infants:</b> vitamin K is INEFFECTIVE due to hepatic immaturity — fresh plasma is the treatment of choice instead.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="vitamin-k-acquired">
+<details class="topic" open="">
+<summary>Acquired Vitamin K Deficiency</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Sources &amp; absorption</h4><p>Vitamin K (fat-soluble): from diet (liver, cheese, butter, egg yolks, leafy greens) + intestinal flora synthesis. Absorption requires bile acids + adequate intestinal mucosal function.</p></div>
+<div class="fact warn"><h4>Causes</h4><p>Malnutrition, malabsorption (including biliary disease), chronic hepatic disease, antibiotic therapy (disrupts gut flora), warfarin (a direct vitamin K antagonist).</p></div>
+</div>
+<div class="callout"><b>Which lab abnormality shows up first — and why:</b> factor VII (extrinsic pathway) has the SHORTEST half-life of the vitamin K–dependent factors, so <b>PT/INR prolongs first</b>. aPTT prolongs later, once intrinsic pathway factors also become deficient. This sequencing is a useful clinical/exam clue.</div>
+<div class="fact tx" style="margin-top:8px;"><h4>Treatment</h4><p>Parenteral vitamin K restores liver levels fairly quickly. Fresh frozen plasma = treatment of choice for severe hemorrhage (immediate factor supply). Correct/remove the underlying cause.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="dic">
+<details class="topic" open="">
+<summary>Disseminated Intravascular Coagulation (DIC)</summary>
+<div class="topic-body">
+<div class="danger"><b>The defining paradox:</b> DIC involves BOTH excessive clotting AND excessive bleeding happening at the same time in the same patient. Widespread microvascular clotting consumes clotting factors and platelets faster than the body can replace them — leaving too little left to control bleeding elsewhere.</div>
+<div class="fact-grid">
+<div class="fact"><h4>Chronic vs. acute DIC</h4><p><b>Chronic:</b> mainly cancer patients; less severe, mild-moderate bleeding + thrombotic episodes; liver/marrow have time to replenish factors, so thrombosis dominates the picture. <b>Acute:</b> malignancy, sepsis, snakebite, abruptio placentae, trauma/crush injury, incompatible transfusion, burns, shock, severe liver disease.</p></div>
+<div class="fact warn"><h4>Scale</h4><p>~1% of hospital admissions; reported death rates 20–50%.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Triggers of the intravascular clotting</h4><p>Contact with damaged endothelium (sepsis, burns), procoagulant release into blood (snake venom, malignancy), procoagulant generation in blood (incompatible transfusion), or stagnant blood flow (shock).</p></div>
+<div class="fact warn"><h4>The consumption sequence</h4><p>Coagulation factors — especially prothrombin, platelets, factor V, factor VIII — are rapidly consumed by widespread clotting. Simultaneously, the fibrinolytic system activates to break down these clots; the resulting fibrin split products act as circulating anticoagulants, adding a THIRD mechanism (on top of factor consumption and active fibrinolysis) pushing the patient toward hemorrhage.</p></div>
+</div>
+<div class="note"><b>Clinical picture:</b> bleeding is usually more apparent early — petechiae, ecchymoses, bleeding from orifices and any injury/injection site. Acrocyanosis (cold, mottled fingers/toes) reflects microvascular thrombi formation in the extremities — a visible sign of the clotting side of the paradox even while bleeding dominates the clinical picture.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 14 (Disorders of Hemostasis) material. Redraw the coagulation cascade mind map from memory — including which lab test maps to which pathway — then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Arrest of bleeding / prevention of blood loss after vessel injury.", "answers": ["Hemostasis"]}, {"def": "The initial response to vessel injury \u2014 vasoconstriction plus platelet plug formation.", "answers": ["Primary hemostasis"]}, {"def": "Formation of a fibrin clot (coagulation) to reinforce the platelet plug.", "answers": ["Secondary hemostasis"]}, {"def": "The final stage \u2014 platelet plug, fibrin strands, and trapped RBCs compress into a firm clot (~1 hour).", "answers": ["Clot retraction"]}, {"def": "Platelet release of \u03b1 granules (thrombospondin, fibrinogen, vWF, factors V/VIII) and dense bodies (ADP, ATP, serotonin) after activation.", "answers": ["Degranulation"]}, {"def": "A potent platelet aggregation agonist formed from arachidonic acid; blocked by aspirin/COX inhibitors.", "answers": ["Thromboxane A2", "TxA2", "Thromboxane A2 (TxA2)"]}, {"def": "Platelet surface receptor that binds fibrinogen to link platelets together during aggregation.", "answers": ["GpIIb/IIIa receptor"]}, {"def": "The active enzyme (from prothrombin) that converts fibrinogen to fibrin and activates factors V, VIII, and XIII.", "answers": ["Thrombin"]}, {"def": "The insoluble protein threads (from fibrinogen) that form the structural scaffold of a clot.", "answers": ["Fibrin"]}, {"def": "Coagulation activated by blood contact with damaged endothelium/negatively charged surfaces; assessed by aPTT.", "answers": ["Intrinsic pathway"]}, {"def": "Coagulation activated by tissue factor release after vascular/tissue trauma; assessed by PT/INR.", "answers": ["Extrinsic pathway"]}, {"def": "Where intrinsic and extrinsic pathways converge \u2014 factor Xa converts prothrombin to thrombin.", "answers": ["Common pathway"]}, {"def": "A natural anticoagulant that binds and inactivates free thrombin; its activity is enhanced by heparin.", "answers": ["Antithrombin III", "ATIII", "Antithrombin III (ATIII)"]}, {"def": "Vitamin K-dependent anticoagulant proteins; protein C inactivates factors V/VIII, protein S assists it and triggers fibrinolysis.", "answers": ["Protein C / Protein S"]}, {"def": "Clot dissolution via plasmin, which digests fibrin/fibrinogen and produces fibrin split (degradation) products.", "answers": ["Fibrinolysis"]}, {"def": "Flat, pinpoint, nonblanching red/purple spots from capillary hemorrhage \u2014 classic in vascular/platelet disorders.", "answers": ["Petechiae"]}, {"def": "Petechiae occurring in groups or patches.", "answers": ["Purpura"]}, {"def": "A bruise \u2014 blood escaping into tissue; if raised, called a hematoma.", "answers": ["Ecchymosis"]}, {"def": "Bleeding into a joint, with swelling and pain \u2014 the hallmark of hemophilia.", "answers": ["Hemarthrosis"]}, {"def": "A dilated, tortuous small vessel that blanches with pressure and bleeds easily with minor trauma.", "answers": ["Telangiectasia"]}, {"def": "Prothrombin time / international normalized ratio \u2014 assesses the extrinsic pathway.", "answers": ["PT / INR"]}, {"def": "Activated partial thromboplastin time \u2014 assesses the intrinsic pathway.", "answers": ["aPTT"]}, {"def": "Low platelet count, a common cause of generalized bleeding.", "answers": ["Thrombocytopenia"]}, {"def": "An acquired, immune-mediated cause of thrombocytopenia; classified as newly diagnosed, persistent, or chronic.", "answers": ["Immune thrombocytopenia", "ITP", "Immune thrombocytopenia (ITP)"]}, {"def": "X-linked recessive factor VIII deficiency \u2014 the classic form, ~85% of hemophilia cases.", "answers": ["Hemophilia A"]}, {"def": "X-linked recessive factor IX deficiency \u2014 less common than hemophilia A.", "answers": ["Hemophilia B", "Christmas disease", "Hemophilia B (Christmas disease)"]}, {"def": "A disorder of von Willebrand factor (vWF), causing both platelet dysfunction and reduced factor VIII stability.", "answers": ["von Willebrand disease"]}, {"def": "An acquired syndrome of simultaneous widespread clotting AND bleeding, from consumption of clotting factors/platelets.", "answers": ["Disseminated intravascular coagulation", "DIC", "Disseminated intravascular coagulation (DIC)"]}];
+const QUIZ_TEACHBACK = [{"topic": "Stages of Hemostasis", "points": ["<b>Vasoconstriction:</b> Immediate response to trauma; primarily local myogenic spasm (not just nervous reflex) \u2014 the more trauma, the greater the spasm;\u2026", "<b>Platelet plug (2nd part of primary hemostasis):</b> Platelets adhere to exposed endothelial collagen AND aggregate together at the injury site \u2014 usually complete in 3\u20137 minutes."]}, {"topic": "Platelets", "points": ["<b>Basics:</b> Normal count: 150,000\u2013400,000/mm\u00b3. Smallest formed blood element; produced in marrow from megakaryocytes (from the pluripotent stem cell). ~25% sequestered in\u2026", "<b>Resting vs. activated:</b> Resting platelets are smooth; activation triggers membrane projections that enable adhesion/aggregation. Stress response, epinephrine, and exercise can stimulate platelet production.", "<b>Where drugs intervene:</b> Aspirin/COX inhibitors: block arachidonic acid \u2192 TxA2 conversion. GpIIb/IIIa blockers (e.g., eptifibatide): block the final aggregation receptor directly. Two different\u2026", "<b>Platelets aren't just for primary hemostasis:</b> They also catalyze interactions between activated coagulation factors (accelerating prothrombin\u2192thrombin conversion) and play a direct role in clot retraction \u2014\u2026"]}, {"topic": "Blood Coagulation Factors", "points": ["<b>Vitamin K-dependent factors \u2014 memorize this exact list:</b> Factors II, VII, IX, X \u2014 plus protein C and protein S. All made in the liver.", "<b>Natural anticoagulants:</b> Antithrombin III (ATIII): binds/inactivates free thrombin \u2014 heparin works by enhancing ATIII activity. Protein C: inactivates factors V and VIII.\u2026", "Numbering \u2260 order of action: factors are numbered by order of discovery, NOT the order they participate in clotting. The \"a\" suffix\u2026"]}, {"topic": "The Coagulation Cascade", "points": ["<b>Intrinsic pathway detail:</b> Contact phase involves 4 factors: XII, high-molecular-weight kininogen (HMWK), prekallikrein, and XI. XIIa activates XI\u2192XIa and prekallikrein\u2192kallikrein (KAL). KAL liberates\u2026", "<b>Extrinsic pathway detail:</b> Triggered by vascular wall trauma (crush injury). Tissue factor (III) from injured tissue activates VII\u2192VIIa. VIIa activates X\u2192Xa (starting the\u2026", "<b>Common pathway \u2014 the final steps:</b> Xa (+ V, calcium, phospholipid) converts prothrombin \u2192 thrombin, facilitated by activated platelets. Thrombin then: cleaves fibrinogen \u2192 fibrin, activates\u2026", "<b>PT/aPTT \u2014 mapping labs to pathways:</b> PT/INR = extrinsic pathway. aPTT = intrinsic pathway. This single mapping is the fastest way to interpret which pathway is\u2026"]}, {"topic": "Fibrinolysis", "points": ["<b>Mechanism:</b> Happens simultaneously with clot formation, not after. Factor XII, HMWK, KAL, and thrombin trigger plasminogen activator release \u2192 cleaves plasminogen\u2026", "<b>Fibrin split (degradation) products:</b> The byproducts of clot dissolution \u2014 clinically measurable, and clinically important in DIC (see below), where they act as circulating\u2026"]}, {"topic": "Clinical Assessment & Skin Findings", "points": ["<b>Timing tells you which system is affected:</b> Bleeding immediately after trauma, involving skin/mucous membranes, brief duration \u2192 vascular or platelet defect. Delayed bleeding, or bleeding into muscles/joints\u2026", "Most life-threatening bleeding locations: the oropharynx (airway compromise) and intracerebral hemorrhage \u2014 the latter is a leading cause of death in severe\u2026"]}, {"topic": "Laboratory Tests", "points": ["<b>Basic screening panel:</b> CBC + platelet count + peripheral smear, bleeding time, PT/INR, aPTT, thrombin time.", "<b>What each test tells you:</b> CBC: anemia present? Platelet count: quantity. Peripheral smear: gross platelet morphology. Bleeding time: vascular status + platelet function. PT/INR: extrinsic\u2026"]}, {"topic": "Vascular Purpura", "points": ["<b>Allergic (Henoch-Sch\u00f6nlein) purpura:</b> Most often children <8 (average age 6). Autoimmune process \u2192 vasculitis of small vessels \u2192 perivascular infiltration/effusion. Palpable lesions, proximal\u2026", "<b>Drug-induced purpura:</b> Many culprits: atropine, chloral hydrate/sedatives, sulfa drugs, procaine penicillin, warfarin. Generalized lesions; subside quickly once the drug is stopped.", "<b>Connective tissue disorders:</b> Ehlers-Danlos syndrome / osteogenesis imperfecta (inherited): decreased/poor-quality collagen and elastin \u2192 large ecchymoses/hematomas, rare but possible intracranial bleeding/stroke. Scurvy (vitamin\u2026", "<b>Senile & corticosteroid purpura:</b> Senile: loss of subcutaneous fat/connective tissue changes \u2192 more skin mobility \u2192 shearing rupture of small vessels. Corticosteroid: protein catabolism\u2026", "Diagnosis is one of exclusion \u2014 vascular purpura is only diagnosed after platelet and coagulation disorders are ruled out. Key test: the\u2026"]}, {"topic": "Hereditary Hemorrhagic Telangiectasia (Osler-Weber-Rendu Disease)", "points": ["<b>Genetics & course:</b> Autosomal dominant. Visible in children, more prominent after puberty, peaks in the 4th\u20135th decades \u2014 severity and bleeding frequency increase\u2026", "<b>Mechanism:</b> Vessel wall = single endothelial layer only \u2192 deficient support/contractile properties \u2192 spontaneous or minor-trauma bleeding. Can affect any mucosal\u2026", "<b>Presentation:</b> Bright red/purple lesions (pinpoint to 3mm) on nasal mucosa, lips, palate, tongue, face, trunk, palms, soles. Hallmark symptom: recurrent epistaxis\u2026", "<b>Treatment:</b> Supportive: nasal humidification, topical hemostatics/cauterization, nasal tamponade, iron replacement, laser for cutaneous lesions, embolization, estrogen \u00b1 progesterone for epistaxis, tranexamic\u2026"]}, {"topic": "Thrombocytopenia & ITP", "points": ["<b>Causes \u2014 organized by mechanism:</b> \u2193 Production: folate/B12 deficiency, radiation, chemo, drugs (alcohol, thiazides, phenytoin), aplastic anemia, marrow cancer involvement. \u2193 Survival: drugs (thiazides, digoxin,\u2026", "<b>Causes \u2014 other mechanisms:</b> \u2191 Splenic destruction: DIC, splenic sequestration/pooling. Splenomegaly, hypothermia. Dilution: massive transfusion with blood stored >24 hours."]}, {"topic": "Hemophilia A & B", "points": ["<b>Genetics:</b> Hemophilia A (factor VIII deficiency): ~85% of clinical hemophilia; X-linked recessive, asymptomatic carrier female \u2192 affected son; ~20% have no\u2026", "<b>Severity classification (know these percentages):</b> Severe: <1% normal factor activity. Moderate: 1\u20135%. Mild: 5\u201340%.", "<b>Diagnostic lab pattern:</b> Normal or slightly prolonged bleeding time, normal PT/INR, prolonged aPTT (intrinsic pathway factors) \u2014 factor assay confirms VIII vs. IX\u2026", "<b>Treatment:</b> Avoid aspirin/aspirin-like drugs. Joint bleeds: immobilization + ice. Hemophilia A: factor VIII concentrate/cryoprecipitate (recombinant options avoid viral transmission); desmopressin/antifibrinolytics for\u2026", "Hemarthrosis is THE hallmark of hemophilia \u2014 knees, ankles, elbows most affected; repeated episodes \u2192 joint deformity. Once bleeding is clinically evident,\u2026", "Factor VIII target levels by bleed severity: 40\u201360% for joint/most muscle bleeds; 80\u2013100% for iliopsoas, throat/neck, CNS, or GI bleeding \u2014 the\u2026"]}, {"topic": "von Willebrand Disease", "points": ["<b>Genetics & mechanism:</b> Usually autosomal dominant (rarely recessive), affects both sexes. vWF normally circulates complexed with factor VIII, stabilizing it AND enabling platelet\u2026", "<b>Presentation:</b> Epistaxis, mucosal bleeding, ecchymoses, GI bleeding, menorrhagia. Hemarthrosis is RARE (unlike hemophilia) \u2014 a useful distinguishing point. Bleeding severity increases\u2026", "<b>Diagnostic lab pattern:</b> Prolonged bleeding time, prolonged aPTT, normal platelet count , normal PT/INR \u2014 specialized testing confirms low vWF and reduced factor\u2026", "<b>Treatment:</b> Mild: desmopressin (releases vWF/factor VIII from endothelium). Menorrhagia: hormonal suppression. Severe bleeding: cryoprecipitate (contains both VIII and vWF) or recombinant\u2026"]}, {"topic": "Vitamin K Deficiency Bleeding in Infancy", "points": ["<b>Timing & risk group:</b> Typically 48\u201372 hours after birth through 6 months of age. More common in breastfed babies (breast milk vitamin K content\u2026", "<b>Mechanism:</b> Factors II, VII, IX, X are ~50% of normal in cord blood and decline rapidly, hitting lowest levels at 48\u201372\u2026", "<b>Diagnosis:</b> Based on clinical timing + prolonged PT/INR + decreased vitamin K\u2013dependent factor levels.", "<b>Treatment:</b> Prophylactic vitamin K at birth prevents most cases. If bleeding: administer vitamin K; fresh plasma for severe hemorrhage; fresh whole\u2026", "Presentation: melena, umbilical bleeding, hematuria appearing day 2\u20133 of life. Life-threatening: intracranial hemorrhage, hypovolemic shock."]}, {"topic": "Acquired Vitamin K Deficiency", "points": ["<b>Sources & absorption:</b> Vitamin K (fat-soluble): from diet (liver, cheese, butter, egg yolks, leafy greens) + intestinal flora synthesis. Absorption requires bile acids\u2026", "<b>Causes:</b> Malnutrition, malabsorption (including biliary disease), chronic hepatic disease, antibiotic therapy (disrupts gut flora), warfarin (a direct vitamin K antagonist).", "<b>Treatment:</b> Parenteral vitamin K restores liver levels fairly quickly. Fresh frozen plasma = treatment of choice for severe hemorrhage (immediate factor\u2026", "Which lab abnormality shows up first \u2014 and why: factor VII (extrinsic pathway) has the SHORTEST half-life of the vitamin K\u2013dependent factors,\u2026"]}, {"topic": "Disseminated Intravascular Coagulation (DIC)", "points": ["<b>Chronic vs. acute DIC:</b> Chronic: mainly cancer patients; less severe, mild-moderate bleeding + thrombotic episodes; liver/marrow have time to replenish factors, so thrombosis dominates\u2026", "<b>Scale:</b> ~1% of hospital admissions; reported death rates 20\u201350%.", "<b>Triggers of the intravascular clotting:</b> Contact with damaged endothelium (sepsis, burns), procoagulant release into blood (snake venom, malignancy), procoagulant generation in blood (incompatible transfusion), or\u2026", "<b>The consumption sequence:</b> Coagulation factors \u2014 especially prothrombin, platelets, factor V, factor VIII \u2014 are rapidly consumed by widespread clotting. Simultaneously, the fibrinolytic\u2026", "The defining paradox: DIC involves BOTH excessive clotting AND excessive bleeding happening at the same time in the same patient. Widespread microvascular\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

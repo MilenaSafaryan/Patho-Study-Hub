@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arthritis — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.2rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:2.05rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=51" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Arthritis</p>
+<span class="brand-sub">Chapter 51 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Foundations</div>
+<a href="#overview">Overview &amp; Epidemiology</a>
+<a href="#pathogenesis">Etiology &amp; Pathogenesis</a>
+<a href="#structural-changes">Structural Changes</a>
+<div class="grp-title">Clinical Picture</div>
+<a href="#manifestations">Clinical Manifestations</a>
+<a href="#oa-vs-ra">OA vs. RA</a>
+<a href="#hand-oa">Hand OA — Heberden &amp; Bouchard Nodes</a>
+<a href="#erosive-oa">Erosive OA</a>
+<div class="grp-title">Management</div>
+<a href="#treatment">OA Treatment</a>
+<div class="grp-title">Rheumatoid Arthritis</div>
+<a href="#ra-epi">Epidemiology</a>
+<a href="#ra-pathogenesis">Etiology &amp; Pathogenesis</a>
+<a href="#ra-manifestations">Joint-by-Joint Manifestations</a>
+<a href="#ra-deformities">Classic Deformities</a>
+<a href="#ra-extraarticular">Extraarticular Manifestations</a>
+<div class="grp-title">Arthritis From Other Diseases</div>
+<a href="#enteropathic">Enteropathic Arthritis</a>
+<a href="#charcot">Neuropathic Osteoarthropathy (Charcot Joint)</a>
+<a href="#hemophilic">Hemophilic Arthropathy</a>
+<div class="grp-title">Gout</div>
+<a href="#gout-overview">Etiology &amp; Pathogenesis</a>
+<a href="#gout-phases">The Four Phases of Gout</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Arthritis</h1>
+<p>A study guide to the major rheumatologic joint diseases — osteoarthritis, rheumatoid arthritis, gout, and arthritis secondary to other conditions — covering what distinguishes each mechanistically and clinically. Built from your Chapter 51 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Osteoarthritis (OA)</dt><dd>A progressive, noninflammatory disease of diarthrodial (freely movable) joints, especially weight-bearing ones — the most common form of arthritis worldwide.</dd></div>
+<div class="term"><dt>Diarthrodial joint</dt><dd>A freely movable joint (e.g., knee, hip) — the type of joint OA specifically targets.</dd></div>
+<div class="term"><dt>Articular cartilage</dt><dd>The smooth tissue covering joint surfaces; its progressive loss is the defining feature of OA. Contains no nociceptors, so cartilage itself cannot directly cause pain.</dd></div>
+<div class="term"><dt>Chondrocytes</dt><dd>Cartilage cells that release proteolytic and collagenolytic enzymes after joint injury, starting the matrix breakdown process in OA.</dd></div>
+<div class="term"><dt>Osteophytes</dt><dd>Bone spurs that form at joint margins from new bone formation — a hallmark radiologic and structural finding in OA.</dd></div>
+<div class="term"><dt>Subchondral bone sclerosis</dt><dd>Thickening/hardening of the bone just beneath the cartilage, occurring as cartilage loss progresses in OA.</dd></div>
+<div class="term"><dt>Heberden nodes</dt><dd>Bone spurs at the distal interphalangeal (DIP) joints — the most common hand deformity in OA.</dd></div>
+<div class="term"><dt>Bouchard nodes</dt><dd>Bone spurs at the proximal interphalangeal (PIP) joints — analogous to Heberden nodes but one joint level up.</dd></div>
+<div class="term"><dt>Genu varus</dt><dd>Outward bowing of the knees ("bow-legged") — can result from cartilage loss in the medial knee compartment.</dd></div>
+<div class="term"><dt>Genu valgus</dt><dd>Inward angling of the knees ("knock-kneed") — can result from cartilage loss in the lateral knee compartment.</dd></div>
+<div class="term"><dt>Crepitus</dt><dd>A grating/crackling sensation or sound with joint movement — a classic OA physical exam finding.</dd></div>
+<div class="term"><dt>Erosive OA</dt><dd>An aggressive hand-OA subset with central subchondral bone erosion, more joint swelling, and severe mobility loss; tends to affect younger patients (females 40–60).</dd></div>
+<div class="term"><dt>Loose bodies</dt><dd>Fragments of cartilage that break off into the joint space in advanced OA.</dd></div>
+<div class="term"><dt>Rheumatoid arthritis (RA)</dt><dd>A systemic autoimmune inflammatory disease causing symmetric polyarthritis, distinct from OA's localized, mechanical process.</dd></div>
+<div class="term"><dt>Rheumatoid factor (RF)</dt><dd>An autoantibody against the Fc region of the body's own IgG; positive in 60–80% of RA patients but doesn't track with disease severity.</dd></div>
+<div class="term"><dt>Anti-CCP antibody</dt><dd>An antibody targeting citrullinated peptides; supports an RA diagnosis.</dd></div>
+<div class="term"><dt>Shared epitope</dt><dd>A common 5-amino-acid sequence in certain HLA-DRB1 alleles, associated with higher RA susceptibility.</dd></div>
+<div class="term"><dt>Pannus</dt><dd>Hypertrophied, vascularized synovial tissue in RA that invades and destroys cartilage, ligaments, and tendons.</dd></div>
+<div class="term"><dt>Swan neck deformity</dt><dd>PIP hyperextension with MCP/DIP flexion — a classic RA hand deformity.</dd></div>
+<div class="term"><dt>Boutonnière deformity</dt><dd>PIP flexion with DIP hyperextension, from extensor tendon rupture/laxity — the mirror pattern of swan neck.</dd></div>
+<div class="term"><dt>Enteropathic arthritis</dt><dd>Joint disease associated with inflammatory bowel disease (ulcerative colitis or Crohn disease).</dd></div>
+<div class="term"><dt>Neuropathic osteoarthropathy (Charcot joint)</dt><dd>Joint destruction from loss of proprioception/pain sensation, most often from diabetes, tabes dorsalis, or syringomyelia.</dd></div>
+<div class="term"><dt>Hemophilic arthropathy</dt><dd>Progressive joint destruction from recurrent hemarthrosis in hemophilia patients.</dd></div>
+<div class="term"><dt>Gout</dt><dd>A disorder of uric acid metabolism causing monosodium urate crystal deposition in joints and tissue.</dd></div>
+<div class="term"><dt>Hyperuricemia</dt><dd>Elevated serum uric acid — the biochemical precursor to gout, from either overproduction or underexcretion.</dd></div>
+<div class="term"><dt>Tophi</dt><dd>Crystalline urate deposits in bone and connective tissue — the hallmark of chronic tophaceous gout.</dd></div>
+<div class="term"><dt>Intercritical gout</dt><dd>The symptom-free interval between acute gout attacks, during which urate deposition continues silently.</dd></div>
+</dl>
+</section>
+<!-- ================= OVERVIEW ================= -->
+<section class="block" id="overview">
+<details class="topic" open="">
+<summary>Overview &amp; Epidemiology</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Scale of the problem</h4><p>Arthritis is the most common disabling musculoskeletal condition in the US — ~46 million people affected, rising as the population ages. Over 150 distinct rheumatologic diseases exist; OA is just one, but the most common overall.</p></div>
+<div class="fact"><h4>Who's affected</h4><p>Prevalence rises with age — highest incidence in those over 70. In postmenopausal women specifically, the knees and hands are most frequently affected.</p></div>
+</div>
+<div class="note">Exact prevalence is hard to pin down: diagnosis is inconsistent, longitudinal data is limited, and x-ray evidence of degeneration doesn't always correlate with symptoms — someone can have radiologic OA with no pain, or vice versa.</div>
+</div>
+</details>
+</section>
+<!-- ================= PATHOGENESIS ================= -->
+<section class="block" id="pathogenesis">
+<details class="topic" open="">
+<summary>Etiology &amp; Pathogenesis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Risk factors — "wear and tear" drivers</h4><p>Obesity, joint trauma, congenital disorders (hip dysplasia, joint laxity, leg length discrepancy).</p></div>
+<div class="fact"><h4>Other predisposing factors</h4><p>Occupational/lifestyle joint stress, genetic predisposition, and hormonal status (postmenopausal).</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — The Cascade From Injury to Joint Failure</p>
+<svg viewbox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">INITIAL JOINT INJURY</text></g>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="340" x="280" y="90"></rect><text font-size="11.5" text-anchor="middle" x="450" y="115">Chondrocytes release proteolytic/collagenolytic enzymes</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="164"></line>
+<g class="mm-node"><rect height="40" rx="8" width="340" x="280" y="164"></rect><text font-size="12" text-anchor="middle" x="450" y="189">Proteoglycan &amp; collagen matrix breaks down</text></g>
+<line class="mm-line" x1="450" x2="450" y1="204" y2="238"></line>
+<g class="mm-node"><rect height="40" rx="8" width="340" x="280" y="238"></rect><text font-size="12" text-anchor="middle" x="450" y="263">Collagen fatigue + microfracture (weight bearing)</text></g>
+<line class="mm-line" x1="450" x2="450" y1="278" y2="300"></line>
+<text fill="var(--ink-soft)" font-size="11" text-anchor="middle" x="450" y="315">Repair capacity overwhelmed → degenerative changes</text>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Why aging cartilage is more vulnerable</h4><p>Decreased hydration of cartilage with age increases susceptibility to wear and damage — this is separate from, but compounds, the mechanical injury cascade above.</p></div>
+<div class="fact"><h4>Multifactorial mechanism</h4><p>Biomechanical, biochemical, inflammatory, and immunologic factors can all contribute — OA isn't purely "mechanical wear," even though that's the traditional framing.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= STRUCTURAL CHANGES ================= -->
+<section class="block" id="structural-changes">
+<details class="topic" open="">
+<summary>Structural Changes in the Joint</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cartilage-level changes</h4><p>Fissuring, pitting, and erosion — in severe cases, erosion denudes the full thickness of cartilage down to bone.</p></div>
+<div class="fact"><h4>Bone-level changes</h4><p>Osteophyte formation, subchondral bone sclerosis, and cyst formation.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Loose bodies</h4><p>Cartilage fragments can break off entirely into the joint space.</p></div>
+<div class="fact"><h4>Joint effusion</h4><p>Common in advanced disease — the synovium becomes inflamed and secretes excess synovial fluid, causing the joint to distend.</p></div>
+</div>
+<div class="note">Even though OA is classified as "noninflammatory," the synovium can still become secondarily inflamed as structural damage progresses — inflammation here is a downstream consequence, not the primary driver like it is in rheumatoid arthritis.</div>
+</div>
+</details>
+</section>
+<!-- ================= MANIFESTATIONS ================= -->
+<section class="block" id="manifestations">
+<details class="topic" open="">
+<summary>Clinical Manifestations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Core signs/symptoms</h4><p>Bony enlargement of joints, crepitus with movement, morning stiffness <b>lasting less than 30 minutes</b> (improves with mobility), and pain with function.</p></div>
+<div class="fact warn"><h4>Most commonly affected joints</h4><p>Weight-bearing joints (hips, knees), cervical and lumbosacral spine, and the interphalangeal joints of the hands/feet. Can affect one isolated joint or multiple joints (especially in the hand).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Radiologic findings</h4><p>Bony proliferation at joint margins (osteophytes/bone spurs), asymmetric joint space narrowing, subchondral bone sclerosis. Later: joint malalignment, subchondral cysts.</p></div>
+<div class="fact"><h4>Synovial fluid analysis</h4><p>When present, fluid is translucent and noninflammatory — <b>&lt;2000 WBC/mm³</b>. This lab distinction is a useful way to differentiate OA from inflammatory arthritides on joint aspiration.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Pain pattern</h4><p>Initially relieved by rest; stiffness can follow prolonged sitting. As disease progresses, even light activity triggers discomfort, and night pain becomes common.</p></div>
+<div class="fact warn"><h4>Why cartilage itself isn't the pain source</h4><p>Cartilage contains no nociceptors — pain actually originates from intraarticular and periarticular structures (synovium, bone, ligaments), not the cartilage breakdown itself.</p></div>
+</div>
+<div class="note">Acute inflammatory flares (synovitis) can occur after a specific traumatic incident, but acute inflammation is not typically a prominent feature of OA overall — this is one of the key features distinguishing it from inflammatory arthritides.</div>
+</div>
+</details>
+</section>
+<!-- ================= OA VS RA ================= -->
+<section class="block" id="oa-vs-ra">
+<details class="topic" open="">
+<summary>OA vs. RA — Why the Distinction Matters</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">Establishing a differential diagnosis and ruling out a systemic cause is explicitly emphasized in the source material — this comparison is a likely test point.</p>
+<table class="compare">
+<tr><th>Feature</th><th>Osteoarthritis</th><th>Rheumatoid Arthritis</th></tr>
+<tr><td>Underlying process</td><td>Localized, noninflammatory, mechanical</td><td>Systemic autoimmune disorder</td></tr>
+<tr><td>Pattern</td><td>Often asymmetric, isolated joints possible</td><td>Highly inflammatory, symmetric, peripheral</td></tr>
+<tr><td>Morning stiffness</td><td>&lt;30 minutes</td><td>&gt;1 hour (see RA guide for detail)</td></tr>
+<tr><td>Synovial fluid</td><td>Noninflammatory, &lt;2000 WBC/mm³</td><td>Inflammatory, higher WBC count</td></tr>
+</table>
+<div class="danger">Because OA symptoms can overlap with early inflammatory arthritis, ruling out RA (or another systemic/medical cause) is described as imperative before settling on an OA diagnosis.</div>
+</div>
+</details>
+</section>
+<!-- ================= HAND OA ================= -->
+<section class="block" id="hand-oa">
+<details class="topic" open="">
+<summary>Hand OA — Heberden &amp; Bouchard Nodes</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Heberden nodes — DIP joints</h4><p>The most common hand deformity in OA; bone spurs on the dorsolateral and medial aspects of the distal interphalangeal joints.</p></div>
+<div class="fact"><h4>Bouchard nodes — PIP joints</h4><p>Same mechanism, one joint level up — at the proximal interphalangeal joints.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Knee changes</h4><p>Loss of cartilage in the medial or lateral knee compartment can produce structural malalignment — genu varus (bow-legged) or genu valgus (knock-kneed).</p></div>
+<div class="fact"><h4>Other common findings</h4><p>Local pain over joint margins, tenderness, crepitus, and muscle atrophy around affected joints.</p></div>
+</div>
+<div class="note"><b>Quick memory hook:</b> Heberden = distal (both start with vowel-adjacent sounds you can pair as "H before B, D before P" — Heberden→DIP, Bouchard→PIP).</div>
+</div>
+</details>
+</section>
+<!-- ================= EROSIVE OA ================= -->
+<section class="block" id="erosive-oa">
+<details class="topic" open="">
+<summary>Erosive OA — A More Aggressive Subset</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>What makes it different</h4><p>Aggressive joint space narrowing, sclerosis, osteophyte formation, AND central subchondral bone erosion at the small joints — the central erosion is the distinguishing structural feature versus typical hand OA.</p></div>
+<div class="fact"><h4>Joint involvement pattern</h4><p>PIP joints most frequently involved, though DIP joints can be affected too.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>How it differs clinically from typical hand OA</h4><p>More joint swelling, more severe loss of joint mobility (from the central erosions), and tends to affect younger patients — especially females age 40–60.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Mainly symptomatic: occupational therapy, acetaminophen, oral/topical anti-inflammatories. Antimalarials (hydroxychloroquine) and low-dose methotrexate have been tried for symptom relief, but neither has been shown to slow disease progression.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= TREATMENT ================= -->
+<section class="block" id="treatment">
+<details class="topic" open="">
+<summary>Treatment</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Nonpharmacologic — first line</h4><p>Weight reduction (for weight-bearing joints), exercise/physical therapy for range of motion, muscle strength, and conditioning.</p></div>
+<div class="fact"><h4>Orthotics &amp; assistive devices</h4><p>Shoe insoles (lateral wedge inserts), heel lifts, patellar taping, joint braces/splints for stabilization; canes/walkers to offload weight-bearing stress and stabilize gait.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>First-line pharmacologic — acetaminophen</h4><p>The initial analgesic typically recommended for mild OA symptom management.</p></div>
+<div class="fact tx"><h4>NSAIDs</h4><p>Decrease swelling and pain. Most are nonselective; COX-2-selective agents have equivalent clinical benefit with potentially fewer GI side effects than traditional nonselective NSAIDs.</p></div>
+</div>
+<div class="note">The only <b>disease-modifying</b> treatments so far are surgical (e.g., joint replacement) — no pharmacologic agent has been shown to reverse OA's structural progression; all current drug therapy is symptomatic.</div>
+</div>
+</details>
+</section>
+<!-- ================= RHEUMATOID ARTHRITIS ================= -->
+<section class="block" id="ra-intro">
+<div class="block-head"><h2>Rheumatoid Arthritis</h2><span class="tag">Systemic autoimmune disease</span></div>
+<p class="block-intro">Where OA is a localized, mechanical problem, RA is the opposite: a systemic autoimmune disease that happens to show up most visibly in the joints. This contrast is the organizing idea for the whole RA section.</p>
+</section>
+<section class="block" id="ra-epi">
+<details class="topic" open="">
+<summary>Epidemiology</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Scale</h4><p>~0.24–1% of the US population. Females 2x more likely than males, peak incidence 4th–5th decades — this sex difference disappears after menopause, a strong hint that hormones play a role.</p></div>
+<div class="fact warn"><h4>Genetic risk</h4><p>Monozygotic twin of an RA patient: ~15% risk (vs. ~1% general population risk) — a real but incomplete genetic component. Family history raises risk 2–3x. Affects all races; not climate-dependent.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="ra-pathogenesis">
+<details class="topic" open="">
+<summary>Etiology &amp; Pathogenesis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The working theory</h4><p>An abnormal autoimmune response — possibly triggered by a bacterial/viral antigen — in a genetically susceptible person. No specific reproducible infectious cause has ever been confirmed despite extensive searching.</p></div>
+<div class="fact warn"><h4>The genetic piece — HLA-DR4 and the "shared epitope"</h4><p>Class II HLA genes (antigen-presenting cell structure) drive susceptibility. Certain <b>HLA-DR4</b> alleles associate with higher RA rates in White populations; a subgroup of <b>HLA-DRB1</b> alleles share a 5-amino-acid sequence called the <b>shared epitope</b>, suspected to affect autoreactive T-cell development. Different HLA-DR4 alleles link to RA risk differently across ethnicities.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Possible triggers</h4><p>Infectious agents, environmental exposures, tobacco use. Higher onset in premenopausal females or post-pregnancy suggests hormonal influence. Physical/psychological stress is associated with triggering acute exacerbations.</p></div>
+<div class="fact warn"><h4>RF and anti-CCP antibodies</h4><p>Activated B cells produce <b>rheumatoid factor (RF)</b> — an antibody against the Fc region of the body's own IgG (an antibody against an antibody) — and <b>anti-CCP</b> antibodies, which target citrullinated peptides (arginine converted to citrulline). RF is positive in 60–80% of RA patients, but its titer does NOT track with disease activity/severity.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — From Synovial Trigger to Pannus Destruction</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="12" text-anchor="middle" x="450" y="35">Antigen triggers T/B cells in synovium</text></g>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="84"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="84"></rect><text font-size="11" text-anchor="middle" x="450" y="109">B cells → RF + anti-CCP; cytokine storm</text></g>
+<line class="mm-line" x1="450" x2="450" y1="124" y2="158"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="158"></rect><text font-size="12" text-anchor="middle" x="450" y="183">Synovium hypertrophies → PANNUS forms</text></g>
+<line class="mm-line" x1="450" x2="450" y1="198" y2="232"></line>
+<g class="mm-leaf"><rect height="26" rx="6" width="460" x="220" y="232"></rect><text font-size="10.5" text-anchor="middle" x="450" y="249">Pannus invades cartilage/ligament/tendon → erosion, deformity</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Key cytokines (know a few by name)</h4><p>TNF-α, IL-1β, IL-6, IL-8, IL-15, IL-17, IL-18, IL-23 — perpetuate and escalate joint inflammation. Newer biologic drugs are designed specifically to target these cytokines and activated inflammatory cells.</p></div>
+<div class="fact"><h4>Pannus — the direct destroyer</h4><p>Hypertrophied, vascularized synovial tissue (lymphocytes, macrophages, histiocytes, fibroblasts, mast cells) that expands "tumor-like" and invades cartilage, ligaments, joint capsules, and tendons — causing bone erosion, cysts, fissures, tendon rupture, and joint deformity.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="ra-manifestations">
+<details class="topic" open="">
+<summary>Joint-by-Joint Manifestations</summary>
+<div class="topic-body">
+<div class="danger"><b>Classic presentation:</b> bilateral, symmetric polyarthritis of SMALL joints, with <b>DIP joints characteristically spared</b> — the symmetry plus DIP sparing is one of the fastest ways to distinguish RA from OA on exam.</div>
+<table class="compare">
+<tr><th>Joint/region</th><th>Typical findings</th></tr>
+<tr><td>Hands (MCP, PIP)</td><td>Visible/palpable swelling, pain on palpation, progressive ulnar deviation</td></tr>
+<tr><td>Wrist</td><td>Boggy synovium, limited dorsiflexion, subluxation; volar synovial proliferation can compress the median nerve → carpal tunnel syndrome</td></tr>
+<tr><td>Elbow</td><td>Flexion contractures, swelling</td></tr>
+<tr><td>Shoulder</td><td>Glenohumeral swelling, limited movement, pain near the coracoid process; dislocation/rupture possible with progression</td></tr>
+<tr><td>Upper cervical spine (C1/C2)</td><td>Transverse ligament destruction → subluxation risk → spinal cord compression; vertebral artery compression → vertebrobasilar insufficiency; occipital headache</td></tr>
+<tr><td>Hip</td><td>Gait abnormality, groin pain from capsular involvement</td></tr>
+<tr><td>Knee</td><td>Effusion, quadriceps atrophy, contractures, popliteal (Baker) cyst</td></tr>
+<tr><td>Foot</td><td>Retrocalcaneal bursitis, claw toes (MTP subluxation), lateral toe deviation</td></tr>
+</table>
+<div class="fact-grid">
+<div class="fact"><h4>Systemic symptoms</h4><p>Fatigue, malaise, diffuse musculoskeletal aching often precede or accompany flares. Stiffness/swelling after prolonged sitting; progressive difficulty with walking, stairs, opening jars, fine finger movements. Weight loss, depression, low-grade fever are common.</p></div>
+<div class="fact warn"><h4>Timeline</h4><p>Usually develops over weeks to months, though it can progress over a few years — early diagnosis and intervention is emphasized because pannus-driven joint destruction is progressive.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="ra-deformities">
+<details class="topic" open="">
+<summary>Classic Deformities</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Swan neck deformity</h4><p>PIP <b>hyper</b>extension + MCP/DIP <b>flexion</b> — from intrinsic muscle/tendon contractures.</p></div>
+<div class="fact warn"><h4>Boutonnière deformity</h4><p>PIP <b>flexion</b> + DIP <b>hyper</b>extension — from rupture/laxity of the extensor tendons. (Note this is the mirror-image pattern from swan neck — worth drilling the contrast directly.)</p></div>
+</div>
+<div class="note">Both deformities plus ulnar deviation reflect the same underlying process — pannus-driven ligament/tendon laxity and mechanical dysfunction — just manifesting differently depending on which specific tendons/ligaments are affected at each joint.</div>
+</div>
+</details>
+</section>
+<section class="block" id="ra-extraarticular">
+<details class="topic" open="">
+<summary>Extraarticular Manifestations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Subcutaneous nodules</h4><p>15–20% of patients — dense perivascular inflammatory cell collections surrounded by palisading fibroblasts.</p></div>
+<div class="fact warn"><h4>Cardiac</h4><p>Pericarditis (often asymptomatic), rare myocarditis, mitral valve disease, conduction disease/complete heart block. Long-standing RA also carries higher risk of atherosclerotic CAD than age-matched controls.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Pulmonary</h4><p>Pleural effusions (~20%), interstitial lung disease, pulmonary fibrosis, pulmonary nodules.</p></div>
+<div class="fact"><h4>Skin &amp; eyes</h4><p>Palpable purpura or nail fold infarcts (from leukocytoclastic vasculitis of skin arterioles); episcleritis, scleritis, or secondary Sjögren syndrome (dry eyes/mouth).</p></div>
+</div>
+<div class="callout"><b>Why this matters clinically:</b> RA is genuinely a whole-body disease, not "just" a joint disease — this is the single biggest conceptual difference from OA, and the reason RA management involves monitoring far beyond the joints themselves.</div>
+</div>
+</details>
+</section>
+<!-- ================= OTHER-DISEASE ARTHRITIS ================= -->
+<section class="block" id="enteropathic">
+<details class="topic" open="">
+<summary>Enteropathic Arthritis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What it is</h4><p>Joint disease associated with the two inflammatory bowel diseases — ulcerative colitis and Crohn disease. Occurs in up to 25% of IBD patients; can sometimes PRECEDE GI symptoms.</p></div>
+<div class="fact warn"><h4>Proposed mechanism</h4><p>Gut inflammation lets bacteria cross into lymphoid tissue/bloodstream from the bowel lumen → cross-reactive immune response also targets joints (immune cross-reactivity with bacterial antigens).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Presentation</h4><p>Peripheral arthritis: usually asymmetric, pauciarticular (few joints), commonly knees/ankles — can be mild/transient-but-relapsing, or chronic/erosive in severe cases. Spinal involvement in 10–20% (sacroiliac/spinal ligament inflammation, HLA-B27/B44 associated).</p></div>
+<div class="fact warn"><h4>Extra-articular signs</h4><p>Erythema nodosum, pyoderma gangrenosum, episcleritis, bilateral anterior uveitis (5–8%). Up to 5% develop primary sclerosing cholangitis (progressive hepatic fibrosis/failure). Amyloidosis possible in Crohn disease.</p></div>
+</div>
+<div class="note"><b>Treatment:</b> manage the underlying GI disease with immunosuppressants; arthritis itself managed with NSAIDs (limited by GI toxicity), COX-2 inhibitors, corticosteroids, or sulfasalazine/azathioprine. TNF-α antagonists (adalimumab, infliximab, certolizumab) help both joint and bowel symptoms — notably, some newer bowel-targeted biologics (vedolizumab) have limited effect on the joint disease specifically, showing the two aren't treated identically despite being linked.</div>
+</div>
+</details>
+</section>
+<section class="block" id="charcot">
+<details class="topic" open="">
+<summary>Neuropathic Osteoarthropathy (Charcot Joint)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Mechanism</h4><p>Loss of normal proprioception/pain sensation → repeated unnoticed joint damage — likely a combination of neurovascular and neurotraumatic processes. Exact mechanism unclear.</p></div>
+<div class="fact"><h4>Causes</h4><p>Diabetes mellitus, tabes dorsalis, and syringomyelia are the three most common causes; also peripheral nerve injury, pernicious anemia, alcoholism, multiple sclerosis.</p></div>
+</div>
+<div class="note">Presentation: swollen, deformed, unstable joint with advanced destruction/pathologic fractures on imaging. Treatment: immobilization + reduced weight bearing — surgery has poor outcomes (nonunion, dislocation, infection risk) precisely because the underlying sensory deficit keeps causing reinjury.</div>
+</div>
+</details>
+</section>
+<section class="block" id="hemophilic">
+<details class="topic" open="">
+<summary>Hemophilic Arthropathy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism</h4><p>Joint bleeding (from Chapter 14's hemophilia) stimulates synovial proliferation, chronic inflammation with degradative proteinase release, and cartilage composition changes with less stress resistance — chronic synovitis eventually destroys the joint.</p></div>
+<div class="fact warn"><h4>Three stages</h4><p><b>1 (acute):</b> bleeding as the child starts walking; flexed joint position, muscle atrophy predisposes to further hemarthrosis. <b>2 (chronic synovitis):</b> repetitive hemorrhage → edematous, warm, but PAINLESS joint. <b>3 (destruction):</b> joint integrity destroyed.</p></div>
+</div>
+<div class="note">Larger joints (elbows, hips, knees) affected far more than the wrist. Also watch for muscle hemorrhage (iliopsoas, forearm, gastrocnemius), muscle cysts, and pseudotumors from osseous hemorrhage. Treatment: enhance clotting medically (see Chapter 14) plus education/prevention to protect joints before deformity sets in.</div>
+</div>
+</details>
+</section>
+<!-- ================= GOUT ================= -->
+<section class="block" id="gout-overview">
+<details class="topic" open="">
+<summary>Gout — Etiology &amp; Pathogenesis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The core mechanism</h4><p>Humans lack the enzyme <b>uricase</b>, so uric acid (a purine metabolism waste product) can't be oxidized to a more soluble compound — it must be cleared by the kidneys instead. When production exceeds removal, hyperuricemia results, and crystalline sodium urate deposits in joints/tissue.</p></div>
+<div class="fact warn"><h4>Epidemiology</h4><p>~4% prevalence in the US; highest in males and those &gt;60. Risk rises with age and with serum urate level. Familial tendency common.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Dietary/lifestyle triggers</h4><p>Purine-rich foods (organ meats, red meat, seafood) raise risk — but high-purine <b>vegetables do NOT</b> increase risk, an important exception. High-fructose sodas/colas raise risk. Alcohol (especially beer/ale) is strongly linked; dairy may actually lower hyperuricemia somewhat.</p></div>
+<div class="fact warn"><h4>Other hyperuricemia causes</h4><p>Congenital enzyme deficiencies (Lesch-Nyhan syndrome); high cell-turnover states (hemolytic anemia, polycythemia vera, myelodysplastic syndromes, tumor lysis syndrome after cancer treatment); chronic kidney disease (impaired excretion).</p></div>
+</div>
+<div class="callout"><b>Acute attacks are often triggered by:</b> trauma, surgery, acute illness, alcohol, or certain medications — worth knowing as a "why did this flare happen now" checklist.</div>
+</div>
+</details>
+</section>
+<section class="block" id="gout-phases">
+<details class="topic" open="">
+<summary>The Four Phases of Gout</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — The Four Phases, in Order</p>
+<svg viewbox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="210" x="10" y="50"></rect><text font-size="10.5" text-anchor="middle" x="115" y="72">ASYMPTOMATIC</text><text font-size="10" text-anchor="middle" x="115" y="88">hyperuricemia</text></g>
+<line class="mm-line" x1="220" x2="250" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="210" x="250" y="50"></rect><text font-size="10.5" text-anchor="middle" x="355" y="72">ACUTE GOUTY</text><text font-size="10" text-anchor="middle" x="355" y="88">arthritis</text></g>
+<line class="mm-line" x1="460" x2="490" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="190" x="490" y="50"></rect><text font-size="10.5" text-anchor="middle" x="585" y="72">INTERCRITICAL</text><text font-size="10" text-anchor="middle" x="585" y="88">gout</text></g>
+<line class="mm-line" x1="680" x2="710" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="180" x="710" y="50"></rect><text font-size="10" text-anchor="middle" x="800" y="72">CHRONIC</text><text font-size="10" text-anchor="middle" x="800" y="88">tophaceous gout</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>1 — Asymptomatic hyperuricemia</h4><p>Elevated serum urate, NO clinical signs. Males: can start at puberty. Females: usually doesn't appear before menopause (estrogen is protective, similar to its cardiovascular effect). No treatment needed at this stage.</p></div>
+<div class="fact warn"><h4>2 — Acute gouty arthritis</h4><p>The most common early clinical sign. Joint is warm, red, exquisitely tender (even light touch hurts). <b>MTP joint of the great toe</b> is classically first, though ankle/tarsal/knee/hand/wrist/elbow can also be affected. Sudden onset, often waking the patient from sleep, with intense pain + diffuse periarticular erythema. Diagnosis: clinical picture + hyperuricemia + urate crystals demonstrated in synovial fluid.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Attack duration &amp; pattern</h4><p>Initial attacks: subside in 1–2 days, or last up to 1–2 weeks, then symptom-free until the next episode. Over time, attacks become more frequent, with mild arthralgia even between episodes.</p></div>
+<div class="fact warn"><h4>3 — Intercritical gout</h4><p>The symptom-free interval between attacks — but NOT truly quiescent: urate crystals can still be aspirated from joints, and soft tissue deposition continues silently even while the patient feels fine.</p></div>
+</div>
+<div class="note">The material provided cuts off just as it introduces the fourth phase, <b>chronic tophaceous gout</b> — this is where tophi (crystalline deposits) become clinically prominent in bone/connective tissue, alongside renal impairment and uric acid calculi. Send the rest of the chapter whenever you have it and I'll extend this section.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 51 (Arthritis) material. Redraw the RA pannus-formation mind map and the four-phase gout timeline from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "A progressive, noninflammatory disease of diarthrodial (freely movable) joints, especially weight-bearing ones \u2014 the most common form of arthritis worldwide.", "answers": ["Osteoarthritis", "OA", "Osteoarthritis (OA)"]}, {"def": "A freely movable joint (e.g., knee, hip) \u2014 the type of joint OA specifically targets.", "answers": ["Diarthrodial joint"]}, {"def": "The smooth tissue covering joint surfaces; its progressive loss is the defining feature of OA. Contains no nociceptors, so cartilage itself cannot directly cause pain.", "answers": ["Articular cartilage"]}, {"def": "Cartilage cells that release proteolytic and collagenolytic enzymes after joint injury, starting the matrix breakdown process in OA.", "answers": ["Chondrocytes"]}, {"def": "Bone spurs that form at joint margins from new bone formation \u2014 a hallmark radiologic and structural finding in OA.", "answers": ["Osteophytes"]}, {"def": "Thickening/hardening of the bone just beneath the cartilage, occurring as cartilage loss progresses in OA.", "answers": ["Subchondral bone sclerosis"]}, {"def": "Bone spurs at the distal interphalangeal (DIP) joints \u2014 the most common hand deformity in OA.", "answers": ["Heberden nodes"]}, {"def": "Bone spurs at the proximal interphalangeal (PIP) joints \u2014 analogous to Heberden nodes but one joint level up.", "answers": ["Bouchard nodes"]}, {"def": "Outward bowing of the knees (\"bow-legged\") \u2014 can result from cartilage loss in the medial knee compartment.", "answers": ["Genu varus"]}, {"def": "Inward angling of the knees (\"knock-kneed\") \u2014 can result from cartilage loss in the lateral knee compartment.", "answers": ["Genu valgus"]}, {"def": "A grating/crackling sensation or sound with joint movement \u2014 a classic OA physical exam finding.", "answers": ["Crepitus"]}, {"def": "An aggressive hand-OA subset with central subchondral bone erosion, more joint swelling, and severe mobility loss; tends to affect younger patients (females 40\u201360).", "answers": ["Erosive OA"]}, {"def": "Fragments of cartilage that break off into the joint space in advanced OA.", "answers": ["Loose bodies"]}, {"def": "A systemic autoimmune inflammatory disease causing symmetric polyarthritis, distinct from OA's localized, mechanical process.", "answers": ["Rheumatoid arthritis", "RA", "Rheumatoid arthritis (RA)"]}, {"def": "An autoantibody against the Fc region of the body's own IgG; positive in 60\u201380% of RA patients but doesn't track with disease severity.", "answers": ["Rheumatoid factor", "RF", "Rheumatoid factor (RF)"]}, {"def": "An antibody targeting citrullinated peptides; supports an RA diagnosis.", "answers": ["Anti-CCP antibody"]}, {"def": "A common 5-amino-acid sequence in certain HLA-DRB1 alleles, associated with higher RA susceptibility.", "answers": ["Shared epitope"]}, {"def": "Hypertrophied, vascularized synovial tissue in RA that invades and destroys cartilage, ligaments, and tendons.", "answers": ["Pannus"]}, {"def": "PIP hyperextension with MCP/DIP flexion \u2014 a classic RA hand deformity.", "answers": ["Swan neck deformity"]}, {"def": "PIP flexion with DIP hyperextension, from extensor tendon rupture/laxity \u2014 the mirror pattern of swan neck.", "answers": ["Boutonni\u00e8re deformity"]}, {"def": "Joint disease associated with inflammatory bowel disease (ulcerative colitis or Crohn disease).", "answers": ["Enteropathic arthritis"]}, {"def": "Joint destruction from loss of proprioception/pain sensation, most often from diabetes, tabes dorsalis, or syringomyelia.", "answers": ["Neuropathic osteoarthropathy", "Charcot joint", "Neuropathic osteoarthropathy (Charcot joint)"]}, {"def": "Progressive joint destruction from recurrent hemarthrosis in hemophilia patients.", "answers": ["Hemophilic arthropathy"]}, {"def": "A disorder of uric acid metabolism causing monosodium urate crystal deposition in joints and tissue.", "answers": ["Gout"]}, {"def": "Elevated serum uric acid \u2014 the biochemical precursor to gout, from either overproduction or underexcretion.", "answers": ["Hyperuricemia"]}, {"def": "Crystalline urate deposits in bone and connective tissue \u2014 the hallmark of chronic tophaceous gout.", "answers": ["Tophi"]}, {"def": "The symptom-free interval between acute gout attacks, during which urate deposition continues silently.", "answers": ["Intercritical gout"]}];
+const QUIZ_TEACHBACK = [{"topic": "Overview & Epidemiology", "points": ["<b>Scale of the problem:</b> Arthritis is the most common disabling musculoskeletal condition in the US \u2014 ~46 million people affected, rising as the population\u2026", "<b>Who's affected:</b> Prevalence rises with age \u2014 highest incidence in those over 70. In postmenopausal women specifically, the knees and hands are\u2026"]}, {"topic": "Etiology & Pathogenesis", "points": ["<b>Risk factors \u2014 \"wear and tear\" drivers:</b> Obesity, joint trauma, congenital disorders (hip dysplasia, joint laxity, leg length discrepancy).", "<b>Other predisposing factors:</b> Occupational/lifestyle joint stress, genetic predisposition, and hormonal status (postmenopausal).", "<b>Why aging cartilage is more vulnerable:</b> Decreased hydration of cartilage with age increases susceptibility to wear and damage \u2014 this is separate from, but compounds, the\u2026", "<b>Multifactorial mechanism:</b> Biomechanical, biochemical, inflammatory, and immunologic factors can all contribute \u2014 OA isn't purely \"mechanical wear,\" even though that's the traditional\u2026"]}, {"topic": "Structural Changes in the Joint", "points": ["<b>Cartilage-level changes:</b> Fissuring, pitting, and erosion \u2014 in severe cases, erosion denudes the full thickness of cartilage down to bone.", "<b>Bone-level changes:</b> Osteophyte formation, subchondral bone sclerosis, and cyst formation.", "<b>Loose bodies:</b> Cartilage fragments can break off entirely into the joint space.", "<b>Joint effusion:</b> Common in advanced disease \u2014 the synovium becomes inflamed and secretes excess synovial fluid, causing the joint to distend."]}, {"topic": "Clinical Manifestations", "points": ["<b>Core signs/symptoms:</b> Bony enlargement of joints, crepitus with movement, morning stiffness lasting less than 30 minutes (improves with mobility), and pain with\u2026", "<b>Most commonly affected joints:</b> Weight-bearing joints (hips, knees), cervical and lumbosacral spine, and the interphalangeal joints of the hands/feet. Can affect one isolated joint\u2026", "<b>Radiologic findings:</b> Bony proliferation at joint margins (osteophytes/bone spurs), asymmetric joint space narrowing, subchondral bone sclerosis. Later: joint malalignment, subchondral cysts.", "<b>Synovial fluid analysis:</b> When present, fluid is translucent and noninflammatory \u2014 <2000 WBC/mm\u00b3 . This lab distinction is a useful way to differentiate\u2026", "<b>Pain pattern:</b> Initially relieved by rest; stiffness can follow prolonged sitting. As disease progresses, even light activity triggers discomfort, and night pain\u2026", "<b>Why cartilage itself isn't the pain source:</b> Cartilage contains no nociceptors \u2014 pain actually originates from intraarticular and periarticular structures (synovium, bone, ligaments), not the cartilage breakdown\u2026"]}, {"topic": "Hand OA \u2014 Heberden & Bouchard Nodes", "points": ["<b>Heberden nodes \u2014 DIP joints:</b> The most common hand deformity in OA; bone spurs on the dorsolateral and medial aspects of the distal interphalangeal joints.", "<b>Bouchard nodes \u2014 PIP joints:</b> Same mechanism, one joint level up \u2014 at the proximal interphalangeal joints.", "<b>Knee changes:</b> Loss of cartilage in the medial or lateral knee compartment can produce structural malalignment \u2014 genu varus (bow-legged) or genu\u2026", "<b>Other common findings:</b> Local pain over joint margins, tenderness, crepitus, and muscle atrophy around affected joints."]}, {"topic": "Erosive OA \u2014 A More Aggressive Subset", "points": ["<b>What makes it different:</b> Aggressive joint space narrowing, sclerosis, osteophyte formation, AND central subchondral bone erosion at the small joints \u2014 the central erosion\u2026", "<b>Joint involvement pattern:</b> PIP joints most frequently involved, though DIP joints can be affected too.", "<b>How it differs clinically from typical hand OA:</b> More joint swelling, more severe loss of joint mobility (from the central erosions), and tends to affect younger patients \u2014\u2026", "<b>Treatment:</b> Mainly symptomatic: occupational therapy, acetaminophen, oral/topical anti-inflammatories. Antimalarials (hydroxychloroquine) and low-dose methotrexate have been tried for symptom relief, but neither\u2026"]}, {"topic": "Treatment", "points": ["<b>Nonpharmacologic \u2014 first line:</b> Weight reduction (for weight-bearing joints), exercise/physical therapy for range of motion, muscle strength, and conditioning.", "<b>Orthotics & assistive devices:</b> Shoe insoles (lateral wedge inserts), heel lifts, patellar taping, joint braces/splints for stabilization; canes/walkers to offload weight-bearing stress and stabilize\u2026", "<b>First-line pharmacologic \u2014 acetaminophen:</b> The initial analgesic typically recommended for mild OA symptom management.", "<b>NSAIDs:</b> Decrease swelling and pain. Most are nonselective; COX-2-selective agents have equivalent clinical benefit with potentially fewer GI side effects than\u2026"]}, {"topic": "Epidemiology", "points": ["<b>Scale:</b> ~0.24\u20131% of the US population. Females 2x more likely than males, peak incidence 4th\u20135th decades \u2014 this sex difference disappears\u2026", "<b>Genetic risk:</b> Monozygotic twin of an RA patient: ~15% risk (vs. ~1% general population risk) \u2014 a real but incomplete genetic component.\u2026"]}, {"topic": "Etiology & Pathogenesis", "points": ["<b>The working theory:</b> An abnormal autoimmune response \u2014 possibly triggered by a bacterial/viral antigen \u2014 in a genetically susceptible person. No specific reproducible\u2026", "<b>The genetic piece \u2014 HLA-DR4 and the \"shared epitope\":</b> Class II HLA genes (antigen-presenting cell structure) drive susceptibility. Certain HLA-DR4 alleles associate with higher RA rates in White populations;\u2026", "<b>Possible triggers:</b> Infectious agents, environmental exposures, tobacco use. Higher onset in premenopausal females or post-pregnancy suggests hormonal influence. Physical/psychological stress is associated\u2026", "<b>RF and anti-CCP antibodies:</b> Activated B cells produce rheumatoid factor (RF) \u2014 an antibody against the Fc region of the body's own IgG (an\u2026", "<b>Key cytokines (know a few by name):</b> TNF-\u03b1, IL-1\u03b2, IL-6, IL-8, IL-15, IL-17, IL-18, IL-23 \u2014 perpetuate and escalate joint inflammation. Newer biologic drugs are designed specifically\u2026", "<b>Pannus \u2014 the direct destroyer:</b> Hypertrophied, vascularized synovial tissue (lymphocytes, macrophages, histiocytes, fibroblasts, mast cells) that expands \"tumor-like\" and invades cartilage, ligaments, joint capsules, and\u2026"]}, {"topic": "Joint-by-Joint Manifestations", "points": ["<b>Systemic symptoms:</b> Fatigue, malaise, diffuse musculoskeletal aching often precede or accompany flares. Stiffness/swelling after prolonged sitting; progressive difficulty with walking, stairs, opening\u2026", "<b>Timeline:</b> Usually develops over weeks to months, though it can progress over a few years \u2014 early diagnosis and intervention is\u2026", "Classic presentation: bilateral, symmetric polyarthritis of SMALL joints, with DIP joints characteristically spared \u2014 the symmetry plus DIP sparing is one of\u2026"]}, {"topic": "Classic Deformities", "points": ["<b>Swan neck deformity:</b> PIP hyper extension + MCP/DIP flexion \u2014 from intrinsic muscle/tendon contractures.", "<b>Boutonni\u00e8re deformity:</b> PIP flexion + DIP hyper extension \u2014 from rupture/laxity of the extensor tendons. (Note this is the mirror-image pattern from\u2026"]}, {"topic": "Extraarticular Manifestations", "points": ["<b>Subcutaneous nodules:</b> 15\u201320% of patients \u2014 dense perivascular inflammatory cell collections surrounded by palisading fibroblasts.", "<b>Cardiac:</b> Pericarditis (often asymptomatic), rare myocarditis, mitral valve disease, conduction disease/complete heart block. Long-standing RA also carries higher risk of atherosclerotic\u2026", "<b>Pulmonary:</b> Pleural effusions (~20%), interstitial lung disease, pulmonary fibrosis, pulmonary nodules.", "<b>Skin & eyes:</b> Palpable purpura or nail fold infarcts (from leukocytoclastic vasculitis of skin arterioles); episcleritis, scleritis, or secondary Sj\u00f6gren syndrome (dry eyes/mouth).", "Why this matters clinically: RA is genuinely a whole-body disease, not \"just\" a joint disease \u2014 this is the single biggest conceptual\u2026"]}, {"topic": "Enteropathic Arthritis", "points": ["<b>What it is:</b> Joint disease associated with the two inflammatory bowel diseases \u2014 ulcerative colitis and Crohn disease. Occurs in up to 25%\u2026", "<b>Proposed mechanism:</b> Gut inflammation lets bacteria cross into lymphoid tissue/bloodstream from the bowel lumen \u2192 cross-reactive immune response also targets joints (immune\u2026", "<b>Presentation:</b> Peripheral arthritis: usually asymmetric, pauciarticular (few joints), commonly knees/ankles \u2014 can be mild/transient-but-relapsing, or chronic/erosive in severe cases. Spinal involvement\u2026", "<b>Extra-articular signs:</b> Erythema nodosum, pyoderma gangrenosum, episcleritis, bilateral anterior uveitis (5\u20138%). Up to 5% develop primary sclerosing cholangitis (progressive hepatic fibrosis/failure). Amyloidosis\u2026"]}, {"topic": "Neuropathic Osteoarthropathy (Charcot Joint)", "points": ["<b>Mechanism:</b> Loss of normal proprioception/pain sensation \u2192 repeated unnoticed joint damage \u2014 likely a combination of neurovascular and neurotraumatic processes. Exact\u2026", "<b>Causes:</b> Diabetes mellitus, tabes dorsalis, and syringomyelia are the three most common causes; also peripheral nerve injury, pernicious anemia, alcoholism, multiple\u2026"]}, {"topic": "Hemophilic Arthropathy", "points": ["<b>Mechanism:</b> Joint bleeding (from Chapter 14's hemophilia) stimulates synovial proliferation, chronic inflammation with degradative proteinase release, and cartilage composition changes with\u2026", "<b>Three stages:</b> 1 (acute): bleeding as the child starts walking; flexed joint position, muscle atrophy predisposes to further hemarthrosis. 2 (chronic synovitis):\u2026"]}, {"topic": "Gout \u2014 Etiology & Pathogenesis", "points": ["<b>The core mechanism:</b> Humans lack the enzyme uricase , so uric acid (a purine metabolism waste product) can't be oxidized to a more\u2026", "<b>Epidemiology:</b> ~4% prevalence in the US; highest in males and those >60. Risk rises with age and with serum urate level.\u2026", "<b>Dietary/lifestyle triggers:</b> Purine-rich foods (organ meats, red meat, seafood) raise risk \u2014 but high-purine vegetables do NOT increase risk, an important exception.\u2026", "<b>Other hyperuricemia causes:</b> Congenital enzyme deficiencies (Lesch-Nyhan syndrome); high cell-turnover states (hemolytic anemia, polycythemia vera, myelodysplastic syndromes, tumor lysis syndrome after cancer treatment);\u2026", "Acute attacks are often triggered by: trauma, surgery, acute illness, alcohol, or certain medications \u2014 worth knowing as a \"why did this\u2026"]}, {"topic": "The Four Phases of Gout", "points": ["<b>1 \u2014 Asymptomatic hyperuricemia:</b> Elevated serum urate, NO clinical signs. Males: can start at puberty. Females: usually doesn't appear before menopause (estrogen is protective,\u2026", "<b>2 \u2014 Acute gouty arthritis:</b> The most common early clinical sign. Joint is warm, red, exquisitely tender (even light touch hurts). MTP joint of the\u2026", "<b>Attack duration & pattern:</b> Initial attacks: subside in 1\u20132 days, or last up to 1\u20132 weeks, then symptom-free until the next episode. Over time,\u2026", "<b>3 \u2014 Intercritical gout:</b> The symptom-free interval between attacks \u2014 but NOT truly quiescent: urate crystals can still be aspirated from joints, and soft\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

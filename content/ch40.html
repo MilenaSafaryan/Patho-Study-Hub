@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Endocrine Disorders — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 270px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.28rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.86rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  .sidebar a.top{font-weight:600; color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:56px 48px 42px;}
+  .hero h1{font-family:var(--serif); font-size:2.3rem; margin:0 0 10px; font-weight:normal;}
+  .hero p{max-width:640px; color:#E3F3F0; font-size:1.02rem; margin:0;}
+  .hero .toolbar{margin-top:22px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:38px 48px 90px; max-width:980px;}
+  @media (max-width:640px){.hero{padding:36px 20px 28px;} .content{padding:24px 18px 70px;}}
+  section.block{margin-bottom:56px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:18px;}
+  .block-head h2{font-family:var(--serif); font-size:1.6rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.72rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:22px; font-size:.97rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:14px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:14px 18px; font-family:var(--serif); font-size:1.12rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.3rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.9rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.87rem; margin-top:10px; color:var(--teal-dark);}
+  .gloss-controls{margin-bottom:16px;}
+  .gloss-controls input{width:100%; max-width:420px; padding:10px 14px; border:1px solid var(--line); border-radius:22px; font-size:.92rem; background:#fff;}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.93rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.85rem; color:var(--ink-soft);}
+  .term.hide{display:none;}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:22px 0 28px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1.02rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  .recap{background:#EFF6F5; border:1px dashed var(--teal); border-radius:10px; padding:14px 18px; margin-top:10px;}
+  .recap h4{margin:0 0 6px; font-size:.78rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .recap ul{margin:0; padding-left:18px; font-size:.88rem;}
+  .recap li{margin-bottom:4px;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.86rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:30px; color:var(--ink-soft); font-size:.8rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=40" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Endocrine Disorders</p>
+<span class="brand-sub">Chapter 40 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Basic Concepts</div>
+<a href="#etiology">Etiology &amp; Classification</a>
+<div class="grp-title">Growth Hormone</div>
+<a href="#gh-deficiency">GH Deficiency</a>
+<a href="#gh-excess">GH Excess (Giantism &amp; Acromegaly)</a>
+<div class="grp-title">Thyroid Hormone</div>
+<a href="#hypothyroidism">Hypothyroidism</a>
+<a href="#hyperthyroidism">Hyperthyroidism &amp; Graves Disease</a>
+<div class="grp-title">Adrenal Cortex</div>
+<a href="#adrenal-insufficiency">Adrenocortical Insufficiency (Addison)</a>
+<a href="#cah">Congenital Adrenal Hyperplasia</a>
+<a href="#cushing">Hypercortisolism (Cushing)</a>
+<div class="grp-title">Adrenal Medulla</div>
+<a href="#pheo">Pheochromocytoma</a>
+<div class="grp-title">Parathyroid Gland</div>
+<a href="#hyperpara">Hyperparathyroidism</a>
+<a href="#hypopara">Hypoparathyroidism</a>
+<div class="grp-title">Posterior Pituitary (ADH)</div>
+<a href="#di">Diabetes Insipidus</a>
+<a href="#siadh">SIADH</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Endocrine Disorders</h1>
+<p>A study guide to hormone excess and deficiency across the pituitary-regulated glands — growth hormone, thyroid, adrenal cortex and medulla, parathyroid, and ADH. Built from your Chapter 40 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<p class="block-intro">Type in the box to filter.</p>
+<div class="gloss-controls">
+<input id="glossSearch" oninput="filterGloss()" placeholder="Search terms (e.g. 'cortisol', 'TSH')..." type="text"/>
+</div>
+<dl class="gloss-grid" id="glossGrid">
+<div class="term"><dt>Hyperfunction / Hypofunction</dt><dd>Excessively high or depressed hormone levels (or conditions mimicking them) — the two basic categories of endocrine disease.</dd></div>
+<div class="term"><dt>Primary endocrine disorder</dt><dd>Intrinsic malfunction of the hormone-producing target gland itself.</dd></div>
+<div class="term"><dt>Secondary endocrine disorder</dt><dd>Malfunction of the hypothalamus/pituitary cells that control the target gland.</dd></div>
+<div class="term"><dt>Tertiary endocrine disorder</dt><dd>Malfunction originating in the hypothalamus (upstream of the pituitary).</dd></div>
+<div class="term"><dt>Ectopic hormone production</dt><dd>Hormone secretion from an abnormal tissue site, usually a malignant tumor (e.g., lung tumors secreting ADH).</dd></div>
+<div class="term"><dt>Target tissue resistance</dt><dd>Normal or elevated hormone levels without normal hormonal action, due to receptor or postreceptor defects.</dd></div>
+<div class="term"><dt>Growth hormone (GH)</dt><dd>Anterior pituitary hormone that increases lean body mass, reduces fat, and raises blood glucose; many effects mediated by IGF-1.</dd></div>
+<div class="term"><dt>IGF-1 (somatomedin)</dt><dd>Insulin-like growth factor-1, released from the liver in response to GH; mediates most GH effects and is a stable marker of GH secretion.</dd></div>
+<div class="term"><dt>Craniopharyngioma</dt><dd>A slow-growing tumor at the junction of the anterior/posterior pituitary, believed present at birth; a common cause of GH deficiency.</dd></div>
+<div class="term"><dt>Pituitary giantism</dt><dd>GH excess occurring before epiphyseal closure, causing markedly accelerated linear growth in children.</dd></div>
+<div class="term"><dt>Acromegaly</dt><dd>GH excess in adults (after epiphyseal closure) causing bony/soft tissue overgrowth without increased height.</dd></div>
+<div class="term"><dt>TRH / TSH</dt><dd>Thyroid-releasing hormone (hypothalamus) stimulates TSH (pituitary), which stimulates T3/T4 release from the thyroid.</dd></div>
+<div class="term"><dt>Hashimoto (lymphocytic) thyroiditis</dt><dd>Autoimmune thyroiditis; the most common cause of acquired hypothyroidism.</dd></div>
+<div class="term"><dt>Cretinism</dt><dd>Significant mental/physical developmental defects from untreated congenital hypothyroidism.</dd></div>
+<div class="term"><dt>Myxedema</dt><dd>Generalized nonpitting edema from glycosaminoglycan accumulation, seen in severe/prolonged hypothyroidism.</dd></div>
+<div class="term"><dt>Myxedema coma</dt><dd>A life-threatening medical emergency from severe untreated hypothyroidism, with altered mental state and thermoregulation problems.</dd></div>
+<div class="term"><dt>Graves disease</dt><dd>Autoimmune hyperthyroidism from autoantibodies that stimulate TSH receptors, causing diffuse toxic goiter and often exophthalmos.</dd></div>
+<div class="term"><dt>Exophthalmos</dt><dd>Protrusion of the eyes from retroorbital tissue swelling in Graves disease, caused by autoimmune injury (not by thyroid hormone levels directly).</dd></div>
+<div class="term"><dt>Thyroid storm</dt><dd>Life-threatening acute release of excessive thyroid hormone, with fever, severe tachycardia, and possible heart failure.</dd></div>
+<div class="term"><dt>Cortisol</dt><dd>The primary glucocorticoid; provides negative feedback on CRH/ACTH release.</dd></div>
+<div class="term"><dt>Addison disease</dt><dd>Primary adrenocortical insufficiency from destruction of the adrenal cortex.</dd></div>
+<div class="term"><dt>Addisonian crisis</dt><dd>Acute, life-threatening adrenal insufficiency with vascular collapse.</dd></div>
+<div class="term"><dt>Congenital adrenal hyperplasia (CAH)</dt><dd>An enzymatic defect in cortisol synthesis causing adrenal hyperplasia, cortisol deficiency, and androgen excess.</dd></div>
+<div class="term"><dt>Cushing syndrome</dt><dd>The clinical features of hypercortisolism, regardless of cause.</dd></div>
+<div class="term"><dt>Cushing disease</dt><dd>Hypercortisolism specifically caused by a pituitary ACTH-secreting adenoma.</dd></div>
+<div class="term"><dt>Pheochromocytoma</dt><dd>A usually-benign chromaffin tissue tumor (usually in the adrenal medulla) causing excess catecholamine secretion and hypertension.</dd></div>
+<div class="term"><dt>Parathyroid hormone (PTH)</dt><dd>Increases serum calcium via effects on bone, kidney, and (with vitamin D) intestine; secretion is regulated directly by serum calcium, not the pituitary.</dd></div>
+<div class="term"><dt>CaSR</dt><dd>Calcium-sensing receptor — a G protein-coupled receptor that lets parathyroid cells detect serum calcium and regulate PTH gene expression.</dd></div>
+<div class="term"><dt>Calcitonin</dt><dd>Produced by thyroid parafollicular (C) cells; tends to decrease blood calcium by promoting bone formation and inhibiting resorption.</dd></div>
+<div class="term"><dt>Chvostek sign</dt><dd>Facial muscle contraction from tapping the facial nerve anterior to the ear — indicates neuromuscular hyperexcitability from hypocalcemia.</dd></div>
+<div class="term"><dt>Trousseau sign</dt><dd>Carpal spasm from BP-cuff-induced ischemia — indicates neuromuscular hyperexcitability from hypocalcemia.</dd></div>
+<div class="term"><dt>ADH (vasopressin)</dt><dd>Posterior pituitary hormone that increases renal collecting duct/distal tubule water permeability and reabsorption.</dd></div>
+<div class="term"><dt>Diabetes insipidus (DI)</dt><dd>Insufficient ADH activity, causing excessive dilute urine loss and hypernatremia.</dd></div>
+<div class="term"><dt>Central DI</dt><dd>DI from failure to produce/release ADH from the hypothalamus/posterior pituitary.</dd></div>
+<div class="term"><dt>Nephrogenic DI</dt><dd>DI from renal unresponsiveness to ADH (kidney disease, receptor defects, electrolyte problems, drugs like lithium).</dd></div>
+<div class="term"><dt>SIADH</dt><dd>Syndrome of inappropriate ADH secretion — excess ADH causes water retention and dilutional hyponatremia.</dd></div>
+</dl>
+</section>
+<!-- ================= BASIC CONCEPTS ================= -->
+<section class="block" id="basics-intro">
+<div class="block-head"><h2>Basic Concepts of Endocrine Disorders</h2><span class="tag">Foundations</span></div>
+<p class="block-intro">Almost every endocrine disorder in this chapter can be sorted using the same two questions: is it too much hormone or too little, and is the problem in the gland itself or in the system telling the gland what to do?</p>
+</section>
+<section class="block" id="etiology">
+<details class="topic" open="">
+<summary>Etiology &amp; Classification of Endocrine Disorders</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Where dysfunction originates</h4><p>The hypothalamus/pituitary, the hormone-producing gland itself, or the target tissue. Etiology may be congenital, infectious, autoimmune, neoplastic, idiopathic, or iatrogenic.</p></div>
+<div class="fact"><h4>Genetic causes</h4><p>Inborn defects can cause excess hormone precursor production (enzymatic block) or enzyme deficiencies impairing synthesis — e.g., congenital adrenal hyperplasia (enlarged adrenals, deficient cortisol).</p></div>
+<div class="fact"><h4>Autoimmune causes</h4><p>More common in females; genetic predisposition + environmental trigger. Antibodies against self-tissue can cause hyperfunction (Graves disease) or gland destruction/hypofunction (Addison disease).</p></div>
+<div class="fact"><h4>Ectopic hormone production</h4><p>Usually from a malignant tumor — e.g., some lung tumors secrete ADH, causing water intoxication and hyponatremia.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Target tissue resistance</h4><p>Normal/elevated hormone levels with no normal hormonal action — shown by diminished response to exogenous hormone. Mechanisms: receptor defects, antireceptor antibodies, defective postreceptor action.</p></div>
+<div class="fact"><h4>Iatrogenic causes</h4><p>Chemotherapy, radiation, or surgical gland removal — often results in chronic hypofunction needing long-term hormone replacement.</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Primary vs. Secondary Endocrine Disorders (Thyroid Example)</p>
+<svg viewbox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">HYPOTHALAMUS → PITUITARY → THYROID</text></g>
+<line class="mm-line" x1="450" x2="200" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="700" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="90" y="96"></rect><text font-size="12" text-anchor="middle" x="200" y="121">PRIMARY hypothyroidism</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="590" y="96"></rect><text font-size="12" text-anchor="middle" x="700" y="121">SECONDARY hypothyroidism</text></g>
+<line class="mm-line" x1="200" x2="200" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="220" x="90" y="164"></rect><text font-size="10.5" text-anchor="middle" x="200" y="184">Thyroid gland itself fails</text><text font-size="10.5" text-anchor="middle" x="200" y="202">↓ T4/T3</text><text font-size="10.5" text-anchor="middle" x="200" y="220">↑ TSH (pituitary trying</text><text font-size="10.5" text-anchor="middle" x="200" y="238">to compensate)</text></g>
+<line class="mm-line" x1="700" x2="700" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="96" rx="6" width="220" x="590" y="164"></rect><text font-size="10.5" text-anchor="middle" x="700" y="184">Pituitary fails to release TSH</text><text font-size="10.5" text-anchor="middle" x="700" y="202">↓ TSH</text><text font-size="10.5" text-anchor="middle" x="700" y="220">↓ T4/T3</text><text font-size="10.5" text-anchor="middle" x="700" y="238">(both abnormally low)</text></g>
+</svg>
+</div>
+<div class="recap">
+<h4>The rule to memorize</h4>
+<ul>
+<li>The <b>target gland hormone</b> (T4, cortisol, etc.) is what causes symptoms — always the starting point for interpreting labs.</li>
+<li><b>Primary</b> disorder: target gland hormone is abnormal, trophic hormone (TSH, ACTH) moves in the <i>opposite</i> direction trying to compensate.</li>
+<li><b>Secondary</b> disorder: both the trophic hormone and target gland hormone move in the <i>same</i> direction (both low, or both high).</li>
+</ul>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= GROWTH HORMONE ================= -->
+<section class="block" id="gh-intro">
+<div class="block-head"><h2>Growth Hormone Disorders</h2><span class="tag">Anterior pituitary</span></div>
+<p class="block-intro">GH is released under hypothalamic control (GH-releasing hormone stimulates, somatostatin inhibits) and acts mostly through liver-derived IGF-1. Its effects — and its disorders — look completely different depending on whether the bone epiphyses are still open.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — GH Imbalance by Age</p>
+<svg viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">GH IMBALANCE</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="96"></rect><text font-size="12" text-anchor="middle" x="150" y="121">Excess, epiphyses OPEN</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="96"></rect><text font-size="12" text-anchor="middle" x="450" y="121">Excess, epiphyses CLOSED</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="96"></rect><text font-size="12" text-anchor="middle" x="750" y="121">Deficiency (children)</text></g>
+<line class="mm-line" x1="150" x2="150" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="40" y="164"></rect><text font-size="11" text-anchor="middle" x="150" y="184">GIANTISM</text><text font-size="10.5" text-anchor="middle" x="150" y="200">Rapid linear growth,</text><text font-size="10.5" text-anchor="middle" x="150" y="216">may exceed 8 ft; risk of</text><text font-size="10.5" text-anchor="middle" x="150" y="232">cardiomegaly/heart failure</text></g>
+<line class="mm-line" x1="450" x2="450" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="340" y="164"></rect><text font-size="11" text-anchor="middle" x="450" y="184">ACROMEGALY</text><text font-size="10.5" text-anchor="middle" x="450" y="200">Bony/soft tissue growth,</text><text font-size="10.5" text-anchor="middle" x="450" y="216">prognathism, organomegaly,</text><text font-size="10.5" text-anchor="middle" x="450" y="232">glucose intolerance</text></g>
+<line class="mm-line" x1="750" x2="750" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="76" rx="6" width="220" x="640" y="164"></rect><text font-size="11" text-anchor="middle" x="750" y="184">Short stature, delayed</text><text font-size="11" text-anchor="middle" x="750" y="200">puberty, hypoglycemia</text><text font-size="11" text-anchor="middle" x="750" y="216">risk (fasting as brief</text><text font-size="11" text-anchor="middle" x="750" y="232">as 3 hrs in infants)</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="gh-deficiency">
+<details class="topic" open="">
+<summary>Growth Hormone Deficiency</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Three categories</h4><p>(1) Decreased GH secretion, (2) defective GH action (abnormal GH or receptor), (3) defective IGF-1 generation.</p></div>
+<div class="fact"><h4>Associated birth history</h4><p>Prolonged labor or breech delivery is common. May also occur with midline craniocerebral defects — consider GH deficiency in any child with nystagmus, retinal abnormalities, or midline/midfacial defects like cleft lip/palate (pituitary develops alongside these structures).</p></div>
+<div class="fact"><h4>Common causative tumors</h4><p>Midline brain tumors — optic nerve gliomas and <b>craniopharyngiomas</b> (arise at the anterior/posterior pituitary junction, present at birth, slow-growing; may grow large without typical increased-ICP signs — delayed growth may be the first clue in older children).</p></div>
+<div class="fact"><h4>Other causes</h4><p>Radiation therapy (for brain tumors/leukemia) damaging hypothalamic/pituitary function; traumatic skull/sella turcica injury interrupting vascular connections.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Infants</h4><p>Usually normal birth length/weight. Risk of hypoglycemia (GH + cortisol needed for euglycemia) — can occur after fasting as brief as 3 hours; recurrent hypoglycemia risks seizures/permanent cerebral damage. In utero deficiency in males → micropenis, undescended testicles.</p></div>
+<div class="fact"><h4>Children</h4><p>Fall below 3rd percentile growth; delayed dental eruption/irregular permanent teeth; thin hair, poor nail growth. Older children: more fat mass, less muscle mass, delayed bone formation, delayed puberty if other pituitary hormones are affected.</p></div>
+<div class="fact"><h4>Diagnosis</h4><p>Annual growth evaluation; if abnormal velocity, endocrinologic workup with GH-stimulating agents (insulin, arginine, levodopa, clonidine) or timed nighttime GH sampling.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>GH replacement — stimulates linear growth in children with open epiphyses, and depletes the excess fat stores typical of GH-deficient children.</p></div>
+</div>
+<div class="note"><b>Adults:</b> Can become GH deficient after pituitary tumor resection or head trauma. Manifestations debated, but may include diminished lean body mass, hypercholesterolemia, and decreased bone density.</div>
+</div>
+</details>
+</section>
+<section class="block" id="gh-excess">
+<details class="topic" open="">
+<summary>Growth Hormone Excess (Giantism &amp; Acromegaly)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Nearly always a benign pituitary somatotropic adenoma producing uncontrolled GH. GH + liver-derived IGF-1 act together to drive tissue growth.</p></div>
+<div class="fact"><h4>Best diagnostic marker</h4><p>Serum IGF-1 — more stable than GH (which fluctuates through the day); an elevated IGF-1 indicates GH hypersecretion. High IGF-1 plus GH not suppressed by oral glucose confirms the diagnosis.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Giantism (childhood, epiphyses open)</h4><p>Markedly accelerated growth velocity, quickly exceeding the 95th percentile; untreated may reach 8+ feet, with risk of early cardiovascular death from cardiomegaly/heart failure.</p></div>
+<div class="fact warn"><h4>Acromegaly (adults, epiphyses closed)</h4><p>Equal male/female frequency, 4th–5th decades; can be clinically subtle. Bone density and short-bone thickness (hands, feet) increase instead of height.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Progressive changes</h4><p>Increased ring/shoe size; prominent brow (frontal sinus growth); progressive underbite/prognathism (mandible growth); coarsened facial features, skin tags; goiter and cardiomegaly (organ enlargement); deepened voice (vocal cord thickening); enlarged tongue → sleep apnea; increased colonic polyps (malignant potential).</p></div>
+<div class="fact warn"><h4>Diagnostic delay</h4><p>Average patient has an active pituitary tumor for <b>7+ years</b> before evaluation — changes are usually attributed to "just growing older." Bone/soft tissue changes are mostly irreversible.</p></div>
+</div>
+<div class="danger"><b>Watch for:</b> Headache and visual disturbances if the tumor enlarges (↑ ICP); glucose intolerance/hyperglycemia is common — GH is a "diabetogenic hormone."</div>
+<div class="fact tx" style="margin-top:10px;"><h4>Treatment</h4><p>Surgical removal (transsphenoidal approach, though tumor may be too large to fully resect); <b>octreotide</b> (synthetic somatostatin) suppresses GH production; <b>pegvisomant</b> (GH receptor antagonist) blocks GH action at target tissues; postoperative radiation for incompletely resected tumors.</p></div>
+</div>
+</details>
+</section>
+<!-- ================= THYROID ================= -->
+<section class="block" id="thyroid-intro">
+<div class="block-head"><h2>Thyroid Hormone Disorders</h2><span class="tag">T3/T4/TSH axis</span></div>
+<p class="block-intro">TRH (hypothalamus) → TSH (pituitary) → T3/T4 (thyroid). Thyroid hormone governs the body's metabolic rate, so hypo- and hyperthyroidism produce nearly mirror-image symptom sets.</p>
+<table class="compare">
+<tr><th></th><th>Hyperthyroidism</th><th>Hypothyroidism</th></tr>
+<tr><td>Energy/mood</td><td>Sleeplessness, nervousness, irritability</td><td>Lethargy, weakness, depressed affect</td></tr>
+<tr><td>Temperature</td><td>Heat intolerance, warm/damp skin</td><td>Cold intolerance, dry/cool/coarse skin</td></tr>
+<tr><td>Weight/appetite</td><td>↑ appetite with weight LOSS</td><td>Weight GAIN</td></tr>
+<tr><td>GI</td><td>↑ gastric emptying/motility</td><td>Constipation</td></tr>
+<tr><td>Cardiac</td><td>Tachycardia, narrow pulse pressure, palpitations</td><td>Bradycardia, wide pulse pressure</td></tr>
+<tr><td>Reflexes</td><td>Hyperreflexia, fine tremor</td><td>Sluggish reflexes</td></tr>
+<tr><td>Menses</td><td>Decreased/absent</td><td>Heavy, prolonged; infertility</td></tr>
+<tr><td>Eyes</td><td>Burning, lid lag, exophthalmos (Graves)</td><td>Periorbital edema, thinned lateral eyebrows</td></tr>
+</table>
+<table class="compare">
+<tr><th>State</th><th>T4</th><th>T3</th><th>TSH</th></tr>
+<tr><td>Euthyroid</td><td>4.5–11.5 μg/dL</td><td>60–180 ng/dL</td><td>0.5–4.5 μU/mL</td></tr>
+<tr><td>Hyperthyroid (primary)</td><td>&gt;11.5</td><td>—</td><td>&lt;0.15</td></tr>
+<tr><td>Hypothyroid (primary)</td><td>Variable (low)</td><td>—</td><td>&gt;5.0</td></tr>
+</table>
+</section>
+<section class="block" id="hypothyroidism">
+<details class="topic" open="">
+<summary>Hypothyroidism</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Congenital causes</h4><p>Thyroid dysgenesis (most common), abnormal TSH receptors, defective thyroid hormone synthesis. Significant untreated developmental defects = "cretinism."</p></div>
+<div class="fact"><h4>Most common acquired cause</h4><p><b>Hashimoto (lymphocytic/autoimmune) thyroiditis</b> — lymphocytic infiltration enlarges the thyroid; hormone production falls, TSH rises, and symptoms progress as the gland fibroses.</p></div>
+<div class="fact"><h4>Other acquired causes</h4><p>Thyroid irradiation, surgical removal, iodine deficiency (prevents T3/T4 formation but not thyroglobulin — unchecked TSH drives goiter formation), goitrogenic foods (turnips/cabbage — minimal clinical significance), lithium (hypothyroidism in up to 20% of users).</p></div>
+<div class="fact"><h4>Secondary hypothyroidism</h4><p>Uncommon; from defects in TSH production — severe head trauma, cranial neoplasms, brain infections, cranial irradiation, neurosurgery.</p></div>
+</div>
+<div class="danger"><b>Congenital hypothyroidism is a true emergency for the brain:</b> thyroid hormone is essential for CNS development — irreversible intellectual disability occurs without early replacement therapy. Newborn screening has made this rare.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact"><h4>Untreated infant signs</h4><p>Dull appearance, thick protuberant tongue, thick lips (feeding difficulty), prolonged neonatal jaundice, poor muscle tone, bradycardia, mottled extremities, umbilical hernia, hoarse cry.</p></div>
+<div class="fact"><h4>Adult/older child manifestations</h4><p>↓ basal metabolic rate underlies most symptoms: weakness, lethargy, cold intolerance, ↓ appetite, bradycardia, narrow pulse pressure, weight gain, ↑ cholesterol/triglycerides, ↑ atherosclerosis, goiter, cool/dry skin, constipation, depression, concentration/memory problems. Females: menstrual irregularities with increased flow/clotting.</p></div>
+</div>
+<div class="danger"><b>Myxedema &amp; myxedema coma:</b> Severe/prolonged hypothyroidism causes nonpitting edema from glycosaminoglycan accumulation. Myxedema coma is a life-threatening emergency — altered mental state, thermoregulation problems, usually triggered by sepsis, trauma, or certain medications.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact"><h4>Diagnosis</h4><p>Elevated TSH is the most sensitive early indicator in primary hypothyroidism (detectable before symptoms) — T4/T3 decline comes later. In rare hypothalamic-pituitary dysfunction, BOTH TSH and T4 are inappropriately low.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Oral <b>levothyroxine</b>. Symptoms resolve gradually over weeks; TSH should normalize as euthyroid state returns. Overtreatment (low TSH) should be avoided — contributes to osteoporosis. Too-rapid replacement can cause insomnia, anxiety, mood lability.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hyperthyroidism">
+<details class="topic" open="">
+<summary>Hyperthyroidism &amp; Graves Disease</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Three general mechanisms</h4><p>(1) Follicular cell hyperfunction (Graves disease), (2) follicular cell destruction releasing preformed hormone (Hashimoto thyroiditis, subacute thyroiditis), (3) exogenous thyroid hormone ingestion.</p></div>
+<div class="fact"><h4>Primary vs. secondary hyperfunction</h4><p>Primary (autonomous): adenomas, rarely carcinoma. Secondary: TSH receptor stimulation.</p></div>
+</div>
+<div class="callout"><b>Interesting twist:</b> Hashimoto thyroiditis (usually the classic cause of hypothyroidism) often presents FIRST with hyperthyroid symptoms — the injured gland releases its stored hormone — before progressing to hypothyroidism as the autoimmune process destroys the gland.</div>
+<div class="fact-grid" style="margin-top:10px;">
+<div class="fact warn"><h4>Graves disease</h4><p>Most common cause of hyperthyroidism — autoantibodies bind and stimulate TSH receptors, causing diffuse toxic goiter. Autoimmune; linked to HLA B8/DR3; peak incidence in the 2nd–3rd decades. High T3/T4 suppresses pituitary TSH → very low serum TSH.</p></div>
+<div class="fact"><h4>Symptoms — mechanism</h4><p>From increased metabolic rate + enhanced sympathetic activity: insomnia, restlessness, tremor, irritability, palpitations, tachycardia, heat intolerance, diaphoresis, poor concentration. Weight loss despite increased appetite. Amenorrhea/scant menses in females.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Exophthalmos</h4><p>Autoimmune injury to retroocular structures (NOT caused by thyroid hormone levels) — autoantibodies bind TSH and IGF-1 receptors on orbital fibroblasts, triggering immune infiltration, cytokine release, and excess glycosaminoglycan secretion — tissue swells, pushing the eye forward. Reducing thyroid hormone doesn't necessarily stop progression. Newer drug: teprotumumab-trbw (blocks IGF-1 receptor).</p></div>
+<div class="fact"><h4>Diagnosis</h4><p>Undetectable TSH is the best indicator of primary hyperthyroidism; T4/T3 elevated. 24-hr radioactive iodine uptake with diffuse homogeneous uptake confirms Graves and excludes neoplasm.</p></div>
+</div>
+<div class="danger"><b>Thyroid storm:</b> Life-threatening acute release of excess thyroid hormone, triggered by physical/psychological stress or gland manipulation (surgery, procedures). Presents with fever, marked tachycardia, dysrhythmias, heart failure, extreme agitation/psychosis — requires prompt treatment.</div>
+<div class="fact tx" style="margin-top:10px;"><h4>Treatment</h4><p>β-blockers for acute symptoms; drugs inhibiting thyroid hormone production; radioactive iodine to destroy part of the gland; surgery reserved for tumor-associated hyperthyroidism (risk: acute hypocalcemia if parathyroids inadvertently removed). Rare pituitary-adenoma-driven cases: surgical/laser pituitary destruction.</p></div>
+</div>
+</details>
+</section>
+<!-- ================= ADRENAL CORTEX ================= -->
+<section class="block" id="adrenal-intro">
+<div class="block-head"><h2>Adrenocortical Hormone Disorders</h2><span class="tag">Cortisol, aldosterone, androgens</span></div>
+<p class="block-intro">The adrenal cortex makes three hormone classes. Cortisol is under CRH/ACTH feedback control; aldosterone answers to angiotensin II, not the pituitary; adrenal androgens have no real feedback control at all — which explains why they run wild in congenital adrenal hyperplasia.</p>
+<table class="compare">
+<tr><th></th><th>Cushing Syndrome (excess)</th><th>Adrenocortical Insufficiency (deficiency)</th></tr>
+<tr><td>Body habitus</td><td>Truncal obesity, moon face, dorsocervical fat pad</td><td>Weight loss</td></tr>
+<tr><td>Skin</td><td>Striae, petechiae, hirsutism</td><td>Hyperpigmentation (Addison disease)</td></tr>
+<tr><td>Muscle</td><td>Muscle wasting</td><td>Weakness</td></tr>
+<tr><td>Glucose</td><td>Glucose intolerance</td><td>Hypoglycemia</td></tr>
+<tr><td>Blood pressure</td><td>Hypertension</td><td>Hypotension</td></tr>
+<tr><td>Potassium</td><td>Hypokalemia</td><td>Hyperkalemia</td></tr>
+</table>
+</section>
+<section class="block" id="adrenal-insufficiency">
+<details class="topic" open="">
+<summary>Adrenocortical Insufficiency (Addison Disease)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Three levels</h4><p><b>Primary</b> (Addison disease): adrenal cortex disease itself. <b>Secondary</b>: inadequate pituitary ACTH. <b>Tertiary</b>: inadequate hypothalamic CRH.</p></div>
+<div class="fact warn"><h4>Primary causes</h4><p>Idiopathic/autoimmune destruction, tuberculosis, adrenal trauma/hemorrhage (often with anticoagulant therapy), fungal disease (histoplasmosis), neoplasia. High functional reserve — symptoms may not appear until <b>90%</b> of cortical tissue is nonfunctional.</p></div>
+<div class="fact"><h4>Secondary causes</h4><p>Usually iatrogenic — prolonged exogenous corticosteroid use suppresses CRH/ACTH via negative feedback, causing adrenal cortex atrophy. Sudden steroid withdrawal or acute stress can't be met by the atrophied gland → acute insufficiency. Also: pituitary/hypothalamic tumors, infection, radiation, postpartum necrosis, trauma, surgery.</p></div>
+<div class="fact warn"><h4>Addisonian crisis</h4><p>A true medical emergency — inadequate glucocorticoids AND mineralocorticoids. Diminished vascular tone, reduced cardiac output, inadequate blood volume → potentially lethal vascular collapse (hypotension, tachycardia, shock).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Early manifestations</h4><p>Anorexia, weight loss, weakness, malaise, apathy, electrolyte imbalance, and <b>hyperpigmentation</b> (unsuppressed ACTH stimulates melanocyte receptors). Salt craving from sodium deficit.</p></div>
+<div class="fact warn"><h4>If untreated</h4><p>GI symptoms (nausea, vomiting, diarrhea, dehydration), hypotension, tachycardia — sudden onset suggests acute (emergency) adrenal insufficiency.</p></div>
+<div class="fact"><h4>Diagnosis</h4><p>Decreased plasma cortisol; therapy is often started presumptively since decompensation progresses fast. <b>ACTH (cosyntropin) provocation test</b> for chronic cases — cortisol should rise after synthetic ACTH if the adrenal cortex works normally; failure indicates primary insufficiency. Imaging: small glands = autoimmune destruction; large/calcified = TB; large/smooth = hemorrhage.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Hormone replacement mimicking natural rhythm (~2/3 dose morning, 1/3 evening). Crisis: intermittent IV glucocorticoids until symptoms resolve, then taper; plus volume replacement for mineralocorticoid-deficiency-related urine losses. <b>Stress dosing:</b> illness, injury, or major psychological stress can double/triple the needed daily dose; use parenteral route if oral intake is restricted.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="cah">
+<details class="topic" open="">
+<summary>Congenital Adrenal Hyperplasia (Adrenogenital Syndrome)</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — CAH Pathophysiology</p>
+<svg viewbox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="12" text-anchor="middle" x="450" y="30">Enzyme defect in cortisol</text><text font-size="12" text-anchor="middle" x="450" y="46">synthesis (AR inheritance)</text></g>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="240" x="330" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">↓ Cortisol → loss of feedback</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="164"></line>
+<g class="mm-node"><rect height="40" rx="8" width="240" x="330" y="164"></rect><text font-size="12" text-anchor="middle" x="450" y="189">↑ ACTH → adrenal hyperplasia</text></g>
+<line class="mm-line" x1="330" x2="150" y1="184" y2="230"></line>
+<line class="mm-line" x1="570" x2="750" y1="184" y2="230"></line>
+<g class="mm-leaf"><rect height="46" rx="6" width="220" x="40" y="230"></rect><text font-size="11" text-anchor="middle" x="150" y="252">Precursors shunted into</text><text font-size="11" text-anchor="middle" x="150" y="268">ANDROGEN overproduction</text></g>
+<g class="mm-leaf"><rect height="46" rx="6" width="220" x="640" y="230"></rect><text font-size="11" text-anchor="middle" x="750" y="252">Newborn: life-threatening</text><text font-size="11" text-anchor="middle" x="750" y="268">cortisol deficiency</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Female newborns</h4><p>Virilization of genitalia — enlarged clitoris, fused labia resembling a scrotal sac.</p></div>
+<div class="fact"><h4>Male newborns</h4><p>Enlarged penis and hyperpigmented scrotum — often subtle enough to be missed.</p></div>
+<div class="fact warn"><h4>Adult female (late-onset)</h4><p>Virile characteristics: beard, deeper voice, baldness, masculine pubic hair distribution, clitoral growth resembling a penis, masculine protein deposition in skin/muscle.</p></div>
+<div class="fact"><h4>Adult male / prepubertal male</h4><p>Adult males: virilization less obvious (masculine traits are normal anyway) → harder to diagnose. Prepubertal males: usually causes precocious puberty.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment</h4><p>Glucocorticoid therapy — prevents adrenal insufficiency complications AND suppresses ACTH, letting the adrenal cortex atrophy and androgen overproduction stop.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="cushing">
+<details class="topic" open="">
+<summary>Hypercortisolism (Cushing Syndrome)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Levels of origin</h4><p><b>Primary:</b> adrenal cortex disease (adenoma). <b>Secondary:</b> pituitary ACTH hyperfunction. <b>Tertiary:</b> hypothalamic dysfunction/injury.</p></div>
+<div class="fact"><h4>Terminology</h4><p><b>Cushing syndrome</b> = the clinical picture of hypercortisolism, any cause. <b>Cushing disease</b> = specifically the pituitary-dependent form.</p></div>
+<div class="fact"><h4>Common causes</h4><p>Pediatric/adult: excess pituitary ACTH from microadenomas/adenomas; ectopic ACTH from nonpituitary tumors. In the US, exogenous steroids (for allergic/autoimmune disease) are a very common cause.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Classic appearance</h4><p>Round "moon face" with flushed cheeks, increased total body fat (especially abdominal), dorsocervical fat pad, capillary fragility, thin skin with purple striae/ecchymoses over abdomen/arms/thighs.</p></div>
+<div class="fact warn"><h4>Metabolic effects</h4><p>Decreased muscle mass/weakness; cortisol increases insulin resistance → glucose intolerance/hyperglycemia; hypertension (from salt-retaining activity + increased blood volume); low serum potassium.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= ADRENAL MEDULLA ================= -->
+<section class="block" id="pheo">
+<div class="block-head"><h2>Adrenal Medulla Disorder: Pheochromocytoma</h2><span class="tag">Catecholamines</span></div>
+<details class="topic" open="">
+<summary>Pheochromocytoma</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Normal medulla function</h4><p>Secretes catecholamines under sympathetic stimulation: epinephrine (~80%) and norepinephrine (~20%, also the postganglionic sympathetic neurotransmitter). Both bind adrenergic receptors on effectors (heart, smooth muscle, glands) to enhance/prolong sympathetic effects.</p></div>
+<div class="fact"><h4>What it is</h4><p>A tumor of chromaffin tissue causing excess catecholamine production/release. Usually benign (malignant in ~10%); usually in the adrenal medulla but can arise anywhere chromaffin tissue exists (e.g., sympathetic ganglia).</p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Pheochromocytoma: Classic Triad</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="38">PHEOCHROMOCYTOMA</text></g>
+<line class="mm-line" x1="450" x2="150" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="450" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="750" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="96"></rect><text font-size="12" text-anchor="middle" x="150" y="121">Headache</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="96"></rect><text font-size="12" text-anchor="middle" x="450" y="121">Tachycardia</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="96"></rect><text font-size="12" text-anchor="middle" x="750" y="121">Diaphoresis</text></g>
+<line class="mm-line" x1="150" x2="450" y1="136" y2="180"></line>
+<line class="mm-line" x1="450" x2="450" y1="136" y2="180"></line>
+<line class="mm-line" x1="750" x2="450" y1="136" y2="180"></line>
+<g class="mm-node"><rect height="46" rx="10" width="300" x="300" y="180"></rect><text font-size="12" text-anchor="middle" x="450" y="203">Intermittent/persistent HYPERTENSION</text><text font-size="10" text-anchor="middle" x="450" y="218">strongly suggests the diagnosis</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Triggers for hypertensive episodes</h4><p>Stress, excitement, physical activity, certain drugs, tobacco smoking.</p></div>
+<div class="fact"><h4>Other symptoms</h4><p>Tremor, nervousness, emotional lability, pallor, fatigue, GI complaints, orthostatic hypotension; hypermetabolic signs like fever and weight loss.</p></div>
+<div class="fact"><h4>Diagnosis</h4><p>CT and MRI are commonly used to locate adrenal tumors.</p></div>
+<div class="fact warn"><h4>Why urgency matters</h4><p>Uncontrolled hypertension can cause end-organ damage and stroke — prompt diagnosis and aggressive therapy are necessary.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment</h4><p>Surgical removal is the usual (and only curative) treatment. Presurgical sympathetic blocking medications manage BP/symptoms. If surgery is contraindicated, drugs blocking catecholamine production are an option. After a stabilization period post-surgery, the sympathetic nervous system compensates and hormone replacement isn't needed. Annual follow-up recommended due to recurrence risk.</p></div>
+</div>
+</details>
+</section>
+<!-- ================= PARATHYROID ================= -->
+<section class="block" id="para-intro">
+<div class="block-head"><h2>Parathyroid Gland Disorders</h2><span class="tag">Calcium regulation</span></div>
+<p class="block-intro">There are usually four parathyroid glands, and unlike everything covered so far, PTH answers directly to serum calcium — not the hypothalamic-pituitary system at all.</p>
+<div class="fact-grid">
+<div class="fact"><h4>How PTH secretion is controlled</h4><p>The CaSR (calcium-sensing receptor, a G protein-coupled receptor) detects serum calcium. Low calcium → PTH release. High calcium → PTH suppression. NOT under hypothalamic-pituitary control.</p></div>
+<div class="fact"><h4>PTH's three targets</h4><p>Bone: ↑ osteoclastic activity, releasing calcium/phosphate. Kidney: ↑ renal calcium reabsorption (↓ urinary loss). Intestine: ↑ absorption, but this requires vitamin D.</p></div>
+<div class="fact"><h4>Calcitonin</h4><p>From thyroid C cells; opposes PTH — increases osteoblastic bone formation and inhibits osteoclastic breakdown, tending to lower blood calcium. Role in overall calcium homeostasis isn't fully clear.</p></div>
+</div>
+</section>
+<section class="block" id="hyperpara">
+<details class="topic" open="">
+<summary>Hyperparathyroidism</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Often unclear etiology; PTH keeps secreting despite elevated calcium. Some cases from CaSR gene mutations. <b>Single adenoma</b> causes the majority of cases; hyperplasia accounts for the rest.</p></div>
+<div class="fact"><h4>An important distinction</h4><p>Primary hyperparathyroidism rarely causes hypercalcemic crisis. <b>Malignant tumors secreting PTH-like hormone elsewhere</b> in the body are actually the more frequent cause of extreme hypercalcemia/hypercalcemic crisis.</p></div>
+<div class="fact warn"><h4>Pregnancy complication</h4><p>Maternal hypercalcemia suppresses fetal/newborn PTH → neonatal hypocalcemia and tetany. This may be the first clue that the mother has undiagnosed hyperparathyroidism.</p></div>
+<div class="fact"><h4>Renal failure link</h4><p>Chronic renal failure causes hyperparathyroidism via reduced active vitamin D (impairs calcium absorption) and impaired glomerular filtration (limits phosphate excretion).</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Drug-induced pseudo-hyperparathyroidism</h4><p>Lithium and thiazides can raise serum calcium, risking misdiagnosis.</p></div>
+<div class="fact warn"><h4>Manifestations</h4><p>May be asymptomatic hypercalcemia. Kidney stones and bone demineralization (osteoporosis) are common. Severe hypercalcemia: polyuria, dehydration, anorexia, nausea, vomiting, constipation; cardiac issues (bradycardia, heart block, cardiac arrest).</p></div>
+<div class="fact"><h4>Labs (primary, non-renal)</h4><p>↑ serum calcium, low-to-low-normal serum phosphorus, ↑ urinary calcium/phosphate excretion, ↑ serum PTH.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>Surgical removal of the abnormal gland(s) is the treatment of choice. Asymptomatic cases may defer surgery, managed with hydration (prevents kidney stones) and ambulation (maintains bone density). <b>Hypercalcemic crisis:</b> rapid volume expansion with normal saline (improves GFR, ↑ calcium excretion); non-thiazide diuretics can further increase calcium excretion.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hypopara">
+<details class="topic" open="">
+<summary>Hypoparathyroidism</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Most common cause</h4><p>Parathyroid or thyroid surgery/radiation — damage to parathyroid blood supply, postsurgical swelling, or fibrosis after thyroidectomy.</p></div>
+<div class="fact"><h4>After single-adenoma removal</h4><p>The other parathyroids had been suppressed by the hyperfunctioning gland — removing it can cause a temporary deficiency state until the remaining glands resume normal function.</p></div>
+<div class="fact"><h4>Other causes</h4><p>Congenital absence of parathyroid tissue, idiopathic hypoparathyroidism (infants/children), autoimmune destruction.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Acute hypocalcemia manifestations</h4><p>Circumoral numbness, distal extremity paresthesias, muscle cramps, fatigue, neuromuscular irritability, anxiety, nonspecific EEG changes, prolonged QT interval.</p></div>
+<div class="fact warn"><h4>Severe manifestations</h4><p>Carpopedal spasm, laryngospasm, seizures.</p></div>
+<div class="fact"><h4>Bedside signs of neuromuscular irritability</h4><p><b>Chvostek sign:</b> facial muscle contraction from tapping the facial nerve anterior to the ear. <b>Trousseau sign:</b> carpal spasm from BP-cuff-induced ischemia (inflated above systolic pressure for 3–5 min).</p></div>
+<div class="fact"><h4>Labs</h4><p>Low serum calcium, elevated phosphorus; parathyroid antibodies present if autoimmune.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment</h4><p>Emergency: IV calcium for acute hypocalcemic crisis (tetany, laryngospasm, convulsions); calcitriol (activated vitamin D) may help. Long-term: oral calcium + vitamin D supplementation (not PTH replacement).</p></div>
+</div>
+</details>
+</section>
+<!-- ================= ADH ================= -->
+<section class="block" id="adh-intro">
+<div class="block-head"><h2>Antidiuretic Hormone (ADH) Disorders</h2><span class="tag">Posterior pituitary</span></div>
+<p class="block-intro">ADH (vasopressin) controls renal water reabsorption in response to blood osmolality. Its two disorders are near-perfect opposites: too little ADH (or unresponsive kidneys) causes water loss and hypernatremia; too much causes water retention and hyponatremia.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — DI vs. SIADH</p>
+<svg viewbox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="46" rx="10" width="240" x="330" y="10"></rect><text font-size="14" text-anchor="middle" x="450" y="38">ADH DISORDERS</text></g>
+<line class="mm-line" x1="450" x2="200" y1="56" y2="96"></line>
+<line class="mm-line" x1="450" x2="700" y1="56" y2="96"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="90" y="96"></rect><text font-size="12" text-anchor="middle" x="200" y="121">DIABETES INSIPIDUS</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="590" y="96"></rect><text font-size="12" text-anchor="middle" x="700" y="121">SIADH</text></g>
+<line class="mm-line" x1="200" x2="200" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="126" rx="6" width="220" x="90" y="164"></rect><text font-size="10.5" text-anchor="middle" x="200" y="184">↓ or absent ADH activity</text><text font-size="10.5" text-anchor="middle" x="200" y="202">Polyuria (dilute), polydipsia</text><text font-size="10.5" text-anchor="middle" x="200" y="220">HYPERNATREMIA</text><text font-size="10.5" text-anchor="middle" x="200" y="238">(water loss without Na loss)</text><text font-size="10.5" text-anchor="middle" x="200" y="256">Tx: DDAVP replacement</text><text font-size="10.5" text-anchor="middle" x="200" y="274">+ free water access</text></g>
+<line class="mm-line" x1="700" x2="700" y1="136" y2="164"></line>
+<g class="mm-leaf"><rect height="126" rx="6" width="220" x="590" y="164"></rect><text font-size="10.5" text-anchor="middle" x="700" y="184">Excess ADH activity</text><text font-size="10.5" text-anchor="middle" x="700" y="202">Water retention, high</text><text font-size="10.5" text-anchor="middle" x="700" y="220">urine osmolality</text><text font-size="10.5" text-anchor="middle" x="700" y="238">HYPONATREMIA (dilutional)</text><text font-size="10.5" text-anchor="middle" x="700" y="256">Tx: free water restriction</text><text font-size="10.5" text-anchor="middle" x="700" y="274">± hypertonic saline + diuretic</text></g>
+</svg>
+</div>
+</section>
+<section class="block" id="di">
+<details class="topic" open="">
+<summary>Diabetes Insipidus (DI)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Definition</h4><p>Insufficient ADH activity causing excessive dilute urine loss. ADH normally increases collecting duct/distal tubule permeability to water.</p></div>
+<div class="fact"><h4>Central DI causes</h4><p>Damage to hypothalamic ADH-producing cells: closed head trauma, intracranial tumors, neurosurgery. Adult DI breakdown: 30% idiopathic, 20% surgical brain tumor treatment, 16% nonsurgical brain trauma, 25% secondary to brain tumors, 9% post-hypophysectomy.</p></div>
+<div class="fact"><h4>Nephrogenic DI causes</h4><p>Kidney unable to respond to ADH — chronic renal disease, receptor defects, electrolyte abnormalities, drugs (e.g., lithium).</p></div>
+<div class="fact"><h4>Drug effects on ADH</h4><p><b>Suppress release:</b> alcohol, phenytoin, α-adrenergic agents. <b>Enhance release:</b> β-adrenergic agents, barbiturates, carbamazepine, nicotine, morphine, and others.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Manifestations</h4><p>Polyuria (up to 15 L/day) and polydipsia, decreased urine specific gravity. Nocturia disrupts sleep. Hypernatremia (&gt;145 mEq/L) from water loss without sodium loss: thirst, dry mucous membranes, poor skin turgor, decreased saliva/sweat, disorientation, lethargy, seizures.</p></div>
+<div class="fact warn"><h4>When it becomes life-threatening</h4><p>If the hypothalamic thirst center is also damaged, water losses aren't compensated by increased intake — DI becomes life-threatening.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Diagnosis</h4><p>Rule out diabetes mellitus/kidney disease (glucose, electrolytes, creatinine, BUN). Compare serum/urine osmolality + urine specific gravity. Dilute urine + water deficit + hypernatremia + low serum ADH = diagnostic of central DI.</p></div>
+<div class="fact"><h4>Water deprivation test</h4><p>Restrict water, monitor urine osmolality hourly; at plateau, give vasopressin. Central DI: urine concentrates and polyuria/polydipsia resolve. Nephrogenic DI: little/no response.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment</h4><p><b>DDAVP</b> (synthetic ADH analog) daily replacement; free fluid access; home urine specific gravity testing can help patients self-adjust dosing.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="siadh">
+<details class="topic" open="">
+<summary>Syndrome of Inappropriate ADH Secretion (SIADH)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Inappropriately excessive ADH — commonly ectopic production from tumors, especially primary lung malignancies. Nonmalignant lung disease (especially pulmonary TB) can also stimulate ADH. Drug-induced: carbamazepine, morphine, barbiturates, and others.</p></div>
+<div class="fact warn"><h4>Must rule out first</h4><p>Adrenal insufficiency and hypothyroidism can also increase ADH secretion and cause hyponatremia — both must be excluded before diagnosing SIADH.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Manifestations</h4><p>Weakness, muscle cramps, nausea/vomiting, postural BP changes, poor skin turgor, fatigue, anorexia, lethargy. Severe: confusion, hemiparesis, seizures, coma.</p></div>
+<div class="fact"><h4>Labs</h4><p>Hyponatremia (&lt;135 mEq/L); urine osmolality inappropriately HIGH (water reabsorbed); serum osmolality LOW (diluted); also low hematocrit and BUN from extracellular fluid dilution.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment</h4><p>Free water restriction — should produce a slow steady rise in serum sodium. Severe symptoms: IV saline + diuretic to promote free water loss. <b>Correct hyponatremia slowly</b> to avoid rapid shifts in brain cell volume. Persistent cases: lithium can block ADH's effects.</p></div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 40 (Endocrine Disorders) material. Redraw the mind maps from memory, then quiz yourself against the "Remember" and treatment boxes.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+function filterGloss(){
+  var q = document.getElementById('glossSearch').value.toLowerCase();
+  document.querySelectorAll('#glossGrid .term').forEach(function(t){
+    var text = t.textContent.toLowerCase();
+    t.classList.toggle('hide', q.length>0 && text.indexOf(q)===-1);
+  });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Excessively high or depressed hormone levels (or conditions mimicking them) \u2014 the two basic categories of endocrine disease.", "answers": ["Hyperfunction / Hypofunction"]}, {"def": "Intrinsic malfunction of the hormone-producing target gland itself.", "answers": ["Primary endocrine disorder"]}, {"def": "Malfunction of the hypothalamus/pituitary cells that control the target gland.", "answers": ["Secondary endocrine disorder"]}, {"def": "Malfunction originating in the hypothalamus (upstream of the pituitary).", "answers": ["Tertiary endocrine disorder"]}, {"def": "Hormone secretion from an abnormal tissue site, usually a malignant tumor (e.g., lung tumors secreting ADH).", "answers": ["Ectopic hormone production"]}, {"def": "Normal or elevated hormone levels without normal hormonal action, due to receptor or postreceptor defects.", "answers": ["Target tissue resistance"]}, {"def": "Anterior pituitary hormone that increases lean body mass, reduces fat, and raises blood glucose; many effects mediated by IGF-1.", "answers": ["Growth hormone", "GH", "Growth hormone (GH)"]}, {"def": "Insulin-like growth factor-1, released from the liver in response to GH; mediates most GH effects and is a stable marker of GH secretion.", "answers": ["IGF-1", "somatomedin", "IGF-1 (somatomedin)"]}, {"def": "A slow-growing tumor at the junction of the anterior/posterior pituitary, believed present at birth; a common cause of GH deficiency.", "answers": ["Craniopharyngioma"]}, {"def": "GH excess occurring before epiphyseal closure, causing markedly accelerated linear growth in children.", "answers": ["Pituitary giantism"]}, {"def": "GH excess in adults (after epiphyseal closure) causing bony/soft tissue overgrowth without increased height.", "answers": ["Acromegaly"]}, {"def": "Thyroid-releasing hormone (hypothalamus) stimulates TSH (pituitary), which stimulates T3/T4 release from the thyroid.", "answers": ["TRH / TSH"]}, {"def": "Autoimmune thyroiditis; the most common cause of acquired hypothyroidism.", "answers": ["Hashimoto thyroiditis", "lymphocytic", "Hashimoto (lymphocytic) thyroiditis"]}, {"def": "Significant mental/physical developmental defects from untreated congenital hypothyroidism.", "answers": ["Cretinism"]}, {"def": "Generalized nonpitting edema from glycosaminoglycan accumulation, seen in severe/prolonged hypothyroidism.", "answers": ["Myxedema"]}, {"def": "A life-threatening medical emergency from severe untreated hypothyroidism, with altered mental state and thermoregulation problems.", "answers": ["Myxedema coma"]}, {"def": "Autoimmune hyperthyroidism from autoantibodies that stimulate TSH receptors, causing diffuse toxic goiter and often exophthalmos.", "answers": ["Graves disease"]}, {"def": "Protrusion of the eyes from retroorbital tissue swelling in Graves disease, caused by autoimmune injury (not by thyroid hormone levels directly).", "answers": ["Exophthalmos"]}, {"def": "Life-threatening acute release of excessive thyroid hormone, with fever, severe tachycardia, and possible heart failure.", "answers": ["Thyroid storm"]}, {"def": "The primary glucocorticoid; provides negative feedback on CRH/ACTH release.", "answers": ["Cortisol"]}, {"def": "Primary adrenocortical insufficiency from destruction of the adrenal cortex.", "answers": ["Addison disease"]}, {"def": "Acute, life-threatening adrenal insufficiency with vascular collapse.", "answers": ["Addisonian crisis"]}, {"def": "An enzymatic defect in cortisol synthesis causing adrenal hyperplasia, cortisol deficiency, and androgen excess.", "answers": ["Congenital adrenal hyperplasia", "CAH", "Congenital adrenal hyperplasia (CAH)"]}, {"def": "The clinical features of hypercortisolism, regardless of cause.", "answers": ["Cushing syndrome"]}, {"def": "Hypercortisolism specifically caused by a pituitary ACTH-secreting adenoma.", "answers": ["Cushing disease"]}, {"def": "A usually-benign chromaffin tissue tumor (usually in the adrenal medulla) causing excess catecholamine secretion and hypertension.", "answers": ["Pheochromocytoma"]}, {"def": "Increases serum calcium via effects on bone, kidney, and (with vitamin D) intestine; secretion is regulated directly by serum calcium, not the pituitary.", "answers": ["Parathyroid hormone", "PTH", "Parathyroid hormone (PTH)"]}, {"def": "Calcium-sensing receptor \u2014 a G protein-coupled receptor that lets parathyroid cells detect serum calcium and regulate PTH gene expression.", "answers": ["CaSR"]}, {"def": "Produced by thyroid parafollicular (C) cells; tends to decrease blood calcium by promoting bone formation and inhibiting resorption.", "answers": ["Calcitonin"]}, {"def": "Facial muscle contraction from tapping the facial nerve anterior to the ear \u2014 indicates neuromuscular hyperexcitability from hypocalcemia.", "answers": ["Chvostek sign"]}, {"def": "Carpal spasm from BP-cuff-induced ischemia \u2014 indicates neuromuscular hyperexcitability from hypocalcemia.", "answers": ["Trousseau sign"]}, {"def": "Posterior pituitary hormone that increases renal collecting duct/distal tubule water permeability and reabsorption.", "answers": ["ADH", "vasopressin", "ADH (vasopressin)"]}, {"def": "Insufficient ADH activity, causing excessive dilute urine loss and hypernatremia.", "answers": ["Diabetes insipidus", "DI", "Diabetes insipidus (DI)"]}, {"def": "DI from failure to produce/release ADH from the hypothalamus/posterior pituitary.", "answers": ["Central DI"]}, {"def": "DI from renal unresponsiveness to ADH (kidney disease, receptor defects, electrolyte problems, drugs like lithium).", "answers": ["Nephrogenic DI"]}, {"def": "Syndrome of inappropriate ADH secretion \u2014 excess ADH causes water retention and dilutional hyponatremia.", "answers": ["SIADH"]}];
+const QUIZ_TEACHBACK = [{"topic": "Etiology & Classification of Endocrine Disorders", "points": ["<b>Where dysfunction originates:</b> The hypothalamus/pituitary, the hormone-producing gland itself, or the target tissue. Etiology may be congenital, infectious, autoimmune, neoplastic, idiopathic, or iatrogenic.", "<b>Genetic causes:</b> Inborn defects can cause excess hormone precursor production (enzymatic block) or enzyme deficiencies impairing synthesis \u2014 e.g., congenital adrenal hyperplasia\u2026", "<b>Autoimmune causes:</b> More common in females; genetic predisposition + environmental trigger. Antibodies against self-tissue can cause hyperfunction (Graves disease) or gland destruction/hypofunction\u2026", "<b>Ectopic hormone production:</b> Usually from a malignant tumor \u2014 e.g., some lung tumors secrete ADH, causing water intoxication and hyponatremia.", "<b>Target tissue resistance:</b> Normal/elevated hormone levels with no normal hormonal action \u2014 shown by diminished response to exogenous hormone. Mechanisms: receptor defects, antireceptor\u2026", "<b>Iatrogenic causes:</b> Chemotherapy, radiation, or surgical gland removal \u2014 often results in chronic hypofunction needing long-term hormone replacement."]}, {"topic": "Growth Hormone Deficiency", "points": ["<b>Three categories:</b> (1) Decreased GH secretion, (2) defective GH action (abnormal GH or receptor), (3) defective IGF-1 generation.", "<b>Associated birth history:</b> Prolonged labor or breech delivery is common. May also occur with midline craniocerebral defects \u2014 consider GH deficiency in any\u2026", "<b>Common causative tumors:</b> Midline brain tumors \u2014 optic nerve gliomas and craniopharyngiomas (arise at the anterior/posterior pituitary junction, present at birth, slow-growing; may\u2026", "<b>Other causes:</b> Radiation therapy (for brain tumors/leukemia) damaging hypothalamic/pituitary function; traumatic skull/sella turcica injury interrupting vascular connections.", "<b>Infants:</b> Usually normal birth length/weight. Risk of hypoglycemia (GH + cortisol needed for euglycemia) \u2014 can occur after fasting as brief\u2026", "<b>Children:</b> Fall below 3rd percentile growth; delayed dental eruption/irregular permanent teeth; thin hair, poor nail growth. Older children: more fat mass,\u2026", "<b>Diagnosis:</b> Annual growth evaluation; if abnormal velocity, endocrinologic workup with GH-stimulating agents (insulin, arginine, levodopa, clonidine) or timed nighttime GH sampling.", "<b>Treatment:</b> GH replacement \u2014 stimulates linear growth in children with open epiphyses, and depletes the excess fat stores typical of GH-deficient\u2026"]}, {"topic": "Growth Hormone Excess (Giantism & Acromegaly)", "points": ["<b>Cause:</b> Nearly always a benign pituitary somatotropic adenoma producing uncontrolled GH. GH + liver-derived IGF-1 act together to drive tissue growth.", "<b>Best diagnostic marker:</b> Serum IGF-1 \u2014 more stable than GH (which fluctuates through the day); an elevated IGF-1 indicates GH hypersecretion. High IGF-1\u2026", "<b>Giantism (childhood, epiphyses open):</b> Markedly accelerated growth velocity, quickly exceeding the 95th percentile; untreated may reach 8+ feet, with risk of early cardiovascular death\u2026", "<b>Acromegaly (adults, epiphyses closed):</b> Equal male/female frequency, 4th\u20135th decades; can be clinically subtle. Bone density and short-bone thickness (hands, feet) increase instead of height.", "<b>Progressive changes:</b> Increased ring/shoe size; prominent brow (frontal sinus growth); progressive underbite/prognathism (mandible growth); coarsened facial features, skin tags; goiter and cardiomegaly\u2026", "<b>Diagnostic delay:</b> Average patient has an active pituitary tumor for 7+ years before evaluation \u2014 changes are usually attributed to \"just growing\u2026", "<b>Treatment:</b> Surgical removal (transsphenoidal approach, though tumor may be too large to fully resect); octreotide (synthetic somatostatin) suppresses GH production; pegvisomant\u2026", "Watch for: Headache and visual disturbances if the tumor enlarges (\u2191 ICP); glucose intolerance/hyperglycemia is common \u2014 GH is a \"diabetogenic hormone.\""]}, {"topic": "Hypothyroidism", "points": ["<b>Congenital causes:</b> Thyroid dysgenesis (most common), abnormal TSH receptors, defective thyroid hormone synthesis. Significant untreated developmental defects = \"cretinism.\"", "<b>Most common acquired cause:</b> Hashimoto (lymphocytic/autoimmune) thyroiditis \u2014 lymphocytic infiltration enlarges the thyroid; hormone production falls, TSH rises, and symptoms progress as the gland\u2026", "<b>Other acquired causes:</b> Thyroid irradiation, surgical removal, iodine deficiency (prevents T3/T4 formation but not thyroglobulin \u2014 unchecked TSH drives goiter formation), goitrogenic foods\u2026", "<b>Secondary hypothyroidism:</b> Uncommon; from defects in TSH production \u2014 severe head trauma, cranial neoplasms, brain infections, cranial irradiation, neurosurgery.", "<b>Untreated infant signs:</b> Dull appearance, thick protuberant tongue, thick lips (feeding difficulty), prolonged neonatal jaundice, poor muscle tone, bradycardia, mottled extremities, umbilical hernia,\u2026", "<b>Adult/older child manifestations:</b> \u2193 basal metabolic rate underlies most symptoms: weakness, lethargy, cold intolerance, \u2193 appetite, bradycardia, narrow pulse pressure, weight gain, \u2191\u2026", "<b>Diagnosis:</b> Elevated TSH is the most sensitive early indicator in primary hypothyroidism (detectable before symptoms) \u2014 T4/T3 decline comes later. In\u2026", "<b>Treatment:</b> Oral levothyroxine . Symptoms resolve gradually over weeks; TSH should normalize as euthyroid state returns. Overtreatment (low TSH) should be\u2026"]}, {"topic": "Hyperthyroidism & Graves Disease", "points": ["<b>Three general mechanisms:</b> (1) Follicular cell hyperfunction (Graves disease), (2) follicular cell destruction releasing preformed hormone (Hashimoto thyroiditis, subacute thyroiditis), (3) exogenous thyroid\u2026", "<b>Primary vs. secondary hyperfunction:</b> Primary (autonomous): adenomas, rarely carcinoma. Secondary: TSH receptor stimulation.", "<b>Graves disease:</b> Most common cause of hyperthyroidism \u2014 autoantibodies bind and stimulate TSH receptors, causing diffuse toxic goiter. Autoimmune; linked to HLA\u2026", "<b>Symptoms \u2014 mechanism:</b> From increased metabolic rate + enhanced sympathetic activity: insomnia, restlessness, tremor, irritability, palpitations, tachycardia, heat intolerance, diaphoresis, poor concentration. Weight\u2026", "<b>Exophthalmos:</b> Autoimmune injury to retroocular structures (NOT caused by thyroid hormone levels) \u2014 autoantibodies bind TSH and IGF-1 receptors on orbital\u2026", "<b>Diagnosis:</b> Undetectable TSH is the best indicator of primary hyperthyroidism; T4/T3 elevated. 24-hr radioactive iodine uptake with diffuse homogeneous uptake confirms\u2026", "<b>Treatment:</b> \u03b2-blockers for acute symptoms; drugs inhibiting thyroid hormone production; radioactive iodine to destroy part of the gland; surgery reserved for\u2026", "Thyroid storm: Life-threatening acute release of excess thyroid hormone, triggered by physical/psychological stress or gland manipulation (surgery, procedures). Presents with fever, marked\u2026"]}, {"topic": "Adrenocortical Insufficiency (Addison Disease)", "points": ["<b>Three levels:</b> Primary (Addison disease): adrenal cortex disease itself. Secondary : inadequate pituitary ACTH. Tertiary : inadequate hypothalamic CRH.", "<b>Primary causes:</b> Idiopathic/autoimmune destruction, tuberculosis, adrenal trauma/hemorrhage (often with anticoagulant therapy), fungal disease (histoplasmosis), neoplasia. High functional reserve \u2014 symptoms may not\u2026", "<b>Secondary causes:</b> Usually iatrogenic \u2014 prolonged exogenous corticosteroid use suppresses CRH/ACTH via negative feedback, causing adrenal cortex atrophy. Sudden steroid withdrawal or\u2026", "<b>Addisonian crisis:</b> A true medical emergency \u2014 inadequate glucocorticoids AND mineralocorticoids. Diminished vascular tone, reduced cardiac output, inadequate blood volume \u2192 potentially\u2026", "<b>Early manifestations:</b> Anorexia, weight loss, weakness, malaise, apathy, electrolyte imbalance, and hyperpigmentation (unsuppressed ACTH stimulates melanocyte receptors). Salt craving from sodium deficit.", "<b>If untreated:</b> GI symptoms (nausea, vomiting, diarrhea, dehydration), hypotension, tachycardia \u2014 sudden onset suggests acute (emergency) adrenal insufficiency.", "<b>Diagnosis:</b> Decreased plasma cortisol; therapy is often started presumptively since decompensation progresses fast. ACTH (cosyntropin) provocation test for chronic cases \u2014\u2026", "<b>Treatment:</b> Hormone replacement mimicking natural rhythm (~2/3 dose morning, 1/3 evening). Crisis: intermittent IV glucocorticoids until symptoms resolve, then taper; plus\u2026"]}, {"topic": "Congenital Adrenal Hyperplasia (Adrenogenital Syndrome)", "points": ["<b>Female newborns:</b> Virilization of genitalia \u2014 enlarged clitoris, fused labia resembling a scrotal sac.", "<b>Male newborns:</b> Enlarged penis and hyperpigmented scrotum \u2014 often subtle enough to be missed.", "<b>Adult female (late-onset):</b> Virile characteristics: beard, deeper voice, baldness, masculine pubic hair distribution, clitoral growth resembling a penis, masculine protein deposition in skin/muscle.", "<b>Adult male / prepubertal male:</b> Adult males: virilization less obvious (masculine traits are normal anyway) \u2192 harder to diagnose. Prepubertal males: usually causes precocious puberty.", "<b>Treatment:</b> Glucocorticoid therapy \u2014 prevents adrenal insufficiency complications AND suppresses ACTH, letting the adrenal cortex atrophy and androgen overproduction stop."]}, {"topic": "Hypercortisolism (Cushing Syndrome)", "points": ["<b>Levels of origin:</b> Primary: adrenal cortex disease (adenoma). Secondary: pituitary ACTH hyperfunction. Tertiary: hypothalamic dysfunction/injury.", "<b>Terminology:</b> Cushing syndrome = the clinical picture of hypercortisolism, any cause. Cushing disease = specifically the pituitary-dependent form.", "<b>Common causes:</b> Pediatric/adult: excess pituitary ACTH from microadenomas/adenomas; ectopic ACTH from nonpituitary tumors. In the US, exogenous steroids (for allergic/autoimmune disease) are\u2026", "<b>Classic appearance:</b> Round \"moon face\" with flushed cheeks, increased total body fat (especially abdominal), dorsocervical fat pad, capillary fragility, thin skin with\u2026", "<b>Metabolic effects:</b> Decreased muscle mass/weakness; cortisol increases insulin resistance \u2192 glucose intolerance/hyperglycemia; hypertension (from salt-retaining activity + increased blood volume); low serum\u2026"]}, {"topic": "Pheochromocytoma", "points": ["<b>Normal medulla function:</b> Secretes catecholamines under sympathetic stimulation: epinephrine (~80%) and norepinephrine (~20%, also the postganglionic sympathetic neurotransmitter). Both bind adrenergic receptors on\u2026", "<b>What it is:</b> A tumor of chromaffin tissue causing excess catecholamine production/release. Usually benign (malignant in ~10%); usually in the adrenal medulla but\u2026", "<b>Triggers for hypertensive episodes:</b> Stress, excitement, physical activity, certain drugs, tobacco smoking.", "<b>Other symptoms:</b> Tremor, nervousness, emotional lability, pallor, fatigue, GI complaints, orthostatic hypotension; hypermetabolic signs like fever and weight loss.", "<b>Diagnosis:</b> CT and MRI are commonly used to locate adrenal tumors.", "<b>Why urgency matters:</b> Uncontrolled hypertension can cause end-organ damage and stroke \u2014 prompt diagnosis and aggressive therapy are necessary.", "<b>Treatment:</b> Surgical removal is the usual (and only curative) treatment. Presurgical sympathetic blocking medications manage BP/symptoms. If surgery is contraindicated, drugs\u2026"]}, {"topic": "Hyperparathyroidism", "points": ["<b>Cause:</b> Often unclear etiology; PTH keeps secreting despite elevated calcium. Some cases from CaSR gene mutations. Single adenoma causes the majority\u2026", "<b>An important distinction:</b> Primary hyperparathyroidism rarely causes hypercalcemic crisis. Malignant tumors secreting PTH-like hormone elsewhere in the body are actually the more frequent\u2026", "<b>Pregnancy complication:</b> Maternal hypercalcemia suppresses fetal/newborn PTH \u2192 neonatal hypocalcemia and tetany. This may be the first clue that the mother has\u2026", "<b>Renal failure link:</b> Chronic renal failure causes hyperparathyroidism via reduced active vitamin D (impairs calcium absorption) and impaired glomerular filtration (limits phosphate excretion).", "<b>Drug-induced pseudo-hyperparathyroidism:</b> Lithium and thiazides can raise serum calcium, risking misdiagnosis.", "<b>Manifestations:</b> May be asymptomatic hypercalcemia. Kidney stones and bone demineralization (osteoporosis) are common. Severe hypercalcemia: polyuria, dehydration, anorexia, nausea, vomiting, constipation;\u2026", "<b>Labs (primary, non-renal):</b> \u2191 serum calcium, low-to-low-normal serum phosphorus, \u2191 urinary calcium/phosphate excretion, \u2191 serum PTH.", "<b>Treatment:</b> Surgical removal of the abnormal gland(s) is the treatment of choice. Asymptomatic cases may defer surgery, managed with hydration (prevents\u2026"]}, {"topic": "Hypoparathyroidism", "points": ["<b>Most common cause:</b> Parathyroid or thyroid surgery/radiation \u2014 damage to parathyroid blood supply, postsurgical swelling, or fibrosis after thyroidectomy.", "<b>After single-adenoma removal:</b> The other parathyroids had been suppressed by the hyperfunctioning gland \u2014 removing it can cause a temporary deficiency state until\u2026", "<b>Other causes:</b> Congenital absence of parathyroid tissue, idiopathic hypoparathyroidism (infants/children), autoimmune destruction.", "<b>Acute hypocalcemia manifestations:</b> Circumoral numbness, distal extremity paresthesias, muscle cramps, fatigue, neuromuscular irritability, anxiety, nonspecific EEG changes, prolonged QT interval.", "<b>Severe manifestations:</b> Carpopedal spasm, laryngospasm, seizures.", "<b>Bedside signs of neuromuscular irritability:</b> Chvostek sign: facial muscle contraction from tapping the facial nerve anterior to the ear. Trousseau sign: carpal spasm from BP-cuff-induced\u2026", "<b>Labs:</b> Low serum calcium, elevated phosphorus; parathyroid antibodies present if autoimmune.", "<b>Treatment:</b> Emergency: IV calcium for acute hypocalcemic crisis (tetany, laryngospasm, convulsions); calcitriol (activated vitamin D) may help. Long-term: oral calcium +\u2026"]}, {"topic": "Diabetes Insipidus (DI)", "points": ["<b>Definition:</b> Insufficient ADH activity causing excessive dilute urine loss. ADH normally increases collecting duct/distal tubule permeability to water.", "<b>Central DI causes:</b> Damage to hypothalamic ADH-producing cells: closed head trauma, intracranial tumors, neurosurgery. Adult DI breakdown: 30% idiopathic, 20% surgical brain tumor\u2026", "<b>Nephrogenic DI causes:</b> Kidney unable to respond to ADH \u2014 chronic renal disease, receptor defects, electrolyte abnormalities, drugs (e.g., lithium).", "<b>Drug effects on ADH:</b> Suppress release: alcohol, phenytoin, \u03b1-adrenergic agents. Enhance release: \u03b2-adrenergic agents, barbiturates, carbamazepine, nicotine, morphine, and others.", "<b>Manifestations:</b> Polyuria (up to 15 L/day) and polydipsia, decreased urine specific gravity. Nocturia disrupts sleep. Hypernatremia (>145 mEq/L) from water loss\u2026", "<b>When it becomes life-threatening:</b> If the hypothalamic thirst center is also damaged, water losses aren't compensated by increased intake \u2014 DI becomes life-threatening.", "<b>Diagnosis:</b> Rule out diabetes mellitus/kidney disease (glucose, electrolytes, creatinine, BUN). Compare serum/urine osmolality + urine specific gravity. Dilute urine + water\u2026", "<b>Water deprivation test:</b> Restrict water, monitor urine osmolality hourly; at plateau, give vasopressin. Central DI: urine concentrates and polyuria/polydipsia resolve. Nephrogenic DI: little/no\u2026"]}, {"topic": "Syndrome of Inappropriate ADH Secretion (SIADH)", "points": ["<b>Cause:</b> Inappropriately excessive ADH \u2014 commonly ectopic production from tumors, especially primary lung malignancies. Nonmalignant lung disease (especially pulmonary TB) can\u2026", "<b>Must rule out first:</b> Adrenal insufficiency and hypothyroidism can also increase ADH secretion and cause hyponatremia \u2014 both must be excluded before diagnosing SIADH.", "<b>Manifestations:</b> Weakness, muscle cramps, nausea/vomiting, postural BP changes, poor skin turgor, fatigue, anorexia, lethargy. Severe: confusion, hemiparesis, seizures, coma.", "<b>Labs:</b> Hyponatremia (<135 mEq/L); urine osmolality inappropriately HIGH (water reabsorbed); serum osmolality LOW (diluted); also low hematocrit and BUN from extracellular\u2026", "<b>Treatment:</b> Free water restriction \u2014 should produce a slow steady rise in serum sodium. Severe symptoms: IV saline + diuretic to\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

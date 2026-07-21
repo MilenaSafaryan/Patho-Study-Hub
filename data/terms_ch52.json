@@ -1,0 +1,82 @@
+[
+ {
+  "term": "Elastosis (solar elastosis)",
+  "def": "Cross-linked, thickened collagen bundles from chronic sun exposure, producing a weather-beaten/tanned appearance."
+ },
+ {
+  "term": "Senile purpura",
+  "def": "Age-related hemorrhages from increased dermal vascular fragility."
+ },
+ {
+  "term": "Primary lesion",
+  "def": "A skin lesion in its original, unmodified appearance."
+ },
+ {
+  "term": "Secondary lesion",
+  "def": "A skin lesion whose appearance has been modified over time or by external factors (e.g., scratching)."
+ },
+ {
+  "term": "Verrucae (warts)",
+  "def": "Benign papillomas caused by human papillomavirus, invading only human skin/mucous membranes."
+ },
+ {
+  "term": "Herpes simplex virus (HSV)",
+  "def": "HSV-1 (usually above the waist) and HSV-2 (usually genital); persists latently in the trigeminal or other ganglia after initial infection."
+ },
+ {
+  "term": "Herpes zoster (shingles)",
+  "def": "Reactivation of latent varicella zoster virus in a dorsal sensory ganglion, causing a dermatomal vesicular eruption."
+ },
+ {
+  "term": "Postherpetic neuralgia",
+  "def": "Persistent pain (months to years) after a shingles rash resolves \u2014 the most important complication in patients over 50."
+ },
+ {
+  "term": "Tinea",
+  "def": "Dermatophyte fungal infection, named by body location (capitis, corporis, pedis, cruris, etc.)."
+ },
+ {
+  "term": "Onychomycosis",
+  "def": "Dermatophyte infection of the nails, causing white/yellow discoloration and thickening."
+ },
+ {
+  "term": "Hirsutism (hypertrichosis)",
+  "def": "Intensified, male-pattern hair growth in females \u2014 upper lip, chin, chest, linea alba."
+ },
+ {
+  "term": "Mongolian spot",
+  "def": "A benign area of selective pigmentation, usually buttocks/sacral area, common in Asian American and African American infants."
+ },
+ {
+  "term": "Strawberry hemangioma",
+  "def": "A bright-red, raised vascular birthmark that typically resolves by age 5\u20137 without scarring."
+ },
+ {
+  "term": "Port-wine stain hemangioma",
+  "def": "A flat, reddish-purple vascular birthmark, usually face/neck, that does NOT resolve with age."
+ },
+ {
+  "term": "Milia",
+  "def": "Small white bumps in newborns from plugged sebaceous/eccrine glands."
+ },
+ {
+  "term": "Cradle cap",
+  "def": "A harmless, self-limited scaly scalp condition in infants."
+ },
+ {
+  "term": "Rubella (German measles)",
+  "def": "A mild childhood viral illness with major risk only if transmitted transplacentally to a fetus early in gestation (teratogenic)."
+ },
+ {
+  "term": "Roseola infantum",
+  "def": "A viral illness in children under ~4 (usually ~1 year) with high fever followed by a rash \u2014 NO lymphadenopathy, unlike rubella."
+ },
+ {
+  "term": "Rubeola (measles)",
+  "def": "A more severe communicable viral illness with Koplik spots and a facial-onset rash; risk of otitis media, pneumonia, encephalitis."
+ },
+ {
+  "term": "Koplik spots",
+  "def": "Small red spots with a bluish-white center on the buccal mucosa \u2014 pathognomonic for measles."
+ }
+]

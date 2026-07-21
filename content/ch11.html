@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hematologic Malignancies — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.9rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.85rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=11" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Hematologic Malignancies</p>
+<span class="brand-sub">Chapter 11 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Overview</div>
+<a href="#overview">Leukemia, Lymphoma &amp; Myeloma</a>
+<a href="#classification">Classification Systems</a>
+<div class="grp-title">Myeloid Neoplasms</div>
+<a href="#myeloproliferative">Myeloproliferative Diseases</a>
+<a href="#cml">Chronic Myeloid Leukemia (CML)</a>
+<a href="#aml">Acute Myeloid Leukemia (AML)</a>
+<a href="#acute-vs-chronic">Acute vs. Chronic Leukemia</a>
+<div class="grp-title">Lymphoid Neoplasms</div>
+<a href="#cll">Chronic Lymphocytic Leukemia (CLL/SLL)</a>
+<a href="#all">Acute Lymphoblastic Leukemia (ALL)</a>
+<a href="#hairy-cell">Hairy Cell Leukemia</a>
+<a href="#multiple-myeloma">Multiple Myeloma</a>
+<div class="grp-title">Hodgkin Lymphoma</div>
+<a href="#hodgkin">Hodgkin Lymphoma</a>
+<a href="#hodgkin-staging">Staging &amp; Treatment</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Hematologic Malignancies</h1>
+<p>Leukemia, lymphoma, and multiple myeloma — how cell lineage and maturity determine disease behavior, and the key genetic markers that drive prognosis and treatment. Built from your Chapter 11 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Leukemia</dt><dd>A "circulating tumor" disseminated from the start, primarily involving blood and bone marrow.</dd></div>
+<div class="term"><dt>Lymphoma</dt><dd>A malignancy that localizes in lymph tissue, though often disseminated by diagnosis.</dd></div>
+<div class="term"><dt>Multiple myeloma</dt><dd>Malignant transformation of B-lymphocyte plasma cells, with a predilection for forming bone tumors.</dd></div>
+<div class="term"><dt>Lymphadenopathy</dt><dd>Enlarged, nontender lymph nodes — a common finding in lymphoma and some leukemias.</dd></div>
+<div class="term"><dt>Myeloproliferative disease</dt><dd>Overproduction of one or more functional, normal-appearing blood cell types from a multipotent stem cell (e.g., CML, PV, ET).</dd></div>
+<div class="term"><dt>Myelodysplastic syndrome (MDS)</dt><dd>Neoplastic cells that are morphologically/functionally abnormal (unlike myeloproliferative disease) — poor prognosis.</dd></div>
+<div class="term"><dt>Philadelphia chromosome (Ph+)</dt><dd>The balanced 9;22 translocation forming the BCR/ABL fusion gene — characteristic of CML.</dd></div>
+<div class="term"><dt>BCR/ABL</dt><dd>The fusion gene/oncoprotein from the Philadelphia chromosome; a functional enzyme driving proliferation and blocking apoptosis.</dd></div>
+<div class="term"><dt>Tyrosine kinase inhibitor (TKI)</dt><dd>Drug class binding the BCR/ABL domain, dramatically improving CML survival.</dd></div>
+<div class="term"><dt>Blast</dt><dd>An immature precursor cell; blast percentage in marrow/blood defines leukemia phase/type (e.g., ≥20% blasts = AML).</dd></div>
+<div class="term"><dt>Acute promyelocytic leukemia (APL)</dt><dd>An AML subtype with t(15;17)/PML-RARα fusion; most curable AML subtype, especially with ATRA.</dd></div>
+<div class="term"><dt>ATRA (all-trans-retinoic acid)</dt><dd>A drug that releases PML-RARα's inhibitory block on myeloid differentiation — used specifically in APL.</dd></div>
+<div class="term"><dt>CLL/SLL</dt><dd>Chronic lymphocytic leukemia / small lymphocytic lymphoma — the same disease process, distinguished only by location (blood/marrow vs. nodes/spleen).</dd></div>
+<div class="term"><dt>Richter transformation</dt><dd>Malignant transformation of CLL/SLL into a more aggressive B-cell lymphoma — poor prognosis.</dd></div>
+<div class="term"><dt>Lymphoblast</dt><dd>An immature lymphoid precursor cell characteristic of ALL.</dd></div>
+<div class="term"><dt>Bence Jones protein</dt><dd>Light-chain antibody fragments found in urine in multiple myeloma; can cause kidney damage.</dd></div>
+<div class="term"><dt>Reed-Sternberg cell</dt><dd>The malignant B-cell-derived diagnostic cell of Hodgkin lymphoma — often a minority of the actual tumor cellularity.</dd></div>
+<div class="term"><dt>Ann Arbor / Lugano staging</dt><dd>The staging system for Hodgkin lymphoma based on node location/number and presence of systemic ("B") symptoms.</dd></div>
+</dl>
+</section>
+<!-- ================= OVERVIEW ================= -->
+<section class="block" id="overview">
+<details class="topic" open="">
+<summary>Leukemia, Lymphoma &amp; Myeloma — The Conceptual Distinction</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Three Related but Distinct Presentations</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="40" rx="10" width="240" x="330" y="10"></rect><text font-size="13" text-anchor="middle" x="450" y="35">HEMATOLOGIC MALIGNANCY</text></g>
+<line class="mm-line" x1="450" x2="150" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="450" y1="50" y2="90"></line>
+<line class="mm-line" x1="450" x2="750" y1="50" y2="90"></line>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="40" y="90"></rect><text font-size="12" text-anchor="middle" x="150" y="115">LEUKEMIA</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="340" y="90"></rect><text font-size="12" text-anchor="middle" x="450" y="115">LYMPHOMA</text></g>
+<g class="mm-node"><rect height="40" rx="8" width="220" x="640" y="90"></rect><text font-size="12" text-anchor="middle" x="750" y="115">MULTIPLE MYELOMA</text></g>
+<line class="mm-line" x1="150" x2="150" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="36" rx="6" width="220" x="40" y="158"></rect><text font-size="10.5" text-anchor="middle" x="150" y="180">Circulating from the start</text></g>
+<line class="mm-line" x1="450" x2="450" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="36" rx="6" width="220" x="340" y="158"></rect><text font-size="10.5" text-anchor="middle" x="450" y="180">Localizes in lymph tissue</text></g>
+<line class="mm-line" x1="750" x2="750" y1="130" y2="158"></line>
+<g class="mm-leaf"><rect height="36" rx="6" width="220" x="640" y="158"></rect><text font-size="10.5" text-anchor="middle" x="750" y="180">Plasma cells → bone tumors</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Nonspecific warning symptoms</h4><p>Malaise, weakness, unexplained fever, night sweats, unintentional weight loss, recurrent infections. Lymphadenopathy is common in lymphoma and some leukemias. Often discovered incidentally on routine CBC — a very high WBC count or abnormal cell types should trigger further workup.</p></div>
+<div class="fact"><h4>The WHO's key conceptual insight</h4><p>Leukemias and lymphomas are NOT separate disorders — they represent different <b>stages/presentations of the same underlying biologic disease</b>, classified primarily by cell type rather than body location.</p></div>
+</div>
+<div class="note">Earlier detection is generally associated with better prognosis/cure across these malignancies — the same principle as solid tumor cancers.</div>
+</div>
+</details>
+</section>
+<section class="block" id="classification">
+<details class="topic" open="">
+<summary>Classification Systems</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Two lineages</h4><p><b>Myeloid lineage:</b> RBCs, platelets, monocytes, granulocytes. <b>Lymphoid lineage:</b> B cells, T cells, NK cells. Modern classification (ICC, WHO 5th edition) is organized by cell lineage/type rather than anatomic location.</p></div>
+<div class="fact warn"><h4>Why classification keeps changing</h4><p>Genetic/molecular characterization (gene fusions, rearrangements, mutations) has made classification increasingly specific and complex — with emphasis on therapeutically/prognostically <b>actionable biomarkers</b>, not just morphology.</p></div>
+</div>
+<div class="note"><b>"Non-Hodgkin lymphoma"</b> is a still-used clinical term NOT included in the WHO classification — it covers a large, diverse group of B-cell/T-cell/NK-cell lymphomas whose grouping has little actual relevance to prognosis or treatment (it's a catch-all, not a biologically meaningful category).</div>
+</div>
+</details>
+</section>
+<!-- ================= MYELOID NEOPLASMS ================= -->
+<section class="block" id="myeloproliferative">
+<details class="topic" open="">
+<summary>Myeloproliferative Diseases (Overview)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The three classics</h4><p><b>CML</b> = excess granulocytes. <b>Polycythemia vera (PV)</b> = excess RBCs. <b>Essential thrombocythemia (ET)</b> = excess platelets. All arise from a multipotent hematopoietic progenitor.</p></div>
+<div class="fact warn"><h4>Key shared feature — functional cells</h4><p>Unlike MDS/AML, myeloproliferative disease cells are usually <b>functional and morphologically normal</b> — this is why these disorders are often insidious/indolent with vague symptoms (fatigue, rash, itching) and are frequently found incidentally on routine CBC.</p></div>
+</div>
+<div class="note">Common features: multipotent progenitor involvement, marrow hypercellularity, overproduction of one or more functional cell lines. Associated mutations include BCR/ABL and JAK2 among others. These disorders can transform/progress into more aggressive malignancy over time.</div>
+</div>
+</details>
+</section>
+<section class="block" id="cml">
+<details class="topic" open="">
+<summary>Chronic Myeloid Leukemia (CML)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~15% of US leukemia cases; median age 57–60; slightly more common in males; rare in childhood.</p></div>
+<div class="fact warn"><h4>The Philadelphia chromosome</h4><p>A balanced translocation between chromosomes 9 and 22 → juxtaposes the BCR and ABL genes → <b>BCR/ABL fusion gene</b>. The fusion protein is a functional enzyme that drives proliferation and reduces apoptosis. <b>CML is unusual among cancers in that a single oncogene can confer the malignant state.</b></p></div>
+</div>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Three Phases of CML</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="260" x="20" y="50"></rect><text font-size="12" text-anchor="middle" x="150" y="72">CHRONIC PHASE</text><text font-size="10" text-anchor="middle" x="150" y="88">&lt;10% blasts</text></g>
+<line class="mm-line" x1="280" x2="320" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="320" y="50"></rect><text font-size="12" text-anchor="middle" x="450" y="72">ACCELERATED PHASE</text><text font-size="10" text-anchor="middle" x="450" y="88">10–20% blasts</text></g>
+<line class="mm-line" x1="580" x2="620" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="620" y="50"></rect><text font-size="12" text-anchor="middle" x="750" y="72">BLAST CRISIS</text><text font-size="10" text-anchor="middle" x="750" y="88">20–30% blasts</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Chronic phase presentation</h4><p>Usually diagnosed here — relatively asymptomatic; high granulocyte count + splenomegaly; retains normal marrow function. Symptoms if present: fatigue, early satiety, weight loss, diaphoresis, bleeding, bone pain, abdominal discomfort (splenomegaly).</p></div>
+<div class="fact warn"><h4>Progression to blast crisis</h4><p>Behaves like acute leukemia with poorer prognosis; driven by accumulating additional molecular abnormalities (insertions, deletions, point mutations) and loss of clone differentiation. The bone marrow microenvironment contributes to leukemic stem cell persistence and treatment resistance.</p></div>
+</div>
+<div class="danger"><b>Treatment revolution:</b> survival rose from 22% (1970) to as high as 90% with anti-BCR/ABL <b>tyrosine kinase inhibitor (TKI)</b> therapy — TKIs bind the BCR/ABL domain directly, driving leukemic cell counts to zero or near-zero. Some patients in deep, sustained molecular remission (&gt;3 years) can be carefully taken off TKI therapy, though relapse can occur (thought to be from residual CML stem cells TKIs don't eliminate). 5–10% don't respond to first-gen TKIs; 20–30% develop resistance over time (from additional BCR/ABL mutations) — 2nd/3rd generation TKIs target these. <b>Only known curative treatment: allogeneic hematopoietic stem cell transplant.</b></div>
+</div>
+</details>
+</section>
+<section class="block" id="aml">
+<details class="topic" open="">
+<summary>Acute Myeloid Leukemia (AML)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>Primarily a disease of adults (80% of adult acute leukemia, only 15–20% of childhood acute leukemia). Average age 64–71; incidence rising as population ages.</p></div>
+<div class="fact warn"><h4>Diagnostic threshold</h4><p>Bone marrow aspirate must show <b>&gt;20% blasts</b> to diagnose AML. Myeloblastic cells: large, nonsegmented nucleus, fine chromatin.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Genetic complexity</h4><p>AML has both driver and passenger mutations — one of the first cancers sequenced at the whole-genome level. Molecular profiling (cytogenetics + molecular testing) is now standard for risk stratification and treatment guidance. <b>TP53 mutations = poorer prognosis.</b></p></div>
+<div class="fact warn"><h4>AML vs. ALL — hard to distinguish clinically</h4><p>Both present with bone pain, anemia, thrombocytopenia, and infection susceptibility (skin, GU, GI, respiratory sites). Abrupt onset, care sought within weeks. Overall 5-year survival: 28% (adults), 60–70% (children). Remission rates: 80–85% (children) vs. 40–80% (adults, depends on disease characteristics).</p></div>
+</div>
+<div class="callout"><b>Acute promyelocytic leukemia (APL) — the special exception:</b> only 10–15% of AML cases, but the MOST curable AML subtype (80–90% 5-year disease-free survival). Caused by t(15;17) → <b>PML/RARα</b> fusion gene, which binds a nuclear repressor complex and blocks myeloid differentiation. <b>ATRA</b> (all-trans-retinoic acid) releases RARα's inhibitory hold on differentiation — adding it to chemotherapy dramatically improves disease-free survival, potentially curative.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact tx"><h4>Two-phase treatment</h4><p><b>Remission induction:</b> goal = complete remission (CR), using cytotoxic chemo + targeted therapy/monoclonal antibodies as appropriate. <b>Consolidation/postremission:</b> eliminate any undetected residual leukemic cells. Patients completing only 1–2 chemo cycles due to toxicity almost always relapse even if CR was achieved.</p></div>
+<div class="fact"><h4>Targeted mutations &amp; transplant</h4><p>FLT3 and IDH1/IDH2 mutations have specific targeted drugs. Stem cell transplant may be used at first CR (based on age/comorbidities/cytogenetic risk) or reserved for relapse.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="acute-vs-chronic">
+<details class="topic" open="">
+<summary>Acute vs. Chronic Leukemia</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Feature</th><th>Acute</th><th>Chronic</th></tr>
+<tr><td>Age</td><td>All ages</td><td>Adult</td></tr>
+<tr><td>Clinical onset</td><td>Sudden</td><td>Insidious</td></tr>
+<tr><td>Untreated course</td><td>Weeks to months</td><td>Months to years</td></tr>
+<tr><td>Predominant cell</td><td>Blasts, some mature forms</td><td>Mature forms</td></tr>
+<tr><td>Anemia</td><td>Mild to severe</td><td>Mild</td></tr>
+<tr><td>Thrombocytopenia</td><td>Mild to severe</td><td>Mild</td></tr>
+<tr><td>WBC count</td><td>Variable</td><td>Increased</td></tr>
+</table>
+<div class="note">Sudden, serious presentation of suspected AML requires urgent diagnosis/treatment initiation — chronic leukemias generally allow more time.</div>
+</div>
+</details>
+</section>
+<!-- ================= LYMPHOID NEOPLASMS ================= -->
+<section class="block" id="cll">
+<details class="topic" open="">
+<summary>Chronic Lymphocytic Leukemia (CLL/SLL)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology &amp; behavior</h4><p>Most common adult leukemia in the Western world; average age 70; rare in Asian/Pacific Islander populations. Malignant B-cell precursor; indolent course, often asymptomatic, found incidentally.</p></div>
+<div class="fact warn"><h4>Mechanism</h4><p>Leukemic B cells don't produce antibodies normally → ↑ infection susceptibility. Marrow infiltration reduces other cell lines (RBCs, platelets). Cells are characterized by <b>defective apoptosis</b> → extended lifespan (derived from mature peripheral B cells).</p></div>
+</div>
+<div class="callout"><b>CLL and SLL are the SAME disease</b> — just different manifestations depending on location. CLL = blood/marrow involvement. SLL = same monoclonal B cells but in lymph nodes/spleen WITHOUT overt marrow/blood involvement.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Prognostic genetics</h4><p><b>IGHV mutation</b> (immunoglobulin variable region) = better prognosis, better chemo response. <b>TP53 aberrations</b> = shorter survival, treatment resistance.</p></div>
+<div class="fact warn"><h4>Watch-and-wait is often appropriate</h4><p>Given average age ~70, indolent disease often isn't treated — no survival benefit shown for treating asymptomatic disease, even high-risk features. Patients monitored for blood count changes, growing lymphadenopathy, frequent infections, and "B symptoms" (weight loss, fatigue, night sweats).</p></div>
+</div>
+<div class="danger"><b>Richter transformation:</b> ~5% of CLL/SLL patients transform into a more aggressive B-cell lymphoma, from additional mutations (TP53, CDKN2A, MYC). Signs: sudden dramatic lymph node growth, dramatic weight loss/fevers/night sweats, severe cytopenias. Poor treatment response, poor prognosis.</div>
+<div class="note">Only currently curative option: stem cell transplant. Newer targeted B-cell inhibitor and BCL2-inhibitor therapies have extended survival significantly, even in TP53-mutant or relapsed disease.</div>
+</div>
+</details>
+</section>
+<section class="block" id="all">
+<details class="topic" open="">
+<summary>Acute Lymphoblastic Leukemia (ALL)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cell origin &amp; diagnostic threshold</h4><p>85% B-cell origin, remainder T-cell. Lymphoblasts (immature) accumulate. ≥20% leukemic lymphoblasts in marrow required for diagnosis. Can also present as lymphoblastic LYMPHOMA — same disease, treated the same way.</p></div>
+<div class="fact warn"><h4>Epidemiology — the pediatric disease</h4><p>Most common malignancy diagnosed in patients &lt;15 years old. Peak incidence age 2–5; more common in young males.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Presentation</h4><p>Abrupt onset: bone pain, bruising, fever, infection. Young children may refuse to walk; parents report fatigue, appetite loss, abdominal pain. Spleen/liver/nodes may enlarge. 3% present with CNS signs from leukemic brain infiltration. Mediastinal masses, lymphatic obstruction, testicular infiltration possible.</p></div>
+<div class="fact tx"><h4>Prognosis by age/subtype</h4><p>5-year survival: 89% (children), 61% (adolescents/young adults), 20–40% (older adults). Pre-B-cell type in children: 90% cure rate. Mature B-cell or immature T-cell leukemia: poorer prognosis.</p></div>
+</div>
+<div class="danger"><b>CNS prophylaxis is essential:</b> without specific meningeal-directed therapy, CNS disease develops in ~50% of adult patients. This is why treatment protocols specifically include CNS-targeted treatment, not just systemic chemo.</div>
+<div class="note">Multidrug chemo for induction; postremission maintenance (± stem cell transplant) for 2–3 years to prolong remission. Adults generally need more intensive therapy than children to achieve CR.</div>
+</div>
+</details>
+</section>
+<section class="block" id="hairy-cell">
+<details class="topic" open="">
+<summary>Hairy Cell Leukemia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Basics</h4><p>Rare (~2% of adult leukemias), B-cell phenotype, named for hairlike surface projections. Median age ~55, 4:1 male predominance. Cause unknown but associated with herbicide exposure and family history.</p></div>
+<div class="fact warn"><h4>Genetics</h4><p>Virtually all patients have <b>BRAF V600E</b> activating mutations (RAS-RAF-MAPK pathway) → increased proliferation/survival. The same mutation appears in malignant melanoma, non-small cell lung cancer, and colon cancer — a shared oncogenic pathway across very different cancer types.</p></div>
+</div>
+<div class="callout"><b>Excellent treatability despite being incurable by standard means:</b> chemotherapy produces &gt;90% complete remission rates, with remissions commonly lasting &gt;10 years. Targeted BRAF inhibitors and BTK inhibitors (also used in melanoma) are used for relapsed/refractory disease. No cure except allogeneic stem cell transplant.</div>
+</div>
+</details>
+</section>
+<section class="block" id="multiple-myeloma">
+<details class="topic" open="">
+<summary>Multiple Myeloma</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What it is</h4><p>Malignancy of mature, antibody-secreting plasma cells (mature B lymphocytes) — 2nd most frequently diagnosed hematologic malignancy. Predilection for invading bone, forming multiple tumor sites; can also target lymph nodes, liver, spleen, kidneys.</p></div>
+<div class="fact warn"><h4>Epidemiology</h4><p>Exclusively adult, usually &gt;40 years old, median age 69. More common in males; <b>2x prevalence in African American vs. European ancestry populations</b>. Rising incidence in the developed world.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Monoclonal antibody spike</h4><p>All malignant plasma cells are a single clone → identical monoclonal antibody produced in excess → detectable as a sharp "spike" on serum protein electrophoresis (vs. the normal broad, polyclonal distribution).</p></div>
+<div class="fact warn"><h4>Bence Jones protein</h4><p>Excess light-chain antibody fragments accumulate in blood and urine (urine form = Bence Jones protein) — helps confirm diagnosis AND directly contributes to pathogenesis, since it can accumulate in the kidneys and cause damage.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= HODGKIN LYMPHOMA ================= -->
+<section class="block" id="hodgkin">
+<details class="topic" open="">
+<summary>Hodgkin Lymphoma</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Epidemiology</h4><p>~30% of malignant lymphoma, ~8500 new US cases/year. <b>Bimodal age distribution:</b> peak 15–30 years, then again after 50. More common in males, who also have worse prognosis. Overall 5-year survival ~89% (all stages treated).</p></div>
+<div class="fact warn"><h4>Reed-Sternberg cells</h4><p>Malignant, B-cell-derived (from germinal centers), but constitute only ~2% of the actual tumor cellularity — most of the mass is reactive inflammatory cells. EBV found in ~40% of transformed Reed-Sternberg cells in developed countries (higher in developing countries) — thought to contribute to pathogenesis.</p></div>
+</div>
+<div class="callout"><b>The defining clinical feature: predictable, orderly spread.</b> Unlike other lymphomas, Hodgkin lymphoma metastasizes along contiguous lymphatic pathways in a step-wise, predictable pattern — only late in disease (after vascular invasion) does widespread hematogenous spread occur. This predictability is exactly why staging (Ann Arbor/Lugano) works so well for guiding treatment.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Two main types</h4><p><b>Nodular lymphocyte-predominant</b> (rare, 5% of cases). <b>Classical type</b> (95% of cases, further divided into 4 subtypes by reactive cell composition).</p></div>
+<div class="fact"><h4>Typical presentation</h4><p>Painless lymphadenopathy ± fever, night sweats, pruritus, weight loss, malaise. Usually <b>above the diaphragm</b> — cervical nodes most common, then supraclavicular/axillary/mediastinal. Subdiaphragmatic (inguinal nodes most common there) is less typical.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="hodgkin-staging">
+<details class="topic" open="">
+<summary>Staging &amp; Treatment</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Ann Arbor / Lugano staging</h4><p>Based on clinical symptoms + affected node locations. <b>"A"</b> = no symptoms. <b>"B"</b> = symptoms present (&gt;10% body weight loss, unexplained fever, night sweats — the classic "B symptoms"). Clinical stage (CS): history/exam/CT/PET. Pathologic stage: invasive procedures (laparotomy, biopsy).</p></div>
+<div class="fact warn"><h4>Treatment by extent</h4><p>Localized tumors → radiation therapy works well (often detected while still localized). Disseminated disease → systemic chemotherapy. Nonbulky stage IA/IIA previously treated with radiation alone, but relapse rates were high — now combined chemo + limited-field radiation is standard. Bulky disease, B symptoms, or stage III/IV require chemo ± radiation.</p></div>
+</div>
+<div class="note">Early-stage disease with appropriate treatment: &gt;90% 10-year disease-free survival. Relapsed disease: high-dose chemo/radiation + autologous stem cell rescue, OR newer checkpoint inhibitor immunotherapies targeting <b>PD-L1</b> (same mechanism discussed in Chapter 7 cancer immune evasion).</div>
+<div class="danger"><b>Long-term survivorship risks — important for younger cured patients:</b> higher risk of second malignancy (AML from chemo, breast cancer from chest radiation), heart disease, thyroid dysfunction, infertility/early menopause, and other metabolic abnormalities. These patients need lifelong careful screening and follow-up as they age — cure isn't the end of the clinical relationship.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 11 (Hematologic Malignancies) material. Redraw the CML three-phase mind map and the leukemia/lymphoma/myeloma overview from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "A \"circulating tumor\" disseminated from the start, primarily involving blood and bone marrow.", "answers": ["Leukemia"]}, {"def": "A malignancy that localizes in lymph tissue, though often disseminated by diagnosis.", "answers": ["Lymphoma"]}, {"def": "Malignant transformation of B-lymphocyte plasma cells, with a predilection for forming bone tumors.", "answers": ["Multiple myeloma"]}, {"def": "Enlarged, nontender lymph nodes \u2014 a common finding in lymphoma and some leukemias.", "answers": ["Lymphadenopathy"]}, {"def": "Overproduction of one or more functional, normal-appearing blood cell types from a multipotent stem cell (e.g., CML, PV, ET).", "answers": ["Myeloproliferative disease"]}, {"def": "Neoplastic cells that are morphologically/functionally abnormal (unlike myeloproliferative disease) \u2014 poor prognosis.", "answers": ["Myelodysplastic syndrome", "MDS", "Myelodysplastic syndrome (MDS)"]}, {"def": "The balanced 9;22 translocation forming the BCR/ABL fusion gene \u2014 characteristic of CML.", "answers": ["Philadelphia chromosome", "Ph+", "Philadelphia chromosome (Ph+)"]}, {"def": "The fusion gene/oncoprotein from the Philadelphia chromosome; a functional enzyme driving proliferation and blocking apoptosis.", "answers": ["BCR/ABL"]}, {"def": "Drug class binding the BCR/ABL domain, dramatically improving CML survival.", "answers": ["Tyrosine kinase inhibitor", "TKI", "Tyrosine kinase inhibitor (TKI)"]}, {"def": "An immature precursor cell; blast percentage in marrow/blood defines leukemia phase/type (e.g., \u226520% blasts = AML).", "answers": ["Blast"]}, {"def": "An AML subtype with t(15;17)/PML-RAR\u03b1 fusion; most curable AML subtype, especially with ATRA.", "answers": ["Acute promyelocytic leukemia", "APL", "Acute promyelocytic leukemia (APL)"]}, {"def": "A drug that releases PML-RAR\u03b1's inhibitory block on myeloid differentiation \u2014 used specifically in APL.", "answers": ["ATRA", "all-trans-retinoic acid", "ATRA (all-trans-retinoic acid)"]}, {"def": "Chronic lymphocytic leukemia / small lymphocytic lymphoma \u2014 the same disease process, distinguished only by location (blood/marrow vs. nodes/spleen).", "answers": ["CLL/SLL"]}, {"def": "Malignant transformation of CLL/SLL into a more aggressive B-cell lymphoma \u2014 poor prognosis.", "answers": ["Richter transformation"]}, {"def": "An immature lymphoid precursor cell characteristic of ALL.", "answers": ["Lymphoblast"]}, {"def": "Light-chain antibody fragments found in urine in multiple myeloma; can cause kidney damage.", "answers": ["Bence Jones protein"]}, {"def": "The malignant B-cell-derived diagnostic cell of Hodgkin lymphoma \u2014 often a minority of the actual tumor cellularity.", "answers": ["Reed-Sternberg cell"]}, {"def": "The staging system for Hodgkin lymphoma based on node location/number and presence of systemic (\"B\") symptoms.", "answers": ["Ann Arbor / Lugano staging"]}];
+const QUIZ_TEACHBACK = [{"topic": "Leukemia, Lymphoma & Myeloma \u2014 The Conceptual Distinction", "points": ["<b>Nonspecific warning symptoms:</b> Malaise, weakness, unexplained fever, night sweats, unintentional weight loss, recurrent infections. Lymphadenopathy is common in lymphoma and some leukemias. Often\u2026", "<b>The WHO's key conceptual insight:</b> Leukemias and lymphomas are NOT separate disorders \u2014 they represent different stages/presentations of the same underlying biologic disease , classified\u2026"]}, {"topic": "Classification Systems", "points": ["<b>Two lineages:</b> Myeloid lineage: RBCs, platelets, monocytes, granulocytes. Lymphoid lineage: B cells, T cells, NK cells. Modern classification (ICC, WHO 5th edition)\u2026", "<b>Why classification keeps changing:</b> Genetic/molecular characterization (gene fusions, rearrangements, mutations) has made classification increasingly specific and complex \u2014 with emphasis on therapeutically/prognostically actionable biomarkers\u2026"]}, {"topic": "Myeloproliferative Diseases (Overview)", "points": ["<b>The three classics:</b> CML = excess granulocytes. Polycythemia vera (PV) = excess RBCs. Essential thrombocythemia (ET) = excess platelets. All arise from a\u2026", "<b>Key shared feature \u2014 functional cells:</b> Unlike MDS/AML, myeloproliferative disease cells are usually functional and morphologically normal \u2014 this is why these disorders are often insidious/indolent\u2026"]}, {"topic": "Chronic Myeloid Leukemia (CML)", "points": ["<b>Epidemiology:</b> ~15% of US leukemia cases; median age 57\u201360; slightly more common in males; rare in childhood.", "<b>The Philadelphia chromosome:</b> A balanced translocation between chromosomes 9 and 22 \u2192 juxtaposes the BCR and ABL genes \u2192 BCR/ABL fusion gene .\u2026", "<b>Chronic phase presentation:</b> Usually diagnosed here \u2014 relatively asymptomatic; high granulocyte count + splenomegaly; retains normal marrow function. Symptoms if present: fatigue, early\u2026", "<b>Progression to blast crisis:</b> Behaves like acute leukemia with poorer prognosis; driven by accumulating additional molecular abnormalities (insertions, deletions, point mutations) and loss of\u2026", "Treatment revolution: survival rose from 22% (1970) to as high as 90% with anti-BCR/ABL tyrosine kinase inhibitor (TKI) therapy \u2014 TKIs bind\u2026"]}, {"topic": "Acute Myeloid Leukemia (AML)", "points": ["<b>Epidemiology:</b> Primarily a disease of adults (80% of adult acute leukemia, only 15\u201320% of childhood acute leukemia). Average age 64\u201371; incidence\u2026", "<b>Diagnostic threshold:</b> Bone marrow aspirate must show >20% blasts to diagnose AML. Myeloblastic cells: large, nonsegmented nucleus, fine chromatin.", "<b>Genetic complexity:</b> AML has both driver and passenger mutations \u2014 one of the first cancers sequenced at the whole-genome level. Molecular profiling\u2026", "<b>AML vs. ALL \u2014 hard to distinguish clinically:</b> Both present with bone pain, anemia, thrombocytopenia, and infection susceptibility (skin, GU, GI, respiratory sites). Abrupt onset, care sought within\u2026", "<b>Two-phase treatment:</b> Remission induction: goal = complete remission (CR), using cytotoxic chemo + targeted therapy/monoclonal antibodies as appropriate. Consolidation/postremission: eliminate any undetected\u2026", "<b>Targeted mutations & transplant:</b> FLT3 and IDH1/IDH2 mutations have specific targeted drugs. Stem cell transplant may be used at first CR (based on age/comorbidities/cytogenetic\u2026", "Acute promyelocytic leukemia (APL) \u2014 the special exception: only 10\u201315% of AML cases, but the MOST curable AML subtype (80\u201390% 5-year disease-free\u2026"]}, {"topic": "Chronic Lymphocytic Leukemia (CLL/SLL)", "points": ["<b>Epidemiology & behavior:</b> Most common adult leukemia in the Western world; average age 70; rare in Asian/Pacific Islander populations. Malignant B-cell precursor; indolent\u2026", "<b>Mechanism:</b> Leukemic B cells don't produce antibodies normally \u2192 \u2191 infection susceptibility. Marrow infiltration reduces other cell lines (RBCs, platelets). Cells\u2026", "<b>Prognostic genetics:</b> IGHV mutation (immunoglobulin variable region) = better prognosis, better chemo response. TP53 aberrations = shorter survival, treatment resistance.", "<b>Watch-and-wait is often appropriate:</b> Given average age ~70, indolent disease often isn't treated \u2014 no survival benefit shown for treating asymptomatic disease, even high-risk\u2026", "Richter transformation: ~5% of CLL/SLL patients transform into a more aggressive B-cell lymphoma, from additional mutations (TP53, CDKN2A, MYC). Signs: sudden dramatic\u2026", "CLL and SLL are the SAME disease \u2014 just different manifestations depending on location. CLL = blood/marrow involvement. SLL = same monoclonal\u2026"]}, {"topic": "Acute Lymphoblastic Leukemia (ALL)", "points": ["<b>Cell origin & diagnostic threshold:</b> 85% B-cell origin, remainder T-cell. Lymphoblasts (immature) accumulate. \u226520% leukemic lymphoblasts in marrow required for diagnosis. Can also present as\u2026", "<b>Epidemiology \u2014 the pediatric disease:</b> Most common malignancy diagnosed in patients <15 years old. Peak incidence age 2\u20135; more common in young males.", "<b>Presentation:</b> Abrupt onset: bone pain, bruising, fever, infection. Young children may refuse to walk; parents report fatigue, appetite loss, abdominal pain.\u2026", "<b>Prognosis by age/subtype:</b> 5-year survival: 89% (children), 61% (adolescents/young adults), 20\u201340% (older adults). Pre-B-cell type in children: 90% cure rate. Mature B-cell or\u2026", "CNS prophylaxis is essential: without specific meningeal-directed therapy, CNS disease develops in ~50% of adult patients. This is why treatment protocols specifically\u2026"]}, {"topic": "Hairy Cell Leukemia", "points": ["<b>Basics:</b> Rare (~2% of adult leukemias), B-cell phenotype, named for hairlike surface projections. Median age ~55, 4:1 male predominance. Cause unknown\u2026", "<b>Genetics:</b> Virtually all patients have BRAF V600E activating mutations (RAS-RAF-MAPK pathway) \u2192 increased proliferation/survival. The same mutation appears in malignant melanoma,\u2026", "Excellent treatability despite being incurable by standard means: chemotherapy produces >90% complete remission rates, with remissions commonly lasting >10 years. Targeted BRAF\u2026"]}, {"topic": "Multiple Myeloma", "points": ["<b>What it is:</b> Malignancy of mature, antibody-secreting plasma cells (mature B lymphocytes) \u2014 2nd most frequently diagnosed hematologic malignancy. Predilection for invading bone,\u2026", "<b>Epidemiology:</b> Exclusively adult, usually >40 years old, median age 69. More common in males; 2x prevalence in African American vs. European\u2026", "<b>Monoclonal antibody spike:</b> All malignant plasma cells are a single clone \u2192 identical monoclonal antibody produced in excess \u2192 detectable as a sharp\u2026", "<b>Bence Jones protein:</b> Excess light-chain antibody fragments accumulate in blood and urine (urine form = Bence Jones protein) \u2014 helps confirm diagnosis AND\u2026"]}, {"topic": "Hodgkin Lymphoma", "points": ["<b>Epidemiology:</b> ~30% of malignant lymphoma, ~8500 new US cases/year. Bimodal age distribution: peak 15\u201330 years, then again after 50. More common\u2026", "<b>Reed-Sternberg cells:</b> Malignant, B-cell-derived (from germinal centers), but constitute only ~2% of the actual tumor cellularity \u2014 most of the mass is\u2026", "<b>Two main types:</b> Nodular lymphocyte-predominant (rare, 5% of cases). Classical type (95% of cases, further divided into 4 subtypes by reactive cell composition).", "<b>Typical presentation:</b> Painless lymphadenopathy \u00b1 fever, night sweats, pruritus, weight loss, malaise. Usually above the diaphragm \u2014 cervical nodes most common, then\u2026", "The defining clinical feature: predictable, orderly spread. Unlike other lymphomas, Hodgkin lymphoma metastasizes along contiguous lymphatic pathways in a step-wise, predictable pattern\u2026"]}, {"topic": "Staging & Treatment", "points": ["<b>Ann Arbor / Lugano staging:</b> Based on clinical symptoms + affected node locations. \"A\" = no symptoms. \"B\" = symptoms present (>10% body weight loss,\u2026", "<b>Treatment by extent:</b> Localized tumors \u2192 radiation therapy works well (often detected while still localized). Disseminated disease \u2192 systemic chemotherapy. Nonbulky stage IA/IIA\u2026", "Long-term survivorship risks \u2014 important for younger cured patients: higher risk of second malignancy (AML from chemo, breast cancer from chest radiation),\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+[
+ {
+  "term": "Dysphagia",
+  "def": "Subjective difficulty swallowing; can involve trouble initiating a swallow or a \"sticking\" sensation."
+ },
+ {
+  "term": "Odynophagia",
+  "def": "Pain during swallowing; may accompany dysphagia."
+ },
+ {
+  "term": "Peristalsis",
+  "def": "The coordinated, wave-like muscle contractions that move contents through the GI tract."
+ },
+ {
+  "term": "Aperistalsis",
+  "def": "Complete absence of peristaltic activity in the esophagus."
+ },
+ {
+  "term": "Achalasia",
+  "def": "A disorder of esophageal smooth muscle function that impairs peristalsis and LES relaxation."
+ },
+ {
+  "term": "Lower Esophageal Sphincter (LES)",
+  "def": "The muscular ring between the esophagus and stomach that normally prevents reflux."
+ },
+ {
+  "term": "Pyrosis",
+  "def": "Medical term for heartburn \u2014 a substernal burning sensation from acid reflux."
+ },
+ {
+  "term": "Diffuse Esophageal Spasm (DES)",
+  "def": "High-amplitude, uncoordinated esophageal contractions that alternate with normal peristalsis, causing chest pain that can mimic angina."
+ },
+ {
+  "term": "Visceral Pain",
+  "def": "Diffuse, poorly localized pain from stretching/inflammation of an internal organ."
+ },
+ {
+  "term": "Somatic Pain",
+  "def": "Sharp, well-localized pain from injury to the abdominal wall or peritoneum."
+ },
+ {
+  "term": "Referred Pain",
+  "def": "Pain felt at a site distant from its source, but within the same dermatome/nerve segment."
+ },
+ {
+  "term": "Aerophagia",
+  "def": "Subconscious swallowing of air \u2014 a normal source of intestinal gas."
+ },
+ {
+  "term": "Eructation",
+  "def": "Belching; expulsion of swallowed air from the stomach."
+ },
+ {
+  "term": "Constipation",
+  "def": "Small, infrequent (fewer than 3/week), or difficult bowel movements."
+ },
+ {
+  "term": "Fecal Impaction",
+  "def": "A firm, immovable mass of stool obstructing the lower GI tract, common after chronic constipation."
+ },
+ {
+  "term": "Diarrhea",
+  "def": "Increased frequency and fluidity of bowel movements; >200 g stool/24 hr is the objective definition."
+ },
+ {
+  "term": "Osmotic Diarrhea",
+  "def": "Diarrhea from poorly-absorbed solutes pulling water into the bowel lumen."
+ },
+ {
+  "term": "Secretory Diarrhea",
+  "def": "Diarrhea from toxins that actively stimulate intestinal fluid secretion (e.g., cholera toxin)."
+ },
+ {
+  "term": "Exudative Diarrhea",
+  "def": "Diarrhea from mucus, blood, and protein leaking from inflamed bowel (e.g., IBD)."
+ },
+ {
+  "term": "Stomatitis",
+  "def": "Ulcerative inflammation of the oral mucosa (lips, cheeks, palate)."
+ },
+ {
+  "term": "GERD",
+  "def": "Gastroesophageal reflux disease \u2014 backflow of gastric contents into the esophagus through the LES."
+ },
+ {
+  "term": "Barrett Esophagus",
+  "def": "Replacement of normal esophageal squamous epithelium with columnar tissue from chronic acid exposure; precancerous."
+ },
+ {
+  "term": "Hiatal Hernia",
+  "def": "Protrusion of part of the stomach through the diaphragm into the thorax."
+ },
+ {
+  "term": "Mallory-Weiss Syndrome",
+  "def": "A mucosal tear at the gastroesophageal junction from forceful vomiting, causing bleeding."
+ },
+ {
+  "term": "Esophageal Varices",
+  "def": "Dilated esophageal veins from portal hypertension, usually due to cirrhosis; risk of severe hemorrhage."
+ },
+ {
+  "term": "Gastritis",
+  "def": "Inflammation of the stomach lining; acute (toxins) or chronic (oftenH. pylori)."
+ },
+ {
+  "term": "Helicobacter pylori",
+  "def": "A bacterium that colonizes the gastric mucosa and is the major cause of chronic gastritis and peptic ulcer disease."
+ },
+ {
+  "term": "Gastroenteritis",
+  "def": "Inflammation of the stomach and small intestine, often infectious (\"stomach flu\")."
+ },
+ {
+  "term": "Peptic Ulcer Disease (PUD)",
+  "def": "Mucosal injury of the esophagus, stomach, or duodenum from acid/pepsin exceeding mucosal defenses."
+ },
+ {
+  "term": "Irritable Bowel Syndrome (IBS)",
+  "def": "A functional motility disorder with alternating diarrhea/constipation and cramping, without identifiable structural pathology."
+ },
+ {
+  "term": "Ileus",
+  "def": "A functional (non-mechanical) obstruction from loss of bowel propulsive activity."
+ },
+ {
+  "term": "Strangulation",
+  "def": "Impaired blood supply to a bowel segment, risking ischemia, gangrene, and perforation."
+ },
+ {
+  "term": "Volvulus",
+  "def": "Twisting of the bowel on itself, causing obstruction and vascular compression."
+ },
+ {
+  "term": "Intussusception",
+  "def": "Telescoping of one bowel segment into an adjacent (usually distal) segment."
+ },
+ {
+  "term": "Megacolon",
+  "def": "Massive dilation of the colon, congenital or acquired."
+ },
+ {
+  "term": "Hirschsprung Disease",
+  "def": "Congenital absence of autonomic ganglia in a colon segment, preventing normal relaxation and causing megacolon."
+ },
+ {
+  "term": "Malabsorption",
+  "def": "Failure of the GI tract to properly absorb or digest one or more dietary nutrients."
+ },
+ {
+  "term": "Celiac Disease",
+  "def": "Immune-mediated intolerance of gluten causing villus atrophy and malabsorption."
+ },
+ {
+  "term": "Steatorrhea",
+  "def": "Excess fat in the stool, a sign of fat malabsorption."
+ },
+ {
+  "term": "Dumping Syndrome",
+  "def": "Rapid emptying of stomach contents into the small intestine after gastric surgery, causing osmotic fluid shift and rebound hypoglycemia."
+ },
+ {
+  "term": "Short Bowel Syndrome",
+  "def": "Severe malabsorption/diarrhea following surgical removal of large portions of small intestine."
+ },
+ {
+  "term": "Adenomatous Polyp",
+  "def": "A benign colon growth that is the major precursor lesion for colon cancer."
+ },
+ {
+  "term": "Sessile vs. Pedunculated Polyp",
+  "def": "Sessile = broad, flat base; pedunculated = attached by a narrow stalk."
+ },
+ {
+  "term": "Dukes Classification",
+  "def": "A staging system for colorectal cancer based on depth of invasion and nodal/metastatic spread."
+ }
+]

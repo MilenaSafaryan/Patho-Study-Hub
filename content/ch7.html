@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cancer / Neoplasia — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.2rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:2.05rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.85rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=7" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Cancer / Neoplasia</p>
+<span class="brand-sub">Chapter 7 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Benign vs. Malignant</div>
+<a href="#benign-malignant">Characteristics &amp; Anaplasia</a>
+<a href="#tumor-terminology">Tumor Terminology</a>
+<a href="#hallmarks-of-cancer">Hallmarks of Cancer</a>
+<div class="grp-title">Epidemiology &amp; Risk</div>
+<a href="#epi-risk">Epidemiology &amp; Risk Factors</a>
+<a href="#tobacco-nutrition">Tobacco, Nutrition &amp; Lifestyle</a>
+<div class="grp-title">Genetic Mechanisms</div>
+<a href="#driver-passenger">Driver vs. Passenger Mutations</a>
+<a href="#proto-oncogenes">Proto-Oncogenes &amp; Oncogenes</a>
+<a href="#oncogene-activation">From Proto-Oncogene to Oncogene</a>
+<div class="grp-title">Multistep Carcinogenesis</div>
+<a href="#initiation">Initiation</a>
+<a href="#promotion">Promotion</a>
+<a href="#progression">Progression</a>
+<div class="grp-title">Invasion &amp; Metastasis</div>
+<a href="#invasion-mechanism">Invasion Mechanism</a>
+<a href="#patterns-of-spread">Patterns of Spread &amp; Biomarkers</a>
+<a href="#angiogenesis">Angiogenesis</a>
+<div class="grp-title">Effects &amp; Treatment</div>
+<a href="#warning-signs">Warning Signs</a>
+<a href="#cancer-effects">Cachexia, Immune Suppression &amp; Marrow Effects</a>
+<a href="#paraneoplastic">Paraneoplastic Syndromes</a>
+<a href="#cancer-therapy">Cancer Therapy &amp; Screening</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Cancer / Neoplasia</h1>
+<p>How normal cells become malignant, spread, and affect the body — plus how that biology translates into screening and treatment. Built from your Chapter 7 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Neoplasia</dt><dd>"New growth" — abnormal cellular growth; used loosely as a synonym for tumor.</dd></div>
+<div class="term"><dt>Cancer</dt><dd>The term reserved specifically for malignant neoplasms.</dd></div>
+<div class="term"><dt>Anaplasia</dt><dd>Lack of differentiated features in a cancer cell — greater anaplasia correlates with more aggressive malignancy.</dd></div>
+<div class="term"><dt>Carcinoma</dt><dd>Malignant tumor of epithelial origin — accounts for ~90% of human cancers.</dd></div>
+<div class="term"><dt>Sarcoma</dt><dd>Malignant tumor of mesenchymal origin (nerve, bone, muscle, tendon, fat).</dd></div>
+<div class="term"><dt>Proto-oncogene</dt><dd>A normal cellular gene coding for proteins involved in growth/differentiation/apoptosis/signaling; becomes an oncogene when mutated to gain function.</dd></div>
+<div class="term"><dt>Oncogene</dt><dd>The mutant, overactive/overexpressed form of a proto-oncogene.</dd></div>
+<div class="term"><dt>Tumor suppressor gene</dt><dd>A gene that normally inhibits cell proliferation; loss of function is the most common mutation type in cancer development.</dd></div>
+<div class="term"><dt>Driver mutation</dt><dd>A DNA abnormality that actively contributes to malignant proliferation.</dd></div>
+<div class="term"><dt>Passenger mutation</dt><dd>A random, coexisting DNA change that plays no role in tumorigenesis.</dd></div>
+<div class="term"><dt>Carcinogen</dt><dd>An agent/substance capable of inducing cancer.</dd></div>
+<div class="term"><dt>Co-carcinogen</dt><dd>A substance that causes cancer only in combination with other chemicals/compounds.</dd></div>
+<div class="term"><dt>Initiation</dt><dd>The first step of carcinogenesis — mutations that activate proto-oncogenes/inactivate tumor suppressor genes.</dd></div>
+<div class="term"><dt>Promotion</dt><dd>The stage where a mutant cell proliferates, often driven by inflammation, hormones, or nutritional factors.</dd></div>
+<div class="term"><dt>Progression</dt><dd>The stage where proliferating cells develop full malignant behavior via accumulating genetic instability.</dd></div>
+<div class="term"><dt>Telomerase</dt><dd>An enzyme that rebuilds chromosome telomeres, allowing indefinite division — reactivated by most cancer cells to escape normal replicative limits.</dd></div>
+<div class="term"><dt>Warburg effect</dt><dd>Cancer cells' preference for glycolysis (even with oxygen present) over oxidative phosphorylation, despite glycolysis producing far less ATP per glucose.</dd></div>
+<div class="term"><dt>E-cadherin</dt><dd>A key epithelial cell-to-cell adhesion molecule; its loss enables carcinoma cells to detach and invade.</dd></div>
+<div class="term"><dt>Epithelial-to-mesenchymal transition (EMT)</dt><dd>A developmental program hijacked by cancer cells to gain invasive, apoptosis-resistant, stem-cell-like properties.</dd></div>
+<div class="term"><dt>Cancer stem cells (CSCs)</dt><dd>A small, self-renewing, undifferentiated tumor cell subpopulation implicated in tumor growth, metastasis, and treatment resistance.</dd></div>
+<div class="term"><dt>Angiogenesis</dt><dd>New blood vessel formation; tumors can't exceed ~2 mm without it.</dd></div>
+<div class="term"><dt>VEGF</dt><dd>Vascular endothelial growth factor — the key signal tumor cells produce (often in response to hypoxia) to trigger angiogenesis.</dd></div>
+<div class="term"><dt>PD-L1 / PD-1</dt><dd>An immune checkpoint pair — cancer cells express PD-L1 to bind T-cell PD-1 receptors, suppressing cytotoxic T-cell activation and evading immune destruction.</dd></div>
+<div class="term"><dt>Cachexia</dt><dd>Cancer-related weight loss, muscle wasting, and generalized weakness — affects 60–80% of cancer patients.</dd></div>
+<div class="term"><dt>Paraneoplastic syndrome</dt><dd>A symptom complex at a site distant from the tumor, not explained by direct tumor effects — often from ectopic hormone/cytokine secretion.</dd></div>
+<div class="term"><dt>Leukopenia</dt><dd>Decreased circulating white blood cells — major cause of infection-related morbidity/mortality in cancer patients.</dd></div>
+<div class="term"><dt>Thrombocytopenia</dt><dd>Decreased circulating platelets; &lt;20,000/mm³ is associated with spontaneous hemorrhage risk.</dd></div>
+</dl>
+</section>
+<!-- ================= BENIGN VS MALIGNANT ================= -->
+<section class="block" id="benign-malignant">
+<details class="topic" open="">
+<summary>Benign vs. Malignant — Characteristics &amp; Anaplasia</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The core distinction</h4><p>Malignant tumors can kill the host if untreated; benign tumors generally cannot — though location matters (a benign tumor pressing on the brain or blocking an airway/vessel can still be life-threatening).</p></div>
+<div class="fact warn"><h4>Anaplasia</h4><p>Lack of differentiated features — indicated by variable cell size/shape, enlarged nuclei, abnormal mitoses, bizarre giant cells. More anaplasia = more aggressive malignancy. But regardless of histologic appearance, actual invasion or metastasis confirms malignancy.</p></div>
+</div>
+<table class="compare">
+<tr><th>Characteristic</th><th>Benign</th><th>Malignant</th></tr>
+<tr><td>Histology</td><td>Typical of tissue of origin, few mitoses</td><td>Anaplastic, abnormal size/shape, many mitoses</td></tr>
+<tr><td>Growth rate</td><td>Slow</td><td>Rapid</td></tr>
+<tr><td>Localization</td><td>Strictly local, often encapsulated, solitary, no metastasis</td><td>Infiltrative, frequent metastases, multiple tumors</td></tr>
+<tr><td>Necrosis</td><td>Rare</td><td>Common</td></tr>
+<tr><td>Recurrence after treatment</td><td>Rare</td><td>Common</td></tr>
+<tr><td>Prognosis</td><td>Good (unless critical location)</td><td>Poor if untreated</td></tr>
+</table>
+<div class="note">Invasiveness — evidence that tumor cells have penetrated local tissue, lymphatics, or blood vessels — is the key feature suggesting malignant potential for metastasis to distant sites.</div>
+</div>
+</details>
+</section>
+<section class="block" id="tumor-terminology">
+<details class="topic" open="">
+<summary>Tumor Terminology</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The naming rule</h4><p><b>-oma</b> = benign. <b>Carcinoma</b> = malignant, epithelial origin. <b>Sarcoma</b> = malignant, mesenchymal origin (nerve, bone, muscle, tendon, fat). Example: benign glandular tumor = adenoma; malignant version = adenocarcinoma.</p></div>
+<div class="fact warn"><h4>Exceptions to memorize</h4><p><b>Lymphoma, hepatoma, and melanoma</b> are all highly malignant despite the "-oma" suffix — don't be fooled by the naming convention. <b>Leukemia</b> = malignant growth of white blood cells.</p></div>
+</div>
+<table class="compare">
+<tr><th>Tissue of origin</th><th>Benign</th><th>Malignant</th></tr>
+<tr><td>Glandular/ductal epithelium</td><td>Adenoma</td><td>Adenocarcinoma</td></tr>
+<tr><td>Melanocytes</td><td>Nevus</td><td>Malignant melanoma</td></tr>
+<tr><td>Liver cells</td><td>Hepatocellular adenoma</td><td>Hepatocellular carcinoma</td></tr>
+<tr><td>Hematopoietic/lymphoid</td><td>—</td><td>Leukemia, lymphoma, multiple myeloma</td></tr>
+<tr><td>Fibrous tissue</td><td>Fibromatosis</td><td>Fibrosarcoma</td></tr>
+<tr><td>Fat</td><td>Lipoma</td><td>Liposarcoma</td></tr>
+<tr><td>Bone</td><td>Osteoma</td><td>Osteogenic sarcoma</td></tr>
+<tr><td>Smooth muscle</td><td>Leiomyoma</td><td>Leiomyosarcoma</td></tr>
+<tr><td>Blood vessels</td><td>Hemangioma</td><td>Angiosarcoma, Kaposi sarcoma</td></tr>
+<tr><td>Meninges</td><td>Meningioma</td><td>Malignant meningioma</td></tr>
+</table>
+<div class="note">~90% of human cancers are carcinomas (malignant transformation of epithelial cells) — the most common category by far.</div>
+</div>
+</details>
+</section>
+<section class="block" id="hallmarks-of-cancer">
+<details class="topic" open="">
+<summary>Hallmarks of Cancer (Hanahan &amp; Weinberg, 2000)</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">A framework for the "antisocial" behaviors cancer cells acquire to escape normal growth control:</p>
+<div class="fact-grid">
+<div class="fact"><h4>The eight hallmarks</h4><ul>
+<li>Sustained proliferative signaling</li>
+<li>Escape from apoptotic signals</li>
+<li>Inactivation/evasion of growth suppressor signals</li>
+<li>Replicative immortality</li>
+<li>Invasion and metastasis</li>
+<li>Proangiogenic signaling (build their own blood supply)</li>
+<li>Reprogrammed energy metabolism (aerobic glycolysis)</li>
+<li>Evasion of immune surveillance/destruction</li>
+</ul></div>
+<div class="fact warn"><h4>The normal rules cancer cells break</h4><p>Normal cells: proliferation rate matched to death rate, require survival signals from the environment, only proliferate with space + mitogen signals available, and respond to apoptotic instructions. Cancer cells ignore essentially all of these constraints.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= EPIDEMIOLOGY ================= -->
+<section class="block" id="epi-risk">
+<details class="topic" open="">
+<summary>Epidemiology &amp; Risk Factors</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Scale</h4><p>9.7 million deaths worldwide (2022). 88% of US diagnoses occur after age 55. Lifetime risk: ~40/100 US males, ~39/100 US females. 5-year relative survival: 70% (White), 65% (Black) — but this doesn't distinguish cured vs. relapsed/still-in-treatment, and doesn't account for poverty/nutrition/access-to-care effects.</p></div>
+<div class="fact tx"><h4>The preventability figure</h4><p>At least <b>40%</b> of cancer deaths may be preventable — key modifiable factors: tobacco, alcohol, obesity, physical inactivity, nutrition, sun exposure, and certain viral exposures (anogenital, head/neck, liver cancers).</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="tobacco-nutrition">
+<details class="topic" open="">
+<summary>Tobacco, Nutrition &amp; Lifestyle Factors</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Tobacco — the single largest preventable cause</h4><p>~30% of all cancer deaths. Linked beyond lung cancer to pancreas, bladder, kidney, mouth, esophagus, cervix, and blood/marrow cancers. Adult smoking prevalence: 42% (1965) → 11% (2023) — but 10% of middle/high schoolers reported tobacco use in 2023, with 7.8% using e-cigarettes (largely unregulated, early data suggests toxin/carcinogen content).</p></div>
+<div class="fact"><h4>Initiators vs. promoters (carcinogen types)</h4><p><b>Initiators</b> cause genetic damage (e.g., polycyclic aromatic hydrocarbons, nicotine derivatives — both found in tobacco smoke). <b>Promoters</b> spur mutant cells to proliferate — tobacco smoke contains both types.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Obesity &amp; nutrition</h4><p>Obesity is an independent risk factor for endometrial, esophageal, and liver cancer among others — and worsens recurrence/mortality risk even after diagnosis. ACS recommends a plant-based diet, limiting red/processed meat, controlling calories, limiting alcohol.</p></div>
+<div class="fact warn"><h4>Alcohol's multiple mechanisms</h4><p>Linked to breast, esophageal, laryngeal, liver cancer. Mechanisms: direct upper-GI cell damage, impaired hepatic detox capacity, ↑ estrogen levels (breast cancer promotion), and insulin-secretion effects (insulin is a growth factor for many tissues).</p></div>
+</div>
+<div class="callout"><b>Antioxidants — a clear negative result worth knowing:</b> despite a plausible mechanism (free radicals damage DNA → antioxidants should help), large clinical trials of β-carotene, vitamins E/C, selenium, retinol, zinc found <b>no convincing benefit</b> for cancer prevention from supplements. Whole food sources remain reasonable; supplements are not proven protective.</div>
+<div class="note"><b>Microbiome:</b> alterations are increasingly linked to cancer development, especially GI tract and lung cancers. Inflammation-driven intestinal permeability is an area of active research as both a risk factor and a potential prevention/treatment target.</div>
+</div>
+</details>
+</section>
+<!-- ================= GENETIC MECHANISMS ================= -->
+<section class="block" id="driver-passenger">
+<details class="topic" open="">
+<summary>Driver vs. Passenger Mutations</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>By diagnosis, a tumor already has billions of mutated cells</h4><p>Only some mutations are <b>driver mutations</b> (actively contribute to malignant proliferation) — many others are <b>passenger mutations</b> (random, coexisting, no functional role).</p></div>
+<div class="fact warn"><h4>Two broad gene categories</h4><p><b>Proto-oncogenes:</b> cancer arises from gain-of-function (overactivity). <b>Tumor suppressor genes:</b> cancer arises from loss-of-function (underactivity) — and loss-of-function mutations are actually the MOST common mutation type in cancer overall.</p></div>
+</div>
+<div class="note">Malignant transformation generally requires mutations in a <b>combination</b> of these growth-regulatory genes — plus, indirectly, DNA-repair genes and apoptosis-regulating genes (see Chapter 4) also contribute to cancer risk when they malfunction.</div>
+</div>
+</details>
+</section>
+<section class="block" id="proto-oncogenes">
+<details class="topic" open="">
+<summary>Proto-Oncogenes &amp; Oncogenes — Four Signaling Categories</summary>
+<div class="topic-body">
+<p>Most proto-oncogenes code for components of the SAME proliferation-signaling relay — just at different points along it.</p>
+<div class="mindmap">
+<p class="mm-title">Mind Map — Where Proto-Oncogenes Act in the Signaling Relay</p>
+<svg viewbox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="200" x="10" y="80"></rect><text font-size="12" text-anchor="middle" x="110" y="102">GROWTH FACTORS</text><text font-size="10" text-anchor="middle" x="110" y="118">e.g., PDGF, TGF-α, EGF</text></g>
+<line class="mm-line" x1="210" x2="240" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="240" y="80"></rect><text font-size="12" text-anchor="middle" x="340" y="102">RECEPTORS</text><text font-size="10" text-anchor="middle" x="340" y="118">e.g., HER2, EGFR</text></g>
+<line class="mm-line" x1="440" x2="470" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="470" y="80"></rect><text font-size="11" text-anchor="middle" x="570" y="102">CYTOPLASMIC SIGNALING</text><text font-size="10" text-anchor="middle" x="570" y="118">e.g., RAS, BRAF</text></g>
+<line class="mm-line" x1="670" x2="700" y1="105" y2="105"></line>
+<g class="mm-node"><rect height="50" rx="10" width="200" x="700" y="80"></rect><text font-size="11" text-anchor="middle" x="800" y="102">TRANSCRIPTION FACTORS</text><text font-size="10" text-anchor="middle" x="800" y="118">e.g., MYC, JUN, FOS</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Growth factors (mitogens)</h4><p>Normally cells don't make enough growth factor to stimulate their OWN proliferation — signals must come from the environment. Mutant proto-oncogene overproduction shifts this to self-stimulated (autocrine) growth. PDGF is classically oversecreted in glial/connective tissue cancers.</p></div>
+<div class="fact warn"><h4>Receptors</h4><p>Mutations can cause inappropriate receptor expression, excess normal receptors, abnormally high mitogen affinity, or receptors active even without any growth factor bound. <b>HER2</b> overexpression: 15–20% of breast cancers, up to 30% of esophageal/GE junction cancers.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Cytoplasmic signaling — the RAS example</h4><p>RAS proteins are G proteins active only when GTP-bound; they normally self-inactivate by hydrolyzing GTP. A RAS mutation can prevent this hydrolysis → the protein stays persistently active → inappropriate proliferation signaling. RAS mutations occur in up to <b>30% of all human cancers</b>.</p></div>
+<div class="fact"><h4>Transcription factors</h4><p>Normally sequestered until appropriate signals release them. Mutations can cause overproduction or disable the normal "keep in check" mechanisms. MYC abnormalities found in lung/breast cancer, leukemia, neuroblastoma.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="oncogene-activation">
+<details class="topic" open="">
+<summary>From Proto-Oncogene to Oncogene — Four Activation Routes</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The four mechanisms</h4><ul>
+<li>Retroviral insertion of an oncogene into the host cell</li>
+<li>A mutagenic event changing the proto-oncogene's own structure/function</li>
+<li>Damage/loss of the regulatory DNA sequence controlling proto-oncogene expression</li>
+<li>Chromosome replication error causing extra gene copies (<b>amplification</b>)</li>
+</ul></div>
+<div class="fact warn"><h4>Viral oncogenesis — three distinct routes</h4><p>(1) Direct interruption of growth-control/apoptotic pathways. (2) Viral genome incorporation disrupting gene regulation (HIV, human T-cell leukemia virus). (3) Indirect — chronic inflammatory immune response causes tissue damage/cancer even in UNinfected neighboring cells.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= MULTISTEP CARCINOGENESIS ================= -->
+<section class="block" id="initiation">
+<details class="topic" open="">
+<summary>Multistep Carcinogenesis — Initiation</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — Initiation → Promotion → Progression</p>
+<svg viewbox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="260" x="20" y="50"></rect><text font-size="13" text-anchor="middle" x="150" y="72">INITIATION</text><text font-size="10" text-anchor="middle" x="150" y="88">DNA mutation</text></g>
+<line class="mm-line" x1="280" x2="320" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="320" y="50"></rect><text font-size="13" text-anchor="middle" x="450" y="72">PROMOTION</text><text font-size="10" text-anchor="middle" x="450" y="88">mutant cell proliferates</text></g>
+<line class="mm-line" x1="580" x2="620" y1="75" y2="75"></line>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="620" y="50"></rect><text font-size="13" text-anchor="middle" x="750" y="72">PROGRESSION</text><text font-size="10" text-anchor="middle" x="750" y="88">full malignant behavior</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Key experimental proof of "multistep"</h4><p>RAS oncogene alone → anchorage independence, but NOT tumor formation in vivo. MYC oncogene alone → immortalized cells in culture, but still NOT tumor formation. <b>RAS + MYC together</b> → fully malignant. Single mutations are insufficient.</p></div>
+<div class="fact warn"><h4>Carcinogen categories</h4><p>Some cause cancer "as is." <b>Co-carcinogens</b> only cause cancer combined with other substances. A third category requires metabolic activation (e.g., hepatic enzyme processing) before becoming carcinogenic.</p></div>
+</div>
+<div class="callout"><b>Known carcinogens worth knowing by category:</b> UV/ionizing radiation, HPV and hepatitis B/C viruses, asbestos, alcohol (oral/pharynx/breast/digestive tract-liver), tobacco (respiratory + digestive + GU + cervical), alkylating agents (hematologic), vinyl chloride (liver/brain/lymph/hematologic).</div>
+</div>
+</details>
+</section>
+<section class="block" id="promotion">
+<details class="topic" open="">
+<summary>Promotion</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Inflammation as a promoter</h4><p>Inflammatory cells (macrophages, mast cells, neutrophils, T/B lymphocytes) supply the tumor microenvironment with growth factors, survival factors (limiting apoptosis), proangiogenic factors, and matrix-modifying enzymes. They also release reactive oxygen species that are actively mutagenic — accelerating malignant genetic evolution.</p></div>
+<div class="fact"><h4>Hormonal promotion — estrogen</h4><p>More lifetime menstrual cycles (early menarche, late first pregnancy, no breastfeeding, late menopause) → higher breast/uterine/ovarian cancer risk, via cumulative estrogen exposure. Estrogen is a promoter but is <b>NOT itself carcinogenic</b> — it doesn't cause mutations directly. Antiestrogen drugs (tamoxifen, aromatase inhibitors) exploit this relationship therapeutically.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Hormonal promotion — testosterone</h4><p>A growth factor/promoter for prostate tissue — therapeutic testosterone blockade can shrink prostate tumors and produce temporary remission, supporting the causal relationship.</p></div>
+<div class="fact tx"><h4>Immune evasion during promotion</h4><p>Highly immunogenic cancer cells are usually eliminated by a competent immune system — hence higher cancer rates (especially virally-induced) in immunocompromised patients. Less immunogenic cells survive; cancer cells can also actively suppress immunity via cytokines, or via <b>PD-L1</b> binding T-cell <b>PD-1</b> receptors (exploiting a normal autoimmunity-prevention checkpoint) and up-regulating <b>CTLA-4</b> on T cells.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="progression">
+<details class="topic" open="">
+<summary>Progression</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Genetic instability drives evolution</h4><p>Proliferating cells undergo chance mutations creating varied phenotypes; cells whose phenotype confers a growth advantage proliferate preferentially — an ongoing selection process. Cancer karyotypes become increasingly bizarre over time (extra/missing chromosomes, misplaced fragments).</p></div>
+<div class="fact"><h4>Telomerase reactivation</h4><p>Fetal cells replicate ~80 times in culture; older-donor cells only 20–30 times (telomere shortening limits division). Most cancer cells reactivate <b>telomerase</b> during malignant transformation, escaping this limit — a key route to replicative immortality. Additionally, most cancers are p53-deficient, letting them escape apoptosis despite major DNA derangement.</p></div>
+</div>
+<div class="danger"><b>The Warburg effect:</b> most cancer cells rely on glycolysis for energy even WHEN oxygen is available (not just under hypoxia) — despite glycolysis yielding only 2 ATP vs. 34 ATP from oxidative phosphorylation per glucose. This inefficient-looking choice actually gives a survival advantage in the low-oxygen environments that develop as tumors outgrow their blood supply.</div>
+</div>
+</details>
+</section>
+<!-- ================= INVASION & METASTASIS ================= -->
+<section class="block" id="invasion-mechanism">
+<details class="topic" open="">
+<summary>Invasion Mechanism</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The basement membrane crossing steps</h4><p>(1) Loss of cell-to-cell adhesion (classically, loss of <b>E-cadherin</b> in carcinomas). (2) Binding to matrix components (laminin) via tumor cell laminin receptors. (3) Release of proteases/collagenases to digest the basement membrane. (4) Ameboid movement through the resulting rift — repeated at the vessel wall to enter circulation, and again at the target tissue to exit.</p></div>
+<div class="fact warn"><h4>Cancer stem cells (CSCs)</h4><p>A small self-renewing, undifferentiated subpopulation — contribute to continued growth, metastatic seeding, and treatment resistance (can be quiescent, evading chemo, then repopulate the tumor). First discovered in solid tumors in 2003.</p></div>
+</div>
+<div class="fact tx"><h4>Epithelial-to-mesenchymal transition (EMT)</h4><p>A normal embryonic/wound-healing/fibrosis program hijacked by cancer cells to gain invasiveness, apoptosis resistance, and stem-cell-like qualities — seen in glioblastoma, colon cancer, and melanoma research.</p></div>
+<div class="note">After entering circulation, tumor survival is NOT guaranteed — fewer than 1 in 10,000 circulating cancer cells survives to form a distant tumor. Micrometastases can also lie dormant for years (sometimes suppressed by the primary tumor itself) before "waking up," which is why late recurrence happens even after apparently successful primary tumor removal (breast cancer, melanoma).</div>
+</div>
+</details>
+</section>
+<section class="block" id="patterns-of-spread">
+<details class="topic" open="">
+<summary>Patterns of Spread &amp; Tumor Biomarkers</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Blood-borne spread</h4><p>Sometimes explained by circulatory anatomy (colon cancer → liver via the portal vein), but many patterns reflect tumor cell "homing" via chemotactic signals and integrin/adhesion molecule interactions — poorly understood but under active study.</p></div>
+<div class="fact warn"><h4>Lymphatic spread — more predictable</h4><p>Nodes immediately draining the tumor site are colonized first, then spread proceeds contiguously node-to-node. Hodgkin disease is noted for especially orderly lymphatic spread.</p></div>
+</div>
+<p style="margin-top:10px;"><b>Selected tumor biomarkers (high-yield pairs):</b></p>
+<table class="compare">
+<tr><th>Marker</th><th>Associated cancer</th></tr>
+<tr><td>α-Fetoprotein</td><td>Liver cell cancer, nonseminomatous testicular germ cell tumors</td></tr>
+<tr><td>Carcinoembryonic antigen (CEA)</td><td>Colon, pancreas, lung, stomach carcinomas</td></tr>
+<tr><td>PSA</td><td>Prostate cancer</td></tr>
+<tr><td>CA-125</td><td>Ovarian cancer</td></tr>
+<tr><td>CA-19-9</td><td>Colon, pancreatic cancer</td></tr>
+<tr><td>HER2-neu</td><td>Breast cancer, gastroesophageal cancer</td></tr>
+<tr><td>Calcitonin</td><td>Medullary thyroid carcinoma</td></tr>
+<tr><td>hCG</td><td>Trophoblastic tumors, nonseminomatous testicular tumors</td></tr>
+<tr><td>Immunoglobulins</td><td>Multiple myeloma</td></tr>
+</table>
+<div class="note">Most tumor markers are NOT cancer-specific (normal tissue also produces them) — so they're generally poor screening tools in asymptomatic people, but valuable for monitoring treatment response and detecting progression/recurrence over time.</div>
+</div>
+</details>
+</section>
+<section class="block" id="angiogenesis">
+<details class="topic" open="">
+<summary>Angiogenesis</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>The 2mm rule</h4><p>Tumors can't grow beyond ~2 mm diameter without inducing their own blood supply — many tumors stay small/nonvascular for years before triggering angiogenesis, though some are proangiogenic even at the premalignant stage.</p></div>
+<div class="fact"><h4>VEGF mechanism</h4><p>Tumor cells produce VEGF (often triggered by hypoxia) → stimulates vascular endothelial cell proliferation/migration → new (often abnormal, distorted, excessively branched) vessels form within the tumor.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= EFFECTS ON THE BODY ================= -->
+<section class="block" id="warning-signs">
+<details class="topic" open="">
+<summary>Warning Signs</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Adult warning signs (CAUTION)</h4><p>Change in bowel/bladder habits; A sore that doesn't heal; Unusual bleeding/discharge; Unusual bleeding between periods; Thickening or lump; Indigestion/difficulty swallowing; Obvious change in wart/mole/sore; Nagging cough or hoarseness.</p></div>
+<div class="fact"><h4>Pediatric warning signs (CHILD CANCER)</h4><p>Unexplained weight loss; headaches with early-morning vomiting; increased bone/joint/back/leg pain; lumps/masses; excessive bruising/bleeding/rash; constant infections; whitish color behind pupils (leukocoria); persistent nausea/vomiting; constant tiredness/pallor; sudden vision changes; recurrent unexplained fevers.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="cancer-effects">
+<details class="topic" open="">
+<summary>Cachexia, Immune Suppression &amp; Bone Marrow Effects</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Cachexia (60–80% of patients)</h4><p>Weight loss + muscle wasting + weakness. Drivers: anorexia (from tumor/immune cell toxins, food aversions, early satiety), PLUS a paradoxically <b>high</b> metabolic rate despite poor intake — driven largely by TNF and other immune cytokines mobilizing fat/protein stores for hypermetabolic cells.</p></div>
+<div class="fact"><h4>Immune suppression</h4><p>Cancer cells actively secrete immunosuppressive substances; patients show reduced T/B cell populations and poor vaccine response. Worse immune status = worse prognosis, since cytotoxic T cells/NK cells are needed to detect and destroy cancer cells.</p></div>
+</div>
+<p style="margin-top:10px;"><b>Bone marrow suppression — the classic triad:</b></p>
+<table class="compare">
+<tr><th>Cytopenia</th><th>Clinical significance</th></tr>
+<tr><td>Anemia</td><td>↓ RBCs → fatigue, ↑ HR, ↑ RR (from reduced O2-carrying capacity); from marrow invasion, poor nutrition, chemo, or bleeding</td></tr>
+<tr><td>Leukopenia</td><td>↓ WBCs → major cause of infection-related morbidity/mortality; infections often from the patient's own endogenous flora, hard to prevent or treat effectively</td></tr>
+<tr><td>Thrombocytopenia</td><td>↓ Platelets → hemorrhage risk; &lt;20,000/mm³ associated with spontaneous bleeding</td></tr>
+</table>
+<div class="note">Growth factor support: erythropoietin (Epogen) for anemia, granulocyte-stimulating factors (filgrastim) for leukopenia — blood product transfusion is used more often in cancer patients than in any other medical condition.</div>
+</div>
+</details>
+</section>
+<section class="block" id="paraneoplastic">
+<details class="topic" open="">
+<summary>Paraneoplastic Syndromes</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact warn"><h4>Definition &amp; frequency</h4><p>Symptom complexes at a site distant from the tumor, not explained by direct tumor effects — occur in up to 20% of cancer patients; more common in middle-aged/older patients; most common in lung, lymphatic, ovarian, and breast cancers.</p></div>
+<div class="fact"><h4>Three classic examples</h4><p>(1) <b>Hypercalcemia</b> — from tumor production of parathyroid hormone–related protein; unexplained hypercalcemia = cancer until proven otherwise. (2) <b>Cushing syndrome</b> — from ectopic ACTH secretion. (3) <b>SIADH</b> (hyponatremia/water overload) — from ectopic ADH secretion.</p></div>
+</div>
+<div class="danger"><b>Small cell lung cancer</b> is the classic culprit for BOTH ectopic ACTH and ectopic ADH paraneoplastic syndromes — worth memorizing this specific association. Also note: hypercalcemia from actual bone metastasis is an <i>expected</i> finding, NOT a paraneoplastic syndrome — the distinction is whether the mechanism is a distant ectopic hormone effect vs. direct tumor tissue destruction.</div>
+</div>
+</details>
+</section>
+<!-- ================= THERAPY ================= -->
+<section class="block" id="cancer-therapy">
+<details class="topic" open="">
+<summary>Cancer Therapy &amp; Screening</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact tx"><h4>Precision medicine trend</h4><p>Next-gen sequencing enables "tissue-agnostic" basket trials — treating based on a specific molecular finding (e.g., PIK3CA mutation, NTRK fusion) regardless of whether the tumor originated in lung, breast, etc.</p></div>
+<div class="fact"><h4>Pathogen-targeted prevention</h4><p>HPV and hepatitis B vaccination reduce future cancer risk. Treating hepatitis C can reduce hepatocellular cancer risk AND cause regression in certain non-Hodgkin lymphomas with concurrent HCV. Treating <i>H. pylori</i> produces remission in up to 70% of a specific non-Hodgkin lymphoma type.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact warn"><h4>Surgery</h4><p>Main treatment for localized solid tumors; curative in many cases, but surgery alone is curative in only a minority since undetectable micrometastases are often already present — hence adjuvant therapy (radiation/chemo/immunotherapy/hormonal) commonly follows. Neoadjuvant therapy (before surgery) can shrink tumors for a less aggressive surgical approach.</p></div>
+<div class="fact warn"><h4>Radiation therapy</h4><p>Used for unresectable tumors, residual local disease after surgery, symptom palliation, or prophylaxis (e.g., whole-brain radiation for small cell lung cancer's high brain-met risk). Works mainly by triggering apoptosis via DNA damage (base damage, strand breaks, cross-links) — <b>TP53</b>-mutant tumors are often less responsive. Given in fractionated doses since tumors are heterogeneous (cells cycling at different rates/phases) and a single tumoricidal dose would also kill normal tissue.</p></div>
+</div>
+<div class="note"><b>Cure vs. 5-year survival:</b> cure means eradication of ALL cancer cells — a different concept from the 5-year survival statistic. Regional lymph node involvement still carries good cure potential with appropriate therapy; widespread multi-organ invasion shifts treatment goals toward remission, life prolongation, or palliation rather than cure.</div>
+<div class="callout"><b>Screening age ranges worth knowing (average risk, ACS guidelines):</b> Breast — mammogram starting 40–45, annual or biennial after 55. Colon — starting age 45. Cervical — starting age 25 (primary HPV testing). Lung — ages 50–80, 20 pack-year history, current smoker or quit within 15 years, annual low-dose CT. Prostate — shared decision-making starting age 40–50 depending on risk category.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 7 (Cancer/Neoplasia) material. Redraw the proto-oncogene signaling relay and initiation-promotion-progression mind maps from memory, then check yourself against the fact cards and tables.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "\"New growth\" \u2014 abnormal cellular growth; used loosely as a synonym for tumor.", "answers": ["Neoplasia"]}, {"def": "The term reserved specifically for malignant neoplasms.", "answers": ["Cancer"]}, {"def": "Lack of differentiated features in a cancer cell \u2014 greater anaplasia correlates with more aggressive malignancy.", "answers": ["Anaplasia"]}, {"def": "Malignant tumor of epithelial origin \u2014 accounts for ~90% of human cancers.", "answers": ["Carcinoma"]}, {"def": "Malignant tumor of mesenchymal origin (nerve, bone, muscle, tendon, fat).", "answers": ["Sarcoma"]}, {"def": "A normal cellular gene coding for proteins involved in growth/differentiation/apoptosis/signaling; becomes an oncogene when mutated to gain function.", "answers": ["Proto-oncogene"]}, {"def": "The mutant, overactive/overexpressed form of a proto-oncogene.", "answers": ["Oncogene"]}, {"def": "A gene that normally inhibits cell proliferation; loss of function is the most common mutation type in cancer development.", "answers": ["Tumor suppressor gene"]}, {"def": "A DNA abnormality that actively contributes to malignant proliferation.", "answers": ["Driver mutation"]}, {"def": "A random, coexisting DNA change that plays no role in tumorigenesis.", "answers": ["Passenger mutation"]}, {"def": "An agent/substance capable of inducing cancer.", "answers": ["Carcinogen"]}, {"def": "A substance that causes cancer only in combination with other chemicals/compounds.", "answers": ["Co-carcinogen"]}, {"def": "The first step of carcinogenesis \u2014 mutations that activate proto-oncogenes/inactivate tumor suppressor genes.", "answers": ["Initiation"]}, {"def": "The stage where a mutant cell proliferates, often driven by inflammation, hormones, or nutritional factors.", "answers": ["Promotion"]}, {"def": "The stage where proliferating cells develop full malignant behavior via accumulating genetic instability.", "answers": ["Progression"]}, {"def": "An enzyme that rebuilds chromosome telomeres, allowing indefinite division \u2014 reactivated by most cancer cells to escape normal replicative limits.", "answers": ["Telomerase"]}, {"def": "Cancer cells' preference for glycolysis (even with oxygen present) over oxidative phosphorylation, despite glycolysis producing far less ATP per glucose.", "answers": ["Warburg effect"]}, {"def": "A key epithelial cell-to-cell adhesion molecule; its loss enables carcinoma cells to detach and invade.", "answers": ["E-cadherin"]}, {"def": "A developmental program hijacked by cancer cells to gain invasive, apoptosis-resistant, stem-cell-like properties.", "answers": ["Epithelial-to-mesenchymal transition", "EMT", "Epithelial-to-mesenchymal transition (EMT)"]}, {"def": "A small, self-renewing, undifferentiated tumor cell subpopulation implicated in tumor growth, metastasis, and treatment resistance.", "answers": ["Cancer stem cells", "CSCs", "Cancer stem cells (CSCs)"]}, {"def": "New blood vessel formation; tumors can't exceed ~2 mm without it.", "answers": ["Angiogenesis"]}, {"def": "Vascular endothelial growth factor \u2014 the key signal tumor cells produce (often in response to hypoxia) to trigger angiogenesis.", "answers": ["VEGF"]}, {"def": "An immune checkpoint pair \u2014 cancer cells express PD-L1 to bind T-cell PD-1 receptors, suppressing cytotoxic T-cell activation and evading immune destruction.", "answers": ["PD-L1 / PD-1"]}, {"def": "Cancer-related weight loss, muscle wasting, and generalized weakness \u2014 affects 60\u201380% of cancer patients.", "answers": ["Cachexia"]}, {"def": "A symptom complex at a site distant from the tumor, not explained by direct tumor effects \u2014 often from ectopic hormone/cytokine secretion.", "answers": ["Paraneoplastic syndrome"]}, {"def": "Decreased circulating white blood cells \u2014 major cause of infection-related morbidity/mortality in cancer patients.", "answers": ["Leukopenia"]}, {"def": "Decreased circulating platelets; <20,000/mm\u00b3 is associated with spontaneous hemorrhage risk.", "answers": ["Thrombocytopenia"]}];
+const QUIZ_TEACHBACK = [{"topic": "Benign vs. Malignant \u2014 Characteristics & Anaplasia", "points": ["<b>The core distinction:</b> Malignant tumors can kill the host if untreated; benign tumors generally cannot \u2014 though location matters (a benign tumor pressing\u2026", "<b>Anaplasia:</b> Lack of differentiated features \u2014 indicated by variable cell size/shape, enlarged nuclei, abnormal mitoses, bizarre giant cells. More anaplasia =\u2026"]}, {"topic": "Tumor Terminology", "points": ["<b>The naming rule:</b> -oma = benign. Carcinoma = malignant, epithelial origin. Sarcoma = malignant, mesenchymal origin (nerve, bone, muscle, tendon, fat). Example: benign\u2026", "<b>Exceptions to memorize:</b> Lymphoma, hepatoma, and melanoma are all highly malignant despite the \"-oma\" suffix \u2014 don't be fooled by the naming convention.\u2026"]}, {"topic": "Epidemiology & Risk Factors", "points": ["<b>Scale:</b> 9.7 million deaths worldwide (2022). 88% of US diagnoses occur after age 55. Lifetime risk: ~40/100 US males, ~39/100 US\u2026", "<b>The preventability figure:</b> At least 40% of cancer deaths may be preventable \u2014 key modifiable factors: tobacco, alcohol, obesity, physical inactivity, nutrition, sun\u2026"]}, {"topic": "Tobacco, Nutrition & Lifestyle Factors", "points": ["<b>Tobacco \u2014 the single largest preventable cause:</b> ~30% of all cancer deaths. Linked beyond lung cancer to pancreas, bladder, kidney, mouth, esophagus, cervix, and blood/marrow cancers. Adult\u2026", "<b>Initiators vs. promoters (carcinogen types):</b> Initiators cause genetic damage (e.g., polycyclic aromatic hydrocarbons, nicotine derivatives \u2014 both found in tobacco smoke). Promoters spur mutant cells\u2026", "<b>Obesity & nutrition:</b> Obesity is an independent risk factor for endometrial, esophageal, and liver cancer among others \u2014 and worsens recurrence/mortality risk even\u2026", "<b>Alcohol's multiple mechanisms:</b> Linked to breast, esophageal, laryngeal, liver cancer. Mechanisms: direct upper-GI cell damage, impaired hepatic detox capacity, \u2191 estrogen levels (breast\u2026", "Antioxidants \u2014 a clear negative result worth knowing: despite a plausible mechanism (free radicals damage DNA \u2192 antioxidants should help), large clinical\u2026"]}, {"topic": "Driver vs. Passenger Mutations", "points": ["<b>By diagnosis, a tumor already has billions of mutated cells:</b> Only some mutations are driver mutations (actively contribute to malignant proliferation) \u2014 many others are passenger mutations (random, coexisting, no\u2026", "<b>Two broad gene categories:</b> Proto-oncogenes: cancer arises from gain-of-function (overactivity). Tumor suppressor genes: cancer arises from loss-of-function (underactivity) \u2014 and loss-of-function mutations are actually\u2026"]}, {"topic": "Proto-Oncogenes & Oncogenes \u2014 Four Signaling Categories", "points": ["<b>Growth factors (mitogens):</b> Normally cells don't make enough growth factor to stimulate their OWN proliferation \u2014 signals must come from the environment. Mutant\u2026", "<b>Receptors:</b> Mutations can cause inappropriate receptor expression, excess normal receptors, abnormally high mitogen affinity, or receptors active even without any growth\u2026", "<b>Cytoplasmic signaling \u2014 the RAS example:</b> RAS proteins are G proteins active only when GTP-bound; they normally self-inactivate by hydrolyzing GTP. A RAS mutation can prevent\u2026", "<b>Transcription factors:</b> Normally sequestered until appropriate signals release them. Mutations can cause overproduction or disable the normal \"keep in check\" mechanisms. MYC\u2026"]}, {"topic": "Multistep Carcinogenesis \u2014 Initiation", "points": ["<b>Key experimental proof of \"multistep\":</b> RAS oncogene alone \u2192 anchorage independence, but NOT tumor formation in vivo. MYC oncogene alone \u2192 immortalized cells in culture,\u2026", "<b>Carcinogen categories:</b> Some cause cancer \"as is.\" Co-carcinogens only cause cancer combined with other substances. A third category requires metabolic activation (e.g.,\u2026", "Known carcinogens worth knowing by category: UV/ionizing radiation, HPV and hepatitis B/C viruses, asbestos, alcohol (oral/pharynx/breast/digestive tract-liver), tobacco (respiratory + digestive +\u2026"]}, {"topic": "Promotion", "points": ["<b>Inflammation as a promoter:</b> Inflammatory cells (macrophages, mast cells, neutrophils, T/B lymphocytes) supply the tumor microenvironment with growth factors, survival factors (limiting apoptosis), proangiogenic\u2026", "<b>Hormonal promotion \u2014 estrogen:</b> More lifetime menstrual cycles (early menarche, late first pregnancy, no breastfeeding, late menopause) \u2192 higher breast/uterine/ovarian cancer risk, via cumulative\u2026", "<b>Hormonal promotion \u2014 testosterone:</b> A growth factor/promoter for prostate tissue \u2014 therapeutic testosterone blockade can shrink prostate tumors and produce temporary remission, supporting the\u2026", "<b>Immune evasion during promotion:</b> Highly immunogenic cancer cells are usually eliminated by a competent immune system \u2014 hence higher cancer rates (especially virally-induced) in\u2026"]}, {"topic": "Progression", "points": ["<b>Genetic instability drives evolution:</b> Proliferating cells undergo chance mutations creating varied phenotypes; cells whose phenotype confers a growth advantage proliferate preferentially \u2014 an ongoing\u2026", "<b>Telomerase reactivation:</b> Fetal cells replicate ~80 times in culture; older-donor cells only 20\u201330 times (telomere shortening limits division). Most cancer cells reactivate\u2026", "The Warburg effect: most cancer cells rely on glycolysis for energy even WHEN oxygen is available (not just under hypoxia) \u2014 despite\u2026"]}, {"topic": "Invasion Mechanism", "points": ["<b>The basement membrane crossing steps:</b> (1) Loss of cell-to-cell adhesion (classically, loss of E-cadherin in carcinomas). (2) Binding to matrix components (laminin) via tumor cell\u2026", "<b>Cancer stem cells (CSCs):</b> A small self-renewing, undifferentiated subpopulation \u2014 contribute to continued growth, metastatic seeding, and treatment resistance (can be quiescent, evading chemo,\u2026", "<b>Epithelial-to-mesenchymal transition (EMT):</b> A normal embryonic/wound-healing/fibrosis program hijacked by cancer cells to gain invasiveness, apoptosis resistance, and stem-cell-like qualities \u2014 seen in glioblastoma,\u2026"]}, {"topic": "Patterns of Spread & Tumor Biomarkers", "points": ["<b>Blood-borne spread:</b> Sometimes explained by circulatory anatomy (colon cancer \u2192 liver via the portal vein), but many patterns reflect tumor cell \"homing\"\u2026", "<b>Lymphatic spread \u2014 more predictable:</b> Nodes immediately draining the tumor site are colonized first, then spread proceeds contiguously node-to-node. Hodgkin disease is noted for especially\u2026"]}, {"topic": "Angiogenesis", "points": ["<b>The 2mm rule:</b> Tumors can't grow beyond ~2 mm diameter without inducing their own blood supply \u2014 many tumors stay small/nonvascular for years\u2026", "<b>VEGF mechanism:</b> Tumor cells produce VEGF (often triggered by hypoxia) \u2192 stimulates vascular endothelial cell proliferation/migration \u2192 new (often abnormal, distorted, excessively\u2026"]}, {"topic": "Warning Signs", "points": ["<b>Adult warning signs (CAUTION):</b> Change in bowel/bladder habits; A sore that doesn't heal; Unusual bleeding/discharge; Unusual bleeding between periods; Thickening or lump; Indigestion/difficulty swallowing;\u2026", "<b>Pediatric warning signs (CHILD CANCER):</b> Unexplained weight loss; headaches with early-morning vomiting; increased bone/joint/back/leg pain; lumps/masses; excessive bruising/bleeding/rash; constant infections; whitish color behind pupils (leukocoria);\u2026"]}, {"topic": "Cachexia, Immune Suppression & Bone Marrow Effects", "points": ["<b>Cachexia (60\u201380% of patients):</b> Weight loss + muscle wasting + weakness. Drivers: anorexia (from tumor/immune cell toxins, food aversions, early satiety), PLUS a paradoxically\u2026", "<b>Immune suppression:</b> Cancer cells actively secrete immunosuppressive substances; patients show reduced T/B cell populations and poor vaccine response. Worse immune status =\u2026"]}, {"topic": "Paraneoplastic Syndromes", "points": ["<b>Definition & frequency:</b> Symptom complexes at a site distant from the tumor, not explained by direct tumor effects \u2014 occur in up to\u2026", "<b>Three classic examples:</b> (1) Hypercalcemia \u2014 from tumor production of parathyroid hormone\u2013related protein; unexplained hypercalcemia = cancer until proven otherwise. (2) Cushing syndrome\u2026", "Small cell lung cancer is the classic culprit for BOTH ectopic ACTH and ectopic ADH paraneoplastic syndromes \u2014 worth memorizing this specific\u2026"]}, {"topic": "Cancer Therapy & Screening", "points": ["<b>Precision medicine trend:</b> Next-gen sequencing enables \"tissue-agnostic\" basket trials \u2014 treating based on a specific molecular finding (e.g., PIK3CA mutation, NTRK fusion) regardless\u2026", "<b>Pathogen-targeted prevention:</b> HPV and hepatitis B vaccination reduce future cancer risk. Treating hepatitis C can reduce hepatocellular cancer risk AND cause regression\u2026", "<b>Surgery:</b> Main treatment for localized solid tumors; curative in many cases, but surgery alone is curative in only a minority since\u2026", "<b>Radiation therapy:</b> Used for unresectable tumors, residual local disease after surgery, symptom palliation, or prophylaxis (e.g., whole-brain radiation for small cell lung\u2026", "Screening age ranges worth knowing (average risk, ACS guidelines): Breast \u2014 mammogram starting 40\u201345, annual or biennial after 55. Colon \u2014 starting\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

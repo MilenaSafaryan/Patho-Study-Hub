@@ -1,0 +1,74 @@
+[
+ {
+  "term": "Leukemia",
+  "def": "A \"circulating tumor\" disseminated from the start, primarily involving blood and bone marrow."
+ },
+ {
+  "term": "Lymphoma",
+  "def": "A malignancy that localizes in lymph tissue, though often disseminated by diagnosis."
+ },
+ {
+  "term": "Multiple myeloma",
+  "def": "Malignant transformation of B-lymphocyte plasma cells, with a predilection for forming bone tumors."
+ },
+ {
+  "term": "Lymphadenopathy",
+  "def": "Enlarged, nontender lymph nodes \u2014 a common finding in lymphoma and some leukemias."
+ },
+ {
+  "term": "Myeloproliferative disease",
+  "def": "Overproduction of one or more functional, normal-appearing blood cell types from a multipotent stem cell (e.g., CML, PV, ET)."
+ },
+ {
+  "term": "Myelodysplastic syndrome (MDS)",
+  "def": "Neoplastic cells that are morphologically/functionally abnormal (unlike myeloproliferative disease) \u2014 poor prognosis."
+ },
+ {
+  "term": "Philadelphia chromosome (Ph+)",
+  "def": "The balanced 9;22 translocation forming the BCR/ABL fusion gene \u2014 characteristic of CML."
+ },
+ {
+  "term": "BCR/ABL",
+  "def": "The fusion gene/oncoprotein from the Philadelphia chromosome; a functional enzyme driving proliferation and blocking apoptosis."
+ },
+ {
+  "term": "Tyrosine kinase inhibitor (TKI)",
+  "def": "Drug class binding the BCR/ABL domain, dramatically improving CML survival."
+ },
+ {
+  "term": "Blast",
+  "def": "An immature precursor cell; blast percentage in marrow/blood defines leukemia phase/type (e.g., \u226520% blasts = AML)."
+ },
+ {
+  "term": "Acute promyelocytic leukemia (APL)",
+  "def": "An AML subtype with t(15;17)/PML-RAR\u03b1 fusion; most curable AML subtype, especially with ATRA."
+ },
+ {
+  "term": "ATRA (all-trans-retinoic acid)",
+  "def": "A drug that releases PML-RAR\u03b1's inhibitory block on myeloid differentiation \u2014 used specifically in APL."
+ },
+ {
+  "term": "CLL/SLL",
+  "def": "Chronic lymphocytic leukemia / small lymphocytic lymphoma \u2014 the same disease process, distinguished only by location (blood/marrow vs. nodes/spleen)."
+ },
+ {
+  "term": "Richter transformation",
+  "def": "Malignant transformation of CLL/SLL into a more aggressive B-cell lymphoma \u2014 poor prognosis."
+ },
+ {
+  "term": "Lymphoblast",
+  "def": "An immature lymphoid precursor cell characteristic of ALL."
+ },
+ {
+  "term": "Bence Jones protein",
+  "def": "Light-chain antibody fragments found in urine in multiple myeloma; can cause kidney damage."
+ },
+ {
+  "term": "Reed-Sternberg cell",
+  "def": "The malignant B-cell-derived diagnostic cell of Hodgkin lymphoma \u2014 often a minority of the actual tumor cellularity."
+ },
+ {
+  "term": "Ann Arbor / Lugano staging",
+  "def": "The staging system for Hodgkin lymphoma based on node location/number and presence of systemic (\"B\") symptoms."
+ }
+]

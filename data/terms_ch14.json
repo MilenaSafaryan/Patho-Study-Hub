@@ -1,0 +1,114 @@
+[
+ {
+  "term": "Hemostasis",
+  "def": "Arrest of bleeding / prevention of blood loss after vessel injury."
+ },
+ {
+  "term": "Primary hemostasis",
+  "def": "The initial response to vessel injury \u2014 vasoconstriction plus platelet plug formation."
+ },
+ {
+  "term": "Secondary hemostasis",
+  "def": "Formation of a fibrin clot (coagulation) to reinforce the platelet plug."
+ },
+ {
+  "term": "Clot retraction",
+  "def": "The final stage \u2014 platelet plug, fibrin strands, and trapped RBCs compress into a firm clot (~1 hour)."
+ },
+ {
+  "term": "Degranulation",
+  "def": "Platelet release of \u03b1 granules (thrombospondin, fibrinogen, vWF, factors V/VIII) and dense bodies (ADP, ATP, serotonin) after activation."
+ },
+ {
+  "term": "Thromboxane A2 (TxA2)",
+  "def": "A potent platelet aggregation agonist formed from arachidonic acid; blocked by aspirin/COX inhibitors."
+ },
+ {
+  "term": "GpIIb/IIIa receptor",
+  "def": "Platelet surface receptor that binds fibrinogen to link platelets together during aggregation."
+ },
+ {
+  "term": "Thrombin",
+  "def": "The active enzyme (from prothrombin) that converts fibrinogen to fibrin and activates factors V, VIII, and XIII."
+ },
+ {
+  "term": "Fibrin",
+  "def": "The insoluble protein threads (from fibrinogen) that form the structural scaffold of a clot."
+ },
+ {
+  "term": "Intrinsic pathway",
+  "def": "Coagulation activated by blood contact with damaged endothelium/negatively charged surfaces; assessed by aPTT."
+ },
+ {
+  "term": "Extrinsic pathway",
+  "def": "Coagulation activated by tissue factor release after vascular/tissue trauma; assessed by PT/INR."
+ },
+ {
+  "term": "Common pathway",
+  "def": "Where intrinsic and extrinsic pathways converge \u2014 factor Xa converts prothrombin to thrombin."
+ },
+ {
+  "term": "Antithrombin III (ATIII)",
+  "def": "A natural anticoagulant that binds and inactivates free thrombin; its activity is enhanced by heparin."
+ },
+ {
+  "term": "Protein C / Protein S",
+  "def": "Vitamin K-dependent anticoagulant proteins; protein C inactivates factors V/VIII, protein S assists it and triggers fibrinolysis."
+ },
+ {
+  "term": "Fibrinolysis",
+  "def": "Clot dissolution via plasmin, which digests fibrin/fibrinogen and produces fibrin split (degradation) products."
+ },
+ {
+  "term": "Petechiae",
+  "def": "Flat, pinpoint, nonblanching red/purple spots from capillary hemorrhage \u2014 classic in vascular/platelet disorders."
+ },
+ {
+  "term": "Purpura",
+  "def": "Petechiae occurring in groups or patches."
+ },
+ {
+  "term": "Ecchymosis",
+  "def": "A bruise \u2014 blood escaping into tissue; if raised, called a hematoma."
+ },
+ {
+  "term": "Hemarthrosis",
+  "def": "Bleeding into a joint, with swelling and pain \u2014 the hallmark of hemophilia."
+ },
+ {
+  "term": "Telangiectasia",
+  "def": "A dilated, tortuous small vessel that blanches with pressure and bleeds easily with minor trauma."
+ },
+ {
+  "term": "PT / INR",
+  "def": "Prothrombin time / international normalized ratio \u2014 assesses the extrinsic pathway."
+ },
+ {
+  "term": "aPTT",
+  "def": "Activated partial thromboplastin time \u2014 assesses the intrinsic pathway."
+ },
+ {
+  "term": "Thrombocytopenia",
+  "def": "Low platelet count, a common cause of generalized bleeding."
+ },
+ {
+  "term": "Immune thrombocytopenia (ITP)",
+  "def": "An acquired, immune-mediated cause of thrombocytopenia; classified as newly diagnosed, persistent, or chronic."
+ },
+ {
+  "term": "Hemophilia A",
+  "def": "X-linked recessive factor VIII deficiency \u2014 the classic form, ~85% of hemophilia cases."
+ },
+ {
+  "term": "Hemophilia B (Christmas disease)",
+  "def": "X-linked recessive factor IX deficiency \u2014 less common than hemophilia A."
+ },
+ {
+  "term": "von Willebrand disease",
+  "def": "A disorder of von Willebrand factor (vWF), causing both platelet dysfunction and reduced factor VIII stability."
+ },
+ {
+  "term": "Disseminated intravascular coagulation (DIC)",
+  "def": "An acquired syndrome of simultaneous widespread clotting AND bleeding, from consumption of clotting factors/platelets."
+ }
+]

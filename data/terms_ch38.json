@@ -1,0 +1,198 @@
+[
+ {
+  "term": "Glisson capsule",
+  "def": "The connective tissue capsule covering the liver, itself covered by visceral peritoneum."
+ },
+ {
+  "term": "Portal triad",
+  "def": "The bundle of portal vein, hepatic artery, and bile duct branches that travel together through the liver."
+ },
+ {
+  "term": "Hepatic sinusoids",
+  "def": "Capillary-like spaces where hepatic artery and portal vein blood mix, lined by endothelial cells and Kupffer cells."
+ },
+ {
+  "term": "Kupffer cells",
+  "def": "Phagocytic macrophages lining the hepatic sinusoids."
+ },
+ {
+  "term": "Portal hypertension",
+  "def": "Elevated portal venous pressure from obstruction to blood flow through the liver; a central event in many liver diseases."
+ },
+ {
+  "term": "Hepatocellular failure",
+  "def": "Loss of the liver's biochemical/synthetic functions, producing jaundice, bleeding, ascites, encephalopathy, and more."
+ },
+ {
+  "term": "Hepatic encephalopathy",
+  "def": "Brain dysfunction from abnormal protein/ammonia metabolism due to liver failure."
+ },
+ {
+  "term": "Fetor hepaticus",
+  "def": "A characteristic breath odor from decreased hepatic detoxification."
+ },
+ {
+  "term": "Caput medusae",
+  "def": "Dilated periumbilical veins seen with portal hypertension and collateral blood flow."
+ },
+ {
+  "term": "Jaundice (icterus)",
+  "def": "Yellow discoloration from elevated bilirubin, due to biliary obstruction or decreased bilirubin synthesis/excretion."
+ },
+ {
+  "term": "Anti-HAV IgM / IgG",
+  "def": "IgM = acute hepatitis A infection; IgG = past infection or vaccination, implying immunity."
+ },
+ {
+  "term": "HBsAg",
+  "def": "Hepatitis B surface antigen; implies active infection, detectable 2\u20136 weeks post-infection."
+ },
+ {
+  "term": "HBsAb (IgG)",
+  "def": "Hepatitis B surface antibody; implies resolution of infection and immunity."
+ },
+ {
+  "term": "HBeAg",
+  "def": "Hepatitis Be antigen; implies ongoing infection with high infectivity."
+ },
+ {
+  "term": "Anti-HCV",
+  "def": "Antibody to hepatitis C antigens; does NOT indicate immunity, and may be falsely positive/negative."
+ },
+ {
+  "term": "Cirrhosis",
+  "def": "The irreversible end stage of chronic liver injury: diffuse fibrosis surrounding regenerative nodules, with permanently altered blood flow and function."
+ },
+ {
+  "term": "Primary biliary cholangitis (PBC)",
+  "def": "Autoimmune small-duct biliary cirrhosis, associated with antimitochondrial antibodies."
+ },
+ {
+  "term": "Primary sclerosing cholangitis (PSC)",
+  "def": "Autoimmune large-duct biliary disease with recurrent cholangitis and biliary scarring, strongly linked to ulcerative colitis."
+ },
+ {
+  "term": "Steatohepatitis",
+  "def": "Fatty liver with significant inflammation; alcoholic or nonalcoholic (NASH)."
+ },
+ {
+  "term": "Mallory bodies",
+  "def": "Intracellular inclusions seen in hepatocytes in alcoholic hepatitis."
+ },
+ {
+  "term": "Hereditary hemochromatosis (HH)",
+  "def": "Autosomal recessive HFE gene mutation causing excessive iron absorption and deposition in organs."
+ },
+ {
+  "term": "Wilson disease",
+  "def": "Autosomal recessive ATP7B gene mutation causing excessive copper accumulation in the liver and other organs."
+ },
+ {
+  "term": "Kayser-Fleischer rings",
+  "def": "Brownish corneal rings seen on slit-lamp exam, characteristic (but not required) for Wilson disease diagnosis."
+ },
+ {
+  "term": "NAPQI",
+  "def": "N-acetyl-p-benzoquinone imine \u2014 the toxic metabolite of acetaminophen that causes hepatic necrosis when glutathione is overwhelmed."
+ },
+ {
+  "term": "Kernicterus",
+  "def": "Brain injury (basal ganglia/thalamus staining) from unconjugated bilirubin crossing the immature neonatal blood-brain barrier."
+ },
+ {
+  "term": "Physiologic jaundice of the newborn",
+  "def": "A harmless, self-limited (\u22642 weeks) neonatal jaundice from immature bilirubin conjugation/transport."
+ },
+ {
+  "term": "Reye syndrome",
+  "def": "A pediatric syndrome of fatty liver infiltration and encephalopathy after a viral illness, linked to aspirin use."
+ },
+ {
+  "term": "\u03b11-Antitrypsin deficiency",
+  "def": "Autosomal recessive enzyme-inhibitor deficiency (PiZZ variant) causing liver disease and emphysema."
+ },
+ {
+  "term": "Gilbert syndrome",
+  "def": "A very common, benign autosomal dominant condition causing mild unconjugated hyperbilirubinemia."
+ },
+ {
+  "term": "Crigler-Najjar syndrome",
+  "def": "Rare autosomal recessive disorder of absent/reduced bilirubin conjugation; type I is fatal without transplant, type II is milder."
+ },
+ {
+  "term": "Progressive familial intrahepatic cholestasis (PFIC)",
+  "def": "Rare autosomal recessive disorder of bile salt excretion causing severe jaundice, pruritus, and malabsorption."
+ },
+ {
+  "term": "Alagille syndrome",
+  "def": "Autosomal dominant condition with a paucity of intrahepatic bile ducts plus bony/cardiac malformations."
+ },
+ {
+  "term": "Biliary atresia",
+  "def": "Extrahepatic ductopenia \u2014 a congenital or acquired obliteration of the extrahepatic bile ducts; a common serious birth defect."
+ },
+ {
+  "term": "Kasai procedure",
+  "def": "A hepatoportoenteric connection surgery for biliary atresia; usually a bridge to eventual liver transplant, not curative."
+ },
+ {
+  "term": "Ischemic hepatitis",
+  "def": "Liver injury from hypotension/reduced perfusion, common in older patients with cardiovascular disease."
+ },
+ {
+  "term": "Unconjugated (indirect) bilirubin",
+  "def": "Fat-soluble bilirubin bound to albumin, not yet processed by the liver; can cross the blood-brain barrier, cannot be excreted in urine."
+ },
+ {
+  "term": "Conjugated (direct) bilirubin",
+  "def": "Water-soluble bilirubin after hepatocyte processing (glucuronidation); excretable in bile and urine."
+ },
+ {
+  "term": "Prehepatic jaundice",
+  "def": "Jaundice from excess bilirubin production (usually hemolysis) overwhelming a normal liver's conjugation capacity; unconjugated hyperbilirubinemia."
+ },
+ {
+  "term": "Hepatic (hepatocellular) jaundice",
+  "def": "Jaundice from damaged hepatocytes unable to properly conjugate and excrete bilirubin; typically a mixed (both unconjugated and conjugated) picture."
+ },
+ {
+  "term": "Posthepatic (obstructive) jaundice",
+  "def": "Jaundice from blocked bile flow after the liver has already conjugated bilirubin; conjugated hyperbilirubinemia, with dark urine and pale/clay-colored stools."
+ },
+ {
+  "term": "Urobilinogen",
+  "def": "A colorless bilirubin breakdown product formed by colonic bacteria; most becomes stercobilin (colors stool), some is reabsorbed and excreted in urine."
+ },
+ {
+  "term": "Hepatic venous pressure gradient (HVPG)",
+  "def": "The clinical measurement used to diagnose portal hypertension; normal is 1\u20135 mmHg, clinically significant portal hypertension is \u226510 mmHg."
+ },
+ {
+  "term": "Fulminant hepatic failure",
+  "def": "Acute liver failure with rapid-onset hepatic encephalopathy and severe coagulopathy within days to weeks, in a person with no prior chronic liver disease."
+ },
+ {
+  "term": "Hepatic encephalopathy",
+  "def": "Reversible neurologic dysfunction from the liver's failure to clear neurotoxins (especially ammonia) from portal blood."
+ },
+ {
+  "term": "HBeAg / Anti-HBe",
+  "def": "Markers of hepatitis B viral replication activity; HBeAg-positive indicates high infectivity, seroconversion to anti-HBe suggests lower viral activity."
+ },
+ {
+  "term": "Sustained virologic response (SVR)",
+  "def": "Undetectable hepatitis C viral RNA 12 weeks after finishing treatment \u2014 the standard definition of a hepatitis C cure."
+ },
+ {
+  "term": "Direct-acting antivirals (DAAs)",
+  "def": "Modern oral hepatitis C medications that directly target viral proteins; cure over 90\u201395% of patients in as little as 8\u201312 weeks."
+ },
+ {
+  "term": "Hepatocellular carcinoma (HCC)",
+  "def": "The most common primary liver cancer, arising almost exclusively in the setting of chronic hepatitis B/C infection or cirrhosis of any cause."
+ },
+ {
+  "term": "Alpha-fetoprotein (AFP)",
+  "def": "A tumor marker sometimes elevated in HCC, used alongside ultrasound for surveillance in high-risk patients \u2014 imperfect sensitivity/specificity on its own."
+ }
+]

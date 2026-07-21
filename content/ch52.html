@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alterations of the Integument — Study Guide</title>
+<style>
+  :root{
+    --ink:#16303A; --ink-soft:#3E5C66; --bg:#F3F6F5; --panel:#FFFFFF;
+    --teal:#0C7C74; --teal-dark:#0A5F59; --teal-light:#DCEEEA;
+    --amber:#B9822C; --amber-light:#F6ECD9;
+    --red:#A2413F; --red-light:#F5E1DF; --line:#DCE4E2;
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.55;}
+  a{color:var(--teal-dark);}
+  .shell{display:grid; grid-template-columns: 250px 1fr; min-height:100vh;}
+  @media (max-width: 900px){.shell{grid-template-columns: 1fr;} .sidebar{position:static; height:auto; max-height:none; border-right:none; border-bottom:1px solid var(--line);}}
+  .sidebar{position:sticky; top:0; height:100vh; overflow-y:auto; background:var(--ink); color:#E9F1EF; padding:22px 18px 40px; border-right:1px solid var(--line);}
+  .brand{font-family:var(--serif); font-size:1.15rem; letter-spacing:.3px; margin:0 0 2px; color:#fff;}
+  .brand-sub{font-size:.72rem; text-transform:uppercase; letter-spacing:1.6px; color:#8FB9B4; margin-bottom:22px; display:block;}
+  .sidebar nav{margin-top:8px;}
+  .sidebar .grp-title{font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:#7FA9A3; margin:20px 0 6px;}
+  .sidebar a{display:block; color:#D3E5E2; text-decoration:none; font-size:.85rem; padding:5px 8px; border-radius:6px; margin:1px 0;}
+  .sidebar a:hover{background:rgba(255,255,255,.08); color:#fff;}
+  main{padding:0;}
+  .hero{background:linear-gradient(135deg, var(--teal-dark), var(--teal) 60%, #2A9D91); color:#fff; padding:50px 44px 36px;}
+  .hero h1{font-family:var(--serif); font-size:1.95rem; margin:0 0 8px; font-weight:normal;}
+  .hero p{max-width:620px; color:#E3F3F0; font-size:.98rem; margin:0;}
+  .hero .toolbar{margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;}
+  .hero button{background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+  .hero button:hover{background:rgba(255,255,255,.26);}
+  .content{padding:34px 44px 90px; max-width:960px;}
+  @media (max-width:640px){.hero{padding:32px 20px 26px;} .content{padding:22px 18px 70px;}}
+  section.block{margin-bottom:50px; scroll-margin-top:16px;}
+  .block-head{display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--teal); padding-bottom:8px; margin-bottom:16px;}
+  .block-head h2{font-family:var(--serif); font-size:1.5rem; margin:0; color:var(--ink); font-weight:normal;}
+  .block-head .tag{font-size:.7rem; text-transform:uppercase; letter-spacing:1.2px; color:var(--teal-dark); background:var(--teal-light); padding:3px 9px; border-radius:12px;}
+  .block-intro{color:var(--ink-soft); margin-bottom:18px; font-size:.95rem;}
+  details.topic{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:12px; overflow:hidden;}
+  details.topic > summary{list-style:none; cursor:pointer; padding:13px 18px; font-family:var(--serif); font-size:1.08rem; color:var(--ink); display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to right, var(--teal-light), transparent 70%);}
+  details.topic > summary::-webkit-details-marker{display:none;}
+  details.topic > summary:after{content:"+"; font-family:var(--sans); font-size:1.25rem; color:var(--teal-dark); transform:rotate(0deg); transition:transform .15s ease;}
+  details.topic[open] > summary:after{transform:rotate(45deg);}
+  .topic-body{padding:4px 20px 18px;}
+  .fact-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin:10px 0 14px;}
+  @media (max-width:640px){.fact-grid{grid-template-columns:1fr;}}
+  .fact{background:#FBFCFB; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:6px; padding:10px 12px;}
+  .fact.warn{border-left-color:var(--red);}
+  .fact.tx{border-left-color:var(--amber);}
+  .fact h4{margin:0 0 4px; font-size:.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--teal-dark);}
+  .fact.warn h4{color:var(--red);}
+  .fact.tx h4{color:var(--amber);}
+  .fact p, .fact ul{margin:0; font-size:.89rem; color:var(--ink);}
+  .fact ul{padding-left:18px;}
+  .fact li{margin-bottom:3px;}
+  .callout{background:var(--amber-light); border:1px solid #ECD9B4; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .callout b{color:var(--amber);}
+  .note{background:var(--teal-light); border:1px solid #BFDFDA; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px; color:var(--teal-dark);}
+  .danger{background:var(--red-light); border:1px solid #E3C4C1; border-radius:8px; padding:10px 14px; font-size:.86rem; margin-top:10px;}
+  .danger b{color:var(--red);}
+  .gloss-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:12px;}
+  .term{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 14px;}
+  .term dt{font-weight:700; font-size:.92rem; color:var(--teal-dark); margin-bottom:3px;}
+  .term dd{margin:0; font-size:.84rem; color:var(--ink-soft);}
+  .mindmap{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 14px 10px; margin:20px 0 26px;}
+  .mindmap .mm-title{font-family:var(--serif); font-size:1rem; color:var(--ink); margin:0 0 8px 6px;}
+  .mindmap svg{width:100%; height:auto; display:block;}
+  .mm-node rect{fill:var(--teal);}
+  .mm-node text{fill:#fff; font-family:var(--sans); font-weight:600;}
+  .mm-leaf rect{fill:var(--teal-light); stroke:var(--teal); stroke-width:1;}
+  .mm-leaf text{fill:var(--ink); font-family:var(--sans); font-weight:400;}
+  .mm-line{stroke:#A9C9C5; stroke-width:1.6;}
+  table.compare{width:100%; border-collapse:collapse; margin:12px 0; font-size:.84rem;}
+  table.compare th, table.compare td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top;}
+  table.compare th{background:var(--teal-light); color:var(--teal-dark);}
+  footer{text-align:center; padding:26px; color:var(--ink-soft); font-size:.78rem;}
+</style>
+<style>
+
+/* ============ QUIZ MODE ============ */
+.quiz-fab{
+  position:fixed; bottom:22px; right:22px; z-index:500;
+  background:#0C7C74; color:#fff; border:none; padding:13px 22px; border-radius:30px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:.88rem; font-weight:600; cursor:pointer; box-shadow:0 4px 14px rgba(10,60,55,.35);
+  display:flex; align-items:center; gap:8px;
+}
+.quiz-fab:hover{background:#0A5F59;}
+.quiz-fab .qicon{font-size:1.05rem;}
+
+.quiz-overlay{
+  position:fixed; inset:0; background:#F3F6F5; z-index:1000;
+  display:none; overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:#16303A;
+}
+.quiz-overlay.active{display:block;}
+body.quiz-lock{overflow:hidden;}
+
+.quiz-header{
+  position:sticky; top:0; z-index:5;
+  background:linear-gradient(135deg,#0A5F59,#0C7C74 60%,#2A9D91); color:#fff;
+  padding:18px 28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.quiz-header h2{font-family:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif; font-weight:normal; font-size:1.3rem; margin:0;}
+.quiz-header .quiz-sub{font-size:.78rem; color:#E3F3F0; margin-top:2px;}
+.quiz-exit{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff; padding:8px 16px; border-radius:20px; font-size:.82rem; cursor:pointer;}
+.quiz-exit:hover{background:rgba(255,255,255,.28);}
+.quiz-progress-bar-bg{background:rgba(255,255,255,.25); border-radius:8px; height:7px; overflow:hidden; width:100%; margin-top:10px;}
+.quiz-progress-bar-fill{background:#fff; height:100%; border-radius:8px; transition:width .25s;}
+
+.quiz-body{max-width:760px; margin:0 auto; padding:30px 20px 100px;}
+
+.quiz-picker{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:28px; text-align:center;
+}
+.quiz-picker h3{font-family:Georgia,serif; font-weight:normal; font-size:1.25rem; margin:0 0 8px;}
+.quiz-picker p{color:#3E5C66; font-size:.9rem; margin:0 0 22px;}
+.quiz-mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+@media (max-width:600px){.quiz-mode-grid{grid-template-columns:1fr;}}
+.quiz-mode-card{
+  border:2px solid #DCE4E2; border-radius:12px; padding:18px; cursor:pointer; text-align:left; background:#FBFCFB;
+}
+.quiz-mode-card:hover{border-color:#0C7C74;}
+.quiz-mode-card.selected{border-color:#0C7C74; background:#DCEEEA;}
+.quiz-mode-card h4{font-family:Georgia,serif; font-weight:normal; font-size:1.05rem; margin:0 0 6px; color:#0A5F59;}
+.quiz-mode-card p{font-size:.83rem; color:#3E5C66; margin:0;}
+.quiz-start-btn{
+  background:#0C7C74; color:#fff; border:none; padding:12px 30px; border-radius:24px;
+  font-size:.95rem; font-weight:600; cursor:pointer;
+}
+.quiz-start-btn:hover{background:#0A5F59;}
+.quiz-start-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-card{
+  background:#fff; border:1px solid #DCE4E2; border-radius:14px; padding:26px; margin-bottom:16px;
+}
+.quiz-tag{
+  display:inline-block; font-size:.68rem; text-transform:uppercase; letter-spacing:.6px;
+  background:#DCEEEA; color:#0A5F59; padding:3px 10px; border-radius:10px; margin-bottom:12px; font-weight:700;
+}
+.quiz-tag.teachback{background:#F6ECD9; color:#B9822C;}
+.quiz-q-text{font-family:Georgia,serif; font-size:1.15rem; color:#16303A; margin-bottom:16px; line-height:1.5;}
+.quiz-input{
+  width:100%; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px; font-size:.95rem;
+  font-family:inherit; box-sizing:border-box; margin-bottom:12px;
+}
+.quiz-textarea{
+  width:100%; min-height:110px; padding:12px 14px; border:1px solid #DCE4E2; border-radius:8px;
+  font-size:.9rem; font-family:inherit; box-sizing:border-box; margin-bottom:12px; resize:vertical;
+}
+.quiz-btn-row{display:flex; gap:10px; flex-wrap:wrap;}
+.quiz-btn{
+  background:#0C7C74; color:#fff; border:none; padding:10px 22px; border-radius:20px;
+  font-size:.87rem; font-weight:600; cursor:pointer;
+}
+.quiz-btn:hover{background:#0A5F59;}
+.quiz-btn.secondary{background:#fff; color:#0A5F59; border:1px solid #0C7C74;}
+.quiz-btn.secondary:hover{background:#DCEEEA;}
+.quiz-btn:disabled{opacity:.4; cursor:not-allowed;}
+
+.quiz-feedback{
+  margin-top:14px; padding:12px 16px; border-radius:8px; font-size:.87rem; display:none;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.correct{background:#DFEFE3; color:#3E8A5B; border:1px solid #C7E2CE;}
+.quiz-feedback.incorrect{background:#F5E1DF; color:#A2413F; border:1px solid #E3C4C1;}
+
+.quiz-keypoints{
+  margin-top:14px; padding:14px 18px; background:#F6ECD9; border:1px solid #ECD9B4; border-radius:10px;
+  display:none; font-size:.87rem;
+}
+.quiz-keypoints.show{display:block;}
+.quiz-keypoints h5{margin:0 0 8px; font-size:.72rem; text-transform:uppercase; letter-spacing:.6px; color:#B9822C;}
+.quiz-keypoints ul{margin:0; padding-left:18px;}
+.quiz-keypoints li{margin-bottom:5px;}
+
+.quiz-self-grade{display:none; gap:10px; margin-top:14px;}
+.quiz-self-grade.show{display:flex;}
+
+.quiz-summary{
+  background:#fff; border:2px solid #0C7C74; border-radius:14px; padding:30px; text-align:center;
+}
+.quiz-summary .qscore{font-family:Georgia,serif; font-size:2.4rem; color:#0A5F59; margin:8px 0;}
+.quiz-summary-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0;}
+.quiz-summary-grid div{background:#FBFCFB; border:1px solid #DCE4E2; border-radius:8px; padding:10px 4px;}
+.quiz-summary-grid .n{font-family:Georgia,serif; font-size:1.3rem;}
+.quiz-summary-grid .l{font-size:.68rem; color:#3E5C66; text-transform:uppercase;}
+
+</style>
+</head>
+<body><div style="position:sticky;top:0;z-index:999;background:#1C2521;color:#EEF0E8;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;display:flex;align-items:center;gap:10px;">
+<a href="../chapter.html?ch=52" style="color:#EEF0E8;text-decoration:none;opacity:0.85;">&larr; Back to Chapter Hub</a>
+</div>
+<div class="shell">
+<aside class="sidebar">
+<p class="brand">Alterations of the Integument</p>
+<span class="brand-sub">Chapter 52 Study Guide</span>
+<nav>
+<a class="top" href="#glossary">🔑 Key Terms Glossary</a>
+<div class="grp-title">Age-Related Changes</div>
+<a href="#aging-epidermis-dermis">Epidermis &amp; Dermis</a>
+<a href="#aging-appendages">Hair, Nails &amp; Glands</a>
+<div class="grp-title">Evaluation</div>
+<a href="#history-taking">History-Taking</a>
+<a href="#lesion-types">Primary vs. Secondary Lesions</a>
+<a href="#lesion-descriptors">Lesion Descriptors</a>
+<div class="grp-title">Infectious Skin Disorders</div>
+<a href="#verrucae">Verrucae (Warts)</a>
+<a href="#hsv">Herpes Simplex Virus</a>
+<a href="#herpes-zoster">Herpes Zoster (Shingles)</a>
+<a href="#fungal">Fungal &amp; Yeast Infections</a>
+<div class="grp-title">Dark Skin &amp; Systemic Disease</div>
+<a href="#dark-skin">Special Characteristics of Dark Skin</a>
+<a href="#systemic-color">Skin Color &amp; Systemic Disease</a>
+<a href="#systemic-other">Sensation, Texture, Temperature &amp; Hair</a>
+<div class="grp-title">Treatment</div>
+<a href="#topical-delivery">Topical Delivery Systems</a>
+<a href="#corticosteroids">Corticosteroids</a>
+<div class="grp-title">Developmental Considerations</div>
+<a href="#infancy">Infancy</a>
+<a href="#childhood-diseases">Childhood Communicable Diseases</a>
+</nav>
+</aside>
+<main>
+<div class="hero">
+<h1>Alterations of the Integument</h1>
+<p>How skin changes across the lifespan, how to systematically evaluate a lesion, the major infectious skin disorders, and how systemic disease shows up on the skin. Built from your Chapter 52 material.</p>
+<div class="toolbar">
+<button onclick="setAll(true)">Expand all</button>
+<button onclick="setAll(false)">Collapse all</button>
+</div>
+</div>
+<div class="content">
+<!-- ================= GLOSSARY ================= -->
+<section class="block" id="glossary">
+<div class="block-head"><h2>Key Terms &amp; Definitions</h2><span class="tag">Start here</span></div>
+<dl class="gloss-grid">
+<div class="term"><dt>Elastosis (solar elastosis)</dt><dd>Cross-linked, thickened collagen bundles from chronic sun exposure, producing a weather-beaten/tanned appearance.</dd></div>
+<div class="term"><dt>Senile purpura</dt><dd>Age-related hemorrhages from increased dermal vascular fragility.</dd></div>
+<div class="term"><dt>Primary lesion</dt><dd>A skin lesion in its original, unmodified appearance.</dd></div>
+<div class="term"><dt>Secondary lesion</dt><dd>A skin lesion whose appearance has been modified over time or by external factors (e.g., scratching).</dd></div>
+<div class="term"><dt>Verrucae (warts)</dt><dd>Benign papillomas caused by human papillomavirus, invading only human skin/mucous membranes.</dd></div>
+<div class="term"><dt>Herpes simplex virus (HSV)</dt><dd>HSV-1 (usually above the waist) and HSV-2 (usually genital); persists latently in the trigeminal or other ganglia after initial infection.</dd></div>
+<div class="term"><dt>Herpes zoster (shingles)</dt><dd>Reactivation of latent varicella zoster virus in a dorsal sensory ganglion, causing a dermatomal vesicular eruption.</dd></div>
+<div class="term"><dt>Postherpetic neuralgia</dt><dd>Persistent pain (months to years) after a shingles rash resolves — the most important complication in patients over 50.</dd></div>
+<div class="term"><dt>Tinea</dt><dd>Dermatophyte fungal infection, named by body location (capitis, corporis, pedis, cruris, etc.).</dd></div>
+<div class="term"><dt>Onychomycosis</dt><dd>Dermatophyte infection of the nails, causing white/yellow discoloration and thickening.</dd></div>
+<div class="term"><dt>Hirsutism (hypertrichosis)</dt><dd>Intensified, male-pattern hair growth in females — upper lip, chin, chest, linea alba.</dd></div>
+<div class="term"><dt>Mongolian spot</dt><dd>A benign area of selective pigmentation, usually buttocks/sacral area, common in Asian American and African American infants.</dd></div>
+<div class="term"><dt>Strawberry hemangioma</dt><dd>A bright-red, raised vascular birthmark that typically resolves by age 5–7 without scarring.</dd></div>
+<div class="term"><dt>Port-wine stain hemangioma</dt><dd>A flat, reddish-purple vascular birthmark, usually face/neck, that does NOT resolve with age.</dd></div>
+<div class="term"><dt>Milia</dt><dd>Small white bumps in newborns from plugged sebaceous/eccrine glands.</dd></div>
+<div class="term"><dt>Cradle cap</dt><dd>A harmless, self-limited scaly scalp condition in infants.</dd></div>
+<div class="term"><dt>Rubella (German measles)</dt><dd>A mild childhood viral illness with major risk only if transmitted transplacentally to a fetus early in gestation (teratogenic).</dd></div>
+<div class="term"><dt>Roseola infantum</dt><dd>A viral illness in children under ~4 (usually ~1 year) with high fever followed by a rash — NO lymphadenopathy, unlike rubella.</dd></div>
+<div class="term"><dt>Rubeola (measles)</dt><dd>A more severe communicable viral illness with Koplik spots and a facial-onset rash; risk of otitis media, pneumonia, encephalitis.</dd></div>
+<div class="term"><dt>Koplik spots</dt><dd>Small red spots with a bluish-white center on the buccal mucosa — pathognomonic for measles.</dd></div>
+</dl>
+</section>
+<!-- ================= AGE-RELATED CHANGES ================= -->
+<section class="block" id="aging-epidermis-dermis">
+<details class="topic" open="">
+<summary>Age-Related Changes — Epidermis &amp; Dermis</summary>
+<div class="topic-body">
+<div class="mindmap">
+<p class="mm-title">Mind Map — The Aging-Skin Cascade</p>
+<svg viewbox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
+<g class="mm-node"><rect height="50" rx="10" width="260" x="20" y="10"></rect><text font-size="11" text-anchor="middle" x="150" y="32">↑ Collagen cross-linking</text><text font-size="10" text-anchor="middle" x="150" y="48">+ elastin changes</text></g>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="320" y="10"></rect><text font-size="11" text-anchor="middle" x="450" y="32">↓ Skin lipids</text><text font-size="10" text-anchor="middle" x="450" y="48">↓ gland function</text></g>
+<g class="mm-node"><rect height="50" rx="10" width="260" x="620" y="10"></rect><text font-size="11" text-anchor="middle" x="750" y="32">↓ Blood flow</text><text font-size="10" text-anchor="middle" x="750" y="48">fragile capillaries</text></g>
+<line class="mm-line" x1="150" x2="150" y1="60" y2="94"></line>
+<g class="mm-leaf"><rect height="50" rx="6" width="260" x="20" y="94"></rect><text font-size="10.5" text-anchor="middle" x="150" y="116">↓ Pliability/compliance</text><text font-size="10.5" text-anchor="middle" x="150" y="132">→ stiffness, wrinkles</text></g>
+<line class="mm-line" x1="450" x2="450" y1="60" y2="94"></line>
+<g class="mm-leaf"><rect height="50" rx="6" width="260" x="320" y="94"></rect><text font-size="10.5" text-anchor="middle" x="450" y="116">Loss of subcutaneous fat</text><text font-size="10.5" text-anchor="middle" x="450" y="132">+ skin dryness</text></g>
+<line class="mm-line" x1="150" x2="450" y1="144" y2="184"></line>
+<line class="mm-line" x1="450" x2="450" y1="144" y2="184"></line>
+<line class="mm-line" x1="750" x2="450" y1="60" y2="184"></line>
+<g class="mm-node"><rect height="40" rx="8" width="300" x="300" y="184"></rect><text font-size="12" text-anchor="middle" x="450" y="209">↑ POSSIBILITY OF SKIN DAMAGE</text></g>
+</svg>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Epidermis</h4><p>Generalized thinning (though average cell-layer count is unchanged); mitosis decreases, cellular variation increases (irregular size/shape). Melanocyte number decreases in White individuals, with declining/less uniform pigment production on sun exposure.</p></div>
+<div class="fact warn"><h4>Dermis</h4><p>↓ Elastin and ↑ collagen-to-elastin ratio → loss of skin strength/elasticity. Collagen becomes cross-linked into thicker bundles (<b>elastosis</b>, especially <b>solar elastosis</b> from sun exposure) → weather-beaten appearance. ↓ Vascularity → <b>senile purpura</b>, cherry angiomas, venous lakes on ears/face/lips/neck.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Clinical consequence: drug absorption</h4><p>Decreased dermal/subcutaneous vascularity slows absorption of subcutaneously administered drugs, prolonging their half-life — a practical prescribing consideration in older adults.</p></div>
+<div class="fact"><h4>Sun exposure — the dominant modifiable factor</h4><p>Skin habitually covered shows little age-related change; blue-eyed, fair-skinned individuals are more susceptible to solar damage than more heavily pigmented individuals.</p></div>
+</div>
+<div class="note">The protective water/chemical barrier function of the stratum corneum weakens with age even though its thickness stays the same — a good example of function declining before structure visibly changes.</div>
+</div>
+</details>
+</section>
+<section class="block" id="aging-appendages">
+<details class="topic" open="">
+<summary>Age-Related Changes — Hair, Nails &amp; Glands</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Hair color &amp; growth</h4><p>Gray hair: autosomal dominant trait, from decreased melanin production at the follicle base; begins at the temples, extends to the vertex. &gt;50% of people over 50 have ≥50% gray body hair. Adults reach full terminal hair pattern by age 40, followed by progressive loss in reverse order of development.</p></div>
+<div class="fact warn"><h4>Sex-specific hair patterns</h4><p>Postmenopausal White females: lose trunk hair first, then pubic/axillary; unopposed adrenal androgens cause coarse facial hair (chin/lips) in 50% of women over 60. Males: general thinning + longer/coarser eyebrow/ear/nose hair; frontal hairline recession in 80% of older females, 100% of older males. Male baldness is X-linked (inherited from the mother), requires testosterone, and shows an M-shaped or vertex-thinning pattern.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Nails</h4><p>Become dull, brittle, hard, thick — mainly from diminished vascular supply to the nail bed. Growth rate drops 30–50% (0.1 mm/day at 30 → 0.07 mm/day at 90). ↑ Longitudinal striations → splitting. Toenails especially prone to hyperkeratosis/thickening; onychomycosis affects ~20% of people over 60.</p></div>
+<div class="fact warn"><h4>Glands</h4><p><b>Sebaceous:</b> little structural change but declining function (↓ sebum) — minimal in males, more pronounced in females after menopause, plateauing by the 7th decade; fewer glands overall (tied to hair follicle loss) → drier, coarser skin. <b>Sweat (eccrine):</b> ↓ size/number/function, uneven secretory cells, lipofuscin accumulation, fibrous replacement in advanced age → raised sweating threshold, impaired thermoregulation. <b>Apocrine:</b> function declines though number/size don't.</p></div>
+</div>
+<div class="danger"><b>Clinical bottom line:</b> young children and older adults BOTH have fewer functional sweat glands and rely more on blood flow changes for thermoregulation — putting both age extremes at similar risk for temperature-regulation problems, for different underlying reasons (immaturity vs. degeneration).</div>
+</div>
+</details>
+</section>
+<!-- ================= EVALUATION ================= -->
+<section class="block" id="history-taking">
+<details class="topic" open="">
+<summary>History-Taking</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Key history categories</h4><p>Family history (hereditary skin disease), personal history (age of onset, psychosocial impact, ethnic origin), geographic origin/residence history, seasonal pattern, occupational exposures, leisure activities, accompanying diseases, previous treatment, and detailed lesion history (onset, course, symptoms, psychological triggers).</p></div>
+<div class="fact warn"><h4>Why occupation/leisure history matters so much</h4><p>Chemical/dust/gas exposure, heat, lighting, hygiene conditions, and even hobby-related exposures (gardening, woodworking, fishing) can all be the actual cause of a presenting skin problem — sometimes a contact of only 5 minutes is enough to acquire certain conditions.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="lesion-types">
+<details class="topic" open="">
+<summary>Primary vs. Secondary Lesions</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Primary lesions</h4><p>Retain their original appearance, unmodified by time or external processes.</p></div>
+<div class="fact warn"><h4>Secondary lesions</h4><p>Appearance modified over time or by external agents (e.g., scratching) — may look quite different from the original lesion. Correctly telling primary from secondary is central to reaching an accurate diagnosis.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="lesion-descriptors">
+<details class="topic" open="">
+<summary>Lesion Descriptors</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>What to describe once a lesion is classified</h4><p>Size, symmetry of color/shape, and distribution pattern if multiple lesions are present: symmetric, sun-exposed, intertriginous (warm/moist apposed skin), acral (distal extremities/ears/nose), genital, or flexor/extensor predominant.</p></div>
+<div class="fact warn"><h4>Color as a diagnostic clue</h4><p>Red-salmon pink, brown-black, blue-purple, bone white-slate gray, yellow — each color pattern suggests certain diagnoses, so color description isn't just cosmetic detail.</p></div>
+</div>
+<table class="compare">
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Confluent</td><td>Blending together</td></tr>
+<tr><td>Diffuse</td><td>Generalized/widespread</td></tr>
+<tr><td>Discrete</td><td>Separate but close together</td></tr>
+<tr><td>Herpetiform</td><td>Closely grouped vesicles (herpes-like)</td></tr>
+<tr><td>Linear</td><td>Set in a straight line</td></tr>
+<tr><td>Pedunculated</td><td>On a stalk</td></tr>
+<tr><td>Reticulated</td><td>Netlike array</td></tr>
+<tr><td>Annular / Arcuate / Circinate</td><td>Ring-shaped / incomplete-circle arc / circular</td></tr>
+<tr><td>Guttate / Nummular / Ovoid</td><td>Small droplet-like / coin-shaped / oval-shaped</td></tr>
+<tr><td>Serpiginous</td><td>Wandering, snakelike</td></tr>
+<tr><td>Telangiectatic</td><td>Dilated surface vessels</td></tr>
+<tr><td>Verrucous</td><td>Rough, wart-like surface</td></tr>
+<tr><td>Zosteriform</td><td>Follows a nerve root dermatome (shingles pattern)</td></tr>
+</table>
+</div>
+</details>
+</section>
+<!-- ================= INFECTIOUS DISORDERS ================= -->
+<section class="block" id="verrucae">
+<details class="topic" open="">
+<summary>Verrucae (Warts)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Cause</h4><p>Human papillomavirus — infects only human skin/mucous membranes (not found in other animals). Histologically similar across all wart types despite varied appearance by location; the stratum corneum is irregularly thickened.</p></div>
+<div class="fact warn"><h4>Natural course</h4><p>May resolve spontaneously if immunity develops, but this can be delayed for years and isn't reliable — 95% of untreated warts resolve within 5 years, though they may multiply to hundreds of lesions in the meantime.</p></div>
+</div>
+<div class="fact tx"><h4>Treatment options</h4><p>Laser removal, liquid nitrogen/acid chemicals, cryotherapy, salicylic acid paint/plasters, topical blistering agents, immunomodulators, intralesional injections.</p></div>
+</div>
+</details>
+</section>
+<section class="block" id="hsv">
+<details class="topic" open="">
+<summary>Herpes Simplex Virus</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Two types, two typical locations</h4><p>HSV-1: usually above the waist (can spread via occupational exposure in dentistry/medicine/athletics). HSV-2: responsible for most genital infections.</p></div>
+<div class="fact warn"><h4>Lesion progression</h4><p>Burning/tingling → vesicles + erythema → pustules → ulcers → crusts → healing (10–14 days). Most common on lips, face, mouth.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Latency &amp; recurrence</h4><p>Persists latently in the trigeminal (or other) ganglia after initial infection. Recurrence triggers: stress, sunlight, menses, injury. Most patients have ≥1 reactivation; some have 10+ outbreaks/year. Viral shedding can occur even without visible lesions.</p></div>
+<div class="fact tx"><h4>Treatment</h4><p>No cure — mostly palliative (lidocaine/diphenhydramine, aspirin, cold compresses). Acyclovir, famciclovir, or valacyclovir shorten active outbreaks; can be used as daily prophylaxis in some cases.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="herpes-zoster">
+<details class="topic" open="">
+<summary>Herpes Zoster (Shingles)</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Mechanism</h4><p>Reactivation of latent varicella zoster virus (same virus as chickenpox), which has resided in dorsal sensory ganglia since the original childhood infection. During reactivation, virus travels from ganglion to the corresponding dermatome's skin.</p></div>
+<div class="fact warn"><h4>Presentation</h4><p>Vesicles on erythematous bases, restricted to a single dermatome (unilateral) — most often thorax, trunk, face. New vesicle crops erupt for 3–5 days; lesions deeper/more confluent than chickenpox. Clears in 2–3 weeks. Severe pain/paresthesias common. In immunosuppressed patients, lesions may extend beyond the dermatome.</p></div>
+</div>
+<div class="danger"><b>Postherpetic neuralgia</b> — the most important complication in patients over 50: pain persisting long after the rash resolves, sometimes for months to years. Eye involvement (herpes zoster ophthalmicus) can cause permanent blindness. In the elderly specifically, shingles can be more severe and lengthy (episodes up to a year).</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact tx"><h4>Treatment</h4><p>Antivirals (acyclovir, famciclovir, valacyclovir) — start within 48–72 hours of onset for best effect. Topical Burow compresses/aqueous alcohol shake lotions, pain medication. Systemic corticosteroids can help severe pain in healthy patients over 50, though use remains controversial.</p></div>
+<div class="fact"><h4>Prevention</h4><p><b>Shingrix</b> — a recombinant vaccine approved for adults 50+ and for adults 18+ at increased risk from immunodeficiency/immunosuppression.</p></div>
+</div>
+</div>
+</details>
+</section>
+<section class="block" id="fungal">
+<details class="topic" open="">
+<summary>Fungal &amp; Yeast Infections</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>The three dermatophyte genera</h4><p><i>Microsporum</i>, <i>Trichophyton</i>, <i>Epidermophyton</i> — cause "tinea" infections named by location: capitis (scalp), barbae (beard), faciei (face), corporis (trunk), manus (hand), cruris (groin), pedis (foot).</p></div>
+<div class="fact warn"><h4>Presentation varies by site</h4><p>Often erythematous macules/plaques with peripheral scaling and central clearing; vesicular lesions common on the feet. Can be mistaken for eczema or impetigo when weeping/crusted. Nail infection (<b>onychomycosis</b>): white/yellow opaque discoloration progressing to thickened, crumbly, deformed nails.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact tx"><h4>Treatment</h4><p>Localized: topical antifungals (miconazole, clotrimazole, econazole, ciclopirox, terbinafine) — 4-week twice-daily course usually clears symptoms. Extensive/hair/nail/resistant infections: systemic therapy (griseofulvin, itraconazole, terbinafine). Duration ranges from 3–4 weeks (tinea corporis) to <b>12 months</b> (onychomycosis) — a striking contrast worth remembering.</p></div>
+<div class="fact"><h4>Yeast infections</h4><p><i>Candida albicans</i> — presents as thrush (white oral lesions) in newborns, and as intertrigo in infants/bedridden patients from moisture-trapped skin folds.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= DARK SKIN & SYSTEMIC DISEASE ================= -->
+<section class="block" id="dark-skin">
+<details class="topic" open="">
+<summary>Special Characteristics of Dark Skin</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>More common in darker skin</h4><p>Postinflammatory hyperpigmentation (after inflammation/injury/infection), seborrheic dermatitis, keloids, and traumatic (traction) alopecia from tight hair plaiting or hot oil/tension on the scalp.</p></div>
+<div class="fact warn"><h4>Rarer in darker skin</h4><p>Squamous/basal cell carcinoma, senile keratoses, and psoriasis. When psoriasis DOES occur, the classic bright-red color and silvery scale are often absent — plaques instead appear blue/violet from melanocyte stimulation, making it harder to detect.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Assessment technique adjustments</h4><p>Assess color in sclerae, conjunctivae, buccal mucosa, tongue, lips, nail beds, palms, soles. Pallor: yellowish-brown tinge (brown skin) or ash gray (black skin) — absence of underlying red tones. Petechiae: best seen over lighter-pigmented areas (abdomen, gluteal, volar forearm) or palpebral conjunctiva/buccal mucosa.</p></div>
+<div class="fact warn"><h4>The blanch test</h4><p>Pressure over an area blanches erythema but does NOT affect petechiae or ecchymosis — a fast way to distinguish true bleeding from simple redness regardless of skin tone.</p></div>
+</div>
+<div class="note">Normal variants frequently mistaken for disorders: Mongolian spots (infants), Futcher/Voigt lines, linear nail pigmentation — know these are normal so they aren't misdiagnosed.</div>
+</div>
+</details>
+</section>
+<section class="block" id="systemic-color">
+<details class="topic" open="">
+<summary>Skin Color &amp; Systemic Disease</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Color change</th><th>Associated finding</th></tr>
+<tr><td>Red (erythema)</td><td>Generalized: carbon monoxide poisoning. Localized: rashes, inflammation</td></tr>
+<tr><td>Orange</td><td>Carotene deposition; protein-calorie malnutrition (hair/skin appear orange in dark-skinned children)</td></tr>
+<tr><td>Yellow (jaundice)</td><td>Liver disease/bilirubin accumulation; check the hard palate in bright light to confirm true jaundice vs. carotene</td></tr>
+<tr><td>Green-yellow</td><td>Severe jaundice with biliverdin accumulation (obstructed bile ducts)</td></tr>
+<tr><td>Blue (cyanosis)</td><td>Cardiac/respiratory disease impairing oxygenation; localized cold-induced finger blueness = Raynaud disease (linked to cryoglobulins, lymphoma, AIDS)</td></tr>
+<tr><td>Indigo/dark</td><td>Gangrene (severe arteriosclerosis); ↑ melanin in chronic adrenal insufficiency; silver poisoning</td></tr>
+<tr><td>Violet (palmar erythema)</td><td>Liver disease; hyperestrogenism in pregnancy</td></tr>
+</table>
+<div class="danger"><b>Jaundice confirmation trick:</b> if the sclerae look yellow, check the hard palate in bright daylight — jaundice is detectable there even at serum bilirubin as low as 2–4 mg/100 mL, and unlike the sclera, the palate isn't confounded by carotene deposits.</div>
+</div>
+</details>
+</section>
+<section class="block" id="systemic-other">
+<details class="topic" open="">
+<summary>Sensation, Texture, Temperature &amp; Hair — Systemic Clues</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Sensation (pruritus)</h4><p>Can be purely dermatologic (atopic eczema, contact dermatitis, scabies, dermatophytosis, psoriasis, varicella) OR a sign of systemic disease: carcinoma, diabetes, thyroid disease, uremia, obstructive biliary disease.</p></div>
+<div class="fact warn"><h4>Texture</h4><p>Loose/wrinkled/toneless skin may indicate dehydration — best confirmed by palpating oral mucous membranes (gum/cheek junction; if dry, finger doesn't slide easily). <b>Pitting edema</b> on hands/feet/ankles/sacrum indicates fluid excess. Induration/lipodystrophy at injection sites is common with repeated insulin injections.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Temperature</h4><p>Warm + dry + febrile = rising core temperature (sweating not yet compensating). Warm + wet = temperature about to drop (sweating working). Hypoglycemic sweating: distinguished by accompanying weakness, tachycardia, hunger, headache, mental irritability/confusion. Generalized coolness: ↓ metabolism (e.g., post-anesthesia) or shock if severe. ↑ Temperature: hyperthyroidism or sun exposure.</p></div>
+<div class="fact tx"><h4>Hair changes</h4><p>Fast scalp hair growth makes it especially vulnerable to systemic disease, toxic drugs, radiation, stress. <b>Hirsutism/hypertrichosis:</b> male-pattern hair growth in females — from excess androgen OR simply ethnic background (Mediterranean ancestry). <b>Hypertrichosis lanuginosa:</b> congenital (autosomal dominant, linked to spina bifida) or, notably, an acquired paraneoplastic sign of certain internal carcinomas.</p></div>
+</div>
+</div>
+</details>
+</section>
+<!-- ================= TREATMENT ================= -->
+<section class="block" id="topical-delivery">
+<details class="topic" open="">
+<summary>Topical Delivery Systems</summary>
+<div class="topic-body">
+<table class="compare">
+<tr><th>Vehicle</th><th>Best for</th></tr>
+<tr><td>Wet dressings (intermittent)</td><td>Drying/astringent for weeping lesions — stasis/decubitus ulcers, impetigo, vesicular lesions</td></tr>
+<tr><td>Wet dressings (continuous)</td><td>Rapid hydration — severe atopic eczema; resoak/change every 3 hours around the clock</td></tr>
+<tr><td>Shake lotions</td><td>Moist/exudative processes (e.g., rhus dermatitis) — evaporation cools/dries</td></tr>
+<tr><td>Emollient lotions</td><td>Moisturizing (xerotic/dry conditions); good vehicle for other meds over large areas</td></tr>
+<tr><td>Gels</td><td>Wet lesions, scalp lesions (no white/oily residue); penetrate well</td></tr>
+<tr><td>Creams</td><td>Dry-to-slightly-moist dermatoses; most widely used; good penetration + some moisturizing</td></tr>
+<tr><td>Ointments</td><td>Dry scaling/crusting lesions or severe dermatoses needing deeper penetration; NOT for oozing lesions</td></tr>
+<tr><td>Aerosols/foams</td><td>Hairy areas — cosmetically preferred, high compliance</td></tr>
+<tr><td>Intralesional injection</td><td>Deep dermal lesions unresponsive to topical treatment (e.g., keloids) — higher corticosteroid concentration directly to the lesion</td></tr>
+</table>
+<div class="callout"><b>The core selection principle:</b> weeping/exudative lesions need drying agents (wet dressings, gels); dry/chronic/thickened lesions need occlusive, penetrating vehicles (ointments). Delivery system choice follows the lesion's moisture state, not just the medication being delivered.</div>
+</div>
+</details>
+</section>
+<section class="block" id="corticosteroids">
+<details class="topic" open="">
+<summary>Corticosteroids</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Duration classes</h4><p><b>Short-acting:</b> cortisone, hydrocortisone. <b>Intermediate-acting:</b> prednisone, prednisolone, methylprednisolone, triamcinolone (most commonly used systemically). <b>Long-acting:</b> dexamethasone, betamethasone.</p></div>
+<div class="fact warn"><h4>Systemic use</h4><p>Usually oral (dosage adjusts quickly if needed) or IM (e.g., triamcinolone acetonide, effective &gt;4 weeks — useful for unreliable patients). Since dermatologic courses are typically short, the classic long-term corticosteroid complications are uncommon — EXCEPT with prolonged use in diseases like pemphigus/SLE, where cushingoid features (round puffy face, dorsal fat pad), fatigue, weakness, and acne can appear.</p></div>
+</div>
+<div class="note"><b>Topical potency:</b> divided into 7 groups by vasoconstrictive capacity — Group 1 is most potent (augmented betamethasone dipropionate, clobetasol dipropionate), Group 7 is least potent (1% hydrocortisone). Topical steroids reduce erythema/edema/pruritus and promote healing, but don't cure the underlying disease.</div>
+</div>
+</details>
+</section>
+<!-- ================= DEVELOPMENTAL ================= -->
+<section class="block" id="infancy">
+<details class="topic" open="">
+<summary>Infancy</summary>
+<div class="topic-body">
+<div class="fact-grid">
+<div class="fact"><h4>Why newborn skin is more vulnerable</h4><p>Dermis/epidermis are thinner and loosely connected (rete pegs, which anchor the layers together, aren't yet developed) → susceptible to damage from minimal friction. Less melanin at birth → lighter skin → more UV vulnerability. Small, nonfunctional apocrine glands (don't develop until puberty) → drier skin.</p></div>
+<div class="fact warn"><h4>Milia mechanism</h4><p>Maternal androgens stimulate sebaceous glands prenatally (producing vernix), which then become plugged after birth. Eccrine glands (most active on newborn palms, activated at a HIGHER temperature threshold than in adults) can also obstruct sebaceous glands — both pathways converge on producing milia.</p></div>
+</div>
+<div class="fact-grid">
+<div class="fact"><h4>Common congenital/early lesions</h4><p><b>Mongolian spots:</b> buttocks/sacral pigmentation, common in Asian American/African American infants. <b>Strawberry hemangioma:</b> resolves by age 5–7. <b>Port-wine stain:</b> does NOT resolve; laser surgery or cosmetic coverage are the main options.</p></div>
+<div class="fact warn"><h4>Common irritative conditions</h4><p><b>Prickly heat:</b> midepidermal sweat gland obstruction/rupture from prolonged warm/humid exposure — treat by removing excess clothing, cool baths, powders, avoiding hot/humid environments. <b>Diaper rash:</b> from ammonia/alkaline urine breakdown products — prevent with frequent changes, gentle detergent, air exposure; avoid plastic pants. <b>Cradle cap:</b> managed with mild shampoo + gentle combing.</p></div>
+</div>
+<div class="note"><b>Baby powder caution:</b> avoid talc (serious respiratory risk if inhaled) — cornstarch-based powder is the safer alternative.</div>
+</div>
+</details>
+</section>
+<section class="block" id="childhood-diseases">
+<details class="topic" open="">
+<summary>Childhood Communicable Diseases</summary>
+<div class="topic-body">
+<p class="block-intro" style="margin-bottom:10px;">Rubella, roseola, and measles are commonly confused with each other — this comparison table is the fastest way to tell them apart.</p>
+<table class="compare">
+<tr><th>Feature</th><th>Rubella</th><th>Roseola infantum</th><th>Measles (rubeola)</th></tr>
+<tr><td>Typical age</td><td>Childhood, any age</td><td>&lt;4 years, usually ~1 year</td><td>Childhood</td></tr>
+<tr><td>Fever</td><td>Mild, &lt;100°F</td><td>High, rapid rise to 105°F</td><td>≥100°F</td></tr>
+<tr><td>Rash pattern</td><td>Diffuse punctate macular; trunk → limbs</td><td>Maculopapular; trunk → appendages</td><td>Macular/blotchy, may become confluent; face → limbs</td></tr>
+<tr><td>Lymphadenopathy</td><td>Postauricular, suboccipital, cervical — YES</td><td>NONE — key distinguishing feature</td><td>Not emphasized</td></tr>
+<tr><td>Distinctive sign</td><td>—</td><td>Rash appears AFTER fever breaks</td><td><b>Koplik spots</b> (buccal mucosa)</td></tr>
+<tr><td>Major risk</td><td>Teratogenic if transmitted to a fetus early in pregnancy</td><td>Generally benign, self-limited</td><td>Otitis media, pneumonia, encephalitis; worse if malnourished</td></tr>
+</table>
+<div class="danger"><b>Rubella's real danger isn't the child — it's the fetus:</b> teratogenic effects from early-gestation transmission include cataracts, microcephaly, intellectual impairment, deafness, patent ductus arteriosus, glaucoma, purpura, and bone defects. This is exactly why MMR immunization (infancy + booster at kindergarten/middle school entry) is required in most states — protecting future pregnancies, not just the vaccinated child.</div>
+<div class="fact-grid" style="margin-top:8px;">
+<div class="fact"><h4>Distinguishing roseola from rubella</h4><p>Age (roseola is younger, ~1 year) and absence of lymphadenopathy are the fastest clinical differentiators; antibody titers confirm if needed. Rubella itself rarely occurs before age 6–9 months because of protective maternal antibodies.</p></div>
+<div class="fact warn"><h4>Measles severity factors</h4><p>Can hemorrhage into skin/other surfaces in severe cases ("hemorrhagic measles"). More severe in malnourished children specifically. Diagnosis confirmed via antibody titer, checked during illness and again 6 weeks after symptoms resolve.</p></div>
+</div>
+<div class="note">Chickenpox (varicella) is caused by the same virus (varicella zoster) that later reactivates as shingles — the material transitions into chickenpox next but cuts off at the introduction. Send the rest whenever you have it.</div>
+</div>
+</details>
+</section>
+</div>
+<footer>Study guide generated from your Chapter 52 (Alterations of the Integument) material. Redraw the aging-skin cascade mind map and the rubella/roseola/measles comparison table from memory, then check yourself against the fact cards.</footer>
+</main>
+</div>
+<script>
+function setAll(open){
+  document.querySelectorAll('details.topic').forEach(function(d){ d.open = open; });
+}
+</script>
+<button class="quiz-fab" id="quizFab"><span class="qicon">📝</span> Quiz / Teach-Back Mode</button>
+<div class="quiz-overlay" id="quizOverlay">
+<div class="quiz-header">
+<div>
+<h2>Quiz Mode</h2>
+<div class="quiz-sub" id="quizProgMeta">Test yourself - the rest of the guide is hidden until you exit.</div>
+</div>
+<button class="quiz-exit" id="quizExitBtn">✕ Exit Quiz Mode</button>
+</div>
+<div class="quiz-progress-bar-bg"><div class="quiz-progress-bar-fill" id="quizProgFill" style="width:0%;"></div></div>
+<div class="quiz-body" id="quizBody"></div>
+</div>
+<script>
+const QUIZ_FITB = [{"def": "Cross-linked, thickened collagen bundles from chronic sun exposure, producing a weather-beaten/tanned appearance.", "answers": ["Elastosis", "solar elastosis", "Elastosis (solar elastosis)"]}, {"def": "Age-related hemorrhages from increased dermal vascular fragility.", "answers": ["Senile purpura"]}, {"def": "A skin lesion in its original, unmodified appearance.", "answers": ["Primary lesion"]}, {"def": "A skin lesion whose appearance has been modified over time or by external factors (e.g., scratching).", "answers": ["Secondary lesion"]}, {"def": "Benign papillomas caused by human papillomavirus, invading only human skin/mucous membranes.", "answers": ["Verrucae", "warts", "Verrucae (warts)"]}, {"def": "HSV-1 (usually above the waist) and HSV-2 (usually genital); persists latently in the trigeminal or other ganglia after initial infection.", "answers": ["Herpes simplex virus", "HSV", "Herpes simplex virus (HSV)"]}, {"def": "Reactivation of latent varicella zoster virus in a dorsal sensory ganglion, causing a dermatomal vesicular eruption.", "answers": ["Herpes zoster", "shingles", "Herpes zoster (shingles)"]}, {"def": "Persistent pain (months to years) after a shingles rash resolves \u2014 the most important complication in patients over 50.", "answers": ["Postherpetic neuralgia"]}, {"def": "Dermatophyte fungal infection, named by body location (capitis, corporis, pedis, cruris, etc.).", "answers": ["Tinea"]}, {"def": "Dermatophyte infection of the nails, causing white/yellow discoloration and thickening.", "answers": ["Onychomycosis"]}, {"def": "Intensified, male-pattern hair growth in females \u2014 upper lip, chin, chest, linea alba.", "answers": ["Hirsutism", "hypertrichosis", "Hirsutism (hypertrichosis)"]}, {"def": "A benign area of selective pigmentation, usually buttocks/sacral area, common in Asian American and African American infants.", "answers": ["Mongolian spot"]}, {"def": "A bright-red, raised vascular birthmark that typically resolves by age 5\u20137 without scarring.", "answers": ["Strawberry hemangioma"]}, {"def": "A flat, reddish-purple vascular birthmark, usually face/neck, that does NOT resolve with age.", "answers": ["Port-wine stain hemangioma"]}, {"def": "Small white bumps in newborns from plugged sebaceous/eccrine glands.", "answers": ["Milia"]}, {"def": "A harmless, self-limited scaly scalp condition in infants.", "answers": ["Cradle cap"]}, {"def": "A mild childhood viral illness with major risk only if transmitted transplacentally to a fetus early in gestation (teratogenic).", "answers": ["Rubella", "German measles", "Rubella (German measles)"]}, {"def": "A viral illness in children under ~4 (usually ~1 year) with high fever followed by a rash \u2014 NO lymphadenopathy, unlike rubella.", "answers": ["Roseola infantum"]}, {"def": "A more severe communicable viral illness with Koplik spots and a facial-onset rash; risk of otitis media, pneumonia, encephalitis.", "answers": ["Rubeola", "measles", "Rubeola (measles)"]}, {"def": "Small red spots with a bluish-white center on the buccal mucosa \u2014 pathognomonic for measles.", "answers": ["Koplik spots"]}];
+const QUIZ_TEACHBACK = [{"topic": "Age-Related Changes \u2014 Epidermis & Dermis", "points": ["<b>Epidermis:</b> Generalized thinning (though average cell-layer count is unchanged); mitosis decreases, cellular variation increases (irregular size/shape). Melanocyte number decreases in White\u2026", "<b>Dermis:</b> \u2193 Elastin and \u2191 collagen-to-elastin ratio \u2192 loss of skin strength/elasticity. Collagen becomes cross-linked into thicker bundles ( elastosis ,\u2026", "<b>Clinical consequence: drug absorption:</b> Decreased dermal/subcutaneous vascularity slows absorption of subcutaneously administered drugs, prolonging their half-life \u2014 a practical prescribing consideration in older adults.", "<b>Sun exposure \u2014 the dominant modifiable factor:</b> Skin habitually covered shows little age-related change; blue-eyed, fair-skinned individuals are more susceptible to solar damage than more heavily pigmented\u2026"]}, {"topic": "Age-Related Changes \u2014 Hair, Nails & Glands", "points": ["<b>Hair color & growth:</b> Gray hair: autosomal dominant trait, from decreased melanin production at the follicle base; begins at the temples, extends to the\u2026", "<b>Sex-specific hair patterns:</b> Postmenopausal White females: lose trunk hair first, then pubic/axillary; unopposed adrenal androgens cause coarse facial hair (chin/lips) in 50% of\u2026", "<b>Nails:</b> Become dull, brittle, hard, thick \u2014 mainly from diminished vascular supply to the nail bed. Growth rate drops 30\u201350% (0.1\u2026", "<b>Glands:</b> Sebaceous: little structural change but declining function (\u2193 sebum) \u2014 minimal in males, more pronounced in females after menopause, plateauing\u2026", "Clinical bottom line: young children and older adults BOTH have fewer functional sweat glands and rely more on blood flow changes for\u2026"]}, {"topic": "History-Taking", "points": ["<b>Key history categories:</b> Family history (hereditary skin disease), personal history (age of onset, psychosocial impact, ethnic origin), geographic origin/residence history, seasonal pattern, occupational\u2026", "<b>Why occupation/leisure history matters so much:</b> Chemical/dust/gas exposure, heat, lighting, hygiene conditions, and even hobby-related exposures (gardening, woodworking, fishing) can all be the actual cause of\u2026"]}, {"topic": "Primary vs. Secondary Lesions", "points": ["<b>Primary lesions:</b> Retain their original appearance, unmodified by time or external processes.", "<b>Secondary lesions:</b> Appearance modified over time or by external agents (e.g., scratching) \u2014 may look quite different from the original lesion. Correctly\u2026"]}, {"topic": "Lesion Descriptors", "points": ["<b>What to describe once a lesion is classified:</b> Size, symmetry of color/shape, and distribution pattern if multiple lesions are present: symmetric, sun-exposed, intertriginous (warm/moist apposed skin), acral (distal\u2026", "<b>Color as a diagnostic clue:</b> Red-salmon pink, brown-black, blue-purple, bone white-slate gray, yellow \u2014 each color pattern suggests certain diagnoses, so color description isn't just\u2026"]}, {"topic": "Verrucae (Warts)", "points": ["<b>Cause:</b> Human papillomavirus \u2014 infects only human skin/mucous membranes (not found in other animals). Histologically similar across all wart types despite\u2026", "<b>Natural course:</b> May resolve spontaneously if immunity develops, but this can be delayed for years and isn't reliable \u2014 95% of untreated\u2026", "<b>Treatment options:</b> Laser removal, liquid nitrogen/acid chemicals, cryotherapy, salicylic acid paint/plasters, topical blistering agents, immunomodulators, intralesional injections."]}, {"topic": "Herpes Simplex Virus", "points": ["<b>Two types, two typical locations:</b> HSV-1: usually above the waist (can spread via occupational exposure in dentistry/medicine/athletics). HSV-2: responsible for most genital infections.", "<b>Lesion progression:</b> Burning/tingling \u2192 vesicles + erythema \u2192 pustules \u2192 ulcers \u2192 crusts \u2192 healing (10\u201314 days). Most common on lips, face,\u2026", "<b>Latency & recurrence:</b> Persists latently in the trigeminal (or other) ganglia after initial infection. Recurrence triggers: stress, sunlight, menses, injury. Most patients have\u2026", "<b>Treatment:</b> No cure \u2014 mostly palliative (lidocaine/diphenhydramine, aspirin, cold compresses). Acyclovir, famciclovir, or valacyclovir shorten active outbreaks; can be used as\u2026"]}, {"topic": "Herpes Zoster (Shingles)", "points": ["<b>Mechanism:</b> Reactivation of latent varicella zoster virus (same virus as chickenpox), which has resided in dorsal sensory ganglia since the original\u2026", "<b>Presentation:</b> Vesicles on erythematous bases, restricted to a single dermatome (unilateral) \u2014 most often thorax, trunk, face. New vesicle crops erupt\u2026", "<b>Treatment:</b> Antivirals (acyclovir, famciclovir, valacyclovir) \u2014 start within 48\u201372 hours of onset for best effect. Topical Burow compresses/aqueous alcohol shake lotions,\u2026", "<b>Prevention:</b> Shingrix \u2014 a recombinant vaccine approved for adults 50+ and for adults 18+ at increased risk from immunodeficiency/immunosuppression.", "Postherpetic neuralgia \u2014 the most important complication in patients over 50: pain persisting long after the rash resolves, sometimes for months to\u2026"]}, {"topic": "Fungal & Yeast Infections", "points": ["<b>The three dermatophyte genera:</b> Microsporum , Trichophyton , Epidermophyton \u2014 cause \"tinea\" infections named by location: capitis (scalp), barbae (beard), faciei (face), corporis (trunk),\u2026", "<b>Presentation varies by site:</b> Often erythematous macules/plaques with peripheral scaling and central clearing; vesicular lesions common on the feet. Can be mistaken for eczema\u2026", "<b>Treatment:</b> Localized: topical antifungals (miconazole, clotrimazole, econazole, ciclopirox, terbinafine) \u2014 4-week twice-daily course usually clears symptoms. Extensive/hair/nail/resistant infections: systemic therapy (griseofulvin,\u2026", "<b>Yeast infections:</b> Candida albicans \u2014 presents as thrush (white oral lesions) in newborns, and as intertrigo in infants/bedridden patients from moisture-trapped skin\u2026"]}, {"topic": "Special Characteristics of Dark Skin", "points": ["<b>More common in darker skin:</b> Postinflammatory hyperpigmentation (after inflammation/injury/infection), seborrheic dermatitis, keloids, and traumatic (traction) alopecia from tight hair plaiting or hot oil/tension on the\u2026", "<b>Rarer in darker skin:</b> Squamous/basal cell carcinoma, senile keratoses, and psoriasis. When psoriasis DOES occur, the classic bright-red color and silvery scale are often\u2026", "<b>Assessment technique adjustments:</b> Assess color in sclerae, conjunctivae, buccal mucosa, tongue, lips, nail beds, palms, soles. Pallor: yellowish-brown tinge (brown skin) or ash\u2026", "<b>The blanch test:</b> Pressure over an area blanches erythema but does NOT affect petechiae or ecchymosis \u2014 a fast way to distinguish true\u2026"]}, {"topic": "Sensation, Texture, Temperature & Hair \u2014 Systemic Clues", "points": ["<b>Sensation (pruritus):</b> Can be purely dermatologic (atopic eczema, contact dermatitis, scabies, dermatophytosis, psoriasis, varicella) OR a sign of systemic disease: carcinoma, diabetes,\u2026", "<b>Texture:</b> Loose/wrinkled/toneless skin may indicate dehydration \u2014 best confirmed by palpating oral mucous membranes (gum/cheek junction; if dry, finger doesn't slide\u2026", "<b>Temperature:</b> Warm + dry + febrile = rising core temperature (sweating not yet compensating). Warm + wet = temperature about to\u2026", "<b>Hair changes:</b> Fast scalp hair growth makes it especially vulnerable to systemic disease, toxic drugs, radiation, stress. Hirsutism/hypertrichosis: male-pattern hair growth in\u2026"]}, {"topic": "Corticosteroids", "points": ["<b>Duration classes:</b> Short-acting: cortisone, hydrocortisone. Intermediate-acting: prednisone, prednisolone, methylprednisolone, triamcinolone (most commonly used systemically). Long-acting: dexamethasone, betamethasone.", "<b>Systemic use:</b> Usually oral (dosage adjusts quickly if needed) or IM (e.g., triamcinolone acetonide, effective >4 weeks \u2014 useful for unreliable patients).\u2026"]}, {"topic": "Infancy", "points": ["<b>Why newborn skin is more vulnerable:</b> Dermis/epidermis are thinner and loosely connected (rete pegs, which anchor the layers together, aren't yet developed) \u2192 susceptible to damage\u2026", "<b>Milia mechanism:</b> Maternal androgens stimulate sebaceous glands prenatally (producing vernix), which then become plugged after birth. Eccrine glands (most active on newborn\u2026", "<b>Common congenital/early lesions:</b> Mongolian spots: buttocks/sacral pigmentation, common in Asian American/African American infants. Strawberry hemangioma: resolves by age 5\u20137. Port-wine stain: does NOT\u2026", "<b>Common irritative conditions:</b> Prickly heat: midepidermal sweat gland obstruction/rupture from prolonged warm/humid exposure \u2014 treat by removing excess clothing, cool baths, powders, avoiding\u2026"]}, {"topic": "Childhood Communicable Diseases", "points": ["<b>Distinguishing roseola from rubella:</b> Age (roseola is younger, ~1 year) and absence of lymphadenopathy are the fastest clinical differentiators; antibody titers confirm if needed.\u2026", "<b>Measles severity factors:</b> Can hemorrhage into skin/other surfaces in severe cases (\"hemorrhagic measles\"). More severe in malnourished children specifically. Diagnosis confirmed via antibody\u2026", "Rubella's real danger isn't the child \u2014 it's the fetus: teratogenic effects from early-gestation transmission include cataracts, microcephaly, intellectual impairment, deafness, patent\u2026"]}];
+
+/* ============ QUIZ MODE LOGIC ============ */
+(function(){
+  "use strict";
+
+  // QUIZ_FITB and QUIZ_TEACHBACK are injected above this script per-file.
+  if (typeof QUIZ_FITB === 'undefined' || typeof QUIZ_TEACHBACK === 'undefined') return;
+
+  let session = { mode:null, queue:[], idx:0, correct:0, incorrect:0, needReview:0, gotIt:0 };
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for (let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]]=[a[j],a[i]];
+    }
+    return a;
+  }
+
+  function normalize(s){
+    return s.toLowerCase().replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  }
+
+  function buildPicker(){
+    return `
+      <div class="quiz-picker" id="quizPicker">
+        <h3>What do you want to practice?</h3>
+        <p>Pick a mode below, then start. Everything else on the page is hidden until you exit.</p>
+        <div class="quiz-mode-grid">
+          <div class="quiz-mode-card" data-mode="fitb" id="cardFitb">
+            <h4>Fill in the Blank</h4>
+            <p>Read a definition, type the term. Fast recall check across ${QUIZ_FITB.length} key terms from this guide's glossary.</p>
+          </div>
+          <div class="quiz-mode-card" data-mode="teachback" id="cardTeachback">
+            <h4>Teach It Back</h4>
+            <p>Explain a topic in your own words, then reveal the key points to self-check. ${QUIZ_TEACHBACK.length} topics from this guide.</p>
+          </div>
+        </div>
+        <div class="quiz-mode-grid" style="grid-template-columns:1fr; margin-top:-6px;">
+          <div class="quiz-mode-card" data-mode="mixed" id="cardMixed">
+            <h4>Mixed (Both)</h4>
+            <p>Alternates fill-in-the-blank and teach-back questions in one session.</p>
+          </div>
+        </div>
+        <button class="quiz-start-btn" id="quizStartBtn" disabled>Start</button>
+      </div>`;
+  }
+
+  function initPicker(){
+    document.querySelectorAll('.quiz-mode-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        document.querySelectorAll('.quiz-mode-card').forEach(c=>c.classList.remove('selected'));
+        card.classList.add('selected');
+        session.mode = card.dataset.mode;
+        document.getElementById('quizStartBtn').disabled = false;
+      });
+    });
+    document.getElementById('quizStartBtn').addEventListener('click', startSession);
+  }
+
+  function startSession(){
+    let fitb = shuffle(QUIZ_FITB).map(q => ({type:'fitb', data:q}));
+    let tb = shuffle(QUIZ_TEACHBACK).map(q => ({type:'teachback', data:q}));
+    if (session.mode === 'fitb') session.queue = fitb;
+    else if (session.mode === 'teachback') session.queue = tb;
+    else {
+      // mixed: interleave
+      let merged = [];
+      let i=0, j=0;
+      while (i<fitb.length || j<tb.length){
+        if (i<fitb.length) merged.push(fitb[i++]);
+        if (j<tb.length) merged.push(tb[j++]);
+      }
+      session.queue = merged;
+    }
+    session.idx = 0; session.correct=0; session.incorrect=0; session.needReview=0; session.gotIt=0;
+    renderQuestion();
+  }
+
+  function updateProgress(){
+    const pct = Math.round(100*session.idx/session.queue.length);
+    const fill = document.getElementById('quizProgFill');
+    if (fill) fill.style.width = pct+'%';
+    const meta = document.getElementById('quizProgMeta');
+    if (meta) meta.textContent = (session.idx+1)+' / '+session.queue.length;
+  }
+
+  function renderQuestion(){
+    const body = document.getElementById('quizBody');
+    if (session.idx >= session.queue.length){
+      renderSummary();
+      return;
+    }
+    updateProgress();
+    const item = session.queue[session.idx];
+    if (item.type === 'fitb'){
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag">Fill in the blank</span>
+          <div class="quiz-q-text">${item.data.def}</div>
+          <input type="text" class="quiz-input" id="quizAnswerInput" placeholder="Type the term..." autocomplete="off">
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizCheckBtn">Check Answer</button>
+            <button class="quiz-btn secondary" id="quizSkipBtn">Skip</button>
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>`;
+      const input = document.getElementById('quizAnswerInput');
+      input.focus();
+      input.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); checkFitb(item); } });
+      document.getElementById('quizCheckBtn').addEventListener('click', ()=>checkFitb(item));
+      document.getElementById('quizSkipBtn').addEventListener('click', ()=>{ session.incorrect++; nextQuestion(); });
+    } else {
+      body.innerHTML = `
+        <div class="quiz-card">
+          <span class="quiz-tag teachback">Teach it back</span>
+          <div class="quiz-q-text">In your own words, explain: <b>${item.data.topic}</b></div>
+          <textarea class="quiz-textarea" id="quizTeachInput" placeholder="Type your explanation here — cover what it is, why/how it happens, and what matters clinically..."></textarea>
+          <div class="quiz-btn-row">
+            <button class="quiz-btn" id="quizRevealBtn">Reveal Key Points</button>
+          </div>
+          <div class="quiz-keypoints" id="quizKeypoints">
+            <h5>Check yourself against these</h5>
+            <ul>${item.data.points.map(p=>'<li>'+p+'</li>').join('')}</ul>
+          </div>
+          <div class="quiz-self-grade" id="quizSelfGrade">
+            <button class="quiz-btn" id="quizGotItBtn">✓ I covered this well</button>
+            <button class="quiz-btn secondary" id="quizReviewBtn">↻ Need to review this</button>
+          </div>
+        </div>`;
+      document.getElementById('quizTeachInput').focus();
+      document.getElementById('quizRevealBtn').addEventListener('click', ()=>{
+        document.getElementById('quizKeypoints').classList.add('show');
+        document.getElementById('quizSelfGrade').classList.add('show');
+      });
+      document.getElementById('quizGotItBtn').addEventListener('click', ()=>{ session.gotIt++; nextQuestion(); });
+      document.getElementById('quizReviewBtn').addEventListener('click', ()=>{ session.needReview++; nextQuestion(); });
+    }
+  }
+
+  function checkFitb(item){
+    const input = document.getElementById('quizAnswerInput');
+    const userVal = normalize(input.value);
+    const accepted = item.data.answers.map(normalize);
+    const isCorrect = accepted.includes(userVal) || accepted.some(a => userVal.length>2 && (a.includes(userVal) || userVal.includes(a)));
+    const fb = document.getElementById('quizFeedback');
+    fb.classList.add('show');
+    if (isCorrect){
+      session.correct++;
+      fb.className = 'quiz-feedback show correct';
+      fb.textContent = '✓ Correct — ' + item.data.answers[0];
+    } else {
+      session.incorrect++;
+      fb.className = 'quiz-feedback show incorrect';
+      fb.textContent = '✗ Answer: ' + item.data.answers[0];
+    }
+    document.getElementById('quizCheckBtn').disabled = true;
+    document.getElementById('quizSkipBtn').textContent = 'Next';
+    document.getElementById('quizSkipBtn').onclick = nextQuestion;
+    input.disabled = true;
+  }
+
+  function nextQuestion(){
+    session.idx++;
+    renderQuestion();
+  }
+
+  function renderSummary(){
+    const body = document.getElementById('quizBody');
+    const totalFitb = session.correct + session.incorrect;
+    const totalTb = session.gotIt + session.needReview;
+    let html = `
+      <div class="quiz-summary">
+        <div style="font-size:.8rem; color:#3E5C66; text-transform:uppercase; letter-spacing:.6px;">Session Complete</div>`;
+    if (totalFitb > 0){
+      const pct = Math.round(100*session.correct/totalFitb);
+      html += `<div class="qscore">${pct}%</div>
+        <div class="quiz-summary-grid">
+          <div><div class="n">${session.correct}</div><div class="l">Correct</div></div>
+          <div><div class="n">${session.incorrect}</div><div class="l">Missed</div></div>
+          <div><div class="n">${totalFitb}</div><div class="l">Total FITB</div></div>
+        </div>`;
+    }
+    if (totalTb > 0){
+      html += `<div class="quiz-summary-grid">
+          <div><div class="n">${session.gotIt}</div><div class="l">Covered well</div></div>
+          <div><div class="n">${session.needReview}</div><div class="l">Need review</div></div>
+          <div><div class="n">${totalTb}</div><div class="l">Total teach-back</div></div>
+        </div>`;
+    }
+    html += `
+        <button class="quiz-btn" id="quizAgainBtn">Practice Again</button>
+        <button class="quiz-btn secondary" id="quizDoneBtn">Exit Quiz Mode</button>
+      </div>`;
+    body.innerHTML = html;
+    document.getElementById('quizAgainBtn').addEventListener('click', resetToPicker);
+    document.getElementById('quizDoneBtn').addEventListener('click', exitQuiz);
+  }
+
+  function resetToPicker(){
+    document.getElementById('quizBody').innerHTML = buildPicker();
+    initPicker();
+  }
+
+  function enterQuiz(){
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.classList.add('quiz-lock');
+    resetToPicker();
+    window.scrollTo({top:0});
+  }
+  function exitQuiz(){
+    document.getElementById('quizOverlay').classList.remove('active');
+    document.body.classList.remove('quiz-lock');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const fab = document.getElementById('quizFab');
+    if (fab) fab.addEventListener('click', enterQuiz);
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn) exitBtn.addEventListener('click', exitQuiz);
+  });
+  // In case DOMContentLoaded already fired (script injected at end of body)
+  if (document.readyState === 'complete' || document.readyState === 'interactive'){
+    const fab = document.getElementById('quizFab');
+    if (fab && !fab.dataset.bound){ fab.dataset.bound='1'; fab.addEventListener('click', enterQuiz); }
+    const exitBtn = document.getElementById('quizExitBtn');
+    if (exitBtn && !exitBtn.dataset.bound){ exitBtn.dataset.bound='1'; exitBtn.addEventListener('click', exitQuiz); }
+  }
+
+})();
+
+</script>
+</body>
+</html>

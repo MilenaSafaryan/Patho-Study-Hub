@@ -1,0 +1,150 @@
+[
+ {
+  "term": "Gallbladder",
+  "def": "A distensible sac (~30\u201350 mL capacity) that concentrates and stores bile, connecting via the cystic duct to the common hepatic duct."
+ },
+ {
+  "term": "Common bile duct",
+  "def": "Formed by the union of the cystic and common hepatic ducts; ~3 inches long, runs behind the duodenum, ends at the ampulla of Vater."
+ },
+ {
+  "term": "Ampulla of Vater",
+  "def": "The complex structure where the common bile duct and main pancreatic duct terminate together into the duodenum."
+ },
+ {
+  "term": "Bile",
+  "def": "A fluid made of water, electrolytes, bile acids, pigment, cholesterol, and phospholipids; aids fat digestion and excretes waste (bilirubin, toxins, cholesterol)."
+ },
+ {
+  "term": "Bile salts (bile acids)",
+  "def": "Primary (cholic, chenodeoxycholic) and secondary (deoxycholic, ursodeoxycholic, lithocholic) acids that solubilize lipids in bile."
+ },
+ {
+  "term": "Micelle",
+  "def": "A cluster formed by hydrophilic/hydrophobic bile salt molecules that surrounds and solubilizes lipids like cholesterol."
+ },
+ {
+  "term": "Lecithin",
+  "def": "A phospholipid secreted in bile that incorporates into micelles to greatly enhance cholesterol solubility."
+ },
+ {
+  "term": "Enterohepatic circulation",
+  "def": "The recycling of bile acids: absorbed in the terminal ileum, carried by portal circulation back to the liver, and re-secreted into bile (2\u20133 times/day on average)."
+ },
+ {
+  "term": "Sphincter of Oddi",
+  "def": "The muscular sphincter at the ampulla of Vater that controls bile (and pancreatic juice) flow into the duodenum; contracted during fasting to promote gallbladder filling."
+ },
+ {
+  "term": "Exocrine pancreas",
+  "def": "The portion of the pancreas that secretes digestive juice (enzymes and proenzymes) into the intestinal tract via the pancreatic duct \u2014 over 1 L/day."
+ },
+ {
+  "term": "Endocrine pancreas",
+  "def": "The portion of the pancreas (islets) that secretes insulin, glucagon, and somatostatin into the bloodstream."
+ },
+ {
+  "term": "Acinar cells",
+  "def": "Pancreatic exocrine cells arranged in glandular acini that produce digestive juice, draining into the main pancreatic duct."
+ },
+ {
+  "term": "Proenzyme (zymogen)",
+  "def": "An inactive enzyme precursor, e.g. trypsinogen, that is only activated after reaching the duodenum \u2014 a key safeguard against autodigestion."
+ },
+ {
+  "term": "Cholecystokinin (CCK)",
+  "def": "A small-intestinal hormone that stimulates pancreatic enzyme release and gallbladder contraction."
+ },
+ {
+  "term": "Secretin",
+  "def": "A small-intestinal hormone that regulates pancreatic juice (bicarbonate) secretion."
+ },
+ {
+  "term": "Acute pancreatitis",
+  "def": "An inflammatory process of the pancreas ranging from mild to life-threatening, caused by premature activation of digestive enzymes and autodigestion of the gland."
+ },
+ {
+  "term": "Autodigestion",
+  "def": "The self-destructive process in which prematurely activated pancreatic enzymes digest the pancreas's own tissue."
+ },
+ {
+  "term": "Lipase & amylase",
+  "def": "Pancreatic digestive enzymes; serum levels rise in acute pancreatitis. Lipase is more specific and stays elevated longer."
+ },
+ {
+  "term": "Sentinel loop",
+  "def": "A distended loop of small bowel near the pancreas seen on plain abdominal x-ray in pancreatitis, from local ileus."
+ },
+ {
+  "term": "Ranson criteria",
+  "def": "A widely used scoring system to predict the clinical course/severity of acute pancreatitis."
+ },
+ {
+  "term": "Acute necrotizing pancreatitis",
+  "def": "Severe pancreatitis with widespread pancreatic tissue death; high risk of progressing to infected necrosis, with high morbidity/mortality."
+ },
+ {
+  "term": "Pancreatic pseudocyst",
+  "def": "A fluid collection in/near the pancreas, often communicating with the pancreatic duct; lacks an epithelial lining (unlike a true cyst) \u2014 the most common localized complication of acute pancreatitis."
+ },
+ {
+  "term": "Pancreatic ascites",
+  "def": "Usually painless, often massive fluid accumulation from a persistent leak in the main pancreatic duct."
+ },
+ {
+  "term": "Necrosectomy",
+  "def": "Surgical or endoscopic debridement of dead (necrotic) pancreatic tissue."
+ },
+ {
+  "term": "Cholelithiasis",
+  "def": "The presence of gallstones within the gallbladder; most are cholesterol stones, a minority are pigment stones."
+ },
+ {
+  "term": "Biliary colic",
+  "def": "Temporary, self-limited RUQ pain from a stone transiently obstructing the cystic duct, often triggered by a fatty meal; resolves once the stone dislodges or passes."
+ },
+ {
+  "term": "Cholecystitis",
+  "def": "Inflammation of the gallbladder, usually from a gallstone persistently obstructing the cystic duct (acute calculous cholecystitis); unlike biliary colic, pain is constant and accompanied by systemic signs of inflammation."
+ },
+ {
+  "term": "Murphy sign",
+  "def": "Inspiratory arrest when the examiner palpates the right subcostal area during a deep breath \u2014 a classic bedside sign of acute cholecystitis."
+ },
+ {
+  "term": "Choledocholithiasis",
+  "def": "A gallstone lodged in the common bile duct, causing obstructive jaundice and putting the patient at risk for cholangitis or pancreatitis."
+ },
+ {
+  "term": "Cholangitis",
+  "def": "Bacterial infection of the bile ducts, usually from bile stasis behind an obstructing stone; a potentially life-threatening emergency requiring urgent drainage."
+ },
+ {
+  "term": "Charcot triad",
+  "def": "Fever/chills, RUQ pain, and jaundice \u2014 the classic presentation of acute cholangitis."
+ },
+ {
+  "term": "Reynolds pentad",
+  "def": "Charcot triad plus hypotension and altered mental status \u2014 signals severe, decompensating cholangitis."
+ },
+ {
+  "term": "Courvoisier sign",
+  "def": "A palpable, nontender, distended gallbladder in a jaundiced patient \u2014 suggests malignant biliary obstruction (e.g., pancreatic head cancer) rather than gallstones."
+ },
+ {
+  "term": "Chronic pancreatitis",
+  "def": "Irreversible, progressive fibrosis and destruction of pancreatic tissue from repeated inflammatory injury, leading to loss of both exocrine and endocrine function."
+ },
+ {
+  "term": "Pancreatic exocrine insufficiency (PEI)",
+  "def": "Inadequate digestive enzyme output from a damaged pancreas, causing malabsorption, steatorrhea, and fat-soluble vitamin deficiency."
+ },
+ {
+  "term": "PERT",
+  "def": "Pancreatic enzyme replacement therapy \u2014 oral enzyme supplements taken with meals to treat exocrine insufficiency."
+ },
+ {
+  "term": "CA 19-9",
+  "def": "A tumor marker sometimes elevated in pancreatic cancer, used to support diagnosis and monitor treatment response (not used alone for screening)."
+ }
+]

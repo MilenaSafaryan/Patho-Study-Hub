@@ -1,0 +1,146 @@
+[
+ {
+  "term": "Hyperfunction / Hypofunction",
+  "def": "Excessively high or depressed hormone levels (or conditions mimicking them) \u2014 the two basic categories of endocrine disease."
+ },
+ {
+  "term": "Primary endocrine disorder",
+  "def": "Intrinsic malfunction of the hormone-producing target gland itself."
+ },
+ {
+  "term": "Secondary endocrine disorder",
+  "def": "Malfunction of the hypothalamus/pituitary cells that control the target gland."
+ },
+ {
+  "term": "Tertiary endocrine disorder",
+  "def": "Malfunction originating in the hypothalamus (upstream of the pituitary)."
+ },
+ {
+  "term": "Ectopic hormone production",
+  "def": "Hormone secretion from an abnormal tissue site, usually a malignant tumor (e.g., lung tumors secreting ADH)."
+ },
+ {
+  "term": "Target tissue resistance",
+  "def": "Normal or elevated hormone levels without normal hormonal action, due to receptor or postreceptor defects."
+ },
+ {
+  "term": "Growth hormone (GH)",
+  "def": "Anterior pituitary hormone that increases lean body mass, reduces fat, and raises blood glucose; many effects mediated by IGF-1."
+ },
+ {
+  "term": "IGF-1 (somatomedin)",
+  "def": "Insulin-like growth factor-1, released from the liver in response to GH; mediates most GH effects and is a stable marker of GH secretion."
+ },
+ {
+  "term": "Craniopharyngioma",
+  "def": "A slow-growing tumor at the junction of the anterior/posterior pituitary, believed present at birth; a common cause of GH deficiency."
+ },
+ {
+  "term": "Pituitary giantism",
+  "def": "GH excess occurring before epiphyseal closure, causing markedly accelerated linear growth in children."
+ },
+ {
+  "term": "Acromegaly",
+  "def": "GH excess in adults (after epiphyseal closure) causing bony/soft tissue overgrowth without increased height."
+ },
+ {
+  "term": "TRH / TSH",
+  "def": "Thyroid-releasing hormone (hypothalamus) stimulates TSH (pituitary), which stimulates T3/T4 release from the thyroid."
+ },
+ {
+  "term": "Hashimoto (lymphocytic) thyroiditis",
+  "def": "Autoimmune thyroiditis; the most common cause of acquired hypothyroidism."
+ },
+ {
+  "term": "Cretinism",
+  "def": "Significant mental/physical developmental defects from untreated congenital hypothyroidism."
+ },
+ {
+  "term": "Myxedema",
+  "def": "Generalized nonpitting edema from glycosaminoglycan accumulation, seen in severe/prolonged hypothyroidism."
+ },
+ {
+  "term": "Myxedema coma",
+  "def": "A life-threatening medical emergency from severe untreated hypothyroidism, with altered mental state and thermoregulation problems."
+ },
+ {
+  "term": "Graves disease",
+  "def": "Autoimmune hyperthyroidism from autoantibodies that stimulate TSH receptors, causing diffuse toxic goiter and often exophthalmos."
+ },
+ {
+  "term": "Exophthalmos",
+  "def": "Protrusion of the eyes from retroorbital tissue swelling in Graves disease, caused by autoimmune injury (not by thyroid hormone levels directly)."
+ },
+ {
+  "term": "Thyroid storm",
+  "def": "Life-threatening acute release of excessive thyroid hormone, with fever, severe tachycardia, and possible heart failure."
+ },
+ {
+  "term": "Cortisol",
+  "def": "The primary glucocorticoid; provides negative feedback on CRH/ACTH release."
+ },
+ {
+  "term": "Addison disease",
+  "def": "Primary adrenocortical insufficiency from destruction of the adrenal cortex."
+ },
+ {
+  "term": "Addisonian crisis",
+  "def": "Acute, life-threatening adrenal insufficiency with vascular collapse."
+ },
+ {
+  "term": "Congenital adrenal hyperplasia (CAH)",
+  "def": "An enzymatic defect in cortisol synthesis causing adrenal hyperplasia, cortisol deficiency, and androgen excess."
+ },
+ {
+  "term": "Cushing syndrome",
+  "def": "The clinical features of hypercortisolism, regardless of cause."
+ },
+ {
+  "term": "Cushing disease",
+  "def": "Hypercortisolism specifically caused by a pituitary ACTH-secreting adenoma."
+ },
+ {
+  "term": "Pheochromocytoma",
+  "def": "A usually-benign chromaffin tissue tumor (usually in the adrenal medulla) causing excess catecholamine secretion and hypertension."
+ },
+ {
+  "term": "Parathyroid hormone (PTH)",
+  "def": "Increases serum calcium via effects on bone, kidney, and (with vitamin D) intestine; secretion is regulated directly by serum calcium, not the pituitary."
+ },
+ {
+  "term": "CaSR",
+  "def": "Calcium-sensing receptor \u2014 a G protein-coupled receptor that lets parathyroid cells detect serum calcium and regulate PTH gene expression."
+ },
+ {
+  "term": "Calcitonin",
+  "def": "Produced by thyroid parafollicular (C) cells; tends to decrease blood calcium by promoting bone formation and inhibiting resorption."
+ },
+ {
+  "term": "Chvostek sign",
+  "def": "Facial muscle contraction from tapping the facial nerve anterior to the ear \u2014 indicates neuromuscular hyperexcitability from hypocalcemia."
+ },
+ {
+  "term": "Trousseau sign",
+  "def": "Carpal spasm from BP-cuff-induced ischemia \u2014 indicates neuromuscular hyperexcitability from hypocalcemia."
+ },
+ {
+  "term": "ADH (vasopressin)",
+  "def": "Posterior pituitary hormone that increases renal collecting duct/distal tubule water permeability and reabsorption."
+ },
+ {
+  "term": "Diabetes insipidus (DI)",
+  "def": "Insufficient ADH activity, causing excessive dilute urine loss and hypernatremia."
+ },
+ {
+  "term": "Central DI",
+  "def": "DI from failure to produce/release ADH from the hypothalamus/posterior pituitary."
+ },
+ {
+  "term": "Nephrogenic DI",
+  "def": "DI from renal unresponsiveness to ADH (kidney disease, receptor defects, electrolyte problems, drugs like lithium)."
+ },
+ {
+  "term": "SIADH",
+  "def": "Syndrome of inappropriate ADH secretion \u2014 excess ADH causes water retention and dilutional hyponatremia."
+ }
+]

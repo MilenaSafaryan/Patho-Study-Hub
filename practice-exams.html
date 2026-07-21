@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Exams — Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .exam-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;border-left:5px solid var(--wk-color,var(--teal));margin-bottom:14px;}
+  .exam-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
+  .exam-week{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--wk-color,var(--teal));text-transform:uppercase;letter-spacing:.08em;font-weight:700;}
+  .exam-title{font-family:'Spectral',serif;font-size:1.15rem;font-weight:600;margin-top:4px;}
+  .exam-status{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--ink-soft);}
+  .exam-start{margin-top:14px;}
+</style>
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Timed self-test</span>
+    <h1 style="font-size:2rem;">Practice exams</h1>
+    <p>Separate from the per-chapter quizzes — these are full timed sets meant to mimic your actual midterm/final, one per week of material.</p>
+  </div>
+
+  <div class="section-head">
+    <h2>By week</h2>
+    <span class="count" id="exam-count"></span>
+  </div>
+
+  <div id="exam-list"></div>
+
+  <div class="placeholder-note">
+    <strong>Adding a practice exam:</strong> paste your practice exam questions (with answer key) for a week, and they'll be added here as their own timed set — kept separate from the auto-generated chapter quizzes and the Teach Back mode. Format follows the same term/question pattern as the chapter quizzes, just grouped by week instead of by chapter.
+  </div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/app.js"></script>
+<script>
+injectTopbar("exams");
+injectFooter();
+
+fetchJSON("data/chapters.json").then(data=>{
+  const weeks = Object.values(data.weeks).sort((a,b)=>a.num-b.num);
+  document.getElementById("exam-count").textContent = weeks.length + " weeks";
+  const list = document.getElementById("exam-list");
+  list.innerHTML = weeks.map(wk=>`
+    <div class="exam-card" style="--wk-color:${wk.color}">
+      <div class="exam-head">
+        <div>
+          <div class="exam-week">Week ${wk.num}</div>
+          <div class="exam-title">${wk.title}</div>
+        </div>
+        <span class="exam-status">Not added yet</span>
+      </div>
+      <div style="font-size:0.85rem;color:var(--ink-soft);margin-top:6px;">Covers Chapters ${wk.chapters.join(", ")}</div>
+    </div>`).join("");
+});
+</script>
+</body>
+</html>

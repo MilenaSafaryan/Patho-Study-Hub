@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter — Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="chapter-hero">
+    <span class="chapter-eyebrow" id="chapter-eyebrow">Loading…</span>
+    <h1 id="chapter-title">Loading chapter…</h1>
+    <div class="chapter-tabs">
+      <button data-tab="guide" class="active">Study Guide</button>
+      <button data-tab="quiz">Quiz</button>
+      <button data-tab="teachback">Teach Back</button>
+    </div>
+  </div>
+
+  <div class="chapter-panel active" id="panel-guide">
+    <div class="guide-frame-wrap">
+      <iframe id="guide-iframe" title="Chapter study guide"></iframe>
+    </div>
+  </div>
+
+  <div class="chapter-panel" id="panel-quiz">
+    <div class="quiz-head">
+      <div class="quiz-monitor">
+        <div><div class="m-label">Question</div><div class="m-value" id="quiz-mon-question">0/0</div></div>
+        <div><div class="m-label">Correct</div><div class="m-value" id="quiz-mon-correct">0</div></div>
+        <div><div class="m-label">Accuracy</div><div class="m-value" id="quiz-mon-accuracy">—</div></div>
+      </div>
+    </div>
+    <div class="quiz-card" id="quiz-card"></div>
+  </div>
+
+  <div class="chapter-panel" id="panel-teachback"></div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/app.js"></script>
+<script src="assets/quiz.js"></script>
+<script src="assets/teachback.js"></script>
+<script>
+injectTopbar("home");
+injectFooter();
+
+const params = new URLSearchParams(window.location.search);
+const chNum = params.get("ch");
+
+document.querySelectorAll(".chapter-tabs button").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".chapter-tabs button").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".chapter-panel").forEach(p=>p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("panel-"+btn.dataset.tab).classList.add("active");
+  });
+});
+
+if(!chNum){
+  document.getElementById("chapter-title").textContent = "No chapter selected";
+  document.getElementById("chapter-eyebrow").textContent = "Go back to the home page and pick a chapter";
+} else {
+  fetchJSON("data/chapters.json").then(data=>{
+    const ch = data.chapters[chNum];
+    const wk = data.weeks[ch.week];
+    if(!ch){
+      document.getElementById("chapter-title").textContent = "Chapter not found";
+      return;
+    }
+    document.documentElement.style.setProperty("--accent", ch.color);
+    document.getElementById("chapter-eyebrow").textContent = `Week ${ch.week} · ${wk.title} · Chapter ${ch.num}`;
+    document.getElementById("chapter-title").textContent = ch.title;
+    document.getElementById("guide-iframe").src = ch.file;
+
+    fetchJSON(`data/terms_ch${ch.num}.json`).then(terms=>{
+      initQuiz("quiz-card", terms, ch.color);
+      initTeachBack("panel-teachback", ch.title, terms);
+    });
+  });
+}
+</script>
+</body>
+</html>

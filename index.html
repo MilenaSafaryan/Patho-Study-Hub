@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Pathophysiology · Weekly Review</span>
+    <h1>Your semester, one chart at a time.</h1>
+    <p>Study guides, auto-generated quizzes, and teach-back practice — organized the same way your course syllabus is, week by week.</p>
+  </div>
+
+  <div id="ekg-slot"></div>
+
+  <div class="vitals">
+    <div class="vital"><div class="vital-label">Weeks mapped</div><div class="vital-value" id="stat-weeks">—</div></div>
+    <div class="vital"><div class="vital-label">Chapters loaded</div><div class="vital-value" id="stat-chapters">—</div></div>
+    <div class="vital"><div class="vital-label">Glossary terms</div><div class="vital-value" id="stat-terms">—</div></div>
+  </div>
+
+  <div class="section-head">
+    <h2>Course weeks</h2>
+    <span class="count" id="week-count"></span>
+  </div>
+  <div id="weeks-container"></div>
+
+  <div class="placeholder-note">
+    <strong>Adding more chapters:</strong> weeks without chapters yet (marked "coming soon") will light up automatically once those chapter study guides are added to <code>content/</code> and registered in <code>data/chapters.json</code>.
+  </div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/app.js"></script>
+<script>
+document.getElementById("ekg-slot").innerHTML = ekgSVG();
+injectTopbar("home");
+injectFooter();
+
+fetchJSON("data/chapters.json").then(data=>{
+  const { weeks, chapters } = data;
+  const weekList = Object.values(weeks).sort((a,b)=>a.num-b.num);
+
+  document.getElementById("stat-weeks").textContent = weekList.length;
+  document.getElementById("stat-chapters").textContent = Object.keys(chapters).length;
+  document.getElementById("week-count").textContent = weekList.length + " weeks";
+
+  fetchJSON("data/terms_all.json").then(terms=>{
+    document.getElementById("stat-terms").textContent = terms.length;
+  });
+
+  const container = document.getElementById("weeks-container");
+  weekList.forEach((wk, idx)=>{
+    const loaded = wk.chapters.filter(c => chapters[c]);
+    const block = document.createElement("div");
+    block.className = "week-block" + (loaded.length ? " open" : "");
+    block.style.setProperty("--wk-color", wk.color);
+
+    const chapterCards = loaded.map(cnum=>{
+      const ch = chapters[cnum];
+      return `<a class="chapter-card" style="--wk-color:${wk.color}" href="chapter.html?ch=${cnum}">
+        <div class="chapter-num">Ch. ${cnum}</div>
+        <div class="chapter-title">${ch.title}</div>
+        <div class="chapter-meta">${ch.termCount} key terms</div>
+      </a>`;
+    }).join("");
+
+    const missingCount = wk.chapters.length - loaded.length;
+
+    block.innerHTML = `
+      <div class="week-head">
+        <div class="week-left">
+          <span class="week-num">WEEK ${wk.num}</span>
+          <span class="week-title">${wk.title}</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span class="week-status">${loaded.length}/${wk.chapters.length} chapters loaded</span>
+          <span class="week-caret">&#9656;</span>
+        </div>
+      </div>
+      <div class="week-chapters">
+        ${loaded.length ? `<div class="week-chapters-inner">${chapterCards}</div>` : `<div class="week-empty">Chapters ${wk.chapters.join(", ")} — not added yet. Paste them in and this week lights up.</div>`}
+        ${loaded.length && missingCount ? `<div class="week-empty">+ ${missingCount} more chapter${missingCount>1?'s':''} for this week not yet added (Ch. ${wk.chapters.filter(c=>!chapters[c]).join(", ")})</div>` : ""}
+      </div>`;
+
+    block.querySelector(".week-head").addEventListener("click", ()=>{
+      block.classList.toggle("open");
+    });
+
+    container.appendChild(block);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+[
+ {
+  "term": "Primary injury",
+  "def": "Brain damage occurring immediately at the moment of injury \u2014 largely irreversible once it has happened."
+ },
+ {
+  "term": "Secondary injury",
+  "def": "Further neurologic damage developing after the primary injury, progressing over days to years; often the target of clinical intervention."
+ },
+ {
+  "term": "Ischemia",
+  "def": "Oxygenated blood delivery below the level needed to meet tissue metabolic demand."
+ },
+ {
+  "term": "Hypoxia",
+  "def": "Cellular oxygen deficiency, from either decreased blood flow (ischemia) or decreased blood oxygenation (hypoxemia)."
+ },
+ {
+  "term": "Necrosis",
+  "def": "Uncontrolled cell death with membrane rupture and release of intracellular contents; follows severe ischemic injury (profound ATP loss)."
+ },
+ {
+  "term": "Apoptosis",
+  "def": "Programmed, energy-requiring cell death in which cells shrink and die without releasing contents; associated with moderate injury (partially maintained ATP)."
+ },
+ {
+  "term": "Excitotoxin",
+  "def": "A substance (like excess glutamate) that overstimulates neurons to the point of causing cell injury."
+ },
+ {
+  "term": "NMDA / AMPA receptors",
+  "def": "Glutamate-activated ion channels; AMPA activation causes Na+ entry/depolarization, which removes the Mg2+ block on NMDA channels, allowing damaging Ca2+ influx."
+ },
+ {
+  "term": "Reperfusion injury",
+  "def": "Secondary damage from oxygen free radical formation and inflammatory cell invasion when blood flow is restored after ischemia."
+ },
+ {
+  "term": "Level of consciousness (LOC)",
+  "def": "A sensitive indicator of brain function, ranging from full alertness to coma."
+ },
+ {
+  "term": "Glasgow Coma Scale (GCS)",
+  "def": "A standardized 3\u201315 point tool scoring eye opening, verbal response, and motor response to assess LOC with high interrater reliability."
+ },
+ {
+  "term": "Decorticate posturing",
+  "def": "Abnormal flexion of the arms/wrists with leg extension (GCS motor score 3) \u2014 indicates a lesion above the brainstem."
+ },
+ {
+  "term": "Decerebrate posturing",
+  "def": "Arm and leg extension with wrist/leg internal rotation (GCS motor score 2) \u2014 indicates a lower, more severe brainstem lesion."
+ },
+ {
+  "term": "Oculovestibular reflex",
+  "def": "Brainstem reflex adjusting eye position in response to head movement; tested via doll's eyes or cold calorics in unconscious patients."
+ },
+ {
+  "term": "Traumatic brain injury (TBI)",
+  "def": "Brain tissue injury resulting from trauma; not synonymous with head injury (cranial injury doesn't always mean brain injury)."
+ },
+ {
+  "term": "Coup / contrecoup injury",
+  "def": "Focal injury at the impact site (coup) or, with polar injury, additional damage at the opposite pole from brain movement within the skull (contrecoup)."
+ },
+ {
+  "term": "Diffuse axonal injury",
+  "def": "Widespread stretching/shearing of axonal white matter from brain rotation/shifting; often causes coma from time of injury."
+ },
+ {
+  "term": "Concussion (mild TBI)",
+  "def": "Brief LOC alteration (<30 min) with no CT evidence of brain damage."
+ },
+ {
+  "term": "Second impact syndrome",
+  "def": "Malignant cerebral edema in an athlete who returns to play before fully recovering from a prior concussion."
+ },
+ {
+  "term": "Epidural hematoma",
+  "def": "Arterial bleeding (often middle meningeal artery) between the skull and dura; classic \"lucid interval\" then rapid deterioration."
+ },
+ {
+  "term": "Subdural hematoma",
+  "def": "Venous bleeding from torn bridging veins between the dura and arachnoid membrane; slower-forming than epidural."
+ },
+ {
+  "term": "Subarachnoid hemorrhage",
+  "def": "Bleeding into the CSF-filled space between arachnoid and pia mater; from trauma (bridging veins) or, more often, aneurysm/AVM rupture (arterial)."
+ },
+ {
+  "term": "Battle sign / Raccoon eyes",
+  "def": "Bruising behind the ear / bilateral periorbital hematomas \u2014 signs of basilar skull fracture."
+ },
+ {
+  "term": "Stroke (brain attack)",
+  "def": "A cerebrovascular event causing localized CNS infarction; previously \"cerebrovascular accident.\""
+ },
+ {
+  "term": "Transient ischemic attack (TIA)",
+  "def": "Stroke-like symptoms without evidence of infarction on imaging \u2014 the definition is now imaging-based, not time-based."
+ },
+ {
+  "term": "Penumbra",
+  "def": "Ischemic but still-viable brain tissue surrounding an infarct core; the target of early reperfusion therapy."
+ },
+ {
+  "term": "Thrombotic stroke",
+  "def": "Ischemic stroke from local atherosclerosis/clot formation in cerebral vasculature."
+ },
+ {
+  "term": "Embolic stroke",
+  "def": "Ischemic stroke from a clot (often cardiac-origin, e.g. atrial fibrillation) traveling to and lodging in a cerebral artery."
+ },
+ {
+  "term": "Lacunar infarct",
+  "def": "Small infarct from occlusion of penetrating arterioles, strongly associated with chronic hypertension and diabetes."
+ },
+ {
+  "term": "tPA (alteplase)",
+  "def": "The thrombolytic approved for acute ischemic stroke, given within 3 (up to 4.5 in select patients) hours of symptom onset."
+ },
+ {
+  "term": "Mechanical thrombectomy",
+  "def": "Endovascular clot retrieval for large-vessel occlusion strokes, effective up to 24 hours from onset in select patients."
+ },
+ {
+  "term": "Cerebral aneurysm",
+  "def": "A dilated, ballooned, structurally weakened segment of a cerebral artery \u2014 the most common cause of nontraumatic subarachnoid hemorrhage."
+ },
+ {
+  "term": "Saccular (berry) aneurysm",
+  "def": "The most common aneurysm shape \u2014 round, typically at arterial bifurcations in the circle of Willis."
+ },
+ {
+  "term": "Hunt and Hess scale",
+  "def": "A grading scale (I\u2013V) for aneurysmal subarachnoid hemorrhage severity, correlating with mortality (15% at grade I up to 95% at grade V)."
+ },
+ {
+  "term": "Cerebral vasospasm",
+  "def": "Pathologic narrowing of vessels near a ruptured aneurysm, typically day 4\u201314 post-rupture, causing ischemia/infarction."
+ },
+ {
+  "term": "Arteriovenous malformation (AVM)",
+  "def": "A congenital fistulous connection between artery and vein without a capillary bed, causing progressively enlarging, hemorrhage-prone vessels."
+ },
+ {
+  "term": "Vascular steal syndrome",
+  "def": "Progressive neurologic dysfunction from blood being shunted into an AVM and away from normal brain tissue."
+ },
+ {
+  "term": "Meningitis",
+  "def": "Inflammation of the meninges, most commonly bacterial, invading the subarachnoid space."
+ },
+ {
+  "term": "Kernig / Brudzinski sign",
+  "def": "Classic (but not sensitive) bedside signs of meningeal irritation in bacterial meningitis."
+ },
+ {
+  "term": "Encephalitis",
+  "def": "Inflammation of the brain parenchyma itself, usually viral (most commonly HSV-1)."
+ },
+ {
+  "term": "Brain abscess",
+  "def": "A localized, capsule-forming collection of pus within brain parenchyma, from penetrating injury, contiguous spread, or hematogenous spread."
+ }
+]

@@ -1,0 +1,110 @@
+[
+ {
+  "term": "Osteoarthritis (OA)",
+  "def": "A progressive, noninflammatory disease of diarthrodial (freely movable) joints, especially weight-bearing ones \u2014 the most common form of arthritis worldwide."
+ },
+ {
+  "term": "Diarthrodial joint",
+  "def": "A freely movable joint (e.g., knee, hip) \u2014 the type of joint OA specifically targets."
+ },
+ {
+  "term": "Articular cartilage",
+  "def": "The smooth tissue covering joint surfaces; its progressive loss is the defining feature of OA. Contains no nociceptors, so cartilage itself cannot directly cause pain."
+ },
+ {
+  "term": "Chondrocytes",
+  "def": "Cartilage cells that release proteolytic and collagenolytic enzymes after joint injury, starting the matrix breakdown process in OA."
+ },
+ {
+  "term": "Osteophytes",
+  "def": "Bone spurs that form at joint margins from new bone formation \u2014 a hallmark radiologic and structural finding in OA."
+ },
+ {
+  "term": "Subchondral bone sclerosis",
+  "def": "Thickening/hardening of the bone just beneath the cartilage, occurring as cartilage loss progresses in OA."
+ },
+ {
+  "term": "Heberden nodes",
+  "def": "Bone spurs at the distal interphalangeal (DIP) joints \u2014 the most common hand deformity in OA."
+ },
+ {
+  "term": "Bouchard nodes",
+  "def": "Bone spurs at the proximal interphalangeal (PIP) joints \u2014 analogous to Heberden nodes but one joint level up."
+ },
+ {
+  "term": "Genu varus",
+  "def": "Outward bowing of the knees (\"bow-legged\") \u2014 can result from cartilage loss in the medial knee compartment."
+ },
+ {
+  "term": "Genu valgus",
+  "def": "Inward angling of the knees (\"knock-kneed\") \u2014 can result from cartilage loss in the lateral knee compartment."
+ },
+ {
+  "term": "Crepitus",
+  "def": "A grating/crackling sensation or sound with joint movement \u2014 a classic OA physical exam finding."
+ },
+ {
+  "term": "Erosive OA",
+  "def": "An aggressive hand-OA subset with central subchondral bone erosion, more joint swelling, and severe mobility loss; tends to affect younger patients (females 40\u201360)."
+ },
+ {
+  "term": "Loose bodies",
+  "def": "Fragments of cartilage that break off into the joint space in advanced OA."
+ },
+ {
+  "term": "Rheumatoid arthritis (RA)",
+  "def": "A systemic autoimmune inflammatory disease causing symmetric polyarthritis, distinct from OA's localized, mechanical process."
+ },
+ {
+  "term": "Rheumatoid factor (RF)",
+  "def": "An autoantibody against the Fc region of the body's own IgG; positive in 60\u201380% of RA patients but doesn't track with disease severity."
+ },
+ {
+  "term": "Anti-CCP antibody",
+  "def": "An antibody targeting citrullinated peptides; supports an RA diagnosis."
+ },
+ {
+  "term": "Shared epitope",
+  "def": "A common 5-amino-acid sequence in certain HLA-DRB1 alleles, associated with higher RA susceptibility."
+ },
+ {
+  "term": "Pannus",
+  "def": "Hypertrophied, vascularized synovial tissue in RA that invades and destroys cartilage, ligaments, and tendons."
+ },
+ {
+  "term": "Swan neck deformity",
+  "def": "PIP hyperextension with MCP/DIP flexion \u2014 a classic RA hand deformity."
+ },
+ {
+  "term": "Boutonni\u00e8re deformity",
+  "def": "PIP flexion with DIP hyperextension, from extensor tendon rupture/laxity \u2014 the mirror pattern of swan neck."
+ },
+ {
+  "term": "Enteropathic arthritis",
+  "def": "Joint disease associated with inflammatory bowel disease (ulcerative colitis or Crohn disease)."
+ },
+ {
+  "term": "Neuropathic osteoarthropathy (Charcot joint)",
+  "def": "Joint destruction from loss of proprioception/pain sensation, most often from diabetes, tabes dorsalis, or syringomyelia."
+ },
+ {
+  "term": "Hemophilic arthropathy",
+  "def": "Progressive joint destruction from recurrent hemarthrosis in hemophilia patients."
+ },
+ {
+  "term": "Gout",
+  "def": "A disorder of uric acid metabolism causing monosodium urate crystal deposition in joints and tissue."
+ },
+ {
+  "term": "Hyperuricemia",
+  "def": "Elevated serum uric acid \u2014 the biochemical precursor to gout, from either overproduction or underexcretion."
+ },
+ {
+  "term": "Tophi",
+  "def": "Crystalline urate deposits in bone and connective tissue \u2014 the hallmark of chronic tophaceous gout."
+ },
+ {
+  "term": "Intercritical gout",
+  "def": "The symptom-free interval between acute gout attacks, during which urate deposition continues silently."
+ }
+]
