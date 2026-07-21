@@ -103,7 +103,7 @@
     "Aggregate Factors",
     "Levels of Prevention"
    ],
-   "file": "content/ch1.html"
+   "file": "content/ch1-fragment.html"
   },
   "2": {
    "num": 2,
@@ -127,7 +127,7 @@
     "Perception, Distress & Habituation",
     "Allostatic Overload & Illness"
    ],
-   "file": "content/ch2.html"
+   "file": "content/ch2-fragment.html"
   },
   "4": {
    "num": 4,
@@ -155,7 +155,7 @@
     "Physiologic Changes of Aging",
     "Somatic Death"
    ],
-   "file": "content/ch4.html"
+   "file": "content/ch4-fragment.html"
   },
   "7": {
    "num": 7,
@@ -183,7 +183,7 @@
     "Paraneoplastic Syndromes",
     "Cancer Therapy & Screening"
    ],
-   "file": "content/ch7.html"
+   "file": "content/ch7-fragment.html"
   },
   "10": {
    "num": 10,
@@ -206,7 +206,7 @@
     "Chronic Mucocutaneous Candidiasis",
     "Selective IgA Deficiency"
    ],
-   "file": "content/ch10.html"
+   "file": "content/ch10-fragment.html"
   },
   "11": {
    "num": 11,
@@ -228,7 +228,7 @@
     "Hodgkin Lymphoma",
     "Staging & Treatment"
    ],
-   "file": "content/ch11.html"
+   "file": "content/ch11-fragment.html"
   },
   "13": {
    "num": 13,
@@ -253,7 +253,7 @@
     "Polycythemia Vera",
     "Secondary & Relative Polycythemia"
    ],
-   "file": "content/ch13.html"
+   "file": "content/ch13-fragment.html"
   },
   "14": {
    "num": 14,
@@ -278,7 +278,7 @@
     "Acquired Vitamin K Deficiency",
     "Disseminated Intravascular Coagulation (DIC)"
    ],
-   "file": "content/ch14.html"
+   "file": "content/ch14-fragment.html"
   },
   "15": {
    "num": 15,
@@ -304,7 +304,7 @@
     "Chronic Venous Insufficiency & DVT",
     "Lymphedema"
    ],
-   "file": "content/ch15.html"
+   "file": "content/ch15-fragment.html"
   },
   "36": {
    "num": 36,
@@ -344,7 +344,7 @@
     "Colon Polyps",
     "Colon Cancer"
    ],
-   "file": "content/ch36.html"
+   "file": "content/ch36-fragment.html"
   },
   "37": {
    "num": 37,
@@ -363,7 +363,7 @@
     "Chronic Pancreatitis",
     "Pancreatic Cancer"
    ],
-   "file": "content/ch37.html"
+   "file": "content/ch37-fragment.html"
   },
   "38": {
    "num": 38,
@@ -401,7 +401,7 @@
     "Intrahepatic & Extrahepatic Cholestasis",
     "Liver Disease in Older Adults"
    ],
-   "file": "content/ch38.html"
+   "file": "content/ch38-fragment.html"
   },
   "40": {
    "num": 40,
@@ -424,7 +424,7 @@
     "Diabetes Insipidus",
     "SIADH"
    ],
-   "file": "content/ch40.html"
+   "file": "content/ch40-fragment.html"
   },
   "41": {
    "num": 41,
@@ -453,7 +453,7 @@
     "Pediatric Considerations",
     "Geriatric Considerations"
    ],
-   "file": "content/ch41.html"
+   "file": "content/ch41-fragment.html"
   },
   "44": {
    "num": 44,
@@ -484,7 +484,7 @@
     "Encephalitis",
     "Brain Abscess"
    ],
-   "file": "content/ch44.html"
+   "file": "content/ch44-fragment.html"
   },
   "45": {
    "num": 45,
@@ -508,7 +508,7 @@
     "Guillain-Barr\u00e9 Syndrome",
     "Bell Palsy"
    ],
-   "file": "content/ch45.html"
+   "file": "content/ch45-fragment.html"
   },
   "47": {
    "num": 47,
@@ -531,7 +531,7 @@
     "Pain Assessment",
     "Pain Management"
    ],
-   "file": "content/ch47.html"
+   "file": "content/ch47-fragment.html"
   },
   "51": {
    "num": 51,
@@ -559,7 +559,7 @@
     "Etiology & Pathogenesis",
     "The Four Phases of Gout"
    ],
-   "file": "content/ch51.html"
+   "file": "content/ch51-fragment.html"
   },
   "52": {
    "num": 52,
@@ -585,7 +585,7 @@
     "Infancy",
     "Childhood Communicable Diseases"
    ],
-   "file": "content/ch52.html"
+   "file": "content/ch52-fragment.html"
   }
  }
 }

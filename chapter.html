@@ -30,8 +30,8 @@
 
   <div class="chapter-panel active" id="panel-guide">
     <div class="chapter-map" id="chapter-map"></div>
-    <div class="guide-frame-wrap">
-      <iframe id="guide-iframe" title="Chapter study guide"></iframe>
+    <div class="guide-native" id="guide-native">
+      <div style="padding:40px;text-align:center;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:0.85rem;">Loading study guide…</div>
     </div>
   </div>
 
@@ -89,10 +89,15 @@ if(!chNum){
     document.documentElement.style.setProperty("--accent", ch.color);
     document.getElementById("chapter-eyebrow").textContent = `Week ${ch.week} · ${wk.title} · Chapter ${ch.num}`;
     document.getElementById("chapter-title").textContent = ch.title;
-    document.getElementById("guide-iframe").src = ch.file;
     document.getElementById("chapter-icon-badge").style.color = ch.color;
     document.getElementById("chapter-icon-badge").innerHTML = weekIcon(ch.week, 26, ch.color);
     renderChapterMap("chapter-map", ch.outline, ch.color);
+
+    fetch(ch.file).then(r => r.text()).then(html => {
+      document.getElementById("guide-native").innerHTML = html;
+    }).catch(() => {
+      document.getElementById("guide-native").innerHTML = `<div style="padding:40px;text-align:center;color:var(--ink-soft);">Couldn't load this chapter's content.</div>`;
+    });
 
     fetchJSON(`data/terms_ch${ch.num}.json`).then(terms=>{
       initQuiz("quiz-card", terms, ch.color, ch.week);

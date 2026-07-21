@@ -19,6 +19,7 @@ exports.handler = async (event) => {
 
   const params = new URLSearchParams();
   params.append("mode", "payment");
+  params.append("payment_method_types[0]", "card");
   params.append("success_url", `${origin}/?unlocked=1&session_id={CHECKOUT_SESSION_ID}`);
   params.append("cancel_url", `${origin}/?unlock_cancelled=1`);
   params.append("line_items[0][quantity]", "1");
