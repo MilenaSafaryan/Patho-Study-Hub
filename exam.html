@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Exam — Patho Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<script>window.__HUB_BASE__ = "";</script>
+<div class="topbar" id="hub-topbar"></div>
+
+<div class="wrap">
+  <div class="chapter-hero">
+    <div class="chapter-hero-top">
+      <div class="chapter-icon-badge" id="exam-icon-badge"></div>
+      <div>
+        <span class="chapter-eyebrow" id="exam-eyebrow">Loading…</span>
+        <h1 id="exam-title">Loading practice exam…</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-head" style="margin-top:26px;">
+    <div class="quiz-head-ring">
+      <div id="quiz-progress-ring"></div>
+      <div class="quiz-monitor">
+        <div><div class="m-label">Question</div><div class="m-value" id="quiz-mon-question">0/0</div></div>
+        <div><div class="m-label">Got it</div><div class="m-value" id="quiz-mon-correct">0</div></div>
+        <div><div class="m-label">Self-rated</div><div class="m-value" id="quiz-mon-accuracy">—</div></div>
+      </div>
+    </div>
+    <a href="practice-exams.html" class="btn btn-outline">All practice exams</a>
+  </div>
+
+  <div class="quiz-card" id="quiz-card" style="margin-top:16px;"></div>
+
+  <div class="placeholder-note">
+    <strong>How this works:</strong> these are pulled directly from your compiled Check-Your-Understanding exam set, one question at a time — no multiple choice, just like the real thing. Reveal the answer, then rate yourself honestly so your score reflects what you actually know.
+  </div>
+</div>
+
+<div id="hub-footer"></div>
+
+<script src="assets/icons.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/quiz.js"></script>
+<script src="assets/exam.js"></script>
+<script>
+injectTopbar("exams");
+injectFooter();
+
+const params = new URLSearchParams(window.location.search);
+const weekNum = params.get("week");
+
+if(!weekNum){
+  document.getElementById("exam-title").textContent = "No week selected";
+} else {
+  Promise.all([
+    fetchJSON("data/chapters.json"),
+    fetchJSON("data/exams.json")
+  ]).then(([chData, examData]) => {
+    const wk = chData.weeks[weekNum];
+    const exam = examData[weekNum];
+    if(!wk || !exam){
+      document.getElementById("exam-title").textContent = "No practice exam for this week yet";
+      document.getElementById("quiz-card").innerHTML = "";
+      return;
+    }
+    document.documentElement.style.setProperty("--accent", wk.color);
+    document.getElementById("exam-eyebrow").textContent = `Week ${wk.num} · ${wk.title}`;
+    document.getElementById("exam-title").textContent = `Practice Exam — ${exam.questions.length} questions`;
+    document.getElementById("exam-icon-badge").style.color = wk.color;
+    document.getElementById("exam-icon-badge").innerHTML = weekIcon(wk.num, 26, wk.color);
+
+    initExam("quiz-card", exam.questions, wk.color);
+  });
+}
+</script>
+</body>
+</html>
