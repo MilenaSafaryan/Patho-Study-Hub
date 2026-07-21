@@ -1,13 +1,13 @@
 /* =========================================================================
-   TEACH BACK MODE — user explains a chapter concept in their own words,
-   Claude grades it against the chapter's actual key terms for accuracy.
-   Costs 1 credit per grading, using the same prepaid balance as the
-   AI chat widget (see app.js).
+   TEACH BACK MODE — free, no AI credits used.
+   Checks which of the chapter's key terms your explanation actually
+   covers, then gives a clear correct/needs-work verdict plus a list of
+   what you hit and what you missed.
    ========================================================================= */
 
 function initTeachBack(containerId, chapterTitle, terms){
   const box = document.getElementById(containerId);
-  const termList = terms.slice(0, 14).map(t=>t.term);
+  const usableTerms = terms.filter(t => t.term && t.term.length > 2);
 
   box.innerHTML = `
     <div class="teachback-card">
@@ -16,74 +16,58 @@ function initTeachBack(containerId, chapterTitle, terms){
       <textarea id="teachback-input" placeholder="Start typing your explanation here..."></textarea>
 
       <div class="teachback-actions">
-        <span class="teachback-hint" id="teachback-hint">Grading this uses 1 AI credit — <span id="teachback-balance-inline" class="mono"></span> left.</span>
-        <button class="btn" id="teachback-submit">Grade my explanation</button>
-      </div>
-      <div id="teachback-buy-row" style="margin-top:12px;">
-        <button class="btn btn-outline" id="teachback-buy-btn">Buy AI credits</button>
-        <div style="font-size:0.68rem;color:var(--ink-soft);margin-top:7px;line-height:1.5;">$5.00 one-time · 200 credits · no auto-renewal · processed by Stripe</div>
+        <span class="teachback-hint">Free — checks your explanation against this chapter's key terms.</span>
+        <button class="btn" id="teachback-submit">Check my explanation</button>
       </div>
 
       <div class="teachback-response" id="teachback-response"></div>
       <div class="teachback-terms">
         <div class="teachback-hint" style="margin-bottom:8px;">Try to touch on these terms:</div>
-        ${termList.map(t=>`<span class="term-chip">${t}</span>`).join("")}
+        <div id="teachback-term-chips">${usableTerms.slice(0, 14).map(t=>`<span class="term-chip" data-term="${t.term.toLowerCase()}">${t.term}</span>`).join("")}</div>
       </div>
     </div>`;
 
-  const refreshBalance = ()=>{
-    const el = document.getElementById("teachback-balance-inline");
-    if(el) el.textContent = getCachedBalance() + " credit" + (getCachedBalance()===1 ? "" : "s");
-  };
-  refreshBalance();
-
-  document.getElementById("teachback-buy-btn").addEventListener("click", openPaymentDisclosure);
-
-  document.getElementById("teachback-submit").addEventListener("click", async ()=>{
+  document.getElementById("teachback-submit").addEventListener("click", ()=>{
     const input = document.getElementById("teachback-input").value.trim();
     const respEl = document.getElementById("teachback-response");
+
     if(!input){
       respEl.className = "teachback-response show";
       respEl.textContent = "Write an explanation first — even a rough one works.";
       return;
     }
-    if(!hasCredits()){
-      respEl.className = "teachback-response show";
-      respEl.textContent = "You're out of AI credits. Buy a pack above, then grade again.";
-      return;
-    }
+
+    const lowerInput = input.toLowerCase();
+    const checkPool = usableTerms.slice(0, 14);
+    const hit = [];
+    const missed = [];
+    checkPool.forEach(t=>{
+      if(lowerInput.includes(t.term.toLowerCase())) hit.push(t.term);
+      else missed.push(t.term);
+    });
+
+    const pct = checkPool.length ? Math.round((hit.length/checkPool.length)*100) : 0;
+    const passed = pct >= 50;
+
     respEl.className = "teachback-response show";
-    respEl.textContent = "Grading…";
-    const btn = document.getElementById("teachback-submit");
-    btn.disabled = true;
+    respEl.innerHTML = `
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:0.85rem;padding:4px 12px;border-radius:999px;background:${passed ? 'rgba(61,139,95,0.15)' : 'rgba(192,90,63,0.15)'};color:${passed ? 'var(--success)' : 'var(--coral)'};">
+          ${passed ? "✓ Looks correct" : "✗ Needs more work"}
+        </span>
+        <span class="mono" style="font-size:0.78rem;color:var(--ink-soft);">${hit.length}/${checkPool.length} key terms covered</span>
+      </div>
+      ${hit.length ? `<div style="font-size:0.85rem;margin-bottom:6px;"><strong>Covered:</strong> ${hit.join(", ")}</div>` : ""}
+      ${missed.length ? `<div style="font-size:0.85rem;color:var(--ink-soft);"><strong>Missing:</strong> ${missed.join(", ")}</div>` : ""}
+    `;
 
-    const glossaryContext = terms.map(t=>`- ${t.term}: ${t.def}`).join("\n");
-    const prompt = `You are grading a nursing student's "teach-back" explanation of a pathophysiology chapter, as a supportive but precise study coach.
+    // highlight term chips
+    document.querySelectorAll("#teachback-term-chips .term-chip").forEach(chip=>{
+      const t = chip.dataset.term;
+      chip.style.background = lowerInput.includes(t) ? "rgba(61,139,95,0.15)" : "";
+      chip.style.borderColor = lowerInput.includes(t) ? "var(--success)" : "";
+    });
 
-Chapter: ${chapterTitle}
-
-Reference glossary for this chapter (ground truth):
-${glossaryContext}
-
-Student's explanation:
-"""
-${input}
-"""
-
-Give feedback in this structure, concise and encouraging:
-1. What they got right (1-3 bullet points)
-2. Any inaccuracies or missing key concepts (be specific, reference the correct term/definition)
-3. One or two terms from the glossary they didn't mention but should know
-Keep the whole response under 200 words.`;
-
-    try{
-      const reply = await callAI([{ role:"user", content: prompt }], 600);
-      respEl.textContent = reply;
-      if(typeof speak === "function") speak(reply);
-    }catch(err){
-      respEl.textContent = "Couldn't get feedback. (" + err.message + ")";
-    }
-    refreshBalance();
-    btn.disabled = false;
+    if(passed && typeof celebrate === "function") celebrate();
   });
 }
