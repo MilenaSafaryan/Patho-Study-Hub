@@ -35,7 +35,7 @@ function injectFooter(){
   const el = document.getElementById("hub-footer");
   if(!el) return;
   el.innerHTML = `
-    <span>Patho Study Hub — personal review tool · <a href="${HUB.basePath}disclosures.html" style="text-decoration:underline;">About &amp; disclosures</a></span>
+    <span>Patho Study Hub — personal review tool · <a href="${HUB.basePath}disclosures.html" style="text-decoration:underline;">About &amp; disclosures</a> · <a href="${HUB.basePath}references.html" style="text-decoration:underline;">References</a></span>
     <span id="footer-term-count" class="mono"></span>`;
   fetchJSON(HUB.basePath + "data/terms_all.json").then(t=>{
     const f = document.getElementById("footer-term-count");

@@ -1,1983 +1,4911 @@
 {
  "1": {
-  "title": "Chapters 1\u20139 (Cellular Injury, Neoplasia, Stress & Adaptation)",
+  "title": "Week 1 \u2014 Chapters 1\u20139 (Cellular Injury, Neoplasia, Stress & Adaptation)",
   "questions": [
    {
     "q": "After surgery to remove a lung tumor, your patient is scheduled for chemotherapy, which will",
-    "a": "kill rapidly dividing cells."
+    "options": [
+     "promote healthy cell growth.",
+     "shrink the tumor via radiation effects.",
+     "kill rapidly dividing cells.",
+     "stimulate the immune system."
+    ],
+    "correct": 2
    },
    {
     "q": "Retroviruses are associated with human cancers, including",
-    "a": "Burkitt lymphoma."
+    "options": [
+     "Burkitt lymphoma.",
+     "influenza virus.",
+     "human papillomavirus.",
+     "Epstein-Barr virus only."
+    ],
+    "correct": 0
    },
    {
     "q": "Your patient is scheduled for a staging procedure. She wants to know what that means. The correct response is which of the following?",
-    "a": "It is a procedure for determining the extent of tumor spread."
+    "options": [
+     "It is a procedure for grading how abnormal the cells look.",
+     "It is a procedure for determining the extent of tumor spread.",
+     "It is a procedure for genetic testing of the tumor.",
+     "It is a procedure to remove the entire tumor."
+    ],
+    "correct": 1
    },
    {
     "q": "Your patient eats \"lots of fat,\" leads a \"stressful\" life, and has smoked \"about two packs a day for the last 40 years.\" Her chronic morning cough recently worsened, and she was diagnosed with a lung mass. The most likely contributing factor for development of lung cancer in this patient is",
-    "a": "cigarette smoking."
+    "options": [
+     "her stressful lifestyle.",
+     "her high-fat diet.",
+     "her family history.",
+     "cigarette smoking."
+    ],
+    "correct": 3
    },
    {
     "q": "The most common tumor-suppressor gene defect identified in cancer cells is",
-    "a": "P53."
+    "options": [
+     "MYC.",
+     "HER2.",
+     "P53.",
+     "RAS."
+    ],
+    "correct": 2
    },
    {
     "q": "The cellular component that is most susceptible to radiation injury is the",
-    "a": "DNA."
+    "options": [
+     "mitochondria.",
+     "DNA.",
+     "cytoplasm.",
+     "cell membrane."
+    ],
+    "correct": 1
    },
    {
     "q": "The cellular change that is considered preneoplastic is",
-    "a": "dysplasia."
+    "options": [
+     "atrophy.",
+     "anaplasia.",
+     "hyperplasia.",
+     "dysplasia."
+    ],
+    "correct": 3
    },
    {
     "q": "Cancer grading is based on",
-    "a": "cell differentiation."
+    "options": [
+     "the presence of metastasis.",
+     "cell differentiation.",
+     "tumor size alone.",
+     "patient age and symptoms."
+    ],
+    "correct": 1
    },
    {
     "q": "The hypermetabolic state leading to cachexia in terminal cancer is thought to be because of",
-    "a": "tumor necrosis factor."
+    "options": [
+     "interleukin-2.",
+     "insulin.",
+     "cortisol.",
+     "tumor necrosis factor."
+    ],
+    "correct": 3
    },
    {
     "q": "In general, a cancer cell that is more tissue-specific differentiated is more likely to be aggressive.",
-    "a": "False"
+    "options": [
+     "Only true for carcinomas",
+     "False",
+     "True",
+     "Sometimes true, sometimes false"
+    ],
+    "correct": 1
    },
    {
     "q": "Proto-oncogenes",
-    "a": "are normal cellular genes that promote growth."
+    "options": [
+     "suppress cell growth.",
+     "are always inactive in normal cells.",
+     "are normal cellular genes that promote growth.",
+     "are viral genes inserted into host DNA."
+    ],
+    "correct": 2
    },
    {
     "q": "After bronchoscopy and histologic examination of a suspected tumor, your patient is diagnosed with primary bronchial carcinoma. Thus, the tumor",
-    "a": "is malignant."
+    "options": [
+     "is malignant.",
+     "has already metastasized.",
+     "cannot be determined without further testing.",
+     "is benign."
+    ],
+    "correct": 0
    },
    {
     "q": "Of the statements below, the accurate statement regarding nutrition and cellular health is",
-    "a": "deficient cellular uptake by one cell type may contribute to excess nutrient delivery to other cell types."
+    "options": [
+     "deficient cellular uptake by one cell type may contribute to excess nutrient delivery to other cell types.",
+     "excess nutrients always benefit all cells equally.",
+     "nutrient uptake is uniform across all cell types regardless of disease.",
+     "cellular nutrient needs are identical for all tissue types."
+    ],
+    "correct": 0
    },
    {
     "q": "Familial retinoblastoma involves the transmission of what from parent to offspring?",
-    "a": "Mutant tumor-suppressor gene"
+    "options": [
+     "An environmental carcinogen exposure",
+     "Mutant tumor-suppressor gene",
+     "An activated proto-oncogene only",
+     "A viral oncogene"
+    ],
+    "correct": 1
    },
    {
     "q": "Metaplasia is",
-    "a": "the replacement of one differentiated cell type with another."
+    "options": [
+     "the disorganized growth of abnormal cells within an epithelium.",
+     "the complete loss of a cell's nucleus.",
+     "the replacement of one differentiated cell type with another.",
+     "an increase in the number of normal cells."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient with metastatic lung cancer wants to know her chances for survival. Which response is correct?",
-    "a": "\"Lung cancer has about a 15% survival rate.\""
+    "options": [
+     "\"Lung cancer has about a 15% survival rate.\"",
+     "\"Lung cancer has about a 65% survival rate.\"",
+     "\"There's no way to estimate survival rate.\"",
+     "\"Lung cancer has about a 90% survival rate.\""
+    ],
+    "correct": 0
    },
    {
     "q": "The cellular response indicative of injury because of faulty metabolism is",
-    "a": "intracellular accumulations."
+    "options": [
+     "hyperplasia.",
+     "intracellular accumulations.",
+     "dysplasia.",
+     "hydropic swelling."
+    ],
+    "correct": 1
    },
    {
     "q": "The primary effect of aging on all body systems is",
-    "a": "decreased functional reserve."
+    "options": [
+     "increased muscle mass.",
+     "decreased functional reserve.",
+     "increased susceptibility to cancer only.",
+     "improved wound healing."
+    ],
+    "correct": 1
    },
    {
     "q": "Necrotic death of brain tissue usually produces _____ necrosis.",
-    "a": "liquefactive"
+    "options": [
+     "liquefactive",
+     "fat",
+     "caseous",
+     "coagulative"
+    ],
+    "correct": 0
    },
    {
     "q": "Paraneoplastic syndromes in cancer involve excessive production of substances by multiple means. A common substance found in excessive amounts resulting from cancer paraneoplastic syndromes is",
-    "a": "calcium."
+    "options": [
+     "potassium.",
+     "sodium.",
+     "glucose.",
+     "calcium."
+    ],
+    "correct": 3
    },
    {
     "q": "A disease that is native to a particular region is called",
-    "a": "endemic."
+    "options": [
+     "a pandemic.",
+     "a sporadic disease.",
+     "endemic.",
+     "an epidemic."
+    ],
+    "correct": 2
    },
    {
     "q": "Persistence of the alarm stage will ultimately result in",
-    "a": "permanent damage and death."
+    "options": [
+     "full recovery of homeostasis.",
+     "permanent damage and death.",
+     "a return to the resistance stage.",
+     "successful adaptation."
+    ],
+    "correct": 1
    },
    {
     "q": "In general, with aging, organ size and function",
-    "a": "decrease."
+    "options": [
+     "remain unchanged.",
+     "decrease.",
+     "increase, then decrease sharply.",
+     "increase."
+    ],
+    "correct": 1
    },
    {
     "q": "Extreme cold injures cells by all the following except",
-    "a": "decreased blood viscosity."
+    "options": [
+     "decreased cellular metabolism.",
+     "decreased blood viscosity.",
+     "increased free radical formation.",
+     "direct membrane damage from ice crystals."
+    ],
+    "correct": 1
    },
    {
     "q": "Indicators that an individual is experiencing high stress include all the following except",
-    "a": "pupil constriction."
+    "options": [
+     "increased blood glucose.",
+     "diaphoresis.",
+     "tachycardia.",
+     "pupil constriction."
+    ],
+    "correct": 3
    },
    {
     "q": "A 17-year-old college-bound student receives a vaccine against an organism that causes meningitis. This is an example of",
-    "a": "primary prevention."
+    "options": [
+     "tertiary prevention.",
+     "primary prevention.",
+     "secondary prevention.",
+     "screening."
+    ],
+    "correct": 1
    },
    {
     "q": "Reperfusion injury to cells",
-    "a": "involves formation of free radicals."
+    "options": [
+     "involves formation of free radicals.",
+     "prevents further cellular damage.",
+     "does not involve oxygen.",
+     "is limited to necrotic cells only."
+    ],
+    "correct": 0
    },
    {
     "q": "When the cause is unknown, a condition is said to be idiopathic",
-    "a": "True"
+    "options": [
+     "Only true for genetic conditions",
+     "True",
+     "False",
+     "Only true for infectious conditions"
+    ],
+    "correct": 1
    },
    {
     "q": "A patient with high blood pressure who is otherwise healthy is counseled to restrict sodium intake. This is an example of",
-    "a": "secondary prevention."
+    "options": [
+     "secondary prevention.",
+     "tertiary prevention.",
+     "primary prevention.",
+     "diagnostic screening."
+    ],
+    "correct": 0
    },
    {
     "q": "Apoptosis is a process that results in cellular",
-    "a": "death."
+    "options": [
+     "mitosis.",
+     "hypertrophy.",
+     "necrosis.",
+     "death."
+    ],
+    "correct": 3
    },
    {
     "q": "Which is not normally secreted in response to stress?",
-    "a": "Insulin"
+    "options": [
+     "Glucagon",
+     "Epinephrine",
+     "Insulin",
+     "Cortisol"
+    ],
+    "correct": 2
    },
    {
     "q": "The effects of excessive cortisol production include",
-    "a": "immune suppression."
+    "options": [
+     "hyperglycemia.",
+     "immune suppression.",
+     "decreased blood pressure.",
+     "immune enhancement."
+    ],
+    "correct": 1
    },
    {
     "q": "All the following stress-induced hormones increase blood glucose except",
-    "a": "aldosterone."
+    "options": [
+     "cortisol.",
+     "epinephrine.",
+     "glucagon.",
+     "aldosterone."
+    ],
+    "correct": 3
    },
    {
     "q": "All these cellular responses are potentially reversible except",
-    "a": "necrosis."
+    "options": [
+     "hyperplasia.",
+     "necrosis.",
+     "hydropic swelling.",
+     "atrophy."
+    ],
+    "correct": 1
    },
    {
     "q": "Selye's three phases of the stress response include all the following except",
-    "a": "allostasis."
+    "options": [
+     "resistance.",
+     "adaptation.",
+     "exhaustion.",
+     "allostasis."
+    ],
+    "correct": 3
    },
    {
     "q": "An obese but otherwise healthy teen is given a prescription for a low-calorie diet and exercise program. This is an example of",
-    "a": "secondary prevention."
+    "options": [
+     "tertiary prevention.",
+     "palliative care.",
+     "secondary prevention.",
+     "primary prevention."
+    ],
+    "correct": 2
    },
    {
     "q": "After suffering a heart attack, a middle-aged man is counseled to take a cholesterol-lowering medication. This is an example of",
-    "a": "tertiary prevention."
+    "options": [
+     "secondary prevention.",
+     "primary prevention.",
+     "screening.",
+     "tertiary prevention."
+    ],
+    "correct": 3
    },
    {
     "q": "Allostasis is best defined as",
-    "a": "the overall process of adaptive change necessary to maintain survival and well-being."
+    "options": [
+     "a state of complete physiologic equilibrium with no variability.",
+     "the process exclusive to psychological stress responses.",
+     "the fixed set point maintained by the body at all times.",
+     "the overall process of adaptive change necessary to maintain survival and well-being."
+    ],
+    "correct": 3
    },
    {
     "q": "Many of the responses to stress are attributed to activation of the sympathetic nervous system and are mediated by",
-    "a": "norepinephrine."
+    "options": [
+     "dopamine.",
+     "acetylcholine.",
+     "norepinephrine.",
+     "serotonin."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient has been exposed to meningococcal meningitis, but is not yet demonstrating signs of this disease. This stage of illness is called the _____ stage.",
-    "a": "latent"
+    "options": [
+     "latent",
+     "subclinical",
+     "convalescent",
+     "prodromal"
+    ],
+    "correct": 0
    },
    {
     "q": "Breast cancer in women who have the breast cancer gene",
-    "a": "occurs at an earlier age."
+    "options": [
+     "occurs at an earlier age.",
+     "occurs at a later age.",
+     "is unrelated to age of onset.",
+     "only affects male relatives."
+    ],
+    "correct": 0
    },
    {
     "q": "Carbon monoxide injures cells by",
-    "a": "reducing oxygen level on hemoglobin."
+    "options": [
+     "increasing cellular metabolism.",
+     "displacing oxygen on hemoglobin.",
+     "causing direct DNA damage.",
+     "reducing oxygen level on hemoglobin."
+    ],
+    "correct": 3
    },
    {
     "q": "Malignant neoplasms of epithelial origin are known as",
-    "a": "carcinomas."
+    "options": [
+     "carcinomas.",
+     "lymphomas.",
+     "adenomas.",
+     "sarcomas."
+    ],
+    "correct": 0
    },
    {
     "q": "The nurse is swabbing a patient's throat to test for streptococcal pharyngitis. The nurse must understand that tests such as this differ in the probability that they will be positive for a condition when applied to a person with the condition; this probability is termed sensitivity.",
-    "a": "True"
+    "options": [
+     "True",
+     "False",
+     "Only true for bacterial tests",
+     "Only true for viral tests"
+    ],
+    "correct": 0
    },
    {
     "q": "The primary adaptive purpose of the substances produced in the alarm stage is",
-    "a": "energy and repair."
+    "options": [
+     "permanent structural change.",
+     "immune suppression only.",
+     "energy and repair.",
+     "decreased metabolic rate."
+    ],
+    "correct": 2
    },
    {
     "q": "The stage during which the patient functions normally, although the disease processes are well established, is referred to as",
-    "a": "subclinical."
+    "options": [
+     "prodromal.",
+     "subacute.",
+     "subclinical.",
+     "latent."
+    ],
+    "correct": 2
    },
    {
     "q": "An increase in organ size and function caused by increased workload is termed",
-    "a": "hypertrophy."
+    "options": [
+     "hypertrophy.",
+     "hyperplasia only.",
+     "metaplasia.",
+     "atrophy."
+    ],
+    "correct": 0
    },
    {
     "q": "Somatic death refers to death",
-    "a": "of the entire organism."
+    "options": [
+     "of localized tissue only.",
+     "that is always preceded by illness.",
+     "of a single organ.",
+     "of the entire organism."
+    ],
+    "correct": 3
    },
    {
     "q": "Coagulative necrosis is caused by",
-    "a": "interrupted blood supply."
+    "options": [
+     "interrupted blood supply.",
+     "liquefactive necrosis.",
+     "fat necrosis.",
+     "caseous necrosis."
+    ],
+    "correct": 0
    }
   ]
  },
  "2": {
-  "title": "Chapters 10, 11, 13, 14, and 15 (Immunity, Hematology, Blood Flow)",
+  "title": "Week 2 \u2014 Chapters 10, 11, 13, 14, and 15 (Immunity, Hematology, Blood Flow)",
   "questions": [
    {
     "q": "In general, the best prognosis for long-term disease-free survival occurs with",
-    "a": "ALL (acute lymphoid leukemia)."
+    "options": [
+     "CML (chronic myeloid leukemia).",
+     "CLL (chronic lymphocytic leukemia).",
+     "ALL (acute lymphoid leukemia).",
+     "AML (acute myeloid leukemia)."
+    ],
+    "correct": 2
    },
    {
     "q": "The hypersensitivity reaction that does not involve antibody production is type",
-    "a": "IV."
+    "options": [
+     "IV.",
+     "II.",
+     "III.",
+     "I."
+    ],
+    "correct": 0
    },
    {
     "q": "Severe combined immunodeficiency (SCID) syndrome is an example of a(n)",
-    "a": "deficient immune response."
+    "options": [
+     "an autoimmune disorder.",
+     "deficient immune response.",
+     "a hypersensitivity disorder.",
+     "an excessive immune response."
+    ],
+    "correct": 1
    },
    {
     "q": "Which is not a manifestation of acute arterial obstruction?",
-    "a": "Purpura"
+    "options": [
+     "Intermittent claudication",
+     "Purpura",
+     "Diminished pulses",
+     "Pallor"
+    ],
+    "correct": 1
    },
    {
     "q": "Myasthenia gravis is a type II hypersensitivity disorder that involves",
-    "a": "impaired muscle function."
+    "options": [
+     "excess antibody production.",
+     "T-cell mediated cytotoxicity only.",
+     "impaired muscle function.",
+     "mast cell degranulation."
+    ],
+    "correct": 2
    },
    {
     "q": "Which condition enhances lymphatic flow?",
-    "a": "Increased interstitial fluid colloid osmotic pressure"
+    "options": [
+     "Increased interstitial fluid colloid osmotic pressure",
+     "Decreased blood pressure",
+     "Increased venous pressure",
+     "Decreased respiratory rate"
+    ],
+    "correct": 0
    },
    {
     "q": "The Philadelphia chromosome is a balanced chromosome translocation that forms a new gene called",
-    "a": "bcr-abl."
+    "options": [
+     "ras-myc.",
+     "bcr-abl.",
+     "p53-rb.",
+     "her2-neu."
+    ],
+    "correct": 1
    },
    {
     "q": "A primary effector cell of the type I hypersensitivity response is",
-    "a": "mast cells."
+    "options": [
+     "neutrophils.",
+     "B lymphocytes.",
+     "cytotoxic T cells.",
+     "mast cells."
+    ],
+    "correct": 3
    },
    {
     "q": "Certain autoimmune diseases are associated with the presence of specific proteins on a person's cells. These proteins are called ________ proteins.",
-    "a": "HLA or MHC"
+    "options": [
+     "complement",
+     "immunoglobulin",
+     "HLA or MHC",
+     "cytokine"
+    ],
+    "correct": 2
    },
    {
     "q": "Tissues are able to autoregulate their rate of blood flow by controlling",
-    "a": "vascular resistance."
+    "options": [
+     "hormonal signals exclusively.",
+     "vascular resistance.",
+     "systemic blood pressure only.",
+     "cardiac output alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Velocity of blood flow is measured in",
-    "a": "centimeters per second."
+    "options": [
+     "centimeters per second.",
+     "milliliters per minute.",
+     "millimeters of mercury.",
+     "liters per second."
+    ],
+    "correct": 0
    },
    {
     "q": "Which type of leukemia primarily affects children?",
-    "a": "ALL (acute lymphoid leukemia)"
+    "options": [
+     "CLL (chronic lymphocytic leukemia)",
+     "CML (chronic myeloid leukemia)",
+     "ALL (acute lymphoid leukemia)",
+     "AML (acute myeloid leukemia)"
+    ],
+    "correct": 2
    },
    {
     "q": "A serious complication of deep vein thrombosis is",
-    "a": "pulmonary embolus."
+    "options": [
+     "pulmonary embolus.",
+     "stem cells are genetically modified before return.",
+     "donor stem cells are given to the patient.",
+     "the patient's tumor cells are used to create a vaccine."
+    ],
+    "correct": 0
    },
    {
     "q": "Autologous stem cell transplantation is a procedure in which",
-    "a": "stem cells are harvested from the patient and then returned to the same patient."
+    "options": [
+     "increased plasma protein levels.",
+     "stem cells are harvested from the patient and then returned to the same patient.",
+     "decreased capillary hydrostatic pressure.",
+     "increased lymphatic drainage."
+    ],
+    "correct": 1
    },
    {
     "q": "Peripheral edema is a result of",
-    "a": "venous thrombosis."
+    "options": [
+     "hair loss.",
+     "nausea and vomiting.",
+     "venous thrombosis.",
+     "fatigue."
+    ],
+    "correct": 2
    },
    {
     "q": "The patient is a 12-year-old boy diagnosed with acute lymphoid leukemia (ALL). As part of treatment, the patient must undergo several weeks of chemotherapy. The most serious complication of chemotherapy is",
-    "a": "infection."
+    "options": [
+     "infection.",
+     "CR is complete disappearance of all leukemic cells including molecular markers.",
+     "CR is a normal platelet count with no other criteria.",
+     "CR is less than 20% blasts in marrow."
+    ],
+    "correct": 0
    },
    {
     "q": "What is the correct definition of complete remission (CR) of leukemia?",
-    "a": "CR is less than 5% blasts in marrow and normal CBC values."
+    "options": [
+     "increased pulses.",
+     "warm, red extremities.",
+     "decreased skin temperature.",
+     "CR is less than 5% blasts in marrow and normal CBC values."
+    ],
+    "correct": 3
    },
    {
     "q": "Clinical manifestations of chronic arterial obstruction include",
-    "a": "intermittent claudication."
+    "options": [
+     "encouraging ambulation.",
+     "administration of iron supplements.",
+     "blood transfusion.",
+     "intermittent claudication."
+    ],
+    "correct": 3
    },
    {
     "q": "While in the hospital for management of acute lymphoid leukemia (ALL), a patient develops severe thrombocytopenia. The most appropriate action for this condition is",
-    "a": "activity restriction."
+    "options": [
+     "activity restriction.",
+     "Sickle cell disease",
+     "Polycythemia vera",
+     "Hemophilia"
+    ],
+    "correct": 0
    },
    {
     "q": "Renal insufficiency is a common complication of which disease?",
-    "a": "Myeloma"
+    "options": [
+     "Pallor",
+     "Myeloma",
+     "Fatigue only",
+     "Elevated hemoglobin"
+    ],
+    "correct": 1
    },
    {
     "q": "Which characteristic is indicative of hemolytic anemia?",
-    "a": "Jaundice"
+    "options": [
+     "acute blood loss.",
+     "hepatitis B infection.",
+     "iron deficiency.",
+     "Jaundice"
+    ],
+    "correct": 3
    },
    {
     "q": "A newborn has melena, bleeding from the umbilicus, and hematuria. The newborn most likely experiencing",
-    "a": "vitamin K deficiency bleeding."
+    "options": [
+     "thrombocytopenia.",
+     "disseminated intravascular coagulation.",
+     "vitamin K deficiency bleeding.",
+     "hemophilia A."
+    ],
+    "correct": 2
    },
    {
     "q": "The activated partial thromboplastin time (aPTT) is a measure of the integrity of",
-    "a": "the intrinsic pathway."
+    "options": [
+     "the common pathway only.",
+     "the intrinsic pathway.",
+     "the extrinsic pathway.",
+     "platelet function exclusively."
+    ],
+    "correct": 1
    },
    {
     "q": "Blood flow is slow through capillaries because capillaries",
-    "a": "have the largest total cross-sectional area."
+    "options": [
+     "receive blood directly from the aorta.",
+     "have the largest total cross-sectional area.",
+     "have the smallest individual diameter.",
+     "are lined with smooth muscle."
+    ],
+    "correct": 1
    },
    {
     "q": "What is necessary for red blood cell production?",
-    "a": "Iron"
+    "options": [
+     "Vitamin D",
+     "Vitamin B12",
+     "Iron",
+     "Vitamin C"
+    ],
+    "correct": 2
    },
    {
     "q": "Red blood cells obtain nearly all their energy from metabolism of",
-    "a": "glucose."
+    "options": [
+     "glucose.",
+     "fatty acids.",
+     "amino acids.",
+     "ketone bodies."
+    ],
+    "correct": 0
    },
    {
     "q": "Most carbon dioxide is transported in the bloodstream as",
-    "a": "bicarbonate ion."
+    "options": [
+     "carbonic acid.",
+     "bicarbonate ion.",
+     "dissolved gas.",
+     "carbaminohemoglobin."
+    ],
+    "correct": 1
    },
    {
     "q": "Vaccination for pneumococcal pneumonia should be performed before 1 year of age in patients with sickle cell anemia.",
-    "a": "False"
+    "options": [
+     "Only after age 2",
+     "False",
+     "Only if symptomatic",
+     "True"
+    ],
+    "correct": 1
    },
    {
     "q": "Widespread activation of the clotting cascade secondary to massive trauma is called",
-    "a": "disseminated intravascular coagulation (DIC)."
+    "options": [
+     "False \u2014 this describes iron deficiency anemia",
+     "False \u2014 this is a description of hemolytic anemia",
+     "disseminated intravascular coagulation (DIC).",
+     "False \u2014 megaloblasts are only seen in leukemia"
+    ],
+    "correct": 2
    },
    {
     "q": "The anemia resulting from a deficiency of either vitamin B12 (cobalamin) or folate is caused by a disruption in DNA synthesis of the blast cells in the bone marrow that produces very large abnormal bone marrow cells called megaloblasts.",
-    "a": "True"
+    "options": [
+     "The aorta",
+     "The capillaries",
+     "The pulmonary artery",
+     "True"
+    ],
+    "correct": 3
    },
    {
     "q": "Which vessel normally demonstrates the most rapid blood flow?",
-    "a": "The vena cava"
+    "options": [
+     "Thalassemia",
+     "Iron-deficiency anemia",
+     "The vena cava",
+     "Aplastic anemia"
+    ],
+    "correct": 2
    },
    {
     "q": "Which condition is associated with an elevated reticulocyte count?",
-    "a": "Hemolytic anemia"
+    "options": [
+     "the intrinsic pathway alone.",
+     "platelet activation.",
+     "Hemolytic anemia",
+     "vitamin K deficiency."
+    ],
+    "correct": 2
    },
    {
     "q": "Activation of the extrinsic pathway of coagulation is initiated by",
-    "a": "tissue thromboplastin."
+    "options": [
+     "desmopressin (DDAVP).",
+     "splenectomy.",
+     "vitamin K administration.",
+     "tissue thromboplastin."
+    ],
+    "correct": 3
    },
    {
     "q": "Treatment for hemophilia A includes",
-    "a": "factor VIII replacement."
+    "options": [
+     "radiation exposure.",
+     "factor VIII replacement.",
+     "iron deficiency.",
+     "vitamin B12 deficiency."
+    ],
+    "correct": 1
    },
    {
     "q": "A cause of thrombocytopenia includes",
-    "a": "chemotherapy."
+    "options": [
+     "15 and 20",
+     "chemotherapy.",
+     "10 and 14",
+     "1 and 3"
+    ],
+    "correct": 1
    },
    {
     "q": "A patient presents to the physician's office with pinpoint hemorrhages on the skin. The patient is most likely between the ages of _____ years.",
-    "a": "4 and 7"
+    "options": [
+     "4 and 7",
+     "associated with megaloblasts.",
+     "macrocytic.",
+     "normocytic."
+    ],
+    "correct": 0
    },
    {
     "q": "Thalassemia may be confused with iron-deficiency anemia, because they are both",
-    "a": "microcytic."
+    "options": [
+     "acetaminophen.",
+     "microcytic.",
+     "warfarin.",
+     "vitamin K."
+    ],
+    "correct": 1
    },
    {
     "q": "A commonly ingested substance associated with prolongation of the bleeding time is",
-    "a": "aspirin."
+    "options": [
+     "hemophilia.",
+     "hereditary hemorrhagic telangiectasia.",
+     "von Willebrand disease alone.",
+     "aspirin."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient is diagnosed with a tortuous blood vessel of the right hand that bleeds spontaneously. This patient presents with",
-    "a": "telangiectasia."
+    "options": [
+     "no change in the dissociation curve.",
+     "telangiectasia.",
+     "decreased hemoglobin saturation.",
+     "shift to the right."
+    ],
+    "correct": 1
    },
    {
     "q": "An increase in hemoglobin affinity for oxygen occurs with",
-    "a": "shift to the left."
+    "options": [
+     "shift to the left.",
+     "renal regulation only.",
+     "the endocrine system alone.",
+     "local tissue metabolites exclusively."
+    ],
+    "correct": 0
    },
    {
     "q": "Blood flow throughout the periphery is regulated by",
-    "a": "the autonomic nervous system."
+    "options": [
+     "Q = R - P",
+     "Q = R/P",
+     "the autonomic nervous system.",
+     "Q = P x R"
+    ],
+    "correct": 2
    },
    {
     "q": "The relationship of blood flow (Q), resistance (R), and pressure (P) in a vessel can be expressed by which equation?",
-    "a": "Q = P/R"
+    "options": [
+     "Q = P/R",
+     "IgG.",
+     "IgA.",
+     "IgM."
+    ],
+    "correct": 0
    },
    {
     "q": "The principle Ig mediator of type I hypersensitivity reactions is",
-    "a": "IgE."
+    "options": [
+     "IgE.",
+     "present with excessive bleeding.",
+     "have normal growth and development.",
+     "develop autoimmune disease."
+    ],
+    "correct": 0
    },
    {
     "q": "Patients with immunodeficiency disorders are usually first identified because they",
-    "a": "develop recurrent infections."
+    "options": [
+     "develop recurrent infections.",
+     "decreases venous return only",
+     "decreases capillary hydrostatic",
+     "increases lymphatic flow"
+    ],
+    "correct": 0
    },
    {
     "q": "Venous obstruction leads to edema because it ________ pressure.",
-    "a": "increases capillary hydrostatic"
+    "options": [
+     "vasoconstriction.",
+     "decreased mast cell activity.",
+     "increases capillary hydrostatic",
+     "decreased capillary permeability."
+    ],
+    "correct": 2
    },
    {
     "q": "The effects of histamine release include",
-    "a": "increased vascular permeability."
+    "options": [
+     "donor antibodies.",
+     "increased vascular permeability.",
+     "platelet activation.",
+     "complement deficiency alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Transfusion reactions involve RBC destruction caused by",
-    "a": "recipient antibodies."
+    "options": [
+     "Chronic cough, hemoptysis, weight loss",
+     "Painless lymphadenopathy, weight loss, night sweats",
+     "Joint pain, rash, photosensitivity",
+     "recipient antibodies."
+    ],
+    "correct": 3
    },
    {
     "q": "Which group of clinical findings describes the typical presentation of ALL (acute lymphoid leukemia)?",
-    "a": "Pain in long bones, infection, fever, bruising"
+    "options": [
+     "Positive Coombs test",
+     "Pain in long bones, infection, fever, bruising",
+     "Elevated hemoglobin",
+     "Elevated serum calcium only"
+    ],
+    "correct": 1
    },
    {
     "q": "A diagnostic laboratory finding in myeloma is",
-    "a": "Bence Jones proteins in the urine."
+    "options": [
+     "Anemia",
+     "Bence Jones proteins in the urine.",
+     "Hypertension",
+     "Polycythemia"
+    ],
+    "correct": 1
    },
    {
     "q": "Which is not considered to be a risk factor for thrombus formation?",
-    "a": "Thrombocytopenia"
+    "options": [
+     "Thrombocytopenia",
+     "II",
+     "I",
+     "IV"
+    ],
+    "correct": 0
    },
    {
     "q": "A child with a history of recent strep throat infection develops glomerulonephritis. This is most likely a type _____ hypersensitivity reaction.",
-    "a": "III"
+    "options": [
+     "cytomegalovirus.",
+     "human papillomavirus.",
+     "III",
+     "hepatitis C virus."
+    ],
+    "correct": 2
    },
    {
     "q": "Burkitt lymphoma is most closely associated with",
-    "a": "Epstein\u2013Barr virus."
+    "options": [
+     "Epstein\u2013Barr virus.",
+     "hypocalcemia.",
+     "diabetes mellitus.",
+     "vitamin deficiency."
+    ],
+    "correct": 0
    },
    {
     "q": "Risk factors for atherosclerosis include",
-    "a": "hyperlipidemia."
+    "options": [
+     "IgG-mediated cytotoxicity affects the heart.",
+     "complement activation causes bronchospasm.",
+     "hyperlipidemia.",
+     "T-cell cytokines cause direct vasodilation."
+    ],
+    "correct": 2
    },
    {
     "q": "Dramatic hypotension sometimes accompanies type I hypersensitivity reactions, because",
-    "a": "massive histamine release from mast cells leads to vasodilation."
+    "options": [
+     "increase platelet production.",
+     "dissolve the existing clot.",
+     "massive histamine release from mast cells leads to vasodilation.",
+     "reverse vitamin K deficiency."
+    ],
+    "correct": 2
    },
    {
     "q": "The goal of long term heparin for the management of a deep vein thrombosis is to",
-    "a": "prevent further clot formation."
+    "options": [
+     "oxygen consumption rate.",
+     "oxygen-carrying capacity.",
+     "prevent further clot formation.",
+     "hemoglobin concentration alone."
+    ],
+    "correct": 2
    },
    {
     "q": "The strength of the bond between oxygen and hemoglobin is known as the",
-    "a": "oxygen-hemoglobin affinity."
+    "options": [
+     "Pernicious anemia",
+     "oxygen-hemoglobin affinity.",
+     "Aplastic anemia",
+     "Sickle cell anemia"
+    ],
+    "correct": 1
    },
    {
     "q": "A low mean corpuscular hemoglobin concentration (MCHC) and mean corpuscular volume (MCV) are characteristic of which type of anemia?",
-    "a": "Iron deficiency"
+    "options": [
+     "Iron deficiency",
+     "promote clot formation.",
+     "replace deficient clotting factors.",
+     "increase platelet count."
+    ],
+    "correct": 0
    },
    {
     "q": "Disseminated intravascular coagulation may be treated with heparin therapy to",
-    "a": "inhibit clotting factor consumption."
+    "options": [
+     "inhibit clotting factor consumption.",
+     "True only for Hodgkin lymphoma",
+     "False",
+     "True only in pediatric patients"
+    ],
+    "correct": 0
    },
    {
     "q": "Two of the most serious oncology emergencies associated with non-Hodgkin lymphoma are obstruction of the superior vena cava and compression of the spinal cord.",
-    "a": "True"
+    "options": [
+     "folate absorption.",
+     "extrinsic factor.",
+     "vitamin B6.",
+     "True"
+    ],
+    "correct": 3
    },
    {
     "q": "Pernicious anemia is caused by a lack of",
-    "a": "intrinsic factor."
+    "options": [
+     "intrinsic factor.",
+     "Iron supplementation",
+     "Splenectomy",
+     "Fluid restriction"
+    ],
+    "correct": 0
    },
    {
     "q": "The most appropriate treatment for secondary polycythemia is",
-    "a": "Measures to improve oxygenation (oxygen therapy)."
+    "options": [
+     "thrombocytopenia.",
+     "Measures to improve oxygenation (oxygen therapy).",
+     "von Willebrand disease.",
+     "vitamin K deficiency."
+    ],
+    "correct": 1
    },
    {
     "q": "A 3-year-old boy who exhibits prolonged bleeding after minor trauma and a prolonged aPTT, but a normal platelet count, is likely to be diagnosed with",
-    "a": "hemophilia."
+    "options": [
+     "hemophilia.",
+     "common pathway alone.",
+     "intrinsic pathway.",
+     "platelet function."
+    ],
+    "correct": 0
    },
    {
     "q": "The prothrombin time (PT) and INR (international normalized ratio) measure the integrity of",
-    "a": "extrinsic pathway."
+    "options": [
+     "dialysis.",
+     "extrinsic pathway.",
+     "blood transfusion alone.",
+     "iron supplementation."
+    ],
+    "correct": 1
    },
    {
     "q": "The most effective therapy for anemia associated with kidney failure is",
-    "a": "erythropoietin administration."
+    "options": [
+     "True only for AML",
+     "False",
+     "True only in pediatric CML",
+     "erythropoietin administration."
+    ],
+    "correct": 3
    },
    {
     "q": "The only known curative treatment for CML is allogeneic bone marrow transplantation from a suitable donor.",
-    "a": "True"
+    "options": [
+     "22.0",
+     "15.5",
+     "True",
+     "16.8"
+    ],
+    "correct": 2
    },
    {
     "q": "The arterial oxygen content (CaO2) for a patient with PaO2 100 mm Hg, SaO2 95%, and hemoglobin 15 g/dL is _____ mL oxygen/dL.",
-    "a": "19.4"
+    "options": [
+     "vitamin K activation.",
+     "19.4",
+     "platelet aggregation.",
+     "thrombus formation."
+    ],
+    "correct": 1
    },
    {
     "q": "The conversion of plasminogen to plasmin results in",
-    "a": "fibrinolysis."
+    "options": [
+     "Autoimmune disease",
+     "Hypersensitivity disorder",
+     "Secondary immunodeficiency disease",
+     "fibrinolysis."
+    ],
+    "correct": 3
    },
    {
     "q": "Which disorder is considered a primary immunodeficiency disease?",
-    "a": "HIV/AIDS"
+    "options": [
+     "HIV/AIDS",
+     "juvenile rheumatoid arthritis.",
+     "osteomyelitis.",
+     "growing pains."
+    ],
+    "correct": 0
    },
    {
     "q": "A 5-year-old patient's parents report loss of appetite and fatigue in their child. The parents also state that the child refuses to walk as a result of pain. The child's most likely diagnosis is",
-    "a": "ALL (acute lymphoid leukemia)"
+    "options": [
+     "ischemia.",
+     "ALL (acute lymphoid leukemia)",
+     "vasoconstriction.",
+     "ecchymosis."
+    ],
+    "correct": 1
    },
    {
     "q": "When a patient is struck in the eye by a baseball, the result is redness and swelling. This increase in blood flow to a localized area is called",
-    "a": "hyperemia."
+    "options": [
+     "hyperemia.",
+     "Resistance remains unchanged.",
+     "Resistance decreases by a factor of 16.",
+     "Resistance increases by a factor of 4."
+    ],
+    "correct": 0
    },
    {
     "q": "What is the effect on resistance if the radius of a vessel is halved?",
-    "a": "Resistance increases by a factor of 16."
+    "options": [
+     "Resistance increases by a factor of 16.",
+     "organ failure from tumor infiltration alone.",
+     "hemorrhage.",
+     "cachexia."
+    ],
+    "correct": 0
    },
    {
     "q": "The major cause of death from leukemic disease is",
-    "a": "infection."
+    "options": [
+     "CLL (chronic lymphocytic leukemia)",
+     "ALL (acute lymphoid leukemia)",
+     "infection.",
+     "AML (acute myeloid leukemia)"
+    ],
+    "correct": 2
    },
    {
     "q": "Which form of leukemia demonstrates the presence of the Philadelphia chromosome?",
-    "a": "CML (chronic myeloid leukemia)"
+    "options": [
+     "heparin.",
+     "CML (chronic myeloid leukemia)",
+     "serotonin.",
+     "bradykinin."
+    ],
+    "correct": 1
    },
    {
     "q": "An important mediator of a type I hypersensitivity reaction is",
-    "a": "histamine."
+    "options": [
+     "Spleen",
+     "Kidney",
+     "Bone marrow",
+     "histamine."
+    ],
+    "correct": 3
    },
    {
     "q": "Dysfunction of which organ would lead to clotting factor deficiency?",
-    "a": "Liver"
+    "options": [
+     "factor VIII deficiency.",
+     "Liver",
+     "normal bleeding time increased with thrombocytopenia.",
+     "platelet dysfunction."
+    ],
+    "correct": 1
    },
    {
     "q": "A normal bleeding time in association with normal platelet count, and increased prothrombin time (PT) and INR, is indicative of",
-    "a": "vitamin K deficiency."
+    "options": [
+     "immunoglobulins.",
+     "erythropoietin.",
+     "fibrinogen.",
+     "vitamin K deficiency."
+    ],
+    "correct": 3
    },
    {
     "q": "The megakaryocyte is a precursor to",
-    "a": "platelets."
+    "options": [
+     "reverses direction.",
+     "platelets.",
+     "increases.",
+     "remains constant."
+    ],
+    "correct": 1
    },
    {
     "q": "When systemic vascular resistance is decreased, blood flow",
-    "a": "decreases."
+    "options": [
+     "decreases.",
+     "liver.",
+     "spleen.",
+     "adrenal gland."
+    ],
+    "correct": 0
    },
    {
     "q": "The primary source of erythropoietin is provided by the",
-    "a": "kidney."
+    "options": [
+     "kidney.",
+     "vessel length only.",
+     "compliance.",
+     "elasticity alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The movement of blood through the vascular system is opposed by the force of",
-    "a": "resistance."
+    "options": [
+     "haptoglobin.",
+     "albumin.",
+     "creatinine.",
+     "resistance."
+    ],
+    "correct": 3
    },
    {
     "q": "Excessive red cell lysis can be detected by measuring the serum",
-    "a": "bilirubin."
+    "options": [
+     "bilirubin.",
+     "hematocrit.",
+     "reticulocyte count alone.",
+     "hemoglobin."
+    ],
+    "correct": 0
    }
   ]
  },
  "3": {
-  "title": "Chapters 16, 18, 19, and 20 (Cardiovascular & Shock)",
+  "title": "Week 3 \u2014 Chapters 16, 18, 19, and 20 (Cardiovascular & Shock)",
   "questions": [
    {
     "q": "Hypertension with a specific, identifiable cause is known as _____ hypertension.",
-    "a": "secondary"
+    "options": [
+     "primary",
+     "essential",
+     "idiopathic",
+     "secondary"
+    ],
+    "correct": 3
    },
    {
     "q": "An example of an acyanotic heart defect is",
-    "a": "ventricular septal defect."
+    "options": [
+     "tricuspid atresia.",
+     "transposition of the great vessels.",
+     "ventricular septal defect.",
+     "tetralogy of Fallot."
+    ],
+    "correct": 2
    },
    {
     "q": "The majority of cardiac cells that die after myocardial infarction do so because of",
-    "a": "apoptosis."
+    "options": [
+     "necrosis.",
+     "apoptosis.",
+     "autophagy.",
+     "hypertrophy."
+    ],
+    "correct": 1
    },
    {
     "q": "Myocarditis should be suspected in a patient who presents with",
-    "a": "acute onset of left ventricular dysfunction."
+    "options": [
+     "peripheral edema without cardiac symptoms.",
+     "isolated valve calcification.",
+     "acute onset of left ventricular dysfunction.",
+     "chronic, progressive fatigue only."
+    ],
+    "correct": 2
    },
    {
     "q": "What results when systemic blood pressure is increased?",
-    "a": "Vasoconstriction"
+    "options": [
+     "Vasodilation",
+     "Decreased heart rate",
+     "Vasoconstriction",
+     "Decreased cardiac output"
+    ],
+    "correct": 2
    },
    {
     "q": "A loud pansystolic murmur that radiates to the axilla is most likely a result of",
-    "a": "mitral regurgitation."
+    "options": [
+     "tricuspid stenosis.",
+     "aortic stenosis.",
+     "ventricular septal defect.",
+     "mitral regurgitation."
+    ],
+    "correct": 3
    },
    {
     "q": "An erroneously low blood pressure measurement may be caused by",
-    "a": "positioning the arm above the heart level."
+    "options": [
+     "using a cuff that is too large.",
+     "positioning the arm below heart level.",
+     "measuring immediately after exercise.",
+     "positioning the arm above the heart level."
+    ],
+    "correct": 3
    },
    {
     "q": "Which finding is indicative of orthostatic hypotension in a person with a supine blood pressure (BP) of 110/70 and a heart rate (HR) of 100?",
-    "a": "Sitting BP 88/60, HR 118"
+    "options": [
+     "Sitting BP 88/60, HR 118",
+     "Sitting BP 112/72, HR 96",
+     "Sitting BP 105/68, HR 104",
+     "Sitting BP 110/70, HR 100"
+    ],
+    "correct": 0
    },
    {
     "q": "New-organ damage is a function of both the stage of hypertension and its duration.",
-    "a": "True"
+    "options": [
+     "True only in secondary hypertension",
+     "True",
+     "True only in the elderly",
+     "False"
+    ],
+    "correct": 1
    },
    {
     "q": "Patients presenting with symptoms of unstable angina and no ST segment elevation are treated with",
-    "a": "antiplatelet drugs."
+    "options": [
+     "antiplatelet drugs.",
+     "thrombolytics only.",
+     "immediate coronary artery bypass.",
+     "beta-blockers alone as first-line therapy."
+    ],
+    "correct": 0
    },
    {
     "q": "The ingestion of certain drugs, foods, or chemicals can lead to secondary hypertension.",
-    "a": "True"
+    "options": [
+     "False",
+     "True only for essential hypertension",
+     "True",
+     "True only in pediatric patients"
+    ],
+    "correct": 2
    },
    {
     "q": "Lactated Ringer solution and normal saline are commonly used crystalloid solutions that contain electrolytes.",
-    "a": "True"
+    "options": [
+     "True",
+     "True only for normal saline",
+     "True only for Lactated Ringer solution",
+     "False"
+    ],
+    "correct": 0
    },
    {
     "q": "Aortic regurgitation is associated with",
-    "a": "diastolic murmur."
+    "options": [
+     "systolic murmur.",
+     "continuous murmur.",
+     "diastolic murmur.",
+     "no murmur is typically heard."
+    ],
+    "correct": 2
    },
    {
     "q": "The most reliable indicator that a person is experiencing an acute myocardial infarction (MI) is",
-    "a": "ST-segment elevation."
+    "options": [
+     "troponin elevation without ECG changes.",
+     "ST-segment elevation.",
+     "patient-reported chest pain alone.",
+     "elevated blood pressure."
+    ],
+    "correct": 1
    },
    {
     "q": "What compensatory sign would be expected during periods of physical exertion in a patient with limited ventricular stroke volume?",
-    "a": "Tachycardia"
+    "options": [
+     "Hypertension",
+     "Tachycardia",
+     "Bradycardia",
+     "Decreased respiratory rate"
+    ],
+    "correct": 1
    },
    {
     "q": "Atherosclerotic plaques with large lipid cores are prone to",
-    "a": "rupture."
+    "options": [
+     "spontaneous regression.",
+     "calcification.",
+     "decreased inflammation.",
+     "rupture."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient presents to the emergency department with a diastolic blood pressure of 132 mm Hg, retinopathy, and symptoms of an ischemic stroke. This symptomology is likely the result of",
-    "a": "hypertensive crisis."
+    "options": [
+     "hypertensive crisis.",
+     "essential hypertension.",
+     "orthostatic hypotension.",
+     "white coat hypertension."
+    ],
+    "correct": 0
    },
    {
     "q": "A patient with significant aortic stenosis is likely to experience",
-    "a": "syncope."
+    "options": [
+     "syncope.",
+     "heart failure.",
+     "peripheral edema alone.",
+     "hypotension."
+    ],
+    "correct": 0
    },
    {
     "q": "Hypotension, distended neck veins, and muffled heart sounds are classic manifestations of",
-    "a": "cardiac tamponade."
+    "options": [
+     "myocardial infarction.",
+     "pericarditis.",
+     "aortic dissection.",
+     "cardiac tamponade."
+    ],
+    "correct": 3
    },
    {
     "q": "The most commonly recognized outcome of hypertension is pulmonary disease.",
-    "a": "False"
+    "options": [
+     "True",
+     "False, it is renal disease only",
+     "False, it is cardiovascular disease",
+     "False"
+    ],
+    "correct": 3
    },
    {
     "q": "Cor pulmonale refers to",
-    "a": "right ventricular hypertrophy secondary to pulmonary hypertension."
+    "options": [
+     "left ventricular hypertrophy secondary to systemic hypertension.",
+     "right ventricular hypertrophy secondary to pulmonary hypertension.",
+     "congenital heart defect.",
+     "pulmonary edema from left heart failure."
+    ],
+    "correct": 1
    },
    {
     "q": "In which stage of shock is a patient who has lost 1200 mL of blood, who has normal blood pressure when supine, but who experiences orthostatic hypotension upon standing?",
-    "a": "Class II, Compensated Stage"
+    "options": [
+     "Class II, Compensated Stage",
+     "Class I, Compensated Stage",
+     "Class IV, Refractory Stage",
+     "Class III, Progressive Stage"
+    ],
+    "correct": 0
    },
    {
     "q": "The majority of cases of anaphylactic shock occur when a sensitized individual comes in contact with",
-    "a": "antibiotics."
+    "options": [
+     "pollen.",
+     "insect stings only.",
+     "antibiotics.",
+     "latex only."
+    ],
+    "correct": 2
    },
    {
     "q": "A type of shock that includes brain trauma that results in depression of the vasomotor center is cardiogenic.",
-    "a": "False"
+    "options": [
+     "False, it is always neurogenic",
+     "True only in pediatric trauma",
+     "False",
+     "True"
+    ],
+    "correct": 2
    },
    {
     "q": "Left-sided heart failure is characterized by",
-    "a": "pulmonary congestion."
+    "options": [
+     "pulmonary congestion.",
+     "jugular venous distention without pulmonary symptoms.",
+     "peripheral edema.",
+     "hepatomegaly alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The effect of nitric oxide on systemic arterioles is",
-    "a": "vasodilation."
+    "options": [
+     "increased platelet aggregation.",
+     "increased systemic vascular resistance.",
+     "vasodilation.",
+     "vasoconstriction."
+    ],
+    "correct": 2
    },
    {
     "q": "Hypotension associated with neurogenic and anaphylactic shock is because of",
-    "a": "peripheral pooling of blood."
+    "options": [
+     "mitral valve prolapse.",
+     "aortic stenosis.",
+     "ventricular septal defect.",
+     "peripheral pooling of blood."
+    ],
+    "correct": 3
    },
    {
     "q": "Hypertrophy of the right ventricle is a compensatory response to",
-    "a": "pulmonary stenosis."
+    "options": [
+     "fluid volume overload.",
+     "loss of vascular tone from sympathetic outflow.",
+     "decreased cardiac contractility.",
+     "pulmonary stenosis."
+    ],
+    "correct": 3
    },
    {
     "q": "Disseminated intravascular coagulation is a serious complication of septic shock characterized by abnormal clot formation in the microvasculature throughout the body.",
-    "a": "True"
+    "options": [
+     "atrial septal defect.",
+     "patent ductus arteriosus.",
+     "coarctation of the aorta.",
+     "True"
+    ],
+    "correct": 3
    },
    {
     "q": "Improvement in a patient with septic shock is indicated by an increase in",
-    "a": "systemic vascular resistance."
+    "options": [
+     "systemic vascular resistance.",
+     "True only in early sepsis",
+     "False",
+     "True only in cardiogenic shock"
+    ],
+    "correct": 0
    },
    {
     "q": "Administration of which therapy is most appropriate for hypovolemic shock?",
-    "a": "Crystalloids"
+    "options": [
+     "central venous pressure alone.",
+     "Crystalloids",
+     "blood lactate.",
+     "heart rate."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient with pure left-sided heart failure is likely to exhibit",
-    "a": "pulmonary congestion with dyspnea."
+    "options": [
+     "Vasopressors alone",
+     "pulmonary congestion with dyspnea.",
+     "Beta-blockers",
+     "Diuretics"
+    ],
+    "correct": 1
    },
    {
     "q": "A patient who was involved in a fall from a tree becomes short of breath. The lung sounds are absent on one side. This patient is experiencing ________ shock.",
-    "a": "obstructive"
+    "options": [
+     "biventricular failure.",
+     "obstructive",
+     "systemic hypotension.",
+     "right-sided heart failure with hepatomegaly."
+    ],
+    "correct": 1
    },
    {
     "q": "The progressive stage of hypovolemic shock is characterized by",
-    "a": "tachycardia."
+    "options": [
+     "septic.",
+     "tachycardia.",
+     "hypovolemic.",
+     "cardiogenic."
+    ],
+    "correct": 1
    },
    {
     "q": "After sitting in a chair for an hour, an elderly patient develops moderate lower extremity edema. His edema is most likely a consequence of",
-    "a": "right-sided heart failure."
+    "options": [
+     "hypotension.",
+     "bradycardia.",
+     "increased urine output.",
+     "right-sided heart failure."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient who reports dizziness and who has absent P waves, wide QRS complexes, and a heart rate of 38 beats/minute on an ECG is most likely in which rhythm?",
-    "a": "Ventricular escape rhythm"
+    "options": [
+     "left-sided heart failure.",
+     "pulmonary embolism.",
+     "dehydration.",
+     "Ventricular escape rhythm"
+    ],
+    "correct": 3
    },
    {
     "q": "Administration of a vasodilator to a patient in shock would be expected to",
-    "a": "decrease left ventricular afterload."
+    "options": [
+     "First-degree AV block",
+     "Sinus tachycardia",
+     "Third-degree AV block",
+     "decrease left ventricular afterload."
+    ],
+    "correct": 3
    },
    {
     "q": "Sepsis has been recently redefined as",
-    "a": "a systemic inflammatory response to infection."
+    "options": [
+     "increase systemic vascular resistance.",
+     "increase myocardial contractility.",
+     "increase preload.",
+     "a systemic inflammatory response to infection."
+    ],
+    "correct": 3
    },
    {
     "q": "In which dysrhythmias should treatment be instituted immediately?",
-    "a": "Atrial fibrillation with a ventricular rate of 220 beats/minute"
+    "options": [
+     "Sinus bradycardia at 60 beats/minute",
+     "First-degree AV block",
+     "Atrial fibrillation with a ventricular rate of 220 beats/minute",
+     "Occasional premature atrial complexes"
+    ],
+    "correct": 2
    },
    {
     "q": "Chronic elevation of myocardial wall tension results in atrophy.",
-    "a": "False"
+    "options": [
+     "a localized bacterial infection.",
+     "an autoimmune reaction to infection.",
+     "False",
+     "a condition limited to the bloodstream only."
+    ],
+    "correct": 2
    },
    {
     "q": "Which blood pressure reading is considered to be indicative of prehypertension according to the JNC-7 criteria?",
-    "a": "128/82"
+    "options": [
+     "128/82",
+     "False, it results in hypertrophy",
+     "False, it has no effect on the myocardium",
+     "True"
+    ],
+    "correct": 0
    },
    {
     "q": "Patent ductus arteriosus is accurately described as a(n)",
-    "a": "communication between the aorta and the pulmonary artery."
+    "options": [
+     "118/76",
+     "150/95",
+     "communication between the aorta and the pulmonary artery.",
+     "142/90"
+    ],
+    "correct": 2
    },
    {
     "q": "Critically ill patients may have parenterally administered vasoactive drugs that are adjusted according to their _____ pressure.",
-    "a": "mean arterial"
+    "options": [
+     "an abnormal opening between the ventricles.",
+     "a narrowing of the aorta.",
+     "mean arterial",
+     "a displacement of the great vessels."
+    ],
+    "correct": 2
    },
    {
     "q": "Angiotensin-converting enzyme (ACE) inhibitors block the",
-    "a": "conversion of angiotensin I to angiotensin II."
+    "options": [
+     "conversion of angiotensin I to angiotensin II.",
+     "pulmonary artery wedge",
+     "central venous",
+     "diastolic"
+    ],
+    "correct": 0
    },
    {
     "q": "Pulse pressure is defined as",
-    "a": "systolic pressure \u2013 diastolic pressure."
+    "options": [
+     "release of aldosterone directly.",
+     "conversion of angiotensinogen to angiotensin I.",
+     "renin release from the kidney.",
+     "systolic pressure \u2013 diastolic pressure."
+    ],
+    "correct": 3
    },
    {
     "q": "Constrictive pericarditis is associated with",
-    "a": "impaired cardiac filling."
+    "options": [
+     "cardiac output x resistance.",
+     "impaired cardiac filling.",
+     "mean arterial pressure \u2013 diastolic pressure.",
+     "systolic pressure + diastolic pressure."
+    ],
+    "correct": 1
    },
    {
     "q": "Restriction of which electrolytes is recommended in the management of high blood pressure?",
-    "a": "Sodium"
+    "options": [
+     "mitral regurgitation.",
+     "left ventricular hypertrophy.",
+     "aortic stenosis.",
+     "Sodium"
+    ],
+    "correct": 3
    },
    {
     "q": "A patient with a history of myocardial infarction continues to complain of intermittent chest pain brought on by exertion and relieved by rest. The likely cause of this pain is",
-    "a": "stable angina."
+    "options": [
+     "Calcium",
+     "Magnesium",
+     "Potassium",
+     "stable angina."
+    ],
+    "correct": 3
    },
    {
     "q": "A middle-aged patient has a follow up visit for a recorded blood pressure of 162/96 mm Hg taken 3 weeks ago. The patient has no significant past medical history and takes no medications, but smokes 1 1/2 packs of cigarettes per day, drinks alcohol regularly, and exercises infrequently. The patient is about 40 lbs. overweight and admits to a high-fat, high-calorie diet. At the office visit today, the patient's blood pressure is 150/92 mm Hg. What is the least appropriate intervention for this patient at this time?",
-    "a": "Begin antihypertensive drug therapy."
+    "options": [
+     "pericarditis.",
+     "unstable angina.",
+     "Prinzmetal angina.",
+     "Begin antihypertensive drug therapy."
+    ],
+    "correct": 3
    },
    {
     "q": "Mitral stenosis is associated with",
-    "a": "a pressure gradient across the mitral valve."
+    "options": [
+     "Recommend smoking cessation.",
+     "Immediately begin antihypertensive drug therapy.",
+     "Recommend a low-sodium diet.",
+     "a pressure gradient across the mitral valve."
+    ],
+    "correct": 3
    },
    {
     "q": "An elderly patient's blood pressure is measured at 160/98. How would the patient's left ventricular function be affected by this level of blood pressure?",
-    "a": "Left ventricular workload is increased with high afterload."
+    "options": [
+     "regurgitant flow through the mitral valve.",
+     "Left ventricular workload is increased with high afterload.",
+     "no significant pressure change across the valve.",
+     "increased left ventricular preload only."
+    ],
+    "correct": 1
    },
    {
     "q": "Angina caused by coronary artery spasm is called _____ angina.",
-    "a": "Prinzmetal variant"
+    "options": [
+     "Left ventricular function is unaffected by blood pressure.",
+     "Left ventricular workload is decreased with lower preload.",
+     "Right ventricular workload is primarily affected.",
+     "Prinzmetal variant"
+    ],
+    "correct": 3
    },
    {
     "q": "A patient is diagnosed with cardiogenic shock. The patient is hyperventilating and is therefore at risk for the respiratory complication of respiratory acidosis.",
-    "a": "False"
+    "options": [
+     "Stable",
+     "Silent",
+     "Ischemic",
+     "False"
+    ],
+    "correct": 3
    },
    {
     "q": "Which serum biomarker(s) are indicative of irreversible damage to myocardial cells?",
-    "a": "Elevated CK-MB, troponin I, and troponin T"
+    "options": [
+     "False, respiratory status is unaffected",
+     "True",
+     "False, it causes respiratory alkalosis instead",
+     "Elevated CK-MB, troponin I, and troponin T"
+    ],
+    "correct": 3
    },
    {
     "q": "Overproduction of nitric oxide is an important aspect of the pathophysiologic process of what type of shock?",
-    "a": "Septic"
+    "options": [
+     "Elevated white blood cell count alone",
+     "Elevated BNP alone",
+     "Elevated D-dimer only",
+     "Septic"
+    ],
+    "correct": 3
    },
    {
     "q": "An abnormally wide (more than 0.10 second) QRS complex is characteristic of",
-    "a": "premature ventricular complexes."
+    "options": [
+     "obstructive",
+     "hypovolemic",
+     "premature ventricular complexes.",
+     "cardiogenic"
+    ],
+    "correct": 2
    },
    {
     "q": "The common denominator in all forms of heart failure is",
-    "a": "reduced cardiac output."
+    "options": [
+     "sinus tachycardia.",
+     "reduced cardiac output.",
+     "atrial fibrillation.",
+     "complete heart block."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient with cold and edematous extremities, low cardiac output, and profound hypotension is likely to be experiencing a progressive stage of ________ shock.",
-    "a": "septic"
+    "options": [
+     "septic",
+     "elevated blood pressure.",
+     "increased stroke volume.",
+     "reduced cardiac output."
+    ],
+    "correct": 0
    },
    {
     "q": "First-degree heart block is characterized by",
-    "a": "prolonged PR interval."
+    "options": [
+     "neurogenic",
+     "cardiogenic",
+     "prolonged PR interval.",
+     "hypovolemic"
+    ],
+    "correct": 2
    },
    {
     "q": "Tumor necrosis factor \u03b1 and interleukin-1 contribute to shock states because they induce production of",
-    "a": "nitric oxide."
+    "options": [
+     "nitric oxide.",
+     "aldosterone.",
+     "epinephrine.",
+     "histamine."
+    ],
+    "correct": 0
    },
    {
     "q": "Increased preload of the cardiac chambers may lead to which patient symptom?",
-    "a": "Edema"
+    "options": [
+     "Edema",
+     "Bradycardia",
+     "Hypotension",
+     "Decreased urine output"
+    ],
+    "correct": 0
    },
    {
     "q": "A patient with heart failure who reports intermittent shortness of breath during the night is experiencing",
-    "a": "paroxysmal nocturnal dyspnea."
+    "options": [
+     "orthopnea.",
+     "paroxysmal nocturnal dyspnea.",
+     "stable angina.",
+     "claudication."
+    ],
+    "correct": 1
    },
    {
     "q": "In contrast to all other types of shock, the hyperdynamic phase of septic shock is associated with",
-    "a": "high cardiac output."
+    "options": [
+     "low cardiac output.",
+     "high cardiac output.",
+     "bradycardia.",
+     "hypertension."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient is diagnosed with heart failure with normal ejection fraction. This patient is most likely characterized by a(n)",
-    "a": "elderly woman without a previous history of MI."
+    "options": [
+     "a patient with normal diastolic function.",
+     "elderly woman without a previous history of MI.",
+     "a child with a congenital defect.",
+     "a young man with a prior MI."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient presenting with fever, hypotension, and lactic acidosis is most likely to be experiencing what type of shock?",
-    "a": "Septic"
+    "options": [
+     "neurogenic",
+     "Septic",
+     "hypovolemic",
+     "cardiogenic"
+    ],
+    "correct": 1
    }
   ]
  },
  "4": {
-  "title": "Chapters 22, 23, 24, and 25 (Respiratory & Fluid/Electrolyte/Acid-Base)",
+  "title": "Week 4 \u2014 Chapters 22, 23, 24, and 25 (Respiratory & Fluid/Electrolyte/Acid-Base)",
   "questions": [
    {
     "q": "The increased anterior-posterior chest diameter associated with obstructive lung disease is caused by",
-    "a": "increased residual lung volumes."
+    "options": [
+     "increased surfactant production.",
+     "increased residual lung volumes.",
+     "decreased airway resistance.",
+     "decreased lung compliance."
+    ],
+    "correct": 1
    },
    {
     "q": "Cystic fibrosis is associated with",
-    "a": "bronchiectasis."
+    "options": [
+     "restrictive lung disease.",
+     "decreased mucus production.",
+     "bronchiectasis.",
+     "pulmonary fibrosis."
+    ],
+    "correct": 2
    },
    {
     "q": "The assessment findings of a 5-year-old with a history of asthma include extreme shortness of breath, nasal flaring, coughing, pulsus paradoxus, and use of accessory respiratory muscles. There is no wheezing and the chest is silent in many areas. How should you interpret your assessment?",
-    "a": "The child may be having such a severe asthma episode that the airways are closed, so start oxygen and get the doctor immediately."
+    "options": [
+     "Encourage the child to cough forcefully to clear secretions.",
+     "The child may be having such a severe asthma episode that the airways are closed, so start oxygen and get the doctor immediately.",
+     "Administer a bronchodilator and reassess in 4 hours before escalating care.",
+     "This is a normal asthma presentation; continue routine monitoring."
+    ],
+    "correct": 1
    },
    {
     "q": "Widespread atelectasis, non-cardiogenic pulmonary edema, and diffuse, fluffy alveolar infiltrates on chest radiograph are characteristic of",
-    "a": "acute respiratory distress syndrome."
+    "options": [
+     "pneumothorax.",
+     "acute respiratory distress syndrome.",
+     "chronic bronchitis.",
+     "pulmonary embolism."
+    ],
+    "correct": 1
    },
    {
     "q": "What is likely to lead to hyponatremia?",
-    "a": "Frequent nasogastric tube irrigation with water"
+    "options": [
+     "Increased dietary sodium intake",
+     "Frequent nasogastric tube irrigation with water",
+     "Aldosterone excess",
+     "Excessive isotonic IV fluid administration"
+    ],
+    "correct": 1
    },
    {
     "q": "Bacterial pneumonia leads to hypoxemia caused by",
-    "a": "accumulation of alveolar exudates."
+    "options": [
+     "bronchospasm alone.",
+     "decreased surfactant production.",
+     "increased lung compliance.",
+     "accumulation of alveolar exudates."
+    ],
+    "correct": 3
    },
    {
     "q": "The patient who requires the most careful monitoring for development of metabolic acidosis is a patient who",
-    "a": "has had diarrhea for over a week."
+    "options": [
+     "is on long-term diuretic therapy.",
+     "has had diarrhea for over a week.",
+     "has been vomiting for over a week.",
+     "has hyperventilation from anxiety."
+    ],
+    "correct": 1
    },
    {
     "q": "Which assessment would support a diagnosis of type A COPD rather than type B COPD",
-    "a": "Normal PaCO2, scant sputum, accessory muscle use, barrel chest"
+    "options": [
+     "Normal chest x-ray, no accessory muscle use",
+     "Productive cough, cyanosis, elevated PaCO2",
+     "Normal PaCO2, scant sputum, accessory muscle use, barrel chest",
+     "Pink complexion, minimal dyspnea"
+    ],
+    "correct": 2
    },
    {
     "q": "Copious amounts of foul-smelling sputum are generally associated with",
-    "a": "bronchiectasis."
+    "options": [
+     "bronchiectasis.",
+     "pulmonary fibrosis.",
+     "pneumonia.",
+     "chronic bronchitis."
+    ],
+    "correct": 0
    },
    {
     "q": "Obstructive disorders are associated with",
-    "a": "low expiratory flow rates."
+    "options": [
+     "decreased residual volume.",
+     "high expiratory flow rates.",
+     "increased FEV1/FVC ratio.",
+     "low expiratory flow rates."
+    ],
+    "correct": 3
    },
    {
     "q": "Abnormalities in intracellular regulation of enzyme activity and cellular production of ATP are associated with",
-    "a": "hypophosphatemia."
+    "options": [
+     "hypernatremia.",
+     "hypophosphatemia.",
+     "hyperphosphatemia.",
+     "hypercalcemia."
+    ],
+    "correct": 1
    },
    {
     "q": "When preparing for the admission of a client diagnosed with bronchiectasis, the nurse will",
-    "a": "put a sputum cup and a box of tissues on the bedside table."
+    "options": [
+     "put a sputum cup and a box of tissues on the bedside table.",
+     "place the patient on strict bedrest.",
+     "prepare for immediate intubation.",
+     "restrict all visitors immediately without further assessment."
+    ],
+    "correct": 0
    },
    {
     "q": "The characteristic x-ray findings in tuberculosis include",
-    "a": "Ghon tubercles."
+    "options": [
+     "Diffuse bilateral infiltrates without cavitation.",
+     "Ghon tubercles.",
+     "Normal chest x-ray in early active disease.",
+     "Caseating granulomas visible only on biopsy."
+    ],
+    "correct": 1
    },
    {
     "q": "Which is indicative of a left tension pneumothorax?",
-    "a": "Absent breath sounds on the left"
+    "options": [
+     "Hyperresonance on the right",
+     "Bilateral wheezing",
+     "Absent breath sounds on the left",
+     "Decreased breath sounds bilaterally"
+    ],
+    "correct": 2
    },
    {
     "q": "Which pulmonary function test result is consistent with a diagnosis of asthma?",
-    "a": "Reduced forced expiratory volume in 1 second (FEV1)"
+    "options": [
+     "Reduced forced expiratory volume in 1 second (FEV1)",
+     "Normal FEV1/FVC ratio",
+     "Increased FEV1",
+     "Increased peak expiratory flow rate"
+    ],
+    "correct": 0
    },
    {
     "q": "Osmoreceptors located in the hypothalamus control the release of",
-    "a": "vasopressin (antidiuretic hormone, ADH)."
+    "options": [
+     "vasopressin (antidiuretic hormone, ADH).",
+     "growth hormone.",
+     "cortisol.",
+     "aldosterone."
+    ],
+    "correct": 0
    },
    {
     "q": "A common characteristic of viral pneumonia is",
-    "a": "dry cough."
+    "options": [
+     "dry cough.",
+     "lobar consolidation on x-ray.",
+     "high-grade fever with rigors.",
+     "productive cough."
+    ],
+    "correct": 0
    },
    {
     "q": "A restrictive respiratory disorder is characterized by",
-    "a": "decreased residual volume."
+    "options": [
+     "increased lung compliance.",
+     "increased residual volume.",
+     "increased total lung capacity.",
+     "decreased residual volume."
+    ],
+    "correct": 3
    },
    {
     "q": "Air that enters the pleural space during inspiration but is unable to exit during expiration creates a condition called",
-    "a": "tension pneumothorax."
+    "options": [
+     "hemothorax.",
+     "simple pneumothorax.",
+     "open pneumothorax.",
+     "tension pneumothorax."
+    ],
+    "correct": 3
    },
    {
     "q": "Obstructive sleep apnea would most likely be found in a patient diagnosed with",
-    "a": "Pickwickian syndrome."
+    "options": [
+     "restrictive lung disease.",
+     "primary hypertension.",
+     "pulmonary fibrosis without obesity.",
+     "Pickwickian syndrome."
+    ],
+    "correct": 3
    },
    {
     "q": "The nurse provides teaching regarding dietary intake of potassium to avoid an electrolyte imbalance when a patient",
-    "a": "has chronic heart failure that is treated with diuretics."
+    "options": [
+     "has chronic heart failure that is treated with diuretics.",
+     "is on a low-sodium diet.",
+     "has hyperaldosteronism.",
+     "has chronic kidney disease with hyperkalemia."
+    ],
+    "correct": 0
    },
    {
     "q": "The process responsible for distribution of fluid between the interstitial and intracellular compartments is",
-    "a": "osmosis."
+    "options": [
+     "osmosis.",
+     "diffusion of electrolytes only.",
+     "filtration.",
+     "active transport."
+    ],
+    "correct": 0
    },
    {
     "q": "Which change in a patient's assessment has the greatest urgency?",
-    "a": "Serum potassium concentration is increasing; has developed cardiac dysrhythmias, but denies any difficulty breathing"
+    "options": [
+     "Blood pressure has dropped slightly but the patient remains asymptomatic",
+     "Patient reports mild fatigue with stable vital signs",
+     "Serum potassium concentration is increasing; has developed cardiac dysrhythmias, but denies any difficulty breathing",
+     "Serum sodium is trending upward gradually"
+    ],
+    "correct": 2
    },
    {
     "q": "How do clinical conditions that increase vascular permeability cause edema?",
-    "a": "By allowing plasma proteins to leak into the interstitial fluid, which draws in excess fluid by increasing the interstitial fluid osmotic pressure"
+    "options": [
+     "By allowing plasma proteins to leak into the interstitial fluid, which draws in excess fluid by increasing the interstitial fluid osmotic pressure",
+     "By decreasing lymphatic drainage exclusively.",
+     "By directly increasing capillary hydrostatic pressure only.",
+     "By causing direct cellular swelling unrelated to osmotic pressure."
+    ],
+    "correct": 0
    },
    {
     "q": "Signs and symptoms of clinical dehydration include",
-    "a": "decreased urine output."
+    "options": [
+     "decreased urine output.",
+     "bounding pulse.",
+     "increased urine output.",
+     "hypertension."
+    ],
+    "correct": 0
    },
    {
     "q": "Clinical manifestations of extracellular fluid volume deficit include",
-    "a": "weak pulse, low blood pressure, and increased heart rate."
+    "options": [
+     "bounding pulse and hypertension.",
+     "flat neck veins and hypotension.",
+     "weak pulse, low blood pressure, and increased heart rate.",
+     "weight loss and polyuria."
+    ],
+    "correct": 2
    },
    {
     "q": "Signs and symptoms of extracellular fluid volume excess include",
-    "a": "bounding pulse."
+    "options": [
+     "flat neck veins.",
+     "bounding pulse.",
+     "weak, thready pulse.",
+     "decreased blood pressure."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient, who is 8 months pregnant, has developed eclampsia and is receiving intravenous magnesium sulfate to prevent seizures. To determine if her infusion rate is too high, you should regularly",
-    "a": "check the patellar reflex; if it becomes weak or absent, her infusion rate probably is too high and she is at risk for respiratory depression or cardiac arrest."
+    "options": [
+     "increase the infusion rate if she becomes drowsy.",
+     "check the patellar reflex; if it becomes weak or absent, her infusion rate probably is too high and she is at risk for respiratory depression or cardiac arrest.",
+     "check her blood glucose level regularly.",
+     "monitor deep tendon reflexes only if she reports symptoms."
+    ],
+    "correct": 1
    },
    {
     "q": "Diarrhea causes",
-    "a": "metabolic acidosis."
+    "options": [
+     "respiratory alkalosis.",
+     "respiratory acidosis.",
+     "metabolic acidosis.",
+     "metabolic alkalosis."
+    ],
+    "correct": 2
    },
    {
     "q": "Manifestations from sodium imbalances occur primarily as a result of",
-    "a": "cellular fluid shifts."
+    "options": [
+     "changes in extracellular fluid volume only.",
+     "renal compensation alone.",
+     "altered potassium excretion exclusively.",
+     "cellular fluid shifts."
+    ],
+    "correct": 3
    },
    {
     "q": "Which electrolyte imbalances cause increased neuromuscular excitability?",
-    "a": "Hypocalcemia and hypomagnesemia"
+    "options": [
+     "Hypernatremia and hypercalcemia",
+     "Hyperkalemia and hypercalcemia",
+     "Hypercalcemia and hypermagnesemia",
+     "Hypocalcemia and hypomagnesemia"
+    ],
+    "correct": 3
    },
    {
     "q": "The person at highest risk for developing hypernatremia is a person who",
-    "a": "receives tube feedings because he or she is comatose after a stroke."
+    "options": [
+     "is on a low-sodium diet.",
+     "has excessive fluid intake.",
+     "has unrestricted access to free water.",
+     "receives tube feedings because he or she is comatose after a stroke."
+    ],
+    "correct": 3
    },
    {
     "q": "The arterial blood gas pH = 7.52, PaCO2 = 30 mm Hg, HCO3\u2013 = 24 mEq/L demonstrates",
-    "a": "respiratory alkalosis."
+    "options": [
+     "respiratory alkalosis.",
+     "respiratory acidosis.",
+     "metabolic acidosis.",
+     "metabolic alkalosis."
+    ],
+    "correct": 0
    },
    {
     "q": "The finding of ketones in the blood suggests that a person may have",
-    "a": "metabolic acidosis."
+    "options": [
+     "dehydration.",
+     "renal failure alone.",
+     "metabolic acidosis.",
+     "hyperkalemia."
+    ],
+    "correct": 2
    },
    {
     "q": "Effects of hypernatremia on the central nervous system typically include",
-    "a": "confusion."
+    "options": [
+     "seizures.",
+     "hypotension.",
+     "bradycardia.",
+     "confusion."
+    ],
+    "correct": 3
    },
    {
     "q": "The major buffer in the extracellular fluid is",
-    "a": "bicarbonate."
+    "options": [
+     "phosphate.",
+     "hemoglobin.",
+     "protein alone.",
+     "bicarbonate."
+    ],
+    "correct": 3
    },
    {
     "q": "Uncompensated metabolic alkalosis would result in",
-    "a": "increased pH, increased HCO3\u2013."
+    "options": [
+     "decreased pH, decreased HCO3\u2013.",
+     "decreased pH, increased HCO3\u2013.",
+     "increased pH, increased HCO3\u2013.",
+     "increased pH, decreased HCO3\u2013."
+    ],
+    "correct": 2
    },
    {
     "q": "Respiratory acidosis is associated with",
-    "a": "increased carbonic acid."
+    "options": [
+     "decreased carbonic acid.",
+     "increased carbonic acid.",
+     "increased bicarbonate.",
+     "decreased CO2."
+    ],
+    "correct": 1
    },
    {
     "q": "A 3-year-old is diagnosed with starvation ketoacidosis. What signs and symptoms should you anticipate in your assessment?",
-    "a": "Rapid, deep breathing, lethargy, abdominal pain"
+    "options": [
+     "Rapid, deep breathing, lethargy, abdominal pain",
+     "Hyperactivity, fever, vomiting only",
+     "Slow, shallow breathing, hypertension",
+     "Bradycardia, hypotension, drowsiness"
+    ],
+    "correct": 0
    },
    {
     "q": "Causes of metabolic acidosis include",
-    "a": "tissue anoxia."
+    "options": [
+     "hyperventilation.",
+     "tissue anoxia.",
+     "renal failure with impaired acid excretion.",
+     "vomiting."
+    ],
+    "correct": 1
    },
    {
     "q": "Allergic (extrinsic) asthma is associated with",
-    "a": "IgE-mediated airway inflammation."
+    "options": [
+     "greater than 7.45, alkalotic",
+     "IgE-mediated airway inflammation.",
+     "7.45, at the upper limit of normal",
+     "less than 7.35, uncompensated"
+    ],
+    "correct": 1
    },
    {
     "q": "Which clinical manifestation is not likely the result of a tuberculosis infection?",
-    "a": "Cyanosis"
+    "options": [
+     "fatigue.",
+     "bradycardia.",
+     "Cyanosis",
+     "hypertension."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient with a productive cough and parenchymal infiltrates on x-ray is demonstrating symptomology of",
-    "a": "bacterial pneumonia."
+    "options": [
+     "\"Your heart is enlarged, which pushes your chest outward.\"",
+     "\"This is a normal sign of aging and nothing to worry about.\"",
+     "bacterial pneumonia.",
+     "\"Your lungs are inflamed from smoking and that's making your chest bigger.\""
+    ],
+    "correct": 2
    },
    {
     "q": "If an individual has a fully compensated metabolic acidosis, the blood pH is",
-    "a": "in the normal range."
+    "options": [
+     "high fever with chills.",
+     "a productive cough with purulent sputum.",
+     "in the normal range.",
+     "lobar consolidation."
+    ],
+    "correct": 2
    },
    {
     "q": "Early manifestations of a developing metabolic acidosis include",
-    "a": "headache."
+    "options": [
+     "regular exercise.",
+     "headache.",
+     "advanced age alone.",
+     "high dietary fiber intake."
+    ],
+    "correct": 1
    },
    {
     "q": "When a client diagnosed with COPD type A asks, \"Why is my chest so big and round?\", the nurse responds that",
-    "a": "\"Loss of elastic tissue in your lungs allows your airways to close and trap air, which makes your chest round.\""
+    "options": [
+     "depolarization.",
+     "\"Loss of elastic tissue in your lungs allows your airways to close and trap air, which makes your chest round.\"",
+     "hyperpolarization.",
+     "no change in membrane potential."
+    ],
+    "correct": 1
    },
    {
     "q": "Viral pneumonia is characterized by",
-    "a": "a dry cough."
+    "options": [
+     "tuberculin skin test alone.",
+     "chest x-ray alone.",
+     "a dry cough.",
+     "physical examination."
+    ],
+    "correct": 2
    },
    {
     "q": "A major risk factor for the development of active pulmonary tuberculosis (TB) disease is",
-    "a": "immunosuppression."
+    "options": [
+     "increased lung elastic recoil.",
+     "decreased airway resistance.",
+     "decreased lung elastic recoil.",
+     "immunosuppression."
+    ],
+    "correct": 3
    },
    {
     "q": "An increase in the resting membrane potential (hyperpolarized) is associated with",
-    "a": "hypokalemia."
+    "options": [
+     "increased mucus production only.",
+     "hypokalemia.",
+     "bronchospasm alone.",
+     "increased surfactant production."
+    ],
+    "correct": 1
    },
    {
     "q": "The most definitive diagnostic method for active tuberculosis is acquired via",
-    "a": "sputum culture."
+    "options": [
+     "decreased pulmonary blood flow.",
+     "left ventricular hypertrophy.",
+     "systemic hypertension.",
+     "sputum culture."
+    ],
+    "correct": 3
    },
    {
     "q": "COPD leads to a barrel chest, because it causes",
-    "a": "air trapping."
+    "options": [
+     "air trapping.",
+     "pneumothorax.",
+     "hemothorax.",
+     "empyema."
+    ],
+    "correct": 0
    },
    {
     "q": "Lack of \u03b1-antitrypsin in emphysema causes",
-    "a": "destruction of alveolar tissue."
+    "options": [
+     "hypernatremia and hypocalcemia.",
+     "hyperkalemia and hyponatremia.",
+     "destruction of alveolar tissue.",
+     "hypokalemia and hyponatremia."
+    ],
+    "correct": 2
    },
    {
     "q": "Chronic bronchitis often leads to cor pulmonale because of",
-    "a": "increased pulmonary vascular resistance."
+    "options": [
+     "Have her stand up again to confirm the finding before intervening.",
+     "Administer a diuretic to help stabilize her blood pressure.",
+     "Restrict her fluid intake and recheck her blood pressure in an hour before calling anyone.",
+     "increased pulmonary vascular resistance."
+    ],
+    "correct": 3
    },
    {
     "q": "Accumulation of fluid in the pleural space is called",
-    "a": "pleural effusion."
+    "options": [
+     "metabolic alkalosis.",
+     "pleural effusion.",
+     "metabolic acid excess.",
+     "respiratory acidosis."
+    ],
+    "correct": 1
    },
    {
     "q": "Decreased neuromuscular excitability is often the result of",
-    "a": "hypercalcemia and hypermagnesemia."
+    "options": [
+     "increased urine output.",
+     "hypernatremia.",
+     "hypercalcemia and hypermagnesemia.",
+     "increased serum sodium concentration."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient who reports an intestinal fistula also reports feeling \"weak and dizzy\" when she stands. While taking her blood pressure she becomes temporarily unresponsive but quickly regains consciousness when put into a supine position. What nursing interventions will the nurse implement before calling the physician?",
-    "a": "Give her water or juice and some salty crackers and ask if she has had any diarrhea or vomiting."
+    "options": [
+     "uncompensated alkalosis.",
+     "compensated acidosis.",
+     "a normal acid-base state.",
+     "Give her water or juice and some salty crackers and ask if she has had any diarrhea or vomiting."
+    ],
+    "correct": 3
    },
    {
     "q": "Vomiting of stomach contents or continuous nasogastric suctioning may predispose to development of",
-    "a": "metabolic acid deficit."
+    "options": [
+     "pH 7.30, PaCO2 60, HCO3\u2013 24.",
+     "pH 7.40, PaCO2 40, HCO3\u2013 24.",
+     "pH 7.50, PaCO2 30, HCO3\u2013 24.",
+     "metabolic acid deficit."
+    ],
+    "correct": 3
    },
    {
     "q": "Excessive antidiuretic hormone (ADH) secretion can cause _____ concentration.",
-    "a": "decreased serum sodium"
+    "options": [
+     "Older adults",
+     "Adolescents",
+     "decreased serum sodium",
+     "Adults in general"
+    ],
+    "correct": 2
    },
    {
     "q": "Two primary acid-base disorders that are present independently are referred to as",
-    "a": "mixed acid-base imbalance."
+    "options": [
+     "hyponatremia.",
+     "hypokalemia.",
+     "mixed acid-base imbalance.",
+     "hypocalcemia."
+    ],
+    "correct": 2
    },
    {
     "q": "Fully compensated respiratory acidosis is demonstrated by",
-    "a": "pH 7.36, PaCO2 55, HCO3\u2013 36."
+    "options": [
+     "increased antidiuretic hormone secretion.",
+     "adrenal insufficiency.",
+     "pH 7.36, PaCO2 55, HCO3\u2013 36.",
+     "excessive water intake."
+    ],
+    "correct": 2
    },
    {
     "q": "What age group has a larger volume of extracellular fluid than intracellular fluid?",
-    "a": "Infants"
+    "options": [
+     "hypoparathyroidism.",
+     "diuretic use alone.",
+     "Infants",
+     "excessive calcium intake."
+    ],
+    "correct": 2
    },
    {
     "q": "The imbalance that occurs with oliguric renal failure is",
-    "a": "hyperkalemia."
+    "options": [
+     "hyperkalemia.",
+     "decreased mucus viscosity.",
+     "bronchospasm alone.",
+     "increased surfactant production."
+    ],
+    "correct": 0
    },
    {
     "q": "Hypernatremia may be caused by",
-    "a": "decreased antidiuretic hormone secretion."
+    "options": [
+     "vaccination status.",
+     "geographic location alone.",
+     "decreased antidiuretic hormone secretion.",
+     "patient age alone."
+    ],
+    "correct": 2
    },
    {
     "q": "Causes of hypomagnesemia include",
-    "a": "chronic alcoholism."
+    "options": [
+     "increases surfactant production.",
+     "directly destroys the bronchial epithelium only.",
+     "has no effect on lung tissue.",
+     "chronic alcoholism."
+    ],
+    "correct": 3
    },
    {
     "q": "Airway obstruction in chronic bronchitis is because of",
-    "a": "thick mucus, fibrosis, and smooth muscle hypertrophy."
+    "options": [
+     "Interstitial lung disease",
+     "thick mucus, fibrosis, and smooth muscle hypertrophy.",
+     "Chronic asthma",
+     "Pulmonary embolism"
+    ],
+    "correct": 1
    },
    {
     "q": "A major cause of treatment failure in tuberculosis is",
-    "a": "noncompliance."
+    "options": [
+     "autoimmune destruction of lung tissue.",
+     "bacterial superinfection alone.",
+     "noncompliance.",
+     "genetic collagen defects."
+    ],
+    "correct": 2
    },
    {
     "q": "To best prevent emphysema, a patient is instructed to stop smoking since cigarette smoke",
-    "a": "impairs \u03b11-antitrypsin, allowing elastase to predominate."
+    "options": [
+     "Haemophilus influenzae.",
+     "Legionella pneumophila.",
+     "Streptococcus pneumoniae.",
+     "impairs \u03b11-antitrypsin, allowing elastase to predominate."
+    ],
+    "correct": 3
    },
    {
     "q": "Which disorder is caused by inhalation of organic substances?",
-    "a": "Hypersensitivity pneumonitis"
+    "options": [
+     "meconium aspiration alone.",
+     "excess surfactant production.",
+     "Hypersensitivity pneumonitis",
+     "excessive amniotic fluid."
+    ],
+    "correct": 2
    },
    {
     "q": "Emphysema results from destruction of alveolar walls and capillaries, which is because of",
-    "a": "release of proteolytic enzymes from immune cells."
+    "options": [
+     "pH low, PaO2 normal, PaCO2 low, bicarbonate low",
+     "pH normal, PaO2 low, PaCO2 normal, bicarbonate normal",
+     "pH in low part of normal range, PaO2 low, PaCO2 low, bicarbonate low",
+     "release of proteolytic enzymes from immune cells."
+    ],
+    "correct": 3
    },
    {
     "q": "The organism that causes pulmonary tuberculosis is",
-    "a": "Mycobacterium tuberculosis."
+    "options": [
+     "genetic mutation only.",
+     "decreased ciliary function.",
+     "Mycobacterium tuberculosis.",
+     "bronchospasm alone."
+    ],
+    "correct": 2
    },
    {
     "q": "The primary cause of infant respiratory distress syndrome is",
-    "a": "lack of surfactant."
+    "options": [
+     "increased airway diameter.",
+     "hyperventilation.",
+     "lack of surfactant.",
+     "increased surfactant production."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient has been hospitalized several times in 6 months with severe ECV depletion and hypokalemia resulting from chronic laxative abuse. Which blood gas results should be relayed to the physician?",
-    "a": "pH in high part of normal range, PaO2 normal, PaCO2 high, bicarbonate high"
+    "options": [
+     "hypercalcemia.",
+     "hyperkalemia.",
+     "pH in high part of normal range, PaO2 normal, PaCO2 high, bicarbonate high",
+     "hypermagnesemia."
+    ],
+    "correct": 2
    },
    {
     "q": "The hypersecretion of mucus resulting for chronic bronchitis is the result of",
-    "a": "recurrent infection."
+    "options": [
+     "hyperphosphatemia.",
+     "hyponatremia.",
+     "hypocalcemia.",
+     "recurrent infection."
+    ],
+    "correct": 3
    },
    {
     "q": "Neuromuscular disorders impair lung function primarily because of",
-    "a": "weak muscles of respiration."
+    "options": [
+     "metabolic alkalosis.",
+     "respiratory acidosis.",
+     "weak muscles of respiration.",
+     "respiratory alkalosis."
+    ],
+    "correct": 2
    },
    {
     "q": "A person who overuses magnesium-aluminum antacids for a long period of time is likely to develop",
-    "a": "hypophosphatemia."
+    "options": [
+     "hypercalcemia.",
+     "hyperkalemia.",
+     "hypophosphatemia.",
+     "hypermagnesemia."
+    ],
+    "correct": 2
    },
    {
     "q": "A person who has hyperparathyroidism is likely to develop",
-    "a": "hypercalcemia."
+    "options": [
+     "hyponatremia.",
+     "hyperphosphatemia.",
+     "hypocalcemia.",
+     "hypercalcemia."
+    ],
+    "correct": 3
    },
    {
     "q": "Diarrhea and other lower intestinal fluid losses will contribute to",
-    "a": "metabolic acidosis."
+    "options": [
+     "metabolic alkalosis.",
+     "respiratory acidosis.",
+     "respiratory alkalosis.",
+     "metabolic acidosis."
+    ],
+    "correct": 3
    },
    {
     "q": "Clinical manifestations of hyponatremia include",
-    "a": "confusion, lethargy, coma, and perhaps seizures."
+    "options": [
+     "hypertension and bradycardia.",
+     "confusion, lethargy, coma, and perhaps seizures.",
+     "increased fatigue and lethargy only.",
+     "polyuria and polydipsia."
+    ],
+    "correct": 1
    },
    {
     "q": "Total body water in older adults is",
-    "a": "decreased because of increased adipose tissue and decreased muscle mass."
+    "options": [
+     "decreased because of increased adipose tissue and decreased muscle mass.",
+     "increased because of decreased adipose tissue.",
+     "increased because of increased muscle mass.",
+     "unchanged throughout the lifespan."
+    ],
+    "correct": 0
    },
    {
     "q": "Which alterations can lead to edema?",
-    "a": "Decreased lymphatic flow"
+    "options": [
+     "Decreased capillary permeability",
+     "Increased plasma protein levels",
+     "Decreased lymphatic flow",
+     "Increased venous return"
+    ],
+    "correct": 2
    },
    {
     "q": "Hyperaldosteronism causes",
-    "a": "ECV excess and hypokalemia."
+    "options": [
+     "ECV deficit and hyperkalemia.",
+     "ECV excess and hyperkalemia.",
+     "ECV excess and hypokalemia.",
+     "ECV deficit and hypernatremia."
+    ],
+    "correct": 2
    },
    {
     "q": "Clinical manifestations of severe symptomatic hypophosphatemia are caused by",
-    "a": "deficiency of ATP."
+    "options": [
+     "deficiency of ATP.",
+     "excess potassium in the cells.",
+     "excess calcium in the cells.",
+     "excess sodium in the cells."
+    ],
+    "correct": 0
    },
    {
     "q": "Pneumocystitis is a term that refers to a",
-    "a": "fungal pneumonia secondary to HIV."
+    "options": [
+     "opportunistic infection unrelated to immune status.",
+     "viral pneumonia common in healthy adults.",
+     "bacterial pneumonia caused by drug-resistant organisms.",
+     "fungal pneumonia secondary to HIV."
+    ],
+    "correct": 3
    },
    {
     "q": "Metabolic alkalosis is often accompanied by",
-    "a": "hypokalemia."
+    "options": [
+     "hyperkalemia.",
+     "hypokalemia.",
+     "hypernatremia.",
+     "hypercalcemia."
+    ],
+    "correct": 1
    },
    {
     "q": "Asthma is categorized as a(n)",
-    "a": "obstructive pulmonary disorder."
+    "options": [
+     "vascular disorder.",
+     "restrictive pulmonary disorder.",
+     "obstructive pulmonary disorder.",
+     "neuromuscular disorder."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient has a positive Chvostek sign. The nurse interprets this as a sign of",
-    "a": "increased neuromuscular excitability."
+    "options": [
+     "decreased neuromuscular excitability.",
+     "hyperkalemia specifically.",
+     "increased neuromuscular excitability.",
+     "normal neuromuscular function."
+    ],
+    "correct": 2
    },
    {
     "q": "A known cause of hypokalemia is",
-    "a": "insulin overdose."
+    "options": [
+     "potassium-sparing diuretic use.",
+     "adrenal insufficiency.",
+     "renal failure.",
+     "insulin overdose."
+    ],
+    "correct": 3
    },
    {
     "q": "When a parent asks how they will know if their 2-month-old baby, who is throwing up and has frequent diarrhea, is dehydrated, the nurse's best response is",
-    "a": "\"If the soft spot on the top of his head feels sunken in and his mouth is dry between his cheek and his gums, then he is probably dehydrated.\""
+    "options": [
+     "\"If his temperature is above 100\u00b0F, he is probably dehydrated.\"",
+     "\"If the soft spot on the top of his head feels sunken in and his mouth is dry between his cheek and his gums, then he is probably dehydrated.\"",
+     "\"If he seems fussy and won't nap, he is probably dehydrated.\"",
+     "\"If he has more than 6 wet diapers a day, he is probably dehydrated.\""
+    ],
+    "correct": 1
    },
    {
     "q": "Emesis causes",
-    "a": "metabolic alkalosis."
+    "options": [
+     "metabolic acidosis.",
+     "metabolic alkalosis.",
+     "respiratory acidosis.",
+     "respiratory alkalosis."
+    ],
+    "correct": 1
    },
    {
     "q": "The fraction of total body water (TBW) volume contained in the intracellular space in adults is",
-    "a": "two thirds."
+    "options": [
+     "three fourths.",
+     "two thirds.",
+     "one third.",
+     "one half."
+    ],
+    "correct": 1
    },
    {
     "q": "The ________ system compensates for metabolic acidosis and alkalosis.",
-    "a": "respiratory"
+    "options": [
+     "endocrine",
+     "renal",
+     "hepatic",
+     "respiratory"
+    ],
+    "correct": 3
    },
    {
     "q": "A patient diagnosed with chronic compensated heart failure reports that, \"My feet swell if I eat salt but I don't understand why\" The nurse's best response is",
-    "a": "\"Salt holds water in your blood and makes more pressure against your blood vessels, so fluid leaks out into your tissues and makes them swell.\""
+    "options": [
+     "\"It's probably just an allergic reaction and not related to your heart.\"",
+     "\"Salt holds water in your blood and makes more pressure against your blood vessels, so fluid leaks out into your tissues and makes them swell.\"",
+     "\"This is unrelated to your heart failure and needs separate evaluation.\"",
+     "\"You should stop eating salt completely and it will go away immediately.\""
+    ],
+    "correct": 1
    }
   ]
  },
  "5": {
-  "title": "Chapters 27, 28, 29, 31, and 33 (Reproductive, Renal & Urinary)",
+  "title": "Week 5 \u2014 Chapters 27, 28, 29, 31, and 33 (Reproductive, Renal & Urinary)",
   "questions": [
    {
     "q": "Cervical cancer can be detected in the early, curable stage by the ________ test.",
-    "a": "Papanicolaou"
+    "options": [
+     "complete blood count",
+     "mammogram",
+     "colposcopy",
+     "Papanicolaou"
+    ],
+    "correct": 3
    },
    {
     "q": "A patient diagnosed with a micropenis must be evaluated for",
-    "a": "endocrine disorders."
+    "options": [
+     "psychological stress.",
+     "dietary deficiency.",
+     "endocrine disorders.",
+     "urinary tract infection."
+    ],
+    "correct": 2
    },
    {
     "q": "Vesicoureteral reflux is associated with",
-    "a": "recurrent cystitis."
+    "options": [
+     "renal artery stenosis.",
+     "nephrolithiasis alone.",
+     "recurrent cystitis.",
+     "polycystic kidney disease."
+    ],
+    "correct": 2
    },
    {
     "q": "The microorganism that causes the vast majority of urinary tract infections is",
-    "a": "Escherichia coli."
+    "options": [
+     "Staphylococcus aureus.",
+     "Proteus mirabilis.",
+     "Klebsiella pneumoniae.",
+     "Escherichia coli."
+    ],
+    "correct": 3
    },
    {
     "q": "Anemia in people who have end-stage chronic renal disease is caused by",
-    "a": "decreased secretion of erythropoietin."
+    "options": [
+     "decreased secretion of erythropoietin.",
+     "chronic blood loss through dialysis.",
+     "excess RBC destruction only.",
+     "iron malabsorption."
+    ],
+    "correct": 0
    },
    {
     "q": "The prognosis of penile carcinoma depends upon the stage of the disease.",
-    "a": "True"
+    "options": [
+     "True only for stage I",
+     "False",
+     "True",
+     "True only for metastatic disease"
+    ],
+    "correct": 2
    },
    {
     "q": "A change occurring in a pregnant woman that is indicative of a potential disorder is",
-    "a": "increased urinary protein."
+    "options": [
+     "increased appetite.",
+     "decreased blood pressure.",
+     "increased fetal movement.",
+     "increased urinary protein."
+    ],
+    "correct": 3
    },
    {
     "q": "The difference between stress incontinence and urge incontinence is that stress incontinence",
-    "a": "is caused by a pelvic floor muscle problem, whereas urge incontinence is caused by a problem with the detrusor muscle."
+    "options": [
+     "is always neurogenic, whereas urge incontinence is always structural.",
+     "is caused by a pelvic floor muscle problem, whereas urge incontinence is caused by a problem with the detrusor muscle.",
+     "occurs only at night, whereas urge incontinence occurs during the day.",
+     "is caused by a problem with the detrusor muscle, whereas urge incontinence is caused by a pelvic floor muscle problem."
+    ],
+    "correct": 1
    },
    {
     "q": "The expected treatment of a pregnant woman with hyperemesis gravidarum is",
-    "a": "intravenous therapy."
+    "options": [
+     "bed rest and antiemetics only.",
+     "no treatment is typically needed.",
+     "intravenous therapy.",
+     "surgical intervention."
+    ],
+    "correct": 2
    },
    {
     "q": "The pathology report for a patient with penile cancer has this statement: The tumor involves the shaft of the penis. The cancer is at what stage?",
-    "a": "Stage II"
+    "options": [
+     "Stage I",
+     "Stage II",
+     "Stage III",
+     "Stage IV"
+    ],
+    "correct": 1
    },
    {
     "q": "The most common types of uterine tumors are known as",
-    "a": "leiomyomas."
+    "options": [
+     "teratomas.",
+     "sarcomas.",
+     "adenocarcinomas.",
+     "leiomyomas."
+    ],
+    "correct": 3
    },
    {
     "q": "The majority of penile cancer cases are classified as basal cell carcinoma.",
-    "a": "False"
+    "options": [
+     "Only true for uncircumcised men",
+     "True",
+     "False",
+     "Only true in older men"
+    ],
+    "correct": 2
    },
    {
     "q": "Treatment of a uterine prolapse may involve the insertion of a(n) ________ to hold the uterus in place.",
-    "a": "pessary."
+    "options": [
+     "shunt.",
+     "pessary.",
+     "catheter.",
+     "stent."
+    ],
+    "correct": 1
    },
    {
     "q": "It is true that fibrocystic breast disease",
-    "a": "may be exacerbated by methylxanthines."
+    "options": [
+     "is unrelated to hormonal changes.",
+     "increases risk of malignancy significantly.",
+     "always requires surgical excision.",
+     "may be exacerbated by methylxanthines."
+    ],
+    "correct": 3
    },
    {
     "q": "Endometriosis is a condition in which",
-    "a": "ectopic endometrial tissue is present."
+    "options": [
+     "ectopic endometrial tissue is present.",
+     "ovarian cysts rupture repeatedly.",
+     "the endometrium fails to shed during menstruation.",
+     "the uterus is abnormally enlarged."
+    ],
+    "correct": 0
    },
    {
     "q": "The greatest risk factor for bladder cancer is",
-    "a": "smoking."
+    "options": [
+     "high dietary fiber.",
+     "recurrent UTIs.",
+     "family history alone.",
+     "smoking."
+    ],
+    "correct": 3
    },
    {
     "q": "Sexual impotence is rarely because of",
-    "a": "primary causes."
+    "options": [
+     "psychological causes.",
+     "vascular disease.",
+     "medication side effects.",
+     "primary causes."
+    ],
+    "correct": 3
    },
    {
     "q": "A 52-year-old female had a surgical procedure in which the breast, lymphatics, and underlying muscle were removed. The procedure performed was a",
-    "a": "radical mastectomy."
+    "options": [
+     "simple mastectomy.",
+     "modified radical mastectomy.",
+     "lumpectomy.",
+     "radical mastectomy."
+    ],
+    "correct": 3
    },
    {
     "q": "Hypotension is both a cause of chronic kidney disease and a result of chronic kidney disease.",
-    "a": "False"
+    "options": [
+     "False",
+     "True",
+     "False, they are unrelated conditions",
+     "True only in early-stage CKD"
+    ],
+    "correct": 0
    },
    {
     "q": "A breast lump that is painless, hard, and unmoving is most likely",
-    "a": "carcinoma."
+    "options": [
+     "mastitis.",
+     "fibrocystic change.",
+     "fibroadenoma.",
+     "carcinoma."
+    ],
+    "correct": 3
    },
    {
     "q": "Which intervention has been found to retard the advancement of chronic kidney disease?",
-    "a": "ACE inhibitors"
+    "options": [
+     "ACE inhibitors",
+     "Calcium channel blockers",
+     "NSAIDs",
+     "Diuretics"
+    ],
+    "correct": 0
    },
    {
     "q": "When a patient experiencing nephrotic syndrome asks, \"What causes my urine to be so full of protein,\" the nurse's response is based on the knowledge that",
-    "a": "the glomerular membrane has increased permeability."
+    "options": [
+     "the bladder wall is inflamed.",
+     "the kidneys are producing excess protein.",
+     "dietary protein intake is too high.",
+     "the glomerular membrane has increased permeability."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient who reported a very painful sore throat 3 weeks ago is now diagnosed with acute post-streptococcal glomerulonephritis. When asked, \"Why is my urine the color of coffee?\", the nurse responds",
-    "a": "\"Your immune system was activated by your sore throat and has caused some damage in your kidneys that allows red blood cells to leak into the fluid that becomes urine and make it coffee-colored.\""
+    "options": [
+     "\"This is unrelated to your recent sore throat.\"",
+     "\"Your urine is discolored because of dehydration.\"",
+     "\"Your kidneys have completely shut down and stopped filtering blood.\"",
+     "\"Your immune system was activated by your sore throat and has caused some damage in your kidneys that allows red blood cells to leak into the fluid that becomes urine and make it coffee-colored.\""
+    ],
+    "correct": 3
    },
    {
     "q": "The effect on the renal tubules during the postoliguric phase of acute tubular necrosis involves",
-    "a": "regeneration of the renal tubular epithelium."
+    "options": [
+     "regeneration of the renal tubular epithelium.",
+     "permanent nephron loss with no recovery.",
+     "continued tubular necrosis.",
+     "increased glomerular filtration immediately."
+    ],
+    "correct": 0
    },
    {
     "q": "A primary laboratory finding in end-stage chronic renal disease is",
-    "a": "increased serum creatinine."
+    "options": [
+     "increased serum creatinine.",
+     "decreased blood urea nitrogen.",
+     "increased urine output.",
+     "decreased serum potassium."
+    ],
+    "correct": 0
    },
    {
     "q": "The risk for contrast media\u2013induced acute tubular necrosis (ATN) is highest in",
-    "a": "a 70-year-old patient with heart failure."
+    "options": [
+     "a patient with normal renal function and no comorbidities.",
+     "a 70-year-old patient with heart failure.",
+     "a well-hydrated young adult.",
+     "a 25-year-old healthy patient."
+    ],
+    "correct": 1
    },
    {
     "q": "Individuals with end-stage chronic renal disease are at risk for renal osteodystrophy and spontaneous bone fractures, because",
-    "a": "they are deficient in active vitamin D."
+    "options": [
+     "they excrete too much calcium.",
+     "they retain excess phosphate that binds calcium.",
+     "they have excess parathyroid hormone suppression.",
+     "they are deficient in active vitamin D."
+    ],
+    "correct": 3
    },
    {
     "q": "The patient most at risk for postrenal acute kidney injury is a(n)",
-    "a": "elderly patient with hypertrophy of the prostate."
+    "options": [
+     "elderly patient with hypertrophy of the prostate.",
+     "a child with a single episode of UTI.",
+     "a healthy adult with no urologic history.",
+     "a young woman with a urinary tract infection."
+    ],
+    "correct": 0
    },
    {
     "q": "One of the most frequent causes of chronic kidney disease is",
-    "a": "hypertension."
+    "options": [
+     "glomerulonephritis alone.",
+     "polycystic kidney disease alone.",
+     "hypertension.",
+     "urinary tract infections."
+    ],
+    "correct": 2
    },
    {
     "q": "The most likely cause of anemia in a patient with end-stage renal disease is",
-    "a": "insufficient erythropoietin."
+    "options": [
+     "insufficient erythropoietin.",
+     "vitamin B12 deficiency.",
+     "iron deficiency from poor diet.",
+     "chronic blood loss from GI bleeding."
+    ],
+    "correct": 0
    },
    {
     "q": "Postrenal acute kidney injury may be caused by",
-    "a": "bilateral kidney stones."
+    "options": [
+     "renal artery stenosis.",
+     "glomerulonephritis.",
+     "bilateral kidney stones.",
+     "acute tubular necrosis."
+    ],
+    "correct": 2
    },
    {
     "q": "The most common direct cause of acute pyelonephritis is",
-    "a": "infection by E. coli."
+    "options": [
+     "Staphylococcus saprophyticus.",
+     "infection by E. coli.",
+     "Enterococcus faecalis.",
+     "Proteus mirabilis."
+    ],
+    "correct": 1
    },
    {
     "q": "A person with acute pyelonephritis would most typically experience",
-    "a": "fever."
+    "options": [
+     "flank pain without fever.",
+     "fever.",
+     "polyuria without other symptoms.",
+     "painless hematuria."
+    ],
+    "correct": 1
    },
    {
     "q": "A common component of renal calculi is",
-    "a": "calcium."
+    "options": [
+     "calcium.",
+     "uric acid alone.",
+     "cystine alone.",
+     "struvite alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The main clinical manifestation of a kidney stone obstructing the ureter is",
-    "a": "renal colic."
+    "options": [
+     "painless hematuria.",
+     "suprapubic pressure only.",
+     "dull, constant flank ache without radiation.",
+     "renal colic."
+    ],
+    "correct": 3
    },
    {
     "q": "One of the most common causes of acute tubular necrosis (ATN) is",
-    "a": "ischemic conditions."
+    "options": [
+     "dehydration alone.",
+     "glomerulonephritis.",
+     "nephrotoxic drug exposure alone.",
+     "ischemic conditions."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient with renal disease is at risk for developing uremia as the nephrons progressively deteriorate, because",
-    "a": "GFR declines."
+    "options": [
+     "protein intake decreases.",
+     "blood pressure normalizes.",
+     "GFR declines.",
+     "tubular secretion increases."
+    ],
+    "correct": 2
    },
    {
     "q": "The type of glomerulonephritis which is most likely to result in a swift decline in renal function that then progresses to acute kidney injury is",
-    "a": "crescentic glomerulonephritis."
+    "options": [
+     "crescentic glomerulonephritis.",
+     "IgA nephropathy.",
+     "minimal change disease.",
+     "membranous glomerulonephritis."
+    ],
+    "correct": 0
    },
    {
     "q": "Hyperlipidemia occurs in nephrotic syndrome because",
-    "a": "hepatocytes synthesize excessive lipids."
+    "options": [
+     "hepatocytes synthesize excessive lipids.",
+     "excess dietary lipid absorption.",
+     "impaired renal lipid clearance alone.",
+     "loss of albumin triggering compensatory lipid intake."
+    ],
+    "correct": 0
    },
    {
     "q": "The major underlying factor leading to the edema associated with glomerulonephritis and nephrotic syndrome is",
-    "a": "proteinuria."
+    "options": [
+     "hematuria alone.",
+     "proteinuria.",
+     "decreased GFR alone.",
+     "hypertension alone."
+    ],
+    "correct": 1
    },
    {
     "q": "A potential risk factor for breast cancer includes",
-    "a": "early menarche and late first pregnancy."
+    "options": [
+     "early menarche and late first pregnancy.",
+     "multiple pregnancies.",
+     "obesity and sedentary lifestyle.",
+     "late menarche."
+    ],
+    "correct": 0
    },
    {
     "q": "The most frequent initial symptom of bladder cancer is",
-    "a": "hematuria."
+    "options": [
+     "hematuria.",
+     "flank pain.",
+     "urinary frequency alone.",
+     "dysuria."
+    ],
+    "correct": 0
    },
    {
     "q": "A progressive decrease in the force of the urinary stream, dribbling of urine, and difficulty initiating the urinary stream are characteristic of",
-    "a": "prostatic enlargement."
+    "options": [
+     "renal calculi.",
+     "bladder infection.",
+     "prostatic enlargement.",
+     "neurogenic bladder."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient who has difficulty walking without assistance is incontinent of urine when help doesn't get to her quickly enough. The term for this type of incontinence is",
-    "a": "functional."
+    "options": [
+     "stress.",
+     "overflow.",
+     "functional.",
+     "urge."
+    ],
+    "correct": 2
    },
    {
     "q": "What reproductive tract disorder is most likely to be associated with urinary stress incontinence?",
-    "a": "Cystocele"
+    "options": [
+     "Ovarian cyst",
+     "Uterine prolapse",
+     "Rectocele",
+     "Cystocele"
+    ],
+    "correct": 3
    },
    {
     "q": "Excessive vomiting in pregnant women is known as",
-    "a": "hyperemesis gravidarum."
+    "options": [
+     "gestational diabetes.",
+     "morning sickness.",
+     "preeclampsia.",
+     "hyperemesis gravidarum."
+    ],
+    "correct": 3
    },
    {
     "q": "A 32-year-old female complaining of severe pain with menstruation and inability to participate in her routine household activities is likely experiencing",
-    "a": "dysmenorrhea."
+    "options": [
+     "dysmenorrhea.",
+     "ovarian cyst.",
+     "pelvic inflammatory disease.",
+     "endometriosis."
+    ],
+    "correct": 0
    },
    {
     "q": "The defining characteristic of severe acute kidney injury is",
-    "a": "oliguria."
+    "options": [
+     "anuria.",
+     "polyuria.",
+     "oliguria.",
+     "hematuria without oliguria."
+    ],
+    "correct": 2
    },
    {
     "q": "A ureterocele is",
-    "a": "a cystic dilation of a ureter."
+    "options": [
+     "a stone lodged in the urethra.",
+     "a cystic dilation of a ureter.",
+     "an outpouching of the bladder wall.",
+     "a narrowing of the renal artery."
+    ],
+    "correct": 1
    },
    {
     "q": "The urinalysis finding most indicative of cystitis includes the presence of",
-    "a": "nitrites."
+    "options": [
+     "white blood cell casts alone.",
+     "protein alone.",
+     "nitrites.",
+     "glucose."
+    ],
+    "correct": 2
    },
    {
     "q": "Infection by ________ accounts for nearly half of all reported cases of vulvovaginitis.",
-    "a": "Candida albicans"
+    "options": [
+     "Human papillomavirus",
+     "Gardnerella vaginalis",
+     "Candida albicans",
+     "Trichomonas vaginalis"
+    ],
+    "correct": 2
    },
    {
     "q": "The infection frequently associated with development of postinfectious acute glomerulonephritis is",
-    "a": "throat infection."
+    "options": [
+     "skin infection.",
+     "urinary tract infection alone.",
+     "throat infection.",
+     "dental infection."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient with gouty arthritis develops renal calculi. The composition of these calculi is most likely to be",
-    "a": "uric acid crystals."
+    "options": [
+     "uric acid crystals.",
+     "struvite crystals.",
+     "calcium oxalate crystals.",
+     "cystine crystals."
+    ],
+    "correct": 0
    },
    {
     "q": "The consequence of an upper urinary tract obstruction in a single ureter is",
-    "a": "hydronephrosis."
+    "options": [
+     "polycystic disease.",
+     "hydronephrosis.",
+     "renal atrophy.",
+     "immediate renal failure without warning."
+    ],
+    "correct": 1
    },
    {
     "q": "Nephrotic syndrome involves loss of large amounts of ________ in the urine.",
-    "a": "protein"
+    "options": [
+     "ketones",
+     "blood",
+     "glucose",
+     "protein"
+    ],
+    "correct": 3
    },
    {
     "q": "Glomerular disorders include",
-    "a": "nephrotic syndrome."
+    "options": [
+     "cystitis alone.",
+     "nephrotic syndrome.",
+     "pyelonephritis.",
+     "renal calculi alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Renal insufficiency occurs when _____ of the nephrons are not functional.",
-    "a": "75% to 90%"
+    "options": [
+     "polycystic kidney disease.",
+     "hydronephrosis alone.",
+     "75% to 90%",
+     "renal artery stenosis."
+    ],
+    "correct": 2
    },
    {
     "q": "It is true that polycystic kidney disease is",
-    "a": "genetically transmitted."
+    "options": [
+     "25% to 50%",
+     "genetically transmitted.",
+     "greater than 95%",
+     "50% to 60%"
+    ],
+    "correct": 1
    },
    {
     "q": "In patients with polycystic kidney disease, renal failure is expected to progress over time as the cystic process destroys more nephrons. At what point will a patient reach end-stage renal disease?",
-    "a": "Greater than 90% nephron loss"
+    "options": [
+     "Greater than 90% nephron loss",
+     "autoimmune in origin.",
+     "caused primarily by infection.",
+     "always asymptomatic until late stages."
+    ],
+    "correct": 0
    },
    {
     "q": "The condition associated with end-stage chronic renal disease that is the most immediately life threatening is",
-    "a": "hyperkalemia."
+    "options": [
+     "Greater than 70% nephron loss",
+     "Greater than 50% nephron loss",
+     "hyperkalemia.",
+     "Greater than 25% nephron loss"
+    ],
+    "correct": 2
    },
    {
     "q": "The most common agent resulting in nephrotoxicity and subsequent acute tubular necrosis (ATN) in hospitalized patients is",
-    "a": "contrast media."
+    "options": [
+     "contrast media.",
+     "metabolic alkalosis.",
+     "hypocalcemia alone.",
+     "hypernatremia."
+    ],
+    "correct": 0
    },
    {
     "q": "In addition to E. coli, a risk factor for development of pyelonephritis is",
-    "a": "urinary retention and reflux."
+    "options": [
+     "NSAIDs alone.",
+     "acetaminophen.",
+     "aminoglycoside antibiotics.",
+     "urinary retention and reflux."
+    ],
+    "correct": 3
    },
    {
     "q": "The pathophysiologic basis of acute glomerulonephritis is",
-    "a": "an immune complex reaction."
+    "options": [
+     "diabetes mellitus alone.",
+     "an immune complex reaction.",
+     "dietary factors alone.",
+     "family history alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Scrotal pain in males and labial pain in females may accompany renal pain as a result of",
-    "a": "associated dermatomes."
+    "options": [
+     "associated dermatomes.",
+     "a direct nephrotoxic effect.",
+     "a bacterial toxin reaction.",
+     "a viral infection of the glomerulus."
+    ],
+    "correct": 0
    },
    {
     "q": "At his most recent clinic visit, a patient with end-stage renal disease is noted to have edema, congestive signs in the pulmonary system, and a pericardial friction rub. Appropriate therapy at this time would include",
-    "a": "initiation of dialysis."
+    "options": [
+     "shared spinal nerve pathways.",
+     "referred pain from the bladder only.",
+     "direct anatomic continuity.",
+     "initiation of dialysis."
+    ],
+    "correct": 3
    },
    {
     "q": "The best intervention for acute kidney injury (AKI) is prevention.",
-    "a": "True"
+    "options": [
+     "discontinuation of all medications.",
+     "True",
+     "increased dietary protein.",
+     "fluid restriction alone."
+    ],
+    "correct": 1
    },
    {
     "q": "The condition in which the urethra opens on the dorsal aspect of the penis is known as",
-    "a": "epispadias."
+    "options": [
+     "True only in pediatric patients",
+     "epispadias.",
+     "False",
+     "True only for chronic kidney disease"
+    ],
+    "correct": 1
    },
    {
     "q": "Pelvic floor muscle training is appropriate for",
-    "a": "urge incontinence."
+    "options": [
+     "urge incontinence.",
+     "phimosis.",
+     "hypospadias.",
+     "priapism."
+    ],
+    "correct": 0
    },
    {
     "q": "A patient being treated for acute tubular necrosis (ATN) develops mild polyuria. The nurse responds to questions about why this occurring by stating",
-    "a": "\"His renal tubules are recovering, so he is making more urine, but he is not able to concentrate urine well, because he is not fully recovered.\""
+    "options": [
+     "functional incontinence.",
+     "\"His renal tubules are recovering, so he is making more urine, but he is not able to concentrate urine well, because he is not fully recovered.\"",
+     "overflow incontinence.",
+     "stress incontinence."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient, age 3, has vesicoureteral reflux. \"Why does that make him have so many bladder infections?\" asks his mother. The nurse's best response is",
-    "a": "\"When he urinates, urine runs back toward his kidneys and then into the bladder again, making it easy for bacteria to grow if they reach the bladder.\""
+    "options": [
+     "\"His kidneys have been permanently damaged and this is not expected to improve.\"",
+     "\"This means his kidneys are producing too much erythropoietin.\"",
+     "\"This is a sign of infection and he needs antibiotics.\"",
+     "\"When he urinates, urine runs back toward his kidneys and then into the bladder again, making it easy for bacteria to grow if they reach the bladder.\""
+    ],
+    "correct": 3
    },
    {
     "q": "Cryptorchidism is",
-    "a": "associated with an increased incidence of testicular cancer."
+    "options": [
+     "\"His bladder muscles are too weak to hold urine properly.\"",
+     "\"His kidneys are producing too much urine due to the infection.\"",
+     "\"This is unrelated to the reflux and is a separate problem.\"",
+     "associated with an increased incidence of testicular cancer."
+    ],
+    "correct": 3
    },
    {
     "q": "Detrusor muscle overactivity can be improved by administration of",
-    "a": "botulinum toxin."
+    "options": [
+     "unrelated to testicular cancer risk.",
+     "botulinum toxin.",
+     "always requiring immediate surgery in adulthood.",
+     "a risk factor for infertility alone."
+    ],
+    "correct": 1
    },
    {
     "q": "The most commonly ordered diagnostic test for evaluation of the urinary system is",
-    "a": "ultrasonography."
+    "options": [
+     "pelvic floor relaxation exercises alone.",
+     "increased fluid intake.",
+     "anticholinergic medications alone.",
+     "ultrasonography."
+    ],
+    "correct": 3
    },
    {
     "q": "The condition characterized by oliguria and hematuria is",
-    "a": "acute glomerulonephritis."
+    "options": [
+     "acute glomerulonephritis.",
+     "CT scan.",
+     "MRI.",
+     "cystoscopy."
+    ],
+    "correct": 0
    },
    {
     "q": "The pain that accompanies kidney disorders is called",
-    "a": "nephralgia."
+    "options": [
+     "nephrotic syndrome.",
+     "acute tubular necrosis.",
+     "renal calculi.",
+     "nephralgia."
+    ],
+    "correct": 3
    },
    {
     "q": "Appropriate management of end-stage renal disease includes",
-    "a": "erythropoietin administration."
+    "options": [
+     "high-protein diet.",
+     "NSAID therapy.",
+     "increased dietary potassium.",
+     "erythropoietin administration."
+    ],
+    "correct": 3
    },
    {
     "q": "Nephrotic syndrome does not usually cause",
-    "a": "hematuria."
+    "options": [
+     "hypoalbuminemia.",
+     "edema.",
+     "hematuria.",
+     "proteinuria."
+    ],
+    "correct": 2
    },
    {
     "q": "The oliguric phase of acute tubular necrosis is characterized by",
-    "a": "fluid excess and electrolyte imbalance."
+    "options": [
+     "hematuria alone.",
+     "normal electrolyte balance.",
+     "polyuria and dehydration.",
+     "fluid excess and electrolyte imbalance."
+    ],
+    "correct": 3
    },
    {
     "q": "The most common cause of intrinsic kidney injury is _____ injury.",
-    "a": "tubular"
+    "options": [
+     "tubular",
+     "glomerular",
+     "interstitial",
+     "vascular"
+    ],
+    "correct": 0
    },
    {
     "q": "The most helpful laboratory value in monitoring the progression of declining renal function is",
-    "a": "serum creatinine."
+    "options": [
+     "blood urea nitrogen (BUN).",
+     "urine pH.",
+     "urine specific gravity.",
+     "serum creatinine."
+    ],
+    "correct": 3
    },
    {
     "q": "What problem is a patient likely to experience in end-stage renal disease?",
-    "a": "Uremia"
+    "options": [
+     "Diabetes insipidus",
+     "Polyuria",
+     "Acute cystitis",
+     "Uremia"
+    ],
+    "correct": 3
    },
    {
     "q": "The most common sign/symptom of renal calculi is",
-    "a": "pain."
+    "options": [
+     "Fever without pain",
+     "Hematuria alone",
+     "Urinary frequency alone",
+     "pain."
+    ],
+    "correct": 3
    },
    {
     "q": "One cause of an extrinsic renal system obstruction is",
-    "a": "pelvic tumor."
+    "options": [
+     "renal artery stenosis.",
+     "renal vein thrombosis.",
+     "glomerulonephritis alone.",
+     "pelvic tumor."
+    ],
+    "correct": 3
    },
    {
     "q": "The individual at highest risk of pyelonephritis who requires monitoring for signs of its occurrence is the",
-    "a": "man who has chronic urinary tract infections."
+    "options": [
+     "man who has chronic urinary tract infections.",
+     "young healthy adult.",
+     "woman who has chronic urinary tract infections.",
+     "child with a single UTI episode."
+    ],
+    "correct": 0
    },
    {
     "q": "Calcium oxylate stone formation is facilitated by",
-    "a": "hypercalciuria."
+    "options": [
+     "dietary calcium restriction.",
+     "vitamin D deficiency.",
+     "hypercalciuria.",
+     "low fluid intake alone without hypercalciuria."
+    ],
+    "correct": 2
    },
    {
     "q": "Which group is at the highest risk for urinary tract infection?",
-    "a": "Sexually active women"
+    "options": [
+     "Postmenopausal women without other risk factors",
+     "Older men",
+     "Sexually active women",
+     "Prepubertal children"
+    ],
+    "correct": 2
    },
    {
     "q": "The normal post-void residual urine in the bladder is",
-    "a": "less than 100 mL."
+    "options": [
+     "300 to 500 mL.",
+     "500 to 1000 mL.",
+     "less than 100 mL.",
+     "over 1000 mL."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient injured severely in a motor vehicle accident is hospitalized with acute kidney injury as well as multiple broken bones and lacerations. When family members ask what is meant by the term 'prerenal,' the nurse responds",
-    "a": "\"Your husband's kidney injury did not start in the kidney itself, but rather in the blood flow to the kidney.\""
+    "options": [
+     "\"Your husband's kidney injury did not start in the kidney itself, but rather in the blood flow to the kidney.\"",
+     "\"This is a permanent condition with no chance of recovery.\"",
+     "\"This means his bladder was injured, not his kidneys.\"",
+     "\"Your husband's kidneys were directly damaged by the trauma itself.\""
+    ],
+    "correct": 0
    },
    {
     "q": "Erection requires the release of nitrous oxide into the corpus cavernosum during sexual stimulation.",
-    "a": "True"
+    "options": [
+     "True only in older men",
+     "True",
+     "False",
+     "True only during pregnancy"
+    ],
+    "correct": 1
    },
    {
     "q": "The direct cause of stress incontinence is",
-    "a": "pelvic muscle weakness."
+    "options": [
+     "overflow incontinence.",
+     "pelvic muscle weakness.",
+     "functional incontinence.",
+     "urge incontinence."
+    ],
+    "correct": 1
    },
    {
     "q": "Urinary retention with consistent or intermittent dribbling of urine is called",
-    "a": "overflow incontinence."
+    "options": [
+     "functional incontinence.",
+     "stress incontinence.",
+     "overflow incontinence.",
+     "urge incontinence."
+    ],
+    "correct": 2
    },
    {
     "q": "Infection can lead to bladder stone formation.",
-    "a": "True"
+    "options": [
+     "True",
+     "True only in patients with diabetes",
+     "False",
+     "True only in patients with UTIs"
+    ],
+    "correct": 0
    },
    {
     "q": "Osteoporosis commonly occurs in patients with end-stage renal disease because of",
-    "a": "hyperparathyroidism."
+    "options": [
+     "increased calcium absorption.",
+     "hyperparathyroidism.",
+     "decreased phosphate levels.",
+     "excess vitamin D synthesis."
+    ],
+    "correct": 1
    },
    {
     "q": "The major cause of glomerulonephritis is",
-    "a": "immune system damage to the glomeruli."
+    "options": [
+     "chronic hypertension exclusively.",
+     "immune system damage to the glomeruli.",
+     "a bacterial infection of the glomeruli directly.",
+     "genetic mutation alone in most cases."
+    ],
+    "correct": 1
    },
    {
     "q": "Appropriate therapy for prerenal kidney injury includes",
-    "a": "fluid administration."
+    "options": [
+     "fluid administration.",
+     "diuretic therapy.",
+     "protein restriction.",
+     "fluid restriction."
+    ],
+    "correct": 0
    },
    {
     "q": "A major modifiable risk factor for nephrolithiasis is",
-    "a": "dehydration."
+    "options": [
+     "genetic predisposition alone.",
+     "dehydration.",
+     "neurogenic bladder alone.",
+     "excess calcium intake."
+    ],
+    "correct": 1
    },
    {
     "q": "The disorder characterized by a neurologic lesion that affects bladder control is",
-    "a": "neurogenic bladder."
+    "options": [
+     "cystitis.",
+     "neurogenic bladder.",
+     "detrusor instability.",
+     "urethral stricture."
+    ],
+    "correct": 1
    },
    {
     "q": "A patient has ureteral colic. The manifestation that requires immediate notification of the physician is",
-    "a": "chills and fever."
+    "options": [
+     "occasional urinary frequency.",
+     "mild nausea without fever.",
+     "chills and fever.",
+     "mild flank discomfort."
+    ],
+    "correct": 2
    },
    {
     "q": "In addition to renal colic pain, signs or symptoms of ureteral stones may frequently include",
-    "a": "hematuria."
+    "options": [
+     "hematuria.",
+     "polyuria.",
+     "dysuria alone.",
+     "proteinuria."
+    ],
+    "correct": 0
    },
    {
     "q": "The most common cause of urinary obstruction in male newborns and infants is urethral valves.",
-    "a": "True"
+    "options": [
+     "True only after age 5",
+     "True only in female infants",
+     "True",
+     "False"
+    ],
+    "correct": 2
    },
    {
     "q": "Which condition is caused by a genetic defect?",
-    "a": "Polycystic kidney disease"
+    "options": [
+     "Bladder cancer",
+     "Chronic pyelonephritis",
+     "Polycystic kidney disease",
+     "Vesicoureteral reflux"
+    ],
+    "correct": 2
    },
    {
     "q": "Findings that should prompt an evaluation for renal cancer include",
-    "a": "hematuria."
+    "options": [
+     "flank pain without hematuria.",
+     "hematuria.",
+     "polyuria alone.",
+     "proteinuria alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Prerenal acute kidney injury may be caused by",
-    "a": "severe hypotension."
+    "options": [
+     "glomerulonephritis.",
+     "postrenal obstruction.",
+     "acute tubular necrosis.",
+     "severe hypotension."
+    ],
+    "correct": 3
    },
    {
     "q": "Uterine prolapse is caused by a relaxation of the",
-    "a": "cardinal ligaments."
+    "options": [
+     "round ligaments only.",
+     "cardinal ligaments.",
+     "broad ligaments only.",
+     "uterosacral ligaments only."
+    ],
+    "correct": 1
    },
    {
     "q": "Dysfunctional uterine bleeding (DUB) is caused by",
-    "a": "absent or diminished levels of progesterone."
+    "options": [
+     "absent or diminished levels of progesterone.",
+     "excess progesterone production.",
+     "pituitary tumor.",
+     "excess estrogen production."
+    ],
+    "correct": 0
    },
    {
     "q": "The most likely cause of acidosis in a patient with end-stage renal disease is",
-    "a": "insufficient metabolic acid excretion resulting from nephron loss."
+    "options": [
+     "excess dialysis.",
+     "dehydration alone.",
+     "hyperventilation.",
+     "insufficient metabolic acid excretion resulting from nephron loss."
+    ],
+    "correct": 3
    },
    {
     "q": "The organism most commonly associated with acute pyelonephritis is",
-    "a": "Escherichia coli."
+    "options": [
+     "Escherichia coli.",
+     "Enterococcus faecalis.",
+     "Klebsiella pneumoniae.",
+     "Proteus mirabilis."
+    ],
+    "correct": 0
    },
    {
     "q": "The urea-splitting bacteria contribute to the formation of ________ kidney stones.",
-    "a": "struvite"
+    "options": [
+     "uric acid",
+     "calcium oxalate",
+     "cystine",
+     "struvite"
+    ],
+    "correct": 3
    }
   ]
  },
  "6": {
-  "title": "Chapters 36, 37, 38, 40, and 41 (GI, Liver, Endocrine)",
+  "title": "Week 6 \u2014 Chapters 36, 37, 38, 40, and 41 (GI, Liver, Endocrine)",
   "questions": [
    {
     "q": "Constipation in an elderly patient can be best treated by",
-    "a": "increasing fiber in the diet."
+    "options": [
+     "restricting fluids.",
+     "using laxatives as a first-line therapy.",
+     "reducing physical activity.",
+     "increasing fiber in the diet."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient being treated for hepatic encephalopathy could be expected to receive a(n) ________ diet.",
-    "a": "low-protein and high-fiber"
+    "options": [
+     "high-protein and high-sodium",
+     "low-fiber and high-fat",
+     "low-protein and high-fiber",
+     "high-protein and low-fiber"
+    ],
+    "correct": 2
    },
    {
     "q": "The pain associated with chronic pancreatitis is generally described as ________ in nature.",
-    "a": "steady and boring"
+    "options": [
+     "steady and boring",
+     "burning and localized to the chest",
+     "sharp and intermittent",
+     "colicky and cramping"
+    ],
+    "correct": 0
    },
    {
     "q": "Brain injury secondary to high serum bilirubin is called",
-    "a": "kernicterus."
+    "options": [
+     "hemochromatosis.",
+     "cirrhosis alone.",
+     "kernicterus.",
+     "cholelithiasis."
+    ],
+    "correct": 2
    },
    {
     "q": "An urgent surgical consult is indicated for the patient with acute abdominal pain and",
-    "a": "absent bowel sounds."
+    "options": [
+     "diffuse abdominal tenderness without rebound.",
+     "nausea without other findings.",
+     "mild diarrhea.",
+     "absent bowel sounds."
+    ],
+    "correct": 3
    },
    {
     "q": "An increased urine bilirubin is associated with",
-    "a": "hepatitis."
+    "options": [
+     "hemolysis alone.",
+     "biliary obstruction alone.",
+     "dehydration.",
+     "hepatitis."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient receiving chemotherapy may be at greater risk for development of",
-    "a": "stomatitis."
+    "options": [
+     "hypertension.",
+     "stomatitis.",
+     "peripheral neuropathy alone.",
+     "diarrhea alone."
+    ],
+    "correct": 1
    },
    {
     "q": "A biliary cause of acute pancreatitis is suggested by an elevation in which serum laboratory results?",
-    "a": "Alkaline phosphatase"
+    "options": [
+     "Amylase alone",
+     "AST",
+     "Alkaline phosphatase",
+     "Lipase alone"
+    ],
+    "correct": 2
    },
    {
     "q": "The most common causes of prehepatic jaundice are ________ and ineffective erythropoiesis.",
-    "a": "hemolysis"
+    "options": [
+     "biliary obstruction",
+     "pancreatic insufficiency",
+     "hemolysis",
+     "hepatocellular injury"
+    ],
+    "correct": 2
    },
    {
     "q": "Acute right lower quadrant pain associated with rebound tenderness and systemic signs of inflammation are indicative of",
-    "a": "appendicitis."
+    "options": [
+     "diverticulitis.",
+     "peptic ulcer perforation.",
+     "cholecystitis.",
+     "appendicitis."
+    ],
+    "correct": 3
    },
    {
     "q": "Liver transaminase elevations in which aspartate aminotransferase (AST) is markedly greater than alanine aminotransferase (ALT) is characteristic of",
-    "a": "alcohol-induced injury."
+    "options": [
+     "alcohol-induced injury.",
+     "hemolytic anemia.",
+     "biliary obstruction alone.",
+     "viral hepatitis."
+    ],
+    "correct": 0
    },
    {
     "q": "Barrett esophagus is a",
-    "a": "preneoplastic lesion."
+    "options": [
+     "a fully reversible inflammatory change.",
+     "a malignant lesion.",
+     "preneoplastic lesion.",
+     "unrelated to acid reflux."
+    ],
+    "correct": 2
    },
    {
     "q": "The most challenging aspect of treatment for chronic pancreatitis is",
-    "a": "pain control."
+    "options": [
+     "pain control.",
+     "surgical resection.",
+     "nutritional management alone.",
+     "enzyme replacement alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The most common cause of mechanical bowel obstruction is",
-    "a": "adhesions."
+    "options": [
+     "volvulus.",
+     "intussusception.",
+     "adhesions.",
+     "hernias."
+    ],
+    "correct": 2
    },
    {
     "q": "Premature infants are at greater risk for developing",
-    "a": "necrotizing enterocolitis."
+    "options": [
+     "biliary atresia.",
+     "necrotizing enterocolitis.",
+     "pyloric stenosis.",
+     "gastroesophageal reflux disease."
+    ],
+    "correct": 1
    },
    {
     "q": "What finding would rule out a diagnosis of irritable bowel syndrome in a patient with chronic diarrhea?",
-    "a": "Bloody stools"
+    "options": [
+     "Abdominal bloating",
+     "Bloody stools",
+     "Alternating diarrhea and constipation",
+     "Symptom relief with defecation"
+    ],
+    "correct": 1
    },
    {
     "q": "The definitive treatment for cholecystitis is",
-    "a": "cholecystectomy."
+    "options": [
+     "dietary modification.",
+     "antibiotic therapy alone.",
+     "cholecystectomy.",
+     "observation without intervention."
+    ],
+    "correct": 2
    },
    {
     "q": "Fecal leukocyte screening would be indicated in a patient with suspected",
-    "a": "enterocolitis."
+    "options": [
+     "diverticulitis.",
+     "cholelithiasis.",
+     "peptic ulcer disease.",
+     "enterocolitis."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient admitted with bleeding related to esophageal varices could be expected to receive a continuous intravenous infusion of",
-    "a": "octreotide acetate."
+    "options": [
+     "octreotide acetate.",
+     "loop diuretics.",
+     "vitamin K.",
+     "proton pump inhibitors."
+    ],
+    "correct": 0
    },
    {
     "q": "A viral hepatitis screen with positive hepatitis B surface antigen (HBsAg) should be interpreted as ________ hepatitis B.",
-    "a": "acute"
+    "options": [
+     "resolved",
+     "acute",
+     "chronic",
+     "inactive carrier"
+    ],
+    "correct": 1
    },
    {
     "q": "A clinical finding consistent with a diagnosis of syndrome of inappropriate ADH secretion (SIADH) is",
-    "a": "hyponatremia."
+    "options": [
+     "hypernatremia.",
+     "hyponatremia.",
+     "hypoglycemia.",
+     "hyperkalemia."
+    ],
+    "correct": 1
    },
    {
     "q": "A clinical finding that is consistent with a diagnosis of adrenocortical insufficiency is",
-    "a": "hypoglycemia."
+    "options": [
+     "fluid retention.",
+     "hypoglycemia.",
+     "hyperglycemia.",
+     "hypertension."
+    ],
+    "correct": 1
    },
    {
     "q": "Calcitonin is produced by thyroid parafollicular cells and increases bone formation by",
-    "a": "osteoblasts."
+    "options": [
+     "osteoblasts.",
+     "chondrocytes.",
+     "osteoclasts.",
+     "fibroblasts."
+    ],
+    "correct": 0
    },
    {
     "q": "Diabetic neuropathy is thought to result from",
-    "a": "decreased myoinositol transport."
+    "options": [
+     "autoimmune nerve destruction.",
+     "increased glucose uptake by nerve cells.",
+     "decreased myoinositol transport.",
+     "excess insulin production."
+    ],
+    "correct": 2
    },
    {
     "q": "A clinical finding consistent with a hypoglycemic reaction is",
-    "a": "tremors."
+    "options": [
+     "hyperglycemia.",
+     "tremors.",
+     "bradycardia.",
+     "hypertension."
+    ],
+    "correct": 1
    },
    {
     "q": "Which response to an injection of ACTH indicates a primary adrenal insufficiency?",
-    "a": "No change in serum glucocorticoid level"
+    "options": [
+     "A rise in serum glucocorticoid level",
+     "Rapid resolution of symptoms",
+     "No change in serum glucocorticoid level",
+     "Hypoglycemia"
+    ],
+    "correct": 2
    },
    {
     "q": "Steatohepatitis is caused by an accumulation of ________ in the liver cells.",
-    "a": "fat"
+    "options": [
+     "fat",
+     "glycogen.",
+     "protein.",
+     "cholesterol alone."
+    ],
+    "correct": 0
    },
    {
     "q": "Antidiuretic hormone (ADH) increases",
-    "a": "water reabsorption in the collecting tubule of the kidney."
+    "options": [
+     "glucose reabsorption.",
+     "water reabsorption in the collecting tubule of the kidney.",
+     "sodium excretion in the collecting tubule.",
+     "potassium reabsorption."
+    ],
+    "correct": 1
    },
    {
     "q": "Aldosterone secretion is regulated by the presence of ________ in the circulation.",
-    "a": "angiotensin II"
+    "options": [
+     "cortisol.",
+     "insulin.",
+     "angiotensin II",
+     "ADH alone."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient reporting vision changes, photophobia, and lid lag may be exhibiting signs of",
-    "a": "Graves disease."
+    "options": [
+     "myxedema.",
+     "Graves disease.",
+     "thyroid storm alone.",
+     "Hashimoto thyroiditis."
+    ],
+    "correct": 1
    },
    {
     "q": "Propylthiouracil may be used to treat hyperthyroidism, because it",
-    "a": "inhibits thyroid hormone synthesis."
+    "options": [
+     "stimulates thyroid hormone release.",
+     "blocks iodine uptake completely.",
+     "increases TSH receptor sensitivity.",
+     "inhibits thyroid hormone synthesis."
+    ],
+    "correct": 3
    },
    {
     "q": "The American Diabetes Association recommends a postprandial blood glucose level of ________ mg/dL for adults with diabetes.",
-    "a": "less than 180"
+    "options": [
+     "less than 180",
+     "less than 140",
+     "less than 100",
+     "less than 250"
+    ],
+    "correct": 0
    },
    {
     "q": "A type of insulin that would be most appropriate for acute management of hyperglycemia is",
-    "a": "regular."
+    "options": [
+     "NPH.",
+     "glargine.",
+     "regular.",
+     "detemir."
+    ],
+    "correct": 2
    },
    {
     "q": "Hepatitis with the presence of autoantibodies and positive antinuclear antibodies (ANA) is",
-    "a": "autoimmune hepatitis."
+    "options": [
+     "alcoholic hepatitis.",
+     "hemochromatosis.",
+     "autoimmune hepatitis.",
+     "viral hepatitis alone."
+    ],
+    "correct": 2
    },
    {
     "q": "A thyroid gland that grows larger than normal is known as",
-    "a": "goiter."
+    "options": [
+     "goiter.",
+     "cretinism.",
+     "thyroiditis.",
+     "myxedema alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The underlying pathogenic mechanism for type 1 diabetes is",
-    "a": "pancreatic \u03b2-cell destruction."
+    "options": [
+     "pancreatic \u03b2-cell destruction.",
+     "excess glucagon secretion alone.",
+     "insulin receptor overexpression.",
+     "autoimmune destruction of the exocrine pancreas."
+    ],
+    "correct": 0
    },
    {
     "q": "Radioactive iodine treatment is the therapy of choice in patients with Graves disease. The patient should be expected to",
-    "a": "need lifelong thyroid replacement therapy."
+    "options": [
+     "be cured without further treatment.",
+     "have no change in thyroid function.",
+     "require antithyroid medication only.",
+     "need lifelong thyroid replacement therapy."
+    ],
+    "correct": 3
    },
    {
     "q": "Which symptom suggests the presence of a hiatal hernia?",
-    "a": "Heartburn"
+    "options": [
+     "Nocturnal cough alone",
+     "Dysphagia to solids only",
+     "Weight loss",
+     "Heartburn"
+    ],
+    "correct": 3
    },
    {
     "q": "What clinical finding would suggest an esophageal cause of a client's report of dysphagia?",
-    "a": "Chest pain during meals"
+    "options": [
+     "Chest pain during meals",
+     "Pain unrelated to meals",
+     "Pain that worsens with swallowing",
+     "Pain relieved by antacids"
+    ],
+    "correct": 0
    },
    {
     "q": "________ disease is a rare autosomal recessive disorder in which excessive amounts of copper accumulate in the liver.",
-    "a": "Wilson"
+    "options": [
+     "Wilson",
+     "Crigler-Najjar",
+     "Gilbert",
+     "Hemochromatosis"
+    ],
+    "correct": 0
    },
    {
     "q": "Narcotic administration should be administered carefully in patients with acute pancreatitis related to potential for",
-    "a": "sphincter of Oddi dysfunction."
+    "options": [
+     "renal insufficiency.",
+     "sphincter of Oddi dysfunction.",
+     "biliary obstruction.",
+     "hepatic encephalopathy directly."
+    ],
+    "correct": 1
    },
    {
     "q": "Untreated acute cholecystitis may lead to ________ of the gallbladder wall.",
-    "a": "gangrene"
+    "options": [
+     "perforation alone.",
+     "fibrosis.",
+     "abscess formation.",
+     "gangrene"
+    ],
+    "correct": 3
    },
    {
     "q": "What form of viral hepatitis is likely to be transmitted sexually?",
-    "a": "Hepatitis B"
+    "options": [
+     "hepatitis E.",
+     "hepatitis C.",
+     "Hepatitis B",
+     "hepatitis A."
+    ],
+    "correct": 2
    },
    {
     "q": "An early indicator of colon cancer is",
-    "a": "a change in bowel habits."
+    "options": [
+     "weight gain.",
+     "a change in bowel habits.",
+     "rectal bleeding as the sole finding.",
+     "abdominal pain alone."
+    ],
+    "correct": 1
    },
    {
     "q": "Chronic pancreatitis may lead to",
-    "a": "diabetes mellitus."
+    "options": [
+     "diabetes mellitus.",
+     "peptic ulcer disease.",
+     "cirrhosis alone.",
+     "cholelithiasis."
+    ],
+    "correct": 0
    },
    {
     "q": "Jaundice is a common manifestation of",
-    "a": "liver disease."
+    "options": [
+     "liver disease.",
+     "peptic ulcer disease.",
+     "biliary obstruction.",
+     "pancreatitis alone."
+    ],
+    "correct": 0
    },
    {
     "q": "What laboratory data would support a diagnosis of hemochromatosis?",
-    "a": "Elevated ferritin"
+    "options": [
+     "Decreased total iron-binding capacity alone",
+     "Elevated ferritin",
+     "Elevated liver enzymes alone",
+     "Elevated bilirubin alone"
+    ],
+    "correct": 1
    },
    {
     "q": "More than half of the initial cases of pancreatitis are associated with",
-    "a": "alcoholism."
+    "options": [
+     "gallstones.",
+     "alcoholism.",
+     "hyperlipidemia alone.",
+     "viral infection."
+    ],
+    "correct": 1
    },
    {
     "q": "Dumping syndrome is commonly seen after __________ procedures.",
-    "a": "gastric bypass"
+    "options": [
+     "appendectomy.",
+     "gastric bypass",
+     "gastric banding.",
+     "cholecystectomy."
+    ],
+    "correct": 1
    },
    {
     "q": "Pathophysiologically, esophageal varices can be attributed to",
-    "a": "portal hypertension."
+    "options": [
+     "cholelithiasis.",
+     "hepatitis.",
+     "cirrhosis alone.",
+     "portal hypertension."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient with pancreatitis may experience muscle cramps secondary to",
-    "a": "hypocalcemia."
+    "options": [
+     "hypocalcemia.",
+     "hypermagnesemia.",
+     "hypernatremia.",
+     "hyperkalemia."
+    ],
+    "correct": 0
    },
    {
     "q": "It is true that growth hormone excess in adults",
-    "a": "results in the condition of acromegaly."
+    "options": [
+     "gigantism in adults.",
+     "hypopituitarism.",
+     "dwarfism.",
+     "results in the condition of acromegaly."
+    ],
+    "correct": 3
    },
    {
     "q": "Proton pump inhibitors may be used in the management of peptic ulcer disease to",
-    "a": "decrease hydrochloric acid (HCl) secretion."
+    "options": [
+     "decrease hydrochloric acid (HCl) secretion.",
+     "neutralize existing stomach acid directly.",
+     "increase gastric motility.",
+     "coat the stomach lining."
+    ],
+    "correct": 0
    },
    {
     "q": "An infusion of mannitol would be prescribed to treat",
-    "a": "cerebral edema."
+    "options": [
+     "hyperkalemia.",
+     "cerebral edema.",
+     "hypoglycemia.",
+     "hyponatremia."
+    ],
+    "correct": 1
    },
    {
     "q": "What effect would adrenocortical insufficiency have on an individual's response to surgical stress?",
-    "a": "More prone to hypotension"
+    "options": [
+     "Less prone to hypotension",
+     "More prone to hypertension",
+     "No significant effect on stress response",
+     "More prone to hypotension"
+    ],
+    "correct": 3
    },
    {
     "q": "The signs and symptoms of adrenocortical hormone excess may occur from either a primary or secondary disorder. A symptom associated with primary Cushing syndrome is",
-    "a": "hyperglycemia."
+    "options": [
+     "weight loss.",
+     "hyperglycemia.",
+     "hypotension.",
+     "hypoglycemia."
+    ],
+    "correct": 1
    },
    {
     "q": "The underlying pathogenic mechanism for type 2 diabetes is",
-    "a": "insulin resistance and \u03b2-cell dysfunction."
+    "options": [
+     "autoimmune destruction of insulin receptors.",
+     "viral destruction of \u03b2-cells.",
+     "insulin resistance and \u03b2-cell dysfunction.",
+     "excess glucagon production alone."
+    ],
+    "correct": 2
    },
    {
     "q": "Type 2 diabetes mellitus is often associated with",
-    "a": "nonketotic hyperosmolality."
+    "options": [
+     "nonketotic hyperosmolality.",
+     "excessive weight loss.",
+     "hypoglycemia.",
+     "diabetic ketoacidosis primarily."
+    ],
+    "correct": 0
    },
    {
     "q": "Clinical manifestations of Graves disease may include",
-    "a": "tremor."
+    "options": [
+     "tremor.",
+     "weight gain.",
+     "bradycardia.",
+     "cold intolerance."
+    ],
+    "correct": 0
    },
    {
     "q": "Epigastric pain that is relieved by food is suggestive of",
-    "a": "gastric ulcer."
+    "options": [
+     "gastric ulcer.",
+     "esophagitis.",
+     "duodenal ulcer.",
+     "gastritis alone."
+    ],
+    "correct": 0
    },
    {
     "q": "________ is the most powerful predictor of developing type 2 diabetes mellitus.",
-    "a": "Obesity"
+    "options": [
+     "Family history alone",
+     "Male sex alone",
+     "Obesity",
+     "Age alone"
+    ],
+    "correct": 2
    },
    {
     "q": "Celiac sprue is a malabsorptive disorder associated with",
-    "a": "inflammatory reaction to gluten-containing foods."
+    "options": [
+     "inflammatory reaction to gluten-containing foods.",
+     "viral gastroenteritis.",
+     "lactose intolerance.",
+     "bacterial overgrowth alone."
+    ],
+    "correct": 0
    },
    {
     "q": "The breakdown of stored glycogen in the liver and muscles is called",
-    "a": "glycogenolysis."
+    "options": [
+     "lipolysis.",
+     "gluconeogenesis.",
+     "glycogenolysis.",
+     "glycogenesis."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient who should be routinely evaluated for peptic ulcer disease is one who is",
-    "a": "being treated with high-dose oral glucocorticoids."
+    "options": [
+     "being treated with high-dose oral glucocorticoids.",
+     "being treated with antihypertensives.",
+     "taking daily multivitamins.",
+     "eating a high-fiber diet."
+    ],
+    "correct": 0
    },
    {
     "q": "A laboratory finding that would help confirm the diagnosis of hyperaldosteronism is",
-    "a": "hypokalemia."
+    "options": [
+     "hypercalcemia.",
+     "hyponatremia.",
+     "hypokalemia.",
+     "hyperkalemia."
+    ],
+    "correct": 2
    },
    {
     "q": "Insulin binding to its receptor on target cells results in",
-    "a": "increased facilitated cellular diffusion of glucose."
+    "options": [
+     "decreased cellular glucose uptake.",
+     "increased hepatic glucose production only.",
+     "increased insulin receptor number.",
+     "increased facilitated cellular diffusion of glucose."
+    ],
+    "correct": 3
    },
    {
     "q": "The finding of hypotension, rigid abdomen, and absent bowel sounds in a patient with pancreatitis",
-    "a": "indicates peritonitis with substantial risk for sepsis and shock."
+    "options": [
+     "indicates a normal postoperative recovery.",
+     "suggests mild constipation only.",
+     "indicates peritonitis with substantial risk for sepsis and shock.",
+     "is an expected finding requiring no action."
+    ],
+    "correct": 2
    },
    {
     "q": "A patient with chronic gastritis would likely be tested for",
-    "a": "Helicobacter pylori."
+    "options": [
+     "cholelithiasis.",
+     "Zollinger-Ellison syndrome.",
+     "Helicobacter pylori.",
+     "GERD alone."
+    ],
+    "correct": 2
    },
    {
     "q": "Hepatic encephalopathy is associated with",
-    "a": "increased blood ammonia levels."
+    "options": [
+     "increased blood glucose levels.",
+     "hypocalcemia directly.",
+     "decreased blood urea nitrogen.",
+     "increased blood ammonia levels."
+    ],
+    "correct": 3
    },
    {
     "q": "Ulcerative colitis is commonly associated with",
-    "a": "bloody diarrhea."
+    "options": [
+     "constipation.",
+     "watery, non-bloody diarrhea.",
+     "bloody diarrhea.",
+     "abdominal distention without diarrhea."
+    ],
+    "correct": 2
    },
    {
     "q": "Elevated serum lipase and amylase levels are indicative of",
-    "a": "pancreatitis."
+    "options": [
+     "cholelithiasis.",
+     "hepatitis alone.",
+     "pancreatitis.",
+     "peptic ulcer disease."
+    ],
+    "correct": 2
    },
    {
     "q": "Normal bile is composed of",
-    "a": "water, electrolytes, and organic solutes."
+    "options": [
+     "fat, cholesterol, and bile pigments only.",
+     "water, electrolytes, and organic solutes.",
+     "protein and glucose.",
+     "mucus and enzymes only."
+    ],
+    "correct": 1
    },
    {
     "q": "Most gallstones are composed of",
-    "a": "cholesterol."
+    "options": [
+     "uric acid.",
+     "calcium.",
+     "cholesterol.",
+     "bilirubin pigment."
+    ],
+    "correct": 2
    },
    {
     "q": "Hepatitis B is usually transmitted by exposure to",
-    "a": "blood or semen."
+    "options": [
+     "airborne droplets.",
+     "blood or semen.",
+     "fecal-oral contact.",
+     "contaminated water only."
+    ],
+    "correct": 1
    },
    {
     "q": "Diabetes insipidus is a condition that",
-    "a": "results from inadequate ADH secretion."
+    "options": [
+     "is a disorder of thyroid function.",
+     "results from ADH excess.",
+     "is caused by insulin deficiency.",
+     "results from inadequate ADH secretion."
+    ],
+    "correct": 3
    },
    {
     "q": "An increase in ADH secretion occurs in response to",
-    "a": "dehydration."
+    "options": [
+     "hyponatremia.",
+     "fluid overload.",
+     "hypertension without dehydration.",
+     "dehydration."
+    ],
+    "correct": 3
    },
    {
     "q": "A patient presenting with muscle cramps, fatigue, anxiety, depression, and prolonged Q-T intervals on EKG may be showing symptoms of",
-    "a": "hypoparathyroidism."
+    "options": [
+     "hypercalcemia.",
+     "hyperkalemia.",
+     "hypoparathyroidism.",
+     "hyponatremia."
+    ],
+    "correct": 2
    },
    {
     "q": "A tumor which results in excessive production and release of catecholamines is",
-    "a": "pheochromocytoma."
+    "options": [
+     "thyroid adenoma.",
+     "pheochromocytoma.",
+     "insulinoma.",
+     "adrenal adenoma."
+    ],
+    "correct": 1
    },
    {
     "q": "What indicator is most helpful in evaluating long-term blood glucose management in patients with diabetes mellitus?",
-    "a": "Glycosylated hemoglobin levels (HbA1c)"
+    "options": [
+     "Urine glucose alone",
+     "Glycosylated hemoglobin levels (HbA1c)",
+     "Random blood glucose alone",
+     "Fasting blood glucose alone"
+    ],
+    "correct": 1
    },
    {
     "q": "It is true that Graves disease is",
-    "a": "associated with autoantibodies to TSH receptors."
+    "options": [
+     "associated with autoantibodies to TSH receptors.",
+     "unrelated to autoimmune processes.",
+     "caused by iodine excess.",
+     "associated with decreased metabolic rate."
+    ],
+    "correct": 0
    },
    {
     "q": "A patient with a history of alcoholism presents with hematemesis and profound anemia. The expected diagnosis is",
-    "a": "gastroesophageal varices."
+    "options": [
+     "pancreatitis without bleeding.",
+     "peptic ulcer disease.",
+     "cholelithiasis.",
+     "gastroesophageal varices."
+    ],
+    "correct": 3
    },
    {
     "q": "What finding should prompt further diagnostic testing in a child presenting with diarrhea?",
-    "a": "Blood and mucus in the stools"
+    "options": [
+     "Mild abdominal cramping only",
+     "Blood and mucus in the stools",
+     "Constipation",
+     "Low-grade fever without other symptoms"
+    ],
+    "correct": 1
    },
    {
     "q": "It is true that biliary cancer",
-    "a": "tend to be asymptomatic and progress insidiously."
+    "options": [
+     "tend to present early with classic symptoms.",
+     "rarely metastasize.",
+     "are easily curable in most cases.",
+     "tend to be asymptomatic and progress insidiously."
+    ],
+    "correct": 3
    },
    {
     "q": "Surgical removal of a gland may result in",
-    "a": "hyposecretion."
+    "options": [
+     "hyposecretion.",
+     "no change in hormone levels.",
+     "compensatory hyperplasia of remaining tissue.",
+     "hypersecretion."
+    ],
+    "correct": 0
    },
    {
     "q": "Myxedema coma is a severe condition associated with",
-    "a": "hypothyroidism."
+    "options": [
+     "hyperparathyroidism.",
+     "hypothyroidism.",
+     "adrenal insufficiency.",
+     "hyperthyroidism."
+    ],
+    "correct": 1
    },
    {
     "q": "Diabetes mellitus is the ________ leading cause of death and a major cause of disability in the United States.",
-    "a": "seventh"
+    "options": [
+     "third",
+     "fifth",
+     "tenth",
+     "seventh"
+    ],
+    "correct": 3
    },
    {
     "q": "In type I diabetes, respiratory compensation may occur through a process of",
-    "a": "respiratory alkalosis."
+    "options": [
+     "metabolic alkalosis.",
+     "metabolic acidosis.",
+     "respiratory alkalosis.",
+     "respiratory acidosis."
+    ],
+    "correct": 2
    },
    {
     "q": "Clinical manifestations of hypoparathyroidism",
-    "a": "result from decreased serum ionized calcium."
+    "options": [
+     "result from increased serum ionized calcium.",
+     "result from excess PTH secretion.",
+     "result from decreased serum ionized calcium.",
+     "are unrelated to calcium levels."
+    ],
+    "correct": 2
    },
    {
     "q": "A silent abdomen 3 hours after bowel surgery most likely indicates",
-    "a": "functional bowel obstruction."
+    "options": [
+     "early return of bowel function.",
+     "resolution of the surgical ileus.",
+     "a normal, expected postoperative finding.",
+     "functional bowel obstruction."
+    ],
+    "correct": 3
    },
    {
     "q": "Esophageal varices represent a complication of ________ hypertension.",
-    "a": "portal"
+    "options": [
+     "renal",
+     "pulmonary",
+     "portal",
+     "cardiac"
+    ],
+    "correct": 2
    },
    {
     "q": "Patients with acute pancreatitis are generally made NPO and may require continuous gastric suctioning in order to",
-    "a": "remove the usual stimuli for pancreatic secretion."
+    "options": [
+     "increase pancreatic blood flow.",
+     "remove the usual stimuli for pancreatic secretion.",
+     "stimulate gastric acid secretion.",
+     "promote bile flow."
+    ],
+    "correct": 1
    },
    {
     "q": "The formation of active vitamin D",
-    "a": "is impaired in renal failure."
+    "options": [
+     "is unaffected by kidney function.",
+     "occurs primarily in the liver.",
+     "requires excess phosphate for activation.",
+     "is impaired in renal failure."
+    ],
+    "correct": 3
    },
    {
     "q": "It is true that the synthesis of thyroid hormones",
-    "a": "is inhibited by iodine deficiency."
+    "options": [
+     "is inhibited by iodine deficiency.",
+     "is inhibited by TSH.",
+     "requires no iodine at all.",
+     "is stimulated by iodine deficiency."
+    ],
+    "correct": 0
    }
   ]
  }
