@@ -1,13 +1,13 @@
 /* =========================================================================
    TEACH BACK MODE — user explains a chapter concept in their own words,
    Claude grades it against the chapter's actual key terms for accuracy.
-   Uses the same paid-access session as the AI chat widget (see app.js).
+   Costs 1 credit per grading, using the same prepaid balance as the
+   AI chat widget (see app.js).
    ========================================================================= */
 
 function initTeachBack(containerId, chapterTitle, terms){
   const box = document.getElementById(containerId);
   const termList = terms.slice(0, 14).map(t=>t.term);
-  const unlocked = hasAccess();
 
   box.innerHTML = `
     <div class="teachback-card">
@@ -16,11 +16,12 @@ function initTeachBack(containerId, chapterTitle, terms){
       <textarea id="teachback-input" placeholder="Start typing your explanation here..."></textarea>
 
       <div class="teachback-actions">
-        <span class="teachback-hint" id="teachback-hint">${unlocked ? "Graded against this chapter's key terms." : "Grading needs the one-time AI unlock (chat bubble, bottom right)."}</span>
+        <span class="teachback-hint" id="teachback-hint">Grading this uses 1 AI credit — <span id="teachback-balance-inline" class="mono"></span> left.</span>
         <button class="btn" id="teachback-submit">Grade my explanation</button>
       </div>
-      <div id="teachback-unlock-row" style="${unlocked ? "display:none;" : ""}margin-top:12px;">
-        <button class="btn btn-outline" id="teachback-unlock-btn">Unlock AI grading — one-time fee</button>
+      <div id="teachback-buy-row" style="margin-top:12px;">
+        <button class="btn btn-outline" id="teachback-buy-btn">Buy AI credits</button>
+        <div style="font-size:0.68rem;color:var(--ink-soft);margin-top:7px;line-height:1.5;">$5.00 one-time · 200 credits · no auto-renewal · processed by Stripe</div>
       </div>
 
       <div class="teachback-response" id="teachback-response"></div>
@@ -30,8 +31,13 @@ function initTeachBack(containerId, chapterTitle, terms){
       </div>
     </div>`;
 
-  const unlockBtn = document.getElementById("teachback-unlock-btn");
-  if(unlockBtn) unlockBtn.addEventListener("click", startUnlockCheckout);
+  const refreshBalance = ()=>{
+    const el = document.getElementById("teachback-balance-inline");
+    if(el) el.textContent = getCachedBalance() + " credit" + (getCachedBalance()===1 ? "" : "s");
+  };
+  refreshBalance();
+
+  document.getElementById("teachback-buy-btn").addEventListener("click", openPaymentDisclosure);
 
   document.getElementById("teachback-submit").addEventListener("click", async ()=>{
     const input = document.getElementById("teachback-input").value.trim();
@@ -41,10 +47,9 @@ function initTeachBack(containerId, chapterTitle, terms){
       respEl.textContent = "Write an explanation first — even a rough one works.";
       return;
     }
-    if(!hasAccess()){
-      document.getElementById("teachback-unlock-row").style.display = "block";
+    if(!hasCredits()){
       respEl.className = "teachback-response show";
-      respEl.textContent = "Unlock AI grading above first, then grade again.";
+      respEl.textContent = "You're out of AI credits. Buy a pack above, then grade again.";
       return;
     }
     respEl.className = "teachback-response show";
@@ -78,6 +83,7 @@ Keep the whole response under 200 words.`;
     }catch(err){
       respEl.textContent = "Couldn't get feedback. (" + err.message + ")";
     }
+    refreshBalance();
     btn.disabled = false;
   });
 }

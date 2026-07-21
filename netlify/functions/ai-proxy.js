@@ -1,9 +1,9 @@
 // netlify/functions/ai-proxy.js
-// Verifies a Stripe checkout session was actually paid, then calls the
-// Claude API server-side so your Anthropic key never reaches the browser.
-// Requires env vars set in Netlify site settings:
-//   STRIPE_SECRET_KEY   - your Stripe secret key
-//   ANTHROPIC_API_KEY   - your Claude API key
+// Checks the caller's prepaid credit balance (stored in Stripe Customer
+// metadata), deducts one credit per call, then calls Claude server-side so
+// your Anthropic key never reaches the browser.
+//
+// Env vars: STRIPE_SECRET_KEY, ANTHROPIC_API_KEY
 
 exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
@@ -11,15 +11,13 @@ exports.handler = async (event) => {
   }
 
   let body;
-  try {
-    body = JSON.parse(event.body || "{}");
-  } catch (e) {
+  try { body = JSON.parse(event.body || "{}"); } catch (e) {
     return { statusCode: 400, body: JSON.stringify({ error: "Invalid JSON body" }) };
   }
+  const { customerId, messages, maxTokens } = body;
 
-  const { sessionId, messages, maxTokens } = body;
-  if (!sessionId) {
-    return { statusCode: 401, body: JSON.stringify({ error: "No access session provided. Unlock AI chat first." }) };
+  if (!customerId) {
+    return { statusCode: 401, body: JSON.stringify({ error: "No credit balance found. Buy a credit pack first." }) };
   }
   if (!messages || !Array.isArray(messages)) {
     return { statusCode: 400, body: JSON.stringify({ error: "Missing messages array" }) };
@@ -31,20 +29,43 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: "Server not fully configured (missing keys)." }) };
   }
 
-  // 1. Verify the session was actually paid
+  // 1. Check balance
+  let credits = 0;
   try {
-    const verifyRes = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(sessionId)}`, {
+    const custRes = await fetch(`https://api.stripe.com/v1/customers/${encodeURIComponent(customerId)}`, {
       headers: { "Authorization": `Bearer ${stripeKey}` },
     });
-    const session = await verifyRes.json();
-    if (!verifyRes.ok || session.payment_status !== "paid") {
-      return { statusCode: 402, body: JSON.stringify({ error: "Payment not verified for this session." }) };
+    const customer = await custRes.json();
+    if (!custRes.ok) {
+      return { statusCode: 500, body: JSON.stringify({ error: "Could not verify balance." }) };
     }
+    credits = parseInt((customer.metadata || {}).credits || "0", 10) || 0;
   } catch (err) {
-    return { statusCode: 500, body: JSON.stringify({ error: "Could not verify payment: " + err.message }) };
+    return { statusCode: 500, body: JSON.stringify({ error: "Balance check failed: " + err.message }) };
   }
 
-  // 2. Call Claude
+  if (credits <= 0) {
+    return { statusCode: 402, body: JSON.stringify({ error: "Out of credits. Buy another pack to keep chatting.", balance: 0 }) };
+  }
+
+  // 2. Deduct one credit up front (avoids overspend even if the Claude call fails)
+  const newBalance = credits - 1;
+  try {
+    const updateParams = new URLSearchParams();
+    updateParams.append("metadata[credits]", String(newBalance));
+    await fetch(`https://api.stripe.com/v1/customers/${encodeURIComponent(customerId)}`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${stripeKey}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: updateParams.toString(),
+    });
+  } catch (err) {
+    return { statusCode: 500, body: JSON.stringify({ error: "Could not update balance: " + err.message }) };
+  }
+
+  // 3. Call Claude
   try {
     const claudeRes = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
@@ -61,11 +82,11 @@ exports.handler = async (event) => {
     });
     const data = await claudeRes.json();
     if (!claudeRes.ok) {
-      return { statusCode: 500, body: JSON.stringify({ error: "Claude API error: " + JSON.stringify(data).slice(0, 200) }) };
+      return { statusCode: 500, body: JSON.stringify({ error: "Claude API error: " + JSON.stringify(data).slice(0, 200), balance: newBalance }) };
     }
     const text = (data.content || []).map(b => b.text || "").join("\n").trim();
-    return { statusCode: 200, body: JSON.stringify({ text: text || "(no response)" }) };
+    return { statusCode: 200, body: JSON.stringify({ text: text || "(no response)", balance: newBalance }) };
   } catch (err) {
-    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
+    return { statusCode: 500, body: JSON.stringify({ error: err.message, balance: newBalance }) };
   }
 };

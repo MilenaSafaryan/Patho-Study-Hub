@@ -35,7 +35,7 @@ function injectFooter(){
   const el = document.getElementById("hub-footer");
   if(!el) return;
   el.innerHTML = `
-    <span>Patho Study Hub — personal review tool</span>
+    <span>Patho Study Hub — personal review tool · <a href="${HUB.basePath}disclosures.html" style="text-decoration:underline;">About &amp; disclosures</a></span>
     <span id="footer-term-count" class="mono"></span>`;
   fetchJSON(HUB.basePath + "data/terms_all.json").then(t=>{
     const f = document.getElementById("footer-term-count");
@@ -57,37 +57,61 @@ function ekgSVG(){
 }
 
 /* =========================================================================
-   AI CHAT WIDGET — paid access model
+   AI CHAT WIDGET — prepaid credits model
    - Local glossary search always works free, no payment needed.
-   - Open-ended AI Q&A + Teach Back grading require a one-time unlock
-     (Stripe Checkout), verified server-side by a Netlify Function that
-     also holds the Claude API key — nothing secret ever touches the browser.
+   - Open-ended AI Q&A + Teach Back grading cost 1 credit per use.
+     Credits are bought in packs via Stripe Checkout and tracked server-side
+     against a Stripe Customer id (see netlify/functions) — nothing secret
+     ever touches the browser, and nobody can be charged more than they paid.
    - Voice input (mic) and voice output (spoken replies) use the browser's
      built-in Web Speech API — free, no backend involved.
    ========================================================================= */
 
 const AI_FEATURES_ENABLED = true;
-const ACCESS_STORAGE = "patho_hub_paid_session";
+const CUSTOMER_STORAGE = "patho_hub_customer_id";
+const BALANCE_STORAGE = "patho_hub_balance_cache";
 
-function getAccessSession(){ return localStorage.getItem(ACCESS_STORAGE) || ""; }
-function setAccessSession(id){ localStorage.setItem(ACCESS_STORAGE, id); }
-function hasAccess(){ return !!getAccessSession(); }
+function getCustomerId(){ return localStorage.getItem(CUSTOMER_STORAGE) || ""; }
+function setCustomerId(id){ localStorage.setItem(CUSTOMER_STORAGE, id); }
+function getCachedBalance(){ return parseInt(localStorage.getItem(BALANCE_STORAGE) || "0", 10) || 0; }
+function setCachedBalance(n){ localStorage.setItem(BALANCE_STORAGE, String(n)); updateBalanceDisplay(); }
+function hasCredits(){ return getCachedBalance() > 0; }
 
-// Pick up a successful Stripe redirect (?unlocked=1&session_id=...)
-(function captureUnlockRedirect(){
+function updateBalanceDisplay(){
+  const el = document.getElementById("ai-balance-display");
+  if(el) el.textContent = getCachedBalance() + " credit" + (getCachedBalance()===1 ? "" : "s");
+}
+
+// Pick up a successful Stripe redirect (?purchase=1&session_id=...) and credit the balance
+(function captureCheckoutRedirect(){
   const params = new URLSearchParams(window.location.search);
-  if(params.get("unlocked") === "1" && params.get("session_id")){
-    setAccessSession(params.get("session_id"));
-    params.delete("unlocked");
+  if(params.get("purchase") === "1" && params.get("session_id")){
+    const sessionId = params.get("session_id");
+    params.delete("purchase");
     params.delete("session_id");
     const newUrl = window.location.pathname + (params.toString() ? "?"+params.toString() : "");
     window.history.replaceState({}, "", newUrl);
+
+    fetch("/api/confirm-purchase", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sessionId })
+    }).then(r => r.json()).then(data => {
+      if(data.customerId){
+        setCustomerId(data.customerId);
+        setCachedBalance(data.balance);
+      }
+    }).catch(()=>{});
   }
 })();
 
-async function startUnlockCheckout(){
+async function startBuyCredits(){
   try{
-    const res = await fetch("/api/create-checkout", { method: "POST" });
+    const res = await fetch("/api/create-checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ customerId: getCustomerId() || null })
+    });
     const data = await res.json();
     if(data.url){ window.location.href = data.url; }
     else { alert("Couldn't start checkout: " + (data.error || "unknown error")); }
@@ -96,14 +120,46 @@ async function startUnlockCheckout(){
   }
 }
 
+function ensurePaymentDisclosureModal(){
+  if(document.getElementById("ai-payment-disclosure-modal")) return;
+  const modal = document.createElement("div");
+  modal.className = "ai-settings-modal";
+  modal.id = "ai-payment-disclosure-modal";
+  modal.innerHTML = `
+    <div class="ai-settings-box">
+      <h3>Buy AI credit pack</h3>
+      <p><strong>$5.00, one-time payment</strong> — not a subscription, nothing auto-renews.</p>
+      <p>You get <strong>200 credits</strong>. Each AI chat question or Teach Back grading uses 1 credit. Credits don't expire and carry over if you buy more later.</p>
+      <p>Payment is processed securely by <strong>Stripe</strong> — this site never sees or stores your card details.</p>
+      <p>This is an independent student-run study tool, not a registered business. Purchases are <strong>non-refundable</strong> once credits are added to your balance, since usage can't be undone. If something goes wrong with a charge, reach out to the site owner directly to sort it out.</p>
+      <p style="margin-top:6px;"><a href="${HUB.basePath}disclosures.html" target="_blank" style="text-decoration:underline;">Full disclosures &amp; data info</a></p>
+      <div class="ai-settings-actions">
+        <button class="btn btn-outline" id="ai-disclosure-cancel">Cancel</button>
+        <button class="btn" id="ai-disclosure-continue">Continue to payment</button>
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+  document.getElementById("ai-disclosure-cancel").addEventListener("click", ()=> modal.classList.remove("open"));
+  document.getElementById("ai-disclosure-continue").addEventListener("click", ()=>{
+    modal.classList.remove("open");
+    startBuyCredits();
+  });
+}
+
+function openPaymentDisclosure(){
+  ensurePaymentDisclosureModal();
+  document.getElementById("ai-payment-disclosure-modal").classList.add("open");
+}
+
 async function callAI(messages, maxTokens){
-  const sessionId = getAccessSession();
+  const customerId = getCustomerId();
   const res = await fetch("/api/ai-proxy", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ sessionId, messages, maxTokens })
+    body: JSON.stringify({ customerId, messages, maxTokens })
   });
   const data = await res.json();
+  if(typeof data.balance === "number") setCachedBalance(data.balance);
   if(!res.ok){ throw new Error(data.error || ("HTTP " + res.status)); }
   return data.text;
 }
@@ -120,13 +176,17 @@ function buildChatWidget(){
   panel.innerHTML = `
     <div class="ai-chat-head">
       <div class="ai-chat-head-title"><span class="dot"></span>Definitions &amp; Q&amp;A</div>
-      <button class="ai-chat-settings-btn" id="ai-voice-toggle-btn" title="Toggle spoken replies">&#128266;</button>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span id="ai-balance-display" class="mono" style="font-size:0.7rem;color:var(--paper);opacity:0.8;"></span>
+        <button class="ai-chat-settings-btn" id="ai-voice-toggle-btn" title="Toggle spoken replies">&#128266;</button>
+      </div>
     </div>
     <div class="ai-chat-body" id="ai-chat-body">
-      <div class="ai-msg system">Ask about any term from your chapters. Glossary lookups are free — open-ended questions need the one-time AI unlock below.</div>
+      <div class="ai-msg system">Ask about any term from your chapters. Glossary lookups are free — open-ended questions use 1 credit each. AI answers can be wrong, so double-check anything important against your course materials. <a href="${HUB.basePath}disclosures.html" style="color:inherit;">More info</a></div>
     </div>
-    <div id="ai-unlock-row" style="padding:12px 16px;border-top:1px solid var(--line);${hasAccess() ? "display:none;" : ""}">
-      <button class="btn" id="ai-unlock-btn" style="width:100%;justify-content:center;">Unlock AI chat &amp; voice — one-time fee</button>
+    <div id="ai-buy-row" style="padding:12px 16px;border-top:1px solid var(--line);">
+      <button class="btn" id="ai-buy-btn" style="width:100%;justify-content:center;">Buy AI credits</button>
+      <div style="font-size:0.68rem;color:var(--ink-soft);text-align:center;margin-top:7px;line-height:1.5;">$5.00 one-time · 200 credits · no auto-renewal · processed by Stripe</div>
     </div>
     <div class="ai-chat-input-row">
       <button id="ai-mic-btn" title="Speak your question" style="background:var(--paper-alt);color:var(--ink);border-radius:50%;width:38px;height:38px;flex:none;padding:0;">&#127908;</button>
@@ -136,7 +196,8 @@ function buildChatWidget(){
   document.body.appendChild(panel);
 
   toggle.addEventListener("click", ()=> panel.classList.toggle("open"));
-  document.getElementById("ai-unlock-btn").addEventListener("click", startUnlockCheckout);
+  document.getElementById("ai-buy-btn").addEventListener("click", openPaymentDisclosure);
+  updateBalanceDisplay();
 
   const input = document.getElementById("ai-chat-input");
   const send = document.getElementById("ai-chat-send");
@@ -241,9 +302,8 @@ async function handleChatSend(){
     return;
   }
 
-  if(!hasAccess()){
-    addChatMsg("system", "No glossary match found. Unlock AI chat above to ask open-ended questions.");
-    document.getElementById("ai-unlock-row").style.display = "block";
+  if(!hasCredits()){
+    addChatMsg("system", "No glossary match found, and you're out of credits for open-ended questions. Buy a pack above to keep going.");
     return;
   }
 
