@@ -56,7 +56,7 @@ function initExam(containerId, questions, accentColor){
 
     card.innerHTML = `
       <div class="quiz-progress-track"><div class="quiz-progress-fill" style="width:${pct}%"></div></div>
-      <div class="quiz-tag">Practice exam question</div>
+      <div class="quiz-tag">${q.section ? q.section : "Practice exam question"}</div>
       <div class="quiz-question">${q.q}</div>
       <div class="quiz-options" id="exam-options">
         ${q.options.map((opt,i)=>`<button class="quiz-option" data-i="${i}"><span class="letter">${letters[i]}</span><span>${opt}</span></button>`).join("")}
@@ -76,12 +76,12 @@ function initExam(containerId, questions, accentColor){
           btn.classList.add("correct");
           state.correct++;
           fb.className = "quiz-feedback show correct-fb";
-          fb.innerHTML = `<strong>Correct.</strong> ${q.options[q.correct]}`;
+          fb.innerHTML = `<strong>Correct.</strong> ${q.explanation || q.options[q.correct]}`;
         } else {
           btn.classList.add("incorrect");
           document.querySelector(`#exam-options .quiz-option[data-i="${q.correct}"]`).classList.add("correct");
           fb.className = "quiz-feedback show incorrect-fb";
-          fb.innerHTML = `<strong>Not quite.</strong> The correct answer is ${letters[q.correct]}: ${q.options[q.correct]}`;
+          fb.innerHTML = `<strong>Not quite.</strong> The correct answer is ${letters[q.correct]}: ${q.options[q.correct]}${q.explanation ? "<br><br>" + q.explanation : ""}`;
         }
         document.getElementById("btn-exam-next").disabled = false;
         updateMonitor();

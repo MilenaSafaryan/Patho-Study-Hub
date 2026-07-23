@@ -4908,5 +4908,830 @@
     "correct": 0
    }
   ]
+ },
+ "7": {
+  "title": "Week 7 \u2014 Chapters 44, 45, 47, 51, and 52 (Neuro, Pain & Musculoskeletal)",
+  "questions": [
+   {
+    "q": "The most common site affected in Paget's disease is the",
+    "options": [
+     "lower spine.",
+     "skull.",
+     "pelvis.",
+     "joints."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "A fracture in which bone breaks into two or more fragments is referred to as",
+    "options": [
+     "comminuted.",
+     "open.",
+     "greenstick.",
+     "stress."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "The person at highest risk of a greenstick fracture from falling off a tall ladder is age",
+    "options": [
+     "68.",
+     "44.",
+     "8.",
+     "23."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The most common source of osteomyelitis is",
+    "options": [
+     "an infection that migrates via the bloodstream.",
+     "direct invasion from a fracture.",
+     "surgical contamination.",
+     "a joint prosthesis."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Bone healing may be impaired by",
+    "options": [
+     "excessive vitamin C.",
+     "nicotine use.",
+     "a high-protein diet.",
+     "immobilization."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Following a bone fracture, the most likely event to occur is",
+    "options": [
+     "development of a blood clot beneath the periosteum.",
+     "leukocyte infiltration into bone tissue.",
+     "blood vessel growth at the fracture site.",
+     "migration of osteoblasts to the fracture site."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "The most common symptom of multiple myeloma is",
+    "options": [
+     "pathologic fracture.",
+     "fever.",
+     "bone pain.",
+     "osteomyelitis."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Compartment syndrome occurs secondary to",
+    "options": [
+     "bone infarction.",
+     "soft-tissue damage.",
+     "muscle necrosis.",
+     "breakdown of RBCs."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The disorders characterized by softening and then enlargement of bones is referred to as",
+    "options": [
+     "osteomyelitis.",
+     "osteoporosis.",
+     "Paget disease.",
+     "rickets."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Assessment of an extremity six hours after surgical alignment and casting demonstrates pulselessness and pallor. The priority action to take is to",
+    "options": [
+     "increase the administration his pain medication.",
+     "initiate action to have the cast split or removed.",
+     "note the increase in pain in his chart, and recheck the extremity in 30 minutes.",
+     "elevate the extremity to relieve swelling."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "A bone disorder that results from insufficient vitamin D is referred to as",
+    "options": [
+     "rickets.",
+     "osteoporosis.",
+     "osteomalacia.",
+     "subluxation."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The most common type of osteomyelitis is",
+    "options": [
+     "hematogenous.",
+     "contiguous focus.",
+     "Brodie abscess.",
+     "direct invasion."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Rickets is characterized by soft, weak bones resulting from a deficiency of",
+    "options": [
+     "calcium.",
+     "estrogen.",
+     "phosphate.",
+     "vitamin D."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Complete healing of a bone fracture occurs when",
+    "options": [
+     "no movement of the break is detectable.",
+     "the callus has been completely replaced with mature bone.",
+     "the fracture site and surrounding soft tissue are pain free.",
+     "a cast is no longer required to stabilize the break."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The complication which is *not* likely to result from a compound, transverse fracture of the tibia and fibula is",
+    "options": [
+     "bone infection.",
+     "fat emboli.",
+     "air embolus.",
+     "compartment syndrome."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "People who have osteoporosis are at risk for",
+    "options": [
+     "rhabdomyolysis.",
+     "osteomyelitis.",
+     "osteomalacia.",
+     "bone fractures."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "The disease that is similar to osteomalacia and occurs in growing children is",
+    "options": [
+     "rickets.",
+     "osteosarcoma.",
+     "Paget disease.",
+     "osteopenia."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Paget's disease is characterized by",
+    "options": [
+     "overactivity of osteoblasts leading to multiple bone tumors.",
+     "excessive bone resorption followed by excessive formation of fragile bone.",
+     "inflammatory disorder resulting in fusion of spine joints.",
+     "failure of resorption by osteoclasts resulting in hard bones."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Tophi are",
+    "options": [
+     "renal calculi composed of uric acid.",
+     "deposits of urate crystals in tissues.",
+     "painful edematous joints.",
+     "spots that coalesce in a malar rash."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "In contrast to osteoarthritis, rheumatoid arthritis may be associated with",
+    "options": [
+     "debilitating joint pain and stiffness.",
+     "improvement in symptoms with aspirin therapy.",
+     "changes in activities of daily living.",
+     "systemic aching in the musculoskeletal system."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "The final stage of gout, characterized by crystalline deposits in cartilage, synovial membranes, and soft tissue, is called",
+    "options": [
+     "tophaceous gout.",
+     "gouty arthritis.",
+     "complicated gout.",
+     "asymptomatic hyperuricemia."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Systemic disorders include",
+    "options": [
+     "adhesive capsulitis.",
+     "verrucae.",
+     "osteoarthritis.",
+     "rheumatoid arthritis."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Most muscle strains are caused by",
+    "options": [
+     "a tear in an adjoining tendon.",
+     "abnormal muscle contraction.",
+     "muscle asymmetry.",
+     "bleeding into the muscle."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Although skin manifestations may occur in numerous locations, the classic presentation of systemic lupus erythematosus (SLE) includes",
+    "options": [
+     "lesions affecting the palms of hands and the soles of feet.",
+     "dry, scaly patches in the antecubital area and behind the knees.",
+     "cracked, scaly areas in the webs of fingers.",
+     "a butterfly pattern rash on the face across the bridge of the nose."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Anticholinesterase inhibitors may be used to manage",
+    "options": [
+     "muscular dystrophy.",
+     "myasthenia gravis.",
+     "fibromyalgia.",
+     "rheumatoid arthritis."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The chief pathologic features of osteoarthritis are",
+    "options": [
+     "stress fractures of the epiphysis, inflammation of the diaphysis, and accumulation of excessive synovial fluid.",
+     "autoimmune damage to the synovium, destruction of articular cartilage by pannus, and thickening of synovial fluid.",
+     "degeneration of articular cartilage, destruction of the bone under the cartilage, and thickening of the synovium.",
+     "thinning of the joint capsule, resorption of bone, excessive formation of new bone, and formation of bone spurs."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Enteropathic arthritis is associated with",
+    "options": [
+     "irritable bowel syndrome.",
+     "inflammatory bowel disease.",
+     "chronic constipation.",
+     "chronic diarrhea."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Rheumatoid arthritis is commonly associated with the presence of rheumatoid factor autoantibodies in the bloodstream. This indicates that rheumatoid arthritis is likely to be",
+    "options": [
+     "caused by bacterial infection.",
+     "an autoimmune process.",
+     "an infective process.",
+     "because of an enzymatic defect."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Ankylosing spondylitis causes",
+    "options": [
+     "intervertebral joint fusion.",
+     "instability of synovial joints.",
+     "costal cartilage degeneration.",
+     "temporomandibular joint degeneration."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "The pathophysiology of rheumatoid arthritis involves",
+    "options": [
+     "immune cells accumulating in pannus and destroying articular cartilage.",
+     "free radicals attaching to the synovial membrane and tunneling into articular cartilage.",
+     "excessive wear and tear and microtrauma that damage articular cartilage.",
+     "cysts developing in subchondral bone and creating fissures in articular cartilage."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "It is recommended that women of childbearing age take folic acid daily for prevention of",
+    "options": [
+     "neural tube defects.",
+     "seizure disorders.",
+     "cerebral palsy.",
+     "hydrocephalus."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "A clinical finding consistent with a diagnosis of rheumatoid arthritis would be",
+    "options": [
+     "systemic manifestations of inflammation.",
+     "localized pain in weight-bearing joints.",
+     "reduced excretion of uric acid by the kidney.",
+     "firm, crystallized nodules or \"tophi\" at the affected joints."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Ankylosing spondylitis is characterized by",
+    "options": [
+     "inflammation, stiffness, and fusion of spinal joints.",
+     "loss of articular cartilage in weight-bearing joints.",
+     "excessive bone remodeling leading to soft bone.",
+     "immune mechanisms leading to widespread joint inflammation."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "\"Please explain the pathophysiology of osteoarthritis to me,\" says another nurse. \"Is it just wear and tear so that the cartilage wears out?\" Your best response is",
+    "options": [
+     "\"Yes; repeated use just wears out the cartilage, until it becomes thin and denuded. That causes pain and will eventually cause joint inflammation.\"",
+     "\"Yes; with increasing age, the inflammation from repeated joint use accumulates and causes the cartilage to get thin and ragged until it disappears.\"",
+     "\"No; cells in bone, cartilage, and the synovial membrane all get activated and secrete inflammatory mediators that destroy cartilage and damage bone.\"",
+     "\"No; autoimmune cells infiltrate the joint and collect on the cartilage in a mass called 'pannus' that eventually thins and destroys the cartilage.\""
+    ],
+    "correct": 2
+   },
+   {
+    "q": "It is true that scleroderma involves",
+    "options": [
+     "inflammation and fibrosis of connective tissue.",
+     "autoantibodies against acetylcholine receptors.",
+     "infection by beta-hemolytic streptococcus.",
+     "inflammation caused by antigenic fragments of dead organisms."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Muscular dystrophy includes a number of muscle disorders that are",
+    "options": [
+     "genetically transmitted.",
+     "easily prevented and managed.",
+     "autoimmune in nature.",
+     "demyelinating focused."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Pain in fibromyalgia involves",
+    "options": [
+     "muscle inflammation.",
+     "autoimmune destruction of muscle tissue.",
+     "nerve inflammation.",
+     "changes in pain transmission in the spinal cord."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Pain that waxes and wanes and is exacerbated by physical exertion is likely related to",
+    "options": [
+     "neuralgia.",
+     "intermittent claudication.",
+     "fibromyalgia syndrome.",
+     "neuropathy."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The physiologic mechanisms involved in the pain phenomenon are termed",
+    "options": [
+     "nociception.",
+     "sensitization.",
+     "neurotransmission.",
+     "proprioception."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "The ________\\_ is the level of painful stimulation required to be perceived.",
+    "options": [
+     "perception",
+     "tolerance",
+     "expression",
+     "threshold"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "A unique characteristic feature of fibromyalgia is the presence of",
+    "options": [
+     "tender point pain.",
+     "head pain.",
+     "contractures.",
+     "muscle atrophy."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "It is useful to conceptualize pain physiology according to the four stages because each stage provides an opportunity for",
+    "options": [
+     "education.",
+     "stimulation.",
+     "intervention.",
+     "documentation."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The gate control theory of pain transmission predicts that activity in touch receptors will",
+    "options": [
+     "enhance perception of pain.",
+     "decrease pain signal transmission in the spinal cord.",
+     "activate opioid receptors in the CNS.",
+     "increase secretion of substance P in the spinal cord."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Which disorder usually causes skeletal pain and involves significant bone demineralization from vitamin D deficiency?",
+    "options": [
+     "Osteomalacia",
+     "Osteopenia",
+     "Osteomyelitis",
+     "Osteoporosis"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "The pain of nonarticular rheumatism (\"growing pain\") is worse",
+    "options": [
+     "during activity.",
+     "following strenuous exercise.",
+     "upon awakening.",
+     "during the night."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Pain is thought of as",
+    "options": [
+     "a subjective experience that is difficult to measure objectively.",
+     "associated with changes in vital signs reflecting its intensity.",
+     "experienced in the same way by all individuals.",
+     "always the result of tissue damage that activates nociceptors."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Pain with passive stretching of a muscle is indicative of",
+    "options": [
+     "noncontractile tissue injury.",
+     "contractile tissue injury.",
+     "vascular insufficiency.",
+     "skeletal muscle damage."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Slow pain sensation is transmitted primarily by",
+    "options": [
+     "group Ia afferents.",
+     "\u03b1 motor neurons.",
+     "unmyelinated C fibers.",
+     "A\u03b4 fibers."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Individuals diagnosed with systemic lupus erythematosus (SLE) are at risk for developing numerous complications of various organs because of",
+    "options": [
+     "excessive production of connective tissue.",
+     "formation of osteophytes in tissues.",
+     "immune injury to basement membranes.",
+     "impaired tissue oxygen transport."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Upper extremity weakness in association with degeneration of CNS neurons is characteristic of",
+    "options": [
+     "multiple sclerosis.",
+     "Guillain-Barr\u00e9 syndrome.",
+     "myasthenia gravis.",
+     "amyotrophic lateral sclerosis."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "What effect do demyelinating disorders such as multiple sclerosis have on neurotransmission?",
+    "options": [
+     "Slower rate of action potential conduction",
+     "Increased rate of action potential conduction",
+     "Facilitation of action potential initiation",
+     "Faster rate of repolarization"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Cerebral aneurysm is most frequently the result of",
+    "options": [
+     "embolic stroke.",
+     "subarachnoid hemorrhage.",
+     "subdural hemorrhage.",
+     "meningitis."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The stage of spinal shock that follows spinal cord injury is characterized by",
+    "options": [
+     "reflex urination and defecation.",
+     "autonomic dysreflexia.",
+     "absent spinal reflexes below the level of injury.",
+     "motor spasticity and hyperreflexia below the level of injury."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The dementia of Alzheimer disease is associated with structural changes in the brain, including",
+    "options": [
+     "deposition of amyloid plaques in the brain.",
+     "degeneration of basal ganglia.",
+     "hypertrophy of frontal lobe neurons.",
+     "significant aluminum deposits in the brain."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Which group of clinical findings indicates the poorest neurologic functioning?",
+    "options": [
+     "Spontaneous eye opening, movement to command, oriented to self only",
+     "Eyes open to light touch on shoulder, pupils briskly reactive to light bilaterally",
+     "Assumes decorticate posture with light touch, no verbal response",
+     "No eye opening, responds to painful stimulus by withdrawing"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "An example of inappropriate treatment for head trauma would be",
+    "options": [
+     "head elevation.",
+     "free water restriction.",
+     "hypoventilation.",
+     "bed rest."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Leakage of CSF from the nose or ears is commonly associated with",
+    "options": [
+     "epidural hematoma.",
+     "temporal skull fracture.",
+     "basilar skull fracture.",
+     "cerebral aneurysm."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The most important preventive measure for hemorrhagic stroke is",
+    "options": [
+     "anticoagulation.",
+     "blood pressure control.",
+     "thrombolytics.",
+     "management of dysrhythmias."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The classic manifestations of Parkinson disease include",
+    "options": [
+     "intention tremor and akinesia.",
+     "rest tremor and skeletal muscle rigidity.",
+     "ataxia and intention tremor.",
+     "skeletal muscle rigidity and intention tremor."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "The first indication of brain compression from increasing intracranial pressure (ICP) may be",
+    "options": [
+     "decorticate posturing.",
+     "absence of verbalization.",
+     "sluggish pupil response to light.",
+     "Glasgow Coma Scale score of 13."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Risk factors for hemorrhagic stroke include",
+    "options": [
+     "atherosclerosis.",
+     "dysrhythmias.",
+     "acute hypertension.",
+     "sedentary lifestyle."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "It is true that Bell palsy is a",
+    "options": [
+     "permanent facial paralysis after stroke.",
+     "painful neuropathic pain affecting the trigeminal nerve.",
+     "paralysis of the muscles innervated by the facial nerve.",
+     "herpetic outbreak in a facial dermatome."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Modulation of pain signals is thought to be mediated by the release of",
+    "options": [
+     "histamine.",
+     "endorphins.",
+     "cholecystokinin.",
+     "glutamine."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "What type of seizure usually occurs in children and is characterized by brief staring spells?",
+    "options": [
+     "Epileptic",
+     "Idiopathic",
+     "Partial",
+     "Absence"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "A patient who experiences early symptoms of muscle twitching, cramping, and stiffness of the hands may be demonstrating signs of",
+    "options": [
+     "Guillain-Barr\u00e9 syndrome.",
+     "amyotrophic lateral sclerosis.",
+     "Parkinson disease.",
+     "hydrocephalus."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "A patient presenting with a severe, pounding headache accompanied by nausea and photophobia is likely experiencing a ________\\_ headache.",
+    "options": [
+     "tension",
+     "migraine",
+     "sinus",
+     "chronic"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "\"Tell me again the name of that chemical that makes crystals when my gout flares up,\" asks the client. The nurse's best response is",
+    "options": [
+     "calcium phosphate.",
+     "urea.",
+     "uric acid.",
+     "beta-hydroxybutyric acid."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Manifestations of acute brain ischemia (Cushing reflex) are due primarily to",
+    "options": [
+     "parasympathetic nervous system activation.",
+     "sympathetic nervous system activation.",
+     "autoregulation of body systems.",
+     "loss of brainstem reflexes."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Parkinson disease is associated with",
+    "options": [
+     "demyelination of CNS neurons.",
+     "a pyramidal nerve tract lesion.",
+     "insufficient production of acetylcholine in the basal ganglia.",
+     "a deficiency of dopamine in the substantia nigra."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Orthostatic hypotension may be a manifestation of",
+    "options": [
+     "Alzheimer disease.",
+     "multiple sclerosis.",
+     "Parkinson disease.",
+     "amyotrophic lateral sclerosis."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Seizures that involve both hemispheres at the outset are termed",
+    "options": [
+     "partial.",
+     "complex.",
+     "focal.",
+     "generalized."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Subarachnoid hemorrhage is usually managed with volume expansion and blood pressure support to enhance cerebral perfusion. This is necessary because subarachnoid hemorrhage predisposes to",
+    "options": [
+     "cerebral vasospasm.",
+     "hypotension.",
+     "excessive volume loss.",
+     "increased intracranial pressure."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "A severe complication of elevated intracranial pressure is",
+    "options": [
+     "Cushing reflex.",
+     "brain herniation.",
+     "burr hole.",
+     "hydrocephalus."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "________\\_ edema occurs when ischemic tissue swells because of cellular energy failure.",
+    "options": [
+     "Interstitial",
+     "Osmotic",
+     "Vasogenic",
+     "Cytotoxic"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "In the acute phase of stroke, treatment is focused on",
+    "options": [
+     "stabilization of respiratory and cardiovascular function.",
+     "risk factor modification.",
+     "prevention of bedsores and contractures.",
+     "neurologic rehabilitation."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Which neurologic disorder is commonly referred to as Lou Gehrig disease?",
+    "options": [
+     "Multiple sclerosis",
+     "Parkinson disease",
+     "Alzheimer disease",
+     "Amyotrophic lateral sclerosis"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Most sensory afferent pain fibers enter the spinal cord by way of the ________\\_ nerve roots.",
+    "options": [
+     "anterior",
+     "posterior",
+     "C fiber",
+     "anterolateral"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "It is true that epidural bleeding is",
+    "options": [
+     "associated with widespread vascular disruption.",
+     "located between the arachnoid and the dura mater.",
+     "usually because of venous leakage.",
+     "characterized by a lucid interval immediately after injury."
+    ],
+    "correct": 3
+   },
+   {
+    "q": "The stroke etiology with the highest morbidity and mortality is",
+    "options": [
+     "intracranial hemorrhage.",
+     "intracranial thrombosis.",
+     "intracranial embolization.",
+     "cardiac arrest."
+    ],
+    "correct": 0
+   },
+   {
+    "q": "A college student living in a dormitory reports a stiff neck and headache and is found to have a fever of 102\u00b0F. This information is most consistent with",
+    "options": [
+     "encephalitis.",
+     "meningitis.",
+     "skull fracture.",
+     "cerebral ischemia."
+    ],
+    "correct": 1
+   },
+   {
+    "q": "It is true that encephalitis is usually",
+    "options": [
+     "because of a bacterial infection in the CNS.",
+     "fatal.",
+     "because of a viral infection in brain cells.",
+     "asymptomatic."
+    ],
+    "correct": 2
+   },
+   {
+    "q": "The most important determinant for prescribing therapy for acute stroke is",
+    "options": [
+     "location of ischemia.",
+     "thrombotic versus embolic cause.",
+     "ischemic versus hemorrhagic cause.",
+     "age of the patient."
+    ],
+    "correct": 2
+   }
+  ]
  }
 }
