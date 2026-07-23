@@ -114,7 +114,7 @@ if(!chNum){
 
     fetchJSON(`data/terms_ch${ch.num}.json`).then(terms=>{
       initQuiz("quiz-card", terms, ch.color, ch.week);
-      initFlashcards("flashcard-box", terms, ch.color);
+      initFlashcards("flashcard-box", terms, ch.color, ch.num);
       initTutor("tutor-box", ch.title, ch.outline, terms, ch.color);
       initTeachBack("panel-teachback", ch.title, terms);
     });

@@ -85,16 +85,21 @@ function initTeachBack(containerId, chapterTitle, terms){
       const hitWords = keyWords.filter(w => lowerInput.includes(w));
       const pctHit = keyWords.length ? hitWords.length / keyWords.length : 0;
       const mentionsTerm = lowerInput.includes(t.term.toLowerCase().split(" ")[0]);
-      const passed = pctHit >= 0.25 || (mentionsTerm && input.length > 40);
+      // Lenient on purpose: accept a genuine attempt that shows the general idea,
+      // rather than requiring near-exact wording. Only flag it when the answer
+      // barely engages with the concept at all.
+      const passed = pctHit >= 0.12 || (mentionsTerm && input.length > 20) || input.length > 90;
 
       respEl.className = "teachback-response show";
-      respEl.innerHTML = `
+      respEl.innerHTML = passed ? `
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <span style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:0.85rem;padding:4px 12px;border-radius:999px;background:${passed ? 'rgba(61,139,95,0.15)' : 'rgba(192,90,63,0.15)'};color:${passed ? 'var(--success)' : 'var(--coral)'};">
-            ${passed ? "✓ Good explanation" : "✗ Not quite there"}
-          </span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:0.85rem;padding:4px 12px;border-radius:999px;background:rgba(61,139,95,0.15);color:var(--success);">✓ You've got the idea</span>
         </div>
-        <div style="font-size:0.85rem;"><strong>Actual definition:</strong> ${t.def}</div>`;
+        <div style="font-size:0.85rem;color:var(--ink-soft);">For reference, the textbook definition: ${t.def}</div>` : `
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:0.85rem;padding:4px 12px;border-radius:999px;background:rgba(192,90,63,0.15);color:var(--coral);">✗ Missing the key idea</span>
+        </div>
+        <div style="font-size:0.85rem;"><strong>Here's the answer:</strong> ${t.def}</div>`;
 
       if(!state.counted.has(state.index)){
         state.counted.add(state.index);

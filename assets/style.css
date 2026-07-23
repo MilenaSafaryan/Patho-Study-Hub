@@ -340,7 +340,18 @@ footer{max-width:1180px;margin:0 auto;padding:30px 24px 60px;color:var(--ink-sof
 .flashcard-text{font-family:'Spectral',serif;font-size:1.5rem;font-weight:600;line-height:1.3;}
 .flashcard-def{font-size:1.05rem;font-weight:400;}
 .flashcard-tap{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--ink-soft);opacity:0.7;}
-.flashcard-actions{display:flex;justify-content:center;gap:12px;margin-top:24px;}
+.flashcard-actions{display:flex;justify-content:center;gap:10px;margin-top:24px;flex-wrap:wrap;}
+.sr-btn{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 18px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);font-weight:600;font-size:0.86rem;min-width:78px;transition:transform .12s ease;}
+.sr-btn:hover{transform:translateY(-2px);}
+.sr-btn small{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:0.68rem;color:var(--ink-soft);}
+.sr-again{border-color:var(--coral);color:var(--coral);}
+.sr-hard{border-color:var(--amber);color:var(--amber);}
+.sr-good{border-color:var(--accent,var(--teal));color:var(--accent,var(--teal));}
+.sr-easy{border-color:var(--success);color:var(--success);}
+.sr-again:hover{background:rgba(192,90,63,0.08);}
+.sr-hard:hover{background:rgba(201,122,46,0.08);}
+.sr-good:hover{background:rgba(46,125,91,0.08);}
+.sr-easy:hover{background:rgba(61,139,95,0.08);}
 
 /* ---------- celebration confetti ---------- */
 #confetti-layer{position:fixed;inset:0;pointer-events:none;z-index:400;overflow:hidden;}
